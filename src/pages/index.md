@@ -1,9 +1,12 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
+title: 'Авиадоставка грузов из Китая, США'
+image: /img/bkgr-air.png
 heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+subheading: >-
+  Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
+  клиентом, независимо от объёмов его грузопотока. Закажите консультацию и
+  начнем сотрудничество прямо сейчас!
 mainpitch:
   title: Why Kaldi
   description: >
@@ -68,3 +71,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
