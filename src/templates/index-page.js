@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import { Header } from '../pages/main/header'
 
 export const IndexPageTemplate = ({
   image,
@@ -14,25 +15,14 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  scopeInformation
 }) => (
   <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    >
-      <div>
-        <h1>
-          {title}
-        </h1>
-        <h3>
-          {subheading}
-        </h3>
-      </div>
-    </div>
+    <Header
+        title={title}
+        image={image}
+        subheading={subheading}
+        scopeInformation={scopeInformation}/>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -90,6 +80,7 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
+  scopeInformation: PropTypes.array,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -97,6 +88,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  console.log('djdjdj');
 
   return (
     <Layout>
@@ -108,6 +100,7 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        scopeInformation={frontmatter.scopeInformation}
       />
     </Layout>
   )
@@ -134,6 +127,16 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        scopeInformation {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          text
         }
         heading
         subheading

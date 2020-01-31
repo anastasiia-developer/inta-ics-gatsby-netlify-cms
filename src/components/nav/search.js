@@ -16,7 +16,6 @@ const Label = styled.label`
         width: 100%;
         padding: .7em 0 .7em 1em;
         color: #fff;
-        font-family: 'Roboto-Regular', sans-serif;
         font-size: .8em;
         outline: none;
         color: #6D6D6D;

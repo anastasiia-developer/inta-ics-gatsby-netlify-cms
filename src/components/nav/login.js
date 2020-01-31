@@ -5,7 +5,6 @@ const Button = styled.button`
     border: 1px solid #FFE15A;
     border-radius: 4px;
     padding: .5em 1em; 
-    font-family: 'Roboto-Regular', sans-serif;
     color: #FFE15A;      
     background: transparent;
     align-items: center;

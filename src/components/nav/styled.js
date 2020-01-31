@@ -72,7 +72,6 @@ export const Navigation = styled.nav`
       }
       &:hover{
         color: #005BE4;
-        font-family: 'Roboto-Medium', sans-serif;
       }
       img{
         margin-left: .5em;
@@ -151,7 +150,7 @@ export const Navigation = styled.nav`
     }
     a{
       color: #000;
-      font-family: 'Roboto Medium', sans-serif;
+      font-weight: 500
       margin-bottom: 1em;
       margin-left: 0;
       @media(max-aspect-ratio: 3/3), (max-height: 500px){

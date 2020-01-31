@@ -19,6 +19,16 @@ description: >-
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
+scopeInformation: 
+    - image: /img/coffee.png  
+      text: >
+        От 5 дней
+    - image: /img/coffee-gear.png
+      text: >
+        от 2$ за кг   
+    - image: /img/coffee-gear.png
+      text: >
+        от 2$ за кг       
 intro:
   blurbs:
     - image: /img/coffee.png

@@ -1,4 +1,5 @@
 @import "./fonts.sass"
+@import "./commonElements.sass"
 
 
 // Config vars
@@ -20,6 +21,7 @@ $black: #2b2523
 *
   box-sizing: border-box
   outline: none
+  font-family: 'Roboto', sans-serif
 
 body, html 
   overflow-x: hidden
@@ -28,7 +30,6 @@ body
   margin: 0
   padding: 0
   position: relative
-  font-family: 'Roboto-Regular', sans-serif
 
 
 section, article, nav, main, header, footer
@@ -82,7 +83,7 @@ ul
 
 
 .btn-order
-  font-family: 'Roboto-Bold', sans-serif
+  font-weight: 700
   color: #fff
   background: #FF4B55
   border-radius: 4em
@@ -96,7 +97,7 @@ ul
 .header-btn
   color: #fff
   background: #005BE4
-  font-family: 'Roboto-Medium', sans-serif
+  font-weight: 500
   font-size: 0.8em
   padding: .7em 2em
   border-radius: 5em
@@ -119,7 +120,7 @@ ul
 
 .input-common 
   background: rgba(33, 33, 33, 1)
-  font-family: 'Roboto-Medium', sans-serif
+  font-weight: 500
   font-size: .9em
   padding: 1em 2em
   border-radius: 8px
@@ -129,19 +130,4 @@ ul
 .icon
   width: 1em
   height: 1em
-
-.common-contact
-  font-size: .8em
-  align-items: center
-  a
-    margin-right: 2em
-    &:hover
-      color: #005BE4
-  img
-    width: .8em
-    height: .8em
-    margin-right: 1em
-  .row
-    align-items: center
-
 

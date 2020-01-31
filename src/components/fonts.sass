@@ -1,16 +1,1 @@
-@mixin fontsMix($name, $folderName)
-  $filepath: "../fonts/" + $folderName + "/" + $name
-  @font-face
-    font-family: $name
-    font-weight: 400
-    font-style: normal
-    src: url($filepath + ".eot")
-    src: url($filepath + ".eot?#iefix") format("embedded-opentype"), url($filepath +".woff") format("woff"), url($filepath + ".ttf") format("truetype")
-
-
-
-  @include fontsMix('Roboto-Regular', 'RobotoRegular')
-  @include fontsMix('Roboto-Medium', 'RobotoMedium')
-  @include fontsMix('Roboto-Light', 'RobotoLight')
-  @include fontsMix('Roboto-Black', 'RobotoBlack')
-  @include fontsMix('Roboto-Bold', 'RobotoBold')
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap')
