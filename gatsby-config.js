@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Авиадоставка грузов из Китая, США',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым клиентом, независимо от объёмов его грузопотока. Закажите консультацию и начнем сотрудничество прямо сейчас!',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

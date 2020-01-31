@@ -1,4 +1,5 @@
-@import "~bulma/sass/utilities/initial-variables"
+@import "./fonts.sass"
+
 
 // Config vars
 // Kaldi logo brand color: #FD461E
@@ -10,138 +11,137 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 
-.navbar .navbar-menu
-  box-shadow:none !important
-
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
+.row
   display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+.column
+  display: flex
+  flex-direction: column
 
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
+*
+  box-sizing: border-box
+  outline: none
+
+body, html 
+  overflow-x: hidden
+
+body
+  margin: 0
+  padding: 0
   position: relative
-  left: 50%
-  right: 50%
-  margin: 2em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
+  font-family: 'Roboto-Regular', sans-serif
 
-.full-width-image
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
 
-.btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: #CC3700
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
+section, article, nav, main, header, footer
+  font-size: 1vw
+  @media(max-aspect-ratio: 3/3), (max-height: 500px)
+    font-size: 5vw
+
+a, a:hover, a:focus, .btn
+  color: #fff
+  border: none
+  background: transparent
+  text-decoration: none
+  cursor: pointer
+
+.input-common.js-input-valid.error
+  border: 1px solid red
+
+
+h1,h2,h3,h4,p, h5
+  margin: 0
+  font-weight: normal
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
 
 .row
-    display: flex
+  display: flex
+  flex-direction: row
 
 .column
-    display: flex
+  display: flex
+  flex-direction: column
+  width: 100%
+
+.row-to-column
+  display: flex
+  flex-direction: row
+  @media(max-aspect-ratio: 3/3), (max-height: 500px)
     flex-direction: column
-
-.margin-top-0
-  margin-top: 0 !important
-
-.navbar-item .icon
-  color: $primary
-// Override for use of svg's from https://simpleicons.org/
-.icon svg
-  width: 1.5rem
-  height: 1.5rem
-  fill: currentColor
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
-footer.footer
-  padding: 3rem 0rem 0rem
-  background-color: transparent
-
-//Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
+    align-items: center
 
 
-.menu-label
-  font-size: 1em !important
-  text-align: left
-.menu-list
-  list-style: none !important
-  text-align: left
-.social
-  padding: 2em
-.social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
-
-// blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033;
-.blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+.wrapper
+  width: 86%
+  margin: 0 auto
+  @media(max-aspect-ratio: 3/3), (max-height: 500px)
+    width: 100%
 
 
-@import "~bulma"
+
+.btn-order
+  font-family: 'Roboto-Bold', sans-serif
+  color: #fff
+  background: #FF4B55
+  border-radius: 4em
+  padding: .8em 2em
+  margin-left: 2em
+  align-self: flex-end
+  font-size: 1em
+  border: none
+  cursor: pointer
+
+.header-btn
+  color: #fff
+  background: #005BE4
+  font-family: 'Roboto-Medium', sans-serif
+  font-size: 0.8em
+  padding: .7em 2em
+  border-radius: 5em
+  & + .btn 
+    margin-left: 1em
+    @media(max-aspect-ratio: 3/3), (max-height: 500px)
+      margin-left: 0
+      margin-top: 2em
+      color: #005BE4
+      background: #fff
+  @media(max-aspect-ratio: 3/3), (max-height: 500px)
+    &:first-child
+      padding: 1em 3em
+      font-size: 0.9em
+  &:hover
+    cursor: pointer
+    color: #005BE4
+    background: #fff
 
 
-// responsiveness
-+tablet-only
-  .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
+.input-common 
+  background: rgba(33, 33, 33, 1)
+  font-family: 'Roboto-Medium', sans-serif
+  font-size: .9em
+  padding: 1em 2em
+  border-radius: 8px
+  border: none
+  color: #AFAFAF
 
-+mobile
-  .blog-list-item header
-    display: block
-  .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+.icon
+  width: 1em
+  height: 1em
+
+.common-contact
+  font-size: .8em
+  align-items: center
+  a
+    margin-right: 2em
+    &:hover
+      color: #005BE4
+  img
+    width: .8em
+    height: .8em
+    margin-right: 1em
+  .row
+    align-items: center
+
+
