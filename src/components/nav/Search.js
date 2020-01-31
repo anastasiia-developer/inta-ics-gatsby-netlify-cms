@@ -29,11 +29,13 @@ const Label = styled.label`
         margin-right: 0;
     }
 `;
+export default Label
 
-
-export const Search = () =>(
+const Search = () =>(
     <Label className="row">
         <input type="text" placeholder="Отследить груз"/>
         <img src="./img/search.svg" className="icon" alt="search icon"/>
     </Label>
 );
+
+export default Search

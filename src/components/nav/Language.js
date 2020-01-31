@@ -13,9 +13,11 @@ const Container = styled.div`
         height: .5em;
     }
 `;
-export const Language = () => (
+const Language = () => (
     <Container className="row">
         RU
         <img src={arrow} alt="arrow Line"/>
     </Container>
 );
+
+export default Language

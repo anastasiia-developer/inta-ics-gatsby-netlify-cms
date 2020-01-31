@@ -14,9 +14,11 @@ const Button = styled.button`
         margin-left: .5em;
     }
 `;
-export const Login = () =>(
+const Login = () =>(
     <Button className='row'>
         Ввойти
         <img src="./img/user.svg" alt="user icon" className="icon"/>
     </Button>
 );
+
+export default Login
