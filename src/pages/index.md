@@ -7,6 +7,16 @@ subheading: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
   клиентом, независимо от объёмов его грузопотока. Закажите консультацию и
   начнем сотрудничество прямо сейчас!
+scopeInformation:
+  - image: /img/time.svg
+    text: |
+      От 5 дней
+  - image: /img/card.svg
+    text: |
+      от 2$ за кг   
+  - image: /img/local.svg
+    text: |
+      от 2$ за кг       
 mainpitch:
   title: Why Kaldi
   description: >
@@ -19,16 +29,6 @@ description: >-
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
-scopeInformation: 
-    - image: /img/coffee.png  
-      text: >
-        От 5 дней
-    - image: /img/coffee-gear.png
-      text: >
-        от 2$ за кг   
-    - image: /img/coffee-gear.png
-      text: >
-        от 2$ за кг       
 intro:
   blurbs:
     - image: /img/coffee.png
