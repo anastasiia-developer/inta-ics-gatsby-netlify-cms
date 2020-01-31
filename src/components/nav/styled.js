@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Navigation = styled.nav`
+const Navigation = styled.nav`
     position: fixed;
     width: 100%;
     left: 0;
@@ -248,3 +248,5 @@ export const Navigation = styled.nav`
     }
   }
 `;
+
+export default Navigation

@@ -29,7 +29,6 @@ const Label = styled.label`
         margin-right: 0;
     }
 `;
-export default Label
 
 const Search = () =>(
     <Label className="row">

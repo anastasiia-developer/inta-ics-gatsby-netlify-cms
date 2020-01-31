@@ -6,10 +6,10 @@ import Local from '../../img/local.svg'
 import arrowLine from '../../img/arrowLine.svg'
 import telegram from '../../img/telegram.svg'
 import call from '../../img/call.svg'
-import { Navigation } from './styled'
-import { Search } from './search'
-import { Login } from './login'
-import { Language } from './language'
+import Navigation from './styled'
+import Search from './Search'
+import Login from './Login'
+import Language from './Language'
 
 const Navbar = class extends React.Component {
   constructor(props) {

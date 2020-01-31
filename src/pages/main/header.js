@@ -82,7 +82,7 @@ const Container = styled.header`
   }
 `;
 
-export const Header = ({ image, title, subheading, scopeInformation }) => (
+const Header = ({ image, title, subheading, scopeInformation }) => (
     <Container
         className="common-header row-to-column"
         style={{
@@ -108,3 +108,4 @@ export const Header = ({ image, title, subheading, scopeInformation }) => (
         </ul>
     </Container>
 );
+export default Header
