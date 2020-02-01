@@ -88,7 +88,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log('djdjdj');
 
   return (
     <Layout>
@@ -130,11 +129,7 @@ export const pageQuery = graphql`
         }
         scopeInformation {
           image {
-            childImageSharp {
-              fluid(maxWidth: 240, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+            publicURL
           }
           text
         }

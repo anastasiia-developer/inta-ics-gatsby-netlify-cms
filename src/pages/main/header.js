@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from "styled-components";
+import styled from "styled-components"
 
 const Container = styled.header`
     justify-content: space-between;
@@ -101,7 +101,8 @@ const Header = ({ image, title, subheading, scopeInformation }) => (
         <ul className="row row-scope">
             {scopeInformation.map((item, index) => (
                 <li className="column" key={index}>
-                    <img src={!!item.image.childImageSharp ? item.image.childImageSharp.fluid.src : item.image} alt=""/>
+                    <img
+                        src={item.image.publicURL} />
                     <p>{item.text}</p>
                 </li>
             ))}
