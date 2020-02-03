@@ -12,18 +12,17 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  header,
   location,
   title,
   subheading
 }) => (
   <Fragment>
-    <Header
-        subheading={subheading}
-        title={title}
-        header={header}
-        location={location}
-    />
+    {/*<Header*/}
+    {/*    subheading={subheading}*/}
+    {/*    title={title}*/}
+    {/*    header={header}*/}
+    {/*    location={location}*/}
+    {/*/>*/}
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -81,7 +80,6 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
-  header: PropTypes.object,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -99,7 +97,6 @@ const IndexPage = ({ data, location }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
-        header={frontmatter.header}
         location={location}
       />
     </Layout>
@@ -126,30 +123,6 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        header{
-          slide {
-            images {
-              alt
-              image{
-                 childImageSharp {
-                    fluid(maxWidth: 300, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-              }
-            }
-            scopeInformation {
-              image{
-                publicURL
-              }
-              text
-            }
-            buttons {
-              text
-              link
             }
           }
         }
