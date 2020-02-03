@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
-import Breadcrumbs from "./BreadCrumbs";
+import Breadcrumbs from "../BreadCrumbs";
 import { Link } from "gatsby"
-import ArrowLine from '../img/arrowLine.svg'
+import ArrowLine from '../../img/arrowLine.svg'
 
 const Button = styled(Link)`
     align-items: center;
@@ -118,6 +118,7 @@ const Header = ({ image, title, subheading, scopeInformation, location }) => {
             <p>{item.text}</p>
         </li>
     ));
+
     return (
         <Container
             className="column">

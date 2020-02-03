@@ -1,22 +1,36 @@
 ---
 templateKey: index-page
-title: 'Авиадоставка грузов из Китая, США'
+title: 'Inta International Courier Service'
 image: /img/bkgr-air.png
 heading: Great coffee with a conscience
 subheading: >-
-  Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
-  клиентом, независимо от объёмов его грузопотока. Закажите консультацию и
-  начнем сотрудничество прямо сейчас!
-scopeInformation:
-  - image: /img/time.svg
-    text: |
-      От 5 дней
-  - image: /img/card.svg
-    text: |
-      от 2$ за кг   
-  - image: /img/local.svg
-    text: |
-      от 2$ за кг       
+  Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками и трендами!
+  Наш менеджер всегда на связи и готов вам помочь.
+header: 
+    slide1:
+        images:
+          - image: /img/mainpage.png 
+            alt: A close-up of a paper filter filled with ground coffee
+          - image: /img/mainpage1.png 
+            alt: A green cup of a coffee on a wooden table
+        scopeInformation:
+          - image: /img/bay.svg
+            text: |
+              Покупка товаров со всего мира
+          - image: /img/user1.svg
+            text: |
+              Поддержка 24/7
+          - image: /img/local2.svg
+            text: |
+              Местоположение посылки    
+          - image: /img/time3.svg
+            text: |
+              Сроки доставки
+        buttons: 
+            - text: Заказать доставку      
+              link: /contacts
+            - text: Узнать стоимость
+              link: /contacts   
 mainpitch:
   title: Why Kaldi
   description: >

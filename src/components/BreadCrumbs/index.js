@@ -1,18 +1,19 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import { useBreadcrumb } from 'gatsby-plugin-breadcrumb'
 import Container from './style'
 import { Link } from 'gatsby'
 
 
-const Breadcrumbs = ({ location }) => {
+const Breadcrumbs = ({ location, crumbLabel }) => {
     const { crumbs } = useBreadcrumb({
         location,
-        crumbLabel: 'Авіадоставка',
-        crumbSeparator: ' / ',
+        crumbLabel: crumbLabel
     });
+
     const breadcrumbs = crumbs.map((link, index) => (
-        <Link to={link.pathname || link.location.pathname} key={index} >
-            {link.crumbLabel}{crumbs.length-1 !== index && link.crumbSeparator}
+       link.crumbLabel &&
+        <Link key={index} to={link.pathname || link.location.pathname}  >
+            {link.crumbLabel}
         </Link>
     ));
 

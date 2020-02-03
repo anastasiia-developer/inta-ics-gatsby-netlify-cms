@@ -1,30 +1,29 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import Header from '../components/header'
+import Header from '../components/Header'
 
 export const IndexPageTemplate = ({
-  image,
-  title,
   heading,
-  subheading,
   mainpitch,
   description,
   intro,
-  scopeInformation,
-  location
+  header,
+  location,
+  title,
+  subheading
 }) => (
-  <div>
+  <Fragment>
     <Header
-        title={title}
-        image={image}
         subheading={subheading}
-        scopeInformation={scopeInformation}
-        location={location}/>
+        title={title}
+        header={header}
+        location={location}
+    />
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -72,7 +71,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-  </div>
+  </Fragment>
 )
 
 IndexPageTemplate.propTypes = {
@@ -82,7 +81,7 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
-  scopeInformation: PropTypes.array,
+  header: PropTypes.object,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -100,7 +99,7 @@ const IndexPage = ({ data, location }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
-        scopeInformation={frontmatter.scopeInformation}
+        header={frontmatter.header}
         location={location}
       />
     </Layout>
@@ -130,11 +129,29 @@ export const pageQuery = graphql`
             }
           }
         }
-        scopeInformation {
-          image {
-            publicURL
+        header{
+          slide1 {
+            images {
+              alt
+              image{
+                 childImageSharp {
+                    fluid(maxWidth: 300, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+              }
+            }
+            scopeInformation {
+              image{
+                publicURL
+              }
+              text
+            }
+            buttons {
+              text
+              link
+            }
           }
-          text
         }
         heading
         subheading
