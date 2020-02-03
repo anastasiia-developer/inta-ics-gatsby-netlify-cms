@@ -1,36 +1,32 @@
 ---
 templateKey: index-page
-title: 'Inta International Courier Service'
+title: Inta International Courier Service
 image: /img/bkgr-air.png
 heading: Great coffee with a conscience
 subheading: >-
-  Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками и трендами!
-  Наш менеджер всегда на связи и готов вам помочь.
-header: 
-    slide1:
-        images:
-          - image: /img/mainpage.png 
-            alt: A close-up of a paper filter filled with ground coffee
-          - image: /img/mainpage1.png 
-            alt: A green cup of a coffee on a wooden table
-        scopeInformation:
-          - image: /img/bay.svg
-            text: |
-              Покупка товаров со всего мира
-          - image: /img/user1.svg
-            text: |
-              Поддержка 24/7
-          - image: /img/local2.svg
-            text: |
-              Местоположение посылки    
-          - image: /img/time3.svg
-            text: |
-              Сроки доставки
-        buttons: 
-            - text: Заказать доставку      
-              link: /contacts
-            - text: Узнать стоимость
-              link: /contacts   
+  Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками
+  и трендами! Наш менеджер всегда на связи и готов вам помочь.
+header:
+  slide:
+    - buttons:
+        - link: /contacts
+          text: Заказать доставку
+        - link: /contacts
+          text: Узнать стоимость
+      images:
+        - alt: app mobile
+          image: /img/mainpage.png
+        - alt: app mobile
+          image: /img/mainpage1.png
+      scopeInformation:
+        - image: /img/bay.svg
+          text: Покупка товаров со всего мира
+        - image: /img/user1.svg
+          text: Поддержка 24/7
+        - image: /img/local2.svg
+          text: Местоположение посылки
+        - image: /img/time3.svg
+          text: Сроки доставки
 mainpitch:
   title: Why Kaldi
   description: >
