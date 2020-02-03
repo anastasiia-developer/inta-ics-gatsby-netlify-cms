@@ -15,14 +15,16 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-  scopeInformation
+  scopeInformation,
+  location
 }) => (
   <div>
     <Header
         title={title}
         image={image}
         subheading={subheading}
-        scopeInformation={scopeInformation}/>
+        scopeInformation={scopeInformation}
+        location={location}/>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -86,9 +88,8 @@ IndexPageTemplate.propTypes = {
   }),
 }
 
-const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
-
+const IndexPage = ({ data, location }) => {
+  const { frontmatter } = data.markdownRemark;
   return (
     <Layout>
       <IndexPageTemplate
@@ -100,6 +101,7 @@ const IndexPage = ({ data }) => {
         description={frontmatter.description}
         intro={frontmatter.intro}
         scopeInformation={frontmatter.scopeInformation}
+        location={location}
       />
     </Layout>
   )
@@ -111,6 +113,7 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
+  location: PropTypes.object
 }
 
 export default IndexPage

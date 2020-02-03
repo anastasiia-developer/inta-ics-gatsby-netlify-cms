@@ -72,6 +72,23 @@ module.exports = {
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        defaultCrumb: {
+          // location: required and must include the pathname property
+          location: {
+            pathname: "/",
+          },
+          // crumbLabel: required label for the default crumb
+          crumbLabel: "Доставка",
+          // all other properties optional
+          crumbSeparator: " / ",
+          crumbStyle: { color: "#666" },
+          crumbActiveStyle: { color: "orange" },
+        },
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
