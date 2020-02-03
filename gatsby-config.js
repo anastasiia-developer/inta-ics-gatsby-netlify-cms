@@ -81,14 +81,22 @@ module.exports = {
             pathname: "/",
           },
           // crumbLabel: required label for the default crumb
-          crumbLabel: "Доставка",
+          crumbLabel: "Главная",
           // all other properties optional
-          crumbSeparator: " / ",
-          crumbStyle: { color: "#666" },
-          crumbActiveStyle: { color: "orange" },
+          crumbSeparator: " > ",
+          crumbStyle: { color: "#5B5B5B" },
+          crumbActiveStyle: { color: "#0460D9" },
         },
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /img/
+        }
+      }
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
-}
+};

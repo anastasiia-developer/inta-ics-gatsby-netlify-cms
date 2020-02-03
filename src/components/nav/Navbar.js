@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 import Tel from '../../img/tel.svg'
 import Email from '../../img/email.svg'
 import Local from '../../img/local.svg'
-import arrowLine from '../../img/arrowLine.svg'
-import telegram from '../../img/telegram.svg'
-import call from '../../img/call.svg'
+import ArrowLine from '../../img/arrowLine.svg'
+import Telegram from '../../../static/img/telegram.svg'
+import Call from '../../../static/img/call.svg'
 import Navigation from './styled'
 import Search from './Search'
 import Login from './Login'
@@ -57,15 +57,15 @@ const Navbar = class extends React.Component {
         </div>
         <div className="navigation__contact common-contact row">
           <a href="">
-              <img src={Tel} className="icon" alt="contacts" />
+              <Tel className="icon" alt="contacts" />
               +38 (068) 5555 999
           </a>
           <a href="">
-              <img src={Email} className="icon" alt="contacts" />
+              <Email className="icon" alt="contacts" />
               info@inta-ics.com
           </a>
           <a href="" >
-              <img src={Local} className="icon" alt="contacts" />
+              <Local className="icon" alt="contacts" />
               Украина, Киев, ул. Линейная 17
           </a>
         </div>
@@ -88,19 +88,19 @@ const Navbar = class extends React.Component {
               <nav className="sub-menu column">
                   <Link to="/">
                       Авиадоставка
-                      <img src={arrowLine} alt=""/>
+                      <ArrowLine alt=""/>
                   </Link>
                   <Link to="/">
                       Морские перевозки
-                      <img src={arrowLine} alt=""/>
+                      <ArrowLine alt=""/>
                   </Link>
                   <Link to="/">
                       Ж/Д перевозки
-                      <img src={arrowLine} alt=""/>
+                      <ArrowLine alt=""/>
                   </Link>
                   <Link to="/">
                       Автодоставка
-                      <img src={arrowLine} alt=""/>
+                      <ArrowLine alt=""/>
                   </Link>
               </nav>
           </div>
@@ -122,10 +122,10 @@ const Navbar = class extends React.Component {
         </div>
         <div className="row container">
             <Link to="/" className="row circle telegram">
-                <img src={telegram} alt=""/>
+                {/*<img src="./img/telegram.svg" alt="telegram icon"/>*/}
             </Link>
             <Link to="/" className="row circle call">
-                <img src={call} alt=""/>
+                {/*<img src="./img/call.svg" alt="call img"/>*/}
             </Link>
             <Search />
             <Login />
