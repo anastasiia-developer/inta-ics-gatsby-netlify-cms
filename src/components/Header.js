@@ -72,7 +72,7 @@ const Container = styled.header`
 `;
 
 const Header = ({ header, location, title, subheading }) => {
-    const { scopeInformation, images, buttons } = header.slide1;
+    const { scopeInformation, images, buttons } = header.slide;
 
     const scopeDeliver = scopeInformation.map(item => (
         <li className="row" key={item.text}>

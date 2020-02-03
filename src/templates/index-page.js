@@ -130,7 +130,7 @@ export const pageQuery = graphql`
           }
         }
         header{
-          slide1 {
+          slide {
             images {
               alt
               image{
