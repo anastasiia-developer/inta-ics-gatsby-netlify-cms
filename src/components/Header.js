@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import ArrowLine from '../img/arrowLine.svg'
 import Img from "gatsby-image"
 import Store from './store'
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const Button = styled(Link)`
     align-items: center;
@@ -72,7 +73,7 @@ const Container = styled.header`
 `;
 
 const Header = ({ header, location, title, subheading }) => {
-    console.log(header.slide);
+
     const { scopeInformation, images, buttons } = header.slide[0];
 
     const scopeDeliver = scopeInformation.map(item => (
@@ -82,10 +83,6 @@ const Header = ({ header, location, title, subheading }) => {
                 src={item.image.publicURL} />
             <p>{item.text}</p>
         </li>
-    ));
-
-    const Images = images.map(img => (
-       <Img key={img.image.id} fluid={img.image.childImageSharp.fluid}/>
     ));
 
     const Buttons = buttons.map(btn => (
@@ -119,7 +116,14 @@ const Header = ({ header, location, title, subheading }) => {
                 </div>
                 <div className="bckg-parallax-container">
                     <div className="row header-gatsby-image">
-                        {Images}
+                        {images.map(img => (
+                            <PreviewCompatibleImage
+                                key={img.image.id}
+                                imageInfo={{
+                                    image: img.image,
+                                }}
+                            />
+                        ))}
                     </div>
                     <Store/>
                 </div>
