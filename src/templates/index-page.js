@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import Header from '../components/Header'
+import Section from "../components/mainPage/section";
 
 export const IndexPageTemplate = ({
   heading,
@@ -15,7 +16,8 @@ export const IndexPageTemplate = ({
   location,
   title,
   subheading,
-  header
+  header,
+  section
 }) => (
   <Fragment>
     <Header
@@ -24,6 +26,7 @@ export const IndexPageTemplate = ({
         header={header}
         location={location}
     />
+    <Section section={section}/>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -82,10 +85,11 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   header: PropTypes.object,
+  section: PropTypes.object,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
-}
+};
 
 const IndexPage = ({ data, location }) => {
   const { frontmatter } = data.markdownRemark;
@@ -101,6 +105,7 @@ const IndexPage = ({ data, location }) => {
         intro={frontmatter.intro}
         location={location}
         header={frontmatter.header}
+        section={frontmatter.section}
       />
     </Layout>
   )
@@ -151,6 +156,20 @@ export const pageQuery = graphql`
               text
               link
             }
+          }
+        }
+        section{
+          title
+          subTitle
+          blocks{
+            image{
+              childImageSharp {
+                fluid(maxWidth: 300, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            title
           }
         }
         heading

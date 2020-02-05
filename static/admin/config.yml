@@ -31,7 +31,7 @@ collections:
     label: "Pages"
     files:
       - file: "src/pages/index.md"
-        label: "Landing Page"
+        label: "Главная"
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
@@ -45,17 +45,28 @@ collections:
                   {label: Image, name: image, widget: image},
                   {label: Alt, name: alt, widget: string}
                 ]},
-                {label: ScopeInformation, name: scopeInformation, widget: list, fields:[
+                {label: ScopeInformation, name: scopeInformation, widget: list, fields: [
                   {label: Image, name: image, widget: image},
                   {label: text, name: text, widget: string}
                 ]},
-                {label: Buttons, name: buttons, widget: list, fields:[
+                {label: Buttons, name: buttons, widget: list, fields: [
                   {label: Link, name: link, widget: string},
                   {label: text, name: text, widget: string}
-                ]},
+                ]}
               ]}
             ]}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
+          - {lable: Секция, name: section, widget: object, fielsd: [
+              {lable: Заголовок, name: title, widget: string},
+              {lable: Под заголовок, name: subTitle, widget: string},
+              {lable: Блоки, name: blocks, widget: list, fields: [
+                {lable: Картинка, name: image, widget: image},
+                {lable: Текст, name: title, widget: string}
+              ]}
+            ]}
+          - {label: Mainpitch, name: mainpitch, widget: object, fields: [
+              {label: Title, name: title, widget: string},
+              {label: Description, name: description, widget: text}
+          ]}
           - {label: Description, name: description, widget: string}
           - {label: Intro, name: intro, widget: object, fields:[
               {label: Heading, name: heading, widget: string},

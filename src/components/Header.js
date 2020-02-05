@@ -73,7 +73,6 @@ const Container = styled.header`
 `;
 
 const Header = ({ header, location, title, subheading }) => {
-
     const { scopeInformation, images, buttons } = header.slide[0];
 
     const scopeDeliver = scopeInformation.map(item => (
@@ -89,7 +88,9 @@ const Header = ({ header, location, title, subheading }) => {
         <Button className="row" to={btn.link}>
             <img src="./img/logoMini.svg" alt="logo Mini" className="logo"/>
             {btn.text}
-            <ArrowLine className="icon"/>
+            {location &&
+                <ArrowLine className="icon"/>
+            }
         </Button>
     ));
 
@@ -98,9 +99,11 @@ const Header = ({ header, location, title, subheading }) => {
             className="column common-header">
             <div className="wrapper row-to-column">
                 <div className="column common-header-column">
-                    <Breadcrumbs
-                        crumbLabel={false}
-                        location={location}/>
+                    {location &&
+                        <Breadcrumbs
+                            crumbLabel={false}
+                            location={location}/>
+                    }
                     <h1>
                         {title}
                     </h1>

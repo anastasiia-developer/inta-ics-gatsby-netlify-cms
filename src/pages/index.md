@@ -27,6 +27,12 @@ header:
           text: Местоположение посылки
         - image: /img/time3.svg
           text: Сроки доставки
+section: 
+  title: Международные перевозки
+  subTitle: то чем мы гордимся и что готовы вам предоставить
+  blocks: 
+   - image: /img/bay.svg
+     title: Прямой перевозчик            
 mainpitch:
   title: Why Kaldi
   description: >
