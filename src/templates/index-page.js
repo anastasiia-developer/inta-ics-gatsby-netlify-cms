@@ -7,6 +7,7 @@ import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import Header from '../components/Header'
 import Section from "../components/mainPage/section";
+import About from "../components/mainPage/about"
 
 export const IndexPageTemplate = ({
   heading,
@@ -17,7 +18,8 @@ export const IndexPageTemplate = ({
   title,
   subheading,
   header,
-  section
+  section,
+  about
 }) => (
   <Fragment>
     <Header
@@ -27,6 +29,7 @@ export const IndexPageTemplate = ({
         location={location}
     />
     <Section section={section}/>
+    <About about={about}/>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
