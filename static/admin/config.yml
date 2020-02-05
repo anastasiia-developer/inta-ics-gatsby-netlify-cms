@@ -45,7 +45,7 @@ collections:
                   {label: Image, name: image, widget: image},
                   {label: Alt, name: alt, widget: string}
                 ]},
-                {label: ScopeInformation, name: scopeInformation, widget: list, fields: [
+                {label: "Scope information", name: scopeInformation, widget: list, fields: [
                   {label: Image, name: image, widget: image},
                   {label: text, name: text, widget: string}
                 ]},
@@ -55,14 +55,14 @@ collections:
                 ]}
               ]}
             ]}
-          - {lable: Секция, name: section, widget: object, fielsd: [
-              {lable: Заголовок, name: title, widget: string},
-              {lable: Под заголовок, name: subTitle, widget: string},
-              {lable: Блоки, name: blocks, widget: list, fields: [
-                {lable: Картинка, name: image, widget: image},
-                {lable: Текст, name: title, widget: string}
+          - {lable: "Международные перевозки", name: section, widget: object, fields: [
+              {lable: "Заголовок", name: title, widget: string},
+              {lable: "Под заголовок", name: subTitle, widget: string},
+              {lable: "Блоки", name: blocks, widget: list, fields: [
+                {lable: "Картинка", name: image, widget: image},
+                {lable: "Текст", name: title, widget: string}
               ]}
-            ]}
+          ]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
               {label: Title, name: title, widget: string},
               {label: Description, name: description, widget: text}
