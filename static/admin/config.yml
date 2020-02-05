@@ -68,12 +68,15 @@ collections:
               {lable: "Текст", name: text, widget: "markdown"},
               {lable: "Картинка", name: image, widget: image},
           ]}
-          - {lable: "сalculate", name: "калькулятор", widget: object, fields:[
+          - {lable: "Calculate", name: calculate, widget: object, fields:[
               {lable: "Заголовок", name: title, widget: string},
               {lable: "Составляющие цены", name: constituents, widget: list, fields:[
                 {lable: "Заголовок категории", name: title, widget: string},
-                {lable: "Картинка", name: image, widget: image},
-                {lable: "Название услуги", name: "nameCategories", widget: string}
+                {lable: "Категории", name: сategories, widget: list, fields:[
+                  {lable: "Название услуги", name: "nameCategories", widget: string},
+                  {lable: "цена", name: "price", widget: number},
+                  {lable: "Картинка", name: image, widget: image}
+                ]}
               ]}
           ]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
