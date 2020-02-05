@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Breadcrumbs from "./BreadCrumbs";
 import { Link } from "gatsby"
 import ArrowLine from '../img/arrowLine.svg'
-import Img from "gatsby-image"
 import Store from './store'
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
@@ -36,7 +35,7 @@ const Button = styled(Link)`
     }
 `;
 const Container = styled.header`
-    padding-top: 8em;
+    padding: 8em 0 5em;
     .wrapper{
         justify-content: space-between;
     }
@@ -56,6 +55,7 @@ const Container = styled.header`
     .common-header-column{
         width: 55%;
         justify-content: center;
+        padding-top: 3em;
     }
     .bckg-parallax{
         width: 100%;
@@ -84,9 +84,14 @@ const Header = ({ header, location, title, subheading }) => {
         </li>
     ));
 
-    const Buttons = buttons.map(btn => (
-        <Button className="row" to={btn.link}>
-            <img src="./img/logoMini.svg" alt="logo Mini" className="logo"/>
+    const Buttons = buttons.map((btn, index) => (
+        <Button
+            key={index}
+            className="row"
+            to={btn.link}>
+            <img src="./img/logoMini.svg"
+                 alt="logo Mini"
+                 className="logo"/>
             {btn.text}
             {location &&
                 <ArrowLine className="icon"/>
