@@ -43,8 +43,8 @@ const Section = ({section}) => {
             <h3> { subTitle } </h3>
             <div className="wrapper row-to-column">
                 {
-                    blocks.map(block =>(
-                        <div className="block" key={block.image.id}>
+                    blocks.map((block, index) =>(
+                        <div className="block" key={index}>
                             <PreviewCompatibleImage
                                 imageInfo={{
                                     image: block.image,

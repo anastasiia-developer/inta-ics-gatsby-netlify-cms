@@ -76,7 +76,7 @@ const Header = ({ header, location, title, subheading }) => {
     const { scopeInformation, images, buttons } = header.slide[0];
 
     const scopeDeliver = scopeInformation.map(item => (
-        <li className="row" key={item.text}>
+        <li key={item.text} className="row" >
             <img
                 alt="icon"
                 src={item.image.publicURL} />
@@ -124,9 +124,9 @@ const Header = ({ header, location, title, subheading }) => {
                 </div>
                 <div className="bckg-parallax-container">
                     <div className="row header-gatsby-image">
-                        {images.map(img => (
+                        {images.map((img, index) => (
                             <PreviewCompatibleImage
-                                key={img.image.id}
+                                key={index}
                                 imageInfo={{
                                     image: img.image,
                                 }}
