@@ -39,6 +39,13 @@ section:
       image: /img/team 1.png
   subTitle: то чем мы гордимся и что готовы вам предоставить
   title: Международные перевозки
+about: 
+    title: Международные перевозки
+    text: > 
+        Kaldi is the coffee store for everyone who believes that great coffee
+        shouldn't just taste good, it should do good too. We source all of our beans
+        directly from small s
+    image: /img/aircraft 1.png 
 mainpitch:
   title: Why Kaldi
   description: >
