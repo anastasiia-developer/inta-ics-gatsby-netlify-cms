@@ -61,7 +61,37 @@ about:
         Мы заинтересованы в развитии бизнеса наших партнеров, поэтому используем все возможности, чтобы предоставить качественный сервис.
     </p>
   title: Логистические услуги от специалистов
-калькулятор:
+calculate:
+  constituents:
+    - title: 'Вид складской услуги:'
+      сategories:
+        - image: /img/box (2) 1.png
+          nameCategories: Готовый груз
+          price: 0
+        - image: /img/logistics 1.png
+          nameCategories: Консолидация
+          price: 1
+        - image: /img/shipping (1) 1.png
+          nameCategories: Консолидация + стандартная проверка
+          price: 2
+    - title: 'Вид отправления:'
+      сategories:
+        - image: /img/plane 1.png
+          nameCategories: Авиадоставка
+          price: 11
+    - title: 'Вид доставки:'
+      сategories:
+        - image: /img/shipping 2.png
+          nameCategories: Курьером в руки
+          price: 3
+        - image: /img/post-office 1.png
+          nameCategories: В почтомат/ отделение
+          price: 2
+    - title: Дополнительные услуги
+      сategories:
+        - image: /img/box (4) 1.png
+          nameCategories: Доп. упаковка
+          price: 2
   title: Рассчитайте стоимость доставки
 mainpitch:
   title: Why Kaldi
