@@ -68,7 +68,7 @@ collections:
               {lable: "Текст", name: text, widget: "markdown"},
               {lable: "Картинка", name: image, widget: image},
           ]}
-          - {lable: "Calculate", name: calculate, widget: object, fields:[
+          - {lable: "Calculator", name: calculator, widget: object, fields:[
               {lable: "Заголовок", name: title, widget: string},
               {lable: "Составляющие цены", name: constituents, widget: list, fields:[
                 {lable: "Заголовок категории", name: title, widget: string},
