@@ -65,7 +65,7 @@ collections:
           ]}
           - {lable: "Про нас", name: about, widget: object, fields: [
               {lable: "Заголовок", name: title, widget: string},
-              {lable: "Текст", name: text, widget: text},
+              {lable: "Текст", name: text, widget: "markdown"},
               {lable: "Картинка", name: image, widget: image},
           ]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
