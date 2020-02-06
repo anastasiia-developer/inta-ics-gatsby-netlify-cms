@@ -72,8 +72,8 @@ collections:
               {lable: "Заголовок", name: title, widget: string},
               {lable: "Составляющие цены", name: constituents, widget: list, fields:[
                 {lable: "Заголовок категории", name: title, widget: string},
-                {lable: "Категории", name: сategories, widget: list, fields:[
-                  {lable: "Название услуги", name: "nameCategories", widget: string},
+                {lable: "category", name: category, widget: list, fields:[
+                  {lable: "Название услуги", name: "nameCategory", widget: string},
                   {lable: "цена", name: "price", widget: number},
                   {lable: "Картинка", name: image, widget: image}
                 ]}

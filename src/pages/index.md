@@ -64,33 +64,33 @@ about:
 calculator:
   constituents:
     - title: 'Вид складской услуги:'
-      сategories:
+      category:
         - image: /img/box (2) 1.png
-          nameCategories: Готовый груз
+          nameCategory: Готовый груз
           price: 0
         - image: /img/logistics 1.png
-          nameCategories: Консолидация
+          nameCategory: Консолидация
           price: 1
         - image: /img/shipping (1) 1.png
-          nameCategories: Консолидация + стандартная проверка
+          nameCategory: Консолидация <p>+</p> стандартная проверка
           price: 2
     - title: 'Вид отправления:'
-      сategories:
+      category:
         - image: /img/plane 1.png
-          nameCategories: Авиадоставка
+          nameCategory: Авиадоставка
           price: 11
     - title: 'Вид доставки:'
-      сategories:
+      category:
         - image: /img/shipping 2.png
-          nameCategories: Курьером в руки
+          nameCategory: Курьером в руки
           price: 3
         - image: /img/post-office 1.png
-          nameCategories: В почтомат/ отделение
+          nameCategory: В почтомат/ отделение
           price: 2
     - title: Дополнительные услуги
-      сategories:
+      category:
         - image: /img/box (4) 1.png
-          nameCategories: Доп. упаковка
+          nameCategory: Доп. упаковка
           price: 2
   title: Рассчитайте стоимость доставки
 mainpitch:

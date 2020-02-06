@@ -6,8 +6,9 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import Header from '../components/Header'
-import Section from "../components/mainPage/section";
+import Section from "../components/mainPage/section"
 import About from "../components/mainPage/about"
+import Calculator from "../components/mainPage/calculator"
 
 export const IndexPageTemplate = ({
   heading,
@@ -19,7 +20,8 @@ export const IndexPageTemplate = ({
   subheading,
   header,
   section,
-  about
+  about,
+  calculator
 }) => (
   <Fragment>
     <Header
@@ -30,6 +32,7 @@ export const IndexPageTemplate = ({
     />
     <Section section={section}/>
     <About about={about}/>
+    <Calculator calculator={calculator}/>
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -90,6 +93,7 @@ IndexPageTemplate.propTypes = {
   header: PropTypes.object,
   section: PropTypes.object,
   about: PropTypes.object,
+  calculator: PropTypes.object,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -111,6 +115,7 @@ const IndexPage = ({ data, location }) => {
         header={frontmatter.header}
         section={frontmatter.section}
         about={frontmatter.about}
+        calculator={frontmatter.calculator}
       />
     </Layout>
   )
@@ -184,6 +189,23 @@ export const pageQuery = graphql`
             childImageSharp {
               fluid(maxWidth: 300, quality: 100) {
                 ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        calculator {
+          title
+          constituents {
+            title
+            category {
+              nameCategory
+              price
+              image{
+                childImageSharp {
+                  fluid(maxWidth: 65, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
             }
           }
