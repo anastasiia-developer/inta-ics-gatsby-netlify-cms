@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Inta International Courier Service
-image: /img/bkgr-air.png
+image: /img/002-united-states (7).png
 heading: Great coffee with a conscience
 subheading: >-
   Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками
@@ -63,8 +63,7 @@ about:
   title: Логистические услуги от специалистов
 calculator:
   constituents:
-    - title: 'Вид складской услуги:'
-      category:
+    - category:
         - image: /img/box (2) 1.png
           nameCategory: Готовый груз
           price: 0
@@ -74,25 +73,45 @@ calculator:
         - image: /img/shipping (1) 1.png
           nameCategory: Консолидация <p>+</p> стандартная проверка
           price: 2
-    - title: 'Вид отправления:'
-      category:
+      title: 'Вид складской услуги:'
+    - category:
         - image: /img/plane 1.png
           nameCategory: Авиадоставка
           price: 11
-    - title: 'Вид доставки:'
-      category:
+      title: 'Вид отправления:'
+    - category:
         - image: /img/shipping 2.png
           nameCategory: Курьером в руки
           price: 3
         - image: /img/post-office 1.png
           nameCategory: В почтомат/ отделение
           price: 2
-    - title: Дополнительные услуги
-      category:
+      title: 'Вид доставки:'
+    - category:
         - image: /img/box (4) 1.png
           nameCategory: Доп. упаковка
           price: 2
+      title: Дополнительные услуги
   title: Рассчитайте стоимость доставки
+destinations:
+  - country: Китай
+    flag: /img/001-china 3.png
+  - country: Англия
+    flag: /img/002-united-states.png
+  - country: Гонконг
+    flag: /img/002-united-states (1).png
+  - country: Италия
+    flag: /img/002-united-states (2).png
+  - country: США
+    flag: /img/002-united-states (3).png
+  - country: Германия
+    flag: /img/002-united-states (4).png
+  - country: Индия
+    flag: /img/002-united-states (5).png
+  - country: Франция
+    flag: /img/002-united-states (6).png
+  - country: Израиль
+    flag: /img/002-united-states (7).png
 mainpitch:
   title: Why Kaldi
   description: >
