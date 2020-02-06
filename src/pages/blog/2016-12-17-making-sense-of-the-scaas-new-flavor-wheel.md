@@ -1,15 +1,17 @@
 ---
 templateKey: blog-post
-title: lflflflffglflfорывлпафывлпалфпалп
-date: 2016-12-17T15:04:10.000Z
-description: рвораволрапвпрывчи тиаываывоа
+title: Украина - привлекательный рынок для китая
+date: 2020-01-27T15:04:00.000Z
+description: >-
+  Большая Восточная экспансия Китая в области экономики и политики подкреплена
+  следующими государственными условиями
 featuredpost: false
-featuredimage: /img/flavor_wheel.jpg
+featuredimage: /img/image 13.png
 tags:
   - flavor
   - tasting
 ---
-![flavor wheel](/img/flavor_wheel.jpg)
+![flavor wheel](/img/image 13.png)
 
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 
