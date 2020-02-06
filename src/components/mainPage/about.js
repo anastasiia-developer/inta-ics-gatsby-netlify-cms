@@ -5,12 +5,12 @@ import { HTMLContent } from '../Content';
 
 const Section = styled.section`
     background: #F0F5FD;
-    padding: 4em 0 4em 6em;
+    padding: 4em 0 6em;
     margin-top: 4em;
     .description{
         flex: 1;
-        margin-right: 2em;
         h2{
+            padding: 0 0 0 4em;
             color: #005BE4;
             padding-bottom: 1em;
             font-weight: 500;
@@ -32,6 +32,9 @@ const Section = styled.section`
     .gatsby-image-wrapper{
         flex: 1;
     }
+    .text{
+        padding: 0 4em 0 6em;
+    }
 `;
 
 const About = ({ about }) => {
@@ -41,7 +44,7 @@ const About = ({ about }) => {
         <Section className="row-to-column">
             <div className="description">
                 <h2>{title}</h2>
-                <HTMLContent content={text}/>
+                <HTMLContent className="text" content={text}/>
             </div>
             <PreviewCompatibleImage
                 imageInfo={{

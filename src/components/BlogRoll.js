@@ -2,58 +2,123 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import styled from "styled-components";
+import ArrowLine from "../img/arrowLine.svg";
+
+const Wrapper = styled.div`
+  background: #fff;
+`;
+
+const Post = styled.article`
+  border-right: 1px solid #ECECEC;
+  padding: 1em;
+  flex: 1;
+  &:last-child{
+    border-right: none;
+  }
+  header{
+    width: auto;
+    height: 7em;
+    .gatsby-image-wrapper{
+      height: 100%;
+    }
+  }
+  h3{
+      padding: .5em;
+    a{
+        color: #2F2F2F;
+        font-weight: 500;
+        font-size: 1em;
+        line-height: 1em;
+      }
+  }
+  p{
+    padding: .5em;
+    color: #474747;
+    line-height: 1.5em;
+    font-size: .9em;
+  }
+  footer{
+    margin-top: 1em;
+    justify-content: space-between;
+    .time{
+      color: #A3A3A3;
+      align-items: center;
+      img{
+        margin-right: .5em;
+      }    
+    }
+    .row{
+      align-items: center;
+    }
+    a{
+      color: #FF4B55;
+      text-decoration: underline;
+    }
+    svg{
+      margin-right: .5em;
+      width: 1em;
+      height: 1em;
+      path{
+        fill: #FF4B55;
+      }
+    }
+  }
+`;
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
+
+    const sliceText = (text) => {
+      let sliced = text.slice(0,100);
+      if (sliced.length < text.length) {
+        sliced += '...';
+      }
+      return sliced;
+    };
 
     return (
-      <div className="columns is-multiline">
+      <Wrapper className="row-to-column wrapper">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
+            <Post key={post.id}>
+              <header>
+                {post.frontmatter.featuredimage ? (
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: post.frontmatter.featuredimage,
+                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                      }}
+                    />
+                ) : null}
+              </header>
+              <h3>
+                <Link
+                  to={post.fields.slug}
+                >
+                  {post.frontmatter.title}
+                </Link>
+              </h3>
+              <p>
+                {
+                  sliceText(post.excerpt)
+                }
+              </p>
+              <footer className="row">
+                <span className="time row">
+                    <img src="./img/timeIcon.png" alt="timeIcon"/>
+                    {post.frontmatter.date}
+                </span>
+                <Link className="row" to={post.fields.slug}>
+                  <ArrowLine/>
+                  Читать подробнее
+                </Link>
+              </footer>
+            </Post>
           ))}
-      </div>
+      </Wrapper>
     )
   }
 }
@@ -84,7 +149,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
+                date(formatString: "DD.MM.YYYY")
                 featuredpost
                 featuredimage {
                   childImageSharp {
