@@ -5,7 +5,7 @@ const Navigation = styled.nav`
     width: 100%;
     left: 0;
     align-items: center;
-    z-index: 1;
+    z-index: 3;
     background: #000;
     padding: 2em 5% 1em;
   
