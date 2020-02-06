@@ -79,6 +79,10 @@ collections:
                 ]}
               ]}
           ]}
+          - {lable: "destinations", name: destinations, widget: list, fields:[
+              {lable: "страна", name: country, widget: string},
+              {lable: "флаг", name: flag, widget: image}
+          ]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
               {label: Title, name: title, widget: string},
               {label: Description, name: description, widget: text}

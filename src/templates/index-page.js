@@ -8,6 +8,7 @@ import Section from "../components/mainPage/section"
 import About from "../components/mainPage/about"
 import Calculator from "../components/mainPage/calculator"
 import News from "../components/mainPage/news";
+import Destinations from "../components/mainPage/destinations";
 
 export const IndexPageTemplate = ({
   heading,
@@ -20,7 +21,7 @@ export const IndexPageTemplate = ({
   header,
   section,
   about,
-  calculator
+  calculator,
 }) => (
   <Fragment>
     <Header
