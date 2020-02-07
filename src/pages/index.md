@@ -94,24 +94,26 @@ calculator:
       title: Дополнительные услуги
   title: Рассчитайте стоимость доставки
 destinations:
-  - country: Китай
-    flag: /img/001-china 3.png
-  - country: Англия
-    flag: /img/002-united-states.png
-  - country: Гонконг
-    flag: /img/002-united-states (1).png
-  - country: Италия
-    flag: /img/002-united-states (2).png
-  - country: США
-    flag: /img/002-united-states (3).png
-  - country: Германия
-    flag: /img/002-united-states (4).png
-  - country: Индия
-    flag: /img/002-united-states (5).png
-  - country: Франция
-    flag: /img/002-united-states (6).png
-  - country: Израиль
-    flag: /img/002-united-states (7).png
+    destinationsImage: /img/map.png     
+    countries:
+      - country: Китай
+        flag: /img/001-china 3.png
+      - country: Англия
+        flag: /img/002-united-states.png
+      - country: Гонконг
+        flag: /img/002-united-states (1).png
+      - country: Италия
+        flag: /img/002-united-states (2).png
+      - country: США
+        flag: /img/002-united-states (3).png
+      - country: Германия
+        flag: /img/002-united-states (4).png
+      - country: Индия
+        flag: /img/002-united-states (5).png
+      - country: Франция
+        flag: /img/002-united-states (6).png
+      - country: Израиль
+        flag: /img/002-united-states (7).png
 mainpitch:
   title: Why Kaldi
   description: >

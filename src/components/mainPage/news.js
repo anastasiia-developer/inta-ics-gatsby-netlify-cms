@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Section = styled.section`
     background: #FFE15A;
     padding: 2em 0;
-    margin: 6em 0;
+    margin: 6em 0 3em;
     h2{
         text-align: center;
         padding: 1em 0 2em;

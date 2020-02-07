@@ -79,15 +79,18 @@ collections:
                 ]}
               ]}
           ]}
-          - {lable: "destinations", name: destinations, widget: list, fields:[
-              {lable: "страна", name: country, widget: string},
-              {lable: "флаг", name: flag, widget: image}
+          - {lable: "destinations", name: destinations, widget: object, fields:[
+              {lable: "destinationsImage", name: destinationsImage, widget: image},
+              {lable: "countries", name: countries, widget: list, fields:[
+                {lable: "страна", name: country, widget: string},
+                {lable: "флаг", name: flag, widget: image}
+              ]}
           ]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
               {label: Title, name: title, widget: string},
               {label: Description, name: description, widget: text}
           ]}
-          - {label: Description, name: description, widget: string}
+          - {label: Descriptiflagon, name: description, widget: string}
           - {label: Intro, name: intro, widget: object, fields:[
               {label: Heading, name: heading, widget: string},
               {label: Description, name: description, widget: text},
