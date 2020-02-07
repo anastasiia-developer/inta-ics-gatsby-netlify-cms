@@ -114,6 +114,27 @@ destinations:
         flag: /img/002-united-states (6).png
       - country: Израиль
         flag: /img/002-united-states (7).png
+cargo: 
+    - title: Контейнерные перевозки
+      image: /img/storage 1.png
+    - title: Карго доставка
+      image: /img/package 2.png 
+    - title: Доставка товаров
+      image: /img/trolley 1.png
+    - title: Перевозка сборных грузов
+      image: /img/cargo-ship 1.png
+    - title: Международная доставка посылок
+      image: /img/airplane 1.png 
+    - title: Мультимодальные перевозки
+      image: /img/package (2) 1.png 
+    - title: Перевозка негабаритных грузов
+      image: /img/product 1.png 
+    - title: Перевозка техники
+      image: /img/protected 1.png 
+    - title: Доставка станков и оборудования
+      image: /img/trolley (1) 1.png
+    - title: Доставка из Китая в Одессу
+      image: /img/warehouse 3.png                                                       
 mainpitch:
   title: Why Kaldi
   description: >

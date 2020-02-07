@@ -9,6 +9,7 @@ import About from "../components/mainPage/about"
 import Calculator from "../components/mainPage/calculator"
 import News from "../components/mainPage/news";
 import Destinations from "../components/mainPage/destinations";
+import Cargo from "../components/mainPage/cargo";
 
 export const IndexPageTemplate = ({
   heading,
@@ -22,7 +23,8 @@ export const IndexPageTemplate = ({
   section,
   about,
   calculator,
-  destinations
+  destinations,
+  cargo
 }) => (
   <Fragment>
     <Header
@@ -36,6 +38,7 @@ export const IndexPageTemplate = ({
     <Calculator calculator={calculator}/>
     <News />
     <Destinations destinations={destinations} />
+    <Cargo cargo={cargo}/>
     {/*<section className="section section--gradient">*/}
     {/*  <div className="container">*/}
     {/*    <div className="section">*/}
@@ -100,6 +103,7 @@ IndexPageTemplate.propTypes = {
   destinations: PropTypes.shape({
     countries: PropTypes.array,
   }),
+  cargo: PropTypes.array,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -123,6 +127,7 @@ const IndexPage = ({ data, location }) => {
         about={frontmatter.about}
         calculator={frontmatter.calculator}
         destinations={frontmatter.destinations}
+        cargo={frontmatter.cargo}
       />
     </Layout>
   )
@@ -232,6 +237,16 @@ export const pageQuery = graphql`
                 fluid(maxWidth: 100, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
+              }
+            }
+          }
+        }
+        cargo{
+          title
+          image{
+            childImageSharp {
+              fluid(maxWidth: 100, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

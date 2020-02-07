@@ -90,6 +90,10 @@ collections:
               {label: Title, name: title, widget: string},
               {label: Description, name: description, widget: text}
           ]}
+          - {lable: cargo, name: cargo, widget: list, fields:[
+              {lable: title, name: title, widget: string},
+              {lable: image, name: image, widget: image}
+          ]}
           - {label: Descriptiflagon, name: description, widget: string}
           - {label: Intro, name: intro, widget: object, fields:[
               {label: Heading, name: heading, widget: string},
