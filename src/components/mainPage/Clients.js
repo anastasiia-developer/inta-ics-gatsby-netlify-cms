@@ -9,6 +9,7 @@ const Section = styled.section`
     padding: 3em 0;    
     .wrapper{
         width: 70%;
+        padding-bottom: 2em;
     }
     .row{
         overflow: hidden;
@@ -37,20 +38,32 @@ const Section = styled.section`
         height: 100%;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
     }
+    .react-multi-carousel-dot-list {
+        bottom: 0;
+        .react-multi-carousel-dot button{
+            background: #fff;
+            border: none;
+            opacity: .5;
+            width: .6em;
+            height: .6em;
+        }
+        .react-multi-carousel-dot--active button{
+            opacity: 1;
+        } 
+    }
 `;
 
 const Arrow = styled.button`
     background: transparent;
     z-index: 1;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 25%;
     &:before{
         font-size: 2em;
     }
-    react-multiple-carousel__arrow--left{
+    &.react-multiple-carousel__arrow--left{
         left: 12%;
     }
-    .react-multiple-carousel__arrow--right {
+    &.react-multiple-carousel__arrow--right {
         right: 12%;
     }
 `;
@@ -87,30 +100,31 @@ const Clients = ({clients}) => {
                 renderButtonGroupOutside={true}
                 customButtonGroup={<ButtonGroup />}
                 slidesToSlide={1}
-            responsive={{
-                desktop: {
-                    breakpoint: {
-                        max: 3000,
-                        min: 1024
+                showDots
+                responsive={{
+                    desktop: {
+                        breakpoint: {
+                            max: 3000,
+                            min: 1024
+                        },
+                        items: 4,
                     },
-                    items: 4,
-                },
-                mobile: {
-                    breakpoint: {
-                        max: 464,
-                        min: 0
+                    mobile: {
+                        breakpoint: {
+                            max: 464,
+                            min: 0
+                        },
+                        items: 1,
                     },
-                    items: 1,
-                },
-                tablet: {
-                    breakpoint: {
-                        max: 1024,
-                        min: 464
-                    },
-                    items: 2,
-                    partialVisibilityGutter: 30
-                }
-            }}
+                    tablet: {
+                        breakpoint: {
+                            max: 1024,
+                            min: 464
+                        },
+                        items: 2,
+                        partialVisibilityGutter: 30
+                    }
+                }}
             >
             {clients.map((img, index) => (
                 <div key={index} className="img">
