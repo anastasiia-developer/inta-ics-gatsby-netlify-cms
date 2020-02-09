@@ -134,7 +134,12 @@ cargo:
     - title: Доставка станков и оборудования
       image: /img/trolley (1) 1.png
     - title: Доставка из Китая в Одессу
-      image: /img/warehouse 3.png                                                       
+      image: /img/warehouse 3.png     
+clients:
+    - image: /img/image 18.png     
+    - image: /img/image 19.png     
+    - image: /img/image 20.png     
+    - image: /img/image 20 (copy).png     
 mainpitch:
   title: Why Kaldi
   description: >
