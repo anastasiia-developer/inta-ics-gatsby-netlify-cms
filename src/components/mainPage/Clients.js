@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { ResponsiveCarousel, ButtonGroup } from '../CommonCarousel'
 
 const Section = styled.section`
     background: #FFE15A;
@@ -53,94 +54,36 @@ const Section = styled.section`
     }
 `;
 
-const Arrow = styled.button`
-    background: transparent;
-    z-index: 1;
-    top: 25%;
-    &:before{
-        font-size: 2em;
-    }
-    &.react-multiple-carousel__arrow--left{
-        left: 12%;
-    }
-    &.react-multiple-carousel__arrow--right {
-        right: 12%;
-    }
-`;
-const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
-    const { carouselState: { currentSlide } } = rest;
-
-        return (
-        <Fragment>
-            <Arrow
-                onClick={() => previous()}
-                aria-label="Go to previous slide"
-                className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left">
-            </Arrow>
-            <Arrow
-                onClick={() => next()}
-                aria-label="Go to previous slide"
-              className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right">
-            </Arrow>
-        </Fragment>
-        )
-
-};
-const Clients = ({clients}) => {
-
-    return(
-        <Section>
-            <h2>Наши клиенты</h2>
-            <div style={{position: 'relative'}}>
-            <Carousel
-                containerClass="wrapper"
-                sliderClass="row"
-                infinite
-                arrows={false}
-                renderButtonGroupOutside={true}
-                customButtonGroup={<ButtonGroup />}
-                slidesToSlide={1}
-                showDots
-                responsive={{
-                    desktop: {
-                        breakpoint: {
-                            max: 3000,
-                            min: 1024
-                        },
-                        items: 4,
-                    },
-                    mobile: {
-                        breakpoint: {
-                            max: 464,
-                            min: 0
-                        },
-                        items: 1,
-                    },
-                    tablet: {
-                        breakpoint: {
-                            max: 1024,
-                            min: 464
-                        },
-                        items: 2,
-                        partialVisibilityGutter: 30
-                    }
-                }}
-            >
-            {clients.map((img, index) => (
-                <div key={index} className="img">
-                    <div className="shadow row">
-                        <PreviewCompatibleImage
-                            imageInfo={{
-                                image: img.image
-                            }}
-                        />
-                    </div>
+const Clients = ({clients}) => (
+    <Section>
+        <h2>Наши клиенты</h2>
+        <div style={{position: 'relative'}}>
+        <Carousel
+            containerClass="wrapper"
+            sliderClass="row"
+            infinite
+            arrows={false}
+            renderButtonGroupOutside={true}
+            customButtonGroup={<ButtonGroup />}
+            slidesToSlide={1}
+            showDots
+            responsive={ResponsiveCarousel()}
+        >
+        {clients.map((img, index) => (
+            <div key={index} className="img">
+                <div className="shadow row">
+                    <PreviewCompatibleImage
+                        imageInfo={{
+                            image: img.image
+                        }}
+                    />
                 </div>
-            ))}
-            </Carousel>
             </div>
-        </Section>
-    )
-}
+        ))}
+        </Carousel>
+        </div>
+    </Section>
+)
+
 
 export default Clients

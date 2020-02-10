@@ -11,6 +11,7 @@ import News from "../components/mainPage/news"
 import Destinations from "../components/mainPage/destinations"
 import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/mainPage/Clients"
+import Reviews from "../components/mainPage/Reviews";
 
 export const IndexPageTemplate = ({
   heading,
@@ -42,6 +43,7 @@ export const IndexPageTemplate = ({
     <Destinations destinations={destinations} />
     <Cargo cargo={cargo}/>
     <Clients clients={clients}/>
+    <Reviews/>
     {/*<section className="section section--gradient">*/}
     {/*  <div className="container">*/}
     {/*    <div className="section">*/}
