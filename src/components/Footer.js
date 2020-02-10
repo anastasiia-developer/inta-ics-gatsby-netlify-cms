@@ -1,115 +1,135 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from "styled-components";
 
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+const FormCommon = styled.div`
+  background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
+  padding-bottom: 4em;
+  color: #fff;
+  h2{
+    font-weight: 700;
+    font-size: 2.5em;
+    text-align: center;
+    padding: 1em 0 .5em;
+  }
+  h4{
+    font-size: .8em;
+    text-align: center;
+  }
+  .calculate-common{
+    background: #fff;
+    margin: 4em auto 0;
+    width: 85%;
+    border-radius: .7em;
+    padding: 2em 0; 
+    justify-content: space-between;
+    font-size: .75em;
+    align-items: center;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+      width: 95%;
+    }
+    .wrapper{
+      justify-content: space-between;
+    }
+    h3{
+      text-align: center;
+      padding: 0 0 1em;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #000;
+    }
+    .blue{
+      color: #005BE4;
+    }
+    h4{
+      margin-bottom: 4em;
+      color: #8F8F8F;
+      text-align: center;
+    }
+    .column{
+      width: 23%;
+    }
+    h5{
+      margin: 0 0 .5em 0;
+      font-weight: 400;
+      color: #777777;
+    }
+    .calculate-block{
+      justify-content: space-between;
+      color: #005BE4;
+      position: relative;
+  
+      img{
+        width: .8em;
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      input{
+        background: #F7F7F7;
+        font-weight: 500;
+        font-size: .9em;
+        padding: 1em 2em;
+        border-radius: 8px;
+        border: 1px solid #ECECEC;
+        color: #383838;
+        width: 100%;
+      }
+     
+    }
+    .btn-order{
+      padding: 1em 2em;
+      width: 20%;
+      margin: 0;
+    }
+  }
+`;
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          {/*<img*/}
-          {/*  src={logo}*/}
-          {/*  alt="Kaldi"*/}
-          {/*  style={{ width: '14em', height: '10em' }}*/}
-          {/*/>*/}
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
+      <div>
+        <FormCommon>
+          <h2>Остались вопросы?</h2>
+          <h4>Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
+            <div className="calculate-common">
+              <h3>
+              <span className="blue">Есть вопрос? </span>
+                Наш менеджер ответит вам за
+              <span className="blue"> 15 минут</span>
+              </h3>
+              <h4> Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
+              <div className="row-to-column wrapper">
+                <div className="column">
+                  <h5>Имя</h5>
+                  <div className="calculate-block row">
+                    <input type="text" className='input-common'/>
+                    <img src="./img/userForm.png" alt="user icon"/>
+                 </div>
+                </div>
+                <div className="column">
+                  <h5>Телефон</h5>
+                  <div className="calculate-block row">
+                    <input type="text" className='input-common' value='+380'/>
+                    <img src="./img/telForm.png" alt="phone icon"/>
+                  </div>
+                </div>
+                <div className="column">
+                  <h5>Комментарий</h5>
+                  <div className="calculate-block row">
+                    <input type="text" className='input-common'/>
+                    <img src="./img/commentForm.png" alt="comment icon"/>
+                  </div>
+                </div>
+                <button className="btn-order">Отправить</button>
+                </div>
               </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  {/*<img*/}
-                  {/*  src={facebook}*/}
-                  {/*  alt="Facebook"*/}
-                  {/*  style={{ width: '1em', height: '1em' }}*/}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  {/*<img*/}
-                  {/*  className="fas fa-lg"*/}
-                  {/*  src={twitter}*/}
-                  {/*  alt="Twitter"*/}
-                  {/*  style={{ width: '1em', height: '1em' }}*/}
-                  {/*/>*/}
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  {/*<img*/}
-                  {/*  src={instagram}*/}
-                  {/*  alt="Instagram"*/}
-                  {/*  style={{ width: '1em', height: '1em' }}*/}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  {/*<img*/}
-                  {/*  src={vimeo}*/}
-                  {/*  alt="Vimeo"*/}
-                  {/*  style={{ width: '1em', height: '1em' }}*/}
-                  {/*/>*/}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+        </FormCommon>
+      </div>
     )
   }
 }
 
 export default Footer
+
