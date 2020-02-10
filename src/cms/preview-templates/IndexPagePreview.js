@@ -19,6 +19,9 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         section={data.section || {}}
         about={data.about || {}}
         calculator={data.calculator || {}}
+        destinations={data.destinations || {}}
+        cargo={data.cargo || []}
+        clients={data.clients || []}
       />
     )
   } else {

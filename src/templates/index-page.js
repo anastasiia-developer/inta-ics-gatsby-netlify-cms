@@ -270,8 +270,7 @@ export const pageQuery = graphql`
         heading
         subheading
         mainpitch {
-          title
-          description
+          article
         }
         description
         intro {

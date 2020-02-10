@@ -141,12 +141,10 @@ clients:
     - image: /img/image 20.png     
     - image: /img/image 20 (copy).png     
 mainpitch:
-  title: Why Kaldi
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+  article: |-
+       <p>
+         Компания INTA-ICS с 2007 года осуществляет грузовые перевозки из/в Украину, страны Европы, Азии, США. Мы предлагаем своим клиентам профессиональную логистику, гибкие цены и качественный сервис. Наша команда профессионалов берется за задачи любой сложности, предлагая современные и выгодные решения по перевозке грузов по всему миру. В нашей досягаемости все крупнейшие и популярнейшие рынки: Китай, Гонконг, США, Европа, Турция, Индия, Тайвань и другие.
+       </p>
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
