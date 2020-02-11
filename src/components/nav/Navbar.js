@@ -78,9 +78,6 @@ const Navbar = class extends React.Component {
           <div
             className={`row-to-column navigation__list ${this.state.navBarActiveClass}`}
           >
-          <Link to="/">
-            Главная
-          </Link>
           <div className="nav-delivery row-to-column">
             <span>
               Доставка

@@ -34,6 +34,20 @@ const Section = styled.section`
         }
     }
 `;
+export const Flags = ({countries}) => (
+    <div className="row flags">
+        {countries.map((item, index) => (
+            <div className="row" key={index}>
+                <PreviewCompatibleImage
+                    imageInfo={{
+                        image: item.flag
+                    }}
+                />
+                <p>{item.country}</p>
+            </div>
+        ))}
+    </div>
+);
 
 const Destinations = ({ destinations }) => {
     const { countries, destinationsImage } = destinations;
@@ -42,18 +56,7 @@ const Destinations = ({ destinations }) => {
             <div className="row-to-column">
                 <div className="column countries">
                     <h2>Международные направления</h2>
-                    <div className="row flags">
-                        {countries.map((item, index) => (
-                            <div className="row" key={index}>
-                                <PreviewCompatibleImage
-                                    imageInfo={{
-                                        image: item.flag
-                                    }}
-                                />
-                                <p>{item.country}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <Flags countries={countries}/>
                 </div>
                 <PreviewCompatibleImage
                     imageInfo={{

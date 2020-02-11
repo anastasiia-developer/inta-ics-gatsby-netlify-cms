@@ -9,16 +9,16 @@ const Navigation = styled.nav`
     background: #000;
     padding: 2em 5% 1em;
   
-  @media(max-aspect-ratio: 3/3), (max-height: 500px){
-    padding: 1em;
-    background: #000;
-    top: 0;
-    width: 100%;
-    justify-content: space-between;
-  } 
-  .navigation__lines{ 
-    display: none;
-    height: 2em;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        padding: 1em;
+        background: #000;
+        top: 0;
+        width: 100%;
+        justify-content: space-between;
+    } 
+    .navigation__lines{ 
+        display: none;
+        height: 2em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         display: block;
         hr{
@@ -46,8 +46,8 @@ const Navigation = styled.nav`
           opacity: 0;
         }
     }
-  }
-  .navigation__list{
+    }
+    .navigation__list{
     margin-right: auto;
     font-size: .8em;
     cursor: pointer;
@@ -67,6 +67,9 @@ const Navigation = styled.nav`
     a, span{
       margin-left: 2em;
       color: #fff;
+      &[aria-current]{
+        color: #FFE15A;
+      }
       @media(max-aspect-ratio: 3/3), (max-height: 500px){
         margin: 0 0 2em 0;
       }
@@ -78,11 +81,11 @@ const Navigation = styled.nav`
         width: .7em;
       }
     }
-  }
-  &.navigation_open .navigation__list{
+    }
+    &.navigation_open .navigation__list{
     transform: translateX(0);
-  }
-  .logo{
+    }
+    .logo{
     margin-right: 2em;
     width: 10%;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
@@ -91,8 +94,8 @@ const Navigation = styled.nav`
       z-index: 2;
       margin-right: 0;
     }
-  }
-  .nav-delivery{
+    }
+    .nav-delivery{
     position: relative;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       align-items: flex-start;
@@ -114,8 +117,8 @@ const Navigation = styled.nav`
         min-height: 13em;
       }
     }
-  }
-  .sub-menu{
+    }
+    .sub-menu{
     opacity: 0;
     position: absolute;
     left: 0;
@@ -167,8 +170,8 @@ const Navigation = styled.nav`
         }
       }
     }
-  }
-  .navigation__contact{
+    }
+    .navigation__contact{
       align-items: center;
       position: absolute;
       top: .5em;
@@ -194,8 +197,8 @@ const Navigation = styled.nav`
         margin: 0;
       }
     }
-  }
-  .common-contact{
+    }
+    .common-contact{
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       background: #005BE4;
       position: absolute;
@@ -225,11 +228,11 @@ const Navigation = styled.nav`
         fill: #005BE4;
       }
     }
-  }
-  .container{
+    }
+    .container{
     align-items: center;
-  }
-  .circle{
+    }
+    .circle{
     width: 2em;
     height: 2em;
     align-items: center;
@@ -246,7 +249,7 @@ const Navigation = styled.nav`
     &.call{
         background: #FFE15A;
     }
-  }
+    }
 `;
 
 export default Navigation
