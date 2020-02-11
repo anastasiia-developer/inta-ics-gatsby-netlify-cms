@@ -26,7 +26,31 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-
+  - name: "delivery"
+    label: "Доставка"
+    folder: "src/pages/delivery"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "SubTitle", name: "subTitle", widget: "string"}
+      - {label: Header, name: header, widget: object, fields: [
+          {label: Slide, name: slide, widget: list, fields: [
+            {label: Images, name: images, widget: list, fields: [
+            {label: Image, name: image, widget: image},
+            {label: Alt, name: alt, widget: string}
+          ]},
+            {label: "Scope information", name: scopeInformation, widget: list, fields: [
+            {label: Image, name: image, widget: image},
+            {label: text, name: text, widget: string}
+          ]},
+          {label: Buttons, name: buttons, widget: list, fields: [
+            {label: Link, name: link, widget: string},
+            {label: text, name: text, widget: string}
+          ]}
+          ]}
+        ]}
   - name: "pages"
     label: "Pages"
     files:
