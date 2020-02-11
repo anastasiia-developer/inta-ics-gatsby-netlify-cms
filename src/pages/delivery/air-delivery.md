@@ -1,6 +1,6 @@
 ---
 templateKey: delivery
-slug: air-delivery
+name: air-delivery
 title: 'Авиадоставка грузов из Китая, США'
 subTitle: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
