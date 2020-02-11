@@ -30,7 +30,7 @@ collections:
     label: "Доставка"
     folder: "src/pages/delivery"
     create: true
-    slug: "{{slug}}"
+    slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
       - {label: name, name: name, widget: "string"}
