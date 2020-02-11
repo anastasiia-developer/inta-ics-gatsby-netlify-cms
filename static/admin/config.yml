@@ -33,8 +33,8 @@ collections:
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
-      - {label: name, name: name, widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: name, name: name, widget: "string"}
       - {label: "SubTitle", name: "subTitle", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
           {label: Slide, name: slide, widget: list, fields: [
