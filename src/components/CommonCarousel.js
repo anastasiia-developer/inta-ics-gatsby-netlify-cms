@@ -15,9 +15,15 @@ const Arrow = styled.button`
     }
     &.react-multiple-carousel__arrow--left{
         left: 12%;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            left: 0;
+        }
     }
     &.react-multiple-carousel__arrow--right {
         right: 12%;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            right: 0;
+        }
     }
 `;
 

@@ -5,9 +5,6 @@ export const Section = styled.section`
     color: #898989;
     font-size: .9em;
     padding: 2em 0;
-    @media(max-aspect-ratio: 3/3), (max-height: 500px){
-      margin: 1em 0;
-    }
   }
   .flags{
     margin-bottom: 5em;
@@ -15,9 +12,9 @@ export const Section = styled.section`
     color: #fff;
     justify-content: space-between;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
-      flex-wrap:  wrap;
-      font-size: .7em;
-      margin-bottom: 3em;
+        flex-wrap:  wrap;
+        font-size: .7em;
+        margin-bottom: 0;
     }
     .row{
       margin-right: 2em;

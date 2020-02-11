@@ -14,13 +14,26 @@ const Container = styled.section`
         color: #8F8F8F;
         font-size: .8em;
         padding: 1em 0 2em;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 90%;
+            margin: 0 auto;
+        }
     }
     .wrapper{
         justify-content: space-around;
         margin-top: 3em;
+        flex-wrap: wrap;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            margin-top: 0em;
+        }
         .block{
             flex: 1;
             max-width: 200px;
+            min-width: 12em;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                font-size: .8em;
+                padding: 1em;
+             }
              .gatsby-image-wrapper{
                 max-width: 80px;
                 width: 80%;
@@ -41,7 +54,7 @@ const Section = ({section}) => {
         <Container>
             <h2>{ title }</h2>
             <h3> { subTitle } </h3>
-            <div className="wrapper row-to-column">
+            <div className="wrapper row">
                 {
                     blocks.map((block, index) =>(
                         <div className="block" key={index}>

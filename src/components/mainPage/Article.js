@@ -6,6 +6,10 @@ const Section = styled.article`
     margin-top: 5em;    
     background: #F0F5FD;
     padding: 3em 0;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        margin-top: 3em;    
+        padding: 2em 1em;
+    }
     h2{
         color: #005BE4;
         font-weight: 500;
@@ -18,6 +22,9 @@ const Section = styled.article`
     }
     .wrapper{
         width: 70%;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 100%;
+        }
     }
     p, ul{
         color: #3D3D3D;

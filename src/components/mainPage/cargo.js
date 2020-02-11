@@ -6,6 +6,9 @@ const Section = styled.section`
     background: #F0F5FD;
     padding: 4em 2.5em;
     margin-top: 2em;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        padding: 2em 1em;
+    }
     h2{
         font-weight: 500;
         margin-bottom: 2em;
@@ -23,6 +26,7 @@ const Section = styled.section`
         margin-bottom: 1.5%;
         align-items: center;
         padding: 2em 1em;
+        min-width: 9em;
         &:hover{
             background: linear-gradient(111.85deg, #005BE4 -4.04%, #4900E4 103.57%);
             color: #fff;

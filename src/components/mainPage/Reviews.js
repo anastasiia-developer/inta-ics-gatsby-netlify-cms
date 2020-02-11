@@ -5,13 +5,22 @@ import {ButtonGroup, ResponsiveCarousel} from "../CommonCarousel";
 
 
 const Section = styled.section`
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        padding: 0 1em;
+    }
     h2{
         padding: 2em 0 3em;
         text-align: center;
         font-weight: 500;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            padding: 1em 0;
+        }
     }
     .wrapper{
         width: 79%;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 100%;
+        }
     }
     .react-multiple-carousel__arrow::before{
         color: #005BE4;
@@ -21,20 +30,29 @@ const Section = styled.section`
         transform: translateY(-50%);
         &--left{
             left: 8%;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                left: -5%;
+            }        
         }
         &--right{
             right: 8%;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                right: -5%;
+            }
         }
+        
     }
     .react-multi-carousel-item{  
         text-align: center;
         .border{
             height: 100%;
-            weight: 100%;
             margin: 0 2em;
             padding: 2em 4em;
             border: 3px solid #005BE4;
             border-radius: .5em;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                padding: 1em 1em;
+            }
         }  
         h3{
             font-weight: 500;

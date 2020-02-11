@@ -7,13 +7,29 @@ const Section = styled.section`
     background: #F0F5FD;
     padding: 4em 0 6em;
     margin-top: 4em;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        margin-top: 2em;
+        padding: 2em 1em 3em;
+    }
     .description{
         flex: 1;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 100%;
+        }    
         h2{
             padding: 0 0 0 4em;
             color: #005BE4;
             padding-bottom: 1em;
             font-weight: 500;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                padding: 0;
+            }
+        }
+        .text{
+            padding: 0 4em 0 6em;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                padding: 0;
+            }   
         }
         p{
             line-height: 1.7em;
@@ -28,13 +44,15 @@ const Section = styled.section`
             line-height: 1.7em;
             font-weight: 500;
         }
+         
     }
     .gatsby-image-wrapper{
         flex: 1;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 100%;
+        }    
     }
-    .text{
-        padding: 0 4em 0 6em;
-    }
+   
 `;
 
 const About = ({ about }) => {

@@ -7,7 +7,7 @@ const Navigation = styled.nav`
     align-items: center;
     z-index: 3;
     background: #000;
-    padding: 2em 5% 1em;
+    padding: 3em 5% 1em;
   
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         padding: 1em;
@@ -83,17 +83,20 @@ const Navigation = styled.nav`
     }
     }
     &.navigation_open .navigation__list{
-    transform: translateX(0);
+        transform: translateX(0);
     }
     .logo{
-    margin-right: 2em;
-    width: 10%;
-    @media(max-aspect-ratio: 3/3), (max-height: 500px){
-      width: 40%;
-      position: relative;
-      z-index: 2;
-      margin-right: 0;
-    }
+        margin-right: 2em;
+        width: 10%;
+        img{
+            width: 100%;
+        }
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+          width: 40%;
+          position: relative;
+          z-index: 2;
+          margin-right: 0;
+        }
     }
     .nav-delivery{
     position: relative;
@@ -174,7 +177,7 @@ const Navigation = styled.nav`
     .navigation__contact{
       align-items: center;
       position: absolute;
-      top: .5em;
+      top: 1.25em;
       right: 0;    
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       position: relative;

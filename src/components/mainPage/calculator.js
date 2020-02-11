@@ -4,10 +4,16 @@ import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import { HTMLContent } from '../Content';
 
 const Section = styled.section`
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        padding: 0 1em;
+    }
     h2{
         font-weight: 700;
         font-size: 1.6em;
         padding: 3em 0;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            padding: 1em 0;
+        }
     }
     .wrapper{
         align-items: center;
@@ -23,13 +29,26 @@ const Section = styled.section`
         }
         .categories__wrapper{
             margin: 0 6em 0 0;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                margin: 0;
+                margin-bottom: 2em;
+            }   
         }
         div:first-child .categories__wrapper{
             margin-bottom: 4em;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                margin-bottom: 0;
+            }                
         }
         .category{
             width: 6vw;
             margin-right: 1em;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                width: 26vw;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
             .image{
                 box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
                 border-radius: 6px;
@@ -65,12 +84,16 @@ const Form = styled.div`
         z-index: 1;
         transform: translateY(-50%);
     }
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        &:after{
+            display: none;
+        }
+    }
     h3{
         color: #fff;
         font-weight: 700;
         text-align: center;
         padding: 2em 0;
-        
     }
     .container{
         background: #005BE4;
@@ -80,6 +103,9 @@ const Form = styled.div`
         align-items: center;
         position: relative;
         z-index: 2;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 100%;
+        }    
         label{
             color: #fff;
             background: #6098EE;
@@ -128,7 +154,10 @@ const Form = styled.div`
             color: #A3C4F5;
             padding: 0 3.5em 3em;
             font-size: .8em;
-            text-align: center;   
+            text-align: center;  
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                padding: 0 2em 3em;
+            }
         }
     }
 `;

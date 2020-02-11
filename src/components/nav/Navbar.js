@@ -4,8 +4,6 @@ import Tel from '../../img/tel.svg'
 import Email from '../../img/email.svg'
 import Local from '../../img/local.svg'
 import ArrowLine from '../../img/arrowLine.svg'
-import Telegram from '../../../static/img/telegram.svg'
-import Call from '../../../static/img/call.svg'
 import Navigation from './styled'
 import Search from './Search'
 import Login from './Login'
@@ -119,10 +117,10 @@ const Navbar = class extends React.Component {
         </div>
         <div className="row container">
             <Link to="/" className="row circle telegram">
-                {/*<img src="./img/telegram.svg" alt="telegram icon"/>*/}
+                <img src="./img/telegram.svg" alt="telegram icon"/>
             </Link>
             <Link to="/" className="row circle call">
-                {/*<img src="./img/call.svg" alt="call img"/>*/}
+                <img src="./img/call.svg" alt="call img"/>
             </Link>
             <Search />
             <Login />

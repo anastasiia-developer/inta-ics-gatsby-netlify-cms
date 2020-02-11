@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 import styled from "styled-components";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import Carousel from 'react-multi-carousel';
@@ -7,10 +7,16 @@ import { ResponsiveCarousel, ButtonGroup } from '../CommonCarousel'
 
 const Section = styled.section`
     background: #FFE15A;
-    padding: 3em 0;    
+    padding: 3em 0;  
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        padding: 1em 0;  
+    }  
     .wrapper{
         width: 70%;
         padding-bottom: 2em;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                width: 80%;
+        }
     }
     .row{
         overflow: hidden;
@@ -20,6 +26,9 @@ const Section = styled.section`
         color: #393939;
         margin-bottom: 2em;
         text-align: center;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                margin-bottom: 1em;
+        }
     }
     .gatsby-image-wrapper{
         width: 30%;

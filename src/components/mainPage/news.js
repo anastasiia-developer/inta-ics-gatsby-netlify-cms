@@ -7,6 +7,9 @@ const Section = styled.section`
     background: #FFE15A;
     padding: 2em 0;
     margin: 6em 0 3em;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        margin: 3em 0 3em;
+    }
     h2{
         text-align: center;
         padding: 1em 0 2em;
@@ -20,6 +23,9 @@ const Section = styled.section`
         border-radius: 2em;
         margin: 6em auto 2em;
         font-size: .9em;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            margin: 2em auto 0;
+        }
     }
 `;
 

@@ -7,7 +7,8 @@ const Label = styled.label`
     align-items: center;
     padding: 0 .5em 0 0;
     font-size: 1em;
-    min-width: 300px;
+    max-width: 300px;
+    min-width: 15em;
     input{
         background: transparent;
         border: none;

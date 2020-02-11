@@ -10,13 +10,14 @@ const Button = styled.button`
     align-items: center;
     align-self: stretch;
     margin-left: 1em;
+    font-size: .9em;
     img{
         margin-left: .5em;
     }
 `;
 const Login = () =>(
     <Button className='row'>
-        Ввойти
+        Войти
         <img src="./img/user.svg" alt="user icon" className="icon"/>
     </Button>
 );

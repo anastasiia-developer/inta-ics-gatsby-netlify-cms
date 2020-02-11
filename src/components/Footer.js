@@ -19,10 +19,16 @@ const FormCommon = styled.div`
     font-size: 2.5em;
     text-align: center;
     padding: 1em 0 .5em;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+      font-size: 1.5em;
+    }
   }
   h4{
     font-size: .8em;
     text-align: center;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+      font-size: .5em;
+    }
   }
   .calculate-common{
     background: #fff;
@@ -35,6 +41,7 @@ const FormCommon = styled.div`
     align-items: center;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       width: 95%;
+      padding: 2em .5em; 
     }
     .wrapper{
       justify-content: space-between;
@@ -56,6 +63,10 @@ const FormCommon = styled.div`
     }
     .column{
       width: 23%;
+      @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        width: 100%;
+        margin-bottom: 1em;
+      }
     }
     h5{
       margin: 0 0 .5em 0;
@@ -90,12 +101,20 @@ const FormCommon = styled.div`
       padding: 1em 2em;
       width: 20%;
       margin: 0;
+      @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        padding: 1em 3em;
+        width: auto;
+        margin: 0 auto;
+      }
     }
   }
 `;
 const FooterS = styled.footer`
   background: #0C0C0C;
   padding-bottom: 1em;
+  @media(max-aspect-ratio: 3/3), (max-height: 500px){
+    padding: 0 1em 1em;
+  }
   .footer-row{
       justify-content: space-between;
   }
@@ -153,20 +172,31 @@ const FooterS = styled.footer`
       @media(max-aspect-ratio: 3/3), (max-height: 500px){
         margin-left: 0;
         margin-top: 1.5em;
+        margin-bottom: 0;
       }
     }
   }
   .store{
     margin-top: auto;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+      margin-top: 1em;
+    }
     h4{
       margin-left: 4.5em;
       color: #8F8F8F;
+      @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        margin-left: 0;
+        text-align: center;
+      }
     }
     .row{
       margin-top: 1em;
       a:last-child{
         margin-left: 1em;
       } 
+      @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        margin-top: 0;
+      }
     }
   }
   .bottom-bar{

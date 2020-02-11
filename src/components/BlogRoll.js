@@ -4,9 +4,13 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import styled from "styled-components";
 import ArrowLine from "../img/arrowLine.svg";
+import Time from '../img/time.svg';
 
 const Wrapper = styled.div`
   background: #fff;
+  footer .time svg path{
+    fill: #A3A3A3;
+  }
 `;
 
 const Post = styled.article`
@@ -108,7 +112,7 @@ class BlogRoll extends React.Component {
               </p>
               <footer className="row">
                 <span className="time row">
-                    <img src="./img/timeIcon.png" alt="timeIcon"/>
+                    <Time />
                     {post.frontmatter.date}
                 </span>
                 <Link className="row" to={post.fields.slug}>
