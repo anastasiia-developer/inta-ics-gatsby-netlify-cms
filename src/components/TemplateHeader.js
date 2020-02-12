@@ -6,7 +6,11 @@ import ArrowLine from '../img/arrowLine.svg'
 import Store from './store'
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
-const Button = styled(Link)`
+
+const TemplateHeader = ({ className, header, location, crumbLabel, title, description }) => {
+    const { scopeInformation, images, buttons } = header.slide[0];
+
+    const Button = styled(Link)`
     align-items: center;
     background: rgba(255, 255, 255, 0.09);
     border: none;
@@ -38,46 +42,59 @@ const Button = styled(Link)`
         }
     }
 `;
-const Container = styled.header`
+    const Container = styled.header`
+    min-height: 100vh;
     padding: 8em 0 5em;
+    background-color: #0C0C0C;
     .wrapper{
         justify-content: space-between;
     }
     .bckg-parallax-container{
-        width: 40%;
-        height: 100%;
-        right: -3%;
         justify-content: space-between;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             display: none;
-        }
-        .gatsby-image-wrapper{
-            height: 100%;
-            width: 45%;
         }
     }
     .common-header-column{
         width: 55%;
         justify-content: center;
-        padding-top: 3em;
-    }
-    .bckg-parallax{
-        width: 100%;
-        height: 100vh;
-        background-size: auto 70%;
-        background-position: right 35%;
-        background-repeat: no-repeat;
+        margin-bottom: 11%;
     }
     .header-gatsby-image{
         justify-content: space-between;
     }
     .list-info{
         width: auto;
+        font-weight: 400;
+        color: #ABABAB;
+        justify-content: flex-start;
+        font-size: .8em;
+        margin: 2em 0 4em;
+        li {
+            align-items: center;
+            margin-right: 1em;
+        }
+        img {
+            width: 1em;
+            margin-right: .5em;
+        }
+    }
+    h3 {
+        font-weight: 300;
+        font-size: 1em;
+        line-height: 1.8em;
+        margin: 1.5em 0;
+        color: #A3A3A3;
+    }
+    h1 {
+        color: #fff;
+        font-size: 2.8em;
+        font-weight: 500;
+        margin-top: 0;
+        white-space: nowrap;
     }
 `;
 
-const Header = ({ header, location, crumbLabel, title, description }) => {
-    const { scopeInformation, images, buttons } = header.slide[0];
     const scopeDeliver = scopeInformation.map(item => (
         <li key={item.text} className="row" >
             <img
@@ -101,10 +118,9 @@ const Header = ({ header, location, crumbLabel, title, description }) => {
             }
         </Button>
     ));
-
     return (
         <Container
-            className="column common-header">
+            className={["column common-header ", className]}>
             <div className="wrapper row-to-column">
                 <div className="column common-header-column">
                     {location &&
@@ -142,4 +158,4 @@ const Header = ({ header, location, crumbLabel, title, description }) => {
         </Container>
     );
 };
-export default Header
+export default TemplateHeader

@@ -34,7 +34,7 @@ const Label = styled.label`
 const Search = () =>(
     <Label className="row">
         <input type="text" placeholder="Отследить груз"/>
-        <img src="./img/search.svg" className="icon" alt="search icon"/>
+        <img src="/img/search.svg" className="icon" alt="search icon"/>
     </Label>
 );
 

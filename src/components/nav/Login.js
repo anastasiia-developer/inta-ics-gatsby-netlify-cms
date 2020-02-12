@@ -18,7 +18,7 @@ const Button = styled.button`
 const Login = () =>(
     <Button className='row'>
         Войти
-        <img src="./img/user.svg" alt="user icon" className="icon"/>
+        <img src="/img/user.svg" alt="user icon" className="icon"/>
     </Button>
 );
 

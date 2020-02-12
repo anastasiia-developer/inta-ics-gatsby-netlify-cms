@@ -2,13 +2,13 @@ import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Header from "../components/Header";
+import Header from "../components/delivery/Header"
 
 export const DeliveryTemplate = ({
-                                     header,
-                                     title,
-                                     description,
-                                     location}) => {
+                                 header,
+                                 title,
+                                 description,
+                                 location}) => {
     return (
         <Fragment>
             <Header

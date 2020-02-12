@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Header from '../components/Header'
 import Section from "../components/mainPage/section"
 import About from "../components/mainPage/about"
 import Calculator from "../components/mainPage/calculator"
@@ -11,8 +10,11 @@ import News from "../components/mainPage/news"
 import Destinations from "../components/mainPage/destinations"
 import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/mainPage/Clients"
-import Reviews from "../components/mainPage/Reviews";
-import Article from "../components/mainPage/Article";
+import Reviews from "../components/mainPage/Reviews"
+import Header from "../components/mainPage/header"
+import Article from "../components/mainPage/Article"
+
+
 
 export const IndexPageTemplate = ({
   heading,

@@ -13,7 +13,7 @@ const Breadcrumbs = ({ location, crumbLabel }) => {
     const pathName = (linkPath) => (linkPath.pathname || linkPath.location.pathname);
 
     const breadcrumbs = crumbs.map((link, index) => (
-        <Fragment>
+        <Fragment key={index}>
         {link.crumbLabel &&
             <Fragment>
                 {pathName(link).indexOf('delivery') !== -1
@@ -24,7 +24,7 @@ const Breadcrumbs = ({ location, crumbLabel }) => {
                     <Link to={pathName(link)}>{link.crumbLabel}</Link>
                 </Fragment>
                 :
-                <Link key={index} to={pathName(link)}>
+                <Link to={pathName(link)}>
                     {link.crumbLabel}
                 </Link>}
             </Fragment>

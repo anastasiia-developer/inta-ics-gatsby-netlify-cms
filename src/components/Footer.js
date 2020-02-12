@@ -250,21 +250,21 @@ const Footer = ({data}) => {
               <h5>Имя</h5>
               <div className="calculate-block row">
                 <input type="text" className='input-common'/>
-                <img src="./img/userForm.png" alt="user icon"/>
+                <img src="/img/userForm.png" alt="user icon"/>
              </div>
             </div>
             <div className="column">
               <h5>Телефон</h5>
               <div className="calculate-block row">
                 <input type="text" className='input-common' value='+380'/>
-                <img src="./img/telForm.png" alt="phone icon"/>
+                <img src="/img/telForm.png" alt="phone icon"/>
               </div>
             </div>
             <div className="column">
               <h5>Комментарий</h5>
               <div className="calculate-block row">
                 <input type="text" className='input-common'/>
-                <img src="./img/commentForm.png" alt="comment icon"/>
+                <img src="/img/commentForm.png" alt="comment icon"/>
               </div>
             </div>
             <button className="btn-order">Отправить</button>
@@ -277,7 +277,7 @@ const Footer = ({data}) => {
           <div className="row-to-column footer-row">
             <ul className="column contacts">
             <li>
-              <img src="./img/logo.png" alt="logo" className='contacts-img'/>
+              <img src="/img/logo.png" alt="logo" className='contacts-img'/>
             </li>
               <li className="des">
                 Доставка сборных грузов и контейнеров из Китая, Сша в Украину.

@@ -117,10 +117,10 @@ const Navbar = class extends React.Component {
         </div>
         <div className="row container">
             <Link to="/" className="row circle telegram">
-                <img src="./img/telegram.svg" alt="telegram icon"/>
+                <img src="/img/telegram.svg" alt="telegram icon"/>
             </Link>
             <Link to="/" className="row circle call">
-                <img src="./img/call.svg" alt="call img"/>
+                <img src="/img/call.svg" alt="call img"/>
             </Link>
             <Search />
             <Login />
