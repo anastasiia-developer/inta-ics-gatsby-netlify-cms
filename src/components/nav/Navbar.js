@@ -81,7 +81,7 @@ const Navbar = class extends React.Component {
               Доставка
             </span>
               <nav className="sub-menu column">
-                  <Link to="/">
+                  <Link to="/delivery/air-delivery">
                       Авиадоставка
                       <ArrowLine alt=""/>
                   </Link>

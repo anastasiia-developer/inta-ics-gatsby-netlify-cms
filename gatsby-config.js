@@ -75,17 +75,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
+        usePathPrefix: '/delivery',
         defaultCrumb: {
-          // location: required and must include the pathname property
           location: {
-            pathname: "/",
+            pathname: "/"
           },
-          // crumbLabel: required label for the default crumb
-          crumbLabel: "Главная",
-          // all other properties optional
+          crumbLabel: `Главная`,
           crumbSeparator: " > ",
           crumbStyle: { color: "#5B5B5B" },
           crumbActiveStyle: { color: "#0460D9" },
+          crumbLabelUpdates: [
+            {
+              pathname: '/delivery',
+              crumbLabel: 'Доставка'
+            }
+          ]
         },
       },
     },

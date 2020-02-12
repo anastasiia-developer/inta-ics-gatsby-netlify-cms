@@ -3,9 +3,9 @@ templateKey: index-page
 title: Inta International Courier Service
 image: /img/002-united-states (1).png
 heading: Great coffee with a conscience
-subheading: >-
-  Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками
-  и трендами! Наш менеджер всегда на связи и готов вам помочь.
+description: >-
+    Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками
+    и трендами! Наш менеджер всегда на связи и готов вам помочь.
 header:
   slide:
     - buttons:
@@ -135,11 +135,6 @@ cargo:
     image: /img/trolley (1) 1.png
   - title: Доставка из Китая в Одессу
     image: /img/warehouse 3.png
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
 clients:
   - image: /img/image 18.png
   - image: /img/image 19.png

@@ -3,12 +3,19 @@ import styled from "styled-components"
 
 const Container = styled.nav`
     margin-bottom: 2em;
-    a{
+    a, span{
         font-size: .9em;
         color: ${props => props.crumbStyle};
+        cursor: pointer;
+        &:after{
+            content: '${props => props.crumbSeparator}';
+        }        
     }
     a:last-child{
         color: ${props => props.crumbActiveStyle};
+        &:after{
+            content: none;
+        }        
     }
 `;
 

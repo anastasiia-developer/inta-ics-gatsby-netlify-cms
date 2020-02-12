@@ -15,6 +15,9 @@ const Button = styled(Link)`
     border-radius: 5em;
     font-size: .8em;
     margin-right: 2em;
+    &:last-child{
+        margin-right: 0;
+    }
     &:hover{
         background: linear-gradient(100.69deg, #005BE4 0%, #4900E4 100%);
         svg{
@@ -23,6 +26,7 @@ const Button = styled(Link)`
         }
     }
     .logo{
+        width: 1.5em;
         margin-right: .5em;
     }
     svg{ 
@@ -72,9 +76,8 @@ const Container = styled.header`
     }
 `;
 
-const Header = ({ header, location, title, subheading }) => {
+const Header = ({ header, location, crumbLabel, title, description }) => {
     const { scopeInformation, images, buttons } = header.slide[0];
-
     const scopeDeliver = scopeInformation.map(item => (
         <li key={item.text} className="row" >
             <img
@@ -89,7 +92,7 @@ const Header = ({ header, location, title, subheading }) => {
             key={index}
             className="row"
             to={btn.link}>
-            <img src="./img/logoMini.svg"
+            <img src="/img/logoMini.svg"
                  alt="logo Mini"
                  className="logo"/>
             {btn.text}
@@ -106,14 +109,14 @@ const Header = ({ header, location, title, subheading }) => {
                 <div className="column common-header-column">
                     {location &&
                         <Breadcrumbs
-                            crumbLabel={false}
+                            crumbLabel={crumbLabel}
                             location={location}/>
                     }
                     <h1>
                         {title}
                     </h1>
                     <h3>
-                        {subheading}
+                        {description}
                     </h3>
                     <ul className="row list-info">
                         {scopeDeliver}
