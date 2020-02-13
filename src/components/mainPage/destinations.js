@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import Flags from "../Flags";
 
 const Section = styled.section`
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
@@ -50,29 +51,16 @@ const Section = styled.section`
         }
     }
 `;
-export const Flags = ({countries}) => (
-    <div className="row flags">
-        {countries.map((item, index) => (
-            <div className="row" key={index}>
-                <PreviewCompatibleImage
-                    imageInfo={{
-                        image: item.flag
-                    }}
-                />
-                <p>{item.country}</p>
-            </div>
-        ))}
-    </div>
-);
+
 
 const Destinations = ({ destinations }) => {
-    const { countries, destinationsImage } = destinations;
+    const { destinationsImage } = destinations;
     return(
         <Section>
             <div className="row-to-column">
                 <div className="column countries">
                     <h2>Международные направления</h2>
-                    <Flags countries={countries}/>
+                    <Flags />
                 </div>
                 <PreviewCompatibleImage
                     imageInfo={{

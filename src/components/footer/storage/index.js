@@ -1,11 +1,12 @@
 import { Section } from './style';
-import {Flags} from "../../mainPage/destinations";
 import React from "react";
+import Flags from "../../Flags";
 
-const Storage = ({countries}) => (
+
+const Storage = () => (
     <Section>
         <h4 className="storage-title">Наши склады</h4>
-        <Flags countries={countries}/>
+        <Flags />
     </Section>
 )
 

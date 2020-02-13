@@ -6,11 +6,7 @@ import ArrowLine from '../img/arrowLine.svg'
 import Store from './store'
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
-
-const TemplateHeader = ({ className, header, location, crumbLabel, title, description }) => {
-    const { scopeInformation, images, buttons } = header.slide[0];
-
-    const Button = styled(Link)`
+const Button = styled(Link)`
     align-items: center;
     background: rgba(255, 255, 255, 0.09);
     border: none;
@@ -42,10 +38,12 @@ const TemplateHeader = ({ className, header, location, crumbLabel, title, descri
         }
     }
 `;
-    const Container = styled.header`
+const Container = styled.header`
     min-height: 100vh;
     padding: 8em 0 5em;
     background-color: #0C0C0C;
+    display: flex;
+    flex-direction: column;
     .wrapper{
         justify-content: space-between;
     }
@@ -58,7 +56,7 @@ const TemplateHeader = ({ className, header, location, crumbLabel, title, descri
     .common-header-column{
         width: 55%;
         justify-content: center;
-        margin-bottom: 11%;
+        margin-bottom: 3%;
     }
     .header-gatsby-image{
         justify-content: space-between;
@@ -93,7 +91,19 @@ const TemplateHeader = ({ className, header, location, crumbLabel, title, descri
         margin-top: 0;
         white-space: nowrap;
     }
+
 `;
+
+const TemplateHeader = ({
+                        className,
+                        header,
+                        location,
+                        crumbLabel,
+                        title,
+                        description,
+                        children,
+                        storeBtn }) => {
+    const { scopeInformation, images, buttons } = header.slide[0];
 
     const scopeDeliver = scopeInformation.map(item => (
         <li key={item.text} className="row" >
@@ -120,7 +130,7 @@ const TemplateHeader = ({ className, header, location, crumbLabel, title, descri
     ));
     return (
         <Container
-            className={["column common-header ", className]}>
+            className={className}>
             <div className="wrapper row-to-column">
                 <div className="column common-header-column">
                     {location &&
@@ -152,9 +162,12 @@ const TemplateHeader = ({ className, header, location, crumbLabel, title, descri
                             />
                         ))}
                     </div>
-                    <Store/>
+                    {storeBtn &&
+                        <Store/>
+                    }
                 </div>
             </div>
+            {children}
         </Container>
     );
 };

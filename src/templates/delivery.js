@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Header from "../components/delivery/Header"
+import CalculateHeader from "../components/delivery/CalculateHeader";
 
 export const DeliveryTemplate = ({
                                  header,
@@ -17,6 +18,7 @@ export const DeliveryTemplate = ({
                 header={header}
                 location={location}
                 crumbLabel={title}
+                children={<CalculateHeader/>}
             />
         </Fragment>
     )
@@ -87,4 +89,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

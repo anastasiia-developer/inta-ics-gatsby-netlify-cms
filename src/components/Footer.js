@@ -1,14 +1,11 @@
 import React, {Fragment} from 'react'
-import {Link, StaticQuery} from 'gatsby'
+import {Link} from 'gatsby'
 import styled from "styled-components";
-import PropTypes from "prop-types";
-import { graphql } from 'gatsby'
 import Storage from './footer/storage';
 import Store from './store';
 import Facebook from '../img/social/facebook.svg';
 import Instagram from '../img/social/instagram.svg';
 import Twitter from '../img/social/twitter.svg';
-
 
 const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
@@ -230,8 +227,7 @@ const FooterS = styled.footer`
 `;
 
 
-const Footer = ({data}) => {
-  const { countries } = data.markdownRemark.frontmatter.destinations;
+const Footer = () => {
 
   return (
     <Fragment>
@@ -273,7 +269,7 @@ const Footer = ({data}) => {
       </FormCommon>
       <FooterS>
         <div className="wrapper">
-          <Storage countries={countries}/>
+          <Storage />
           <div className="row-to-column footer-row">
             <ul className="column contacts">
             <li>
@@ -385,43 +381,5 @@ const Footer = ({data}) => {
   )
 }
 
-Footer.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.shape({
-        destinations: PropTypes.shape({
-          countries: PropTypes.array,
-        }),
-      })
-    }),
-  })
-}
 
-
-
-export default () => (
-    <StaticQuery
-        query={graphql`
-      query FooterCountries {
-        markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-          frontmatter {
-            destinations{
-              countries{
-                flag{
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-                country
-              }
-            }
-            
-          }
-        }
-      }
-    `}
-        render={(data, count) => <Footer data={data} />}
-    />
-)
+export default Footer;

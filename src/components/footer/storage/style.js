@@ -11,6 +11,7 @@ export const Section = styled.section`
     font-size: .8em;
     color: #fff;
     justify-content: space-between;
+    pointer-events: none;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         flex-wrap:  wrap;
         font-size: .7em;
@@ -26,7 +27,7 @@ export const Section = styled.section`
       }
     }
   }
-  .gatsby-image-wrapper{
+  img{
     width: 2em;
     margin-right: 1em;
   }
