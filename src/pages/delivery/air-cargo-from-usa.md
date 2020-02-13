@@ -1,11 +1,8 @@
 ---
 templateKey: delivery
-name: rail-transportation
-title: Железнодорожные перевозки
-subTitle: >-
-  Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
-  клиентом, независимо от объёмов его грузопотока. Закажите консультацию и
-  начнем сотрудничество прямо сейчас!
+title: Авиадоставка из США
+name: air-cargo-from-usa
+subTitle: 'dfdksldfkgjfkdlsdkfgjfkds.d,mvcd,s'
 header:
   slide:
     - buttons:
@@ -26,5 +23,3 @@ header:
         - image: /img/local.svg
           text: Местоположение посылки
 ---
-
-

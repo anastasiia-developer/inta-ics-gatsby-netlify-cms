@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import Breadcrumbs from "./BreadCrumbs";
 import { Link } from "gatsby"
 import ArrowLine from '../img/arrowLine.svg'

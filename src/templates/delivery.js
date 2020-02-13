@@ -18,7 +18,7 @@ export const DeliveryTemplate = ({
                 header={header}
                 location={location}
                 crumbLabel={title}
-                children={<CalculateHeader/>}
+                children={location && <CalculateHeader/>}
             />
         </Fragment>
     )

@@ -6,6 +6,7 @@ import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
+import DeliveryPagePreview from "./preview-templates/DeliveryPagePreview";
 
 import withStyledComponentsRendered from './StyleManager'
 
@@ -20,3 +21,4 @@ CMS.registerPreviewTemplate(
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewTemplate('delivery', DeliveryPagePreview)

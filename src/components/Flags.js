@@ -1,6 +1,5 @@
 import React, {Fragment} from "react";
 import {graphql, useStaticQuery} from "gatsby";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 export default ({stateOptions, setOptions}) => {
     const data = useStaticQuery(graphql`
