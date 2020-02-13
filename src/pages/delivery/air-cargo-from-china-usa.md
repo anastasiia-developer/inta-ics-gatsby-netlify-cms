@@ -1,7 +1,7 @@
 ---
 templateKey: delivery
-title: 'Авиадоставка грузов из Китая, США'
-name: air-cargo-from-china-usa
+title: Авиадоставка из США
+name: air-cargo-from-usa
 subTitle: 'dfdksldfkgjfkdlsdkfgjfkds.d,mvcd,s'
 ---
 
