@@ -26,7 +26,7 @@ header:
         - image: /img/local.svg
           text: Местоположение посылки
 sections:
-  - blocks:
+  - list:
       - image: /img/ (1).png
         title: Свой склад в США
       - image: /img/ (1).png

@@ -56,13 +56,13 @@ collections:
           {label: "Title", name: "title", widget: "string"},
           {lable: "Картинка", name: image, widget: image},
           {lable: "Текст", name: text, widget: "markdown"},
-          {lable: "Блоки", name: blocks, widget: list, fields: [
-            {lable: "Картинка", name: image, widget: image},
-            {lable: "Текст", name: title, widget: string}
+          {lable: "list", name: list, widget: list, fields: [
+            {lable: "title", name: title, widget: string},
+            {lable: "Картинка", name: image, widget: image}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
-            {label: Link, name: link, widget: string},
-            {label: text, name: text, widget: string}
+            {label: text, name: text, widget: string},
+            {label: Link, name: link, widget: string}
           ]}
       ]}
   - name: "pages"
