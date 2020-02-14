@@ -60,10 +60,6 @@ collections:
             {lable: "title", name: title, widget: string},
             {lable: "Картинка", name: image, widget: image}
           ]},
-          {label: Buttons, name: buttons, widget: list, fields: [
-            {label: text, name: text, widget: string},
-            {label: Link, name: link, widget: string}
-          ]}
       ]}
   - name: "pages"
     label: "Pages"

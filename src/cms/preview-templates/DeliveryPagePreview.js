@@ -11,6 +11,7 @@ const DeliveryPagePreview = ({ entry }) => {
                 title={data.title}
                 header={data.header}
                 description={data.description}
+                sections={data.sections}
             />
         )
     } else {

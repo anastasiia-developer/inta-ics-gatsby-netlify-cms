@@ -8,9 +8,18 @@ const Section = styled(About)`
     margin: 0;
     align-items: center;
     flex-direction: row-reverse;
+    justify-content: space-between;
     &:nth-child(odd){
         background: #fff; 
         flex-direction: row;
+    }
+    .description{
+        width: 50%;
+        flex: none;
+     } 
+     .gatsby-image-wrapper{
+        flex: none;
+        width: 48%;
     }
     .list{
         padding: 2em 6.5em 4em;
