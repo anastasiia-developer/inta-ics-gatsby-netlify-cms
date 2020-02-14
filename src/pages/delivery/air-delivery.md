@@ -5,7 +5,7 @@ name: air-delivery
 description: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
   клиентом, независимо от объёмов его грузопотока. Закажите консультацию и
-  начнем сотрудничество прямо сейчас!
+  начнем сотрудничество прямо сейчас test!!
 header:
   slide:
     - buttons:
@@ -26,10 +26,7 @@ header:
         - image: /img/local.svg
           text: Местоположение посылки
 sections:
-  - buttons:
-      - link: /
-        text: Узнать больше
-    image: /img/deliv.jpg
+  - image: /img/deliv.jpg
     list:
       - image: /img/ (1).png
         title: Свой склад в США
