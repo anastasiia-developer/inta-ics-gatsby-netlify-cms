@@ -3,13 +3,15 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Header from "../components/delivery/Header"
-import CalculateHeader from "../components/delivery/CalculateHeader";
+import CalculateHeader from "../components/delivery/CalculateHeader"
+import Sections from "../components/delivery/Sections"
 
 export const DeliveryTemplate = ({
                                  header,
                                  title,
                                  description,
-                                 location}) => {
+                                 location,
+                                 sections}) => {
     return (
         <Fragment>
             <Header
@@ -19,6 +21,9 @@ export const DeliveryTemplate = ({
                 location={location}
                 crumbLabel={title}
                 children={location && <CalculateHeader/>}
+            />
+            <Sections
+                sections={sections}
             />
         </Fragment>
     )
@@ -41,6 +46,7 @@ const Delivery = ({ data, location }) => {
                 title={delivery.frontmatter.title}
                 description={delivery.frontmatter.description}
                 location={location}
+                sections={delivery.frontmatter.sections}
             />
         </Layout>
     )
@@ -85,6 +91,27 @@ export const pageQuery = graphql`
               link
             }
           }
+        }
+        sections{
+            text
+            title
+            buttons{
+                text
+                link
+            }
+            image{
+                childImageSharp {
+                  fluid(maxWidth: 300, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+            }
+            list{
+                title
+                image{
+                    publicURL
+                }
+            }
         }
       }
     }

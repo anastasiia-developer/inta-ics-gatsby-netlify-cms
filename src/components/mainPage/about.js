@@ -37,14 +37,13 @@ const Section = styled.section`
             color: #3D3D3D;
             font-size: .9em;
         }
-        ul{
-            font-size: .9em;
-            color: #005BE4;
-            padding-left: 2em;
-            line-height: 1.7em;
-            font-weight: 500;
-        }
-         
+    }
+    ul{
+        font-size: .9em;
+        color: #005BE4;
+        padding-left: 2em;
+        line-height: 1.7em;
+        font-weight: 500;
     }
     .gatsby-image-wrapper{
         flex: 1;
@@ -55,14 +54,14 @@ const Section = styled.section`
    
 `;
 
-const About = ({ about }) => {
-    const { title, image, text } = about;
+const About = ({ title, image, text, className, children }) => {
 
     return(
-        <Section className="row-to-column">
+        <Section className={`row-to-column ${className}`}>
             <div className="description">
                 <h2>{title}</h2>
                 <HTMLContent className="text" content={text}/>
+                {children}
             </div>
             <PreviewCompatibleImage
                 imageInfo={{

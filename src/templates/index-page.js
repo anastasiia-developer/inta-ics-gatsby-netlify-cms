@@ -39,7 +39,11 @@ export const IndexPageTemplate = ({
         storeBtn
     />
     <Section section={section}/>
-    <About about={about}/>
+    <About
+      title={about.title}
+      image={about.image}
+      text={about.text}
+      />
     <Calculator calculator={calculator}/>
     <News />
       {location &&
@@ -60,7 +64,11 @@ IndexPageTemplate.propTypes = {
   description: PropTypes.string,
   header: PropTypes.object,
   section: PropTypes.object,
-  about: PropTypes.object,
+  about: PropTypes.shape({
+      title:PropTypes.string,
+      image:PropTypes.object,
+      text:PropTypes.string
+  }),
   calculator: PropTypes.object,
   destinations: PropTypes.shape({
     countries: PropTypes.array,
