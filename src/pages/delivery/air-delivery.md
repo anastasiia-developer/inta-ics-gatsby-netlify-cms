@@ -26,17 +26,17 @@ header:
         - image: /img/local.svg
           text: Местоположение посылки
 sections:
-  - blocks:
+  - buttons:
+      - link: /
+        text: Узнать больше
+    image: /img/deliv.jpg
+    list:
       - image: /img/ (1).png
         title: Свой склад в США
       - image: /img/ (1).png
         title: Персональный менеджер
       - image: /img/ (1).png
         title: Мобильное приложение
-    buttons:
-      - link: /
-        text: Узнать больше
-    image: /img/deliv.jpg
     text: >-
       <p>Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с
       любым клиентом, независимо от объёмов его грузопотока. Закажите
