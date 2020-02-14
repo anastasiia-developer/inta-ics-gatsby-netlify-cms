@@ -17,10 +17,8 @@ import Article from "../components/mainPage/Article"
 
 
 export const IndexPageTemplate = ({
-  heading,
   mainpitch,
   description,
-  intro,
   location,
   title,
   header,
@@ -44,7 +42,9 @@ export const IndexPageTemplate = ({
     <About about={about}/>
     <Calculator calculator={calculator}/>
     <News />
-    <Destinations destinations={destinations} />
+      {location &&
+        <Destinations destinations={destinations} />
+      }
     <Cargo cargo={cargo}/>
     <Clients clients={clients}/>
     <Reviews/>

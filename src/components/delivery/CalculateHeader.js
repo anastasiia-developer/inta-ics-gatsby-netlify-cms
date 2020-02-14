@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from "react"
-import styled from "@emotion/styled"
+import styled from "styled-components"
 import Flags from "../Flags"
 import Arrow from "../../img/arrow.svg"
 import Tel from "../../img/tel.svg"
