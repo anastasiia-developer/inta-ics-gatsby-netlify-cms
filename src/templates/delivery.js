@@ -5,13 +5,15 @@ import Layout from '../components/Layout'
 import Header from "../components/delivery/Header"
 import CalculateHeader from "../components/delivery/CalculateHeader"
 import Sections from "../components/delivery/Sections"
+import SectionText from "../components/delivery/SectionText";
 
 export const DeliveryTemplate = ({
                                  header,
                                  title,
                                  description,
                                  location,
-                                 sections}) => {
+                                 sections,
+                                 sectionText}) => {
     return (
         <Fragment>
             <Header
@@ -24,6 +26,9 @@ export const DeliveryTemplate = ({
             />
             <Sections
                 sections={sections}
+            />
+            <SectionText
+                sectionText={sectionText}
             />
         </Fragment>
     )
@@ -47,6 +52,7 @@ const Delivery = ({ data, location }) => {
                 description={delivery.frontmatter.description}
                 location={location}
                 sections={delivery.frontmatter.sections}
+                sectionText={delivery.frontmatter.sectionText}
             />
         </Layout>
     )
@@ -108,6 +114,13 @@ export const pageQuery = graphql`
                     publicURL
                 }
             }
+        }
+        sectionText{
+          text
+          title
+          image{
+            publicURL
+          }
         }
       }
     }

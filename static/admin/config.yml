@@ -61,6 +61,11 @@ collections:
             {lable: "Картинка", name: image, widget: image}
           ]},
       ]}
+      - {label: "sectionText", name: "sectionText", widget: object, fields: [
+        {label: "Title", name: "title", widget: "string"},
+        {lable: "Картинка", name: image, widget: image},
+        {lable: "Текст", name: text, widget: "markdown"},
+      ]}
   - name: "pages"
     label: "Pages"
     files:

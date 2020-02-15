@@ -52,7 +52,7 @@ const Sections = ({ sections }) => (
                 image={section.image}
                 text={section.text}
                 children={
-                    section.list.length > 0 &&
+                    section.list && section.list.length > 0 &&
                     (<Fragment>
                         <ul className="row list">
                             {section.list.map((li,index) => (
