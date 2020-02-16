@@ -9,6 +9,10 @@ const Header = styled(TemplateHeader)`
         width: 55%;
         margin-right: -10%;
         margin-top: -1.6em;
+         @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            width: 100%;
+            margin: 0;
+         }
     }
 
 `;

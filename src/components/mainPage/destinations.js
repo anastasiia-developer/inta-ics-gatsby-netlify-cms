@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import Flags from "../Flags";
+import {graphql, StaticQuery} from "gatsby";
 
 const Section = styled.section`
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
@@ -44,7 +45,7 @@ const Section = styled.section`
             color: #393939;
             font-size: .9em;
         }
-        .gatsby-image-wrapper{
+        img{
             width: 1.8em;
             height: auto;
             margin-right: 1em;
@@ -53,8 +54,8 @@ const Section = styled.section`
 `;
 
 
-const Destinations = ({ destinations }) => {
-    const { destinationsImage } = destinations;
+const Destinations = ({ data }) => {
+    if(data){
     return(
         <Section>
             <div className="row-to-column">
@@ -64,12 +65,37 @@ const Destinations = ({ destinations }) => {
                 </div>
                 <PreviewCompatibleImage
                     imageInfo={{
-                        image: destinationsImage,
+                        image: data.markdownRemark.frontmatter.destinations.destinationsImage,
                     }}
                 />
             </div>
         </Section>
-    )
+    )}
+    else{
+        return <div>..loading</div>
+    }
 };
 
-export default Destinations
+
+export default () => (
+    <StaticQuery
+        query={graphql`
+            query Destinations{
+                markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+                    frontmatter {
+                        destinations {
+                            destinationsImage{
+                                childImageSharp {
+                                    fluid(maxWidth: 1000, quality: 100) {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    `}
+        render={(data) => <Destinations data={data} />}
+    />
+)

@@ -12,26 +12,49 @@ const Section = styled(About)`
     &:nth-child(odd){
         background: #fff; 
         flex-direction: row;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            flex-direction: column-reverse;
+        }
     }
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        flex-direction: column-reverse;
+        padding: 0;
+    }   
     .description{
         width: 50%;
         flex: none;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 100%;
+            padding:1em;
+            display: flex;
+            flex-direction: column;
+        }
      } 
      .gatsby-image-wrapper{
         flex: none;
         width: 48%;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 100%;
+        }
     }
     .list{
         padding: 2em 6.5em 4em;
         justify-content: space-between;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            padding: 0;
+            flex-wrap: wrap;
+            margin: 0em 0 2em;
+        }
         li{
             align-items: center;
             color: #878F9B;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                margin-bottom: .5em;
+            }
             img{
                 height: 1em;
                 margin-right: 1em;
             }
-
         }
     }
     .btn{
@@ -40,6 +63,9 @@ const Section = styled(About)`
         font-weight: 700;
         margin-left: 6em;
         background: linear-gradient(101.61deg, #005BE4 0.64%, #4900E4 100%);
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            margin: 0 auto 1em;
+        }
     }
 `;
 

@@ -18,6 +18,9 @@ const Button = styled(Link)`
     &:last-child{
         margin-right: 0;
     }
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        margin: 0 0 2em 0;
+    }
     &:hover{
         background: linear-gradient(100.69deg, #005BE4 0%, #4900E4 100%);
         svg{
@@ -44,19 +47,26 @@ const Container = styled.header`
     background-color: #0C0C0C;
     display: flex;
     flex-direction: column;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        padding: 5em 1em;
+    }
     .wrapper{
         justify-content: space-between;
     }
     .bckg-parallax-container{
         justify-content: space-between;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
-            display: none;
+            order: 0;
         }
     }
     .common-header-column{
         width: 55%;
         justify-content: center;
         margin-bottom: 3%;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            width: 100%;
+            order: 1;
+        }
     }
     .header-gatsby-image{
         justify-content: space-between;
@@ -68,9 +78,17 @@ const Container = styled.header`
         justify-content: flex-start;
         font-size: .8em;
         margin: 2em 0 4em;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2em 0;
+        }
         li {
             align-items: center;
             margin-right: 1em;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){
+                margin-bottom: 1em;
+            }
         }
         img {
             width: 1em;
@@ -83,6 +101,11 @@ const Container = styled.header`
         line-height: 1.8em;
         margin: 1.5em 0;
         color: #A3A3A3;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            font-size: .8em;
+            color: #C4C4C4;
+            text-align: center;
+        }
     }
     h1 {
         color: #fff;
@@ -90,6 +113,11 @@ const Container = styled.header`
         font-weight: 500;
         margin-top: 0;
         white-space: nowrap;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            white-space: normal;
+            font-size: 1.8em;
+            text-align: center;
+        }
     }
 
 `;
@@ -147,7 +175,7 @@ const TemplateHeader = ({
                     <ul className="row list-info">
                         {scopeDeliver}
                     </ul>
-                    <div className="row">
+                    <div className="row-to-column">
                         {Buttons}
                     </div>
                 </div>

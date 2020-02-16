@@ -8,14 +8,28 @@ const Wrapper = styled.section`
   background: #fff;
   border-radius: 1em;
   padding: 2em;
-  margin-top: 2em;
   font-size: .9em;
   width: 95%;
+  margin-top: -5em;
+  position: relative;
+  @media(max-aspect-ratio: 3/3), (max-height: 500px){
+      margin-top: 0;
+      width: 100%;
+      padding: 2em 1em;
+    .row-to-column{
+        align-items: stretch;
+    }
+
+  }
   h3{
     color: #323232;
     font-weight: 700;
     font-size: 1.6em;
     margin: 0;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        line-height: 1em;
+        font-size: 1.4em;
+    }
   }
   h4{
     color: #4286eb;
@@ -24,6 +38,7 @@ const Wrapper = styled.section`
       margin: 1em 0;
       font-size: .9em;
       line-height: 1.5em;
+      text-align: center;
     }
   }
   .btn{
@@ -49,7 +64,6 @@ const Wrapper = styled.section`
     font-weight: 500;
     outline: none;
     flex: 4;
-
     & + .column{
       margin-left: 4em;
       @media(max-aspect-ratio: 3/3), (max-height: 500px){

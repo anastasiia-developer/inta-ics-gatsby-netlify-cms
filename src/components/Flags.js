@@ -22,7 +22,10 @@ export default ({stateOptions, setOptions}) => {
     return (
         <div className="row flags">
             {data.markdownRemark.frontmatter.destinations.countries.map((item, index) => (
-                <div className="row" key={index} onClick={() => setOptions({open: !stateOptions, value: item.country, flag:item.flag.name})}
+                <div
+                    className="row"
+                    key={index}
+                    onClick={() => setOptions({open: !stateOptions, value: item.country, flag:item.flag.name})}
                 >
                     <img src={item.flag.publicURL} alt="flag"/>
                     <p>{item.country}</p>

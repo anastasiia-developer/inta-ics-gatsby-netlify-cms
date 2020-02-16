@@ -1,6 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import HoverGradientInsideSvg from "../HoverGradientInsideSvg";
+import Storage from "../../img/storage.svg";
+import Package from "../../img/package.svg";
+import Trolley from "../../img/trolley.svg";
+import Ship from "../../img/cargo-ship.svg";
+import Air from "../../img/airplane.svg";
+import Packages from "../../img/packages.svg";
+import Product from "../../img/product.svg";
+import Protected from "../../img/protected.svg";
+import TrolleyBig from "../../img/trolleyBig.svg";
+import Warehouse from "../../img/warehouse.svg";
 
 const Section = styled.section`
     background: #F0F5FD;
@@ -17,50 +27,72 @@ const Section = styled.section`
     .row{
         flex-wrap: wrap;
         justify-content: space-between;
-    }
-    .column{
-        background: #fff;
-        border: 1px solid #E9F2FF;
-        border-radius: 7px;
-        width: 19.5%;
-        margin-bottom: 1.5%;
-        align-items: center;
-        padding: 2em 1em;
-        min-width: 9em;
-        &:hover{
-            background: linear-gradient(111.85deg, #005BE4 -4.04%, #4900E4 103.57%);
-            color: #fff;
-            cursor: pointer;
-        }
-        h4{
-            text-align: center;
-            font-size: .9em;
-            margin-top: 1em;
-        }
-        .gatsby-image-wrapper{
-            width: 3em;
-            height: auto;
-            margin-bottom: 1em;
+        div{
+            border: 1px solid #E9F2FF;
+            margin-bottom: 1.5%;
+            padding: 2em 1em;
+            justify-content: center;
+            flex-basis: 18.5%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            svg{
+                width: 3.5em;
+            }
+             
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                margin-bottom: 1em;
+            }
         }
     }
 `;
 
-const Cargo = ({cargo}) => {
+const Cargo = () => {
 
     return(
         <Section>
             <h2>Международные грузоперевозки</h2>
             <div className="row">
-                {cargo.map((item, index) => (
-                    <div key={index} className="column">
-                        <PreviewCompatibleImage
-                            imageInfo={{
-                                image: item.image
-                            }}
-                        />
-                        <h4>{item.title}</h4>
-                    </div>
-                ))}
+                <HoverGradientInsideSvg
+                    title="Контейнерные перевозки"
+                    svg={<Storage/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Карго доставка"
+                    svg={<Package/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Доставка товаров"
+                    svg={<Trolley/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Перевозка сборных грузов"
+                    svg={<Ship/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Международная доставка посылок"
+                    svg={<Air/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Мультимодальные перевозки"
+                    svg={<Packages/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Перевозка негабаритных грузов"
+                    svg={<Product/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Перевозка техники"
+                    svg={<Protected/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Доставка станков и оборудования"
+                    svg={<TrolleyBig/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Доставка из Китая в Одессу"
+                    svg={<Warehouse/>}
+                />
             </div>
         </Section>
     )

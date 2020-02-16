@@ -11,7 +11,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         image={data.image}
         title={data.title}
         heading={data.heading}
-        subheading={data.subheading}
         description={data.description}
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
@@ -19,7 +18,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         section={data.section || {}}
         about={data.about || {}}
         calculator={data.calculator || {}}
-        destinations={data.destinations || {}}
         cargo={data.cargo || []}
         clients={data.clients || []}
       />

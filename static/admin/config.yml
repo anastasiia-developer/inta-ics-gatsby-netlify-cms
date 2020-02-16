@@ -66,6 +66,9 @@ collections:
         {lable: "Картинка", name: image, widget: image},
         {lable: "Текст", name: text, widget: "markdown"},
       ]}
+      - {label: Mainpitch, name: mainpitch, widget: object, fields: [
+          {label: Article, name: article, widget: "markdown"}
+      ]}
   - name: "pages"
     label: "Pages"
     files:

@@ -4,6 +4,7 @@ import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { ResponsiveCarousel, ButtonGroup } from '../CommonCarousel'
+import {graphql, StaticQuery} from "gatsby";
 
 const Section = styled.section`
     background: #FFE15A;
@@ -63,36 +64,64 @@ const Section = styled.section`
     }
 `;
 
-const Clients = ({clients}) => (
-    <Section>
-        <h2>Наши клиенты</h2>
-        <div style={{position: 'relative'}}>
-        <Carousel
-            containerClass="wrapper"
-            sliderClass="row"
-            infinite
-            arrows={false}
-            renderButtonGroupOutside={true}
-            customButtonGroup={<ButtonGroup />}
-            slidesToSlide={1}
-            showDots
-            responsive={ResponsiveCarousel()}
-        >
-        {clients.map((img, index) => (
-            <div key={index} className="img">
-                <div className="shadow row">
-                    <PreviewCompatibleImage
-                        imageInfo={{
-                            image: img.image
-                        }}
-                    />
-                </div>
-            </div>
-        ))}
-        </Carousel>
-        </div>
-    </Section>
+
+const Clients = ({ data }) => {
+        if(data){
+            return(
+                    <Section>
+                            <h2>Наши клиенты</h2>
+                            <div style={{position: 'relative'}}>
+                                    <Carousel
+                                        containerClass="wrapper"
+                                        sliderClass="row"
+                                        infinite
+                                        arrows={false}
+                                        renderButtonGroupOutside={true}
+                                        customButtonGroup={<ButtonGroup />}
+                                        slidesToSlide={1}
+                                        showDots
+                                        responsive={ResponsiveCarousel()}
+                                    >
+                                            {data.markdownRemark.frontmatter.clients.map((img, index) => (
+                                                <div key={index} className="img">
+                                                        <div className="shadow row">
+                                                                <PreviewCompatibleImage
+                                                                    imageInfo={{
+                                                                            image: img.image,
+                                                                    }}
+                                                                />
+                                                        </div>
+                                                </div>
+                                            ))}
+                                    </Carousel>
+                            </div>
+                    </Section>
+                )}
+        else{
+                return <div>..loading</div>
+        }
+};
+
+
+export default () => (
+    <StaticQuery
+        query={graphql`
+            query clientsComponent{
+                markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+                    frontmatter {
+                        clients{
+                          image{
+                              childImageSharp {
+                                fluid(maxWidth: 200, quality: 100) {
+                                  ...GatsbyImageSharpFluid
+                                }
+                              }
+                          }
+                        }
+                    }
+                }
+            }
+    `}
+        render={(data) => <Clients data={data} />}
+    />
 )
-
-
-export default Clients

@@ -25,9 +25,6 @@ export const IndexPageTemplate = ({
   section,
   about,
   calculator,
-  destinations,
-  cargo,
-  clients
 }) => (
   <Fragment>
     <Header
@@ -47,10 +44,12 @@ export const IndexPageTemplate = ({
     <Calculator calculator={calculator}/>
     <News />
       {location &&
-        <Destinations destinations={destinations} />
+        <Destinations/>
       }
-    <Cargo cargo={cargo}/>
-    <Clients clients={clients}/>
+    <Cargo/>
+      {location &&
+          <Clients/>
+      }
     <Reviews/>
     <Article mainpitch={mainpitch}/>
   </Fragment>
@@ -70,11 +69,6 @@ IndexPageTemplate.propTypes = {
       text:PropTypes.string
   }),
   calculator: PropTypes.object,
-  destinations: PropTypes.shape({
-    countries: PropTypes.array,
-  }),
-  cargo: PropTypes.array,
-  clients: PropTypes.array,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -96,9 +90,6 @@ const IndexPage = ({ data, location }) => {
         section={frontmatter.section}
         about={frontmatter.about}
         calculator={frontmatter.calculator}
-        destinations={frontmatter.destinations}
-        cargo={frontmatter.cargo}
-        clients={frontmatter.clients}
       />
     </Layout>
   )
@@ -193,44 +184,6 @@ export const pageQuery = graphql`
               }
             }
           }
-        }
-        destinations {
-          destinationsImage{
-            childImageSharp {
-              fluid(maxWidth: 1000, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          countries{
-            country
-            flag {
-              childImageSharp {
-                fluid(maxWidth: 100, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-        cargo{
-          title
-          image{
-            childImageSharp {
-              fluid(maxWidth: 100, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-        clients{
-          image{
-              childImageSharp {
-                fluid(maxWidth: 200, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
         }
         heading
         mainpitch {

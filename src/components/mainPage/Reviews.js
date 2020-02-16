@@ -28,10 +28,15 @@ const Section = styled.section`
     .react-multiple-carousel__arrow{
         top: 50%;
         transform: translateY(-50%);
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            top: auto;
+            transform: none;
+        }
         &--left{
             left: 8%;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 left: -5%;
+                
             }        
         }
         &--right{
@@ -52,6 +57,7 @@ const Section = styled.section`
             border-radius: .5em;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 padding: 1em 1em;
+                margin: 0;
             }
         }  
         h3{

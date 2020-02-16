@@ -3,25 +3,19 @@ templateKey: components-common
 title: Общие компонентны для всех сртраниц
 description: >-
     Страны и флаги
-countries:
-    - country: Китай
+storage:
+    - country: США (Washington)
+      flag: /img/002-united-states (3).png
+    - country: Польща (Chelm)
+      flag: /img/poland.png
+    - country: Польща (Warsaw)
+      flag: /img/poland.png
+    - country: Україна (Київ)
+      flag: /img/ukraine.png
+    - country: Китай (Shanghai)
       flag: /img/001-china 3.png
-    - country: Англия
-      flag: /img/002-united-states.png
     - country: Гонконг
       flag: /img/002-united-states (1).png
-    - country: Италия
-      flag: /img/002-united-states (2).png
-    - country: США
-      flag: /img/002-united-states (3).png
-    - country: Германия
-      flag: /img/002-united-states (4).png
-    - country: Индия
-      flag: /img/002-united-states (5).png
-    - country: Франция
-      flag: /img/002-united-states (6).png
-    - country: Израиль
-      flag: /img/002-united-states (7).png
 cargo:
   - title: Контейнерные перевозки
     image: /img/Storage.jpg
@@ -51,7 +45,7 @@ clients:
 ourServices:
   - title: Проведение платежей
     image:  
-  intro:
+intro:
   blurbs:
     - image: /img/coffee.png
       text: >

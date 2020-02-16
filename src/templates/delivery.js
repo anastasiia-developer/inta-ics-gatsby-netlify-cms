@@ -8,6 +8,12 @@ import CalculateHeader from "../components/delivery/CalculateHeader"
 import Sections from "../components/delivery/Sections"
 import SectionText from "../components/delivery/SectionText"
 import OurServices from '../components/delivery/OurServices'
+import Destinations from "../components/mainPage/destinations"
+import Cargo from "../components/mainPage/cargo"
+import Clients from "../components/mainPage/Clients"
+import Reviews from "../components/mainPage/Reviews";
+import Article from "../components/mainPage/Article";
+
 
 export const DeliveryTemplate = ({
                                  header,
@@ -15,7 +21,8 @@ export const DeliveryTemplate = ({
                                  description,
                                  location,
                                  sections,
-                                 sectionText}) => {
+                                 sectionText,
+                                 mainpitch}) => {
     return (
         <Fragment>
             <Header
@@ -33,6 +40,15 @@ export const DeliveryTemplate = ({
                 sectionText={sectionText}
             />
             <OurServices/>
+            {location &&
+                <Destinations />
+            }
+            <Cargo/>
+            {location &&
+                <Clients/>
+            }
+            <Reviews/>
+            <Article mainpitch={mainpitch}/>
         </Fragment>
     )
 }
@@ -46,16 +62,18 @@ DeliveryTemplate.propTypes = {
 }
 
 const Delivery = ({ data, location }) => {
-    const { markdownRemark: delivery } = data;
+    const { frontmatter } = data.markdownRemark;
+
     return (
         <Layout>
             <DeliveryTemplate
-                header={delivery.frontmatter.header}
-                title={delivery.frontmatter.title}
-                description={delivery.frontmatter.description}
+                header={frontmatter.header}
+                title={frontmatter.title}
+                description={frontmatter.description}
                 location={location}
-                sections={delivery.frontmatter.sections}
-                sectionText={delivery.frontmatter.sectionText}
+                sections={frontmatter.sections}
+                sectionText={frontmatter.sectionText}
+                mainpitch={frontmatter.mainpitch}
             />
         </Layout>
     )
@@ -124,6 +142,9 @@ export const pageQuery = graphql`
           image{
             publicURL   
           }
+        }
+        mainpitch {
+          article
         }
       }
     }
