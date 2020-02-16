@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Header from "../components/delivery/Header"
+
 import CalculateHeader from "../components/delivery/CalculateHeader"
 import Sections from "../components/delivery/Sections"
-import SectionText from "../components/delivery/SectionText";
+import SectionText from "../components/delivery/SectionText"
+import OurServices from '../components/delivery/OurServices'
 
 export const DeliveryTemplate = ({
                                  header,
@@ -30,6 +32,7 @@ export const DeliveryTemplate = ({
             <SectionText
                 sectionText={sectionText}
             />
+            <OurServices/>
         </Fragment>
     )
 }
@@ -119,7 +122,7 @@ export const pageQuery = graphql`
           text
           title
           image{
-            publicURL
+            publicURL   
           }
         }
       }
