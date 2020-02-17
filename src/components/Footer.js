@@ -3,9 +3,7 @@ import {Link} from 'gatsby'
 import styled from "styled-components";
 import Storage from './footer/storage';
 import Store from './store';
-import Facebook from '../img/social/facebook.svg';
-import Instagram from '../img/social/instagram.svg';
-import Twitter from '../img/social/twitter.svg';
+import SocialMedia from "./SocialMedia";
 
 const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
@@ -205,23 +203,8 @@ const FooterS = styled.footer`
     margin-left: 1.5em;
   }
   .social{
-    display: flex;
-    align-items: center;
-    font-size: .8em;
-    
-    svg{
-      width: 1.3em;
-      height: 1.3em;
-      path{
-        fill: #fff;
-      }
-      &:hover path{
-        fill: #FFE15A;
-        cursor: pointer;
-      }
-    }
-    li + li{
-    margin-left: 1em;
+    a + a{
+      margin-left: 1em;
     }
   }
 `;
@@ -356,23 +339,7 @@ const Footer = () => {
             </nav>
           </div>
           <div className="row bottom-bar">
-            <ul className="social">
-              <li>
-                <a href="https://www.facebook.com/">
-                  <Facebook/>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/">
-                  <Instagram/>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/">
-                  <Twitter/>
-                </a>
-              </li>
-            </ul>
+            <SocialMedia/>
             <div className="owner">INTA-ICS @ 2020</div>
           </div>
         </div>

@@ -5,6 +5,9 @@ import { Link } from "gatsby"
 import ArrowLine from '../img/arrowLine.svg'
 import Store from './store'
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import SocialMedia from "./SocialMedia";
+
+
 
 const Button = styled(Link)`
     align-items: center;
@@ -119,8 +122,30 @@ const Container = styled.header`
             text-align: center;
         }
     }
-
+    .social{
+        position: absolute;
+        left: 1em;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        width: 2em;
+        &:after{
+          content: '';
+          display: block;
+          border-right: 1px solid #0b192d;
+          height: 10em;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 2.5em;
+        }
+        a + a{
+            margin-top: 3em;
+        }
+    }
 `;
+
 
 const TemplateHeader = ({
                         className,
@@ -196,6 +221,7 @@ const TemplateHeader = ({
                 </div>
             </div>
             {children}
+            <SocialMedia/>
         </Container>
     );
 };
