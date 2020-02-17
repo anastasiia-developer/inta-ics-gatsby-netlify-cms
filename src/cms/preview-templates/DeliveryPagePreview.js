@@ -12,6 +12,8 @@ const DeliveryPagePreview = ({ entry }) => {
                 header={data.header}
                 description={data.description}
                 sections={data.sections}
+                sectionText={data.sectionText}
+                mainpitch={data.mainpitch}
             />
         )
     } else {

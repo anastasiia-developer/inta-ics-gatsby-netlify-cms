@@ -6,6 +6,7 @@ import Arrow from '../../img/arrow.svg'
 
 const SubNav = styled.nav`
     position: relative;
+    font-size: 1em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       align-items: flex-start;
       max-height: ${props => !props.isActiveSub ? '3em' : '13em'};
