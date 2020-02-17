@@ -1,59 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'gatsby'
 import Tel from '../../img/tel.svg'
 import Email from '../../img/email.svg'
 import Local from '../../img/local.svg'
-import ArrowLine from '../../img/arrowLine.svg'
 import Navigation from './styled'
 import Search from './Search'
 import Login from './Login'
 import Language from './Language'
+import Delivery from './delivery'
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    }
-  }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'navigation_open',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  };
+const Navbar = () => {
+    const [isActiveMob, setActiveMob] = useState(false);
 
-  render() {
     return (
       <Navigation
         role="navigation"
         aria-label="main-navigation"
         className="row"
+        isActive={isActiveMob}
       >
         {/* Hamburger menu */}
         <div
-            onClick={() => this.toggleHamburger()}
-            className={`navigation__lines ${this.state.navBarActiveClass}`}>
+            onClick={() => {setActiveMob(!isActiveMob)}}
+            className="navigation__lines">
           <hr/>
           <hr/>
           <hr/>
         </div>
-        <div className="navigation__contact common-contact row">
+        <div className="navigation__contact row-to-column">
           <a href="">
               <Tel className="icon" alt="contacts" />
               +38 (068) 5555 999
@@ -67,68 +42,59 @@ const Navbar = class extends React.Component {
               Украина, Киев, ул. Линейная 17
           </a>
         </div>
-        <Link to="/" className="logo" title="Logo">
+        <Link
+            to="/"
+            className="logo"
+            title="Logo">
           <img
               src="/img/logo.png"
               alt="inta ics"
               />
         </Link>
-          <div
-            className={`row-to-column navigation__list ${this.state.navBarActiveClass}`}
-          >
-          <div className="nav-delivery row-to-column">
-            <span>
-              Доставка
-            </span>
-              <nav className="sub-menu column">
-                  <Link to="/delivery/air-delivery">
-                      Авиадоставка
-                      <ArrowLine alt=""/>
-                  </Link>
-                  <Link to="/">
-                      Морские перевозки
-                      <ArrowLine alt=""/>
-                  </Link>
-                  <Link to="/">
-                      Ж/Д перевозки
-                      <ArrowLine alt=""/>
-                  </Link>
-                  <Link to="/">
-                      Автодоставка
-                      <ArrowLine alt=""/>
-                  </Link>
-              </nav>
-          </div>
-          <Link to="/products">
-            Услуги
-          </Link>
-          <Link to="/about">
-            О компании
-          </Link>
-          <Link to="/blog">
-            Блог
-          </Link>
-          <Link to="/contact/examples">
-            Помощь
-          </Link>
-          <Link to="/contact">
-            Контакты
-          </Link>
+          <div className="row-to-column navigation__list">
+              <Delivery
+                  setActiveMob={() => setActiveMob()}
+                  isActiveMob={isActiveMob}
+              />
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
+                  to="/products">
+                Услуги
+              </Link>
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
+                  to="/about">
+                О компании
+              </Link>
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
+                  to="/blog">
+                Блог
+              </Link>
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
+                  to="/contact/examples">
+                Помощь
+              </Link>
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
+                  to="/contact">
+                Контакты
+              </Link>
         </div>
-        <div className="row container">
+        <Search isActive={isActiveMob}/>
+        <div className="row container" onClick={() => setActiveMob(!isActiveMob)}>
             <Link to="/" className="row circle telegram">
                 <img src="/img/telegram.svg" alt="telegram icon"/>
             </Link>
             <Link to="/" className="row circle call">
                 <img src="/img/call.svg" alt="call img"/>
             </Link>
-            <Search />
             <Login />
             <Language />
         </div>
       </Navigation>
     )
-  }
 };
 
 export default Navbar

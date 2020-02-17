@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import SearchIcon from '../../img/searchInput.svg'
 
 const Label = styled.label`
     background: #fff;
@@ -9,6 +10,15 @@ const Label = styled.label`
     font-size: 1em;
     max-width: 300px;
     min-width: 15em;
+    position: absolute;
+    right: 15em;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        background: #313131;
+        padding: .6em;
+        min-width: auto;
+        right: .7em;
+        top: .3em;
+    }
     input{
         background: transparent;
         border: none;
@@ -23,18 +33,28 @@ const Label = styled.label`
         &::placeholder{
           color: inherit;
         }
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            display: none;
+        }
     }
-    .icon{
+    svg{
         width: .8em;
         height: .8em;
         margin-right: 0;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            margin-left: auto;
+            font-size: 1.2em;
+            path{
+                fill: #fff;
+            }
+        }
     }
 `;
 
-const Search = () =>(
-    <Label className="row">
+const Search = ({isActive}) =>(
+    <Label className="row" isActive={isActive}>
         <input type="text" placeholder="Отследить груз"/>
-        <img src="/img/search.svg" className="icon" alt="search icon"/>
+        <SearchIcon />
     </Label>
 );
 

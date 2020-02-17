@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const Store = () => (
-    <Wrapper className='row'>
+    <Wrapper className='row store'>
         <a href="https://www.apple.com">
             <img src="/img/appstore.png" alt="appstore icon"/>
         </a>
