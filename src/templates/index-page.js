@@ -32,7 +32,6 @@ export const IndexPageTemplate = ({
         title={title}
         header={header}
         location={location}
-        crumbLabel={false}
         storeBtn
     />
     <Section section={section}/>

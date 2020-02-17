@@ -7,8 +7,6 @@ import Store from './store'
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import SocialMedia from "./SocialMedia";
 
-
-
 const Button = styled(Link)`
     align-items: center;
     background: rgba(255, 255, 255, 0.09);
@@ -142,6 +140,9 @@ const Container = styled.header`
         }
         a + a{
             margin-top: 3em;
+        }
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            display: none;
         }
     }
 `;

@@ -11,18 +11,18 @@ const Container = styled.nav`
     }
     a, span{
         font-size: .9em;
-        color: ${props => props.crumbStyle};
+        color: #5B5B5B;
         cursor: pointer;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
           margin-bottom: .5em;
         }
         &:after{
-            content: '${props => props.crumbSeparator}';
+            content: ' > ';
             padding: 0 .5em;
         }        
     }
     a:last-child{
-        color: ${props => props.crumbActiveStyle};
+        color: #0460D9;
         &:after{
             content: none;
         }        
