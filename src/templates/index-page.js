@@ -13,6 +13,9 @@ import Clients from "../components/mainPage/Clients"
 import Reviews from "../components/mainPage/Reviews"
 import Header from "../components/mainPage/header"
 import Article from "../components/mainPage/Article"
+import {ButtonGroup, ResponsiveCarousel} from "../components/CommonCarousel";
+import Carousel from "react-multi-carousel";
+import TemplateHeader from "../components/TemplateHeader";
 
 
 
@@ -27,13 +30,28 @@ export const IndexPageTemplate = ({
   calculator,
 }) => (
   <Fragment>
-    <Header
-        description={description}
-        title={title}
-        header={header}
-        location={location}
-        storeBtn
-    />
+      <Header>
+          <Carousel
+              containerClass="slider"
+              sliderClass="row"
+              arrows={false}
+              renderButtonGroupOutside={true}
+              customButtonGroup={<ButtonGroup />}
+              slidesToSlide={1}
+              responsive={ResponsiveCarousel(1,1)}
+          >
+            {header.slide.map((item, index) =>
+                <TemplateHeader
+                    key={index}
+                    description={description}
+                    title={title}
+                    header={item}
+                    location={location}
+                    storeBtn
+                />
+            )}
+          </Carousel>
+      </Header>
     <Section section={section}/>
     <About
       title={about.title}
@@ -75,6 +93,7 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data, location }) => {
   const { frontmatter } = data.markdownRemark;
+
   return (
     <Layout>
       <IndexPageTemplate

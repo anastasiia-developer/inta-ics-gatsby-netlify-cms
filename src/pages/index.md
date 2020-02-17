@@ -27,6 +27,25 @@ header:
           text: Местоположение посылки
         - image: /img/time3.svg
           text: Сроки доставки
+    - buttons:
+        - link: /contacts
+          text: Заказать доставку
+        - link: /contacts
+          text: Узнать стоимость
+      images:
+        - alt: app mobile
+          image: /img/mainpage.png
+        - alt: app mobile
+          image: /img/mainpage1.png
+      scopeInformation:
+        - image: /img/bay.svg
+          text: Покупка товаров со всего мира
+        - image: /img/user1.svg
+          text: Поддержка 24/7
+        - image: /img/local2.svg
+          text: Местоположение посылки
+        - image: /img/time3.svg
+          text: Сроки доставки      
 section:
   blocks:
     - title: Прямой перевозчик

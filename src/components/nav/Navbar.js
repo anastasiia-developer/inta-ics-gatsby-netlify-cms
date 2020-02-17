@@ -58,7 +58,7 @@ const Navbar = () => {
               />
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/products">
+                  to="/cost-page">
                 Услуги
               </Link>
               <Link

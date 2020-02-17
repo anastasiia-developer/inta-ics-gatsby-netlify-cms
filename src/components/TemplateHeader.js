@@ -157,18 +157,18 @@ const TemplateHeader = ({
                         description,
                         children,
                         storeBtn }) => {
-    const { scopeInformation, images, buttons } = header.slide[0];
+    const { scopeInformation, images, buttons } = header;
 
     const scopeDeliver = scopeInformation.map(item => (
-        <li key={item.text} className="row" >
-            <img
-                alt="icon"
-                src={item.image.publicURL} />
-            <p>{item.text}</p>
-        </li>
+            <li key={item.text} className="row" >
+                <img
+                    alt="icon"
+                    src={item.image.publicURL} />
+                <p>{item.text}</p>
+            </li>
     ));
 
-    const Buttons = buttons.map((btn, index) => (
+    const Buttons = ({buttons}) => buttons.map((btn, index) => (
         <Button
             key={index}
             className="row"
@@ -182,6 +182,7 @@ const TemplateHeader = ({
             }
         </Button>
     ));
+
     return (
         <Container
             className={className}>
@@ -202,7 +203,9 @@ const TemplateHeader = ({
                         {scopeDeliver}
                     </ul>
                     <div className="row-to-column">
-                        {Buttons}
+                        { buttons &&
+                            <Buttons buttons={buttons}/>
+                        }
                     </div>
                 </div>
                 <div className="bckg-parallax-container">

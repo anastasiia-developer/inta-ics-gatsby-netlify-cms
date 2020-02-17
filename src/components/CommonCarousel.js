@@ -27,7 +27,7 @@ const Arrow = styled.button`
     }
 `;
 
-export const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+export const ButtonGroup = ({ next, previous, goToSlide, ...rest}) => {
     const { carouselState: { currentSlide, totalItems } } = rest;
     return (
         <Fragment>
