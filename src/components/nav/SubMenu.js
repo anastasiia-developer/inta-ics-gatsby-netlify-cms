@@ -33,7 +33,7 @@ const SubNav = styled.nav`
     span{
         &:after{
           content: '';
-          height: 1em;
+          height: 2em;
           width: 100%;
           display: block;
           position: absolute;

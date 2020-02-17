@@ -3,7 +3,6 @@ import React from "react";
 import SubMenu from './SubMenu'
 
 const Delivery = ({ data, setActiveMob, isActiveMob, location }) => {
-    console.log(location);
     if(data){
         return(
            <SubMenu
