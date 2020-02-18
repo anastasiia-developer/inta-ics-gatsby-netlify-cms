@@ -41,32 +41,6 @@ const Section = styled.section`
                 margin-bottom: 0;
             }                
         }
-        .category{
-            width: 6vw;
-            margin-right: 1em;
-            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-                width: 26vw;
-                &:last-child{
-                    margin-right: 0;
-                }
-            }
-            .image{
-                box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
-                border-radius: 6px;
-                padding: 1em;
-                .gatsby-image-wrapper{
-                    max-width: 67px;
-                    width: 100%;
-                }    
-            }
-            h4{
-                color: #59658A;
-                font-size: .8em;
-                font-weight: 500;
-                padding-top: 1.5em;
-                text-align: center;
-            }
-        }
     }
 `;
 
@@ -139,7 +113,18 @@ const Form = styled.div`
             color: #fff;
             border: none;
             font-weight: 700;
-            margin-bottom: 3em;       
+            margin-bottom: 3em; 
+            cursor: pointer;
+            pointer-events: auto;
+            opacity: 1;
+            &:disabled{
+                opacity: .7;
+                pointer-events: none;
+                cursor: none;
+            }     
+            &:hover{
+                background: #cb242d;
+            } 
         }
         p{
             font-size: .8em;
@@ -163,13 +148,72 @@ const Form = styled.div`
     }
 `;
 
+const Wrapper = styled.div`
+    width: 6vw;
+    margin-right: 1em;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        width: 26vw;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    .image{
+        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+        border: 1px solid ${props => props.isActive ? '#FF4B55' : 'none'}; 
+        border-radius: 6px;
+        padding: 1em;
+        .gatsby-image-wrapper{
+            max-width: 67px;
+            width: 100%;
+        }    
+    }
+    h4{
+        color: ${props => props.isActive ? '#FF4B55' : '#59658A'};
+        font-size: .8em;
+        font-weight: 500;
+        padding-top: 1.5em;
+        text-align: center;
+    }
+`;
+
+const Category = ({block, setAmout}) => {
+    const [isActive, setActive] = useState(false);
+
+    return(
+        <Wrapper
+             onClick={() => {setActive(!isActive); setAmout(!isActive, block.price) }}
+             isActive={isActive}
+             className="category">
+            <div className="image">
+                <PreviewCompatibleImage
+                    imageInfo={{
+                        image: block.image,
+                    }}
+                />
+            </div>
+            <h4>
+                <HTMLContent content={block.nameCategory}/>
+            </h4>
+        </Wrapper>
+    )
+
+};
 
 const CalculatorTemplate = ({ data }) => {
     const [amount, setAmount] = useState(0);
+    const [weight, setWeight] = useState('');
+    const [isActive, setIsActive] = useState(false);
+
+    const SetAmount = (isActive, price) => {
+        if(isActive){
+            setAmount(amount + price)
+        }else{
+            setAmount(amount - price)
+        }
+    };
 
     if(data){
         const { title, constituents } = data;
-
         return(
             <Section>
                 <h2 className="wrapper">{ title }</h2>
@@ -180,18 +224,11 @@ const CalculatorTemplate = ({ data }) => {
                                 <h3>{item.title}</h3>
                                 <div className="row categories__wrapper">
                                     {item.category.map((block,index) => (
-                                        <div key={index} className="category">
-                                            <div className="image">
-                                                <PreviewCompatibleImage
-                                                    imageInfo={{
-                                                        image: block.image,
-                                                    }}
-                                                />
-                                            </div>
-                                            <h4>
-                                                <HTMLContent content={block.nameCategory}/>
-                                            </h4>
-                                        </div>
+                                        <Category
+                                            key={index}
+                                            block={block}
+                                            setAmout={SetAmount}
+                                        />
                                     ))}
                                 </div>
                             </div>
@@ -202,11 +239,16 @@ const CalculatorTemplate = ({ data }) => {
                             <h3>Укажите вес посылки</h3>
                             <label>
                                 kg
-                                <input type="text"/>
+                                <input
+                                    value={weight}
+                                    onChange={(e)=>{setWeight(+e.target.value.replace(/[^\d]/g,'')); setIsActive(false)}}
+                                    type="text"/>
                             </label>
-                            <button>Рассчет стоимости</button>
+                            <button
+                                onClick={() => setIsActive(true)}
+                                disabled={weight === 0 || weight === '' && true}>Рассчет стоимости</button>
                             <p>Итого стоимость доставки</p>
-                            <div className="amount">${amount}</div>
+                            <div className="amount">${isActive ? (weight * 11) + amount : 0 }</div>
                             <div className="note">*Данный расчет является ориентировочным по тарифу Авиадоставки. Точная стоимость доставки будет зависеть от веса посылки и полного перечня заказанных услуг. Для более детальной информации обратитесь к менеджеру компании.</div>
                         </div>
                     </Form>
