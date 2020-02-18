@@ -14,10 +14,10 @@ const Label = styled.label`
     right: 15em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         background: #313131;
-        padding: .6em;
+        padding: .5em;
         min-width: auto;
-        right: .7em;
-        top: .3em;
+        right: 5vw;
+        top: 1.7vh;
     }
     input{
         background: transparent;
@@ -43,7 +43,7 @@ const Label = styled.label`
         margin-right: 0;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             margin-left: auto;
-            font-size: 1.2em;
+            font-size: 1em;
             path{
                 fill: #fff;
             }

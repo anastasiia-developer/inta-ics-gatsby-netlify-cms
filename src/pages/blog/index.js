@@ -6,7 +6,6 @@ import BlogRoll from '../../components/BlogRoll'
 export default class BlogIndexPage extends React.Component {
 
   render() {
-      console.log('page>blog>index')
 
       return (
       <Layout>

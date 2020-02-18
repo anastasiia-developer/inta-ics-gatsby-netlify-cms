@@ -13,6 +13,7 @@ const Button = styled.button`
     font-size: .9em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         margin-left: auto;
+        align-self: center;
     }       
     img{
         margin-left: .5em;

@@ -9,16 +9,9 @@ const SubNav = styled.nav`
     font-size: 1em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       align-items: flex-start;
-      max-height: ${props => !props.isActiveSub ? '3em' : '13em'};
-      min-height: ${props => props.isActiveSub ? '13em' : '0'};
+      min-height: ${props => props.isActiveSub ? '10em' : '0'};
       transition: all .4s;
-      overflow: hidden;
-    }
-    &:has(nav){
-        background: red;
-        span{
-            color: #FFE15A;
-        }
+      margin-bottom: 2em;
     }
     &:hover span{
       color: #005BE4;
@@ -37,6 +30,9 @@ const SubNav = styled.nav`
           width: 100%;
           display: block;
           position: absolute;
+          @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            display: none;
+          }
         }
         svg path{
             fill: #595959;
@@ -76,7 +72,8 @@ const SubNav = styled.nav`
             border: none;
             font-size: .8em;
             color: #fff;
-            margin-top: 2em;
+            pointer-events: auto;
+            max-height: ${props => !props.isActiveSub ? '0' : 'auto'};
         }
         &:hover{
             opacity: 1;
@@ -87,10 +84,13 @@ const SubNav = styled.nav`
           margin-left: 0;
           @media(max-aspect-ratio: 3/3), (max-height: 500px){
             color: #fff;
-            margin-bottom: 2em;
+            margin: ${props => props.isActiveSub ? '1.5em' : '0'} 0 0 0;
           }
           svg{
             opacity: 0;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){
+                display: none;
+            }
           }
           &:hover{
             color: #005BE4;
@@ -106,18 +106,16 @@ const SubMenu = ({parentName, startPath, list, setActiveMob, isActiveMob}) => {
 
     return(
         <SubNav
-            isActiveSub={isActiveSub}
-            onClick={() => {setActiveSub(!isActiveSub)}}>
-            <span>
+            isActiveSub={isActiveSub}>
+            <span onClick={() => {setActiveSub(!isActiveSub)}}>
               {parentName}
               <Arrow/>
             </span>
-            <nav className="drop-down column"
-                 onClick={() => setActiveMob(!isActiveMob)}
-            >
+            <nav className="drop-down column">
                 {list.map((link, index) => (
                     <Link
                         key={index}
+                        onClick={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
                         to={startPath+link.frontmatter.name}>
                         {link.frontmatter.title}
                         <ArrowLine/>

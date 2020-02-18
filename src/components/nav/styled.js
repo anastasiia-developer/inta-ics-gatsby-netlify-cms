@@ -9,11 +9,24 @@ const Navigation = styled.nav`
     background: #000;
     padding: 3em 5% 1em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
-        padding: .7em;
+        height: 8vh;
+        align-items: flex-start;
+        padding: 0 5%;
         background: #0D0D0D;
         top: 0;
         width: 100%;
         justify-content: space-between;
+        &:before{
+            content: '';
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            background: #0D0D0D;
+            transform: translateX(${props => props.isActive ? '0' : '-100%'});
+            transition: all .4s;
+        }
     } 
     .navigation__lines{ 
         display: none;
@@ -21,7 +34,8 @@ const Navigation = styled.nav`
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             display: block;
             position: absolute;
-            top: .7em;
+            top: 2vh;
+            left: 5vw;
             hr{
                 transition: transform .4s;
                 background: #FFE15A;
@@ -32,6 +46,7 @@ const Navigation = styled.nav`
                 pointer-events: auto;
                 &:last-child{
                     width: 1.25em;
+                    margin-bottom: none;
                 }
                 &:nth-child(2){
                     width: 1em;
@@ -46,11 +61,10 @@ const Navigation = styled.nav`
         align-items: center;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
           position: absolute;
-          background: #0D0D0D;
-          height: 68vh;
+          height: 61vh;
           overflow-y: scroll;
           width: 100%;
-          top: 6.3em;
+          top: 18vh;
           left: 0;
           font-size: 1.1em;
           align-items: flex-start;
@@ -66,6 +80,9 @@ const Navigation = styled.nav`
           }
           @media(max-aspect-ratio: 3/3), (max-height: 500px){
             margin: 0 0 2em 0;
+            &:last-child{
+                margin-bottom: 0;
+            }
           }
           &:hover{
             color: #005BE4;
@@ -86,10 +103,15 @@ const Navigation = styled.nav`
             width: 100%;
         }
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
-          width: 40%;
-          position: relative;
-          z-index: 2;
-          margin: 0 auto;
+            height: 3vh;
+            width: auto;
+            position: relative;
+            z-index: 2;
+            margin: 2vh auto 0;
+            img{
+                height: 100%;
+                width: auto;
+            }
         }
     }
     .navigation__contact{
@@ -98,18 +120,16 @@ const Navigation = styled.nav`
         top: 1em;
         right: 0;  
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
-            background: #0D0D0D;
             position: absolute;
-            top: 100vh;
+            top: 79vh;
             left: 0;
             flex-direction: column;
             width: 100%;
             z-index: 0;
             padding: 1.5em .7em;
             align-items: baseline;
-            transition: all .4s;
             border-top: 1px solid #323232;
-            transform: translate(${props => props.isActive ? '0' : '-100%'}, -100%);
+            transform: translateX(${props => props.isActive ? '0' : '-100%'});
             transition: all .4s;
         }
         svg{
@@ -137,22 +157,14 @@ const Navigation = styled.nav`
         align-items: center;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             position: fixed;
-            top: 2.9em;
-            left: 0;
-            width: 100%;
-            padding: 1em;
+            height: 10vh;
+            top: 8vh;
+            left: 5%;
+            width: 90%;
             transition: all .4s;
-            transform: translateX(${props => props.isActive ? '0' : '-100%'});
-            background: #0D0D0D;
-            &:before{
-                content: '';
-                width: 95%;
-                left: 2.5%;
-                height: 100%;
-                position: fixed;
-                border-top: 1px solid #323232;
-                border-bottom: 1px solid #323232;
-            } 
+            border-top: 1px solid #323232;
+            border-bottom: 1px solid #323232;
+            transform: translateX(${props => props.isActive ? '0' : '-105%'});
         }
     }
     .circle{
