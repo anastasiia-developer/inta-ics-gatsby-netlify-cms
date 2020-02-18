@@ -8,6 +8,7 @@ import Destinations from "../components/mainPage/destinations";
 import Clients from "../components/mainPage/Clients";
 import Reviews from "../components/mainPage/Reviews";
 import Article from "../components/mainPage/Article";
+import Calculator from "../components/Calculator";
 
 export const CostPageTemplate = ({
                                   title,
@@ -29,7 +30,10 @@ export const CostPageTemplate = ({
                 sections={sections}
             />
             {location &&
-                <Destinations/>
+                <Fragment>
+                    <Calculator/>
+                    <Destinations/>
+                </Fragment>
             }
             <Cargo/>
             {location &&

@@ -69,6 +69,24 @@ collections:
       - {label: Mainpitch, name: mainpitch, widget: object, fields: [
           {label: Article, name: article, widget: "markdown"}
       ]}
+  - name: "components-common"
+    label: "Общие компонентны для всех сртраниц"
+    folder: "src/pages/components-common"
+    create: false
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "components-common"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {lable: "Calculator", name: calculator, widget: object, fields:[
+        {lable: "Заголовок", name: title, widget: string},
+        {lable: "Составляющие цены", name: constituents, widget: list, fields:[
+          {lable: "Заголовок категории", name: title, widget: string},
+          {lable: "category", name: category, widget: list, fields:[
+            {lable: "Название услуги", name: "nameCategory", widget: string},
+            {lable: "цена", name: "price", widget: number},
+            {lable: "Картинка", name: image, widget: image}
+            ]}
+          ]}
+        ]}
   - name: "pages"
     label: "Pages"
     files:
@@ -109,17 +127,6 @@ collections:
               {lable: "Заголовок", name: title, widget: string},
               {lable: "Текст", name: text, widget: "markdown"},
               {lable: "Картинка", name: image, widget: image},
-          ]}
-          - {lable: "Calculator", name: calculator, widget: object, fields:[
-              {lable: "Заголовок", name: title, widget: string},
-              {lable: "Составляющие цены", name: constituents, widget: list, fields:[
-                {lable: "Заголовок категории", name: title, widget: string},
-                {lable: "category", name: category, widget: list, fields:[
-                  {lable: "Название услуги", name: "nameCategory", widget: string},
-                  {lable: "цена", name: "price", widget: number},
-                  {lable: "Картинка", name: image, widget: image}
-                ]}
-              ]}
           ]}
           - {lable: "destinations", name: destinations, widget: object, fields:[
               {lable: "destinationsImage", name: destinationsImage, widget: image},

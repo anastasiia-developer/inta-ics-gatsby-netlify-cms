@@ -1,15 +1,23 @@
 import React, {Fragment} from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import CalculatorTemplate from "../components/Calculator/CalculatorTemplate";
 
 
-const ComponentsCommon = ({ data, location }) => {
-    const { markdownRemark: delivery } = data;
+const ComponentsCommonTemplate = ({calculator}) => (
+    <Fragment>
+        <CalculatorTemplate data={calculator}/>
+    </Fragment>
+)
+
+const ComponentsCommon = ({ data }) => {
+    const { frontmatter } = data.markdownRemark;
+
     return (
         <Layout>
-            <div>
-                ComponentsCommon
-            </div>
+            <ComponentsCommonTemplate
+                calculator={frontmatter.calculator}
+            />
         </Layout>
     )
 }
@@ -23,6 +31,23 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        calculator {
+          title
+          constituents {
+            title
+            category {
+              nameCategory
+              price
+              image{
+                childImageSharp {
+                  fluid(maxWidth: 65, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
