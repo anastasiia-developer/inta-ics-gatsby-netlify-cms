@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Section from "../components/mainPage/section"
 import About from "../components/mainPage/about"
-import Calculator from "../components/mainPage/calculator"
+import Calculator from "../components/Calculator"
 import News from "../components/mainPage/news"
 import Destinations from "../components/mainPage/destinations"
 import Cargo from "../components/mainPage/cargo"
@@ -27,45 +27,40 @@ export const IndexPageTemplate = ({
   header,
   section,
   about,
-  calculator,
 }) => (
   <Fragment>
-      <Header>
-          <Carousel
-              containerClass="slider"
-              sliderClass="row"
-              arrows={false}
-              customButtonGroup={<ButtonGroup />}
-              slidesToSlide={1}
-              responsive={ResponsiveCarousel(1,1)}
-          >
-            {header.slide.map((item, index) =>
-                <TemplateHeader
-                    key={index}
-                    description={description}
-                    title={title}
-                    header={item}
-                    location={location}
-                    storeBtn
-                />
-            )}
-          </Carousel>
-      </Header>
+    <Header>
+      <Carousel
+          containerClass="slider"
+          sliderClass="row"
+          arrows={false}
+          customButtonGroup={<ButtonGroup />}
+          slidesToSlide={1}
+          responsive={ResponsiveCarousel(1,1)}
+      >
+        {header.slide.map((item, index) =>
+            <TemplateHeader
+                key={index}
+                description={description}
+                title={title}
+                header={item}
+                location={location}
+                storeBtn
+            />
+        )}
+      </Carousel>
+    </Header>
     <Section section={section}/>
     <About
       title={about.title}
       image={about.image}
       text={about.text}
       />
-    <Calculator calculator={calculator}/>
+    <Calculator/>
     <News />
-      {location &&
-        <Destinations/>
-      }
+    <Destinations/>
     <Cargo/>
-      {location &&
-          <Clients/>
-      }
+    <Clients/>
     <Reviews/>
     <Article mainpitch={mainpitch}/>
   </Fragment>

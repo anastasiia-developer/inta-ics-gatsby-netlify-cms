@@ -95,10 +95,8 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
+          - {label: MetaTitle, name: title, widget: string}
+          - {label: MetaDescription, name: description, widget: string}
           - {label: Header, name: header, widget: object, fields: [
               {label: Slide, name: slide, widget: list, fields: [
                 {label: Images, name: images, widget: list, fields: [
@@ -128,33 +126,12 @@ collections:
               {lable: "Текст", name: text, widget: "markdown"},
               {lable: "Картинка", name: image, widget: image},
           ]}
-          - {lable: "destinations", name: destinations, widget: object, fields:[
-              {lable: "destinationsImage", name: destinationsImage, widget: image},
-              {lable: "countries", name: countries, widget: list, fields:[
-                {lable: country, name: country, widget: string},
-                {lable: flag, name: flag, widget: image}
-              ]}
-          ]}
-
-          - {lable: cargo, name: cargo, widget: list, fields:[
-              {lable: title, name: title, widget: string},
-              {lable: image, name: image, widget: image}
-          ]}
-          - {label: Description, name: description, widget: string}
           - {label: Clients, name: clients, widget: list, fields:[
             {lable: image, name: image, widget: image}
           ]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
             {label: Article, name: article, widget: "markdown"}
           ]}
-          - {label: Intro, name: intro, widget: object, fields:[
-              {label: Heading, name: heading, widget: string},
-              {label: Description, name: description, widget: text},
-              {label: Blurbs, name: blurbs, widget: list, fields: [
-                {label: Image, name: image, widget: image},
-                {label: Text, name: text, widget: text}
-              ]}
-            ]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

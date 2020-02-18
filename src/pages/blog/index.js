@@ -4,8 +4,11 @@ import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 
 export default class BlogIndexPage extends React.Component {
+
   render() {
-    return (
+      console.log('page>blog>index')
+
+      return (
       <Layout>
         <div
           className="full-width-image-container margin-top-0"

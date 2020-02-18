@@ -13,18 +13,23 @@ import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/mainPage/Clients"
 import Reviews from "../components/mainPage/Reviews";
 import Article from "../components/mainPage/Article";
+import {HTMLContent} from "../components/Content";
+import Helmet from "react-helmet";
+import {BlogPostTemplate} from "./blog-post";
 
 
 export const DeliveryTemplate = ({
-                                 header,
-                                 title,
-                                 description,
-                                 location,
-                                 sections,
-                                 sectionText,
-                                 mainpitch}) => {
+                                     helmet,
+                                     header,
+                                     title,
+                                     description,
+                                     location,
+                                     sections,
+                                     sectionText,
+                                     mainpitch}) => {
     return (
         <Fragment>
+            {helmet || ''}
             <Header
                 description={description}
                 title={title}
@@ -41,11 +46,11 @@ export const DeliveryTemplate = ({
             />
             <OurServices/>
             {location &&
-                <Destinations />
+            <Destinations />
             }
             <Cargo/>
             {location &&
-                <Clients/>
+            <Clients/>
             }
             <Reviews/>
             <Article mainpitch={mainpitch}/>
@@ -67,6 +72,15 @@ const Delivery = ({ data, location }) => {
     return (
         <Layout>
             <DeliveryTemplate
+                helmet={
+                    <Helmet titleTemplate="%s">
+                        <title>{`${frontmatter.title}`}</title>
+                        <meta
+                            name="description"
+                            content={`${frontmatter.description}`}
+                        />
+                    </Helmet>
+                }
                 header={frontmatter.header}
                 title={frontmatter.title}
                 description={frontmatter.description}
@@ -74,6 +88,7 @@ const Delivery = ({ data, location }) => {
                 sections={frontmatter.sections}
                 sectionText={frontmatter.sectionText}
                 mainpitch={frontmatter.mainpitch}
+
             />
         </Layout>
     )
