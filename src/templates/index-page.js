@@ -35,7 +35,6 @@ export const IndexPageTemplate = ({
               containerClass="slider"
               sliderClass="row"
               arrows={false}
-              renderButtonGroupOutside={true}
               customButtonGroup={<ButtonGroup />}
               slidesToSlide={1}
               responsive={ResponsiveCarousel(1,1)}

@@ -7,17 +7,24 @@ const Header = styled.div`
     .wrapper{
         width: 85%;
     }
-    .react-multiple-carousel__arrow{
-        top: 50vh;
-        &--left{
-            left: 3.5%;
-        }
-        &--right{
-            right: 3.5%;
-        }
+    .react-multi-carousel-list{
+        .react-multiple-carousel__arrow{
+            top: 50vh;
+            &--left{
+                left: 3em;
+                @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                    left: 0;
+                }
+            }
+            &--right{
+                right: 3em;
+                @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                    right: 0;
+                }
+            }
+        }    
     }
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-         padding: 6em 0 0;
         .wrapper{
             width: 85%;
         }
