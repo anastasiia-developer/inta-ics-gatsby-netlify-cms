@@ -4,18 +4,17 @@ name: auto-delivery
 title: Автодоставка
 subTitle: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:
-  slide:
-    - buttons:
+    buttons:
         - link: /contacts
           text: Авиадоставка из США
         - link: /contacts
           text: Авиадоставка из США
         - link: /
           text: Авиадоставка из США
-      images:
+    images:
         - alt: app mobile
           image: /img/bkgr-air.png
-      scopeInformation:
+    scopeInformation:
         - image: /img/time.svg
           text: Сроки доставки
         - image: /img/card.svg

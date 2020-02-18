@@ -185,3 +185,27 @@ collections:
                 {label: Items, name: items, widget: list}
               ]}
             ]}
+      - file: "src/pages/cost-page.md"
+        label: "Стоимость"
+        name: "cost-page"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Header, name: header, widget: object, fields: [
+              {label: Images, name: images, widget: list, fields: [
+                {label: Image, name: image, widget: image},
+                {label: Alt, name: alt, widget: string}
+              ]},
+              {label: "Scope information", name: scopeInformation, widget: list, fields: [
+                {label: Image, name: image, widget: image},
+                {label: text, name: text, widget: string}
+              ]},
+          ]}
+          - {label: "sections", name: "sections", widget: list, fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {lable: "Картинка", name: image, widget: image},
+              {lable: "Текст", name: text, widget: "markdown"},
+          ]}
+          - {label: Mainpitch, name: mainpitch, widget: object, fields: [
+            {label: Article, name: article, widget: "markdown"}
+          ]}

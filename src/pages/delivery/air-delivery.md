@@ -7,18 +7,17 @@ description: >-
   клиентом, независимо от объёмов его грузопотока. Закажите консультацию и
   начнем сотрудничество прямо сейчас!!
 header:
-  slide:
-    - buttons:
+    buttons:
         - link: /contacts
           text: Авиадоставка из США
         - link: /contacts
           text: Авиадоставка из США
         - link: /
           text: Авиадоставка из США
-      images:
+    images:
         - alt: app mobile
           image: /img/bkgr-air.png
-      scopeInformation:
+    scopeInformation:
         - image: /img/time.svg
           text: Сроки доставки
         - image: /img/card.svg

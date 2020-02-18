@@ -96,7 +96,6 @@ export const pageQuery = graphql`
         title
         description
         header{
-          slide{
             images{
               image{
                 childImageSharp {
@@ -117,7 +116,6 @@ export const pageQuery = graphql`
               text
               link
             }
-          }
         }
         sections{
             text
