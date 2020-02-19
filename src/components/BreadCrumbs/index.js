@@ -18,9 +18,12 @@ const Breadcrumbs = ({ location, crumbLabel }) => {
                 </Link>
                </Fragment>
                 :
-                <Link to={location.pathname}>
-                    {crumbLabel}
-                </Link>
+                location.pathname !== '/' ?
+                    <Link to={location.pathname}>
+                        {crumbLabel}
+                    </Link>
+                    : null
+
             }
         </Container>
 
