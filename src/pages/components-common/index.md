@@ -16,35 +16,11 @@ storage:
       flag: /img/001-china 3.png
     - country: Гонконг
       flag: /img/002-united-states (1).png
-cargo:
-  - title: Контейнерные перевозки
-    image: /img/Storage.jpg
-  - title: Карго доставка
-    image: /img/package 2.png
-  - title: Доставка товаров
-    image: /img/trolley 1.png
-  - title: Перевозка сборных грузов
-    image: /img/cargo-ship 1.png
-  - title: Международная доставка посылок
-    image: /img/airplane 1.png
-  - title: Мультимодальные перевозки
-    image: /img/package (2) 1.png
-  - title: Перевозка негабаритных грузов
-    image: /img/product 1.png
-  - title: Перевозка техники
-    image: /img/protected 1.png
-  - title: Доставка станков и оборудования
-    image: /img/trolley (1) 1.png
-  - title: Доставка из Китая в Одессу
-    image: /img/warehouse 3.png
 clients:
   - image: /img/image 18.png
   - image: /img/image 19.png
   - image: /img/image 20.png
   - image: /img/image 20 (copy).png
-ourServices:
-  - title: Проведение платежей
-    image:  
 calculator:
   constituents:
     - category:
@@ -77,5 +53,41 @@ calculator:
           price: 2
       title: Дополнительные услуги
   title: Рассчитайте стоимость доставки
+destinations:
+  countries:
+    - country: Китай
+      flag: /img/001-china 3.png
+    - country: Англия
+      flag: /img/002-united-states.png
+    - country: Италия
+      flag: /img/002-united-states (2).png
+    - country: Гонконг
+      flag: /img/002-united-states (1).png
+    - country: Италия
+      flag: /img/002-united-states (2).png
+    - country: США
+      flag: /img/002-united-states (3).png
+    - country: Германия
+      flag: /img/002-united-states (4).png
+    - country: Италия
+      flag: /img/002-united-states (2).png
+    - country: Индия
+      flag: /img/002-united-states (5).png
+    - country: Франция
+      flag: /img/002-united-states (6).png
+    - country: Италия
+      flag: /img/002-united-states (2).png
+    - country: Израиль
+      flag: /img/002-united-states (7).png
+  destinationsImage: /img/map.png  
+reviews:
+  - name: Иван Заец
+    source:
+      name: отзывы Google
+      url: 'https://www.google.com'
+    text: >-
+      Груз пришел 18/10 на склад , 29/10 со мной связался менеджер и уточнил
+      куда его отправлять . Был приятно удивлен скоростью. На следующий день
+      забрал в отделении, сделали дополнительную упаковку - бесплатно. Ребята ,
+      так держать
 ---
-

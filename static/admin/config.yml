@@ -87,6 +87,28 @@ collections:
             ]}
           ]}
         ]}
+      - {label: Clients, name: clients, widget: list, fields:[
+          {lable: image, name: image, widget: image}
+        ]}
+      - {label: Destinations, name: destinations, widget: list, fields:[
+          {lable: countries, name: countries, widget: list, fields:[
+            {label: country, name: country, widget: string},
+            {label: flag, name: flag, widget: image}
+          ]},
+          {label: destinationsImage, name: image, widget: image}
+        ]}
+      - {label: Reviews, name: reviews, widget: list, fields:[
+          {lable: name, name: name, widget: string},
+          {lable: text, name: text, widget: markdown},
+          {lable: source, name: source, widget: object, fields: [
+            {lable: name, name: name, widget: string},
+            {lable: url, name: url, widget: string}
+          ]},
+      ]}
+      - {label: Storage, name: storage, widget: list, fields:[
+          {label: country, name: country, widget: string},
+          {label: flag, name: flag, widget: image}
+        ]}
   - name: "pages"
     label: "Pages"
     files:
@@ -126,9 +148,7 @@ collections:
               {lable: "Текст", name: text, widget: "markdown"},
               {lable: "Картинка", name: image, widget: image},
           ]}
-          - {label: Clients, name: clients, widget: list, fields:[
-            {lable: image, name: image, widget: image}
-          ]}
+
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
             {label: Article, name: article, widget: "markdown"}
           ]}
