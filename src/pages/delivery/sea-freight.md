@@ -1,31 +1,28 @@
 ---
 templateKey: delivery
-name: sea-freight
 title: Морская перевозка грузов из Китая
+name: sea-freight
 description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:
-    buttons:
-        - link: /contacts
-          text: Авиадоставка из США
-        - link: /contacts
-          text: Авиадоставка из США
-        - link: /
-          text: Авиадоставка из США
-    images:
-        - alt: app mobile
-          image: /img/bkgr-air.png
-    scopeInformation:
-        - image: /img/time.svg
-          text: Сроки доставки
-        - image: /img/card.svg
-          text: от 2$ за кг
-        - image: /img/local.svg
-          text: Местоположение посылки
+  buttons:
+    - link: /contacts
+      text: Авиадоставка из США
+    - link: /contacts
+      text: Авиадоставка из США
+    - link: /
+      text: Авиадоставка из США
+  images:
+    - alt: app mobile
+      image: /img/fatree.png
+  scopeInformation:
+    - image: /img/time.svg
+      text: Сроки доставки
+    - image: /img/card.svg
+      text: от 2$ за кг
+    - image: /img/local.svg
+      text: Местоположение посылки
 sections:
-  - buttons:
-      - link: /
-        text: Узнать больше
-    image: /img/deliv.jpg
+  - image: /img/deliv.jpg
     list:
       - image: /img/ (1).png
         title: Свой склад в США
@@ -123,5 +120,6 @@ mainpitch:
     <p>За годы работы в сфере логистики в Украине и экспресс-доставки из США в
     частности, мы создали позитивную репутацию одного из ведущих игроков,
     который работает не только ради себя, но и для клиента и его бизнеса. Мы
-    ценим каждого заказчика, постоянного или нового.</p>       
+    ценим каждого заказчика, постоянного или нового.</p>
 ---
+
