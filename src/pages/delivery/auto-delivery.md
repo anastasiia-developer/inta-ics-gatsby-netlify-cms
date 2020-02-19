@@ -12,8 +12,8 @@ header:
     - link: /
       text: Авиадоставка из США
   images:
-    - alt: train
-      image: /img/Group.png
+    - alt: auto
+      image: /img/Group1.png
   scopeInformation:
     - image: /img/time.svg
       text: Сроки доставки
