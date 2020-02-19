@@ -182,7 +182,7 @@ const TemplateHeader = ({
             }
         </Button>
     ));
-
+    console.log(crumbLabel || title);
     return (
         <Container
             className={className}>
@@ -190,7 +190,7 @@ const TemplateHeader = ({
                 <div className="column common-header-column">
                     {location &&
                         <Breadcrumbs
-                            crumbLabel={crumbLabel}
+                            crumbLabel={crumbLabel || title}
                             location={location}/>
                     }
                     <h1>

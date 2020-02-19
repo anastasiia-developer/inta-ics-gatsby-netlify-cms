@@ -9,7 +9,7 @@ const Breadcrumbs = ({ location, crumbLabel }) => {
             <Link to='/'>
                 Главная
             </Link>
-            {location.pathname.indexOf('delivery') !== -1 &&
+            {location.pathname.indexOf('delivery') !== -1 ?
                <Fragment>
                 <span>Доставка</span>
 
@@ -17,7 +17,11 @@ const Breadcrumbs = ({ location, crumbLabel }) => {
                     {crumbLabel}
                 </Link>
                </Fragment>
-                }
+                :
+                <Link to={location.pathname}>
+                    {crumbLabel}
+                </Link>
+            }
         </Container>
 
     )
