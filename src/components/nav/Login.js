@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Button = styled.button`
-    border: 1px solid #FFE15A;
+    border: none;
     border-radius: 4px;
     padding: .5em 1em; 
-    color: #FFE15A;      
-    background: transparent;
+    color: #fff; 
+    font-weight: 500;     
+    background: #222222;
     align-items: center;
     align-self: stretch;
     margin-left: 1em;
@@ -16,7 +17,8 @@ const Button = styled.button`
         align-self: center;
     }       
     img{
-        margin-left: .5em;
+        width: auto;
+        margin-left: 1em;
     }
 `;
 const Login = () =>(

@@ -4,7 +4,7 @@ import BlogRoll from "../BlogRoll";
 import styled from "styled-components";
 
 const Section = styled.section`
-    background: #FFE15A;
+    background: #F8F8F8;
     padding: 2em 0;
     margin: 6em 0 3em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    

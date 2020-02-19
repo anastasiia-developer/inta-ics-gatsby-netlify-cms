@@ -76,7 +76,8 @@ const Navigation = styled.nav`
           margin-left: 2em;
           color: #fff;
           &[aria-current]{
-            color: #FFE15A;
+            font-weight: 700;
+            text-decoration: underline;
           }
           @media(max-aspect-ratio: 3/3), (max-height: 500px){
             margin: 0 0 2em 0;
@@ -135,8 +136,9 @@ const Navigation = styled.nav`
         svg{
             font-size: .9em;
             margin-right: .5em;
-            @media(max-aspect-ratio: 3/3), (max-height: 500px){
-                path{
+            path{
+                fill: #7A7A7A;
+                @media(max-aspect-ratio: 3/3), (max-height: 500px){
                     fill: #E0E0E0;
                 }
             }
@@ -145,10 +147,10 @@ const Navigation = styled.nav`
             display: flex;
             align-items: center;
             margin-right: 1em;
+            color: #E0E0E0;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){
                 font-size: .8em;
                 margin-bottom: .5em;
-                color: #E0E0E0;
             }
         }
     }
@@ -174,15 +176,15 @@ const Navigation = styled.nav`
         justify-content: center;
         border-radius: 100%;
         margin-right: 1em;
-        img{
+        background: #005BE4;
+        svg{
             width: 1em;
             height: 1em;
-        }
-        &.telegram{
-            background: #1E96C8;
+            path{
+                fill: #fff;
+            }
         }
         &.call{
-            background: #FFE15A;
             margin-right: 17em;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){
                 margin-right: 1em;

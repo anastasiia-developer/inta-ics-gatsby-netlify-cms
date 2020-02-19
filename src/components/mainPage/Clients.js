@@ -7,7 +7,7 @@ import { ResponsiveCarousel, ButtonGroup } from '../CommonCarousel'
 import {graphql, StaticQuery} from "gatsby";
 
 const Section = styled.section`
-    background: #FFE15A;
+    background: #F8F8F8;
     padding: 3em 0;  
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
         padding: 1em 0;  

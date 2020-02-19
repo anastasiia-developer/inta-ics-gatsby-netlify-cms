@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'gatsby'
 import Tel from '../../img/tel.svg'
 import Email from '../../img/email.svg'
@@ -8,10 +8,20 @@ import Search from './Search'
 import Login from './Login'
 import Language from './Language'
 import Delivery from './delivery'
-
+import Telegram from '../../img/social/telegram.svg'
+import Call from '../../img/call.svg'
 
 const Navbar = () => {
     const [isActiveMob, setActiveMob] = useState(false);
+
+    const SetActiveMob = () => {
+        setActiveMob(!isActiveMob);
+    };
+
+    useEffect(() => {
+        document.documentElement.style.overflowY = isActiveMob ? 'hidden' : 'unset';
+
+    }, [isActiveMob ]);
 
     return (
       <Navigation
@@ -53,7 +63,7 @@ const Navbar = () => {
         </Link>
           <div className="row-to-column navigation__list">
               <Delivery
-                  setActiveMob={() => setActiveMob()}
+                  setActiveMob={SetActiveMob}
                   isActiveMob={isActiveMob}
               />
               <Link
@@ -63,7 +73,7 @@ const Navbar = () => {
               </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/">
+                  to="/about">
                 Услуги
               </Link>
               <Link
@@ -89,11 +99,11 @@ const Navbar = () => {
         </div>
         <Search isActive={isActiveMob}/>
         <div className="row container" onClick={() => setActiveMob(!isActiveMob)}>
-            <Link to="/" className="row circle telegram">
-                <img src="/img/telegram.svg" alt="telegram icon"/>
+            <Link to="/" className="row circle">
+                <Telegram />
             </Link>
             <Link to="/" className="row circle call">
-                <img src="/img/call.svg" alt="call img"/>
+                <Call />
             </Link>
             <Login />
             <Language />
