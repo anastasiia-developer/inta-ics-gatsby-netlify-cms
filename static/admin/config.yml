@@ -69,7 +69,7 @@ collections:
       ]}
   - name: "components-common"
     label: "Общие компонентны для всех сртраниц"
-    folder: "src/pages/components-common.md"
+    file: "src/pages/components"
     create: false
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "components-common"}
