@@ -1,50 +1,6 @@
 ---
 templateKey: components-common
 title: Общие компонентны для всех сртраниц
-description: >-
-    Страны и флаги
-storage:
-    - country: США (Washington)
-      flag: /img/002-united-states (3).png
-    - country: Польща (Chelm)
-      flag: /img/poland.png
-    - country: Польща (Warsaw)
-      flag: /img/poland.png
-    - country: Україна (Київ)
-      flag: /img/ukraine.png
-    - country: Китай (Shanghai)
-      flag: /img/001-china 3.png
-    - country: Гонконг
-      flag: /img/002-united-states (1).png
-cargo:
-  - title: Контейнерные перевозки
-    image: /img/Storage.jpg
-  - title: Карго доставка
-    image: /img/package 2.png
-  - title: Доставка товаров
-    image: /img/trolley 1.png
-  - title: Перевозка сборных грузов
-    image: /img/cargo-ship 1.png
-  - title: Международная доставка посылок
-    image: /img/airplane 1.png
-  - title: Мультимодальные перевозки
-    image: /img/package (2) 1.png
-  - title: Перевозка негабаритных грузов
-    image: /img/product 1.png
-  - title: Перевозка техники
-    image: /img/protected 1.png
-  - title: Доставка станков и оборудования
-    image: /img/trolley (1) 1.png
-  - title: Доставка из Китая в Одессу
-    image: /img/warehouse 3.png
-clients:
-  - image: /img/image 18.png
-  - image: /img/image 19.png
-  - image: /img/image 20.png
-  - image: /img/image 20 (copy).png
-ourServices:
-  - title: Проведение платежей
-    image:  
 calculator:
   constituents:
     - category:
@@ -77,5 +33,20 @@ calculator:
           price: 2
       title: Дополнительные услуги
   title: Рассчитайте стоимость доставки
+clients:
+  - image: /img/image 18.png
+  - image: /img/image 19.png
+  - image: /img/image 20.png
+  - image: /img/image 20 (copy).png
+reviews:
+  - name: Иван Заец
+    source:
+      name: отзывы Google
+      url: 'https://www.google.com'
+    text: >-
+      Груз пришел 18/10 на склад , 29/10 со мной связался менеджер и уточнил
+      куда его отправлять . Был приятно удивлен скоростью. На следующий день
+      забрал в отделении, сделали дополнительную упаковку - бесплатно. Ребята ,
+      так держать
 ---
 
