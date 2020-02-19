@@ -4,9 +4,9 @@ import Layout from "../components/Layout";
 import Header from "../components/delivery/Header";
 import Sections from "../components/delivery/Sections";
 import Cargo from "../components/mainPage/cargo";
-import Destinations from "../components/mainPage/destinations";
-import Clients from "../components/mainPage/Clients";
-import Reviews from "../components/mainPage/Reviews";
+import Destinations from "../components/Destinations";
+import Clients from "../components/Clients";
+import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import Calculator from "../components/Calculator";
 

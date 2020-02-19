@@ -3,19 +3,19 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import Header from "../components/mainPage/header"
+import TemplateHeader from "../components/TemplateHeader";
 import Section from "../components/mainPage/section"
 import About from "../components/mainPage/about"
 import Calculator from "../components/Calculator"
 import News from "../components/mainPage/news"
-import Destinations from "../components/mainPage/destinations"
+import Destinations from "../components/Destinations"
 import Cargo from "../components/mainPage/cargo"
-import Clients from "../components/mainPage/Clients"
-import Reviews from "../components/mainPage/Reviews"
-import Header from "../components/mainPage/header"
+import Clients from "../components/Clients"
+import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
 import {ButtonGroup, ResponsiveCarousel} from "../components/CommonCarousel";
 import Carousel from "react-multi-carousel";
-import TemplateHeader from "../components/TemplateHeader";
 
 
 
@@ -55,7 +55,7 @@ export const IndexPageTemplate = ({
       title={about.title}
       image={about.image}
       text={about.text}
-      />
+    />
     <Calculator/>
     <News />
     <Destinations/>
@@ -91,7 +91,6 @@ const IndexPage = ({ data, location }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         mainpitch={frontmatter.mainpitch}
@@ -124,13 +123,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         header{
           slide{
             images{

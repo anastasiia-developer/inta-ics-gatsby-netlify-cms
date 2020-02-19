@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import FlagsTemplate from "./FlagTemplate";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
-import Flags from "../Flags";
-import {graphql, StaticQuery} from "gatsby";
 
 const Section = styled.section`
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
@@ -54,48 +53,26 @@ const Section = styled.section`
 `;
 
 
-const Destinations = ({ data }) => {
-    if(data){
-    return(
-        <Section>
-            <div className="row-to-column">
-                <div className="column countries">
-                    <h2>Международные направления</h2>
-                    <Flags />
+const DestinationsTemplate = ({ destinations }) => {
+    if(destinations){
+        return(
+            <Section>
+                <div className="row-to-column">
+                    <div className="column countries">
+                        <h2>Международные направления</h2>
+                        <FlagsTemplate countries={destinations.countries}/>
+                    </div>
+                    <PreviewCompatibleImage
+                        imageInfo={{
+                            image: destinations.destinationsImage,
+                        }}
+                    />
                 </div>
-                <PreviewCompatibleImage
-                    imageInfo={{
-                        image: data.markdownRemark.frontmatter.destinations.destinationsImage,
-                    }}
-                />
-            </div>
-        </Section>
-    )}
+            </Section>
+        )}
     else{
         return <div>..loading</div>
     }
 };
 
-
-export default () => (
-    <StaticQuery
-        query={graphql`
-            query Destinations{
-                markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-                    frontmatter {
-                        destinations {
-                            destinationsImage{
-                                childImageSharp {
-                                    fluid(maxWidth: 1000, quality: 100) {
-                                        ...GatsbyImageSharpFluid
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-    `}
-        render={(data) => <Destinations data={data} />}
-    />
-)
+export default DestinationsTemplate;

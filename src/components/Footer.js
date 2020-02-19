@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import {Link} from 'gatsby'
 import styled from "styled-components";
-import Storage from './footer/storage';
+import Storage from './Storage';
 import Store from './store';
 import SocialMedia from "./SocialMedia";
 

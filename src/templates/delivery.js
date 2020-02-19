@@ -1,21 +1,19 @@
 import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Header from "../components/delivery/Header"
 
+import Layout from '../components/Layout'
+import Helmet from "react-helmet";
+import Header from "../components/delivery/Header"
 import CalculateHeader from "../components/delivery/CalculateHeader"
 import Sections from "../components/delivery/Sections"
 import SectionText from "../components/delivery/SectionText"
 import OurServices from '../components/delivery/OurServices'
-import Destinations from "../components/mainPage/destinations"
+import Destinations from "../components/Destinations"
 import Cargo from "../components/mainPage/cargo"
-import Clients from "../components/mainPage/Clients"
-import Reviews from "../components/mainPage/Reviews";
+import Clients from "../components/Clients"
+import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
-import {HTMLContent} from "../components/Content";
-import Helmet from "react-helmet";
-import {BlogPostTemplate} from "./blog-post";
 
 
 export const DeliveryTemplate = ({
@@ -45,13 +43,9 @@ export const DeliveryTemplate = ({
                 sectionText={sectionText}
             />
             <OurServices/>
-            {location &&
             <Destinations />
-            }
             <Cargo/>
-            {location &&
             <Clients/>
-            }
             <Reviews/>
             <Article mainpitch={mainpitch}/>
         </Fragment>
@@ -88,7 +82,6 @@ const Delivery = ({ data, location }) => {
                 sections={frontmatter.sections}
                 sectionText={frontmatter.sectionText}
                 mainpitch={frontmatter.mainpitch}
-
             />
         </Layout>
     )

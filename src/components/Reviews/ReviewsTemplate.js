@@ -71,23 +71,19 @@ const Section = styled.section`
             color: #4F5661;
             line-height: 2em;
             font-size: .9em;
+            padding-bottom: 2em;
         }  
         .source{
             color: #005BE4;
             font-weight: 500;
             font-size: .8em;
-            padding-top: 2em;
         }
     }      
 `;
 
-const Reviews = () => {
-    const review = {
-        name: 'Иван Заец',
-        text: 'Груз пришел 18/10 на склад , 29/10 со мной связался менеджер и уточнил куда его отправлять . Был приятно удивлен скоростью. На следующий день забрал в отделении, сделали дополнительную упаковку - бесплатно. Ребята , так держать'
-    };
-
-    return(
+const ReviewsTemplate = ({reviews}) => {
+    if(reviews){
+        return(
         <Section>
             <h2>Отзывы</h2>
             <div className="wrapper">
@@ -101,38 +97,22 @@ const Reviews = () => {
                         slidesToSlide={1}
                         responsive={ResponsiveCarousel(1,1)}
                     >
-                        <div>
-                            <div className="border">
-                                <h3>{review.name}</h3>
-                                <p>{review.text}</p>
-                                <div className="source">отзывы Google</div>
+                        {reviews.map((review, index) =>
+                            <div key={index}>
+                                <div className="border">
+                                    <h3>{review.name}</h3>
+                                    <p>{review.text}</p>
+                                    <a href={review.source.url} className="source">{review.source.name}</a>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div className="border">
-                                <h3>{review.name}</h3>
-                                <p>{review.text}</p>
-                                <div className="source">отзывы Google</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="border">
-                                <h3>{review.name}</h3>
-                                <p>{review.text}</p>
-                                <div className="source">отзывы Google</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="border">
-                                <h3>{review.name}</h3>
-                                <p>{review.text}</p>
-                                <div className="source">отзывы Google</div>
-                            </div>
-                        </div>
+                        )}
                     </Carousel>
                 </div>
             </div>
-        </Section>
-    )
-}
-export default Reviews
+        </Section>)
+    }
+    else{
+        return <div>..loading</div>
+    }
+};
+export default ReviewsTemplate;
