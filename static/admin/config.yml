@@ -67,9 +67,9 @@ collections:
       - {label: Mainpitch, name: mainpitch, widget: object, fields: [
           {label: Article, name: article, widget: "markdown"}
       ]}
-  - name: "componentscommon"
+  - name: "components-common"
     label: "Общие компонентны для всех сртраниц"
-    folder: "src/pages/componentscommon/index.md"
+    folder: "src/pages/components-common.md"
     create: false
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "components-common"}
