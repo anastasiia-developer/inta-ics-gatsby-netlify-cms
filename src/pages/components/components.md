@@ -1,6 +1,7 @@
 ---
 templateKey: components-common
 title: Общие компонентны для всех сртраниц
+name: components
 description: >-
     Общие компонентны для всех сртраниц
 storage:
@@ -74,7 +75,7 @@ destinations:
       flag: /img/002-united-states (2).png
     - country: Израиль
       flag: /img/002-united-states (7).png
-  destinationsImage: /img/map.png  
+  image: /img/map.png  
 clients:
   - image: /img/image 18.png
   - image: /img/image 19.png

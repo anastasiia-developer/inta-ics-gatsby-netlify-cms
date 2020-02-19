@@ -67,9 +67,7 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   header: PropTypes.object,
@@ -78,10 +76,6 @@ IndexPageTemplate.propTypes = {
       title:PropTypes.string,
       image:PropTypes.object,
       text:PropTypes.string
-  }),
-  calculator: PropTypes.object,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
   }),
 };
 
@@ -95,7 +89,6 @@ const IndexPage = ({ data, location }) => {
         heading={frontmatter.heading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
         location={location}
         header={frontmatter.header}
         section={frontmatter.section}
@@ -172,40 +165,8 @@ export const pageQuery = graphql`
             }
           }
         }
-        calculator {
-          title
-          constituents {
-            title
-            category {
-              nameCategory
-              price
-              image{
-                childImageSharp {
-                  fluid(maxWidth: 65, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          }
-        }
-        heading
         mainpitch {
           article
-        }
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
         }
       }
     }

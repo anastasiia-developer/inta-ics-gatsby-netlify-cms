@@ -2,7 +2,7 @@
 templateKey: delivery
 name: sea-freight
 title: Морская перевозка грузов из Китая
-subTitle: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
+description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:
     buttons:
         - link: /contacts

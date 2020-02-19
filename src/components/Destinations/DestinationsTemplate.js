@@ -64,7 +64,7 @@ const DestinationsTemplate = ({ destinations }) => {
                     </div>
                     <PreviewCompatibleImage
                         imageInfo={{
-                            image: destinations.destinationsImage,
+                            image: destinations.image,
                         }}
                     />
                 </div>

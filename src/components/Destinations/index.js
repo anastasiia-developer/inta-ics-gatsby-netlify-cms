@@ -9,7 +9,7 @@ export default () => (
                 markdownRemark(frontmatter: { templateKey: { eq: "components-common" } }) {
                     frontmatter {
                         destinations {
-                            destinationsImage{
+                            image{
                                 childImageSharp {
                                     fluid(maxWidth: 1000, quality: 100) {
                                         ...GatsbyImageSharpFluid

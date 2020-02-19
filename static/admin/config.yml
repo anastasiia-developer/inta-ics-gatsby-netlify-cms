@@ -52,56 +52,54 @@ collections:
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
           {label: "Title", name: "title", widget: "string"},
-          {lable: "Картинка", name: image, widget: image},
-          {lable: "Текст", name: text, widget: "markdown"},
-          {lable: "list", name: list, widget: list, fields: [
-            {lable: "title", name: title, widget: string},
-            {lable: "Картинка", name: image, widget: image}
+          {label: "Картинка", name: image, widget: image},
+          {label: "Текст", name: text, widget: "markdown"},
+          {label: "list", name: list, widget: list, fields: [
+            {label: "title", name: title, widget: string},
+            {label: "Картинка", name: image, widget: image}
           ]},
       ]}
       - {label: "sectionText", name: "sectionText", widget: object, fields: [
         {label: "Title", name: "title", widget: "string"},
-        {lable: "Картинка", name: image, widget: image},
-        {lable: "Текст", name: text, widget: "markdown"},
+        {label: "Картинка", name: image, widget: image},
+        {label: "Текст", name: text, widget: "markdown"},
       ]}
       - {label: Mainpitch, name: mainpitch, widget: object, fields: [
           {label: Article, name: article, widget: "markdown"}
       ]}
   - name: "components"
-    label: "Общие компонентны для всех сртраниц"
-    folder: "src/pages/components"
-    create: false
-    slug: "{{name}}"
+    label: "Общие компонентны"
+    folder: "src/pages/components/"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "components-common"}
       - {label: "Title", name: "title", widget: "string"}
-      - {lable: "Calculator", name: calculator, widget: object, fields:[
-        {lable: "Заголовок", name: title, widget: string},
-        {lable: "Составляющие цены", name: constituents, widget: list, fields:[
-          {lable: "Заголовок категории", name: title, widget: string},
-          {lable: "category", name: category, widget: list, fields:[
-            {lable: "Название услуги", name: "nameCategory", widget: string},
-            {lable: "цена", name: "price", widget: number},
-            {lable: "Картинка", name: image, widget: image}
+      - {label: "Calculator", name: calculator, widget: object, fields:[
+        {label: "Заголовок", name: title, widget: string},
+        {label: "Составляющие цены", name: constituents, widget: list, fields:[
+          {label: "Заголовок категории", name: title, widget: string},
+          {label: "category", name: category, widget: list, fields:[
+            {label: "Название услуги", name: "nameCategory", widget: string},
+            {label: "цена", name: "price", widget: number},
+            {label: "Картинка", name: image, widget: image}
             ]}
           ]}
         ]}
       - {label: Clients, name: clients, widget: list, fields:[
-          {lable: image, name: image, widget: image}
+          {label: image, name: image, widget: image}
         ]}
-      - {label: Destinations, name: destinations, widget: list, fields:[
-          {lable: countries, name: countries, widget: list, fields:[
+      - {label: Destinations, name: destinations, widget: object, fields:[
+          {label: countries, name: countries, widget: list, fields:[
             {label: country, name: country, widget: string},
             {label: flag, name: flag, widget: image}
           ]},
-          {label: destinationsImage, name: image, widget: image}
-        ]}
+          {label: image, name: image, widget: image}
+      ]}
       - {label: Reviews, name: reviews, widget: list, fields:[
-          {lable: name, name: name, widget: string},
-          {lable: text, name: text, widget: markdown},
-          {lable: source, name: source, widget: object, fields: [
-            {lable: name, name: name, widget: string},
-            {lable: url, name: url, widget: string}
+          {label: name, name: name, widget: string},
+          {label: text, name: text, widget: markdown},
+          {label: source, name: source, widget: object, fields: [
+            {label: name, name: name, widget: string},
+            {label: url, name: url, widget: string}
           ]},
       ]}
       - {label: Storage, name: storage, widget: list, fields:[
@@ -134,18 +132,18 @@ collections:
                 ]}
               ]}
             ]}
-          - {lable: "Международные перевозки", name: section, widget: object, fields: [
-              {lable: "Заголовок", name: title, widget: string},
-              {lable: "Под заголовок", name: subTitle, widget: string},
-              {lable: "Блоки", name: blocks, widget: list, fields: [
-                {lable: "Картинка", name: image, widget: image},
-                {lable: "Текст", name: title, widget: string}
+          - {label: "Международные перевозки", name: section, widget: object, fields: [
+              {label: "Заголовок", name: title, widget: string},
+              {label: "Под заголовок", name: subTitle, widget: string},
+              {label: "Блоки", name: blocks, widget: list, fields: [
+                {label: "Картинка", name: image, widget: image},
+                {label: "Текст", name: title, widget: string}
               ]}
           ]}
-          - {lable: "Про нас", name: about, widget: object, fields: [
-              {lable: "Заголовок", name: title, widget: string},
-              {lable: "Текст", name: text, widget: "markdown"},
-              {lable: "Картинка", name: image, widget: image},
+          - {label: "Про нас", name: about, widget: object, fields: [
+              {label: "Заголовок", name: title, widget: string},
+              {label: "Текст", name: text, widget: "markdown"},
+              {label: "Картинка", name: image, widget: image},
           ]}
 
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
@@ -199,8 +197,8 @@ collections:
           ]}
           - {label: "sections", name: "sections", widget: list, fields: [
               {label: "Title", name: "title", widget: "string"},
-              {lable: "Картинка", name: image, widget: image},
-              {lable: "Текст", name: text, widget: "markdown"},
+              {label: "Картинка", name: image, widget: image},
+              {label: "Текст", name: text, widget: "markdown"},
           ]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
             {label: Article, name: article, widget: "markdown"}

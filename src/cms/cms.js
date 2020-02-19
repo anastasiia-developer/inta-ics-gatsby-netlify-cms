@@ -23,7 +23,7 @@ CMS.registerPreviewTemplate(
     withStyledComponentsRendered(DeliveryPagePreview)
 );
 CMS.registerPreviewTemplate(
-    'components-common',
+    'components',
     withStyledComponentsRendered(ComponentsCommonPreview)
 );
 CMS.registerPreviewTemplate('about', AboutPagePreview)

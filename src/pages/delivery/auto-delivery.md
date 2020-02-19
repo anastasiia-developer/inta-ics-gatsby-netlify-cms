@@ -2,7 +2,7 @@
 templateKey: delivery
 name: auto-delivery
 title: Автодоставка
-subTitle: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
+description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:
     buttons:
         - link: /contacts
