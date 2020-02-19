@@ -16,11 +16,6 @@ storage:
       flag: /img/001-china 3.png
     - country: Гонконг
       flag: /img/002-united-states (1).png
-clients:
-  - image: /img/image 18.png
-  - image: /img/image 19.png
-  - image: /img/image 20.png
-  - image: /img/image 20 (copy).png
 calculator:
   constituents:
     - category:
@@ -80,6 +75,11 @@ destinations:
     - country: Израиль
       flag: /img/002-united-states (7).png
   destinationsImage: /img/map.png  
+clients:
+  - image: /img/image 18.png
+  - image: /img/image 19.png
+  - image: /img/image 20.png
+  - image: /img/image 20 (copy).png
 reviews:
   - name: Иван Заец
     source:
@@ -90,4 +90,15 @@ reviews:
       куда его отправлять . Был приятно удивлен скоростью. На следующий день
       забрал в отделении, сделали дополнительную упаковку - бесплатно. Ребята ,
       так держать
+  - name: Anastasiia
+    source:
+      name: отзывы Google
+      url: 'https://www.google.com/'
+    text: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto error
+      exercitationem incidunt officia omnis perspiciatis rem sit suscipit
+      tenetur voluptatibus! A dignissimos ea facere, fuga maiores, possimus
+      praesentium quia repudiandae totam velit veniam veritatis voluptates. Amet
+      cupiditate deleniti dolor error, facilis laborum possimus provident quasi
+      quo repellendus sequi, tempora, unde?
 ---
