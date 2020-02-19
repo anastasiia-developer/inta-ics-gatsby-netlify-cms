@@ -48,5 +48,16 @@ reviews:
       куда его отправлять . Был приятно удивлен скоростью. На следующий день
       забрал в отделении, сделали дополнительную упаковку - бесплатно. Ребята ,
       так держать
+  - name: Anastasiia
+    source:
+      name: отзывы Google
+      url: 'https://www.google.com/'
+    text: >-
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto error
+      exercitationem incidunt officia omnis perspiciatis rem sit suscipit
+      tenetur voluptatibus! A dignissimos ea facere, fuga maiores, possimus
+      praesentium quia repudiandae totam velit veniam veritatis voluptates. Amet
+      cupiditate deleniti dolor error, facilis laborum possimus provident quasi
+      quo repellendus sequi, tempora, unde?
 ---
 
