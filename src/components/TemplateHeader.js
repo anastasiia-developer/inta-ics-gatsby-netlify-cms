@@ -157,8 +157,8 @@ const TemplateHeader = ({
                         description,
                         children,
                         storeBtn }) => {
-    const { scopeInformation, images, buttons } = header;
 
+    const { scopeInformation, images, buttons } = header;
     const scopeDeliver = scopeInformation.map(item => (
             <li key={item.text} className="row" >
                 <img

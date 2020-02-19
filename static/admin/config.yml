@@ -37,21 +37,19 @@ collections:
       - {label: name, name: name, widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
-          {label: Slide, name: slide, widget: list, fields: [
-            {label: Images, name: images, widget: list, fields: [
-            {label: Image, name: image, widget: image},
-            {label: Alt, name: alt, widget: string}
+          {label: Images, name: images, widget: list, fields: [
+            {label: Alt, name: alt, widget: string},
+            {label: Image, name: image, widget: image}
           ]},
-            {label: "Scope information", name: scopeInformation, widget: list, fields: [
-            {label: Image, name: image, widget: image},
-            {label: text, name: text, widget: string}
+          {label: "Scope information", name: scopeInformation, widget: list, fields: [
+            {label: text, name: text, widget: string},
+            {label: Image, name: image, widget: image}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
-            {label: Link, name: link, widget: string},
-            {label: text, name: text, widget: string}
+            {label: text, name: text, widget: string},
+            {label: Link, name: link, widget: string}
           ]}
-          ]}
-        ]}
+      ]}
       - {label: "sections", name: "sections", widget: list, fields: [
           {label: "Title", name: "title", widget: "string"},
           {lable: "Картинка", name: image, widget: image},
@@ -69,9 +67,9 @@ collections:
       - {label: Mainpitch, name: mainpitch, widget: object, fields: [
           {label: Article, name: article, widget: "markdown"}
       ]}
-  - name: "components-common"
+  - name: "componentscommon"
     label: "Общие компонентны для всех сртраниц"
-    folder: "src/pages/components-common"
+    folder: "src/pages/componentscommon/index.md"
     create: false
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "components-common"}

@@ -25,6 +25,7 @@ export const DeliveryTemplate = ({
                                      sections,
                                      sectionText,
                                      mainpitch}) => {
+
     return (
         <Fragment>
             {helmet || ''}

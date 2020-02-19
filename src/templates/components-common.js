@@ -7,7 +7,7 @@ import DestinationsTemplate from '../components/Destinations/DestinationsTemplat
 import ClientsTemplate from '../components/Clients/ClientsTemplate'
 import ReviewsTemplate from "../components/Reviews/ReviewsTemplate";
 
-const ComponentsCommonTemplate = ({
+export const ComponentsCommonTemplate = ({
                                       calculator,
                                       storage,
                                       destinations,
