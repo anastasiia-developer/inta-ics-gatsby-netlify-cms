@@ -69,8 +69,12 @@ const Container = styled.header`
             order: 1;
         }
     }
+    
     .header-gatsby-image{
         justify-content: space-between;
+    }
+    .gatsby-image-wrapper{
+        width: 100%;
     }
     .list-info{
         width: auto;
@@ -159,14 +163,18 @@ const TemplateHeader = ({
                         storeBtn }) => {
 
     const { scopeInformation, images, buttons } = header;
-    const scopeDeliver = scopeInformation.map(item => (
-            <li key={item.text} className="row" >
-                <img
-                    alt="icon"
-                    src={item.image.publicURL} />
-                <p>{item.text}</p>
-            </li>
-    ));
+
+    const ScopeDeliver = ({information}) =>
+        <ul className="row list-info">
+            {information.map(item => (
+                <li key={item.text} className="row" >
+                    <img
+                        alt="icon"
+                        src={item.image.publicURL} />
+                    <p>{item.text}</p>
+                </li>
+            ))}
+        </ul>;
 
     const Buttons = ({buttons}) => buttons.map((btn, index) => (
         <Button
@@ -182,7 +190,6 @@ const TemplateHeader = ({
             }
         </Button>
     ));
-    console.log(crumbLabel || title);
     return (
         <Container
             className={className}>
@@ -199,9 +206,9 @@ const TemplateHeader = ({
                     <h3>
                         {description}
                     </h3>
-                    <ul className="row list-info">
-                        {scopeDeliver}
-                    </ul>
+                    {scopeInformation &&
+                        <ScopeDeliver information={scopeInformation}/>
+                    }
                     <div className="row-to-column">
                         { buttons &&
                             <Buttons buttons={buttons}/>

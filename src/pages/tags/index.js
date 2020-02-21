@@ -11,7 +11,8 @@ const TagsPage = ({
       siteMetadata: { title },
     },
   },
-}) => (
+}) => {    console.log('tag page');
+   return (
   <Layout>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
@@ -36,7 +37,7 @@ const TagsPage = ({
       </div>
     </section>
   </Layout>
-)
+)}
 
 export default TagsPage
 

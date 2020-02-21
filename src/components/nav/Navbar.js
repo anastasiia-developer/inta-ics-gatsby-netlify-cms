@@ -83,7 +83,7 @@ const Navbar = () => {
               </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/blog">
+                  to="/blog/">
                 Блог
               </Link>
               <Link
