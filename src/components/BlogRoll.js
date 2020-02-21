@@ -22,6 +22,7 @@ const BlogRoll = ({data, className}) => {
         {posts &&
           posts.map(({ node: post }) => (
               <Post
+                key={post.id}
                 post={post}
               />
           ))}
