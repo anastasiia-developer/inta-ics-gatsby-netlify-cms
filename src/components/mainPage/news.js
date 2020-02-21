@@ -34,7 +34,7 @@ const News = () => {
         <Section className="column">
             <h2>Новости</h2>
             <BlogRoll />
-            <Link className="btn" to="/blog">
+            <Link className="btn" to="/blog/">
                 Читать все новости
             </Link>
         </Section>

@@ -129,7 +129,7 @@ const Post = ({post, className}) => {
             </p>
             <footer>
                 <div className='row tags'>
-                    {
+                    {post.frontmatter.tags &&
                         Array.from(post.frontmatter.tags, (post, index) =>
                             index < 2 &&
                             <Link key={post} className='tag' to={`/tags/${kebabCase(post)}/`} >
