@@ -38,12 +38,17 @@ const Article = styled.article`
   footer{
     margin-top: 1em;
     justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
     .time{
       color: #A3A3A3;
       align-items: center;
       img{
         margin-right: .5em;
       }    
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            font-size: .9em;
+        }
     }
     .row{
       align-items: center;
@@ -62,6 +67,15 @@ const Article = styled.article`
     }
     .more{
         margin-left: auto;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            font-size: .9em;
+        }
+    }
+    .tags{
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            margin: 0 0 1.5em 0;
+            width: 100%;
+        }
     }
     .tag{
         background: #F0F0F0;
@@ -113,20 +127,20 @@ const Post = ({post, className}) => {
                     sliceText(post.excerpt)
                 }
             </p>
-            <footer className="row">
+            <footer>
+                <div className='row tags'>
+                    {
+                        Array.from(post.frontmatter.tags, (post, index) =>
+                            index < 2 &&
+                            <Link key={post} className='tag' to={`/tags/${kebabCase(post)}/`} >
+                                {post}
+                            </Link>
+                    )}
+                </div>
                 <span className="time row">
                     <Time />
                     {post.frontmatter.date}
                 </span>
-                {post.frontmatter.tags.map((tag, index)  =>
-                    <Fragment>
-                    {index < 2 &&
-                        <Link key={tag} className='tag' to={`/tags/${kebabCase(tag)}/`} >
-                            {tag}
-                        </Link>
-                    }
-                    </Fragment>
-                )}
                 <Link className="more row" to={post.fields.slug}>
                     <ArrowLine/>
                     Читать подробнее

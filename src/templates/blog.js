@@ -11,6 +11,9 @@ import Post from "../components/Post";
 
 const Header = styled(TemplateHeader)`
     max-height: 100vh;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        max-height: none;
+    }
     h1{
         font-weight: 200;
     }
@@ -31,6 +34,10 @@ const Blog = styled.div`
     display: flex;
     width: 86%;
     margin: -5% auto 0;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        width: 100%;
+        margin: 0;
+    }
     article{
         display: flex;
         flex-basis: 48%;
@@ -40,6 +47,11 @@ const Blog = styled.div`
         overflow: hidden;
         box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
         padding: 0;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            margin: 0 0 1em 0;
+            border-radius: 0;
+            flex-direction: column;
+        }
         header{
             height: 100%;
             flex: 2;
@@ -52,6 +64,9 @@ const Blog = styled.div`
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){
+                padding: 1em;
+            }
         }
         h3{
             padding-top: 0;
@@ -59,6 +74,9 @@ const Blog = styled.div`
         }
         footer{
             margin-top: 2em;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){
+                margin-top: 1em;
+            }
         }
         .time{
             position: absolute;
@@ -66,6 +84,9 @@ const Blog = styled.div`
             top: 2em;
             svg path{
                 fill:#A3A3A3;
+            }
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){
+                position: static;
             }
         }
         .more{
@@ -116,7 +137,7 @@ export const BlogIndexPageTemplate = ({
             />
             {posts.length > 0 &&
                 <Fragment>
-                    <Blog>
+                    <Blog className='row-to-column'>
                         {posts.map(({node: post}, index) => (
                             <Post
                                 key={index}

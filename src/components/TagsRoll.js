@@ -9,6 +9,11 @@ const List = styled.ul`
   width: 50%;
   margin-left: 7%;
   margin-top: -10%;
+  flex-wrap: wrap;
+  @media(max-aspect-ratio: 3/3), (max-height: 500px){
+    margin: 0;
+    width: 100%;
+  }
   li{
     background: #222222;
     border-radius: .5em;
@@ -16,6 +21,9 @@ const List = styled.ul`
     margin-right: 1em;
     &:last-child{
         margin-right: 0;
+    }
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        margin-bottom: 1em;
     }
   }
   a{
@@ -28,7 +36,7 @@ const List = styled.ul`
 `;
 
 const TagsRoll = ({tags}) => (
-    <List className="row-to-column">
+    <List className="row">
         {
             tags.map(tag =>
                 <li key={tag.fieldValue}>
