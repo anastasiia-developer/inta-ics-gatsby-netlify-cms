@@ -101,7 +101,6 @@ const Post = ({post, className}) => {
         }
         return sliced;
     };
-
     return (
     <Article className={className}>
         <header>

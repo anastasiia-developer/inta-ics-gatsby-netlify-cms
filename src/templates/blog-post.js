@@ -7,12 +7,13 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  title,
-  helmet,
+                                   helmet,
+                                   title,
+                                   description,
+                                    image,
+                                   content,
+                                   contentComponent,
+                                   tags,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -54,8 +55,9 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const { markdownRemark: post } = data
+  console.log(pageContext);
 
   return (
     <Layout>

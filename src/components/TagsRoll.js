@@ -19,11 +19,9 @@ const List = styled.ul`
     border-radius: .5em;
     padding: .5em 1em;
     margin-right: 1em;
+    margin-bottom: 1em;
     &:last-child{
         margin-right: 0;
-    }
-    @media(max-aspect-ratio: 3/3), (max-height: 500px){
-        margin-bottom: 1em;
     }
   }
   a{
