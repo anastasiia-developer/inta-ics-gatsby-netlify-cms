@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
@@ -9,6 +9,8 @@ import Breadcrumbs from '../components/BreadCrumbs'
 import Section from '../components/Blog/Blog-post-style'
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Tags from "../components/Blog/TagStyle";
+import ArrowLine from '../img/arrowLine.svg'
+import BlogRoll from '../components/BlogRoll'
 
 export const BlogPostTemplate = ({
                                     helmet,
@@ -18,39 +20,55 @@ export const BlogPostTemplate = ({
                                     content,
                                     contentComponent,
                                     tags,
+                                    prevPost,
+                                    nextPost
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <Section className='wrapper'>
-      {helmet || ''}
-        <div className="wrapper">
-            {location &&
-                <Breadcrumbs
-                    location={location}
-                    crumbLabel={title}
-                    crumbLabelParent="Блог"
-                    crumbPathParent="/blog/"
+      <Section>
+          <div className='wrapper'>
+          {helmet || ''}
+            <div className="wrapper">
+                {location &&
+                    <Breadcrumbs
+                        location={location}
+                        crumbLabel={title}
+                        crumbLabelParent="Блог"
+                        crumbPathParent="/blog/"
+                    />
+                }
+            </div>
+                <PreviewCompatibleImage
+                    imageInfo={{
+                        image: image,
+                    }}
+                    className='main-image'
                 />
-            }
+                <h1>
+                  {title}
+                </h1>
+                {tags && tags.length ? (
+                    <Tags className="tags">
+                      {tags.map(tag => (
+                          <Link key={tag + `tag`} to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      ))}
+                    </Tags>
+                ) : null}
+            <PostContent className='wrapper content' content={content} />
+            <div className="pagination wrapper row">
+                <Link className='prev' to={`/blog/${prevPost}`}>
+                    <ArrowLine/>
+                    Предыдущая статья
+                </Link>
+                <Link className='next' to={`/blog/${nextPost}`}>
+                    Следующая статья
+                    <ArrowLine/>
+                </Link>
+            </div>
         </div>
-            <PreviewCompatibleImage
-                imageInfo={{
-                    image: image,
-                }}
-                className='main-image'
-            />
-            <h1>
-              {title}
-            </h1>
-            {tags && tags.length ? (
-                <Tags className="tags">
-                  {tags.map(tag => (
-                      <Link key={tag + `tag`} to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                  ))}
-                </Tags>
-            ) : null}
-        <PostContent className='content' content={content} />
+        <h4 className="wrapper">Вам может быть интересно:</h4>
+        <BlogRoll className='blog-roll'/>
     </Section>
   )
 }
@@ -66,7 +84,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data, pageContext, location }) => {
   const { markdownRemark: post } = data;
-
     return (
     <Layout>
       <BlogPostTemplate
@@ -86,6 +103,8 @@ const BlogPost = ({ data, pageContext, location }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         image={post.frontmatter.featuredimage}
+        nextPost={pageContext.next}
+        prevPost={pageContext.prev}
       />
     </Layout>
   )

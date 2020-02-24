@@ -55,7 +55,7 @@ const Article = styled.article`
     .row{
       align-items: center;
     }
-    a{
+    footer a{
       color: #FF4B55;
       text-decoration: underline;
     }
@@ -69,6 +69,7 @@ const Article = styled.article`
     }
     .more{
         margin-left: auto;
+        color: #FF4B55;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             font-size: .9em;
         }
@@ -110,15 +111,17 @@ const Post = ({post, className}) => {
                 }
             </p>
             <footer>
-                <Tags>
-                    {post.frontmatter.tags &&
+                {post.frontmatter.tags &&
+                    <Tags>
+                        {
                         Array.from(post.frontmatter.tags, (post, index) =>
                             index < 2 &&
                             <Link key={post} to={`/tags/${kebabCase(post)}/`} >
                                 {post}
                             </Link>
-                    )}
-                </Tags>
+                        )}
+                    </Tags>
+                }
                 <span className="time row">
                     <Time />
                     {post.frontmatter.date}

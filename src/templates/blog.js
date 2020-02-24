@@ -124,7 +124,7 @@ export const BlogIndexPageTemplate = ({
                                           location,
                                           posts,
                                           pageContext}) => {
-    const {numPages, currentPage} = pageContext;
+    const {numPages} = pageContext;
     return(
         <Fragment>
             <Header

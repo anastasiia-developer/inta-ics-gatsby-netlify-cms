@@ -1,16 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { graphql, StaticQuery } from 'gatsby'
 import styled from "styled-components";
-import ArrowLine from "../img/arrowLine.svg";
-import Time from '../img/time.svg';
 import Post from "./Post";
+import {ButtonGroup, ResponsiveCarousel} from "./CommonCarousel";
+import Carousel from "react-multi-carousel";
 
 const Wrapper = styled.div`
-  background: #fff;
+  position: relative;
   footer .time svg path{
     fill: #A3A3A3;
+  }
+  .react-multiple-carousel__arrow{
+      top: 40%;
+      &::before{
+        color: #005BE4;
+      }
+  }
+  .wrapper{
+    background: #fff;
+    width: 90%;
+    border: 1px solid #ECECEC;
+  }
+  li{
+    border-right: 1px solid #ECECEC;
   }
 `;
 
@@ -18,14 +31,26 @@ const BlogRoll = ({data, className}) => {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <Wrapper className={`row-to-column wrapper ${className}`}>
-        {posts &&
-          posts.map(({ node: post }) => (
-              <Post
-                key={post.id}
-                post={post}
-              />
-          ))}
+      <Wrapper className={`row-to-column ${className || ''}`}>
+          <Carousel
+              containerClass="wrapper"
+              sliderClass="row"
+              infinite
+              arrows={false}
+              renderButtonGroupOutside={true}
+              customButtonGroup={<ButtonGroup />}
+              slidesToSlide={1}
+              responsive={ResponsiveCarousel()}
+          >
+              {posts &&
+                  posts.map(({ node: post }) => (
+                      <Post
+                        key={post.id}
+                        post={post}
+                      />
+                  ))}
+
+          </Carousel>
       </Wrapper>
     )
 }
@@ -45,7 +70,7 @@ export default ({className}) => (
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" }}}
-          limit: 4 
+          limit: 20 
         ) {
           edges {
             node {
