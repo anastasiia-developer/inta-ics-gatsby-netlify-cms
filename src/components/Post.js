@@ -1,10 +1,12 @@
-import React, {Fragment} from "react";
+import React from "react";
 import styled from "styled-components";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import {Link} from "gatsby";
 import Time from "../img/time.svg";
 import ArrowLine from "../img/arrowLine.svg";
 import {kebabCase} from "lodash";
+import Tags from "../components/Blog/TagStyle"
+
 
 const Article = styled.article`
   border-right: 1px solid #ECECEC;
@@ -71,25 +73,6 @@ const Article = styled.article`
             font-size: .9em;
         }
     }
-    .tags{
-        @media(max-aspect-ratio: 3/3), (max-height: 500px){
-            margin: 0 0 1.5em 0;
-            width: 100%;
-        }
-    }
-    .tag{
-        background: #F0F0F0;
-        color: #383838;
-        border-radius: .5em; 
-        padding: .7em 1.2em;
-        margin-right: .25em;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: .8em;
-        &:hover{
-            color: #005BE4;
-        }
-    }
   }
 `;
 
@@ -127,15 +110,15 @@ const Post = ({post, className}) => {
                 }
             </p>
             <footer>
-                <div className='row tags'>
+                <Tags>
                     {post.frontmatter.tags &&
                         Array.from(post.frontmatter.tags, (post, index) =>
                             index < 2 &&
-                            <Link key={post} className='tag' to={`/tags/${kebabCase(post)}/`} >
+                            <Link key={post} to={`/tags/${kebabCase(post)}/`} >
                                 {post}
                             </Link>
                     )}
-                </div>
+                </Tags>
                 <span className="time row">
                     <Time />
                     {post.frontmatter.date}

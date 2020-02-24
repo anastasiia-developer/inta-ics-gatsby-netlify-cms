@@ -3,27 +3,27 @@ import Container from './style'
 import { Link } from 'gatsby'
 
 
-const Breadcrumbs = ({ location, crumbLabel }) => {
+const Breadcrumbs = ({ location, crumbLabel, crumbLabelParent, crumbPathParent }) => {
     return (
         <Container>
             <Link to='/'>
                 Главная
             </Link>
-            {location.pathname.indexOf('delivery') !== -1 ?
-               <Fragment>
-                <span>Доставка</span>
-
+            {crumbLabelParent &&
+                <Fragment>
+                {crumbPathParent ?
+                    <Link to={crumbPathParent}>
+                        {crumbLabelParent}
+                    </Link>
+                        :
+                    <span>{crumbLabelParent}</span>
+                }
+                </Fragment>
+            }
+            {crumbLabel &&
                 <Link to={location.pathname}>
                     {crumbLabel}
                 </Link>
-               </Fragment>
-                :
-                location.pathname !== '/' ?
-                    <Link to={location.pathname}>
-                        {crumbLabel}
-                    </Link>
-                    : null
-
             }
         </Container>
 

@@ -5,45 +5,51 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Breadcrumbs from '../components/BreadCrumbs'
+import Section from '../components/Blog/Blog-post-style'
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import Tags from "../components/Blog/TagStyle";
 
 export const BlogPostTemplate = ({
-                                   helmet,
-                                   title,
-                                   description,
+                                    helmet,
+                                    location,
+                                    title,
                                     image,
-                                   content,
-                                   contentComponent,
-                                   tags,
+                                    content,
+                                    contentComponent,
+                                    tags,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <Section className='wrapper'>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+        <div className="wrapper">
+            <Breadcrumbs
+                location={location}
+                crumbLabel={title}
+                crumbLabelParent="Блог"
+                crumbPathParent="/blog/"
+            />
+        </div>
+            <PreviewCompatibleImage
+                imageInfo={{
+                    image: image,
+                }}
+                className='main-image'
+            />
+            <h1>
               {title}
             </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
+                <Tags className="tags">
                   {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
+                      <Link key={tag + `tag`} to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                   ))}
-                </ul>
-              </div>
+                </Tags>
             ) : null}
-          </div>
-        </div>
-      </div>
-    </section>
+        <PostContent content={content} />
+    </Section>
   )
 }
 
@@ -53,13 +59,13 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  image: PropTypes.object
 }
 
-const BlogPost = ({ data, pageContext }) => {
-  const { markdownRemark: post } = data
-  console.log(pageContext);
+const BlogPost = ({ data, pageContext, location }) => {
+  const { markdownRemark: post } = data;
 
-  return (
+    return (
     <Layout>
       <BlogPostTemplate
         content={post.html}
@@ -74,8 +80,10 @@ const BlogPost = ({ data, pageContext }) => {
             />
           </Helmet>
         }
+        location={location}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        image={post.frontmatter.featuredimage}
       />
     </Layout>
   )
@@ -85,6 +93,7 @@ BlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
+    location: PropTypes.object
 }
 
 export default BlogPost
@@ -98,6 +107,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        featuredimage{
+            childImageSharp {
+                fluid(maxWidth: 2000, quality: 100) {
+                ...GatsbyImageSharpFluid
+                }
+            }
+        }
         tags
       }
     }

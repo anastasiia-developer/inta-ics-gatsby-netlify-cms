@@ -14,6 +14,7 @@ import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
+import Breadcrumbs from "../components/BreadCrumbs";
 
 
 export const DeliveryTemplate = ({
@@ -35,6 +36,8 @@ export const DeliveryTemplate = ({
                 header={header}
                 location={location}
                 crumbLabel={title}
+                crumbLabelParent="Доставка"
+                crumbPathParent={false}
                 children={location && <CalculateHeader/>}
             />
             <Sections

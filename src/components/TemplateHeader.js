@@ -160,7 +160,9 @@ const TemplateHeader = ({
                         title,
                         description,
                         children,
-                        storeBtn }) => {
+                        storeBtn,
+                            crumbLabelParent,
+                            crumbPathParent}) => {
 
     const { scopeInformation, images, buttons } = header;
 
@@ -197,8 +199,10 @@ const TemplateHeader = ({
                 <div className="column common-header-column">
                     {location &&
                         <Breadcrumbs
-                            crumbLabel={crumbLabel || title}
-                            location={location}/>
+                            crumbLabel={crumbLabel || false}
+                            location={location}
+                            crumbLabelParent={crumbLabelParent || false}
+                            crumbPathParent={crumbPathParent || false}/>
                     }
                     <h1>
                         {title}
