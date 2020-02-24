@@ -25,12 +25,14 @@ export const BlogPostTemplate = ({
     <Section className='wrapper'>
       {helmet || ''}
         <div className="wrapper">
-            <Breadcrumbs
-                location={location}
-                crumbLabel={title}
-                crumbLabelParent="Блог"
-                crumbPathParent="/blog/"
-            />
+            {location &&
+                <Breadcrumbs
+                    location={location}
+                    crumbLabel={title}
+                    crumbLabelParent="Блог"
+                    crumbPathParent="/blog/"
+                />
+            }
         </div>
             <PreviewCompatibleImage
                 imageInfo={{
@@ -48,7 +50,7 @@ export const BlogPostTemplate = ({
                   ))}
                 </Tags>
             ) : null}
-        <PostContent content={content} />
+        <PostContent className='content' content={content} />
     </Section>
   )
 }

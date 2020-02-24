@@ -21,6 +21,9 @@ const Section = styled.section`
         color: #454545;
         line-height: 1.7em;
     }
+    .content img{
+        width: auto;
+    } 
 `;
 
 export default Section
