@@ -14,8 +14,7 @@ import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
-import Breadcrumbs from "../components/BreadCrumbs";
-
+import Form from '../components/Footer/Form'
 
 export const DeliveryTemplate = ({
                                      helmet,
@@ -52,6 +51,7 @@ export const DeliveryTemplate = ({
             <Clients/>
             <Reviews/>
             <Article mainpitch={mainpitch}/>
+            <Form/>
         </Fragment>
     )
 }

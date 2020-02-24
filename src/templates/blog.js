@@ -8,6 +8,8 @@ import Layout from '../components/Layout'
 import TemplateHeader from "../components/TemplateHeader";
 import TagsRoll from "../components/TagsRoll";
 import Post from "../components/Post";
+import Form from '../components/Footer/Form'
+
 
 const Header = styled(TemplateHeader)`
     max-height: 100vh;
@@ -175,6 +177,7 @@ const BlogIndexPage = ({ data, location, pageContext }) => {
                 pageContext={pageContext}
                 posts={posts}
             />
+            <Form/>
         </Layout>
     )
 }

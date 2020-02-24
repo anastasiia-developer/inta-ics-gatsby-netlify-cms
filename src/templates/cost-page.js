@@ -9,6 +9,7 @@ import Clients from "../components/Clients";
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import Calculator from "../components/Calculator";
+import Form from '../components/Footer/Form'
 
 export const CostPageTemplate = ({
                                   title,
@@ -41,6 +42,7 @@ export const CostPageTemplate = ({
             }
             <Reviews/>
             <Article mainpitch={mainpitch}/>
+            <Form/>
         </Layout>
     )
 };

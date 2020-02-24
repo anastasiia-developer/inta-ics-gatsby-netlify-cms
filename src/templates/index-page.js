@@ -16,7 +16,7 @@ import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
 import {ButtonGroup, ResponsiveCarousel} from "../components/CommonCarousel";
 import Carousel from "react-multi-carousel";
-
+import Form from '../components/Footer/Form'
 
 
 export const IndexPageTemplate = ({
@@ -63,6 +63,7 @@ export const IndexPageTemplate = ({
     <Clients/>
     <Reviews/>
     <Article mainpitch={mainpitch}/>
+      <Form/>
   </Fragment>
 )
 
