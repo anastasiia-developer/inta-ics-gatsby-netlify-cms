@@ -10,10 +10,8 @@ const ReviewPagePreview = ({ entry }) => {
             <ReviewsPageTemplate
                 title={data.title}
                 description={data.description}
-                mainpitch={data.mainpitch || {}}
                 header={data.header || {}}
-                section={data.section || {}}
-                about={data.about || {}}
+                reviews={data.reviews || {}}
             />
         )
     } else {

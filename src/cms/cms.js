@@ -35,6 +35,6 @@ CMS.registerPreviewTemplate(
     withStyledComponentsRendered(BlogPostPreview)
 );
 CMS.registerPreviewTemplate(
-    'review',
+    'reviews',
     withStyledComponentsRendered(ReviewPagePreview)
 );
