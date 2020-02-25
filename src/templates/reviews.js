@@ -82,33 +82,50 @@ const Section = styled.div`
     }
 `;
 
+export const ReviewsPageTemplate = ({
+                                        title,
+                                        description,
+                                        header,
+                                        location,
+                                        reviews
+}) =>
+    <Wrapper>
+        <TemplateHeader
+            title={title}
+            description={description}
+            header={{logo: true, arrow: true, ...header}}
+            location={location}
+            crumbLabel={title}
+        />
+        <Section className="row-to-column wrapper">
+            {reviews.map((review, index) =>
+                <Review key={index}>
+                    <h3>{review.name}</h3>
+                    <p>{review.text}</p>
+                    <footer className="row">
+                        <a href={review.source.url}>{review.source.name}</a>
+                        <div className='date'>{review.date}</div>
+                    </footer>
+                </Review>
+            )}
+        </Section>
+        <News/>
+        <Form/>
+    </Wrapper>
+;
+
 const Reviews = ({ data, location }) => {
     const { frontmatter } = data.markdownRemark;
+
     return (
         <Layout>
-            <Wrapper>
-                <TemplateHeader
-                    title={frontmatter.title}
-                    description={frontmatter.description}
-                    header={{logo: true, arrow: true, ...frontmatter.header}}
-                    location={location}
-                    crumbLabel={frontmatter.title}
-                />
-                <Section className="row-to-column wrapper">
-                    {frontmatter.reviews.map((review, index) =>
-                        <Review key={index}>
-                            <h3>{review.name}</h3>
-                            <p>{review.text}</p>
-                            <footer className="row">
-                                <a href={review.source.url}>{review.source.name}</a>
-                                <div className='date'>{review.date}</div>
-                            </footer>
-                        </Review>
-                    )}
-                </Section>
-                <News/>
-                <Form/>
-            </Wrapper>
+            <ReviewsPageTemplate
+                title={frontmatter.title}
+                description={frontmatter.description}
+                header={frontmatter.header}
+                location={location}
+                review={frontmatter.review}
+            />
         </Layout>
     )
 }

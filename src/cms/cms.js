@@ -8,6 +8,8 @@ import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import DeliveryPagePreview from "./preview-templates/DeliveryPagePreview"
 import ComponentsCommonPreview from './preview-templates/ComponentsCommonPagePreview'
+import ReviewPagePreview from './preview-templates/ReviewPagePreview'
+
 
 import withStyledComponentsRendered from './StyleManager'
 
@@ -31,4 +33,8 @@ CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate(
     'blog',
     withStyledComponentsRendered(BlogPostPreview)
+);
+CMS.registerPreviewTemplate(
+    'review',
+    withStyledComponentsRendered(ReviewPagePreview)
 );

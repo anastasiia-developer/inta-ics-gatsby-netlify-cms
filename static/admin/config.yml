@@ -94,20 +94,12 @@ collections:
           ]},
           {label: image, name: image, widget: image}
       ]}
-      - {label: Reviews, name: reviews, widget: list, fields:[
-          {label: name, name: name, widget: string},
-          {label: text, name: text, widget: markdown},
-          {label: source, name: source, widget: object, fields: [
-            {label: name, name: name, widget: string},
-            {label: url, name: url, widget: string}
-          ]},
-      ]}
       - {label: Storage, name: storage, widget: list, fields:[
           {label: country, name: country, widget: string},
           {label: flag, name: flag, widget: image}
         ]}
   - name: "pages"
-    label: "Pages"
+    label: "Страницы"
     files:
       - file: "src/pages/index.md"
         label: "Главная"
@@ -202,4 +194,29 @@ collections:
           ]}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [
             {label: Article, name: article, widget: "markdown"}
+          ]}
+      - file: "src/pages/reviews/index.md"
+        label: "Отзывы"
+        name: "reviews"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Header, name: header, widget: object, fields: [
+              {label: Images, name: images, widget: list, fields: [
+                {label: Image, name: image, widget: image},
+                {label: Alt, name: alt, widget: string}
+              ]},
+              {label: Buttons, name: buttons, widget: list, fields: [
+                {label: text, name: text, widget: string},
+                {label: Link, name: link, widget: string}
+              ]}
+          ]}
+          - {label: Reviews, name: reviews, widget: list, fields:[
+              {label: name, name: name, widget: string},
+              {label: text, name: text, widget: markdown},
+              {label: date, name: date, widget: string},
+              {label: source, name: source, widget: object, fields: [
+                {label: name, name: name, widget: string},
+                {label: url, name: url, widget: string}
+              ]}
           ]}
