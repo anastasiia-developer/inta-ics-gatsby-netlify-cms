@@ -124,7 +124,7 @@ const Reviews = ({ data, location }) => {
                 description={frontmatter.description}
                 header={frontmatter.header}
                 location={location}
-                review={frontmatter.review}
+                reviews={frontmatter.reviews}
             />
         </Layout>
     )

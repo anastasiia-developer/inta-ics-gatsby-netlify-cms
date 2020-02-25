@@ -19,7 +19,6 @@ class TagRoute extends React.Component {
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'
     } tagged with “${tag}”`
-    console.log('tag filter')
     return (
       <Layout>
         <section className="section tags">

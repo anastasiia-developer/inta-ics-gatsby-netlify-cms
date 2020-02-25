@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ReviewsPageTemplate } from "../../templates/reviews";
 
-const ReviewPagePreview = ({ entry, getAsset }) => {
+const ReviewPagePreview = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
 
     if (data) {
