@@ -76,6 +76,15 @@ const Container = styled.header`
     .gatsby-image-wrapper{
         width: 100%;
     }
+    .bckg-parallax-container{
+        width: 55%;
+        margin-right: -10%;
+        margin-top: -1.6em;
+         @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            width: 100%;
+            margin: 0;
+         }
+    }
     .list-info{
         width: auto;
         font-weight: 400;
@@ -164,7 +173,7 @@ const TemplateHeader = ({
                             crumbLabelParent,
                             crumbPathParent}) => {
 
-    const { scopeInformation, images, buttons } = header;
+    const { scopeInformation, images, buttons } = header || false;
 
     const ScopeDeliver = ({information}) =>
         <ul className="row list-info">
@@ -181,13 +190,16 @@ const TemplateHeader = ({
     const Buttons = ({buttons}) => buttons.map((btn, index) => (
         <Button
             key={index}
-            className="row"
+            className="btn row"
             to={btn.link}>
-            <img src="/img/logoMini.svg"
-                 alt="logo Mini"
-                 className="logo"/>
+            {!header.logo &&
+                <img src="/img/logoMini.svg"
+                     alt="logo Mini"
+                     className="logo"/>
+            }
             {btn.text}
-            {location &&
+
+            {location && !header.arrow &&
                 <ArrowLine className="icon"/>
             }
         </Button>

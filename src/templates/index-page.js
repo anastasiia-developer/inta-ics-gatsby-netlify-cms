@@ -63,7 +63,7 @@ export const IndexPageTemplate = ({
     <Clients/>
     <Reviews/>
     <Article mainpitch={mainpitch}/>
-      <Form/>
+    <Form/>
   </Fragment>
 )
 

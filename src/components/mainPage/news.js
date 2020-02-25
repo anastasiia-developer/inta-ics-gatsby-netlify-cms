@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Section = styled.section`
     background: #F8F8F8;
     padding: 2em 0;
-    margin: 6em 0 3em;
+    margin: 6em 0 0;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
         margin: 3em 0 3em;
     }

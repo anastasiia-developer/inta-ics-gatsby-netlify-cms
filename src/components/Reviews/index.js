@@ -6,7 +6,7 @@ export default () => (
     <StaticQuery
         query={graphql`
             query ReviewsQuery{
-                markdownRemark(frontmatter: { templateKey: { eq: "components-common" } }) {
+                markdownRemark(frontmatter: { templateKey: { eq: "reviews" } }) {
                     frontmatter {
                         reviews{
                           name

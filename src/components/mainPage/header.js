@@ -38,6 +38,7 @@ const Header = styled.div`
     }
     .bckg-parallax-container{
         width: 40%;
+        margin: 0;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             width: 100%;
         }

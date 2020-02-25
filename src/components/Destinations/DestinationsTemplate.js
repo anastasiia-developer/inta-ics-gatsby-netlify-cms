@@ -4,6 +4,7 @@ import FlagsTemplate from "./FlagTemplate";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 
 const Section = styled.section`
+    margin: 2em 0;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
         padding: 0 1em;
     }
