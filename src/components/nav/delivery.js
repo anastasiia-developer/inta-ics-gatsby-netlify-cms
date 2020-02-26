@@ -2,7 +2,7 @@ import {graphql, StaticQuery} from "gatsby";
 import React from "react";
 import SubMenu from './SubMenu'
 
-const Delivery = ({ data, setActiveMob, isActiveMob, location }) => {
+const Delivery = ({ data, setActiveMob, isActiveMob }) => {
     if(data){
         return(
            <SubMenu

@@ -114,9 +114,8 @@ const Post = ({post, className}) => {
                 {post.frontmatter.tags &&
                     <Tags>
                         {
-                        Array.from(post.frontmatter.tags, (post, index) =>
-                            index < 2 &&
-                            <Link key={post} to={`/tags/${kebabCase(post)}/`} >
+                            post.frontmatter.tags.slice(0,2).map((post, index) =>
+                            <Link key={index} to={`/tags/${kebabCase(post)}/`} >
                                 {post}
                             </Link>
                         )}

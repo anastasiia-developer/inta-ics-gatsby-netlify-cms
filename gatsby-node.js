@@ -33,6 +33,12 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach((edge, index) => {
       const id = edge.node.id;
+
+      const contextPost = edge.node.frontmatter.templateKey === 'blog-post' && {
+        prev: index === 0 ? null : posts[index - 1].node.fields.slug,
+        next: index === (posts.length - 1) ? null : posts[index + 1].node.fields.slug,
+      }
+
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -42,8 +48,7 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
-          prev: index === 0 ? null : posts[index - 1].node.fields.slug,
-          next: index === (posts.length - 1) ? null : posts[index + 1].node.fields.slug,
+          ...contextPost
         },
       })
     })

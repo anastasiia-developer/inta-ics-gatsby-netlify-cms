@@ -68,34 +68,42 @@ const Navbar = () => {
               />
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
+                  to="/about">
+                  Услуги
+
+              </Link>
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
+                  to="/about">
+                  О компании
+              </Link>
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
+                  to="/blog/">
+                  Блог
+              </Link>
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
+                  to="/contact/examples">
+                  Помощь
+              </Link>
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
+                  to="/contact/examples">
+                  Акции
+              </Link>
+              <Link
+                  onClick={() => setActiveMob(!isActiveMob)}
                   to="/cost-page">
                   Стоимость
               </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/about">
-                Услуги
-              </Link>
-              <Link
-                  onClick={() => setActiveMob(!isActiveMob)}
-                  to="/about">
-                О компании
-              </Link>
-              <Link
-                  onClick={() => setActiveMob(!isActiveMob)}
-                  to="/blog/">
-                Блог
-              </Link>
-              <Link
-                  onClick={() => setActiveMob(!isActiveMob)}
                   to="/contact/examples">
-                Помощь
+                  Контакты
               </Link>
-              <Link
-                  onClick={() => setActiveMob(!isActiveMob)}
-                  to="/contact">
-                Контакты
-              </Link>
+
+
         </div>
         <Search isActive={isActiveMob}/>
         <div className="row container" onClick={() => setActiveMob(!isActiveMob)}>

@@ -3,6 +3,7 @@ templateKey: reviews
 title: Отзывы
 description: >-
     Мы откриты для вас и готовы делиться реальными отзывами.
+name: reviews
 header:
     images:
       - alt: cost-page
