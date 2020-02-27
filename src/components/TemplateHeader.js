@@ -7,7 +7,7 @@ import Store from './store'
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import SocialMedia from "./SocialMedia";
 
-const Button = styled(Link)`
+export const Button = styled(Link)`
     align-items: center;
     background: rgba(255, 255, 255, 0.09);
     border: none;
@@ -109,7 +109,7 @@ const Container = styled.header`
             margin-right: .5em;
         }
     }
-    h3 {
+    .common-header-column h3 {
         font-weight: 300;
         font-size: 1em;
         line-height: 1.8em;
@@ -169,9 +169,10 @@ const TemplateHeader = ({
                         title,
                         description,
                         children,
+                        childrenInColumn,
                         storeBtn,
-                            crumbLabelParent,
-                            crumbPathParent}) => {
+                        crumbLabelParent,
+                        crumbPathParent}) => {
 
     const { scopeInformation, images, buttons } = header || false;
 
@@ -230,6 +231,7 @@ const TemplateHeader = ({
                             <Buttons buttons={buttons}/>
                         }
                     </div>
+                    {childrenInColumn}
                 </div>
                 <div className="bckg-parallax-container">
                     <div className="row header-gatsby-image">

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Layout from '../components/Layout'
 import TemplateHeader from "../components/TemplateHeader";
 import News from "../components/mainPage/news";
-import Form from "../components/Footer/Form";
+import FormFooter from "../components/Footer/FormFooter";
 
 const Wrapper = styled.div`
     header .btn{
@@ -110,7 +110,7 @@ export const ReviewsPageTemplate = ({
             )}
         </Section>
         <News/>
-        <Form/>
+        <FormFooter/>
     </Wrapper>
 ;
 

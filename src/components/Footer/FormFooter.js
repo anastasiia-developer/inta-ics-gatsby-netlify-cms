@@ -101,7 +101,7 @@ const FormCommon = styled.div`
   }
 `;
 
-const Form = () =>
+const FormFooter = () =>
     <FormCommon>
         <h2>Остались вопросы?</h2>
         <h4>Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
@@ -139,4 +139,4 @@ const Form = () =>
         </div>
     </FormCommon>
 
-export default Form;
+export default FormFooter;

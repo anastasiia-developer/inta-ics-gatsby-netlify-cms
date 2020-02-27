@@ -26,12 +26,12 @@ export const ButtonGroup = ({ next, previous, goToSlide, ...rest}) => {
     return (
         <Fragment>
             <Arrow
-                onClick={() => previous()}
+                onClick={(e) => {e.stopPropagation(); previous()}}
                 isDisable={currentSlide === 0}
                 className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left">
             </Arrow>
             <Arrow
-                onClick={() => next()}
+                onClick={(e) => {e.stopPropagation(); next()}}
                 isDisable={(currentSlide + 1) === totalItems}
                 className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right">
             </Arrow>

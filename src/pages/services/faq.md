@@ -1,10 +1,9 @@
 ---
 templateKey: faq
-title: Inta International Courier Service
+title: Часто задаваемые вопросы
 name: faq
 description: >-
-    Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками
-    и трендами! Наш менеджер всегда на связи и готов вам помочь.
+    Все, что может вас заитересовать
 header:
     images:
       - alt: cost-page

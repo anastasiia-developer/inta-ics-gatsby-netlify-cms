@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 import TemplateHeader from "../components/TemplateHeader";
 import TagsRoll from "../components/TagsRoll";
 import Post from "../components/Post";
-import Form from '../components/Footer/Form'
+import FormFooter from '../components/Footer/FormFooter'
 
 
 const Header = styled(TemplateHeader)`
@@ -177,7 +177,7 @@ const BlogIndexPage = ({ data, location, pageContext }) => {
                 pageContext={pageContext}
                 posts={posts}
             />
-            <Form/>
+            <FormFooter/>
         </Layout>
     )
 }

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Layout from '../components/Layout'
 import TemplateHeader from "../components/TemplateHeader";
 import News from "../components/mainPage/news";
-import Form from "../components/Footer/Form";
+import FormFooter from "../components/Footer/FormFooter";
 import Arrow from "../img/arrow2.svg"
 
 const Container = styled.div`
@@ -125,7 +125,7 @@ export const FaqPageTemplate = ({
             description={description}
             header={header}
             location={location}
-            crumbLabel={title}
+            crumbLabel="FAQ"
         />
         <Section className="row-to-column wrapper">
             <Wrapper>
@@ -147,7 +147,7 @@ export const FaqPageTemplate = ({
             </Wrapper>
         </Section>
         <News/>
-        <Form/>
+        <FormFooter/>
     </Fragment>
 ;
 

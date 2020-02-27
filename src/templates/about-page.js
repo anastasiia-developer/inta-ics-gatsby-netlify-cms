@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import Form from '../components/Footer/Form'
+import FormFooter from '../components/Footer/FormFooter'
 
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -43,7 +43,7 @@ const AboutPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
       />
-      <Form/>
+      <FormFooter/>
     </Layout>
   )
 }

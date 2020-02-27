@@ -6,6 +6,7 @@ const Header = styled.div`
     position: relative;
     .wrapper{
         width: 85%;
+        
     }
     .react-multi-carousel-list{
         .react-multiple-carousel__arrow{

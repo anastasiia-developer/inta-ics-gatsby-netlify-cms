@@ -16,7 +16,7 @@ import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
 import {ButtonGroup, ResponsiveCarousel} from "../components/CommonCarousel";
 import Carousel from "react-multi-carousel";
-import Form from '../components/Footer/Form'
+import FormFooter from '../components/Footer/FormFooter'
 
 
 export const IndexPageTemplate = ({
@@ -63,7 +63,7 @@ export const IndexPageTemplate = ({
     <Clients/>
     <Reviews/>
     <Article mainpitch={mainpitch}/>
-    <Form/>
+    <FormFooter/>
   </Fragment>
 )
 
@@ -82,7 +82,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data, location, pageContext }) => {
   const { frontmatter } = data.markdownRemark;
-    console.log(pageContext);
   return (
     <Layout>
       <IndexPageTemplate
@@ -122,7 +121,7 @@ export const pageQuery = graphql`
             images{
               image{
                 childImageSharp {
-                  fluid(maxWidth: 300, quality: 100) {
+                  fluid(maxWidth: 300, quality: 50) {
                     ...GatsbyImageSharpFluid
                   }
                 }

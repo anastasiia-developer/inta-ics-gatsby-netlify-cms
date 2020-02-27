@@ -115,13 +115,12 @@ const Navigation = styled.nav`
             }
         }
     }
-    .navigation__contact{
-        align-items: center;
+    
+    .bar-contacts{
         position: absolute;
         top: 1em;
-        right: 0;  
+        right: 0;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
-            position: absolute;
             top: 79vh;
             left: 0;
             flex-direction: column;
@@ -132,29 +131,8 @@ const Navigation = styled.nav`
             border-top: 1px solid #323232;
             transform: translateX(${props => props.isActive ? '0' : '-100%'});
             transition: all .4s;
-        }
-        svg{
-            font-size: .9em;
-            margin-right: .5em;
-            path{
-                fill: #7A7A7A;
-                @media(max-aspect-ratio: 3/3), (max-height: 500px){
-                    fill: #E0E0E0;
-                }
-            }
-        }
-        a{
-            display: flex;
-            align-items: center;
-            margin-right: 1em;
-            color: #E0E0E0;
-            @media(max-aspect-ratio: 3/3), (max-height: 500px){
-                font-size: .8em;
-                margin-bottom: .5em;
-            }
-        }
+        }  
     }
-    
     .container{
         align-items: center;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){

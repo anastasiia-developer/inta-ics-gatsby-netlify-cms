@@ -1,8 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'gatsby'
-import Tel from '../../img/tel.svg'
-import Email from '../../img/email.svg'
-import Local from '../../img/local.svg'
 import Navigation from './styled'
 import Search from './Search'
 import Login from './Login'
@@ -10,6 +7,7 @@ import Language from './Language'
 import Delivery from './delivery'
 import Telegram from '../../img/social/telegram.svg'
 import Call from '../../img/call.svg'
+import BarContacts from "./BarContacts";
 
 const Navbar = () => {
     const [isActiveMob, setActiveMob] = useState(false);
@@ -38,20 +36,9 @@ const Navbar = () => {
           <hr/>
           <hr/>
         </div>
-        <div className="navigation__contact row-to-column">
-          <a href="">
-              <Tel className="icon" alt="contacts" />
-              +38 (068) 5555 999
-          </a>
-          <a href="">
-              <Email className="icon" alt="contacts" />
-              info@inta-ics.com
-          </a>
-          <a href="" >
-              <Local className="icon" alt="contacts" />
-              Украина, Киев, ул. Линейная 17
-          </a>
-        </div>
+        <BarContacts
+            isActive={isActiveMob}
+        />
         <Link
             to="/"
             className="logo"
@@ -84,7 +71,7 @@ const Navbar = () => {
               </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/contact/examples">
+                  to="/contact">
                   Помощь
               </Link>
               <Link
@@ -99,7 +86,7 @@ const Navbar = () => {
               </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/contact/examples">
+                  to="/contact">
                   Контакты
               </Link>
 
