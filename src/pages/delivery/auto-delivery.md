@@ -1,6 +1,7 @@
 ---
 templateKey: delivery
 title: Автодоставка
+crumbLabel: Автодоставка
 name: auto-delivery
 description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:

@@ -1,6 +1,7 @@
 ---
 templateKey: faq
 title: Часто задаваемые вопросы
+crumbLabel: FAQ
 name: faq
 description: >-
     Все, что может вас заитересовать

@@ -5,8 +5,8 @@ import SubMenu from './SubMenu'
 export default ({setActiveMob, isActiveMob}) => (
     <StaticQuery
         query={graphql`
-            query navDelivery{
-                 allMarkdownRemark(filter: {fields: {slug: {regex: "/delivery/"}}}) {
+            query navHelp{
+                 allMarkdownRemark(filter: {fields: {slug: {regex: "/help/"}}}) {
                     nodes {
                         frontmatter {
                             crumbLabel
@@ -20,9 +20,9 @@ export default ({setActiveMob, isActiveMob}) => (
     `}
         render={(data) =>
             <SubMenu
-                parentName="Доставка"
+                parentName="Помощь"
                 list={data.allMarkdownRemark.nodes}
-                startPath="/delivery/"
+                startPath="/help/"
                 setActiveMob={() => setActiveMob}
                 isActiveMob={isActiveMob}
             />

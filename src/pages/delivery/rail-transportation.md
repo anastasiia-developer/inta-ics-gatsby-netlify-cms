@@ -1,6 +1,7 @@
 ---
 templateKey: delivery
 title: Железнодорожные перевозки
+crumbLabel: Железнодорожные перевозки
 name: rail-transportation
 description: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым

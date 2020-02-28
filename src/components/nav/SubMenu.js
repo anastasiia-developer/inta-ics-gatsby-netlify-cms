@@ -48,11 +48,12 @@ const SubNav = styled.nav`
         pointer-events: none;
         opacity: 0;
         position: absolute;
-        left: 0;
+        left: 2em;
         top: 2em;
         background: #fff;
-        width: 16em;
-        padding: 1.5em 1.5em 1em;
+        font-size: 1em;
+        min-width: 8em;
+        padding: 1.5em 1em 1em;
         border-radius: 4px;
         border-top: 3px solid #005BE4;
         border-bottom: 1px solid #ccc;
@@ -101,7 +102,7 @@ const SubNav = styled.nav`
         }
 `;
 
-const SubMenu = ({parentName, startPath, list, setActiveMob, isActiveMob}) => {
+const SubMenu = ({parentName, list, setActiveMob, isActiveMob}) => {
     const [isActiveSub, setActiveSub] = useState(false);
 
     return(
@@ -116,8 +117,8 @@ const SubMenu = ({parentName, startPath, list, setActiveMob, isActiveMob}) => {
                     <Link
                         key={index}
                         onClick={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
-                        to={startPath+link.frontmatter.name}>
-                        {link.frontmatter.title}
+                        to={link.fields.slug}>
+                        {link.frontmatter.crumbLabel}
                         <ArrowLine/>
                     </Link>
                 ))}

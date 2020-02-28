@@ -1,6 +1,7 @@
 ---
 templateKey: reviews
 title: Отзывы
+crumbLabel: Отзывы
 description: >-
     Мы откриты для вас и готовы делиться реальными отзывами.
 name: reviews

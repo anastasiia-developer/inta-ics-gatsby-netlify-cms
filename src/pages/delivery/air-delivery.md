@@ -1,6 +1,7 @@
 ---
 templateKey: delivery
 title: 'Авиадоставка грузов из Китая, США'
+crumbLabel: Авиадоставка
 name: air-delivery
 description: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
