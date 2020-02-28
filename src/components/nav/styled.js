@@ -7,7 +7,7 @@ const Navigation = styled.nav`
     align-items: center;
     z-index: 3;
     background: #000;
-    padding: 3em 5% 1em;
+    padding: 2.5em 5% 1em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         height: 8vh;
         align-items: flex-start;
@@ -119,7 +119,8 @@ const Navigation = styled.nav`
     .bar-contacts{
         position: absolute;
         top: 1em;
-        right: 0;
+        right: 5%;
+        font-size: .8em;        
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             top: 79vh;
             left: 0;

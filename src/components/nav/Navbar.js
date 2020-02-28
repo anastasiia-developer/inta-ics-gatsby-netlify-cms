@@ -89,8 +89,6 @@ const Navbar = () => {
                   to="/contact">
                   Контакты
               </Link>
-
-
         </div>
         <Search isActive={isActiveMob}/>
         <div className="row container" onClick={() => setActiveMob(!isActiveMob)}>

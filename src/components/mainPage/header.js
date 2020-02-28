@@ -6,7 +6,6 @@ const Header = styled.div`
     position: relative;
     .wrapper{
         width: 85%;
-        
     }
     .react-multi-carousel-list{
         .react-multiple-carousel__arrow{
@@ -37,7 +36,7 @@ const Header = styled.div`
             justify-content: center;
         }
     }
-    .bckg-parallax-container{
+     .wrapper .bckg-parallax-container{
         width: 40%;
         margin: 0;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    

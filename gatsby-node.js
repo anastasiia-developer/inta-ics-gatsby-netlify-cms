@@ -35,8 +35,8 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id;
 
       const contextPost = edge.node.frontmatter.templateKey === 'blog-post' && {
-        prev: index === 0 ? null : posts[index - 1].node.fields.slug,
-        next: index === (posts.length - 1) ? null : posts[index + 1].node.fields.slug,
+        next: index === 0 ? null : posts[index - 1].node.fields.slug,
+        prev: index === (posts.length - 1) ? null : posts[index + 1].node.fields.slug,
       }
 
       createPage({

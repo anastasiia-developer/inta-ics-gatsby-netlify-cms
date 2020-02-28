@@ -57,11 +57,11 @@ export const BlogPostTemplate = ({
                 ) : null}
             <PostContent className='wrapper content' content={content} />
             <div className="pagination wrapper row">
-                <Link className='prev' to={`/blog/${prevPost}`}>
+                <Link className='prev' to={prevPost}>
                     <ArrowLine/>
                     Предыдущая статья
                 </Link>
-                <Link className='next' to={`/blog/${nextPost}`}>
+                <Link className='next' to={nextPost}>
                     Следующая статья
                     <ArrowLine/>
                 </Link>
@@ -84,6 +84,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data, pageContext, location }) => {
   const { markdownRemark: post } = data;
+  console.log(pageContext)
     return (
     <Layout>
       <BlogPostTemplate

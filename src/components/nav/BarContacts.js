@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     a{
         display: flex;
         align-items: center;
-        margin-right: 1em;
+        margin-right: 2em;
         color: #E0E0E0;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             font-size: .8em;
