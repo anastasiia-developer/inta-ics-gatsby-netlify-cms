@@ -24,7 +24,7 @@ const FormCommon = styled.div`
   .calculate-common{
     background: #fff;
     margin: 4em auto 0;
-    width: 85%;
+    width: 70%;
     border-radius: .7em;
     padding: 2em 0; 
     justify-content: space-between;

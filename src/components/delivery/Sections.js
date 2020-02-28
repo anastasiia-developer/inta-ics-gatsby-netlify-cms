@@ -69,11 +69,12 @@ const Section = styled(About)`
     }
 `;
 
-const Sections = ({ sections }) => (
+const Sections = ({ sections, className }) => (
     <Fragment>
         {sections.map((section, index) => (
             <Section
                 key={index}
+                className={className}
                 title={section.title}
                 image={section.image}
                 text={section.text}
