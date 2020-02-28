@@ -6,9 +6,7 @@ import {kebabCase} from "lodash";
 
 const List = styled.ul`
   justify-content: flex-start;  
-  width: 50%;
-  margin-left: 7%;
-  margin-top: -10%;
+  margin-top: 5%;
   flex-wrap: wrap;
   @media(max-aspect-ratio: 3/3), (max-height: 500px){
     margin: 0;

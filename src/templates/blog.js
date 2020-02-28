@@ -111,7 +111,7 @@ const Pagination = styled.div`
     a{
         padding: 0 .25em;
         color: #C9C9C9;
-        font-size: .8em;
+        font-size: 1.2em;
         font-weight: 500;
     }
     a[aria-current="page"]{
@@ -135,7 +135,7 @@ export const BlogIndexPageTemplate = ({
                 header={header}
                 location={location}
                 crumbLabel="Блог"
-                children={<TagsRoll/>}
+                childrenInColumn={<TagsRoll/>}
             />
             {posts.length > 0 &&
                 <Fragment>
