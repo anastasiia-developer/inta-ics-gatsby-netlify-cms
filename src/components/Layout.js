@@ -1,13 +1,33 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from './nav/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import styled from 'styled-components'
+import Svg from '../img/arrowTop.svg'
+
+const ArrowTop = styled(Svg)`
+    position: fixed;
+    width: 4em;
+    bottom: 1em;
+    right: 1em;
+    z-index: 2;
+    cursor: pointer;
+    display: ${props => props.isVisible ? 'block' : 'none'}
+`;
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+    const { title, description } = useSiteMetadata();
+    const [isVisible, setVisible] = useState(false);
+
+    useEffect(() => {
+        document.addEventListener("scroll", function(e) {
+            setVisible(window.pageYOffset > 300)
+        });
+    });
+
   return (
     <div>
       <Helmet>
@@ -28,6 +48,14 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar/>
+      <ArrowTop
+          onClick={()=>{
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+                })}
+          }
+          isVisible={isVisible}/>
       <div>{children}</div>
       <Footer />
     </div>
