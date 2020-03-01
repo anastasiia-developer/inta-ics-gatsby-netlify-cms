@@ -1,11 +1,9 @@
 ---
 templateKey: index-page
 title: Inta International Courier Service
-image: /img/002-united-states (1).png
-heading: Great coffee with a conscience
 description: >-
-    Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками
-    и трендами! Наш менеджер всегда на связи и готов вам помочь.
+  Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками
+  и трендами! Наш менеджер всегда на связи и готов вам помочь.
 header:
   slide:
     - buttons:
@@ -19,13 +17,13 @@ header:
         - alt: app mobile
           image: /img/mainpage1.png
       scopeInformation:
-        - image: /img/bay.svg
+        - image: /img/bay.png
           text: Покупка товаров со всего мира
-        - image: /img/user1.svg
+        - image: /img/time3.png
           text: Поддержка 24/7
-        - image: /img/local2.svg
+        - image: /img/lov.png
           text: Местоположение посылки
-        - image: /img/time3.svg
+        - image: /img/time.png
           text: Сроки доставки
     - buttons:
         - link: /contacts
@@ -45,17 +43,17 @@ header:
         - image: /img/local2.svg
           text: Местоположение посылки
         - image: /img/time3.svg
-          text: Сроки доставки      
+          text: Сроки доставки
 section:
   blocks:
-    - title: Прямой перевозчик
-      image: /img/aircraft 1.png
-    - title: Склады в Китае и Европе
-      image: /img/warehouse 4.png
-    - title: Гарантия сроков
-      image: /img/clock 1.png
-    - title: Опыт работы в Китае всех сотрудников
-      image: /img/team 1.png
+    - image: /img/aircraft 1.png
+      title: Прямой перевозчик
+    - image: /img/warehouse 4.png
+      title: Склады в Китае и Европе
+    - image: /img/clock 1.png
+      title: Гарантия сроков
+    - image: /img/team 1.png
+      title: Опыт работы в Китае всех сотрудников
   subTitle: то чем мы гордимся и что готовы вам предоставить
   title: Международные перевозки
 about:
@@ -80,91 +78,6 @@ about:
         Мы заинтересованы в развитии бизнеса наших партнеров, поэтому используем все возможности, чтобы предоставить качественный сервис.
     </p>
   title: Логистические услуги от специалистов
-calculator:
-  constituents:
-    - category:
-        - image: /img/box (2) 1.png
-          nameCategory: Готовый груз
-          price: 0
-        - image: /img/logistics 1.png
-          nameCategory: Консолидация
-          price: 1
-        - image: /img/shipping (1) 1.png
-          nameCategory: Консолидация <p>+</p> стандартная проверка
-          price: 2
-      title: 'Вид складской услуги:'
-    - category:
-        - image: /img/plane 1.png
-          nameCategory: Авиадоставка
-          price: 11
-      title: 'Вид отправления:'
-    - category:
-        - image: /img/shipping 2.png
-          nameCategory: Курьером в руки
-          price: 3
-        - image: /img/post-office 1.png
-          nameCategory: В почтомат/ отделение
-          price: 2
-      title: 'Вид доставки:'
-    - category:
-        - image: /img/box (4) 1.png
-          nameCategory: Доп. упаковка
-          price: 2
-      title: Дополнительные услуги
-  title: Рассчитайте стоимость доставки
-destinations:
-  countries:
-    - country: Китай
-      flag: /img/001-china 3.png
-    - country: Англия
-      flag: /img/002-united-states.png
-    - country: Италия
-      flag: /img/002-united-states (2).png
-    - country: Гонконг
-      flag: /img/002-united-states (1).png
-    - country: Италия
-      flag: /img/002-united-states (2).png
-    - country: США
-      flag: /img/002-united-states (3).png
-    - country: Германия
-      flag: /img/002-united-states (4).png
-    - country: Италия
-      flag: /img/002-united-states (2).png
-    - country: Индия
-      flag: /img/002-united-states (5).png
-    - country: Франция
-      flag: /img/002-united-states (6).png
-    - country: Италия
-      flag: /img/002-united-states (2).png
-    - country: Израиль
-      flag: /img/002-united-states (7).png
-  destinationsImage: /img/map.png
-cargo:
-  - title: Контейнерные перевозки
-    image: /img/Storage.jpg
-  - title: Карго доставка
-    image: /img/package 2.png
-  - title: Доставка товаров
-    image: /img/trolley 1.png
-  - title: Перевозка сборных грузов
-    image: /img/cargo-ship 1.png
-  - title: Международная доставка посылок
-    image: /img/airplane 1.png
-  - title: Мультимодальные перевозки
-    image: /img/package (2) 1.png
-  - title: Перевозка негабаритных грузов
-    image: /img/product 1.png
-  - title: Перевозка техники
-    image: /img/protected 1.png
-  - title: Доставка станков и оборудования
-    image: /img/trolley (1) 1.png
-  - title: Доставка из Китая в Одессу
-    image: /img/warehouse 3.png
-clients:
-  - image: /img/image 18.png
-  - image: /img/image 19.png
-  - image: /img/image 20.png
-  - image: /img/image 20 (copy).png
 mainpitch:
   article: >-
     <h2>Организация авиадоставки из США. Логистические услуги от
@@ -235,40 +148,5 @@ mainpitch:
     частности, мы создали позитивную репутацию одного из ведущих игроков,
     который работает не только ради себя, но и для клиента и его бизнеса. Мы
     ценим каждого заказчика, постоянного или нового.</p>
-intro:
-  blurbs:
-    - image: /img/coffee.png
-      text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
 ---
 
