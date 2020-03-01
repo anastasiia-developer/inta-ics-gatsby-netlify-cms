@@ -34,6 +34,8 @@ export const IndexPageTemplate = ({
           containerClass="slider"
           sliderClass="row"
           arrows={false}
+          autoPlay
+          autoPlaySpeed={5000}
           customButtonGroup={<ButtonGroup />}
           slidesToSlide={1}
           responsive={ResponsiveCarousel(1,1)}
