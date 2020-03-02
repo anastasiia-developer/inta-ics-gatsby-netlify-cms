@@ -34,6 +34,7 @@ calculator:
         - image: /img/plane.png
           nameCategory: Авиадоставка
           price: 11
+          default: true
       title: 'Вид отправления:'
     - category:
         - image: /img/shipping1.png
@@ -42,11 +43,13 @@ calculator:
         - image: /img/post-office.png
           nameCategory: В почтомат/ отделение
           price: 2
+          default: true
       title: 'Вид доставки:'
     - category:
         - image: /img/box.png
           nameCategory: Доп. упаковка
           price: 2
+          default: true
       title: Дополнительные услуги
   title: Рассчитайте стоимость доставки
 destinations:

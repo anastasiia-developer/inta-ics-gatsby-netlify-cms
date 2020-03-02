@@ -16,6 +16,7 @@ export default () => (
                             category {
                               nameCategory
                               price
+                              default
                               image{
                                 childImageSharp {
                                   fluid(maxWidth: 65, quality: 100) {

@@ -1,4 +1,4 @@
-import React,{useState}  from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import {HTMLContent} from "../Content";
@@ -181,6 +181,10 @@ const Wrapper = styled.div`
 const Constituents = ({title, category, setAmount, amount}) => {
     const [isActive, setActive] = useState(null);
     const [price, setPrice] = useState(0);
+
+    useEffect(() =>{
+        category.map((block, index) => {block.default && setActive(index); setAmount(block.price)} )
+    },[]);
 
     const SetActive = (index, blockPrice) => {
         setActive(isActive === index ? null : index);

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'gatsby'
 import styled from "styled-components";
 import FlagsTemplate from "./FlagTemplate";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
@@ -22,7 +23,7 @@ const Section = styled.section`
         }
     }
     h2{
-        font-weight: 700;
+        font-weight: 500;
         padding: 2em 0 3em 7em;
         font-size: 1.7em;
         color: #212121;
@@ -61,7 +62,9 @@ const DestinationsTemplate = ({ destinations }) => {
                 <div className="row-to-column">
                     <div className="column countries">
                         <h2>Международные направления</h2>
-                        <FlagsTemplate countries={destinations.countries}/>
+                        <FlagsTemplate
+                            link
+                            countries={destinations.countries}/>
                     </div>
                     <PreviewCompatibleImage
                         imageInfo={{
