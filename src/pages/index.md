@@ -52,7 +52,7 @@ section:
       title: Склады в Китае и Европе
     - image: /img/clock.png
       title: Гарантия сроков
-    - image: /img/team.jpg
+    - image: /img/team.png
       title: Опыт работы в Китае всех сотрудников
   subTitle: то чем мы гордимся и что готовы вам предоставить
   title: Международные перевозки
