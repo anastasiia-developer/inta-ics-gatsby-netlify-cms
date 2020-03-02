@@ -46,13 +46,13 @@ header:
           text: Сроки доставки
 section:
   blocks:
-    - image: /img/aircraft 1.png
+    - image: /img/aircraft.png
       title: Прямой перевозчик
-    - image: /img/warehouse 4.png
+    - image: /img/warehouse.png
       title: Склады в Китае и Европе
-    - image: /img/clock 1.png
+    - image: /img/clock.png
       title: Гарантия сроков
-    - image: /img/team 1.png
+    - image: /img/team.jpg
       title: Опыт работы в Китае всех сотрудников
   subTitle: то чем мы гордимся и что готовы вам предоставить
   title: Международные перевозки
