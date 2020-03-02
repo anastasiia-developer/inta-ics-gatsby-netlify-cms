@@ -11,8 +11,9 @@ const Section = styled.section`
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
         padding: 1em 0;  
     }  
-    .wrapper{
-        width: 70%;
+    .carousel_wrapper{
+        width: 90%;
+        margin: 0 auto;
         padding-bottom: 2em;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 width: 80%;
@@ -50,16 +51,12 @@ const Section = styled.section`
     }
     .react-multi-carousel-dot-list {
         bottom: 0;
-        .react-multi-carousel-dot button{
-            background: #fff;
-            border: none;
-            opacity: .5;
-            width: .6em;
-            height: .6em;
-        }
         .react-multi-carousel-dot--active button{
-            opacity: 1;
+            background: #005BE4;
         } 
+    }
+    .react-multiple-carousel__arrow::before{
+        color: #005BE4;
     }
 `;
 
@@ -69,17 +66,16 @@ const ClientsTemplate = ({ clients }) => {
         return(
             <Section>
                 <h2>Наши клиенты</h2>
-                <div style={{position: 'relative'}}>
+                <div style={{position: 'relative'}} className="wrapper">
                     <Carousel
-                        containerClass="wrapper"
-                        sliderClass="row"
-                        infinite
+                        containerClass="carousel_wrapper"
                         arrows={false}
                         renderButtonGroupOutside={true}
                         customButtonGroup={<ButtonGroup />}
                         slidesToSlide={1}
                         showDots
                         responsive={ResponsiveCarousel()}
+                        dotListClass="custom-dot-list-style"
                     >
                         {clients.map((img, index) => (
                             <div key={index} className="img">

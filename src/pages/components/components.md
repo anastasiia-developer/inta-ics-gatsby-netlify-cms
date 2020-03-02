@@ -84,6 +84,9 @@ clients:
   - image: /img/image 19.png
   - image: /img/image 20.png
   - image: /img/image 20 (copy).png
+  - image: /img/image 19.png
+  - image: /img/image 20.png
+  - image: /img/image 20 (copy).png
 reviews:
   - name: Иван Заец
     source:

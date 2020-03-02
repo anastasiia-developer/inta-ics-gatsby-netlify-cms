@@ -18,6 +18,7 @@ const Section = styled.section`
     }
     .wrapper{
         width: 79%;
+        padding-bottom: 2em;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             width: 100%;
         }
@@ -36,7 +37,6 @@ const Section = styled.section`
             left: 8%;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 left: -5%;
-                
             }        
         }
         &--right{
@@ -49,6 +49,7 @@ const Section = styled.section`
     }
     .react-multi-carousel-item{  
         text-align: center;
+        display: flex;
         .border{
             height: 100%;
             margin: 0 2em;
@@ -78,6 +79,7 @@ const Section = styled.section`
             font-weight: 500;
             font-size: .8em;
         }
+        
     }      
 `;
 
@@ -95,6 +97,8 @@ const ReviewsTemplate = ({reviews}) => {
                         renderButtonGroupOutside={true}
                         customButtonGroup={<ButtonGroup />}
                         slidesToSlide={1}
+                        showDots
+                        dotListClass="custom-dot-list-style"
                         responsive={ResponsiveCarousel(1,1)}
                     >
                         {reviews.map((review, index) =>

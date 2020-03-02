@@ -10,6 +10,9 @@ const Header = styled.div`
     .react-multi-carousel-list{
         .react-multiple-carousel__arrow{
             top: 50vh;
+            &:hover.react-multiple-carousel__arrow::before{
+                color: #005BE4;
+            }
             &--left{
                 left: 3em;
                 @media(max-aspect-ratio: 3/3), (max-height: 500px){    

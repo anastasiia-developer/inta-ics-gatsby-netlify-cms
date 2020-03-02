@@ -7,7 +7,7 @@ const FormCommon = styled.div`
   color: #fff;
   h2{
     font-weight: 700;
-    font-size: 2.5em;
+    font-size: 2.7em;
     text-align: center;
     padding: 1em 0 .5em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
@@ -15,7 +15,7 @@ const FormCommon = styled.div`
     }
   }
   h4{
-    font-size: .8em;
+    font-size: 1em;
     text-align: center;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       font-size: .5em;
@@ -40,7 +40,7 @@ const FormCommon = styled.div`
     h3{
       text-align: center;
       padding: 0 0 1em;
-      font-size: 1.1em;
+      font-size: 1.6em;
       font-weight: 700;
       color: #000;
     }
@@ -51,6 +51,7 @@ const FormCommon = styled.div`
       margin-bottom: 4em;
       color: #8F8F8F;
       text-align: center;
+      font-size: 1.15em;
     }
     .column{
       width: 23%;
@@ -63,14 +64,14 @@ const FormCommon = styled.div`
       margin: 0 0 .5em 0;
       font-weight: 400;
       color: #777777;
+      font-size: 1em;
     }
     .calculate-block{
       justify-content: space-between;
       color: #005BE4;
       position: relative;
-  
       img{
-        width: .8em;
+        width: 1em;
         position: absolute;
         right: 1em;
         top: 50%;
