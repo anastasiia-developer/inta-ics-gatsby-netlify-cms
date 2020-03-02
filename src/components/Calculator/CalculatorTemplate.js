@@ -68,12 +68,12 @@ const Form = styled.div`
         color: #fff;
         font-weight: 700;
         text-align: center;
-        padding: 2em 0;
+        padding: 3em 0 3em;
     }
     .container{
         background: #005BE4;
         border-radius: 7px;
-        width: 55%;
+        width: 70%;
         justify-content: center;
         align-items: center;
         position: relative;
@@ -85,7 +85,7 @@ const Form = styled.div`
             color: #fff;
             background: #6098EE;
             color: #BAD0F2;
-            width: 60%;
+            width: 50%;
             margin: 0 auto 1em;
             position: relative;
             border-radius: 2em;
@@ -108,6 +108,7 @@ const Form = styled.div`
         }
         button{
             background: #FF4B55;
+            font-size: .9em;
             border-radius: 2em;
             padding: .7em 2em;
             color: #fff;
@@ -138,7 +139,7 @@ const Form = styled.div`
         }
         .note{
             color: #A3C4F5;
-            padding: 0 3.5em 3em;
+            padding: 0 6em 4.5em;
             font-size: .8em;
             text-align: center;  
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
@@ -176,41 +177,57 @@ const Wrapper = styled.div`
     }
 `;
 
-const Category = ({block, setAmout}) => {
-    const [isActive, setActive] = useState(false);
 
-    return(
-        <Wrapper
-             onClick={() => {setActive(!isActive); setAmout(!isActive, block.price) }}
-             isActive={isActive}
-             className="category">
-            <div className="image">
-                <PreviewCompatibleImage
-                    imageInfo={{
-                        image: block.image,
-                    }}
-                />
+const Constituents = ({title, category, setAmount, amount}) => {
+    const [isActive, setActive] = useState(null);
+    const [price, setPrice] = useState(0);
+
+    const SetActive = (index, blockPrice) => {
+        setActive(isActive === index ? null : index);
+
+        if(isActive === null){
+            setAmount(amount + blockPrice)
+            setPrice(blockPrice)
+        }else if(isActive === index){
+            setAmount(amount-blockPrice)
+            setPrice(0)
+        }else if(isActive !== index){
+            setAmount(amount - price + blockPrice)
+            setPrice(blockPrice)
+        }
+    }
+
+    return (
+        <div>
+            <h3>{title}</h3>
+            <div className="row categories__wrapper">
+                {category.map((block,index) => (
+                    <Wrapper
+                        key={index}
+                        onClick={() => SetActive(index, block.price)}
+                        isActive={isActive === index}
+                        className="category">
+                        <div className="image">
+                            <PreviewCompatibleImage
+                                imageInfo={{
+                                    image: block.image,
+                                }}
+                            />
+                        </div>
+                        <h4>
+                            <HTMLContent content={block.nameCategory}/>
+                        </h4>
+                    </Wrapper>
+                ))}
             </div>
-            <h4>
-                <HTMLContent content={block.nameCategory}/>
-            </h4>
-        </Wrapper>
+        </div>
     )
-
-};
+}
 
 const CalculatorTemplate = ({ data }) => {
     const [amount, setAmount] = useState(0);
     const [weight, setWeight] = useState('');
     const [isActive, setIsActive] = useState(false);
-
-    const SetAmount = (isActive, price) => {
-        if(isActive){
-            setAmount(amount + price)
-        }else{
-            setAmount(amount - price)
-        }
-    };
 
     if(data){
         const { title, constituents } = data;
@@ -220,18 +237,13 @@ const CalculatorTemplate = ({ data }) => {
                 <div className="row-to-column wrapper">
                     <div className="row categories">
                         {constituents.map((item, index) => (
-                            <div key={index}>
-                                <h3>{item.title}</h3>
-                                <div className="row categories__wrapper">
-                                    {item.category.map((block,index) => (
-                                        <Category
-                                            key={index}
-                                            block={block}
-                                            setAmout={SetAmount}
-                                        />
-                                    ))}
-                                </div>
-                            </div>
+                            <Constituents
+                                key={index}
+                                title={item.title}
+                                category={item.category}
+                                setAmount={setAmount}
+                                amount={amount}
+                            />
                         ))}
                     </div>
                     <Form>

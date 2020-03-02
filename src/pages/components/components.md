@@ -20,31 +20,31 @@ storage:
 calculator:
   constituents:
     - category:
-        - image: /img/box (2) 1.png
+        - image: /img/box1.png
           nameCategory: Готовый груз
           price: 0
-        - image: /img/logistics 1.png
+        - image: /img/logistics.png
           nameCategory: Консолидация
           price: 1
-        - image: /img/shipping (1) 1.png
+        - image: /img/shipping.png
           nameCategory: Консолидация <p>+</p> стандартная проверка
           price: 2
       title: 'Вид складской услуги:'
     - category:
-        - image: /img/plane 1.png
+        - image: /img/plane.png
           nameCategory: Авиадоставка
           price: 11
       title: 'Вид отправления:'
     - category:
-        - image: /img/shipping 2.png
+        - image: /img/shipping1.png
           nameCategory: Курьером в руки
           price: 3
-        - image: /img/post-office 1.png
+        - image: /img/post-office.png
           nameCategory: В почтомат/ отделение
           price: 2
       title: 'Вид доставки:'
     - category:
-        - image: /img/box (4) 1.png
+        - image: /img/box.png
           nameCategory: Доп. упаковка
           price: 2
       title: Дополнительные услуги
