@@ -16,11 +16,11 @@ header:
     - alt: auto
       image: /img/Group1.png
   scopeInformation:
-    - image: /img/time.svg
+    - image: /img/time.png
       text: Сроки доставки
-    - image: /img/card.svg
+    - image: /img/card.png
       text: от 2$ за кг
-    - image: /img/local.svg
+    - image: /img/lov.png
       text: Местоположение посылки
 sections:
   - image: /img/deliv.jpg

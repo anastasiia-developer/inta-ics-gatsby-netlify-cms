@@ -10,11 +10,11 @@ header:
   scopeInformation:
     - image: /img/bay.svg
       text: Покупка товаров со всего мира
-    - image: /img/user1.svg
+    - image: /img/time3.png
       text: Поддержка 24/7
-    - image: /img/local2.svg
+    - image: /img/lov.png
       text: Местоположение посылки
-    - image: /img/time3.svg
+    - image: /img/time.png
       text: Сроки доставки
 sections:
   - image: /img/deliv.jpg

@@ -36,14 +36,14 @@ header:
         - alt: app mobile
           image: /img/mainpage1.png
       scopeInformation:
-        - image: /img/bay.svg
-          text: Покупка товаров со всего мира
-        - image: /img/user1.svg
-          text: Поддержка 24/7
-        - image: /img/local2.svg
-          text: Местоположение посылки
-        - image: /img/time3.svg
-          text: Сроки доставки
+         - image: /img/bay.png
+           text: Покупка товаров со всего мира
+         - image: /img/time3.png
+           text: Поддержка 24/7
+         - image: /img/lov.png
+           text: Местоположение посылки
+         - image: /img/time.png
+           text: Сроки доставки
 section:
   blocks:
     - image: /img/aircraft 1.png
