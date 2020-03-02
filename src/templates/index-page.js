@@ -39,6 +39,7 @@ export const IndexPageTemplate = ({
           customButtonGroup={<ButtonGroup />}
           slidesToSlide={1}
           responsive={ResponsiveCarousel(1,1)}
+          showDots
       >
         {header.slide.map((item, index) =>
             <TemplateHeader

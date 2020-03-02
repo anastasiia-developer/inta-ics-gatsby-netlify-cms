@@ -17,7 +17,7 @@ const Container = styled.div`
         fill: #fff;
       }
       &:hover path{
-        fill: #FFE15A;
+        fill: #005BE4;
         cursor: pointer;
       }
     }

@@ -24,6 +24,19 @@ const Header = styled.div`
             }
         }    
     }
+    .react-multi-carousel-dot-list{
+        bottom: 3em;
+        .react-multi-carousel-dot button{
+            border: none;
+            margin: 0 .4em;
+            width: .7em;
+            height: .7em;
+            background: #222222;   
+        }
+        .react-multi-carousel-dot--active button{
+            background: #005BE4;
+        } 
+    } 
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
         .wrapper{
             width: 85%;
