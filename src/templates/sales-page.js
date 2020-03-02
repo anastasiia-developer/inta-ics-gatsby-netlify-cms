@@ -7,12 +7,11 @@ import Destinations from "../components/Destinations";
 import Clients from "../components/Clients";
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
-import Calculator from "../components/Calculator";
 import FormFooter from '../components/Footer/FormFooter'
 import News from "../components/mainPage/news";
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
-import CalculateHeader from "../components/delivery/CalculateHeader";
+import CalculateContainerHeader from "../components/CalculateContainerHeader";
 
 const Header = styled(TemplateHeader)`
     position: relative;
@@ -30,11 +29,6 @@ const Header = styled(TemplateHeader)`
         width: 100%;
     }
 `;
-
-const CalculateContainer = styled.div`
-    background: linear-gradient(98.88deg, #005BE4 4.62%, #4900E4 102.74%);
-    padding-bottom: 3em;
-`
 
 const Section = styled(Sections)`
     &:nth-child(odd){
@@ -60,9 +54,7 @@ export const SalesPageTemplate = ({
                 crumbLabel={title}
             />
             {location &&
-                <CalculateContainer>
-                    <CalculateHeader />
-                </CalculateContainer>
+                <CalculateContainerHeader/>
             }
             <Section
                 sections={sections}

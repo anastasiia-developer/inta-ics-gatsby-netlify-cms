@@ -48,6 +48,7 @@ const Container = styled.header`
     background-color: #0C0C0C;
     display: flex;
     flex-direction: column;
+    position: relative;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         padding: 5em 1em;
     }

@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Flags from "../Flags"
 import Arrow from "../../img/arrow.svg"
 import Tel from "../../img/tel.svg"
+import Email from "../../img/email.svg"
 
 const Wrapper = styled.section`
   background: #fff;
@@ -49,12 +50,10 @@ const Wrapper = styled.section`
     }
   }
   svg{
-    width: .7em;
-    height: .7em;
     position: absolute;
-    right: 1em;
+    right: .5em;
     path{
-    fill: #005BE4;
+        fill: #005BE4;
     }
   }
   .column{
@@ -184,7 +183,7 @@ const Wrapper = styled.section`
       }    
 
     svg, img{
-      width: 1.5em;
+      width: 1.2em;
       height: auto;
       position: static;
       top: auto;
@@ -286,6 +285,20 @@ const CalculateHeader = () => {
                         <Fragment>
                             <input type="text" name='phone' value='+380'/>
                             <Tel/>
+                        </Fragment>}
+                    arrowLine
+                    stateOptions={false}
+                    setOptions={false}
+                />
+                <CalculateBlock
+                    title="Email"
+                    option={false}
+                    flag={false}
+                    className="tel"
+                    options={
+                        <Fragment>
+                            <input type="text" name='email' value=''/>
+                            <Email/>
                         </Fragment>}
                     arrowLine
                     stateOptions={false}

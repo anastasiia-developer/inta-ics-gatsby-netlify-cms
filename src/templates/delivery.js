@@ -15,6 +15,7 @@ import Clients from "../components/Clients"
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
+import CalculateContainerHeader from "../components/CalculateContainerHeader";
 
 export const DeliveryTemplate = ({
                                      helmet,
@@ -25,7 +26,6 @@ export const DeliveryTemplate = ({
                                      sections,
                                      sectionText,
                                      mainpitch}) => {
-
     return (
         <Fragment>
             {helmet || ''}
@@ -37,8 +37,11 @@ export const DeliveryTemplate = ({
                 crumbLabel={title}
                 crumbLabelParent="Доставка"
                 crumbPathParent={false}
-                children={location && <CalculateHeader/>}
+                children={location && header.buttons.length < 0 &&  <CalculateHeader/>}
             />
+            {location && header.buttons.length > 0 &&
+                <CalculateContainerHeader/>
+            }
             <Sections
                 sections={sections}
             />

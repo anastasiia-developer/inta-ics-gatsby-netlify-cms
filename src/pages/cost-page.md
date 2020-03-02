@@ -8,7 +8,7 @@ header:
     - alt: cost-page
       image: /img/costbkg.png
   scopeInformation:
-    - image: /img/bay.svg
+    - image: /img/bay.png
       text: Покупка товаров со всего мира
     - image: /img/time3.png
       text: Поддержка 24/7

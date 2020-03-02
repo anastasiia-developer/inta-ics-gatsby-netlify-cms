@@ -35,7 +35,7 @@ const Blog = styled.div`
     position: relative;
     display: flex;
     width: 86%;
-    margin: -5% auto 0;
+    margin: -10% auto 0;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         width: 100%;
         margin: 0;

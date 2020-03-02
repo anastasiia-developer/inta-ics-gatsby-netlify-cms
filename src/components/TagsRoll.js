@@ -18,6 +18,7 @@ const List = styled.ul`
     padding: .5em 1em;
     margin-right: 1em;
     margin-bottom: 1em;
+    font-size: .9em;
     &:last-child{
         margin-right: 0;
     }

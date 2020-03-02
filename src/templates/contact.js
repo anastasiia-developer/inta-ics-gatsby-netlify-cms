@@ -134,7 +134,6 @@ const Popup = styled.div`
 `;
 
 const MorePhoto = ({photos, morePhotos, setMorePhotos}) =>
-
     <Popup isActive={morePhotos} onClick={() => setMorePhotos(false)}>
         <Carousel
             containerClass="wrapper"
