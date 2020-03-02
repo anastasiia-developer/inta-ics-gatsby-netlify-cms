@@ -30,15 +30,20 @@ const Container = styled.section`
             flex: 1;
             max-width: 200px;
             min-width: 12em;
+            &:hover .gatsby-image-wrapper{
+                transform: translateY(-1em);
+            }
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 font-size: .8em;
                 padding: 1em;
              }
-             .gatsby-image-wrapper{
+            .gatsby-image-wrapper{
                 max-width: 80px;
                 width: 80%;
                 margin: 0 auto;
-             }
+                transition: all .4s;
+                cursor: pointer; 
+            }
             h4{
                 font-weight: 700;
                 color: #474747;
