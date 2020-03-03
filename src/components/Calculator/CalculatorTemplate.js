@@ -178,38 +178,45 @@ const Wrapper = styled.div`
 `;
 
 
-const Constituents = ({title, category, setAmount, amount}) => {
+const Constituents = ({title, category, setAmount, amount, canChoose, name}) => {
     const [isActive, setActive] = useState(null);
     const [price, setPrice] = useState(0);
 
-    useEffect(() =>{
-        category.map((block, index) => {block.default && setActive(index); setAmount(block.price)} )
+    useEffect(() => {
+        category.forEach((item, key) => {
+
+            if(!!item.default) {
+                setActive(key);
+            }
+        }
+        )
     },[]);
 
-    const SetActive = (index, blockPrice) => {
-        setActive(isActive === index ? null : index);
-
-        if(isActive === null){
-            setAmount(amount + blockPrice)
-            setPrice(blockPrice)
-        }else if(isActive === index){
-            setAmount(amount-blockPrice)
-            setPrice(0)
-        }else if(isActive !== index){
-            setAmount(amount - price + blockPrice)
-            setPrice(blockPrice)
+    const SetActive = (key, blockPrice) => {
+        if(category.find(item => item.default === true)){
+            setActive(key);
+            if (isActive !== key) {
+                setAmount({...amount, [name]:blockPrice})
+            }
+        }else{
+            setActive(isActive === key ? null : key);
+            if(isActive === null) {
+                setAmount({...amount, [name]:blockPrice})
+            }else if(isActive === key) {
+                setAmount({...amount, [name]:0})
+            }
         }
-    }
+    };
 
     return (
         <div>
             <h3>{title}</h3>
             <div className="row categories__wrapper">
-                {category.map((block,index) => (
+                {category.map((block,key) => (
                     <Wrapper
-                        key={index}
-                        onClick={() => SetActive(index, block.price)}
-                        isActive={isActive === index}
+                        key={key}
+                        onClick={() => canChoose &&  SetActive(key, block.price)}
+                        isActive={!!canChoose ? isActive === key : true}
                         className="category">
                         <div className="image">
                             <PreviewCompatibleImage
@@ -229,9 +236,19 @@ const Constituents = ({title, category, setAmount, amount}) => {
 }
 
 const CalculatorTemplate = ({ data }) => {
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState({
+        typeArrive: 11,
+        storeServices: 0,
+        typeDeliver: 2,
+        moreServices: 0
+    });
     const [weight, setWeight] = useState('');
     const [isActive, setIsActive] = useState(false);
+
+    const formula = () => {
+        const { typeArrive, storeServices, typeDeliver, moreServices } = amount;
+        return (weight * typeArrive) + storeServices  + typeDeliver + moreServices;
+    };
 
     if(data){
         const { title, constituents } = data;
@@ -240,10 +257,12 @@ const CalculatorTemplate = ({ data }) => {
                 <h2 className="wrapper">{ title }</h2>
                 <div className="row-to-column wrapper">
                     <div className="row categories">
-                        {constituents.map((item, index) => (
+                        {constituents.map(item => (
                             <Constituents
-                                key={index}
+                                key={item.name}
+                                name={item.name}
                                 title={item.title}
+                                canChoose={item.canChoose}
                                 category={item.category}
                                 setAmount={setAmount}
                                 amount={amount}
@@ -256,15 +275,15 @@ const CalculatorTemplate = ({ data }) => {
                             <label>
                                 kg
                                 <input
-                                    value={weight}
-                                    onChange={(e)=>{setWeight(+e.target.value.replace(/[^\d]/g,'')); setIsActive(false)}}
+                                    value={weight === 0 ? '' : weight}
+                                    onChange={(e)=>{setWeight(+e.target.value.replace(/[^\d]/g,''))}}
                                     type="text"/>
                             </label>
                             <button
                                 onClick={() => setIsActive(true)}
                                 disabled={weight === 0 || weight === '' && true}>Рассчет стоимости</button>
                             <p>Итого стоимость доставки</p>
-                            <div className="amount">${isActive ? (weight * 11) + amount : 0 }</div>
+                            <div className="amount">${weight !== 0 && isActive ? formula()  : 0 }</div>
                             <div className="note">*Данный расчет является ориентировочным по тарифу Авиадоставки. Точная стоимость доставки будет зависеть от веса посылки и полного перечня заказанных услуг. Для более детальной информации обратитесь к менеджеру компании.</div>
                         </div>
                     </Form>

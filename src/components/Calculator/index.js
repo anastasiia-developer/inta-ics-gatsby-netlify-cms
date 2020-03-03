@@ -13,6 +13,8 @@ export default () => (
                           title
                           constituents {
                             title
+                            canChoose
+                            name
                             category {
                               nameCategory
                               price

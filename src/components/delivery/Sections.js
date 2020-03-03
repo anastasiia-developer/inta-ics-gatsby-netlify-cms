@@ -9,8 +9,9 @@ const Section = styled(About)`
     align-items: center;
     flex-direction: row-reverse;
     justify-content: space-between;
-    &:nth-child(odd){
-        background: #fff; 
+    background: #fff; 
+    &:nth-child(even){
+        background: #F0F5FD; 
         flex-direction: row;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             flex-direction: column-reverse;

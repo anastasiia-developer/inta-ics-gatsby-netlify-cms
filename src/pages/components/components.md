@@ -23,6 +23,7 @@ calculator:
         - image: /img/box1.png
           nameCategory: Готовый груз
           price: 0
+          default: true
         - image: /img/logistics.png
           nameCategory: Консолидация
           price: 1
@@ -30,12 +31,15 @@ calculator:
           nameCategory: Консолидация <p>+</p> стандартная проверка
           price: 2
       title: 'Вид складской услуги:'
+      canChoose: true
+      name: storeServices
     - category:
         - image: /img/plane.png
           nameCategory: Авиадоставка
           price: 11
           default: true
       title: 'Вид отправления:'
+      name: typeArrive
     - category:
         - image: /img/shipping1.png
           nameCategory: Курьером в руки
@@ -45,12 +49,15 @@ calculator:
           price: 2
           default: true
       title: 'Вид доставки:'
+      canChoose: true
+      name: typeDeliver
     - category:
         - image: /img/box.png
           nameCategory: Доп. упаковка
           price: 2
-          default: true
       title: Дополнительные услуги
+      canChoose: true
+      name: moreServices
   title: Рассчитайте стоимость доставки
 destinations:
   countries:
