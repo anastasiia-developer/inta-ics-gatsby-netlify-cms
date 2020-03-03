@@ -5,6 +5,7 @@ const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
   padding-bottom: 4em;
   color: #fff;
+  margin-bottom: -1px;
   h2{
     font-weight: 700;
     font-size: 2.7em;

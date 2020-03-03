@@ -42,7 +42,7 @@ export const SalesPageTemplate = ({
                                      location,
                                      header,
                                      sections,
-                                      mainpitch
+                                      seoSections
                                  }) => {
     return(
         <Layout>
@@ -70,7 +70,7 @@ export const SalesPageTemplate = ({
                 <Clients/>
             }
             <Reviews/>
-            <Article mainpitch={mainpitch}/>
+            <Article seoSections={seoSections}/>
             <FormFooter/>
         </Layout>
     )
@@ -87,7 +87,7 @@ const SalesPage = ({ data, location }) => {
             location={location}
             header={frontmatter.header}
             sections={frontmatter.sections}
-            mainpitch={frontmatter.mainpitch}
+            seoSections={frontmatter.seoSections}
         />
     )
 }
@@ -122,8 +122,18 @@ export const pageQuery = graphql`
                 }
             }
         }
-        mainpitch {
-          article
+        seoSections{
+          title
+          sections{
+            text
+            image{
+                childImageSharp {
+                  fluid(maxWidth: 500, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+            }
+          }
         }
       }
     }

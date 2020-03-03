@@ -18,9 +18,8 @@ import {ButtonGroup, ResponsiveCarousel} from "../components/CommonCarousel";
 import Carousel from "react-multi-carousel";
 import FormFooter from '../components/Footer/FormFooter'
 
-
 export const IndexPageTemplate = ({
-  mainpitch,
+  seoSections,
   description,
   location,
   title,
@@ -65,14 +64,14 @@ export const IndexPageTemplate = ({
     <Cargo/>
     <Clients/>
     <Reviews/>
-    <Article mainpitch={mainpitch}/>
+    <Article seoSections={seoSections}/>
     <FormFooter/>
   </Fragment>
 )
 
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
-  mainpitch: PropTypes.object,
+  seoSections: PropTypes.object,
   description: PropTypes.string,
   header: PropTypes.object,
   section: PropTypes.object,
@@ -90,13 +89,13 @@ const IndexPage = ({ data, location, pageContext }) => {
       <IndexPageTemplate
         title={frontmatter.title}
         heading={frontmatter.heading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         location={location}
         header={frontmatter.header}
         section={frontmatter.section}
         about={frontmatter.about}
         calculator={frontmatter.calculator}
+        seoSections={frontmatter.seoSections}
       />
     </Layout>
   )
@@ -168,8 +167,18 @@ export const pageQuery = graphql`
             }
           }
         }
-        mainpitch {
-          article
+        seoSections{
+          title
+          sections{
+            text
+            image{
+                childImageSharp {
+                  fluid(maxWidth: 500, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+            }
+          }
         }
       }
     }

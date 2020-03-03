@@ -25,7 +25,7 @@ export const DeliveryTemplate = ({
                                      location,
                                      sections,
                                      sectionText,
-                                     mainpitch}) => {
+                                     seoSections}) => {
     return (
         <Fragment>
             {helmet || ''}
@@ -54,7 +54,7 @@ export const DeliveryTemplate = ({
             <Cargo/>
             <Clients/>
             <Reviews/>
-            <Article mainpitch={mainpitch}/>
+            <Article seoSections={seoSections}/>
             <FormFooter/>
         </Fragment>
     )
@@ -70,6 +70,7 @@ DeliveryTemplate.propTypes = {
 
 const Delivery = ({ data, location }) => {
     const { frontmatter } = data.markdownRemark;
+    console.log(frontmatter.seoSections);
 
     return (
         <Layout>
@@ -89,7 +90,7 @@ const Delivery = ({ data, location }) => {
                 location={location}
                 sections={frontmatter.sections}
                 sectionText={frontmatter.sectionText}
-                mainpitch={frontmatter.mainpitch}
+                seoSections={frontmatter.seoSections}
             />
         </Layout>
     )
@@ -157,8 +158,18 @@ export const pageQuery = graphql`
             publicURL   
           }
         }
-        mainpitch {
-          article
+        seoSections{
+          title
+          sections{
+            text
+            image{
+                childImageSharp {
+                  fluid(maxWidth: 500, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+            }
+          }
         }
       }
     }

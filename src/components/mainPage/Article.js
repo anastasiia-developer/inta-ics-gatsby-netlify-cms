@@ -1,6 +1,6 @@
-import {HTMLContent} from "../Content";
 import React from "react";
 import styled from "styled-components";
+import Sections from "../delivery/Sections";
 
 const Section = styled.article`
     margin-top: 5em;    
@@ -10,18 +10,33 @@ const Section = styled.article`
         margin-top: 3em;    
         padding: 2em 1em;
     }
+    section{
+        justifay-content: center;
+        background: #F0F5FD;
+    }
+    .gatsby-image-wrapper{
+        width: 38%;
+    }
+    .description{
+        width: 59%;
+        .text {
+            padding: 0 2em 0 0;
+        }
+    }
     h2{
         color: #005BE4;
         font-weight: 500;
         margin-bottom: 1em;
         font-size: 1.55em;
+        text-align: center;
     }
     h3{
         font-weight: 500;
         margin-bottom: 1em;
     }
     .wrapper{
-        width: 70%;
+        margin: 0 auto;
+        width: 90%;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             width: 100%;
         }
@@ -41,12 +56,16 @@ const Section = styled.article`
     }
 `;
 
-const Article = ({mainpitch}) =>(
-    <Section>
-        <div className="wrapper">
-            <HTMLContent className="text" content={mainpitch.article}/>
-        </div>
-    </Section>
-);
+const Article = ({seoSections}) =>{
+    return(
+        <Section>
+            <h2>{seoSections.title}</h2>
+            <Sections
+                className='wrapper'
+                sections={seoSections.sections}
+            />
+        </Section>
+    );
+}
 
 export default Article
