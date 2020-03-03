@@ -44,7 +44,7 @@ export const Button = styled(Link)`
 `;
 const Container = styled.header`
     min-height: 100vh;
-    padding: 8em 0 5em;
+    padding: 8em 0 3em;
     background-color: #0C0C0C;
     display: flex;
     flex-direction: column;

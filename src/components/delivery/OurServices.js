@@ -29,21 +29,26 @@ const OurServices = () => (
             <HoverGradientInsideSvg
                 title="Проведение платежей"
                 svg={<Shopping/>}
+                link='/'
             />
             <HoverGradientInsideSvg
                 title="Поиск поставщика"
                 svg={<Search/>}
+                link='/'
             />
             <HoverGradientInsideSvg
                 title="Заказ товара из Китая"
+                link='/'
                 svg={<Truck/>}
             />
             <HoverGradientInsideSvg
                 title="Таможенное оформление груза"
+                link='/'
                 svg={<Clipboard/>}
             />
             <HoverGradientInsideSvg
                 title="Складские услуги"
+                link='/'
                 svg={<Warehouse/>}
             />
         </div>

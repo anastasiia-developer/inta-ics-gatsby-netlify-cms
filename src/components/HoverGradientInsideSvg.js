@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Shopping from "../img/shopping.svg";
-import React from "react";
+import React, {Fragment} from "react";
+import {Link} from "gatsby";
 
-const Block = styled.div`
+const Block = `
     flex: 1;
     margin: 0 .5em;
     padding: 2em 1em;
@@ -37,11 +37,27 @@ const Block = styled.div`
     }
 `;
 
-const HoverGradientInsideSvg = ({title, svg}) => (
-    <Block>
-        {svg}
-        <h4>{title}</h4>
-    </Block>
+const LinkBlock = styled(Link)`
+    ${Block}
+`;
+const DivBlock = styled.div`
+    ${Block}
+`;
+
+const HoverGradientInsideSvg = ({title, svg, link}) => (
+    <Fragment>
+        {link ?
+            <LinkBlock to={link}>
+                {svg}
+                <h4>{title}</h4>
+            </LinkBlock>
+            :
+            <DivBlock>
+                {svg}
+                <h4>{title}</h4>
+            </DivBlock>
+        }
+    </Fragment>
 );
 
 export default HoverGradientInsideSvg;

@@ -37,12 +37,13 @@ export const DeliveryTemplate = ({
                 crumbLabel={title}
                 crumbLabelParent="Доставка"
                 crumbPathParent={false}
-                children={location && header.buttons.length < 0 &&  <CalculateHeader/>}
+                children={location && !header.buttons &&  <CalculateHeader/>}
             />
-            {location && header.buttons.length > 0 &&
+            {location && header.buttons &&
                 <CalculateContainerHeader/>
             }
             <Sections
+                className={!header.buttons && 'only'}
                 sections={sections}
             />
             <SectionText

@@ -10,6 +10,11 @@ const Section = styled(About)`
     flex-direction: row-reverse;
     justify-content: space-between;
     background: #fff; 
+    &.only{
+        .text{
+            padding: 1em 1em 0 9em;
+        } 
+    }
     &:nth-child(even){
         background: #F0F5FD; 
         flex-direction: row;
@@ -38,6 +43,12 @@ const Section = styled(About)`
             width: 100%;
         }
     }
+    .text{
+        font-size: .9em;
+        li{
+            color: #3F3F3F;
+        }
+    }
     .list{
         padding: 2em 6.5em 4em;
         justify-content: space-between;
@@ -48,10 +59,11 @@ const Section = styled(About)`
         }
         li{
             align-items: center;
-            color: #878F9B;
+            color: #3F3F3F;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 margin-bottom: .5em;
             }
+            
             img{
                 height: 1em;
                 margin-right: 1em;
