@@ -17,7 +17,8 @@ export const CostPageTemplate = ({
                                   location,
                                   header,
                                   sections,
-                                  seoSections
+                                  seoSections,
+                                  barBckgImg
                                  }) => {
     return(
         <Layout>
@@ -33,6 +34,21 @@ export const CostPageTemplate = ({
             {location &&
                 <Fragment>
                     <Calculator/>
+                    <div
+                        style={{
+                            backgroundImage: `url(${
+                                !!barBckgImg.childImageSharp ? barBckgImg.childImageSharp.fluid.src : barBckgImg
+                            })`,
+                            width: '100%',
+                            height: '2em',
+                            margin: ' 4em auto',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'left center',
+                            backgroundSize: '55% auto'
+                        }}
+                        className='bar-bottom-bkg-img'
+                    >
+                    </div>
                     <Destinations/>
                 </Fragment>
             }
@@ -59,6 +75,8 @@ const CostPage = ({ data, location }) => {
             header={frontmatter.header}
             sections={frontmatter.sections}
             seoSections={frontmatter.seoSections}
+            barBckgImg={data.fileName}
+
         />
     )
 }
@@ -112,6 +130,13 @@ export const pageQuery = graphql`
                 }
             }
           }
+        }
+      }
+    }
+    fileName: file(relativePath: { eq: "calculateBkg.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200, maxHeight: 20) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

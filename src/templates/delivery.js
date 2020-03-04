@@ -70,7 +70,6 @@ DeliveryTemplate.propTypes = {
 
 const Delivery = ({ data, location }) => {
     const { frontmatter } = data.markdownRemark;
-    console.log(frontmatter.seoSections);
 
     return (
         <Layout>
