@@ -83,6 +83,7 @@ const SubNav = styled.nav`
           color: #000;
           margin-bottom: 1em;
           margin-left: 0;
+          white-space: nowrap;  
           @media(max-aspect-ratio: 3/3), (max-height: 500px){
             color: #fff;
             margin: ${props => props.isActiveSub ? '1.5em' : '0'} 0 0 0;
