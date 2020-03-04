@@ -21,22 +21,6 @@ const Section = styled.section`
             width: 90%;
         }
     }
-    .row{
-        align-items: center;
-    }
-    .line{
-        width: 80%;
-        margin-right: .5em;
-        hr{
-            background: #D6E5FB;
-            border: none;
-            height: .25em;
-            font-size: .7em;
-        }
-    }
-    img{
-        width: 2em;
-    }
 `;
 
 const SectionText = ({ sectionText }) => {
@@ -46,13 +30,6 @@ const SectionText = ({ sectionText }) => {
         <Section>
             <h2>{title}</h2>
             <HTMLContent className="text" content={text}/>
-            <div className="row">
-                <div className="line">
-                    <hr/>
-                    <hr/>
-                </div>
-                <img src={image.publicURL } alt={title} />
-            </div>
         </Section>
     )
 }

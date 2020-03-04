@@ -10,6 +10,7 @@ import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import Calculator from "../components/Calculator";
 import FormFooter from '../components/Footer/FormFooter'
+import BarBckgImgSectionText from '../components/BarBckgImgSectionText'
 
 export const CostPageTemplate = ({
                                   title,
@@ -34,21 +35,9 @@ export const CostPageTemplate = ({
             {location &&
                 <Fragment>
                     <Calculator/>
-                    <div
-                        style={{
-                            backgroundImage: `url(${
-                                !!barBckgImg.childImageSharp ? barBckgImg.childImageSharp.fluid.src : barBckgImg
-                            })`,
-                            width: '100%',
-                            height: '2em',
-                            margin: ' 4em auto',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'left center',
-                            backgroundSize: '55% auto'
-                        }}
-                        className='bar-bottom-bkg-img'
-                    >
-                    </div>
+                    <BarBckgImgSectionText
+                        image={barBckgImg}
+                    />
                     <Destinations/>
                 </Fragment>
             }

@@ -16,6 +16,7 @@ import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
+import BarBckgImgSectionText from "../components/BarBckgImgSectionText"
 
 export const DeliveryTemplate = ({
                                      helmet,
@@ -48,6 +49,9 @@ export const DeliveryTemplate = ({
             />
             <SectionText
                 sectionText={sectionText}
+            />
+            <BarBckgImgSectionText
+                image={sectionText.image}
             />
             <OurServices/>
             <Destinations />
@@ -154,7 +158,11 @@ export const pageQuery = graphql`
           text
           title
           image{
-            publicURL   
+            childImageSharp {
+                fluid(maxWidth: 1200, maxHeight: 20) {
+                  ...GatsbyImageSharpFluid
+                }
+            }  
           }
         }
         seoSections{
