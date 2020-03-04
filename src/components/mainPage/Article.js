@@ -16,11 +16,17 @@ const Section = styled.article`
     }
     .gatsby-image-wrapper{
         width: 38%;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            width: 100%;
+        }
     }
     .description{
         width: 59%;
         .text {
             padding: 0 2em 0 0;
+        }
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            width: 100%;
         }
     }
     h2{
