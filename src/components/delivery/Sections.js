@@ -35,8 +35,8 @@ const Section = styled(About)`
             display: flex;
             flex-direction: column;
         }
-     } 
-     .gatsby-image-wrapper{
+    } 
+    .gatsby-image-wrapper{
         flex: none;
         width: 48%;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
@@ -59,7 +59,9 @@ const Section = styled(About)`
         }
         li{
             align-items: center;
-            color: #3F3F3F;
+            color: #7C8696;
+            font-weight: 400;
+            font-size: .95em;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 margin-bottom: .5em;
             }

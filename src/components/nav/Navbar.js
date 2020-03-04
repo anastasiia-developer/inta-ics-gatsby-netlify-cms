@@ -7,8 +7,9 @@ import Language from './Language'
 import Delivery from './delivery'
 import Telegram from '../../img/social/telegram.svg'
 import Call from '../../img/call.svg'
-import BarContacts from "./BarContacts";
-import Help from "./help";
+import BarContacts from "./BarContacts"
+import Help from "./help"
+import Services from './services'
 
 const Navbar = () => {
     const [isActiveMob, setActiveMob] = useState(false);
@@ -54,12 +55,10 @@ const Navbar = () => {
                   setActiveMob={SetActiveMob}
                   isActiveMob={isActiveMob}
               />
-              <Link
-                  onClick={() => setActiveMob(!isActiveMob)}
-                  to="/about">
-                  Услуги
-
-              </Link>
+              <Services
+                  setActiveMob={SetActiveMob}
+                  isActiveMob={isActiveMob}
+              />
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
                   to="/about">

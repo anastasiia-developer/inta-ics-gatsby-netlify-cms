@@ -9,7 +9,7 @@ import SocialMedia from "./SocialMedia";
 
 export const Button = styled(Link)`
     align-items: center;
-    background: rgba(255, 255, 255, 0.09);
+    background: ${props => props.bckg ? 'rgba(255, 255, 255, 0.09)' : 'linear-gradient(90.55deg, #005BE4 0.01%, #4900E4 98.79%)'};
     border: none;
     font-weight: 700;
     padding: 1em 1.5em;
@@ -193,7 +193,8 @@ const TemplateHeader = ({
         <Button
             key={index}
             className="btn row"
-            to={btn.link}>
+            to={btn.link}
+            bckg={!header.logo}>
             {!header.logo &&
                 <img src="/img/logoMini.svg"
                      alt="logo Mini"

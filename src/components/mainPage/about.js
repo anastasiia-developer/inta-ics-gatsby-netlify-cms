@@ -17,8 +17,8 @@ const Section = styled.section`
             width: 100%;
         }    
         h2{
-            padding: 0 0 0 4em;
-            color: #005BE4;
+            padding: 0 0 0 3.5em;
+            color: ${props => props.hasChildren ? '#474747' : '#005BE4'};
             padding-bottom: 1em;
             font-weight: 500;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
@@ -54,22 +54,19 @@ const Section = styled.section`
    
 `;
 
-const About = ({ title, image, text, className, children }) => {
-
-    return(
-        <Section className={`row-to-column ${className}`}>
-            <div className="description">
-                <h2>{title}</h2>
-                <HTMLContent className="text" content={text}/>
-                {children}
-            </div>
-            <PreviewCompatibleImage
-                imageInfo={{
-                    image: image,
-                }}
-            />
-        </Section>
-    )
-};
+const About = ({ title, image, text, className, children }) => (
+    <Section className={`row-to-column ${className}`} hasChildren={!!children}>
+        <div className="description">
+            <h2>{title}</h2>
+            <HTMLContent className="text" content={text}/>
+            {children}
+        </div>
+        <PreviewCompatibleImage
+            imageInfo={{
+                image: image,
+            }}
+        />
+    </Section>
+)
 
 export default About

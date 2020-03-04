@@ -9,7 +9,6 @@ import FormFooter from "../components/Footer/FormFooter";
 const Wrapper = styled.div`
     header .btn{
         padding: 1em 2.5em;
-        background: linear-gradient(100.69deg,#005BE4 0%,#4900E4 100%);
     }
 `;
 
