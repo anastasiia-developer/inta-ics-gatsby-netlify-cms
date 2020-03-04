@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react";
 import {graphql} from "gatsby";
 import Layout from "../components/Layout";
 import Sections from "../components/delivery/Sections";
@@ -8,11 +8,11 @@ import Clients from "../components/Clients";
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
-import News from "../components/mainPage/news";
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
 import OurServices from "../components/delivery/OurServices";
+import Table from '../pages/services/Table';
 
 const Section = styled(Sections)`
     background: #F6F6F6;
@@ -36,6 +36,9 @@ const Section = styled(Sections)`
             margin: .5em 1em 0 0;
         }
     }
+    ul{
+        font-weight: 400;
+    }
     &:nth-child(odd){
         flex-direction: row-reverse;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
@@ -44,13 +47,14 @@ const Section = styled(Sections)`
     }
 `;
 
-export const SalesPageTemplate = ({
+export const ServicesPageTemplate = ({
                                       title,
                                       description,
                                       location,
                                       header,
                                       sections,
-                                      seoSections
+                                      seoSections,
+                                      table
                                   }) => {
     return(
         <Layout>
@@ -63,7 +67,10 @@ export const SalesPageTemplate = ({
                 crumbLabelParent="Услуги"
             />
             {location &&
-            <CalculateContainerHeader/>
+                <CalculateContainerHeader/>
+            }
+            {title === 'Поиск и проверка поставщика' &&
+                <Table/>
             }
             <Section
                 sections={sections}
@@ -85,10 +92,10 @@ export const SalesPageTemplate = ({
 };
 
 
-const SalesPage = ({ data, location }) => {
+const ServicesPage = ({ data, location }) => {
     const { frontmatter } = data.markdownRemark;
     return(
-        <SalesPageTemplate
+        <ServicesPageTemplate
             title={frontmatter.title}
             description={frontmatter.description}
             location={location}
@@ -99,11 +106,11 @@ const SalesPage = ({ data, location }) => {
     )
 }
 
-export default SalesPage;
+export default ServicesPage;
 
 export const pageQuery = graphql`
-  query ServicesPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "services" } }) {
+  query ServicesPageTemplate($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       frontmatter{
         title
         description
