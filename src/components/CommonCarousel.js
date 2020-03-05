@@ -7,6 +7,9 @@ const Arrow = styled.button`
     z-index: 1;
     top: 25%;
     opacity: ${props => props.isDisable && '.5'};
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        bottom: -1em;
+    }
     &:hover{
         background: ${props => props.isDisable && 'transparent'};
     }

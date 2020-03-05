@@ -75,6 +75,7 @@ const Wrapper = styled.div`
 const Section = styled.div`
     justify-content: space-between; 
     margin-top: -7em;
+    font-size: 1.5em;
     flex-wrap: wrap;
     background: #fff;
     align-items: flex-start;

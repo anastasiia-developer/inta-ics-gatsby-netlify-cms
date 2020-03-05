@@ -44,7 +44,7 @@ const DivBlock = styled.div`
     ${Block}
 `;
 
-const HoverGradientInsideSvg = ({title, svg, link}) => (
+const HoverGradientInsideSvg = ({title, svg, link, btnLink, description}) => (
     <Fragment>
         {link ?
             <LinkBlock to={link}>
@@ -52,9 +52,15 @@ const HoverGradientInsideSvg = ({title, svg, link}) => (
                 <h4>{title}</h4>
             </LinkBlock>
             :
-            <DivBlock>
+            <DivBlock className='hover-gradient'>
                 {svg}
                 <h4>{title}</h4>
+                {description &&
+                    <p>{description}</p>
+                }
+                {btnLink &&
+                    <Link to={btnLink}>Подробнее</Link>
+                }
             </DivBlock>
         }
     </Fragment>

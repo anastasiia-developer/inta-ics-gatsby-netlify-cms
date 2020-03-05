@@ -80,7 +80,7 @@ const Navbar = () => {
               </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/cost-page">
+                  to="/cost">
                   Стоимость
               </Link>
               <Link

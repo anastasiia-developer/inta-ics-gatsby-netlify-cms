@@ -82,7 +82,7 @@ export const ServicesPageTemplate = ({
             }
             <Cargo/>
             {location &&
-            <Clients/>
+                <Clients/>
             }
             <Reviews/>
             <Article seoSections={seoSections}/>
