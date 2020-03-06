@@ -1,5 +1,5 @@
 ---
-templateKey: delivery
+pageKey: delivery
 title: 'Авиадоставка грузов из Китая, США'
 crumbLabel: Авиадоставка
 name: air-delivery

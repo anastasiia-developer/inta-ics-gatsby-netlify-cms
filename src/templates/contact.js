@@ -271,7 +271,7 @@ export default Contact
 
 export const pageQuery = graphql`
   query ContactPage {
-    markdownRemark(frontmatter: { templateKey: { eq: "contact" } }) {      
+    markdownRemark(frontmatter: { pageKey: { eq: "contact" } }) {      
         frontmatter {
             title
             description

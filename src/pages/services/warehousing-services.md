@@ -1,5 +1,5 @@
 ---
-templateKey: services
+pageKey: services
 crumbLabel: Складские услуги
 title: Складские услуги
 description: >-

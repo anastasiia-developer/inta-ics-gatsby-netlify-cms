@@ -74,7 +74,7 @@ export default CostPage;
 
 export const pageQuery = graphql`
   query CostPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "cost-page" } }) {
+    markdownRemark(frontmatter: { pageKey: { eq: "cost-page" } }) {
       frontmatter{
         title
         description

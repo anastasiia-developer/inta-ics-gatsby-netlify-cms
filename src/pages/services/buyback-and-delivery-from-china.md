@@ -1,5 +1,5 @@
 ---
-templateKey: services
+pageKey: services
 crumbLabel: Выкуп и доставка из Китая
 title: Выкуп и доставка из Китая
 description: >-

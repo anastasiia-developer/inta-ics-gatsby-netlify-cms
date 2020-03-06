@@ -96,7 +96,7 @@ export default SalesPage;
 
 export const pageQuery = graphql`
   query SalesPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "sales-page" } }) {
+    markdownRemark(frontmatter: { pageKey: { eq: "sales-page" } }) {
       frontmatter{
         title
         description

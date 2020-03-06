@@ -171,7 +171,7 @@ export default Faq
 
 export const pageQuery = graphql`
   query FaqPage {
-    markdownRemark(frontmatter: { templateKey: { eq: "faq" } }) {      
+    markdownRemark(frontmatter: { pageKey: { eq: "faq" } }) {      
         frontmatter {
             title
             description

@@ -1,5 +1,5 @@
 ---
-templateKey: delivery
+pageKey: delivery
 title: Автодоставка
 crumbLabel: Автодоставка
 name: auto-delivery

@@ -1,13 +1,13 @@
 import React, {Fragment} from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import FormFooter from '../components/Footer/FormFooter'
-import TemplateHeader from "../components/TemplateHeader";
+import Layout from '../../components/Layout'
+import FormFooter from '../../components/Footer/FormFooter'
+import TemplateHeader from "../../components/TemplateHeader";
 import styled from "styled-components";
-import HoverGradientInsideSvg from '../components/HoverGradientInsideSvg'
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import Clients from "../components/Clients";
-import Reviews from "../components/Reviews";
+import HoverGradientInsideSvg from '../../components/HoverGradientInsideSvg'
+import PreviewCompatibleImage from "../../components/PreviewCompatibleImage";
+import Clients from "../../components/Clients";
+import Reviews from "../../components/Reviews";
 
 const Section = styled.section`
     margin-top: -10em;
@@ -261,8 +261,8 @@ const AboutPage = ({ data, location }) => {
 export default AboutPage
 
 export const aboutPageQuery = graphql`
-  query AboutPage {
-    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
+  query AboutPage($locale: String) {
+    markdownRemark(frontmatter: { pageKey: { eq: "about" }, locale: { eq: $locale } }) {
       frontmatter {
         title
         description

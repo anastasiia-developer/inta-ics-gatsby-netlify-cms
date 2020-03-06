@@ -1,5 +1,5 @@
 ---
-templateKey: services
+pageKey: services
 crumbLabel: Проведение платежей
 title: Проведение платежей
 description: >-

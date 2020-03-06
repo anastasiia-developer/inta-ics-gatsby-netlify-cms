@@ -1,5 +1,5 @@
 ---
-templateKey: contact
+pageKey: contact
 title: Контакты
 description: >-
     Оставьте свой номер и мы вам перезвоним

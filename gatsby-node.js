@@ -2,6 +2,8 @@ const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const locales = require('./src/data/locales')
+
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -16,8 +18,9 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
               templateKey
+              locale
+              tags
             }
           }
         }
@@ -32,25 +35,29 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach((edge, index) => {
-      const id = edge.node.id;
+      const locale = edge.node.frontmatter.locale
+      if (edge.node.frontmatter.templateKey != null) {
+        const id = edge.node.id;
 
-      const contextPost = edge.node.frontmatter.templateKey === 'blog-post' && {
-        next: index === 0 ? null : posts[index - 1].node.fields.slug,
-        prev: index === (posts.length - 1) ? null : posts[index + 1].node.fields.slug,
+        const contextPost = edge.node.frontmatter.templateKey === 'blog-post' && {
+          next: index === 0 ? null : posts[index - 1].node.fields.slug,
+          prev: index === (posts.length - 1) ? null : posts[index + 1].node.fields.slug,
+        }
+
+        createPage({
+          path: edge.node.fields.slug,
+          tags: edge.node.frontmatter.tags,
+          component: path.resolve(
+              `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          ),
+          // additional data can be passed via context
+          context: {
+            id,
+            locale,
+            ...contextPost
+          },
+        })
       }
-
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-          ...contextPost
-        },
-      })
     })
 
     const postsPerPage = 10;
@@ -95,11 +102,35 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+
+  return new Promise(resolve => {
+    deletePage(page)
+
+    Object.keys(locales).map(lang => {
+      const localizedPath = locales[lang].default ? page.path : locales[lang].path + page.path
+      console.log('localizedPath', localizedPath)
+
+      return createPage({
+        ...page,
+        path: localizedPath,
+        context: {
+          locale: lang,
+        },
+      })
+    })
+    resolve()
+  })
+}
+
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
-
   if (node.internal.type === `MarkdownRemark`) {
+
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,

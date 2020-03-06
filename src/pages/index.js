@@ -82,8 +82,9 @@ IndexPageTemplate.propTypes = {
   }),
 };
 
-const IndexPage = ({ data, location, pageContext }) => {
+const Index = ({ data, location, pageContext }) => {
   const { frontmatter } = data.markdownRemark;
+
   return (
     <Layout>
       <IndexPageTemplate
@@ -101,7 +102,7 @@ const IndexPage = ({ data, location, pageContext }) => {
   )
 }
 
-IndexPage.propTypes = {
+Index.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -110,11 +111,11 @@ IndexPage.propTypes = {
   location: PropTypes.object
 }
 
-export default IndexPage
+export default Index
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+  query IndexPageTemplate($locale: String) {
+    markdownRemark(frontmatter: { pageKey: { eq: "index-page" }, locale: { eq: $locale } }) {
       frontmatter {
         title
         description

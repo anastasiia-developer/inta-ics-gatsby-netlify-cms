@@ -133,7 +133,7 @@ export default Reviews
 
 export const pageQuery = graphql`
   query ReviewsPage {
-    markdownRemark(frontmatter: { templateKey: { eq: "reviews" } }) {      
+    markdownRemark(frontmatter: { pageKey: { eq: "reviews" } }) {      
         frontmatter {
             title
             description

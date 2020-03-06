@@ -1,5 +1,5 @@
 ---
-templateKey: services
+pageKey: services
 crumbLabel: Мониторинг цен
 title: Мониторинг цен
 description: >-

@@ -1,5 +1,5 @@
 ---
-templateKey: reviews
+pageKey: reviews
 title: Отзывы
 crumbLabel: Отзывы
 description: >-

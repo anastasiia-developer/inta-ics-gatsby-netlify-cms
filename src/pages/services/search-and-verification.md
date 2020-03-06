@@ -1,5 +1,5 @@
 ---
-templateKey: services
+pageKey: services
 crumbLabel: Поиск и проверка поставщика
 title: Поиск и проверка поставщика
 description: >-

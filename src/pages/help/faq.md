@@ -1,5 +1,5 @@
 ---
-templateKey: faq
+pageKey: faq
 title: Часто задаваемые вопросы
 crumbLabel: FAQ
 name: faq
