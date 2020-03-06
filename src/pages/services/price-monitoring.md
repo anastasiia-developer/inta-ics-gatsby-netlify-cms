@@ -1,13 +1,13 @@
 ---
 templateKey: services
-crumbLabel: Таможенное оформление
-title: Таможенное оформление
+crumbLabel: Мониторинг цен
+title: Мониторинг цен
 description: >-
     Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым клиентом, независимо от объёмов его грузопотока. Закажите консультацию и начнем сотрудничество прямо сейчас!
 header:
   images:
     - alt: cost-page
-      image: /img/customs-clearance-header.png
+      image: /img/price-monitoring-header.png
   scopeInformation:
     - image: /img/time.png
       text: Сроки доставки

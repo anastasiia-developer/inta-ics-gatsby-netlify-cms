@@ -8,14 +8,14 @@ import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
 import Svg from '../img/arrowTop.svg'
 
-const ArrowTop = styled(Svg)`
+const ArrowTop = styled.div`
     position: fixed;
     width: 4em;
     bottom: 1em;
     right: 1em;
     z-index: 2;
     cursor: pointer;
-    display: ${props => props.isVisible ? 'block' : 'none'}
+    display: ${props => props.isActive ? 'block' : 'none'}
 `;
 
 const TemplateWrapper = ({ children }) => {
@@ -55,7 +55,10 @@ const TemplateWrapper = ({ children }) => {
                 behavior: "smooth"
                 })}
           }
-          isVisible={isVisible}/>
+          isActive={isVisible}
+      >
+          <Svg/>
+      </ArrowTop>
       <div>{children}</div>
       <Footer />
     </div>

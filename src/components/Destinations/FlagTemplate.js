@@ -5,9 +5,8 @@ const FlagTemplate = ({ countries, setOptions, stateOptions, link }) => {
     if(countries){
         return(
             <div className="row flags">
-                {countries.map((item, index) => (
-                    <Fragment>
-                        {link ?
+                {countries.map((item, index) =>{
+                    return  link ?
                             <Link
                                 key={index}
                                 className="row"
@@ -25,10 +24,7 @@ const FlagTemplate = ({ countries, setOptions, stateOptions, link }) => {
                                 <img src={item.flag.publicURL} alt="flag"/>
                                 <p>{item.country}</p>
                             </div>
-                        }
-                    </Fragment>
-
-                ))}
+                })}
             </div>
         )}
     else{

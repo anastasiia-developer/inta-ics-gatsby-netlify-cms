@@ -16,6 +16,11 @@ import Table from '../pages/services/Table';
 
 const Section = styled(Sections)`
     background: #F6F6F6;
+    flex-direction: row-reverse;
+    &:nth-child(even){
+        flex-direction: row-reverse;
+        background: #F6F6F6;
+    }
     .description h2{
         color: #393939;
     }
@@ -25,7 +30,7 @@ const Section = styled(Sections)`
             width: 100%;
         }
     }
-    .custom-list {
+    .custom-list{
         padding-left: 0;
         .row{
             align-items: flex-start;
@@ -39,12 +44,7 @@ const Section = styled(Sections)`
     ul{
         font-weight: 400;
     }
-    &:nth-child(odd){
-        flex-direction: row-reverse;
-        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-            flex-direction: column-reverse;
-        }
-    }
+    
 `;
 
 export const ServicesPageTemplate = ({
@@ -54,7 +54,6 @@ export const ServicesPageTemplate = ({
                                       header,
                                       sections,
                                       seoSections,
-                                      table
                                   }) => {
     return(
         <Layout>
@@ -74,7 +73,6 @@ export const ServicesPageTemplate = ({
             }
             <Section
                 sections={sections}
-                children={true}
             />
             <OurServices/>
             {location &&

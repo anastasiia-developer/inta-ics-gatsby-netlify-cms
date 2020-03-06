@@ -1,13 +1,13 @@
 ---
 templateKey: services
-crumbLabel: Таможенное оформление
-title: Таможенное оформление
+crumbLabel: Складские услуги
+title: Складские услуги
 description: >-
     Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым клиентом, независимо от объёмов его грузопотока. Закажите консультацию и начнем сотрудничество прямо сейчас!
 header:
   images:
     - alt: cost-page
-      image: /img/customs-clearance-header.png
+      image: /img/warehousing-services-header.png
   scopeInformation:
     - image: /img/time.png
       text: Сроки доставки

@@ -83,6 +83,9 @@ const Section = styled.section`
 const OurValues = styled.section`
     width: 75%;
     padding: 1em 0 6em;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        width: 90%;
+    }
     h2{
         font-weight: 500;
         font-size: 1.8em;
@@ -102,6 +105,11 @@ const OurValues = styled.section`
         margin: 0;
         color: #005BE4;
     }
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        .hover-gradient{
+            min-width: auto;
+        }
+    }
     .container{
         position: relative;
         &:hover .number{
@@ -110,6 +118,8 @@ const OurValues = styled.section`
         }
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             margin-bottom: 1em;
+            display: flex;
+            width: 100%;
         }
     }    
     .number{
@@ -119,7 +129,12 @@ const OurValues = styled.section`
         margin-left: .2em;
         transition: all .4s;
         position: absolute;
-        transform: translateY(-65%)
+        transform: translateY(-65%);
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            position: relative;
+            margin: 0 .5em 0 0;
+            transform: none;
+        }
     }
 `;
 
