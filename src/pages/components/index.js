@@ -1,11 +1,11 @@
 import React, {Fragment} from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import CalculatorTemplate from '../components/Calculator/CalculatorTemplate'
-import StorageTemplate from '../components/Storage/StorageTemplate'
-import DestinationsTemplate from '../components/Destinations/DestinationsTemplate'
-import ClientsTemplate from '../components/Clients/ClientsTemplate'
-import ReviewsTemplate from "../components/Reviews/ReviewsTemplate";
+import Layout from '../../components/Layout'
+import CalculatorTemplate from '../../components/Calculator/CalculatorTemplate'
+import StorageTemplate from '../../components/Storage/StorageTemplate'
+import DestinationsTemplate from '../../components/Destinations/DestinationsTemplate'
+import ClientsTemplate from '../../components/Clients/ClientsTemplate'
+import ReviewsTemplate from "../../components/Reviews/ReviewsTemplate";
 
 export const ComponentsCommonTemplate = ({
                                       calculator,
@@ -22,11 +22,11 @@ export const ComponentsCommonTemplate = ({
     </Fragment>
 )
 
-const ComponentsCommon = ({ data }) => {
+const Index = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout>
+        <Layout location={location} local={pageContext.locale}>
             <ComponentsCommonTemplate
                 calculator={frontmatter.calculator}
                 storage={frontmatter.storage}
@@ -39,11 +39,11 @@ const ComponentsCommon = ({ data }) => {
 }
 
 
-export default ComponentsCommon
+export default Index
 
 export const pageQuery = graphql`
-  query ComponentsCommon {
-    markdownRemark(frontmatter: { templateKey: { eq: "components-common" } }) {
+  query ComponentsCommon($locale: String) {
+    markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: $locale } }) {
       frontmatter {
         title
         description

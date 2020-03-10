@@ -4,7 +4,7 @@ import {graphql, useStaticQuery} from "gatsby";
 export default ({stateOptions, setOptions}) => {
     const data = useStaticQuery(graphql`
     query Flags {
-       markdownRemark(frontmatter: { templateKey: { eq: "components-common" } }) {
+       markdownRemark(frontmatter: { pageKey: { eq: "components-common" } }) {
           frontmatter {
             destinations{
               countries{

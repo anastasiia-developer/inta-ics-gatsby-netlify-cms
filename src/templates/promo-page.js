@@ -45,7 +45,7 @@ export const SalesPageTemplate = ({
                                       seoSections
                                  }) => {
     return(
-        <Layout>
+        <Fragment>
             <Header
                 title={title}
                 description={description}
@@ -73,15 +73,16 @@ export const SalesPageTemplate = ({
             <Reviews/>
             <Article seoSections={seoSections}/>
             <FormFooter/>
-        </Layout>
+        </Fragment>
     )
 };
 
 
-const Promo = ({ data, location }) => {
+const Promo = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return(
+        <Layout location={location} local={pageContext.locale}>
         <SalesPageTemplate
             title={frontmatter.title}
             description={frontmatter.description}
@@ -90,14 +91,15 @@ const Promo = ({ data, location }) => {
             sections={frontmatter.sections}
             seoSections={frontmatter.seoSections}
         />
+        </Layout>
     )
 }
 
 export default Promo;
 
 export const pageQuery = graphql`
-  query SalesPageTemplate {
-    markdownRemark(frontmatter: { pageKey: { eq: "promo-page" } }) {
+  query SalesPageTemplate($locale: String) {
+    markdownRemark(frontmatter: { templateKey: { eq: "promo-page" }, locale: { eq: $locale } }) {
       frontmatter{
         title
         description

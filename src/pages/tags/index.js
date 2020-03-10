@@ -11,9 +11,11 @@ const TagsPage = ({
       siteMetadata: { title },
     },
   },
-}) => {    console.log('tag page');
+    location,
+    pageContext
+}) => {
    return (
-  <Layout>
+  <Layout location={location} local={pageContext.locale}>
     <section className="section">
       <Helmet title={`Tags | ${title}`} />
       <div className="container content">
@@ -42,13 +44,13 @@ const TagsPage = ({
 export default TagsPage
 
 export const tagPageQuery = graphql`
-  query TagsQuery {
+  query TagsQuery($locale: String) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(limit: 1000) {
+    allMarkdownRemark(limit: 1000, filter: {frontmatter: {locale: {eq: $locale}}}) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

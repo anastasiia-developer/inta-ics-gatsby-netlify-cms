@@ -1,7 +1,9 @@
 ---
-pageKey: promo-page
-title: Акции
-locale: ua
+templateKey: promo-page
+title: RuАкции
+crumbLabel: Новые клиенты
+locale: ru
+name: new-clients
 description: >-
     Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым клиентом, независимо от объёмов его грузопотока. Закажите консультацию и начнем сотрудничество прямо сейчас!
 header:

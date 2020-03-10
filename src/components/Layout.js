@@ -47,7 +47,9 @@ const TemplateWrapper = ({ children, local, location }) => {
           content={`${withPrefix('/')}img/bkgr-air.jpg`}
         />
       </Helmet>
-      <Navbar local={local} location={location}/>
+        {location &&
+            <Navbar local={local} location={location}/>
+        }
       <ArrowTop
           onClick={()=>{
               window.scrollTo({

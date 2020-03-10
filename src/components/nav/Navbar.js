@@ -13,6 +13,8 @@ import UaHelp from "./help/ua"
 import RuHelp from "./help/ru"
 import UaServices from './services/ua.js'
 import RuServices from './services/ru.js'
+import UaPromo from './promo/ua.js'
+import RuPromo from './promo/ru.js'
 
 const Navbar = ({local, location}) => {
     const [isActiveMob, setActiveMob] = useState(false);
@@ -89,20 +91,28 @@ const Navbar = ({local, location}) => {
                   Блог
               </Link>
               {local === 'ua' ?
-                  <UaHelp
-                      setActiveMob={SetActiveMob}
-                      isActiveMob={isActiveMob}
-                  /> :
-                  <RuHelp
-                      setActiveMob={SetActiveMob}
-                      isActiveMob={isActiveMob}
-                  />
+                  <Fragment>
+                      <UaHelp
+                          setActiveMob={SetActiveMob}
+                          isActiveMob={isActiveMob}
+                      />
+                      <UaPromo
+                          setActiveMob={SetActiveMob}
+                          isActiveMob={isActiveMob}
+                      />
+                  </Fragment>
+                  :
+                  <Fragment>
+                      <RuHelp
+                          setActiveMob={SetActiveMob}
+                          isActiveMob={isActiveMob}
+                      />
+                      <UaPromo
+                          setActiveMob={SetActiveMob}
+                          isActiveMob={isActiveMob}
+                      />
+                  </Fragment>
               }
-              {/*<Link*/}
-              {/*    onClick={() => setActiveMob(!isActiveMob)}*/}
-              {/*    to="/promos/">*/}
-              {/*    Акции*/}
-              {/*</Link>*/}
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
                   to={`${lang}/cost`}>

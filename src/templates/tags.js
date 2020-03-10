@@ -20,7 +20,7 @@ class TagRoute extends React.Component {
       totalCount === 1 ? '' : 's'
     } tagged with “${tag}”`
     return (
-      <Layout>
+      <Layout location={this.props.location} local={this.props.pageContext.locale}>
         <section className="section tags">
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">
@@ -46,7 +46,7 @@ class TagRoute extends React.Component {
 export default TagRoute
 
 export const tagPageQuery = graphql`
-  query TagPage($tag: String) {
+  query TagPage($tag: String, $locale: String) {
     site {
       siteMetadata {
         title
@@ -55,7 +55,7 @@ export const tagPageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { tags: { in: [$tag] }, locale: { eq: $locale } } }
     ) {
       totalCount
       edges {

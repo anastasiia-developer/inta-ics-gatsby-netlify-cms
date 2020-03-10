@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ComponentsCommonTemplate } from '../../templates/components-common'
+import { ComponentsCommonTemplate } from '../../pages/components'
 
 const ComponentsCommonPreview = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();

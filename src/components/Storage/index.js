@@ -6,7 +6,7 @@ export default () => (
     <StaticQuery
         query={graphql`
             query StorageQuery{
-                markdownRemark(frontmatter: { templateKey: { eq: "components-common" } }) {
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" } }) {
                     frontmatter {
                         storage{
                           flag{

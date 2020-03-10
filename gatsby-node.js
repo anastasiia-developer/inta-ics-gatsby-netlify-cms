@@ -79,25 +79,46 @@ exports.createPages = ({ actions, graphql }) => {
     // });
 
     // Tag pages:
-    let tags = []
+    let tagsRu = [];
+    let tagsUa = [];
     // Iterate through each post, putting all found tags into `tags`
     posts.forEach(edge => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags)
+
+      if (edge.node.frontmatter.tags != null) {
+        if (edge.node.frontmatter.locale === 'ru') {
+          tagsRu = tagsRu.concat(edge.node.frontmatter.tags)
+        } else {
+          tagsUa = tagsUa.concat(edge.node.frontmatter.tags)
+        }
       }
-    })
+    });
     // Eliminate duplicate tags
-    tags = _.uniq(tags)
+    tagsRu = _.uniq(tagsRu);
+    tagsUa = _.uniq(tagsUa);
 
     // Make tag pages
-    tags.forEach(tag => {
+    tagsRu.forEach(tag => {
+      const tagPath = `ru/tags/${_.kebabCase(tag)}/`
+
+      createPage({
+        path: tagPath,
+        component: path.resolve(`src/templates/tags.js`),
+        context: {
+          locale: 'ru',
+          tagsRu,
+        },
+      })
+    });
+
+    tagsUa.forEach(tag => {
       const tagPath = `/tags/${_.kebabCase(tag)}/`
 
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tags.js`),
         context: {
-          tag,
+          locale: 'ua',
+          tagsUa,
         },
       })
     })

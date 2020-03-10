@@ -1,6 +1,6 @@
 ---
 pageKey: components-common
-locale: ua
+locale: ru
 title: Общие компонентны для всех сртраниц
 name: components
 description: >-
