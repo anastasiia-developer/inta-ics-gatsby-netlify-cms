@@ -1,17 +1,19 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Fragment} from 'react'
 import { Link } from 'gatsby'
 import Navigation from './styled'
 import Search from './Search'
 import Login from './Login'
 import Language from './Language'
-import Delivery from './delivery'
+import RuDelivery from './delivery/ru'
+import UaDelivery from './delivery/ua'
 import Telegram from '../../img/social/telegram.svg'
 import Call from '../../img/call.svg'
 import BarContacts from "./BarContacts"
 import Help from "./help"
-import Services from './services'
+import UaServices from './services/ua.js'
+import RuServices from './services/ru.js'
 
-const Navbar = () => {
+const Navbar = ({local, location}) => {
     const [isActiveMob, setActiveMob] = useState(false);
 
     const SetActiveMob = () => {
@@ -22,6 +24,7 @@ const Navbar = () => {
         document.documentElement.style.overflowY = isActiveMob ? 'hidden' : 'unset';
 
     }, [isActiveMob ]);
+    const lang = local === 'ua' ? '' : local;
 
     return (
       <Navigation
@@ -42,7 +45,7 @@ const Navbar = () => {
             isActive={isActiveMob}
         />
         <Link
-            to="/"
+            to={`/${lang}`}
             className="logo"
             title="Logo">
           <img
@@ -51,54 +54,69 @@ const Navbar = () => {
               />
         </Link>
           <div className="row-to-column navigation__list">
-              <Delivery
-                  setActiveMob={SetActiveMob}
-                  isActiveMob={isActiveMob}
-              />
-              <Services
-                  setActiveMob={SetActiveMob}
-                  isActiveMob={isActiveMob}
-              />
+              {local === 'ua'?
+                  <Fragment>
+                      <UaDelivery
+                          setActiveMob={SetActiveMob}
+                          isActiveMob={isActiveMob}
+                      />
+                      <UaServices
+                          setActiveMob={SetActiveMob}
+                          isActiveMob={isActiveMob}
+                      />
+                  </Fragment>
+                  :
+                  <Fragment>
+                      <RuDelivery
+                          setActiveMob={SetActiveMob}
+                          isActiveMob={isActiveMob}
+                      />
+                      <RuServices
+                          setActiveMob={SetActiveMob}
+                          isActiveMob={isActiveMob}
+                      />
+                  </Fragment>
+              }
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/about">
+                  to={`${lang}/about`}>
                   О компании
               </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/blog/">
+                  to={`${lang}/blog/`}>
                   Блог
               </Link>
               <Help
                 setActiveMob={SetActiveMob}
                 isActiveMob={isActiveMob}
               />
+              {/*<Link*/}
+              {/*    onClick={() => setActiveMob(!isActiveMob)}*/}
+              {/*    to="/promos/">*/}
+              {/*    Акции*/}
+              {/*</Link>*/}
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/sales">
-                  Акции
-              </Link>
-              <Link
-                  onClick={() => setActiveMob(!isActiveMob)}
-                  to="/cost">
+                  to={`${lang}/cost`}>
                   Стоимость
               </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to="/contact">
+                  to={`${lang}/contact`}>
                   Контакты
               </Link>
         </div>
         <Search isActive={isActiveMob}/>
-        <div className="row container" onClick={() => setActiveMob(!isActiveMob)}>
-            <Link to="/" className="row circle">
+        <div className="row container" >
+            <Link to="/" className="row circle" onClick={() => setActiveMob(!isActiveMob)}>
                 <Telegram />
             </Link>
-            <Link to="/" className="row circle call">
+            <Link to="/" className="row circle call" onClick={() => setActiveMob(!isActiveMob)}>
                 <Call />
             </Link>
-            <Login />
-            <Language />
+            <Login onClick={() => setActiveMob(!isActiveMob)}/>
+            <Language local={local} location={location}/>
         </div>
       </Navigation>
     )

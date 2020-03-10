@@ -1,6 +1,6 @@
 module.exports = {
     ua: {
-        path: 'ua',
+        path: '',
         locale: 'Ukraine',
         default: true,
     },

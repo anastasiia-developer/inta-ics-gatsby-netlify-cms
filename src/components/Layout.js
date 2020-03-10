@@ -18,7 +18,7 @@ const ArrowTop = styled.div`
     display: ${props => props.isActive ? 'block' : 'none'}
 `;
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, local, location }) => {
     const { title, description } = useSiteMetadata();
     const [isVisible, setVisible] = useState(false);
 
@@ -31,7 +31,7 @@ const TemplateWrapper = ({ children }) => {
   return (
     <div>
       <Helmet>
-        <html lang="ru" />
+        <html lang={local} />
         <title>{title}</title>
         <meta name="description" content={description} />
         <link
@@ -47,7 +47,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/bkgr-air.jpg`}
         />
       </Helmet>
-      <Navbar/>
+      <Navbar local={local} location={location}/>
       <ArrowTop
           onClick={()=>{
               window.scrollTo({

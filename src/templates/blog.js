@@ -192,14 +192,15 @@ BlogIndexPage.propTypes = {
 export default BlogIndexPage
 
 export const pageQuery = graphql`
-  query BlogPage($skip: Int!, $limit: Int!) {
+  query BlogPage($skip: Int!, $limit: Int!, $locale: String) {
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___date]}, 
       limit: $limit, 
       skip: $skip, 
       filter: {
       frontmatter: {
-        templateKey: {eq: "blog-post"}, 
+        templateKey: {eq: "blog-post"},
+        locale: { eq: $locale } 
       }
     }) {
       edges {
@@ -226,7 +227,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(frontmatter: { templateKey: { eq: "blog" } }) {
+    markdownRemark(frontmatter: { 
+        templateKey: { eq: "blog" }, 
+        locale: { eq: $locale } 
+        }) {
       id
       frontmatter {
         title

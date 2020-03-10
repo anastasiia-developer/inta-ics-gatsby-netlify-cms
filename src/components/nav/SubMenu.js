@@ -104,7 +104,7 @@ const SubNav = styled.nav`
         }
 `;
 
-const SubMenu = ({parentName, list, setActiveMob, isActiveMob}) => {
+const SubMenu = ({parentName, list, setActiveMob, isActiveMob, startPath}) => {
     const [isActiveSub, setActiveSub] = useState(false);
 
     return(
@@ -119,7 +119,7 @@ const SubMenu = ({parentName, list, setActiveMob, isActiveMob}) => {
                     <Link
                         key={index}
                         onClick={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
-                        to={link.fields.slug}>
+                        to={startPath+link.frontmatter.name}>
                         {link.frontmatter.crumbLabel}
                         <ArrowLine/>
                     </Link>

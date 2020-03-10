@@ -1,5 +1,7 @@
 ---
-pageKey: services
+templateKey: services
+locale: ua
+name: price-monitoring
 crumbLabel: Мониторинг цен
 title: Мониторинг цен
 description: >-

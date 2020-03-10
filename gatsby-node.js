@@ -111,7 +111,6 @@ exports.onCreatePage = ({ page, actions }) => {
 
     Object.keys(locales).map(lang => {
       const localizedPath = locales[lang].default ? page.path : locales[lang].path + page.path
-      console.log('localizedPath', localizedPath)
 
       return createPage({
         ...page,

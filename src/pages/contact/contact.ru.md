@@ -1,6 +1,7 @@
 ---
 pageKey: contact
-title: Контакты
+locale: ru
+title: RUКонтакты
 description: >-
     Оставьте свой номер и мы вам перезвоним
 header:

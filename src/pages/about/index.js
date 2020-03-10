@@ -174,7 +174,7 @@ export const AboutPageTemplate = ({
                                       location,
                                       weSpecialize,
                                       ourValues,
-                                      sectionImg
+                                      sectionImg,
                                   }) => {
   return (
       <Fragment>
@@ -239,11 +239,11 @@ export const AboutPageTemplate = ({
       )
 }
 
-const AboutPage = ({ data, location }) => {
+const AboutPage = ({ data, location, pageContext }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout local={pageContext.locale} location={location}>
       <AboutPageTemplate
         title={frontmatter.title}
         description={frontmatter.description}

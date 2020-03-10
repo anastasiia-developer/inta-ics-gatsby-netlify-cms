@@ -1,17 +1,17 @@
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import {graphql} from "gatsby";
 import React, {Fragment, useState} from "react";
-import TemplateHeader from "../components/TemplateHeader";
-import News from "../components/mainPage/news";
-import Form from "../pages/contact/form";
-import BarContacts from "../components/nav/BarContacts";
+import TemplateHeader from "../../components/TemplateHeader";
+import News from "../../components/mainPage/news";
+import Form from "./form";
+import BarContacts from "../../components/nav/BarContacts";
 import styled from "styled-components";
-import Store from "../components/store";
-import FormFooter from '../components/Footer/FormFooter'
-import {HTMLContent} from "../components/Content";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import Store from "../../components/store";
+import FormFooter from '../../components/Footer/FormFooter'
+import {HTMLContent} from "../../components/Content";
+import PreviewCompatibleImage from "../../components/PreviewCompatibleImage";
 import Carousel from "react-multi-carousel";
-import {ButtonGroup, ResponsiveCarousel} from "../components/CommonCarousel";
+import {ButtonGroup, ResponsiveCarousel} from "../../components/CommonCarousel";
 
 const Wrapper = styled.div`
     .bar-contacts{
@@ -250,11 +250,12 @@ export const ContactPageTemplate = ({
         <FormFooter/>
     </Wrapper>
 
-const Contact = ({ data, location }) => {
+const ContactPage = ({ data, location, pageContext }) => {
+    console.log(data)
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout>
+        <Layout local={pageContext.locale} location={location}>
             <ContactPageTemplate
                 title={frontmatter.title}
                 description={frontmatter.description}
@@ -267,11 +268,11 @@ const Contact = ({ data, location }) => {
     )
 }
 
-export default Contact
+export default ContactPage
 
 export const pageQuery = graphql`
-  query ContactPage {
-    markdownRemark(frontmatter: { pageKey: { eq: "contact" } }) {      
+  query ContactPage($locale: String) {
+    markdownRemark(frontmatter: { pageKey: { eq: "contact" }, locale: { eq: $locale }}) {      
         frontmatter {
             title
             description

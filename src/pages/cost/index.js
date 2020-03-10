@@ -1,16 +1,16 @@
 import React, {Fragment} from "react";
 import {graphql} from "gatsby";
-import Layout from "../components/Layout";
-import Header from "../components/delivery/Header";
-import Sections from "../components/delivery/Sections";
-import Cargo from "../components/mainPage/cargo";
-import Destinations from "../components/Destinations";
-import Clients from "../components/Clients";
-import Reviews from "../components/Reviews";
-import Article from "../components/mainPage/Article";
-import Calculator from "../components/Calculator";
-import FormFooter from '../components/Footer/FormFooter'
-import BarBckgImgSectionText from '../components/BarBckgImgSectionText'
+import Layout from "../../components/Layout";
+import Header from "../../components/delivery/Header";
+import Sections from "../../components/delivery/Sections";
+import Cargo from "../../components/mainPage/cargo";
+import Destinations from "../../components/Destinations";
+import Clients from "../../components/Clients";
+import Reviews from "../../components/Reviews";
+import Article from "../../components/mainPage/Article";
+import Calculator from "../../components/Calculator";
+import FormFooter from '../../components/Footer/FormFooter'
+import BarBckgImgSectionText from '../../components/BarBckgImgSectionText'
 
 export const CostPageTemplate = ({
                                   title,
@@ -19,15 +19,17 @@ export const CostPageTemplate = ({
                                   header,
                                   sections,
                                   seoSections,
-                                  barBckgImg
+                                  barBckgImg,
+                                  local
                                  }) => {
     return(
-        <Layout>
+        <Layout local={local} location={location}>
            <Header
             title={title}
             description={description}
             location={location}
             header={header}
+            crumbLabel={title}
            />
             <Sections
                 sections={sections}
@@ -53,7 +55,7 @@ export const CostPageTemplate = ({
 };
 
 
-const CostPage = ({ data, location }) => {
+const Index = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return(
@@ -65,16 +67,16 @@ const CostPage = ({ data, location }) => {
             sections={frontmatter.sections}
             seoSections={frontmatter.seoSections}
             barBckgImg={data.fileName}
-
+            local={pageContext.locale}
         />
     )
 }
 
-export default CostPage;
+export default Index;
 
 export const pageQuery = graphql`
-  query CostPageTemplate {
-    markdownRemark(frontmatter: { pageKey: { eq: "cost-page" } }) {
+  query CostPageTemplate($locale: String) {
+    markdownRemark(frontmatter: { pageKey: { eq: "cost-page" }, locale: { eq: $locale }}) {
       frontmatter{
         title
         description

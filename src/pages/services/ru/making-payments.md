@@ -1,6 +1,6 @@
 ---
 templateKey: services
-locale: ua
+locale: ru
 name: making-payments
 crumbLabel: Проведение платежей
 title: Проведение платежей

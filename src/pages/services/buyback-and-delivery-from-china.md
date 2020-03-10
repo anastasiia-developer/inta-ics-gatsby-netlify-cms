@@ -1,5 +1,7 @@
 ---
-pageKey: services
+templateKey: services
+locale: ua
+name: buyback-and-delivery-from-china
 crumbLabel: Выкуп и доставка из Китая
 title: Выкуп и доставка из Китая
 description: >-

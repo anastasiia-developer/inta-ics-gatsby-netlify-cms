@@ -1,5 +1,6 @@
 ---
-pageKey: delivery
+templateKey: delivery
+locale: ua
 title: Железнодорожные перевозки
 crumbLabel: Железнодорожные перевозки
 name: rail-transportation

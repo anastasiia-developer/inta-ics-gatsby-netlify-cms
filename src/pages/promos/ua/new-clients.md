@@ -1,5 +1,5 @@
 ---
-pageKey: sales-page
+pageKey: promo-page
 title: Акции
 locale: ua
 description: >-

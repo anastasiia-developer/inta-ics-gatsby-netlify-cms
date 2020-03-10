@@ -1,5 +1,7 @@
 ---
-pageKey: services
+templateKey: services
+locale: ua
+name: search-and-verification
 crumbLabel: Поиск и проверка поставщика
 title: Поиск и проверка поставщика
 description: >-

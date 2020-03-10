@@ -86,7 +86,7 @@ const Index = ({ data, location, pageContext }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout local={pageContext.locale} location={location}>
       <IndexPageTemplate
         title={frontmatter.title}
         heading={frontmatter.heading}

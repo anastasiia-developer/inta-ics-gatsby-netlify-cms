@@ -1,7 +1,7 @@
 ---
 templateKey: delivery
-locale: ua
-title: 'Авиадоставка грузов из Китая, США'
+title: 'RUАвиадоставка грузов из Китая, США'
+locale: ru
 crumbLabel: Авиадоставка
 name: air-delivery
 description: >-

@@ -52,6 +52,7 @@ export const SalesPageTemplate = ({
                 location={location}
                 header={header}
                 crumbLabel={title}
+                crumbLabelParent='Акции'
             />
             {location &&
                 <CalculateContainerHeader/>
@@ -77,7 +78,7 @@ export const SalesPageTemplate = ({
 };
 
 
-const SalesPage = ({ data, location }) => {
+const Promo = ({ data, location }) => {
     const { frontmatter } = data.markdownRemark;
 
     return(
@@ -92,11 +93,11 @@ const SalesPage = ({ data, location }) => {
     )
 }
 
-export default SalesPage;
+export default Promo;
 
 export const pageQuery = graphql`
   query SalesPageTemplate {
-    markdownRemark(frontmatter: { pageKey: { eq: "sales-page" } }) {
+    markdownRemark(frontmatter: { pageKey: { eq: "promo-page" } }) {
       frontmatter{
         title
         description

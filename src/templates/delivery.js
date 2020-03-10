@@ -50,9 +50,9 @@ export const DeliveryTemplate = ({
             <SectionText
                 sectionText={sectionText}
             />
-            <BarBckgImgSectionText
-                image={sectionText.image}
-            />
+            {/*<BarBckgImgSectionText*/}
+            {/*    image={sectionText.image}*/}
+            {/*/>*/}
             <OurServices/>
             <Destinations />
             <Cargo/>
@@ -72,11 +72,11 @@ DeliveryTemplate.propTypes = {
     title: PropTypes.string,
 }
 
-const Delivery = ({ data, location }) => {
+const Delivery = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout>
+        <Layout local={pageContext.locale} location={location}>
             <DeliveryTemplate
                 helmet={
                     <Helmet titleTemplate="%s">
@@ -109,8 +109,8 @@ Delivery.propTypes = {
 export default Delivery
 
 export const pageQuery = graphql`
-  query DeliveryID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query DeliveryID($id: String!, $locale: String) {
+    markdownRemark(id: { eq: $id }, frontmatter: { locale: { eq: $locale } }) {
       id
       frontmatter {
         title

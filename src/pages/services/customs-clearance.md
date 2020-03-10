@@ -1,5 +1,7 @@
 ---
-pageKey: services
+templateKey: services
+locale: ua
+name: customs-clearance
 crumbLabel: Таможенное оформление
 title: Таможенное оформление
 description: >-

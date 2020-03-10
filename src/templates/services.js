@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import {graphql} from "gatsby";
 import Layout from "../components/Layout";
 import Sections from "../components/delivery/Sections";
@@ -56,7 +56,7 @@ export const ServicesPageTemplate = ({
                                       seoSections,
                                   }) => {
     return(
-        <Layout>
+       <Fragment>
             <TemplateHeader
                 title={title}
                 description={description}
@@ -85,14 +85,16 @@ export const ServicesPageTemplate = ({
             <Reviews/>
             <Article seoSections={seoSections}/>
             <FormFooter/>
-        </Layout>
+       </Fragment>
     )
 };
 
 
-const ServicesPage = ({ data, location }) => {
+const ServicesPage = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
+
     return(
+        <Layout local={pageContext.locale} location={location}>
         <ServicesPageTemplate
             title={frontmatter.title}
             description={frontmatter.description}
@@ -101,14 +103,15 @@ const ServicesPage = ({ data, location }) => {
             sections={frontmatter.sections}
             seoSections={frontmatter.seoSections}
         />
+        </Layout>
     )
 }
 
 export default ServicesPage;
 
 export const pageQuery = graphql`
-  query ServicesPageTemplate($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query ServicesPageTemplate($id: String!, $locale: String) {
+    markdownRemark(id: { eq: $id }, frontmatter: { locale: { eq: $locale } }) {
       frontmatter{
         title
         description

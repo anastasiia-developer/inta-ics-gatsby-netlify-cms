@@ -1,6 +1,6 @@
 ---
 templateKey: delivery
-locale: ua
+locale: ru
 title: Морская перевозка грузов из Китая
 crumbLabel: Морская перевозка
 name: sea-freight
