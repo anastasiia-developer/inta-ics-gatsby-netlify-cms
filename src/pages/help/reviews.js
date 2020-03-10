@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from "styled-components";
-import Layout from '../components/Layout'
-import TemplateHeader from "../components/TemplateHeader";
-import News from "../components/mainPage/news";
-import FormFooter from "../components/Footer/FormFooter";
+import Layout from '../../components/Layout'
+import TemplateHeader from "../../components/TemplateHeader";
+import News from "../../components/mainPage/news";
+import FormFooter from "../../components/Footer/FormFooter";
 
 const Wrapper = styled.div`
     header .btn{
@@ -113,11 +113,11 @@ export const ReviewsPageTemplate = ({
     </Wrapper>
 ;
 
-const Reviews = ({ data, location }) => {
+const Reviews = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout>
+        <Layout local={pageContext.locale} location={location}>
             <ReviewsPageTemplate
                 title={frontmatter.title}
                 description={frontmatter.description}
@@ -132,8 +132,8 @@ const Reviews = ({ data, location }) => {
 export default Reviews
 
 export const pageQuery = graphql`
-  query ReviewsPage {
-    markdownRemark(frontmatter: { pageKey: { eq: "reviews" } }) {      
+  query ReviewsPage($locale: String) {
+    markdownRemark(frontmatter: { pageKey: { eq: "reviews" }, locale: { eq: $locale } }) {      
         frontmatter {
             title
             description

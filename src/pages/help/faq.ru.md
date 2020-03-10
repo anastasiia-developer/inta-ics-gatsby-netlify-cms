@@ -1,6 +1,6 @@
 ---
 pageKey: faq
-locale: ua
+locale: ru
 title: Часто задаваемые вопросы
 crumbLabel: FAQ
 name: faq

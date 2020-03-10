@@ -9,7 +9,8 @@ import UaDelivery from './delivery/ua'
 import Telegram from '../../img/social/telegram.svg'
 import Call from '../../img/call.svg'
 import BarContacts from "./BarContacts"
-import Help from "./help"
+import UaHelp from "./help/ua"
+import RuHelp from "./help/ru"
 import UaServices from './services/ua.js'
 import RuServices from './services/ru.js'
 
@@ -87,10 +88,16 @@ const Navbar = ({local, location}) => {
                   to={`/blog/${lang}`}>
                   Блог
               </Link>
-              <Help
-                setActiveMob={SetActiveMob}
-                isActiveMob={isActiveMob}
-              />
+              {local === 'ua' ?
+                  <UaHelp
+                      setActiveMob={SetActiveMob}
+                      isActiveMob={isActiveMob}
+                  /> :
+                  <RuHelp
+                      setActiveMob={SetActiveMob}
+                      isActiveMob={isActiveMob}
+                  />
+              }
               {/*<Link*/}
               {/*    onClick={() => setActiveMob(!isActiveMob)}*/}
               {/*    to="/promos/">*/}

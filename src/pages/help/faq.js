@@ -1,11 +1,11 @@
 import React, {Fragment, useState} from 'react'
 import { graphql } from 'gatsby'
 import styled from "styled-components";
-import Layout from '../components/Layout'
-import TemplateHeader from "../components/TemplateHeader";
-import News from "../components/mainPage/news";
-import FormFooter from "../components/Footer/FormFooter";
-import Arrow from "../img/arrow2.svg"
+import Layout from '../../components/Layout'
+import TemplateHeader from "../../components/TemplateHeader";
+import News from "../../components/mainPage/news";
+import FormFooter from "../../components/Footer/FormFooter";
+import Arrow from "../../img/arrow2.svg"
 
 const Container = styled.div`
     margin: 0 0 3% 0;
@@ -152,10 +152,11 @@ export const FaqPageTemplate = ({
     </Fragment>
 ;
 
-const Faq = ({ data, location }) => {
+const Faq = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
+
     return (
-        <Layout>
+        <Layout location={location} local={pageContext.locale}>
             <FaqPageTemplate
                 title={frontmatter.title}
                 description={frontmatter.description}
@@ -170,8 +171,8 @@ const Faq = ({ data, location }) => {
 export default Faq
 
 export const pageQuery = graphql`
-  query FaqPage {
-    markdownRemark(frontmatter: { pageKey: { eq: "faq" } }) {      
+  query FaqPage($locale: String) {
+    markdownRemark(frontmatter: { pageKey: { eq: "faq" }, locale: { eq: $locale } }) {      
         frontmatter {
             title
             description

@@ -1,18 +1,23 @@
 import {graphql, StaticQuery} from "gatsby";
 import React from "react";
-import SubMenu from './SubMenu'
+import SubMenu from '../SubMenu'
 
 export default ({setActiveMob, isActiveMob}) => (
     <StaticQuery
         query={graphql`
-            query navHelp{
-                 allMarkdownRemark(filter: {fields: {slug: {regex: "/help/"}}}) {
+            query navHelpRu{
+                 allMarkdownRemark(filter: {
+                    fields: {
+                        slug: {regex: "/help/"}
+                    }, 
+                    frontmatter: {
+                        locale: {eq: "ru"}
+                    }
+                 }) {
                     nodes {
                         frontmatter {
                             crumbLabel
-                        }
-                        fields {
-                             slug
+                            name
                         }
                      }
                  }
@@ -22,7 +27,7 @@ export default ({setActiveMob, isActiveMob}) => (
             <SubMenu
                 parentName="Помощь"
                 list={data.allMarkdownRemark.nodes}
-                startPath="/help/"
+                startPath="/ru/help/"
                 setActiveMob={() => setActiveMob}
                 isActiveMob={isActiveMob}
             />

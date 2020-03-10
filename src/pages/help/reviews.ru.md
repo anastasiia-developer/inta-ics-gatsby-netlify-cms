@@ -1,6 +1,6 @@
 ---
 pageKey: reviews
-locale: ua
+locale: ru
 title: Отзывы
 crumbLabel: Отзывы
 description: >-
