@@ -10,7 +10,6 @@ import TagsRoll from "../components/TagsRoll";
 import Post from "../components/Post";
 import FormFooter from '../components/Footer/FormFooter'
 
-
 const Header = styled(TemplateHeader)`
     max-height: 100vh;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
@@ -35,7 +34,7 @@ const Blog = styled.div`
     position: relative;
     display: flex;
     width: 86%;
-    margin: -10% auto 0;
+    margin: -10% auto 5em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         width: 100%;
         margin: 0;
@@ -126,7 +125,8 @@ export const BlogIndexPageTemplate = ({
                                           location,
                                           posts,
                                           pageContext}) => {
-    const {numPages} = pageContext;
+    const { numPages } = pageContext;
+
     return(
         <Fragment>
             <Header
@@ -147,17 +147,17 @@ export const BlogIndexPageTemplate = ({
                             />
                         ))}
                     </Blog>
-                    <Pagination>
-                            <ul>
-                                {Array.from({length: numPages -1 }, (_, i) => (
-                                    <li key={`pagination-number${i + 1}`} >
-                                        <Link to={`/blog/${i === 0 ? "" : i + 1}`}>
-                                            {i + 1}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                    </Pagination>
+                    {/*<Pagination>*/}
+                    {/*        <ul>*/}
+                    {/*            {Array.from({length: numPages -1 }, (_, i) => (*/}
+                    {/*                <li key={`pagination-number${i + 1}`} >*/}
+                    {/*                    <Link to={`/blog/${i === 0 ? "" : i + 1}`}>*/}
+                    {/*                        {i + 1}*/}
+                    {/*                    </Link>*/}
+                    {/*                </li>*/}
+                    {/*            ))}*/}
+                    {/*        </ul>*/}
+                    {/*</Pagination>*/}
                 </Fragment>
             }
         </Fragment>
@@ -167,8 +167,9 @@ export const BlogIndexPageTemplate = ({
 const BlogIndexPage = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
     const { edges: posts } = data.allMarkdownRemark;
+
     return (
-        <Layout>
+        <Layout location={location} local={pageContext.locale}>
             <BlogIndexPageTemplate
                 title={frontmatter.title}
                 description={frontmatter.description}
@@ -192,11 +193,9 @@ BlogIndexPage.propTypes = {
 export default BlogIndexPage
 
 export const pageQuery = graphql`
-  query BlogPage($skip: Int!, $limit: Int!, $locale: String) {
+  query BlogPage($locale: String) {
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___date]}, 
-      limit: $limit, 
-      skip: $skip, 
       filter: {
       frontmatter: {
         templateKey: {eq: "blog-post"},

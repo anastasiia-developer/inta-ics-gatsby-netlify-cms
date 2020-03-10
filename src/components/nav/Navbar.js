@@ -84,7 +84,7 @@ const Navbar = ({local, location}) => {
               </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to={`${lang}/blog/`}>
+                  to={`/blog/${lang}`}>
                   Блог
               </Link>
               <Help

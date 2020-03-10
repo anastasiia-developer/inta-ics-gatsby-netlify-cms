@@ -84,9 +84,9 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data, pageContext, location }) => {
   const { markdownRemark: post } = data;
-  console.log(pageContext)
+
     return (
-    <Layout>
+    <Layout location={location} local={pageContext.locale}>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
