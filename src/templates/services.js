@@ -14,7 +14,7 @@ import CalculateContainerHeader from "../components/CalculateContainerHeader";
 import OurServices from "../components/delivery/OurServices";
 import Table from '../pages/services/Table';
 
-const Section = styled(Sections)`
+export const Section = styled(Sections)`
     background: #F6F6F6;
     flex-direction: row-reverse;
     &:nth-child(even){

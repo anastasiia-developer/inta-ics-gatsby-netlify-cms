@@ -35,15 +35,14 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach((edge, index) => {
-      const locale = edge.node.frontmatter.locale
-
+      const locale = edge.node.frontmatter.locale;
       if (edge.node.frontmatter.templateKey != null) {
         const id = edge.node.id;
 
         const contextPost = edge.node.frontmatter.templateKey === 'blog-post' && {
           next: index === 0 ? null : posts[index - 1].node.fields.slug,
           prev: index === (posts.length - 1) ? null : posts[index + 1].node.fields.slug,
-        }
+        };
 
         createPage({
           path: edge.node.fields.slug,

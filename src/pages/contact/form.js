@@ -2,11 +2,12 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import styled from 'styled-components'
 
-function encode(data) {
+export function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
+
 
 const Button = styled.button`
     align-items: center;

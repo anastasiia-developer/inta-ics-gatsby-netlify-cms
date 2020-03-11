@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
+import {navigate} from "gatsby-link";
+import { encode} from "../../pages/contact/form";
 
 const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
@@ -103,42 +105,94 @@ const FormCommon = styled.div`
   }
 `;
 
-const FormFooter = () =>
-    <FormCommon>
-        <h2>Остались вопросы?</h2>
-        <h4>Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
-        <div className="calculate-common">
-            <h3>
-                <span className="blue">Есть вопрос? </span>
-                Наш менеджер ответит вам за
-                <span className="blue"> 15 минут</span>
-            </h3>
-            <h4> Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
-            <div className="row-to-column wrapper">
-                <div className="column">
-                    <h5>Имя</h5>
-                    <div className="calculate-block row">
-                        <input type="text" className='input-common'/>
-                        <img src="/img/userForm.png" alt="user icon"/>
-                    </div>
-                </div>
-                <div className="column">
-                    <h5>Телефон</h5>
-                    <div className="calculate-block row">
-                        <input type="text" className='input-common' value='+380'/>
-                        <img src="/img/telForm.png" alt="phone icon"/>
-                    </div>
-                </div>
-                <div className="column">
-                    <h5>Комментарий</h5>
-                    <div className="calculate-block row">
-                        <input type="text" className='input-common'/>
-                        <img src="/img/commentForm.png" alt="comment icon"/>
-                    </div>
-                </div>
-                <button className="btn-order">Отправить</button>
-            </div>
-        </div>
-    </FormCommon>
+const FormFooter = () => {
+    const [inputsValue, setInputsValue] = useState({});
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const form = e.target
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({
+                'form-name': form.getAttribute('name'),
+                ...inputsValue,
+            }),
+        })
+            .then(() => navigate(form.getAttribute('action')))
+            .catch(error => alert(error))
+    };
+    const handleChange = (e) => {
+        setInputsValue({...inputsValue, [e.target.name]: e.target.value});
+    };
+    return (
+        <FormCommon>
+            <h2>Остались вопросы?</h2>
+            <h4>Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
+            <div className="calculate-common">
+                <h3>
+                    <span className="blue">Есть вопрос? </span>
+                    Наш менеджер ответит вам за
+                    <span className="blue"> 15 минут</span>
+                </h3>
+                <h4> Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
+                <form
+                    name="footerContact"
+                    method="post"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={(e) => handleSubmit(e)}
+                    className="row-to-column wrapper">
+
+                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <div className="column">
+                        <h5>Имя</h5>
+                        <div className="calculate-block row">
+                            <input
+                                type="text"
+                                className='input-common'
+                                name={'name'}
+                                onChange={(e) => handleChange(e)}
+                                id={'name'}
+                                required={true}
+                            />
+                            <img src="/img/userForm.png" alt="user icon"/>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <h5>Телефон</h5>
+                        <div className="calculate-block row">
+                            <input
+                                type="text"
+                                className='input-common'
+                                name={'phone'}
+                                onChange={(e) => handleChange(e)}
+                                id={'phone'}
+                                required={true}
+                            />
+                            <img src="/img/telForm.png" alt="phone icon"/>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <h5>Комментарий</h5>
+                        <div className="calculate-block row">
+                            <input
+                                type="text"
+                                className='input-common'
+                                name={'comment'}
+                                id={'comment'}
+                                required={false}
+                                onChange={(e) => handleChange(e)}
+                            />
+                            <img src="/img/commentForm.png" alt="comment icon"/>
+                        </div>
+                    </div>
+                    <button className="btn-order" type="submit">Отправить</button>
+                </form>
+            </div>
+        </FormCommon>
+    )
+}
 export default FormFooter;

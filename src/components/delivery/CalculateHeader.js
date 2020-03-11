@@ -4,6 +4,8 @@ import Flags from "../Flags"
 import Arrow from "../../img/arrow.svg"
 import Tel from "../../img/tel.svg"
 import Email from "../../img/email.svg"
+import {encode} from "../../pages/contact/form";
+import {navigate} from "gatsby-link";
 
 const Wrapper = styled.section`
   background: #fff;
@@ -20,7 +22,6 @@ const Wrapper = styled.section`
     .row-to-column{
         align-items: stretch;
     }
-
   }
   h3{
     color: #323232;
@@ -90,7 +91,7 @@ const Wrapper = styled.section`
       margin-top: 1em;
       padding: .5em .5em .5em 1em;
       color: #383838;
-      font-size: 1.2em;
+      font-size: 1em;
       align-items: center;
       position: relative;
       height: 100%;
@@ -200,6 +201,7 @@ const CalculateBlock = ({
                         flag,
                         options,
                         className,
+                        name,
                         arrowLine,
                         stateOptions,
                         setOptions}) => {
@@ -216,7 +218,10 @@ const CalculateBlock = ({
                 {optionState &&
                     <Fragment>
                         <Arrow/>
-                        <button className="title row" onClick={() =>setOptions({...stateOptions, open: !stateOptions.open })}>
+                        <button
+                            className="title row"
+                            name={name}
+                            onClick={() =>setOptions({...stateOptions, open: !stateOptions.open })}>
                             {(flag || stateOptions.flag) &&
                                 <img src={`/img/${stateOptions.flag || flag}.png`} alt={optionState} className="flag"/>
                             }
@@ -233,12 +238,43 @@ const CalculateHeader = () => {
     const [optionsFrom, setOptionsFrom] = useState({open: false, value: 'Китай', flag: '001-china 3'});
     const [optionsTo, setOptionsTo] = useState({open: false});
     const [optionsWeight, setOptionsWeight] = useState({open: false, value: ''});
+    const [inputsValue, setInputsValue] = useState({
+        phone: '+380'
+    });
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        const from = optionsFrom.value;
+        const form = e.target;
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({
+                'form-name': form.getAttribute('name'),
+                ...inputsValue,
+                optionsTo,
+                from
+            }),
+        })
+            .then(() => navigate(form.getAttribute('action')))
+            .catch(error => alert(error))
+    };
+    const handleChange = (e) => {
+        setInputsValue({...inputsValue, [e.target.name]: e.target.value});
+    };
     return (
         <Wrapper className='wrapper'>
             <h3>Рассчитать стоимость доставки</h3>
             <h4>Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
-            <div className="row-to-column">
+            <form
+                name="footerContact"
+                method="post"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={(e) => handleSubmit(e)}
+                className="row-to-column">
                 <CalculateBlock
                     title="Откуда груз?"
                     options={<Flags
@@ -247,6 +283,8 @@ const CalculateHeader = () => {
                     />}
                     stateOptions={optionsFrom}
                     setOptions={setOptionsFrom}
+                    name={'from'}
+                    onClick={(e) => handleChange(e)}
                     arrowLine
                 />
                 <CalculateBlock
@@ -254,6 +292,7 @@ const CalculateHeader = () => {
                     option="Украина"
                     flag="ukraine"
                     options={false}
+                    name={'to'}
                     stateOptions={optionsTo}
                     setOptions={setOptionsTo}
                     arrowLine
@@ -265,7 +304,12 @@ const CalculateHeader = () => {
                     className="cargo-weight"
                     options={
                         <Fragment>
-                            <input type="text" />
+                            <input
+                                type="text"
+                                name={'weight'}
+                                required={true}
+                                onChange={(e) => handleChange(e)}
+                            />
                         <ul className="flags">
                             <li data-value='kg'>kg</li>
                             <li data-value='g'>g</li>
@@ -283,7 +327,13 @@ const CalculateHeader = () => {
                     className="tel"
                     options={
                         <Fragment>
-                            <input type="text" name='phone' value='+380'/>
+                            <input
+                                type="text"
+                                name={"phone"}
+                                value={inputsValue.phone}
+                                required={true}
+                                onChange={(e) => handleChange(e)}
+                            />
                             <Tel/>
                         </Fragment>}
                     arrowLine
@@ -297,7 +347,12 @@ const CalculateHeader = () => {
                     className="tel"
                     options={
                         <Fragment>
-                            <input type="text" name='email' value=''/>
+                            <input
+                                type="email"
+                                name={"email"}
+                                required={true}
+                                onChange={(e) => handleChange(e)}
+                            />
                             <Email/>
                         </Fragment>}
                     arrowLine
@@ -311,14 +366,19 @@ const CalculateHeader = () => {
                     className="comment"
                     options={
                         <Fragment>
-                            <input type="text" name='comment' value=''/>
+                            <input
+                                type="text"
+                                name={'comment'}
+                                required={false}
+                                onChange={(e) => handleChange(e)}
+                            />
                             <img src="/img/comment.png" alt="comment"/>
                         </Fragment>}
                     stateOptions={false}
                     setOptions={false}
                 />
-                <button className="btn btn-order">Рассчет стоимости</button>
-            </div>
+                <button className="btn btn-order" type="submit">Рассчет стоимости</button>
+            </form>
         </Wrapper>
     )
 };

@@ -18,6 +18,7 @@ export default () => (
                             }
                             countries{
                                 country
+                                link
                                 flag{
                                   publicURL
                                   name
