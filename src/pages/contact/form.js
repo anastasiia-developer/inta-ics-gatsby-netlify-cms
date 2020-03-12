@@ -1,6 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import styled from 'styled-components'
+import Phone from "../../components/FormComponents/Phone";
 
 export function encode(data) {
   return Object.keys(data)
@@ -95,12 +96,10 @@ export default class Form extends React.Component {
           required={true}
           placeholder={'Имя'}
         />
-        <input
+        <Phone
           className="input"
-          type={'text'}
           name={'phone'}
           onChange={this.handleChange}
-          id={'phone'}
           required={true}
           placeholder={'Номер телефона'}
         />

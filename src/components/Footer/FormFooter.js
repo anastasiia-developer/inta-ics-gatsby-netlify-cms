@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import {navigate} from "gatsby-link";
 import { encode} from "../../pages/contact/form";
+import Phone from "../FormComponents/Phone";
 
 const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
@@ -164,12 +165,10 @@ const FormFooter = () => {
                     <div className="column">
                         <h5>Телефон</h5>
                         <div className="calculate-block row">
-                            <input
-                                type="text"
+                            <Phone
                                 className='input-common'
                                 name={'phone'}
                                 onChange={(e) => handleChange(e)}
-                                id={'phone'}
                                 required={true}
                             />
                             <img src="/img/telForm.png" alt="phone icon"/>
