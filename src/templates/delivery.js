@@ -47,12 +47,16 @@ export const DeliveryTemplate = ({
                 className={!header.buttons && 'only'}
                 sections={sections}
             />
-            <SectionText
-                sectionText={sectionText}
-            />
-            {/*<BarBckgImgSectionText*/}
-            {/*    image={sectionText.image}*/}
-            {/*/>*/}
+            {sectionText &&
+                <SectionText
+                    sectionText={sectionText}
+                />
+            }
+            {sectionText && sectionText.image &&
+                <BarBckgImgSectionText
+                    image={sectionText.image}
+                />
+            }
             <OurServices/>
             <Destinations />
             <Cargo/>
@@ -159,7 +163,7 @@ export const pageQuery = graphql`
           title
           image{
             childImageSharp {
-                fluid(maxWidth: 1200, maxHeight: 20) {
+                fluid(maxWidth: 1200, maxHeight: 30) {
                   ...GatsbyImageSharpFluid
                 }
             }  

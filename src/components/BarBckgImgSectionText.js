@@ -7,7 +7,7 @@ const BarBckgImgSectionText = ({image}) =>
                 !!image.childImageSharp ? image.childImageSharp.fluid.src : image
             })`,
             width: '100%',
-            height: '2em',
+            height: '3em',
             margin: ' 4em auto',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'left center',

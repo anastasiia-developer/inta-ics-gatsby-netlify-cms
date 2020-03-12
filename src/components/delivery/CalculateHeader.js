@@ -4,8 +4,9 @@ import Flags from "../Flags"
 import Arrow from "../../img/arrow.svg"
 import Tel from "../../img/tel.svg"
 import Email from "../../img/email.svg"
-import {encode} from "../../pages/contact/form";
-import {navigate} from "gatsby-link";
+import {encode} from "../../pages/contact/form"
+import {navigate} from "gatsby-link"
+import Phone from '../FormComponents/Phone'
 
 const Wrapper = styled.section`
   background: #fff;
@@ -239,7 +240,7 @@ const CalculateHeader = () => {
     const [optionsTo, setOptionsTo] = useState({open: false});
     const [optionsWeight, setOptionsWeight] = useState({open: false, value: ''});
     const [inputsValue, setInputsValue] = useState({
-        phone: '+380'
+        weight: ''
     });
 
     const handleSubmit = (e) => {
@@ -262,7 +263,12 @@ const CalculateHeader = () => {
             .catch(error => alert(error))
     };
     const handleChange = (e) => {
-        setInputsValue({...inputsValue, [e.target.name]: e.target.value});
+        if(e.target.name === 'weight'){
+            console.log(inputsValue);
+            setInputsValue({...inputsValue, [e.target.name]: e.target.value.replace(/[^+\d.,]/g, '')});
+        }else{
+            setInputsValue({...inputsValue, [e.target.name]: e.target.value});
+        }
     };
     return (
         <Wrapper className='wrapper'>
@@ -307,6 +313,7 @@ const CalculateHeader = () => {
                             <input
                                 type="text"
                                 name={'weight'}
+                                value={inputsValue.weight}
                                 required={true}
                                 onChange={(e) => handleChange(e)}
                             />
@@ -327,10 +334,8 @@ const CalculateHeader = () => {
                     className="tel"
                     options={
                         <Fragment>
-                            <input
-                                type="text"
+                            <Phone
                                 name={"phone"}
-                                value={inputsValue.phone}
                                 required={true}
                                 onChange={(e) => handleChange(e)}
                             />
