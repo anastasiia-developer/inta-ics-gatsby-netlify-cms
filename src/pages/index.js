@@ -88,13 +88,11 @@ const Index = ({ data, location, pageContext }) => {
     <Layout local={pageContext.locale} location={location}>
       <IndexPageTemplate
         title={frontmatter.title}
-        heading={frontmatter.heading}
         description={frontmatter.description}
         location={location}
         header={frontmatter.header}
         section={frontmatter.section}
         about={frontmatter.about}
-        calculator={frontmatter.calculator}
         seoSections={frontmatter.seoSections}
       />
       <FormFooter locale={pageContext.locale}/>

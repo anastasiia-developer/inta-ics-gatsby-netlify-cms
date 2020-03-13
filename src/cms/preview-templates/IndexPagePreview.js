@@ -14,6 +14,7 @@ const IndexPagePreview = ({ entry }) => {
         header={data.header || {}}
         section={data.section || {}}
         about={data.about || {}}
+        seoSections={data.seoSections || {}}
       />
     )
   } else {

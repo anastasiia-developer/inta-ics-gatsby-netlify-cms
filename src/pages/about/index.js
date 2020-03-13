@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState} from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import FormFooter from '../../components/Footer/FormFooter'
@@ -79,7 +79,6 @@ const Section = styled.section`
         }
     }
 `;
-
 const OurValues = styled.section`
     width: 75%;
     padding: 1em 0 6em;
@@ -137,33 +136,34 @@ const OurValues = styled.section`
         }
     }
 `;
-
 const SectionImg = styled.section`
     position: relative;
     .gatsby-image-wrapper{
         width: 100%;
     }
-    .description{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%); 
-        background: #fff;
-        color: #41479B;
-        padding: 4em;
-        font-weight: 500;
-        line-height: 2em;
-        text-align: center;
-        border-radius: .5em;
-        margin-top: -3em;
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
-        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-            padding: 1em;
-            position: relative;
-            border-radius: 0;
-            margin: 0;
-            font-size: .9em;
-        }
+    
+`;
+const Description = styled.div`
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: ${props => props.isActive ? 'block' :'none'};
+    transform: translateX(-50%); 
+    background: #fff;
+    color: #41479B;
+    padding: 4em;
+    font-weight: 500;
+    line-height: 2em;
+    text-align: center;
+    border-radius: .5em;
+    margin-top: -3em;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        padding: 1em;
+        position: relative;
+        border-radius: 0;
+        margin: 0;
+        font-size: .9em;
     }
 `;
 
@@ -174,8 +174,10 @@ export const AboutPageTemplate = ({
                                       location,
                                       weSpecialize,
                                       ourValues,
-                                      sectionImg,
+                                      aboutImg,
                                   }) => {
+  const [ourValue, setOurValue] = useState(0);
+
   return (
       <Fragment>
           <TemplateHeader
@@ -191,26 +193,33 @@ export const AboutPageTemplate = ({
                   {weSpecialize.map((specialize, index) =>
                       <HoverGradientInsideSvg
                           key={index}
-                          title={specialize.title}
                           svg={
                               <PreviewCompatibleImage
                                   key={index}
+                                  alt={specialize.imageAlt.alt}
                                   imageInfo={{
-                                      image: specialize.image,
+                                      image: specialize.imageAlt.image,
                                   }}
                               />
                           }
+                          title={specialize.title}
                           btnLink={specialize.link}
                           description={specialize.description}
                       />
-                  ) }
+                  )}
               </div>
           </Section>
           <OurValues className='wrapper'>
               <h2>Наши ценности</h2>
               <div className="row-to-column">
                   {ourValues.map((value, index) =>
-                      <div className='container' key={index}>
+                      <div
+                          key={index}
+                          role="button"
+                          tabIndex={0}
+                          onMouseOver={() => setOurValue(index)}
+                          onFocus={() =>  setOurValue(index)}
+                          className='container' >
                           <h5 className='number'>
                               0{index+1}
                           </h5>
@@ -224,12 +233,14 @@ export const AboutPageTemplate = ({
           <SectionImg>
               <PreviewCompatibleImage
                   imageInfo={{
-                      image: sectionImg[0].image,
+                      image: aboutImg,
                   }}
               />
-              <div className="description">
-                  {sectionImg[0].description}
-              </div>
+              {ourValues.map((value, index) =>
+                  <Description key={index} isActive={ourValue === index}>
+                      {value.description}
+                  </Description>
+              )}
           </SectionImg>
           {location &&
             <Clients/>
@@ -251,7 +262,7 @@ const AboutPage = ({ data, location, pageContext }) => {
         location={location}
         weSpecialize={frontmatter.weSpecialize}
         ourValues={frontmatter.ourValues}
-        sectionImg={frontmatter.sectionImg}
+        aboutImg={frontmatter.aboutImg}
       />
       <FormFooter locale={pageContext.locale}/>
     </Layout>
@@ -283,27 +294,28 @@ export const aboutPageQuery = graphql`
           }  
         }
         weSpecialize{
-            image{
-                childImageSharp {
-                    fluid(maxWidth: 100, quality: 50) {
-                      ...GatsbyImageSharpFluid
+            imageAlt{
+                alt
+                image{
+                    childImageSharp {
+                        fluid(maxWidth: 100, quality: 50) {
+                          ...GatsbyImageSharpFluid
+                        }
                     }
                 }
-            }
+            }    
             title
             description
             link
         }
         ourValues{
             title
-        }
-        sectionImg{
             description
-            image{
-                childImageSharp {
-                    fluid(maxWidth: 1000, quality: 50) {
-                          ...GatsbyImageSharpFluid
-                    }
+        }
+        aboutImg{
+            childImageSharp {
+                fluid(maxWidth: 1000, quality: 50) {
+                      ...GatsbyImageSharpFluid
                 }
             }
         }

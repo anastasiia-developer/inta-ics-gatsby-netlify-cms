@@ -8,6 +8,7 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 import DeliveryPagePreview from "./preview-templates/DeliveryPagePreview"
 import ComponentsCommonPreview from './preview-templates/ComponentsCommonPagePreview'
 import ReviewPagePreview from './preview-templates/ReviewPagePreview'
+import CostPagePreview from './preview-templates/CostPagePreview'
 
 
 import withStyledComponentsRendered from './StyleManager'
@@ -20,19 +21,51 @@ CMS.registerPreviewTemplate(
     withStyledComponentsRendered(IndexPagePreview)
 );
 CMS.registerPreviewTemplate(
+    'index-ru',
+    withStyledComponentsRendered(IndexPagePreview)
+);
+CMS.registerPreviewTemplate(
     'delivery',
+    withStyledComponentsRendered(DeliveryPagePreview)
+);
+CMS.registerPreviewTemplate(
+    'delivery-ru',
     withStyledComponentsRendered(DeliveryPagePreview)
 );
 CMS.registerPreviewTemplate(
     'components',
     withStyledComponentsRendered(ComponentsCommonPreview)
 );
-CMS.registerPreviewTemplate('about', AboutPagePreview)
+CMS.registerPreviewTemplate(
+    'components-ru',
+    withStyledComponentsRendered(ComponentsCommonPreview)
+);
+CMS.registerPreviewTemplate(
+    'about',
+    AboutPagePreview
+)
+CMS.registerPreviewTemplate(
+    'about-ru',
+    withStyledComponentsRendered(AboutPagePreview)
+)
 CMS.registerPreviewTemplate(
     'blog',
     withStyledComponentsRendered(BlogPostPreview)
 );
 CMS.registerPreviewTemplate(
+    'blog-ru',
+    withStyledComponentsRendered(BlogPostPreview)
+);
+CMS.registerPreviewTemplate(
+    'cost',
+    withStyledComponentsRendered(CostPagePreview)
+);
+CMS.registerPreviewTemplate(
+    'cost-ru',
+    withStyledComponentsRendered(CostPagePreview)
+);
+CMS.registerPreviewTemplate(
     'reviews',
     withStyledComponentsRendered(ReviewPagePreview)
 );
+

@@ -52,7 +52,8 @@ const HoverGradientInsideSvg = ({title, svg, link, btnLink, description}) => (
                 <h4>{title}</h4>
             </LinkBlock>
             :
-            <DivBlock className='hover-gradient'>
+            <DivBlock
+                className='hover-gradient'>
                 {svg}
                 <h4>{title}</h4>
                 {description &&

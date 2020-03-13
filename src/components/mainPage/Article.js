@@ -47,12 +47,11 @@ const Section = styled.article`
             width: 100%;
         }
     }
-    p, ul{
-        color: #3D3D3D;
-        font-size: 1em;
-        line-height: 1.8em;
-        margin-bottom: 2em;
-    }
+    // p, ul{
+    //     color: #3D3D3D;
+    //     font-size: 1em;
+    //     line-height: 1.8em;
+    // }
     ul{
       padding-left: 1.5em;
       list-style: initial;
