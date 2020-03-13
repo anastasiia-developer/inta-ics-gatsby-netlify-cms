@@ -29,7 +29,6 @@ const Header = styled(TemplateHeader)`
         width: 100%;
     }
 `;
-
 const Section = styled(Sections)`
     &:nth-child(odd){
         flex-direction: row-reverse;
@@ -72,7 +71,6 @@ export const SalesPageTemplate = ({
             }
             <Reviews/>
             <Article seoSections={seoSections}/>
-            <FormFooter/>
         </Fragment>
     )
 };
@@ -91,6 +89,7 @@ const Promo = ({ data, location, pageContext }) => {
             sections={frontmatter.sections}
             seoSections={frontmatter.seoSections}
         />
+        <FormFooter locale={pageContext.locale}/>
         </Layout>
     )
 }

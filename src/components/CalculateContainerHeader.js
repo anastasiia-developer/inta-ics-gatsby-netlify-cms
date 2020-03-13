@@ -7,9 +7,9 @@ const CalculateContainer = styled.div`
     padding-bottom: 3em;
 `
 
-const CalculateContainerHeader = () =>
+const CalculateContainerHeader = ({locale}) =>
     <CalculateContainer>
-        <CalculateHeader />
+        <CalculateHeader locale={locale}/>
     </CalculateContainer>
 
 export default CalculateContainerHeader;

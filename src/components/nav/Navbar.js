@@ -38,6 +38,9 @@ const Navbar = ({local, location}) => {
       >
         {/* Hamburger menu */}
         <div
+            role = "button"
+            tabIndex={0}
+            onKeyDown={() => {setActiveMob(!isActiveMob)}}
             onClick={() => {setActiveMob(!isActiveMob)}}
             className="navigation__lines">
           <hr/>
@@ -107,7 +110,7 @@ const Navbar = ({local, location}) => {
                           setActiveMob={SetActiveMob}
                           isActiveMob={isActiveMob}
                       />
-                      <UaPromo
+                      <RuPromo
                           setActiveMob={SetActiveMob}
                           isActiveMob={isActiveMob}
                       />

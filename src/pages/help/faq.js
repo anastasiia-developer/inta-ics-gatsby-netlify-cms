@@ -148,7 +148,6 @@ export const FaqPageTemplate = ({
             </Wrapper>
         </Section>
         <News/>
-        <FormFooter/>
     </Fragment>
 ;
 
@@ -164,6 +163,7 @@ const Faq = ({ data, location, pageContext }) => {
                 location={location}
                 questions={frontmatter.questions}
             />
+            <FormFooter locale={pageContext.locale}/>
         </Layout>
     )
 }

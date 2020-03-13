@@ -218,7 +218,8 @@ export const ContactPageTemplate = ({
                                         header,
                                         location,
                                         storage,
-                                        morePhotoIcon
+                                        morePhotoIcon,
+                                        locale
                                     }) =>
     <Wrapper>
         <TemplateHeader
@@ -229,7 +230,7 @@ export const ContactPageTemplate = ({
             crumbLabel={title}
             childrenInColumn={
                 <Fragment>
-                    <Form/>
+                    <Form locale={locale}/>
                     <BarContacts/>
                     <Store/>
                 </Fragment>}
@@ -247,11 +248,9 @@ export const ContactPageTemplate = ({
             </div>
         </Section>
         <News/>
-        <FormFooter/>
     </Wrapper>
 
 const ContactPage = ({ data, location, pageContext }) => {
-    console.log(data)
     const { frontmatter } = data.markdownRemark;
 
     return (
@@ -262,8 +261,10 @@ const ContactPage = ({ data, location, pageContext }) => {
                 header={frontmatter.header}
                 storage={frontmatter.storage}
                 location={location}
+                locale={pageContext.locale}
                 morePhotoIcon={data.fileName}
             />
+            <FormFooter locale={pageContext.locale}/>
         </Layout>
     )
 }

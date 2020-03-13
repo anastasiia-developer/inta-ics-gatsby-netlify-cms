@@ -54,6 +54,7 @@ export const ServicesPageTemplate = ({
                                       header,
                                       sections,
                                       seoSections,
+                                      locale
                                   }) => {
     return(
        <Fragment>
@@ -66,7 +67,7 @@ export const ServicesPageTemplate = ({
                 crumbLabelParent="Услуги"
             />
             {location &&
-                <CalculateContainerHeader/>
+                <CalculateContainerHeader locale={locale}/>
             }
             {title === 'Поиск и проверка поставщика' &&
                 <Table/>
@@ -84,7 +85,6 @@ export const ServicesPageTemplate = ({
             }
             <Reviews/>
             <Article seoSections={seoSections}/>
-            <FormFooter/>
        </Fragment>
     )
 };
@@ -95,14 +95,16 @@ const ServicesPage = ({ data, location, pageContext }) => {
 
     return(
         <Layout local={pageContext.locale} location={location}>
-        <ServicesPageTemplate
-            title={frontmatter.title}
-            description={frontmatter.description}
-            location={location}
-            header={frontmatter.header}
-            sections={frontmatter.sections}
-            seoSections={frontmatter.seoSections}
-        />
+            <ServicesPageTemplate
+                title={frontmatter.title}
+                description={frontmatter.description}
+                location={location}
+                locale={pageContext.locale}
+                header={frontmatter.header}
+                sections={frontmatter.sections}
+                seoSections={frontmatter.seoSections}
+            />
+            <FormFooter locale={pageContext.locale}/>
         </Layout>
     )
 }

@@ -11,7 +11,7 @@ const BarBckgImgSectionText = ({image}) =>
             margin: ' 4em auto',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'left center',
-            backgroundSize: '55% 50%'
+            backgroundSize: '55% 40%'
         }}
     />;
 

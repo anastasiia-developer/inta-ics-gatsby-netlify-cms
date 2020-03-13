@@ -110,7 +110,11 @@ const SubMenu = ({parentName, list, setActiveMob, isActiveMob, startPath}) => {
     return(
         <SubNav
             isActiveSub={isActiveSub}>
-            <span onClick={() => {setActiveSub(!isActiveSub)}}>
+            <span
+                role = "button"
+                tabIndex={0}
+                onKeyDown={() => {setActiveSub(!isActiveSub)}}
+                onClick={() => {setActiveSub(!isActiveSub)}}>
               {parentName}
               <Arrow/>
             </span>
@@ -119,6 +123,7 @@ const SubMenu = ({parentName, list, setActiveMob, isActiveMob, startPath}) => {
                     <Link
                         key={index}
                         onClick={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
+                        onKeyDown={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
                         to={startPath+link.frontmatter.name}>
                         {link.frontmatter.crumbLabel}
                         <ArrowLine/>

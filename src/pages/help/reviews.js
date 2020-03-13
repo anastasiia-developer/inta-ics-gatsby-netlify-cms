@@ -11,7 +11,6 @@ const Wrapper = styled.div`
         padding: 1em 2.5em;
     }
 `;
-
 const Review = styled.div`
     width: 49%;
     margin: 0 0 2% 0;
@@ -71,7 +70,6 @@ const Review = styled.div`
         color: #B4B9C0;
     }
 `;
-
 const Section = styled.div`
     justify-content: space-between; 
     margin-top: -7em;
@@ -109,7 +107,6 @@ export const ReviewsPageTemplate = ({
             )}
         </Section>
         <News/>
-        <FormFooter/>
     </Wrapper>
 ;
 
@@ -125,6 +122,7 @@ const Reviews = ({ data, location, pageContext }) => {
                 location={location}
                 reviews={frontmatter.reviews}
             />
+            <FormFooter locale={pageContext.locale}/>
         </Layout>
     )
 }

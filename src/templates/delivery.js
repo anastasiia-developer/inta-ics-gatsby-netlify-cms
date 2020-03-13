@@ -26,7 +26,8 @@ export const DeliveryTemplate = ({
                                      location,
                                      sections,
                                      sectionText,
-                                     seoSections}) => {
+                                     seoSections,
+                                     locale}) => {
     return (
         <Fragment>
             {helmet || ''}
@@ -38,7 +39,7 @@ export const DeliveryTemplate = ({
                 crumbLabel={title}
                 crumbLabelParent="Доставка"
                 crumbPathParent={false}
-                children={location && !header.buttons &&  <CalculateHeader/>}
+                children={location && !header.buttons &&  <CalculateHeader locale={locale}/>}
             />
             {location && header.buttons &&
                 <CalculateContainerHeader/>
@@ -63,7 +64,6 @@ export const DeliveryTemplate = ({
             <Clients/>
             <Reviews/>
             <Article seoSections={seoSections}/>
-            <FormFooter/>
         </Fragment>
     )
 }
@@ -95,10 +95,12 @@ const Delivery = ({ data, location, pageContext }) => {
                 title={frontmatter.title}
                 description={frontmatter.description}
                 location={location}
+                locale={pageContext.locale}
                 sections={frontmatter.sections}
                 sectionText={frontmatter.sectionText}
                 seoSections={frontmatter.seoSections}
             />
+            <FormFooter locale={pageContext.locale}/>
         </Layout>
     )
 }

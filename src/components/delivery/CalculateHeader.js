@@ -7,6 +7,7 @@ import Email from "../../img/email.svg"
 import {encode} from "../../pages/contact/form"
 import {navigate} from "gatsby-link"
 import Phone from '../FormComponents/Phone'
+import PopupThanks from "../FormComponents/PopupThanks";
 
 const Wrapper = styled.section`
   background: #fff;
@@ -235,13 +236,14 @@ const CalculateBlock = ({
         </div>
 )}
 
-const CalculateHeader = () => {
+const CalculateHeader = ({locale}) => {
     const [optionsFrom, setOptionsFrom] = useState({open: false, value: 'Китай', flag: '001-china 3'});
     const [optionsTo, setOptionsTo] = useState({open: false});
     const [optionsWeight, setOptionsWeight] = useState({open: false, value: ''});
     const [inputsValue, setInputsValue] = useState({
         weight: ''
     });
+    const [popupOpen, setPopupOpen] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -259,18 +261,21 @@ const CalculateHeader = () => {
                 from
             }),
         })
-            .then(() => navigate(form.getAttribute('action')))
+            .then(() => setPopupOpen(true))
             .catch(error => alert(error))
     };
     const handleChange = (e) => {
         if(e.target.name === 'weight'){
-            console.log(inputsValue);
             setInputsValue({...inputsValue, [e.target.name]: e.target.value.replace(/[^+\d.,]/g, '')});
         }else{
             setInputsValue({...inputsValue, [e.target.name]: e.target.value});
         }
     };
     return (
+        <Fragment>
+            {popupOpen &&
+                <PopupThanks locale={locale} close={setPopupOpen}/>
+            }
         <Wrapper className='wrapper'>
             <h3>Рассчитать стоимость доставки</h3>
             <h4>Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
@@ -385,6 +390,7 @@ const CalculateHeader = () => {
                 <button className="btn btn-order" type="submit">Рассчет стоимости</button>
             </form>
         </Wrapper>
+        </Fragment>
     )
 };
 

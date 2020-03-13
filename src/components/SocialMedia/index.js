@@ -9,7 +9,6 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     font-size: .8em;
-    
     svg{
       width: 1.3em;
       height: 1.3em;
@@ -24,8 +23,8 @@ const Container = styled.div`
    
 `;
 
-const SocialMedia = () => (
-    <Container className='social'>
+const SocialMedia = ({className}) => (
+    <Container className={`social ${className || ''}`}>
         <a href="https://www.instagram.com/">
             <Instagram/>
         </a>

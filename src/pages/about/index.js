@@ -253,7 +253,7 @@ const AboutPage = ({ data, location, pageContext }) => {
         ourValues={frontmatter.ourValues}
         sectionImg={frontmatter.sectionImg}
       />
-      <FormFooter/>
+      <FormFooter locale={pageContext.locale}/>
     </Layout>
   )
 }

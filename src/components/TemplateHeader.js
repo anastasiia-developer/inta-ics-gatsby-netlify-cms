@@ -134,7 +134,7 @@ const Container = styled.header`
             text-align: center;
         }
     }
-    .social{
+    .header-social{
         position: absolute;
         left: 1em;
         top: 0;
@@ -252,7 +252,7 @@ const TemplateHeader = ({
                 </div>
             </div>
             {children}
-            <SocialMedia/>
+            <SocialMedia className='header-social'/>
         </Container>
     );
 };

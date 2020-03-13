@@ -178,7 +178,7 @@ const BlogIndexPage = ({ data, location, pageContext }) => {
                 pageContext={pageContext}
                 posts={posts}
             />
-            <FormFooter/>
+            <FormFooter locale={pageContext.locale}/>
         </Layout>
     )
 }

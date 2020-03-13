@@ -24,7 +24,7 @@ const Section = styled.section`
 `;
 
 const SectionText = ({ sectionText }) => {
-    const { title, text, image } = sectionText;
+    const { title, text } = sectionText;
 
     return (
         <Section>

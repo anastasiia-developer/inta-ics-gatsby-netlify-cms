@@ -20,10 +20,9 @@ export const CostPageTemplate = ({
                                   sections,
                                   seoSections,
                                   barBckgImg,
-                                  local
                                  }) => {
     return(
-        <Layout local={local} location={location}>
+        <Fragment>
            <Header
             title={title}
             description={description}
@@ -49,8 +48,7 @@ export const CostPageTemplate = ({
             }
             <Reviews/>
             <Article seoSections={seoSections}/>
-            <FormFooter/>
-        </Layout>
+        </Fragment>
     )
 };
 
@@ -59,16 +57,18 @@ const Index = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return(
-        <CostPageTemplate
-            title={frontmatter.title}
-            description={frontmatter.description}
-            location={location}
-            header={frontmatter.header}
-            sections={frontmatter.sections}
-            seoSections={frontmatter.seoSections}
-            barBckgImg={data.fileName}
-            local={pageContext.locale}
-        />
+        <Layout local={pageContext.locale} location={location}>
+            <CostPageTemplate
+                title={frontmatter.title}
+                description={frontmatter.description}
+                location={location}
+                header={frontmatter.header}
+                sections={frontmatter.sections}
+                seoSections={frontmatter.seoSections}
+                barBckgImg={data.fileName}
+            />
+            <FormFooter locale={pageContext.locale}/>
+        </Layout>
     )
 }
 

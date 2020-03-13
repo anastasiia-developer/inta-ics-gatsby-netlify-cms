@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {Fragment, useState} from 'react'
 import { navigate } from 'gatsby-link'
 import styled from 'styled-components'
 import Phone from "../../components/FormComponents/Phone";
+import PopupThanks from "../../components/FormComponents/PopupThanks";
 
 export function encode(data) {
   return Object.keys(data)
@@ -44,69 +45,71 @@ const From = styled.form`
   }
 `;
 
-export default class Form extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { isValidated: false }
-  }
+const Form = ({locale}) => {
+  const [inputsValue, setInputsValue] = useState({});
+  const [popupOpen, setPopupOpen] = useState(false);
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+  const handleChange = e => {
+    setInputsValue({ [e.target.name]: e.target.value })
+  };
 
-  handleSubmit = e => {
-    e.preventDefault()
+  const handleSubmit = e => {
+    e.preventDefault();
     const form = e.target
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...this.state,
+        ...inputsValue,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+      .then(() => setPopupOpen(true))
       .catch(error => alert(error))
   }
 
-  render() {
-    return (
-      <From
-        name="contact"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}
-        className="row-to-column"
-      >
-        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <input type="hidden" name="form-name" value="contact" />
-        <div hidden>
-          <label>
-            Don’t fill this out:{' '}
-            <input name="bot-field" onChange={this.handleChange} />
-          </label>
-        </div>
-        <input
-          className="input"
-          type={'text'}
-          name={'name'}
-          onChange={this.handleChange}
-          id={'name'}
-          required={true}
-          placeholder={'Имя'}
-        />
-        <Phone
-          className="input"
-          name={'phone'}
-          onChange={this.handleChange}
-          required={true}
-          placeholder={'Номер телефона'}
-        />
-        <Button type="submit">
-          Заказать звонок
-        </Button>
-      </From>
-    )
-  }
+  return (
+      <Fragment>
+        {popupOpen &&
+          <PopupThanks locale={locale} close={setPopupOpen}/>
+        }
+        <From
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={(e) => handleSubmit(e)}
+          className="row-to-column"
+        >
+          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+          <input type="hidden" name="form-name" value="contact" />
+          <div hidden>
+            <label>
+              Don’t fill this out:{' '}
+              <input name="bot-field" onChange={(e) => handleChange(e)} />
+            </label>
+          </div>
+          <input
+            className="input"
+            type={'text'}
+            name={'name'}
+            onChange={(e) => handleChange(e)}
+            id={'name'}
+            required={true}
+            placeholder={'Имя'}
+          />
+          <Phone
+            className="input"
+            name={'phone'}
+            onChange={(e) => handleChange(e)}
+            required={true}
+            placeholder={'Номер телефона'}
+          />
+          <Button type="submit">
+            Заказать звонок
+          </Button>
+        </From>
+      </Fragment>
+  )
 }
+export default Form

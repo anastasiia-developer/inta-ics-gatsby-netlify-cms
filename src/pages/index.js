@@ -14,7 +14,7 @@ import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
-import {ButtonGroup, ResponsiveCarousel} from "../components/CommonCarousel";
+import { ButtonGroup, ResponsiveCarousel } from "../components/CommonCarousel";
 import Carousel from "react-multi-carousel";
 import FormFooter from '../components/Footer/FormFooter'
 
@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
   title,
   header,
   section,
-  about,
+  about
 }) => (
   <Fragment>
     <Header>
@@ -65,7 +65,6 @@ export const IndexPageTemplate = ({
     <Clients/>
     <Reviews/>
     <Article seoSections={seoSections}/>
-    <FormFooter/>
   </Fragment>
 )
 
@@ -98,6 +97,7 @@ const Index = ({ data, location, pageContext }) => {
         calculator={frontmatter.calculator}
         seoSections={frontmatter.seoSections}
       />
+      <FormFooter locale={pageContext.locale}/>
     </Layout>
   )
 }

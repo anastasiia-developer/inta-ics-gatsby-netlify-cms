@@ -48,7 +48,6 @@ export const InternationalDestinationsTemplate = ({
             <Clients/>
             <Reviews/>
             <Article seoSections={seoSections}/>
-            <FormFooter/>
         </Fragment>
     )
 }
@@ -75,6 +74,7 @@ const InternationalDestinations = ({ data, location, pageContext }) => {
                 sections={frontmatter.sections}
                 seoSections={frontmatter.seoSections}
             />
+            <FormFooter locale={pageContext.locale}/>
         </Layout>
     )
 }
