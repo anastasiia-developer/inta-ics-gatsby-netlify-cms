@@ -79,12 +79,12 @@ collections:
         {label: "Текст", name: text, widget: "markdown"},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
-      {label: title, name: title, widget: "string"},
-      {label: "sections", name: "sections", widget: list, fields: [
-      {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string"},
-      {label: "Картинка", name: image, widget: image}
-      ]}
+          {label: title, name: title, widget: "string"},
+          {label: "sections", name: "sections", widget: list, fields: [
+            {label: "Текст", name: text, widget: "markdown"},
+            {label: "altImg", name: "altImg", widget: "string"},
+            {label: "Картинка", name: image, widget: image}
+          ]}
       ]}
   - name: "delivery-ru"
     label: "Доставка - RU"
@@ -127,9 +127,9 @@ collections:
       - {label: seoSections, name: seoSections, widget: object, fields: [
           {label: title, name: title, widget: "string"},
           {label: "sections", name: "sections", widget: list, fields: [
-          {label: "Текст", name: text, widget: "markdown"},
-          {label: "altImg", name: "altImg", widget: "string"},
-          {label: "Картинка", name: image, widget: image}
+            {label: "Текст", name: text, widget: "markdown"},
+            {label: "altImg", name: "altImg", widget: "string"},
+            {label: "Картинка", name: image, widget: image}
           ]}
       ]}
   - name: "components-common"
