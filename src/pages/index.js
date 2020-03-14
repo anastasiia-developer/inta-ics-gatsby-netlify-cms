@@ -32,6 +32,7 @@ export const IndexPageTemplate = ({
       <Carousel
           containerClass="slider"
           sliderClass="row"
+          ssr={true}
           arrows={false}
           autoPlay
           autoPlaySpeed={5000}
