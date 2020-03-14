@@ -33,16 +33,16 @@ CMS.registerPreviewTemplate(
     withStyledComponentsRendered(DeliveryPagePreview)
 );
 CMS.registerPreviewTemplate(
-    'components',
+    'components-common',
     withStyledComponentsRendered(ComponentsCommonPreview)
 );
 CMS.registerPreviewTemplate(
-    'components-ru',
+    'components-common-ru',
     withStyledComponentsRendered(ComponentsCommonPreview)
 );
 CMS.registerPreviewTemplate(
     'about',
-    AboutPagePreview
+    withStyledComponentsRendered(AboutPagePreview)
 )
 CMS.registerPreviewTemplate(
     'about-ru',

@@ -1,10 +1,10 @@
 ---
 pageKey: components-common
 locale: ru
-title: Общие компонентны для всех сртраниц
+title: RU Общие компонентны для всех сртраниц
 name: components
 description: >-
-    Общие компонентны для всех сртраниц
+    RU Общие компонентны для всех сртраниц
 storage:
     - country: США (Washington)
       flag: /img/002-united-states (3).png

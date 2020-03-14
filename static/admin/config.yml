@@ -92,9 +92,9 @@ collections:
       - {label: name, name: name, widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
-      {label: Images, name: images, widget: list, fields: [
-      {label: Alt, name: alt, widget: string},
-      {label: Image, name: image, widget: image}
+          {label: Images, name: images, widget: list, fields: [
+          {label: Alt, name: alt, widget: string},
+          {label: Image, name: image, widget: image}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string},
@@ -119,15 +119,24 @@ collections:
           {label: "Картинка", name: image, widget: image},
           {label: "Текст", name: text, widget: "markdown"},
       ]}
-      - {label: Mainpitch, name: mainpitch, widget: object, fields: [
-          {label: Article, name: article, widget: "markdown"}
+      - {label: seoSections, name: seoSections, widget: object, fields: [
+          {label: title, name: title, widget: "string"},
+          {label: "sections", name: "sections", widget: list, fields: [
+          {label: "Текст", name: text, widget: "markdown"},
+          {label: "altImg", name: "altImg", widget: "string"},
+          {label: "Картинка", name: image, widget: image}
+          ]}
       ]}
-  - name: "components"
+  - name: "components-common"
     label: "Общие компонентны"
-    folder: "src/pages/components/components.md"
+    folder: "src/pages/components"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "components-common"}
+      - {label: "Template Key", name: "pageKey", widget: "hidden", default: "components-common"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: Storage, name: storage, widget: list, fields: [
+          {label: country, name: country, widget: string},
+          {label: flag, name: flag, widget: image}
+      ]}
       - {label: "Calculator", name: calculator, widget: object, fields: [
         {label: "Заголовок", name: title, widget: string},
         {label: "Составляющие цены", name: constituents, widget: list, fields: [
@@ -148,41 +157,6 @@ collections:
             {label: flag, name: flag, widget: image}
           ]},
           {label: image, name: image, widget: image}
-      ]}
-      - {label: Storage, name: storage, widget: list, fields: [
-          {label: country, name: country, widget: string},
-          {label: flag, name: flag, widget: image}
-        ]}
-  - name: "components-ru"
-    label: "Общие компонентны - RU"
-    folder: "src/pages/components/components.ru.md"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "components-common"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Calculator", name: calculator, widget: object, fields: [
-          {label: "Заголовок", name: title, widget: string},
-          {label: "Составляющие цены", name: constituents, widget: list, fields: [
-            {label: "Заголовок категории", name: title, widget: string},
-            {label: "category", name: category, widget: list, fields: [
-              {label: "Название услуги", name: "nameCategory", widget: string},
-              {label: "цена", name: "price", widget: number},
-              {label: "Картинка", name: image, widget: image}
-          ]}
-        ]}
-      ]}
-      - {label: Clients, name: clients, widget: list, fields: [
-          {label: image, name: image, widget: image}
-      ]}
-      - {label: Destinations, name: destinations, widget: object, fields: [
-          {label: countries, name: countries, widget: list, fields: [
-            {label: country, name: country, widget: string},
-            {label: flag, name: flag, widget: image}
-          ]},
-          {label: image, name: image, widget: image}
-      ]}
-      - {label: Storage, name: storage, widget: list, fields: [
-          {label: country, name: country, widget: string},
-          {label: flag, name: flag, widget: image}
       ]}
   - name: "pages"
     label: "Страницы"
@@ -293,12 +267,14 @@ collections:
                 {label: "Картинка", name: image, widget: image}
             ]}
           ]}
-      - file: "src/pages/help/reviews/index.md"
+      - file: "src/pages/help/reviews.md"
         label: "Отзывы"
         name: "reviews"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Description, name: description, widget: string}
+          - {label: CrumbLabel, name: crumbLabel, widget: string}
+          - {label: name, name: name, widget: string}
           - {label: Header, name: header, widget: object, fields: [
               {label: Images, name: images, widget: list, fields: [
                 {label: Image, name: image, widget: image},
