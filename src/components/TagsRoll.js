@@ -29,6 +29,9 @@ const List = styled.ul`
     &:hover{
         color: #fff;
     }
+    &[aria-current="page"]{
+        color: #fff;
+    }
   }
 `;
 
@@ -37,7 +40,7 @@ const TagsRoll = ({tags}) => (
         {
             tags.map(tag =>
                 <li key={tag.fieldValue}>
-                    <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                    <Link to={`/blog/${kebabCase(tag.fieldValue)}/`}>
                         {tag.fieldValue}
                     </Link>
                 </li>

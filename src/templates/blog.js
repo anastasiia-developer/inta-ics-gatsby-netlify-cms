@@ -193,15 +193,17 @@ BlogIndexPage.propTypes = {
 export default BlogIndexPage
 
 export const pageQuery = graphql`
-  query BlogPage($locale: String) {
+  query BlogPage($locale: String, $tag: String) {
     allMarkdownRemark(
       sort: {order: DESC, fields: [frontmatter___date]}, 
       filter: {
-      frontmatter: {
-        templateKey: {eq: "blog-post"},
-        locale: { eq: $locale } 
+          frontmatter: {
+            templateKey: {eq: "blog-post"},
+            locale: { eq: $locale },
+            tags: { eq: $tag }
+          }
       }
-    }) {
+    ){
       edges {
         node {
           excerpt(pruneLength: 400)

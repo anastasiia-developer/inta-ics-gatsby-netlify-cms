@@ -97,27 +97,27 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Make tag pages
     tagsRu.forEach(tag => {
-      const tagPath = `ru/tags/${_.kebabCase(tag)}/`
+      const tagPath = `ru/blog/${_.kebabCase(tag)}/`
 
       createPage({
         path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
+        component: path.resolve(`src/templates/blog.js`),
         context: {
           locale: 'ru',
-          tagsRu,
+          tag,
         },
       })
     });
 
     tagsUa.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
-
+      const tagPath = `/blog/${_.kebabCase(tag)}/`
+      console.log(tagPath);
       createPage({
         path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
+        component: path.resolve(`src/templates/blog.js`),
         context: {
           locale: 'ua',
-          tagsUa,
+          tag,
         },
       })
     })

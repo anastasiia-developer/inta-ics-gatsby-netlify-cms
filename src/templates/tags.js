@@ -19,6 +19,11 @@ class TagRoute extends React.Component {
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'
     } tagged with “${tag}”`
+
+
+    console.log('one tag')
+
+
     return (
       <Layout location={this.props.location} local={this.props.pageContext.locale}>
         <section className="section tags">

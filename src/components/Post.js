@@ -11,7 +11,7 @@ import Tags from "../components/Blog/TagStyle"
 const Article = styled.article`
   border-right: 1px solid #ECECEC;
   padding: 1em;
-  flex: 1;
+  width: 48%;
   &:last-child{
     border-right: none;
   }
