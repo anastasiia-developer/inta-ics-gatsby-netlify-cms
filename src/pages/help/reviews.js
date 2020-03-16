@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import styled from "styled-components";
 import Layout from '../../components/Layout'
 import TemplateHeader from "../../components/TemplateHeader";
-import News from "../index/news";
+import News from "../../components/mainPage/news";
 import FormFooter from "../../components/Footer/FormFooter";
 import TitleDesHelmet from "../../components/TitleDesHelmet";
 

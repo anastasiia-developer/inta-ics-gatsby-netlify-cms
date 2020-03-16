@@ -7,10 +7,10 @@ import CalculateHeader from "../components/delivery/CalculateHeader"
 import {Section} from "./services"
 import OurServices from '../components/delivery/OurServices'
 import Destinations from "../components/Destinations"
-import Cargo from "../pages/index/cargo"
+import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews"
-import Article from "../pages/index/Article"
+import Article from "../components/mainPage/Article"
 import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader"
 import TitleDesHelmet from "../components/TitleDesHelmet"

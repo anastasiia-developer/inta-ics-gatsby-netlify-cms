@@ -3,17 +3,17 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Header from "./index/header"
+import Header from "../components/mainPage/header"
 import TemplateHeader from "../components/TemplateHeader";
-import Section from "./index/section"
-import About from "./index/about"
+import Section from "../components/mainPage/section"
+import About from "../components/mainPage/about"
 import Calculator from "../components/Calculator"
-import News from "./index/news"
+import News from "../components/mainPage/news"
 import Destinations from "../components/Destinations"
-import Cargo from "./index/cargo"
+import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews"
-import Article from "./index/Article"
+import Article from "../components/mainPage/Article"
 import { ButtonGroup, ResponsiveCarousel } from "../components/CommonCarousel";
 import Carousel from "react-multi-carousel";
 import FormFooter from '../components/Footer/FormFooter'

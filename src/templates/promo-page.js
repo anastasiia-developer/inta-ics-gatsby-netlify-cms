@@ -2,13 +2,13 @@ import React, {Fragment} from "react";
 import {graphql} from "gatsby";
 import Layout from "../components/Layout";
 import Sections from "../components/delivery/Sections";
-import Cargo from "../pages/index/cargo";
+import Cargo from "../components/mainPage/cargo";
 import Destinations from "../components/Destinations";
 import Clients from "../components/Clients";
 import Reviews from "../components/Reviews";
-import Article from "../pages/index/Article";
+import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
-import News from "../pages/index/news";
+import News from "../components/mainPage/news";
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";

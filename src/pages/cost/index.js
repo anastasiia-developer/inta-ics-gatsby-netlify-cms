@@ -3,11 +3,11 @@ import {graphql} from "gatsby";
 import Layout from "../../components/Layout";
 import Header from "../../components/delivery/Header";
 import Sections from "../../components/delivery/Sections";
-import Cargo from "../index/cargo";
+import Cargo from "../../components/mainPage/cargo";
 import Destinations from "../../components/Destinations";
 import Clients from "../../components/Clients";
 import Reviews from "../../components/Reviews";
-import Article from "../index/Article";
+import Article from "../../components/mainPage/Article";
 import Calculator from "../../components/Calculator";
 import FormFooter from '../../components/Footer/FormFooter'
 import BarBckgImgSectionText from '../../components/BarBckgImgSectionText'

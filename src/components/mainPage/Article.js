@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Sections from "../../components/delivery/Sections";
+import Sections from "../delivery/Sections";
 
 const Section = styled.article`
     margin-top: 5em;    
