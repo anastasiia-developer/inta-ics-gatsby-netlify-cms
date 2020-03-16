@@ -12,7 +12,7 @@ const CostPagePreview = ({ entry }) => {
                 description={data.description}
                 header={data.header || ''}
                 sections={data.sections || ''}
-                seoSections={data.seoSections || ''}
+                seoSections={data.seoSections || {}}
             />
         )
     } else {

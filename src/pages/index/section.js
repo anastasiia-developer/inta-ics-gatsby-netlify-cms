@@ -55,6 +55,7 @@ const Container = styled.section`
 
 const Section = ({section}) => {
     const { title, subTitle, blocks} = section;
+
     return (
         <Container>
             <h2>{ title }</h2>

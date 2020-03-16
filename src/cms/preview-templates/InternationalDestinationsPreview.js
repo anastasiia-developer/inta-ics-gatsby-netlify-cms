@@ -8,11 +8,11 @@ const InternationalDestinationsPreview = ({ entry }) => {
     if (data) {
         return (
             <InternationalDestinationsTemplate
-                header={data.header || ''}
+                header={data.header || {}}
                 title={data.title}
-                description={data.description || ''}
-                sections={data.sections || ''}
-                seoSections={data.seoSections || ''}
+                description={data.description || {}}
+                sections={data.sections || {}}
+                seoSections={data.seoSections || {}}
             />
         )
     } else {

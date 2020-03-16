@@ -10,11 +10,11 @@ const DeliveryPagePreview = ({ entry }) => {
         return (
             <DeliveryTemplate
                 title={data.title}
-                header={data.header || ''}
+                header={data.header || {}}
                 description={data.description || ''}
-                sections={data.sections || ''}
-                sectionText={data.sectionText || ''}
-                seoSections={data.seoSections || ''}
+                sections={data.sections || {}}
+                sectionText={data.sectionText || {}}
+                seoSections={data.seoSections || {}}
             />
         )
     } else {
