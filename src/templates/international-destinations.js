@@ -2,7 +2,6 @@ import React, {Fragment} from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Helmet from "react-helmet"
 import Header from "../components/delivery/Header"
 import CalculateHeader from "../components/delivery/CalculateHeader"
 import {Section} from "./services"
@@ -14,6 +13,7 @@ import Reviews from "../components/Reviews"
 import Article from "../pages/index/Article"
 import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader"
+import TitleDesHelmet from "../components/TitleDesHelmet"
 
 export const InternationalDestinationsTemplate = ({
                                      helmet,
@@ -59,13 +59,10 @@ const InternationalDestinations = ({ data, location, pageContext }) => {
         <Layout local={pageContext.locale} location={location}>
             <InternationalDestinationsTemplate
                 helmet={
-                    <Helmet titleTemplate="%s">
-                        <title>{`${frontmatter.title}`}</title>
-                        <meta
-                            name="description"
-                            content={`${frontmatter.description}`}
-                        />
-                    </Helmet>
+                    <TitleDesHelmet
+                        title={frontmatter.title}
+                        description={frontmatter.description}
+                    />
                 }
                 header={frontmatter.header}
                 title={frontmatter.title}

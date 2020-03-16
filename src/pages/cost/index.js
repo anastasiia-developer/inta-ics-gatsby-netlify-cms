@@ -11,8 +11,10 @@ import Article from "../index/Article";
 import Calculator from "../../components/Calculator";
 import FormFooter from '../../components/Footer/FormFooter'
 import BarBckgImgSectionText from '../../components/BarBckgImgSectionText'
+import TitleDesHelmet from "../../components/TitleDesHelmet";
 
 export const CostPageTemplate = ({
+                                  helmet,
                                   title,
                                   description,
                                   location,
@@ -23,6 +25,7 @@ export const CostPageTemplate = ({
                                  }) => {
     return(
         <Fragment>
+            {helmet || ''}
            <Header
             title={title}
             description={description}
@@ -59,6 +62,12 @@ const Index = ({ data, location, pageContext }) => {
     return(
         <Layout local={pageContext.locale} location={location}>
             <CostPageTemplate
+                helmet={
+                    <TitleDesHelmet
+                        title={frontmatter.title}
+                        description={frontmatter.description}
+                    />
+                }
                 title={frontmatter.title}
                 description={frontmatter.description}
                 location={location}

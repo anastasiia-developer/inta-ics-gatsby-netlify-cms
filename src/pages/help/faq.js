@@ -6,6 +6,7 @@ import TemplateHeader from "../../components/TemplateHeader";
 import News from "../index/news";
 import FormFooter from "../../components/Footer/FormFooter";
 import Arrow from "../../img/arrow2.svg"
+import TitleDesHelmet from "../../components/TitleDesHelmet";
 
 const Container = styled.div`
     margin: 0 0 3% 0;
@@ -62,7 +63,6 @@ const Container = styled.div`
     }
     
 `;
-
 const Wrapper = styled.div`
     max-width: 49%;
     display: flex;
@@ -88,7 +88,6 @@ const Section = styled.div`
         box-shadow: none;
     }
 `;
-
 const Text = styled.p`
     color: #717883;
     margin-bottom: ${props => props.isOpen && '1.5em'};
@@ -114,13 +113,15 @@ const Question = ({title, text}) =>{
 }
 
 export const FaqPageTemplate = ({
-                                        title,
-                                        description,
-                                        header,
-                                        location,
-                                        questions
+                                    helmet,
+                                    title,
+                                    description,
+                                    header,
+                                    location,
+                                    questions
                                     }) =>
     <Fragment>
+        {helmet || ''}
         <TemplateHeader
             title={title}
             description={description}
@@ -157,6 +158,12 @@ const Faq = ({ data, location, pageContext }) => {
     return (
         <Layout location={location} local={pageContext.locale}>
             <FaqPageTemplate
+                helmet={
+                    <TitleDesHelmet
+                        title={frontmatter.title}
+                        description={frontmatter.description}
+                    />
+                }
                 title={frontmatter.title}
                 description={frontmatter.description}
                 header={frontmatter.header}

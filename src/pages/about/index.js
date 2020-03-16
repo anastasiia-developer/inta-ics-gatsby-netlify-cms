@@ -8,6 +8,7 @@ import HoverGradientInsideSvg from '../../components/HoverGradientInsideSvg'
 import PreviewCompatibleImage from "../../components/PreviewCompatibleImage";
 import Clients from "../../components/Clients";
 import Reviews from "../../components/Reviews";
+import TitleDesHelmet from "../../components/TitleDesHelmet";
 
 const Section = styled.section`
     margin-top: -10em;
@@ -168,6 +169,7 @@ const Description = styled.div`
 `;
 
 export const AboutPageTemplate = ({
+                                      helmet,
                                       title,
                                       description,
                                       header,
@@ -180,6 +182,7 @@ export const AboutPageTemplate = ({
 
   return (
       <Fragment>
+          {helmet || ''}
           <TemplateHeader
               description={description}
               title={title}
@@ -256,6 +259,12 @@ const AboutPage = ({ data, location, pageContext }) => {
   return (
     <Layout local={pageContext.locale} location={location}>
       <AboutPageTemplate
+        helmet={
+          <TitleDesHelmet
+              title={frontmatter.title}
+              description={frontmatter.description}
+          />
+        }
         title={frontmatter.title}
         description={frontmatter.description}
         header={frontmatter.header}

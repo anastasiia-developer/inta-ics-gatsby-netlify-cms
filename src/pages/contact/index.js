@@ -12,6 +12,7 @@ import {HTMLContent} from "../../components/Content";
 import PreviewCompatibleImage from "../../components/PreviewCompatibleImage";
 import Carousel from "react-multi-carousel";
 import {ButtonGroup, ResponsiveCarousel} from "../../components/CommonCarousel";
+import TitleDesHelmet from "../../components/TitleDesHelmet";
 
 const Wrapper = styled.div`
     .bar-contacts{
@@ -114,7 +115,6 @@ const Section = styled.section`
         top: 45%;
     }
 `;
-
 const Popup = styled.div`
     position: fixed;
     z-index: 3;
@@ -213,6 +213,7 @@ const StoreBlock = ({store, morePhotoIcon}) => {
 }
 
 export const ContactPageTemplate = ({
+                                        helmet,
                                         title,
                                         description,
                                         header,
@@ -222,6 +223,7 @@ export const ContactPageTemplate = ({
                                         locale
                                     }) =>
     <Wrapper>
+        { helmet || ''}
         <TemplateHeader
             title={title}
             description={description}
@@ -256,6 +258,12 @@ const ContactPage = ({ data, location, pageContext }) => {
     return (
         <Layout local={pageContext.locale} location={location}>
             <ContactPageTemplate
+                helmet={
+                    <TitleDesHelmet
+                        title={frontmatter.title}
+                        description={frontmatter.description}
+                    />
+                }
                 title={frontmatter.title}
                 description={frontmatter.description}
                 header={frontmatter.header}

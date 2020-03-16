@@ -5,6 +5,7 @@ import Layout from '../../components/Layout'
 import TemplateHeader from "../../components/TemplateHeader";
 import News from "../index/news";
 import FormFooter from "../../components/Footer/FormFooter";
+import TitleDesHelmet from "../../components/TitleDesHelmet";
 
 const Wrapper = styled.div`
     header .btn{
@@ -80,6 +81,7 @@ const Section = styled.div`
 `;
 
 export const ReviewsPageTemplate = ({
+                                        helmet,
                                         title,
                                         description,
                                         header,
@@ -87,6 +89,7 @@ export const ReviewsPageTemplate = ({
                                         reviews
 }) =>
     <Wrapper>
+        { helmet || ''}
         <TemplateHeader
             title={title}
             description={description}
@@ -116,6 +119,12 @@ const Reviews = ({ data, location, pageContext }) => {
     return (
         <Layout local={pageContext.locale} location={location}>
             <ReviewsPageTemplate
+                helmet={
+                    <TitleDesHelmet
+                        title={frontmatter.title}
+                        description={frontmatter.description}
+                    />
+                }
                 title={frontmatter.title}
                 description={frontmatter.description}
                 header={frontmatter.header}

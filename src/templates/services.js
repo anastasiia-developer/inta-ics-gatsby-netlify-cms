@@ -13,6 +13,7 @@ import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
 import OurServices from "../components/delivery/OurServices";
 import Table from '../pages/services/Table';
+import TitleDesHelmet from "../components/TitleDesHelmet";
 
 export const Section = styled(Sections)`
     background: #F6F6F6;
@@ -48,6 +49,7 @@ export const Section = styled(Sections)`
 `;
 
 export const ServicesPageTemplate = ({
+                                      helmet,
                                       title,
                                       description,
                                       location,
@@ -58,6 +60,7 @@ export const ServicesPageTemplate = ({
                                   }) => {
     return(
        <Fragment>
+           {helmet || ''}
             <TemplateHeader
                 title={title}
                 description={description}
@@ -96,6 +99,12 @@ const ServicesPage = ({ data, location, pageContext }) => {
     return(
         <Layout local={pageContext.locale} location={location}>
             <ServicesPageTemplate
+                helmet={
+                    <TitleDesHelmet
+                        title={frontmatter.title}
+                        description={frontmatter.description}
+                    />
+                }
                 title={frontmatter.title}
                 description={frontmatter.description}
                 location={location}

@@ -11,6 +11,7 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Tags from "../components/Blog/TagStyle";
 import ArrowLine from '../img/arrowLine.svg'
 import BlogRoll from '../components/BlogRoll'
+import TitleDesHelmet from "../components/TitleDesHelmet";
 
 export const BlogPostTemplate = ({
                                     helmet,
@@ -92,13 +93,10 @@ const BlogPost = ({ data, pageContext, location }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
+            <TitleDesHelmet
+                title={post.frontmatter.title}
+                description={post.frontmatter.description}
             />
-          </Helmet>
         }
         location={location}
         tags={post.frontmatter.tags}

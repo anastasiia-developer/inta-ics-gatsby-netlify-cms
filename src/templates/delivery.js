@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Helmet from "react-helmet";
 import Header from "../components/delivery/Header"
 import CalculateHeader from "../components/delivery/CalculateHeader"
 import Sections from "../components/delivery/Sections"
@@ -17,6 +16,7 @@ import Article from "../pages/index/Article";
 import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
 import BarBckgImgSectionText from "../components/BarBckgImgSectionText"
+import TitleDesHelmet from "../components/TitleDesHelmet";
 
 export const DeliveryTemplate = ({
                                      helmet,
@@ -83,13 +83,10 @@ const Delivery = ({ data, location, pageContext }) => {
         <Layout local={pageContext.locale} location={location}>
             <DeliveryTemplate
                 helmet={
-                    <Helmet titleTemplate="%s">
-                        <title>{`${frontmatter.title}`}</title>
-                        <meta
-                            name="description"
-                            content={`${frontmatter.description}`}
-                        />
-                    </Helmet>
+                    <TitleDesHelmet
+                        title={frontmatter.title}
+                        description={frontmatter.description}
+                    />
                 }
                 header={frontmatter.header}
                 title={frontmatter.title}

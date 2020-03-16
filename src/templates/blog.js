@@ -2,13 +2,12 @@ import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from "styled-components";
-import { Link } from 'gatsby'
-
 import Layout from '../components/Layout'
 import TemplateHeader from "../components/TemplateHeader";
 import TagsRoll from "../components/TagsRoll";
 import Post from "../components/Post";
 import FormFooter from '../components/Footer/FormFooter'
+import TitleDesHelmet from "../components/TitleDesHelmet";
 
 const Header = styled(TemplateHeader)`
     max-height: 100vh;
@@ -119,6 +118,7 @@ const Pagination = styled.div`
 `;
 
 export const BlogIndexPageTemplate = ({
+                                          helmet,
                                           title,
                                           description,
                                           header,
@@ -129,6 +129,7 @@ export const BlogIndexPageTemplate = ({
 
     return(
         <Fragment>
+            {helmet || ''}
             <Header
                 title={title}
                 description={description}
@@ -171,6 +172,12 @@ const BlogIndexPage = ({ data, location, pageContext }) => {
     return (
         <Layout location={location} local={pageContext.locale}>
             <BlogIndexPageTemplate
+                helmet={
+                    <TitleDesHelmet
+                        title={frontmatter.title}
+                        description={frontmatter.description}
+                    />
+                }
                 title={frontmatter.title}
                 description={frontmatter.description}
                 header={frontmatter.header}

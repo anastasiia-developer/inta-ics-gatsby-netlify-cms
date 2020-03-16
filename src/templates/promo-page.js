@@ -12,6 +12,7 @@ import News from "../pages/index/news";
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
+import TitleDesHelmet from "../components/TitleDesHelmet";
 
 const Header = styled(TemplateHeader)`
     position: relative;
@@ -36,6 +37,7 @@ const Section = styled(Sections)`
 `;
 
 export const SalesPageTemplate = ({
+                                     helmet,
                                      title,
                                      description,
                                      location,
@@ -45,6 +47,7 @@ export const SalesPageTemplate = ({
                                  }) => {
     return(
         <Fragment>
+            {helmet || ''}
             <Header
                 title={title}
                 description={description}
@@ -82,6 +85,12 @@ const Promo = ({ data, location, pageContext }) => {
     return(
         <Layout location={location} local={pageContext.locale}>
         <SalesPageTemplate
+            helmet={
+                <TitleDesHelmet
+                    title={frontmatter.title}
+                    description={frontmatter.description}
+                />
+            }
             title={frontmatter.title}
             description={frontmatter.description}
             location={location}
