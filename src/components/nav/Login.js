@@ -10,7 +10,7 @@ const Button = styled.button`
     background: #222222;
     align-items: center;
     align-self: stretch;
-    margin-left: 1em;
+    margin: 0 1em;
     font-size: .9em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         margin-left: auto;

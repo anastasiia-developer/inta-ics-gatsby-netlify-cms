@@ -9,9 +9,9 @@ const Label = styled.label`
     padding: 0 .5em 0 0;
     font-size: 1em;
     max-width: 300px;
-    min-width: 15em;
+    min-width: 13em;
     position: absolute;
-    right: 15em;
+    right: 16em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         background: #313131;
         padding: .5em;

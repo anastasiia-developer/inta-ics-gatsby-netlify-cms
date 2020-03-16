@@ -1,5 +1,4 @@
 import React, {Fragment, useState} from 'react'
-import { navigate } from 'gatsby-link'
 import styled from 'styled-components'
 import Phone from "../../components/FormComponents/Phone";
 import PopupThanks from "../../components/FormComponents/PopupThanks";

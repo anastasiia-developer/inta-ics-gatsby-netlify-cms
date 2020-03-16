@@ -63,7 +63,7 @@ const DestinationsTemplate = ({ destinations }) => {
                     <div className="column countries">
                         <h2>Международные направления</h2>
                         <FlagsTemplate
-                            link
+                            link='/international-destinations/'
                             countries={destinations.countries}/>
                     </div>
                     <PreviewCompatibleImage

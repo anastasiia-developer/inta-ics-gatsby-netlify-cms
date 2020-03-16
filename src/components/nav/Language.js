@@ -17,6 +17,7 @@ const Container = styled.div`
     button{
         text-transform: uppercase;
         font-size: 1em;
+        color: #005BE4;
     }
 `;
 

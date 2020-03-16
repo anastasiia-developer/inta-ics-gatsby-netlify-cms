@@ -111,7 +111,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     tagsUa.forEach(tag => {
       const tagPath = `/blog/${_.kebabCase(tag)}/`
-      console.log(tagPath);
+
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/blog.js`),
@@ -133,7 +133,7 @@ exports.onCreatePage = ({ page, actions }) => {
 
     Object.keys(locales).map(lang => {
       const localizedPath = locales[lang].default ? page.path : locales[lang].path + page.path
-
+      console.log(localizedPath)
       return createPage({
         ...page,
         path: localizedPath,

@@ -8,10 +8,10 @@ import CalculateHeader from "../components/delivery/CalculateHeader"
 import {Section} from "./services"
 import OurServices from '../components/delivery/OurServices'
 import Destinations from "../components/Destinations"
-import Cargo from "../components/mainPage/cargo"
+import Cargo from "../pages/index/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews"
-import Article from "../components/mainPage/Article"
+import Article from "../pages/index/Article"
 import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader"
 

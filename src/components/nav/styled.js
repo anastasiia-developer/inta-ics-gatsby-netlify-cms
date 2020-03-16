@@ -164,7 +164,7 @@ const Navigation = styled.nav`
             }
         }
         &.call{
-            margin-right: 16em;
+            margin-right: 15em;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){
                 margin-right: 1em;
             }

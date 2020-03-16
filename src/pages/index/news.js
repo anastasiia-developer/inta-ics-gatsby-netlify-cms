@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "gatsby";
-import BlogRoll from "../BlogRoll";
+import BlogRoll from "../../components/BlogRoll";
 import styled from "styled-components";
 
 const Section = styled.section`
@@ -15,6 +15,9 @@ const Section = styled.section`
         padding: 1em 0 2em;
         font-weight: 700;
         color: #393939;
+    }
+    article{
+        width: 100%;
     }
     .btn{
         background: #005BE4;

@@ -125,7 +125,7 @@ export const BlogIndexPageTemplate = ({
                                           location,
                                           posts,
                                           pageContext}) => {
-    const { numPages } = pageContext;
+    const { tag } = pageContext;
 
     return(
         <Fragment>
@@ -135,7 +135,7 @@ export const BlogIndexPageTemplate = ({
                 header={header}
                 location={location}
                 crumbLabel="Блог"
-                childrenInColumn={<TagsRoll/>}
+                childrenInColumn={<TagsRoll tag={tag}/>}
             />
             {posts.length > 0 &&
                 <Fragment>

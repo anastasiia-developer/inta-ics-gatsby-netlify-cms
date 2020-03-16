@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import TemplateHeader from "../TemplateHeader";
-
-
 const Header = styled.div`
     position: relative;
     .wrapper{

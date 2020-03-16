@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
-import { HTMLContent } from '../Content';
+import PreviewCompatibleImage from "../../components/PreviewCompatibleImage";
+import { HTMLContent } from '../../components/Content';
 
 const Section = styled.section`
     background: #F0F5FD;

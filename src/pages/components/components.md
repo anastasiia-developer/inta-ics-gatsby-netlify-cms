@@ -82,7 +82,7 @@ destinations:
       flag: /img/002-united-states (5).png
     - country: Франция
       flag: /img/002-united-states (6).png
-      link: /international-destinations/france  
+      link: /france  
     - country: Италия
       flag: /img/002-united-states (2).png
     - country: Израиль

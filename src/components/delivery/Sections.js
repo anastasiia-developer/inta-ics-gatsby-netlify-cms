@@ -1,4 +1,4 @@
-import About from "../mainPage/about"
+import About from "../../pages/index/about"
 import React, { Fragment } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"

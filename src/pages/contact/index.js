@@ -2,7 +2,7 @@ import Layout from "../../components/Layout";
 import {graphql} from "gatsby";
 import React, {Fragment, useState} from "react";
 import TemplateHeader from "../../components/TemplateHeader";
-import News from "../../components/mainPage/news";
+import News from "../index/news";
 import Form from "./form";
 import BarContacts from "../../components/nav/BarContacts";
 import styled from "styled-components";

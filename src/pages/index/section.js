@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import PreviewCompatibleImage from "../../components/PreviewCompatibleImage";
 
 const Container = styled.section`
     text-align: center;

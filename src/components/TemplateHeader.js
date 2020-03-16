@@ -194,7 +194,7 @@ const TemplateHeader = ({
             key={index}
             className="btn row"
             to={btn.link}
-            bckg={!header.logo}>
+            bckg={header.logo ? 1 : 0}>
             {!header.logo &&
                 <img src="/img/logoMini.svg"
                      alt="logo Mini"

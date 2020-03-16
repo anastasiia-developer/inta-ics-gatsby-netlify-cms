@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HoverGradientInsideSvg from "../HoverGradientInsideSvg";
+import HoverGradientInsideSvg from "../../components/HoverGradientInsideSvg";
 import Storage from "../../img/storage.svg";
 import Package from "../../img/package.svg";
 import Trolley from "../../img/trolley.svg";

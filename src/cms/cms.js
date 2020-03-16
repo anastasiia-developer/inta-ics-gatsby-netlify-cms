@@ -12,6 +12,7 @@ import CostPagePreview from './preview-templates/CostPagePreview'
 
 
 import withStyledComponentsRendered from './StyleManager'
+import InternationalDestinationsPreview from "./preview-templates/InternationalDestinationsPreview";
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
@@ -68,4 +69,11 @@ CMS.registerPreviewTemplate(
     'reviews',
     withStyledComponentsRendered(ReviewPagePreview)
 );
-
+CMS.registerPreviewTemplate(
+    'international-destinations',
+    withStyledComponentsRendered(InternationalDestinationsPreview)
+);
+CMS.registerPreviewTemplate(
+    'international-destinations-ru',
+    withStyledComponentsRendered(InternationalDestinationsPreview)
+);

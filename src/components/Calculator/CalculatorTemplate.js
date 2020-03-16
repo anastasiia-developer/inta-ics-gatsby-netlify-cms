@@ -43,7 +43,6 @@ const Section = styled.section`
         }
     }
 `;
-
 const Form = styled.div`
     flex: 1;
     position: relative;
@@ -148,7 +147,6 @@ const Form = styled.div`
         }
     }
 `;
-
 const Wrapper = styled.div`
     width: 6vw;
     margin-right: 1em;
@@ -180,7 +178,6 @@ const Wrapper = styled.div`
 
 const Constituents = ({title, category, setAmount, amount, canChoose, name}) => {
     const [isActive, setActive] = useState(null);
-    const [price, setPrice] = useState(0);
 
     useEffect(() => {
         category.forEach((item, key) => {

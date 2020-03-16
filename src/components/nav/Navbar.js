@@ -129,12 +129,12 @@ const Navbar = ({local, location}) => {
         </div>
         <Search isActive={isActiveMob}/>
         <div className="row container" >
-            <Link to="/" className="row circle" onClick={() => setActiveMob(!isActiveMob)}>
+            <a href="/" className="row circle" onClick={() => setActiveMob(!isActiveMob)}>
                 <Telegram />
-            </Link>
-            <Link to="/" className="row circle call" onClick={() => setActiveMob(!isActiveMob)}>
+            </a>
+            <a href="tel:+380685555999" className="row circle call" onClick={() => setActiveMob(!isActiveMob)}>
                 <Call />
-            </Link>
+            </a>
             <Login onClick={() => setActiveMob(!isActiveMob)}/>
             <Language local={local} location={location}/>
         </div>

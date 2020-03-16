@@ -12,7 +12,10 @@ const List = styled.ul`
     margin: 0;
     width: 100%;
   }
-  li{
+  
+`;
+
+const Item = styled.li`
     background: #222222;
     border-radius: .5em;
     padding: .5em 1em;
@@ -22,28 +25,24 @@ const List = styled.ul`
     &:last-child{
         margin-right: 0;
     }
-  }
   a{
     font-weight: 500;
-    color: #005BE4;
+    color: ${props => !!props.color ? '#fff' : '#005BE4'};
     &:hover{
         color: #fff;
     }
-    &[aria-current="page"]{
-        color: #fff;
-    }
   }
-`;
+`
 
-const TagsRoll = ({tags}) => (
+const TagsRoll = ({tags, tagActive}) => (
     <List className="row">
         {
             tags.map(tag =>
-                <li key={tag.fieldValue}>
-                    <Link to={`/blog/${kebabCase(tag.fieldValue)}/`}>
+                <Item key={tag.fieldValue} color={tagActive === tag.fieldValue ? 1 : 0}>
+                    <Link  to={`/blog/${tagActive === tag.fieldValue ? '' : kebabCase(tag.fieldValue)}/`}>
                         {tag.fieldValue}
                     </Link>
-                </li>
+                </Item>
             )
         }
     </List>
@@ -57,7 +56,7 @@ TagsRoll.propTypes = {
     }),
 }
 
-export default () => (
+export default ({ tag }) => (
     <StaticQuery
         query={graphql`
           query TagsRollQuery {
@@ -68,6 +67,6 @@ export default () => (
             }
           }
         `}
-        render={(data) => <TagsRoll tags={data.allMarkdownRemark.group} />}
+        render={(data) => <TagsRoll tagActive={tag} tags={data.allMarkdownRemark.group} />}
     />
 )
