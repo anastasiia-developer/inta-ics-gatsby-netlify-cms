@@ -7,6 +7,7 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
 import Svg from '../img/arrowTop.svg'
+import MainPopup from "./mainPopup";
 
 const ArrowTop = styled.div`
     position: fixed;
@@ -24,9 +25,10 @@ const TemplateWrapper = ({ children, local, location }) => {
 
     useEffect(() => {
         document.addEventListener("scroll", function(e) {
-            setVisible(window.pageYOffset > 300)
+            setVisible(window.pageYOffset > 300);
         });
     });
+
 
   return (
     <div>
@@ -50,6 +52,9 @@ const TemplateWrapper = ({ children, local, location }) => {
         {location &&
             <Navbar local={local} location={location}/>
         }
+      <MainPopup
+          locale={local}
+      />
       <ArrowTop
           onClick={()=>{
               window.scrollTo({

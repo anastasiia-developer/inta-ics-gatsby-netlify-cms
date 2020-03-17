@@ -58,7 +58,7 @@ export const DeliveryTemplate = ({
                     image={sectionText.image}
                 />
             }
-            <OurServices/>
+            <OurServices locale={locale}/>
             <Destinations />
             <Cargo/>
             <Clients/>

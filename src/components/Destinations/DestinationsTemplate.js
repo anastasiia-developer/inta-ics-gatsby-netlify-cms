@@ -40,6 +40,10 @@ const Section = styled.section`
         .row{
             align-items: center;
             margin: 0 2em 2em 0;
+            transition: all .4s;
+            &:hover{
+                transform: translateY(-.5em);
+            }
         }    
         p{
             font-weight: 700;

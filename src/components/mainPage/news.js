@@ -26,6 +26,9 @@ const Section = styled.section`
         border-radius: 2em;
         margin: 6em auto 2em;
         font-size: .9em;
+        &:hover{
+            background: #1d63cd;
+        }
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             margin: 2em auto 0;
         }

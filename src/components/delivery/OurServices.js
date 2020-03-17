@@ -22,37 +22,41 @@ const Section = styled.section`
     
 `;
 
-const OurServices = () => (
-    <Section>
-        <h2>Наши услуги</h2>
-        <div className="row-to-column">
-            <HoverGradientInsideSvg
-                title="Проведение платежей"
-                svg={<Shopping/>}
-                link='/'
-            />
-            <HoverGradientInsideSvg
-                title="Поиск поставщика"
-                svg={<Search/>}
-                link='/'
-            />
-            <HoverGradientInsideSvg
-                title="Заказ товара из Китая"
-                link='/'
-                svg={<Truck/>}
-            />
-            <HoverGradientInsideSvg
-                title="Таможенное оформление груза"
-                link='/'
-                svg={<Clipboard/>}
-            />
-            <HoverGradientInsideSvg
-                title="Складские услуги"
-                link='/'
-                svg={<Warehouse/>}
-            />
-        </div>
-    </Section>
-)
+const OurServices = ({locale}) =>{
+    const local =  locale === 'ua' ? '' : locale+'/';
+
+    return(
+        <Section>
+            <h2>Наши услуги</h2>
+            <div className="row-to-column">
+                <HoverGradientInsideSvg
+                    title="Проведение платежей"
+                    svg={<Shopping/>}
+                    link={`services/${local}making-payments`}
+                />
+                <HoverGradientInsideSvg
+                    title="Поиск поставщика"
+                    svg={<Search/>}
+                    link={`services/${local}search-and-verification`}
+                />
+                <HoverGradientInsideSvg
+                    title="Заказ товара из Китая"
+                    link={`services/${local}buyback-and-delivery-from-china`}
+                    svg={<Truck/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Таможенное оформление груза"
+                    link={`services/${local}customs-clearance`}
+                    svg={<Clipboard/>}
+                />
+                <HoverGradientInsideSvg
+                    title="Складские услуги"
+                    link={`services/${local}warehousing-services`}
+                    svg={<Warehouse/>}
+                />
+            </div>
+        </Section>
+    )
+}
 
 export default OurServices

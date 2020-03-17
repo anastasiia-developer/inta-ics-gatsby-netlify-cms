@@ -78,7 +78,7 @@ export const ServicesPageTemplate = ({
             <Section
                 sections={sections}
             />
-            <OurServices/>
+            <OurServices locale={locale}/>
             {location &&
                 <Destinations/>
             }

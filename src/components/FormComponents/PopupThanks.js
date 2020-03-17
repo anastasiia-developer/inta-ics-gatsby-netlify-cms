@@ -18,7 +18,7 @@ const Overlay = styled.div`
     align-items: center;
     justify-content: center;
 `;
-const Close = styled.button`
+export const Close = styled.button`
     position: absolute;
     right: 3em;
     top: .5em;

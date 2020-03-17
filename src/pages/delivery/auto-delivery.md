@@ -7,11 +7,11 @@ name: auto-delivery
 description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:
   buttons:
-    - link: /contacts
+    - link: /international-destinations/france
+      text: Перевозка грузов из Европы
+    - link: /international-destinations/france
       text: Авиадоставка из США
-    - link: /contacts
-      text: Авиадоставка из США
-    - link: /
+    - link: /international-destinations/france
       text: Авиадоставка из США
   images:
     - alt: auto

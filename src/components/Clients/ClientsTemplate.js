@@ -60,7 +60,6 @@ const Section = styled.section`
     }
 `;
 
-
 const ClientsTemplate = ({ clients }) => {
     if(clients){
         return(
@@ -74,6 +73,8 @@ const ClientsTemplate = ({ clients }) => {
                         customButtonGroup={<ButtonGroup />}
                         slidesToSlide={1}
                         showDots
+                        autoPlay
+                        autoPlaySpeed={5000}
                         responsive={ResponsiveCarousel()}
                         dotListClass="custom-dot-list-style"
                     >

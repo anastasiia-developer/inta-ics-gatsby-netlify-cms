@@ -6,6 +6,9 @@ crumbLabel: Морская перевозка
 name: sea-freight
 description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:
+  buttons:
+    - link: /international-destinations/france
+      text: Морская перевозка грузов из Китая №8
   images:
     - alt: app mobile
       image: /img/fatree.png

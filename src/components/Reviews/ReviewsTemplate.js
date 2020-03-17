@@ -98,6 +98,8 @@ const ReviewsTemplate = ({reviews}) => {
                         customButtonGroup={<ButtonGroup />}
                         slidesToSlide={1}
                         showDots
+                        autoPlay
+                        autoPlaySpeed={5000}
                         dotListClass="custom-dot-list-style"
                         responsive={ResponsiveCarousel(1,1)}
                     >

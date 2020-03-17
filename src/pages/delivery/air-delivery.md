@@ -9,6 +9,9 @@ description: >-
   клиентом, независимо от объёмов его грузопотока. Закажите консультацию и
   начнем сотрудничество прямо сейчас!!
 header:
+    buttons:
+        - link: international-destinations/france
+          text: Авиадоставка из Китая №6
     images:
         - alt: app mobile
           image: /img/bkgr-air.png

@@ -19,6 +19,10 @@ export const Section = styled.section`
     .row{
       margin-right: 2em;
       align-items: center;
+      transition: all .4s;
+      &:hover{
+        transform: translateY(-.5em);
+      }
       @media(max-aspect-ratio: 3/3), (max-height: 500px){
         width: 45%;
         margin-right: 0;

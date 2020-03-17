@@ -12,7 +12,7 @@ import CostPagePreview from './preview-templates/CostPagePreview'
 
 
 import withStyledComponentsRendered from './StyleManager'
-// import InternationalDestinationsPreview from "./preview-templates/InternationalDestinationsPreview";
+import InternationalDestinationsPreview from "./preview-templates/InternationalDestinationsPreview";
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
