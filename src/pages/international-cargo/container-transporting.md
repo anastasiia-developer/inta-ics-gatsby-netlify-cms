@@ -3,6 +3,7 @@ templateKey: international-cargo
 locale: ua
 title: 'Контейнерные перевозки'
 crumbLabel: Контейнерные перевозки
+crumbLabelParent: Возможности доставки грузов
 name: container-transporting
 description: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым

@@ -99,6 +99,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
+      - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
         {label: Images, name: images, widget: list, fields: [
@@ -132,7 +133,7 @@ collections:
       ]}
       ]}
   - name: "international-destinations-ru"
-    label: "Международные грузоперевозки"
+    label: "RU Международные грузоперевозки"
     folder: "src/pages/international-destinations/ru"
     create: true
     slug: "{{name}}"
@@ -141,6 +142,7 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
+      - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
@@ -184,6 +186,7 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
+      - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
@@ -227,6 +230,7 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
+      - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [

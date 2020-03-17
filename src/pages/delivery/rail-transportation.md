@@ -10,12 +10,8 @@ description: >-
   начнем сотрудничество прямо сейчас!
 header:
   buttons:
-    - link: /international-destinations/france
+    - link: /international-cargo/container-transporting
       text: Перевозка сборных грузов
-    - link: /international-destinations/france
-      text: Авиадоставка из США
-    - link: /international-destinations/france
-      text: Авиадоставка из США
   images:
     - alt: app mobile
       image: /img/Group.png

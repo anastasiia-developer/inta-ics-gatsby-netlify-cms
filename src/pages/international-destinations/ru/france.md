@@ -2,6 +2,7 @@
 templateKey: international-destinations
 locale: ru
 title: 'Доставка из Франции'
+crumbLabelParent: Международные грузоперевозки
 crumbLabel: Франция
 name: france
 description: >-

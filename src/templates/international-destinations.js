@@ -20,6 +20,7 @@ export const InternationalDestinationsTemplate = ({
                                      header,
                                      locale,
                                      crumbLabel,
+                                     crumbLabelParent,
                                      title,
                                      description,
                                      location,
@@ -34,7 +35,7 @@ export const InternationalDestinationsTemplate = ({
                 header={header}
                 location={location}
                 crumbLabel={crumbLabel}
-                crumbLabelParent="Международные грузоперевозки"
+                crumbLabelParent={crumbLabelParent}
                 crumbPathParent={false}
                 children={location && !header.buttons &&  <CalculateHeader/>}
             />
@@ -68,6 +69,7 @@ const InternationalDestinations = ({ data, location, pageContext }) => {
                 }
                 header={frontmatter.header}
                 crumbLabel={frontmatter.crumbLabel}
+                crumbLabelParent={frontmatter.crumbLabelParent}
                 title={frontmatter.title}
                 description={frontmatter.description}
                 location={location}
@@ -90,6 +92,7 @@ export const pageQuery = graphql`
         title
         description
         crumbLabel
+        crumbLabelParent
         header{
             images{
               image{

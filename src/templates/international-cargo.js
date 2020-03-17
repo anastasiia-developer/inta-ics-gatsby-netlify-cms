@@ -17,6 +17,7 @@ import TitleDesHelmet from "../components/TitleDesHelmet"
 
 export const InternationalCargoTemplate = ({
                                             helmet,
+                                            crumbLabelParent,
                                             crumbLabel,
                                             header,
                                             locale,
@@ -34,7 +35,7 @@ export const InternationalCargoTemplate = ({
                 header={header}
                 location={location}
                 crumbLabel={crumbLabel}
-                crumbLabelParent="Возможности доставки грузов"
+                crumbLabelParent={crumbLabelParent}
                 crumbPathParent={false}
                 children={location && !header.buttons &&  <CalculateHeader/>}
             />
@@ -56,7 +57,7 @@ export const InternationalCargoTemplate = ({
 
 const InternationalCargo = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
-
+    console.log(frontmatter.crumbLabelParent)
     return (
         <Layout local={pageContext.locale} location={location}>
             <InternationalCargoTemplate
@@ -68,6 +69,7 @@ const InternationalCargo = ({ data, location, pageContext }) => {
                 }
                 locale={pageContext.locale}
                 crumbLabel={frontmatter.crumbLabel}
+                crumbLabelParent={frontmatter.crumbLabelParent}
                 header={frontmatter.header}
                 title={frontmatter.title}
                 description={frontmatter.description}
@@ -89,6 +91,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        crumbLabelParent
         crumbLabel
         header{
             images{

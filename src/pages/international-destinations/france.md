@@ -3,6 +3,7 @@ templateKey: international-destinations
 locale: ua
 title: 'Доставка из Франции'
 crumbLabel: Франция
+crumbLabelParent: Международные грузоперевозки
 name: france
 description: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
