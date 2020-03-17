@@ -1,9 +1,9 @@
 ---
-templateKey: international-destinations
+templateKey: international-cargo
 locale: ru
-title: 'Доставка из Франции'
-crumbLabel: Франция
-name: france
+title: 'Контейнерные перевозки'
+crumbLabel: Контейнерные перевозки
+name: container-transporting
 description: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
   клиентом, независимо от объёмов его грузопотока. Закажите консультацию и

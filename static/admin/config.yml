@@ -89,7 +89,7 @@ collections:
           ]}
       ]}
   - name: "international-destinations"
-    label: "Международные направления"
+    label: "Международные грузоперевозки"
     folder: "src/pages/international-destinations"
     create: true
     slug: "{{name}}"
@@ -132,12 +132,98 @@ collections:
       ]}
       ]}
   - name: "international-destinations-ru"
-    label: "Международные направления"
+    label: "Международные грузоперевозки"
     folder: "src/pages/international-destinations/ru"
     create: true
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-destinations"}
+      - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "path name", name: name, widget: "string"}
+      - {label: "crumb Label", name: "crumbLabel", widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: Header, name: header, widget: object, fields: [
+      {label: Images, name: images, widget: list, fields: [
+      {label: Alt, name: alt, widget: string},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: "Scope information", name: scopeInformation, widget: list, fields: [
+      {label: text, name: text, widget: string},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: Buttons, name: buttons, widget: list, fields: [
+      {label: text, name: text, widget: string},
+      {label: Link, name: link, widget: string}
+      ]}
+      ]}
+      - {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Картинка", name: image, widget: image},
+      {label: "Текст", name: text, widget: "markdown"},
+      {label: "list", name: list, widget: list, fields: [
+      {label: "title", name: title, widget: string},
+      {label: "Картинка", name: image, widget: image}
+      ]},
+      ]}
+      - {label: seoSections, name: seoSections, widget: object, fields: [
+      {label: title, name: title, widget: "string"},
+      {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Текст", name: text, widget: "markdown"},
+      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "Картинка", name: image, widget: image}
+      ]}
+      ]}
+  - name: "international-cargo"
+    label: "Возможности доставки грузов"
+    folder: "src/pages/international-cargo"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-cargo"}
+      - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "path name", name: name, widget: "string"}
+      - {label: "crumb Label", name: "crumbLabel", widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: Header, name: header, widget: object, fields: [
+      {label: Images, name: images, widget: list, fields: [
+      {label: Alt, name: alt, widget: string},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: "Scope information", name: scopeInformation, widget: list, fields: [
+      {label: text, name: text, widget: string},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: Buttons, name: buttons, widget: list, fields: [
+      {label: text, name: text, widget: string},
+      {label: Link, name: link, widget: string}
+      ]}
+      ]}
+      - {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Картинка", name: image, widget: image},
+      {label: "Текст", name: text, widget: "markdown"},
+      {label: "list", name: list, widget: list, fields: [
+      {label: "title", name: title, widget: string},
+      {label: "Картинка", name: image, widget: image}
+      ]},
+      ]}
+      - {label: seoSections, name: seoSections, widget: object, fields: [
+      {label: title, name: title, widget: "string"},
+      {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Текст", name: text, widget: "markdown"},
+      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "Картинка", name: image, widget: image}
+      ]}
+      ]}
+  - name: "international-cargo-ru"
+    label: "RU Возможности доставки грузов"
+    folder: "src/pages/international-cargo/ru"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-cargo"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}

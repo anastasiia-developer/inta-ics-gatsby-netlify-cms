@@ -9,6 +9,7 @@ import DeliveryPagePreview from "./preview-templates/DeliveryPagePreview"
 import ComponentsCommonPreview from './preview-templates/ComponentsCommonPagePreview'
 import ReviewPagePreview from './preview-templates/ReviewPagePreview'
 import CostPagePreview from './preview-templates/CostPagePreview'
+import InternationalCargoPreview from './preview-templates/InternationaCargoPreview'
 
 
 import withStyledComponentsRendered from './StyleManager'
@@ -76,4 +77,12 @@ CMS.registerPreviewTemplate(
 CMS.registerPreviewTemplate(
     'international-destinations-ru',
     withStyledComponentsRendered(InternationalDestinationsPreview)
+);
+CMS.registerPreviewTemplate(
+    'international-cargo',
+    withStyledComponentsRendered(InternationalCargoPreview)
+);
+CMS.registerPreviewTemplate(
+    'international-cargo-ru',
+    withStyledComponentsRendered(InternationalCargoPreview)
 );

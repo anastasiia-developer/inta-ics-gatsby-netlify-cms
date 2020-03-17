@@ -15,16 +15,16 @@ import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader"
 import TitleDesHelmet from "../components/TitleDesHelmet"
 
-export const InternationalDestinationsTemplate = ({
-                                     helmet,
-                                     header,
-                                     locale,
-                                     crumbLabel,
-                                     title,
-                                     description,
-                                     location,
-                                     sections,
-                                     seoSections}) => {
+export const InternationalCargoTemplate = ({
+                                            helmet,
+                                            crumbLabel,
+                                            header,
+                                            locale,
+                                            title,
+                                            description,
+                                            location,
+                                            sections,
+                                            seoSections}) => {
     return (
         <Fragment>
             {helmet || ''}
@@ -34,18 +34,18 @@ export const InternationalDestinationsTemplate = ({
                 header={header}
                 location={location}
                 crumbLabel={crumbLabel}
-                crumbLabelParent="Международные грузоперевозки"
+                crumbLabelParent="Возможности доставки грузов"
                 crumbPathParent={false}
                 children={location && !header.buttons &&  <CalculateHeader/>}
             />
             {location && header.buttons &&
-            <CalculateContainerHeader/>
+                <CalculateContainerHeader/>
             }
             <Section
                 sections={sections}
             />
             <OurServices locale={locale}/>
-            <Destinations/>
+            <Destinations />
             <Cargo/>
             <Clients/>
             <Reviews/>
@@ -54,24 +54,24 @@ export const InternationalDestinationsTemplate = ({
     )
 }
 
-const InternationalDestinations = ({ data, location, pageContext }) => {
+const InternationalCargo = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
         <Layout local={pageContext.locale} location={location}>
-            <InternationalDestinationsTemplate
+            <InternationalCargoTemplate
                 helmet={
                     <TitleDesHelmet
                         title={frontmatter.title}
                         description={frontmatter.description}
                     />
                 }
-                header={frontmatter.header}
+                locale={pageContext.locale}
                 crumbLabel={frontmatter.crumbLabel}
+                header={frontmatter.header}
                 title={frontmatter.title}
                 description={frontmatter.description}
                 location={location}
-                locale={pageContext.locale}
                 sections={frontmatter.sections}
                 seoSections={frontmatter.seoSections}
             />
@@ -80,10 +80,10 @@ const InternationalDestinations = ({ data, location, pageContext }) => {
     )
 }
 
-export default InternationalDestinations
+export default InternationalCargo
 
 export const pageQuery = graphql`
-  query InternationalDestinations($id: String!, $locale: String) {
+  query InternationalCargo($id: String!, $locale: String) {
     markdownRemark(id: { eq: $id }, frontmatter: { locale: { eq: $locale } }) {
       id
       frontmatter {
