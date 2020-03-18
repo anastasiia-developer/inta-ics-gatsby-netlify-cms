@@ -10,7 +10,7 @@ const InternationalDestinationsPreview = ({ entry }) => {
             <InternationalDestinationsTemplate
                 header={data.header || {}}
                 title={data.title}
-                description={data.description || {}}
+                description={data.description || ''}
                 sections={data.sections || {}}
                 seoSections={data.seoSections || {}}
             />

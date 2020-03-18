@@ -267,7 +267,7 @@ collections:
   - name: "delivery-ru"
     label: "Доставка - RU"
     folder: "src/pages/delivery/ru"
-    create: true
+    create: false
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
