@@ -12,7 +12,7 @@ const InternationalCargoPreview = ({ entry }) => {
                 crumbLabelParent={data.crumbLabelParent || ''}
                 crumbLabel={data.crumbLabel || ''}
                 header={data.header || {}}
-                description={data.description || {}}
+                description={data.description || ''}
                 sections={data.sections || {}}
                 seoSections={data.seoSections || {}}
             />

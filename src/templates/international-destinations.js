@@ -40,17 +40,25 @@ export const InternationalDestinationsTemplate = ({
                 children={location && !header.buttons &&  <CalculateHeader/>}
             />
             {location && header.buttons &&
-            <CalculateContainerHeader/>
+                <CalculateContainerHeader/>
             }
             <Section
                 sections={sections}
             />
             <OurServices locale={locale}/>
-            <Destinations/>
+            {locale &&
+                <Destinations/>
+            }
             <Cargo/>
-            <Clients/>
-            <Reviews/>
+            {locale &&
+                <Fragment>
+                    <Clients/>
+                    <Reviews/>
+                </Fragment>
+            }
+            {seoSections &&
             <Article seoSections={seoSections}/>
+            }
         </Fragment>
     )
 }

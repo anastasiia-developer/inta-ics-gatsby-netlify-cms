@@ -87,7 +87,9 @@ export const ServicesPageTemplate = ({
                 <Clients/>
             }
             <Reviews/>
-            <Article seoSections={seoSections}/>
+           {seoSections &&
+                <Article seoSections={seoSections}/>
+           }
        </Fragment>
     )
 };

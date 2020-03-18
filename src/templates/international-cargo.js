@@ -26,32 +26,41 @@ export const InternationalCargoTemplate = ({
                                             location,
                                             sections,
                                             seoSections}) => {
+
+    console.log(sections.length);
+
     return (
         <Fragment>
             {helmet || ''}
-            <Header
-                description={description}
-                title={title}
-                header={header}
-                location={location}
-                crumbLabel={crumbLabel}
-                crumbLabelParent={crumbLabelParent}
-                crumbPathParent={false}
-                children={location && !header.buttons &&  <CalculateHeader/>}
-            />
+            {title &&
+                <Header
+                    description={description}
+                    title={title}
+                    header={header}
+                    location={location}
+                    crumbLabel={crumbLabel}
+                    crumbLabelParent={crumbLabelParent}
+                    crumbPathParent={false}
+                    children={location && !header.buttons &&  <CalculateHeader/>}
+                />
+            }
             {location && header.buttons &&
                 <CalculateContainerHeader/>
             }
-            {sections &&
-                <Section
-                    sections={sections}
-                />
-            }
+            <Section
+                sections={sections}
+            />
             <OurServices locale={locale}/>
-            <Destinations />
+            {locale &&
+                <Destinations />
+            }
             <Cargo/>
-            <Clients/>
-            <Reviews/>
+            {locale &&
+                <Fragment>
+                    <Clients/>
+                    <Reviews/>
+                </Fragment>
+            }
             {seoSections &&
                 <Article seoSections={seoSections}/>
             }

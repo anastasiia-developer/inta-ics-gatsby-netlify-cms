@@ -233,19 +233,21 @@ const TemplateHeader = ({
                             <Buttons buttons={buttons}/>
                         }
                     </div>
-                    {childrenInColumn}
+                    {childrenInColumn && childrenInColumn}
                 </div>
                 <div className="bckg-parallax-container">
-                    <div className="row header-gatsby-image">
-                        {images.map((img, index) => (
-                            <PreviewCompatibleImage
-                                key={index}
-                                imageInfo={{
-                                    image: img.image,
-                                }}
-                            />
-                        ))}
-                    </div>
+                    {images &&
+                        <div className="row header-gatsby-image">
+                            {images.map((img, index) => (
+                                <PreviewCompatibleImage
+                                    key={index}
+                                    imageInfo={{
+                                        image: img.image,
+                                    }}
+                                />
+                            ))}
+                        </div>
+                    }
                     {storeBtn &&
                         <Store/>
                     }

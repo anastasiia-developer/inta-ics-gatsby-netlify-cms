@@ -86,7 +86,7 @@ const Section = styled(About)`
 
 const Sections = ({ sections, className }) => (
     <Fragment>
-        {sections.map((section, index) => (
+        {sections && sections.length > 0 && sections.map((section, index) => (
             <Section
                 key={index}
                 className={className}
