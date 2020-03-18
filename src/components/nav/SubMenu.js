@@ -9,7 +9,6 @@ const SubNav = styled.nav`
     font-size: 1em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       align-items: flex-start;
-      min-height: ${props => props.isActiveSub ? '10em' : '0'};
       transition: all .4s;
       margin-bottom: 2em;
     }
@@ -43,7 +42,6 @@ const SubNav = styled.nav`
         width: .7em;
         height: .7em;
     }
-    
     .drop-down{
         pointer-events: none;
         opacity: 0;
@@ -74,7 +72,7 @@ const SubNav = styled.nav`
             font-size: .8em;
             color: #fff;
             pointer-events: auto;
-            max-height: ${props => !props.isActiveSub ? '0' : 'auto'};
+            max-height: ${props => !props.isActiveSub ? '0' : 'none'};
         }
         &:hover{
             opacity: 1;
