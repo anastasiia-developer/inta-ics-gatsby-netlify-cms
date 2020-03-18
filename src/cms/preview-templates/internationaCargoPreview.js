@@ -8,8 +8,10 @@ const InternationalCargoPreview = ({ entry }) => {
     if (data) {
         return (
             <InternationalCargoTemplate
-                header={data.header || {}}
                 title={data.title}
+                crumbLabelParent={data.crumbLabelParent || ''}
+                crumbLabel={data.crumbLabel || ''}
+                header={data.header || {}}
                 description={data.description || {}}
                 sections={data.sections || {}}
                 seoSections={data.seoSections || {}}

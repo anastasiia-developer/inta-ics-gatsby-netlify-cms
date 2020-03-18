@@ -9,7 +9,7 @@ import DeliveryPagePreview from "./preview-templates/DeliveryPagePreview"
 import ComponentsCommonPreview from './preview-templates/ComponentsCommonPagePreview'
 import ReviewPagePreview from './preview-templates/ReviewPagePreview'
 import CostPagePreview from './preview-templates/CostPagePreview'
-import InternationalCargoPreview from './preview-templates/InternationaCargoPreview'
+import InternationalCargoPreview from './preview-templates/internationaCargoPreview'
 
 
 import withStyledComponentsRendered from './StyleManager'

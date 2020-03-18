@@ -42,15 +42,19 @@ export const InternationalCargoTemplate = ({
             {location && header.buttons &&
                 <CalculateContainerHeader/>
             }
-            <Section
-                sections={sections}
-            />
+            {sections &&
+                <Section
+                    sections={sections}
+                />
+            }
             <OurServices locale={locale}/>
             <Destinations />
             <Cargo/>
             <Clients/>
             <Reviews/>
-            <Article seoSections={seoSections}/>
+            {seoSections &&
+                <Article seoSections={seoSections}/>
+            }
         </Fragment>
     )
 }
