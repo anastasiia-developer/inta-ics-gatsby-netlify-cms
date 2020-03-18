@@ -36,7 +36,6 @@ const Block = `
         --color-2: #045DD2;
     }
 `;
-
 const LinkBlock = styled(Link)`
     ${Block}
 `;

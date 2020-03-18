@@ -57,7 +57,7 @@ export const InternationalCargoTemplate = ({
 
 const InternationalCargo = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
-    console.log(frontmatter.crumbLabelParent)
+
     return (
         <Layout local={pageContext.locale} location={location}>
             <InternationalCargoTemplate

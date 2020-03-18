@@ -15,7 +15,7 @@ const Section = styled.section`
     background: #F8F8F8; 
     padding-bottom: 2em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-            margin-top: 1em;
+        margin-top: 1em;
     }
     h2{
         color: #247BFF;
@@ -31,6 +31,7 @@ const Section = styled.section`
             display: flex;
             flex-direction: column;
             align-items: center;
+            
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 margin: 1em 0 0 0;
             }
@@ -80,11 +81,39 @@ const Section = styled.section`
         }
     }
 `;
+const Description = styled.div`
+    position: absolute;
+    bottom: -50%;
+    z-index: 1;
+    left: 50%;
+    display: ${props => props.isActive ? 'block' :'none'};
+    transform: translateX(-50%); 
+    background: #fff;
+    color: #41479B;
+    padding: 4em;
+    font-weight: 500;
+    line-height: 2em;
+    text-align: center;
+    border-radius: .5em;
+    margin-top: -3em;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        display: block;
+        padding: ${props => props.isActive ? '4em 1em 1em 1em' :'0'};
+        position: relative;
+        font-size: .9em;
+        margin: ${props => props.isActive ? '-3em auto 2em;' :'0'};
+        z-index: 0;
+        transition: all .4s;
+        max-height: ${props => props.isActive ? 'none' :'0'};
+    }
+`;
 const OurValues = styled.section`
     width: 75%;
     padding: 1em 0 6em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
         width: 90%;
+        padding: 1em 0 2em;
     }
     h2{
         font-weight: 500;
@@ -109,17 +138,37 @@ const OurValues = styled.section`
         .hover-gradient{
             min-width: auto;
         }
+        .our-wrapper{
+            width: 100%;
+            overflow: hidden;
+        }
     }
     .container{
-        position: relative;
-        &:hover .number{
+        &.number-isActive {
+            h5{
+                color: #005BE4;
+            }
+            h4{
+                color: #fff;
+            }
+            .hover-gradient{
+                background: linear-gradient(119.44deg, #005BE4 -4.2%, #4900E4 108.11%);
+            }
+        }
+        &:hover .number, &.number-isActive .number{
             color: #005BE4;
-            transform: translateY(-100%)
+            transform: translateY(-100%);
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                transform: none;
+            }
         }
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             margin-bottom: 1em;
             display: flex;
             width: 100%;
+            align-items: center;
+            z-index: 1;
+            position: relative;
         }
     }    
     .number{
@@ -141,30 +190,10 @@ const SectionImg = styled.section`
     position: relative;
     .gatsby-image-wrapper{
         width: 100%;
-    }
-    
-`;
-const Description = styled.div`
-    position: absolute;
-    top: 0;
-    left: 50%;
-    display: ${props => props.isActive ? 'block' :'none'};
-    transform: translateX(-50%); 
-    background: #fff;
-    color: #41479B;
-    padding: 4em;
-    font-weight: 500;
-    line-height: 2em;
-    text-align: center;
-    border-radius: .5em;
-    margin-top: -3em;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
-    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-        padding: 1em;
-        position: relative;
-        border-radius: 0;
-        margin: 0;
-        font-size: .9em;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 200%;
+            margin-left: -50%;
+        }
     }
 `;
 
@@ -178,7 +207,7 @@ export const AboutPageTemplate = ({
                                       ourValues,
                                       aboutImg,
                                   }) => {
-  const [ourValue, setOurValue] = useState(0);
+  const [ourValue, setOurValue] = useState(null);
 
   return (
       <Fragment>
@@ -216,19 +245,23 @@ export const AboutPageTemplate = ({
               <h2>Наши ценности</h2>
               <div className="row-to-column">
                   {ourValues.map((value, index) =>
-                      <div
-                          key={index}
-                          role="button"
-                          tabIndex={0}
-                          onMouseOver={() => setOurValue(index)}
-                          onFocus={() =>  setOurValue(index)}
-                          className='container' >
-                          <h5 className='number'>
-                              0{index+1}
-                          </h5>
-                          <HoverGradientInsideSvg
-                            title={value.title}
-                          />
+                      <div key={index} className='our-wrapper'>
+                          <div
+                              role="button"
+                              tabIndex={0}
+                              onMouseOver={() => setOurValue(index)}
+                              onFocus={() =>  setOurValue(index)}
+                              className={`container ${ourValue === index  ? 'number-isActive' : ''}`}>
+                              <h5 className='number'>
+                                  0{index+1}
+                              </h5>
+                              <HoverGradientInsideSvg
+                                title={value.title}
+                              />
+                          </div>
+                          <Description key={index} isActive={ourValue === index}>
+                            {value.description}
+                          </Description>
                       </div>
                   )}
               </div>
@@ -239,11 +272,6 @@ export const AboutPageTemplate = ({
                       image: aboutImg,
                   }}
               />
-              {ourValues.map((value, index) =>
-                  <Description key={index} isActive={ourValue === index}>
-                      {value.description}
-                  </Description>
-              )}
           </SectionImg>
           {location &&
             <Clients/>
