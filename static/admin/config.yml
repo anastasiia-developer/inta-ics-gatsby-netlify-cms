@@ -45,7 +45,7 @@ collections:
   - name: "delivery"
     label: "Доставка"
     folder: "src/pages/delivery"
-    create: true
+    create: false
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
@@ -91,7 +91,7 @@ collections:
   - name: "international-destinations"
     label: "Международные грузоперевозки"
     folder: "src/pages/international-destinations"
-    create: true
+    create: false
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-destinations"}

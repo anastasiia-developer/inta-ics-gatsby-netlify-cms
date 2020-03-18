@@ -61,7 +61,7 @@ const Cargo = () => {
                 <HoverGradientInsideSvg
                     title="Карго доставка"
                     svg={<Package/>}
-                    link='international-cargo/container-transporting'
+                    link='international-cargo/cargo-delivery'
                 />
                 <HoverGradientInsideSvg
                     title="Доставка товаров"
