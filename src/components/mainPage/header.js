@@ -33,7 +33,7 @@ const Header = styled.div`
         display: flex !important;
         align-items: center;
         justify-content: center;
-        margin-top: -3em;
+        top: -2em;
         position: relative;
         button{
             background: #222222;

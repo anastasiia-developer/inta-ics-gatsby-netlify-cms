@@ -21,12 +21,13 @@ import Slider from "react-slick";
 const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: true,
     autoplay: true,
     swipe: true,
+    speed: 1000,
+    lazyLoad: true
 };
 
 export const IndexPageTemplate = ({
