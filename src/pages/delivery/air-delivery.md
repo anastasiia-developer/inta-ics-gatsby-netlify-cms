@@ -1,7 +1,7 @@
 ---
 templateKey: delivery
 title: Авіадоставка вантажів
-name: avia-dostavka
+name: air-delivery
 header:
   buttons:
     - link: international-destinations/air-china-usa
