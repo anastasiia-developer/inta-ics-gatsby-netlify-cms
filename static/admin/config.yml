@@ -116,12 +116,12 @@ collections:
       ]}
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
-      {label: "Title", name: "title", widget: "string"},
-      {label: "Картинка", name: image, widget: image},
-      {label: "Текст", name: text, widget: "markdown"},
-      {label: "list", name: list, widget: list, fields: [
-      {label: "title", name: title, widget: string},
-      {label: "Картинка", name: image, widget: image}
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Картинка", name: image, widget: image},
+          {label: "text", name: text, widget: "markdown"},
+          {label: "list", name: list, widget: list, fields: [
+            {label: "title", name: title, widget: string},
+            {label: "Картинка", name: image, widget: image}
       ]},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [

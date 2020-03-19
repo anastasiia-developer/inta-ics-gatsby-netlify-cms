@@ -6,6 +6,7 @@ import TemplateHeader from "../../components/TemplateHeader";
 import News from "../../components/mainPage/news";
 import FormFooter from "../../components/Footer/FormFooter";
 import TitleDesHelmet from "../../components/TitleDesHelmet";
+import {ContentInFrontmatter} from '../../components/Content'
 
 const Wrapper = styled.div`
     header .btn{
@@ -101,7 +102,7 @@ export const ReviewsPageTemplate = ({
             {reviews.map((review, index) =>
                 <Review key={index}>
                     <h3>{review.name}</h3>
-                    <p>{review.text}</p>
+                    <ContentInFrontmatter content={review.text}/>
                     <footer className="row">
                         <a href={review.source.url}>{review.source.name}</a>
                         <div className='date'>{review.date}</div>

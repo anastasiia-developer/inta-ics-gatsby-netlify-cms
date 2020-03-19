@@ -27,8 +27,6 @@ export const InternationalCargoTemplate = ({
                                             sections,
                                             seoSections}) => {
 
-    console.log(sections.length);
-
     return (
         <Fragment>
             {helmet || ''}

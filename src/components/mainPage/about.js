@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
-import { HTMLContent } from '../Content';
+import { ContentInFrontmatter } from '../Content';
 
 const Section = styled.section`
     background: #F0F5FD;
@@ -58,7 +58,7 @@ const About = ({ title, image, text, className, children }) => (
     <Section className={`row-to-column ${className}`} hasChildren={!!children}>
         <div className="description">
             <h2>{title}</h2>
-            <HTMLContent className="text" content={text}/>
+            <ContentInFrontmatter className="text" content={text}/>
             {children}
         </div>
         <PreviewCompatibleImage
