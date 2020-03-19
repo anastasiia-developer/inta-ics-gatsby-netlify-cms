@@ -14,7 +14,6 @@ import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
-import { ButtonGroup, ResponsiveCarousel } from "../components/CommonCarousel";
 
 import FormFooter from '../components/Footer/FormFooter'
 import Slider from "react-slick";
@@ -24,7 +23,10 @@ const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    draggable: true,
+    autoplay: true,
+    swipe: true,
 };
 
 export const IndexPageTemplate = ({
@@ -41,7 +43,6 @@ export const IndexPageTemplate = ({
         <Slider {...settings}>
             {header.slide.map((item, index) =>
                 <TemplateHeader
-                    style={{ position: "relative" }}
                     key={index}
                     description={description}
                     title={title}

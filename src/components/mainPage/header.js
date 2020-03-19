@@ -7,6 +7,50 @@ const Header = styled.div`
     .slick-track{
         display: flex;
     }
+    .slick-arrow{
+        border: solid #757575;
+        color: transparent;
+        top: 50%;
+        position: absolute;
+        z-index: 2;
+        width: 1.5em;
+        height: 1.5em;
+        border-width: 0 .15em .15em 0;
+        cursor: pointer;
+        &:hover{
+            border-color: #005BE4;
+        }
+        &.slick-next{
+            right: 3%;
+            transform: rotate(-45deg);
+        }
+        &.slick-prev{
+            left: 3%;
+            transform: rotate(135deg);
+        }
+    }
+    .slick-dots{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin-top: -3em;
+        position: relative;
+        button{
+            background: #222222;
+            border: none;
+            width: .6em;
+            height: .6em;
+            color: transparent;
+            border-radius: 100%;
+        }
+        .slick-active button{
+            background: #005BE4;
+        }
+        li + li{
+            margin-left: .5em;
+        }
+
+    }
     .react-multi-carousel-list{
         .react-multiple-carousel__arrow{
             top: 50vh;

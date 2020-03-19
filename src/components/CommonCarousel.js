@@ -24,6 +24,11 @@ const Arrow = styled.button`
     }
 `;
 
+const ArrowBtn = styled.button`
+    border: solid black;
+    border-width: 0 3px 3px 0;
+`;
+
 export const ButtonGroup = ({ next, previous, goToSlide, ...rest}) => {
     const { carouselState: { currentSlide, totalItems } } = rest;
     return (
@@ -40,9 +45,23 @@ export const ButtonGroup = ({ next, previous, goToSlide, ...rest}) => {
             </Arrow>
         </Fragment>
     )
-
 };
+export const NextArrow = (slickNext) =>
+    <ArrowBtn onClick={() => {slickNext()}}>
+        {/*// isDisable={currentSlide === 0}*/}
+    </ArrowBtn>;
 
+export const Buttons = ({ slickNext, slickPrev }) => {
+
+    return (
+        <Fragment>
+
+            <ArrowBtn onClick={() => {slickPrev()}}>
+                {/*// isDisable={(currentSlide + 1) === totalItems}*/}
+            </ArrowBtn>
+        </Fragment>
+    )
+};
 
 export const ResponsiveCarousel = (desktop = 4,  tablet = 3, mobile = 1) => ({
     desktop: {
