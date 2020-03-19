@@ -32,6 +32,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-fast-carousel": "https://github.com/moarwick/react-fast-carousel",
     "react-helmet": "^5.2.0",
     "react-input-mask": "^2.0.4",
     "react-multi-carousel": "^2.5.0",

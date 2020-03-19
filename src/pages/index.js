@@ -17,6 +17,7 @@ import Article from "../components/mainPage/Article"
 import { ButtonGroup, ResponsiveCarousel } from "../components/CommonCarousel";
 import Carousel from "react-multi-carousel";
 import FormFooter from '../components/Footer/FormFooter'
+import FastCarousel from 'react-fast-carousel';
 
 export const IndexPageTemplate = ({
   seoSections,
@@ -29,29 +30,19 @@ export const IndexPageTemplate = ({
 }) => (
   <Fragment>
     <Header>
-      <Carousel
-          containerClass="slider"
-          sliderClass="row"
-          ssr={true}
-          arrows={false}
-          autoPlay
-          autoPlaySpeed={5000}
-          customButtonGroup={<ButtonGroup />}
-          slidesToSlide={1}
-          responsive={ResponsiveCarousel(1,1)}
-          showDots
-      >
-        {header.slide.map((item, index) =>
-            <TemplateHeader
-                key={index}
-                description={description}
-                title={title}
-                header={item}
-                location={location}
-                storeBtn
-            />
-        )}
-      </Carousel>
+      <FastCarousel
+         
+          slides={header.slide.map((item, index) =>
+              <TemplateHeader
+                  key={index}
+                  description={description}
+                  title={title}
+                  header={item}
+                  location={location}
+                  storeBtn
+              />
+          )}
+      />
     </Header>
     <Section section={section}/>
     <About
