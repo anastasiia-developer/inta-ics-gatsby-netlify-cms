@@ -17,7 +17,15 @@ import Article from "../components/mainPage/Article"
 import { ButtonGroup, ResponsiveCarousel } from "../components/CommonCarousel";
 
 import FormFooter from '../components/Footer/FormFooter'
-import Slider from 'infinite-react-carousel';
+import Slider from "react-slick";
+
+const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+};
 
 export const IndexPageTemplate = ({
   seoSections,
@@ -30,9 +38,10 @@ export const IndexPageTemplate = ({
 }) => (
   <Fragment>
     <Header>
-        <Slider dots>
+        <Slider {...settings}>
             {header.slide.map((item, index) =>
                 <TemplateHeader
+                    style={{ position: "relative" }}
                     key={index}
                     description={description}
                     title={title}

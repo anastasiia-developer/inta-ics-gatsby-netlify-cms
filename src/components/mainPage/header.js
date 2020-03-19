@@ -4,6 +4,9 @@ const Header = styled.div`
     .wrapper{
         width: 85%;
     }
+    .slick-track{
+        display: flex;
+    }
     .react-multi-carousel-list{
         .react-multiple-carousel__arrow{
             top: 50vh;
