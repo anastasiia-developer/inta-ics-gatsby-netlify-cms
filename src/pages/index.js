@@ -17,9 +17,8 @@ import Article from "../components/mainPage/Article"
 import { ButtonGroup, ResponsiveCarousel } from "../components/CommonCarousel";
 
 import FormFooter from '../components/Footer/FormFooter'
-import AliceCarousel from 'react-alice-carousel'
-import 'react-alice-carousel/lib/alice-carousel.css'
-
+import Carousel from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 
 export const IndexPageTemplate = ({
   seoSections,
@@ -32,18 +31,18 @@ export const IndexPageTemplate = ({
 }) => (
   <Fragment>
     <Header>
-      <AliceCarousel
-          items={header.slide.map((item, index) =>
-              <TemplateHeader
-                  key={index}
-                  description={description}
-                  title={title}
-                  header={item}
-                  location={location}
-                  storeBtn
-              />
-          )}
-      />
+        <Carousel dots>
+            {header.slide.map((item, index) =>
+                <TemplateHeader
+                    key={index}
+                    description={description}
+                    title={title}
+                    header={item}
+                    location={location}
+                    storeBtn
+                />
+            )}
+        </Carousel>
     </Header>
     <Section section={section}/>
     <About
