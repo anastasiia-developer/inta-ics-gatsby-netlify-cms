@@ -31,6 +31,7 @@
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.0",
     "react": "^16.13.0",
+    "react-alice-carousel": "^1.17.3",
     "react-dom": "^16.13.0",
     "react-fast-carousel": "https://github.com/moarwick/react-fast-carousel",
     "react-helmet": "^5.2.0",

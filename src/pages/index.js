@@ -15,9 +15,11 @@ import Clients from "../components/Clients"
 import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
 import { ButtonGroup, ResponsiveCarousel } from "../components/CommonCarousel";
-import Carousel from "react-multi-carousel";
+
 import FormFooter from '../components/Footer/FormFooter'
-import FastCarousel from 'react-fast-carousel';
+import AliceCarousel from 'react-alice-carousel'
+import 'react-alice-carousel/lib/alice-carousel.css'
+
 
 export const IndexPageTemplate = ({
   seoSections,
@@ -30,9 +32,8 @@ export const IndexPageTemplate = ({
 }) => (
   <Fragment>
     <Header>
-      <FastCarousel
-         
-          slides={header.slide.map((item, index) =>
+      <AliceCarousel
+          items={header.slide.map((item, index) =>
               <TemplateHeader
                   key={index}
                   description={description}
