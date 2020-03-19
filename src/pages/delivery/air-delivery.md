@@ -1,6 +1,6 @@
 ---
 templateKey: delivery
-title: Авіадоставка вантажів22
+title: Авіадоставка вантажів
 name: air-delivery
 description: >-
   INTA-ICS тривало і успішно співпрацює зі світовими авіакомпаніями, що дозволяє
