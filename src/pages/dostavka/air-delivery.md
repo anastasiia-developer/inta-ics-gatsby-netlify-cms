@@ -2,23 +2,22 @@
 templateKey: delivery
 title: Авіадоставка вантажів
 name: air-delivery
-description: >-
-  INTA-ICS тривало і успішно співпрацює зі світовими авіакомпаніями, що дозволяє
-  перевозити вантажі в місця, недоступні для іншого виду транспорту.
 header:
   buttons:
-    - link: international-destinations/air-china-usa
-      text: 'Авиадоставка грузов из Китая, США'
+    - link: avia-dostavka-z-kytaju/
+      text: Авіадоставка з Китаю
+    - text: Авіадоставка з США
+      link: avia-dostavka-z-ssha/
   images:
     - alt: app mobile
       image: /img/bkgr-air.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Терміни доставки
     - image: /img/card.png
-      text: от 2$ за кг
+      text: від 5 $ за кг
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Місцезнаходження вантажу
 sections:
   - image: /img/deliv.jpg
     button:
@@ -153,4 +152,7 @@ seoSections:
       altImg: Alt
 crumbLabel: Авиадоставка
 locale: ua
+description: >-
+  INTA-ICS тривало і успішно співпрацює зі світовими авіакомпаніями, що дозволяє
+  перевозити вантажі в місця, недоступні для іншого виду транспорту.
 ---
