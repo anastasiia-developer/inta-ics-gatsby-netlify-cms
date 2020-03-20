@@ -360,6 +360,12 @@ collections:
       ]}
       - {label: "Calculator", name: calculator, widget: object, fields: [
         {label: "Заголовок", name: title, widget: string},
+        {label: "result Block", name: resultBlock, widget: object, fields: [
+          {label: "Заголовок", name: title, widget: string},
+          {label: "Кнопка", name: btnText, widget: string},
+          {label: "result Text", name: resultText, widget: string},
+          {label: "сноска", name: note, widget: text}
+        ]},
         {label: "Составляющие цены", name: constituents, widget: list, fields: [
           {label: "Заголовок категории", name: title, widget: string},
           {label: "category", name: category, widget: list, fields: [
@@ -376,7 +382,7 @@ collections:
           {label: countries, name: countries, widget: list, fields: [
             {label: country, name: country, widget: string},
             {label: flag, name: flag, widget: image},
-            {label: 'path name стр доставки, например "france"', name: link, widget: string}
+            {label: 'path name стр доставки, например "france"', name: link, widget: string, required: false}
           ]},
           {label: image, name: image, widget: image}
       ]}
