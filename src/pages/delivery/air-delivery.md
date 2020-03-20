@@ -4,10 +4,10 @@ title: Авіадоставка вантажів
 name: air-delivery
 header:
   buttons:
-    - link: international-destinations/air-china-usa
+    - link: international-destinations/avia-dostavka-z-kytaju/
       text: Авіадоставка з Китаю
     - text: Авіадоставка з США
-      link: LINK
+      link: avia-dostavka-z-ssha/
   images:
     - alt: app mobile
       image: /img/bkgr-air.png
