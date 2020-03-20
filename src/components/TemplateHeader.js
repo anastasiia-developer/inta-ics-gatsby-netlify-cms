@@ -43,7 +43,6 @@ export const Button = styled(Link)`
     }
 `;
 const Container = styled.header`
-    min-height: 100vh;
     padding: 8em 0 3em;
     background-color: #0C0C0C;
     display: flex;
@@ -90,8 +89,9 @@ const Container = styled.header`
         width: auto;
         font-weight: 400;
         color: #ABABAB;
+        flex-wrap: wrap;
         justify-content: flex-start;
-        font-size: .8em;
+        font-size: .9em;
         margin: 2em 0 4em;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             flex-wrap: wrap;
@@ -101,6 +101,7 @@ const Container = styled.header`
         li {
             align-items: center;
             margin-right: 1em;
+            margin-bottom: 1em;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){
                 margin-bottom: 1em;
             }
@@ -112,7 +113,7 @@ const Container = styled.header`
     }
     .common-header-column h3 {
         font-weight: 300;
-        font-size: 1em;
+        font-size: 1.1em;
         line-height: 1.8em;
         margin: 1.5em 0;
         color: #A3A3A3;
@@ -127,7 +128,6 @@ const Container = styled.header`
         font-size: 2.8em;
         font-weight: 500;
         margin-top: 0;
-        white-space: nowrap;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             white-space: normal;
             font-size: 1.8em;

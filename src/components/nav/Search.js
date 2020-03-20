@@ -11,7 +11,7 @@ const Label = styled.label`
     max-width: 300px;
     min-width: 13em;
     position: absolute;
-    right: 16em;
+    right: 13.8%;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         background: #313131;
         padding: .5em;

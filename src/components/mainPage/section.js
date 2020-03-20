@@ -7,12 +7,12 @@ const Container = styled.section`
     h2{
         font-weight: 700;
         color: #393939;
-        padding-top: 1.5em;
-        font-size: 1.5em;
+        padding-top: 1.3em;
+        font-size: 1.7em;
     }
     h3{
         color: #8F8F8F;
-        font-size: .8em;
+        font-size: 1.1em;
         padding: 1em 0 2em;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             width: 90%;

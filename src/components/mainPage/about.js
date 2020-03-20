@@ -13,6 +13,7 @@ const Section = styled.section`
     }
     .description{
         flex: 1;
+        font-size: 1.05em;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             width: 100%;
         }    

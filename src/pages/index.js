@@ -20,13 +20,12 @@ import Slider from "react-slick";
 
 const settings = {
     dots: true,
-    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: true,
-    autoplay: true,
     swipe: true,
-    speed: 1000,
+    speed: 3000,
+    autoplaySpeed:  5000,
     lazyLoad: true
 };
 

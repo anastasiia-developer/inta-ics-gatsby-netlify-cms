@@ -10,7 +10,7 @@ const Container = styled.nav`
         margin: 2em 0 1.5em;
     }
     a, span{
-        font-size: .9em;
+        font-size: 1em;
         color: #5B5B5B;
         cursor: pointer;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){

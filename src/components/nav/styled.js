@@ -7,7 +7,7 @@ const Navigation = styled.nav`
     align-items: center;
     z-index: 3;
     background: #000;
-    padding: 2.5em 5% 1em;
+    padding: 2.5em 2.5% 1em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         height: 8vh;
         align-items: flex-start;
@@ -56,7 +56,7 @@ const Navigation = styled.nav`
     }
     .navigation__list{
         margin-right: auto;
-        font-size: .8em;
+        font-size: .9em;
         cursor: pointer;
         align-items: center;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){

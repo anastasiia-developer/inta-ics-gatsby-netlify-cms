@@ -38,6 +38,7 @@ const Wrapper = styled.section`
   h4{
     color: #4286eb;
     margin: 1em 0 4em;
+    font-size: 1.3em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       margin: 1em 0;
       font-size: .9em;
@@ -61,7 +62,7 @@ const Wrapper = styled.section`
   }
   .column{
     color: #8E8E8E;
-    font-size: .7em;
+    font-size: 1em;
     position: relative;
     font-weight: 500;
     outline: none;
@@ -93,7 +94,7 @@ const Wrapper = styled.section`
       margin-top: 1em;
       padding: .5em .5em .5em 1em;
       color: #383838;
-      font-size: 1em;
+      font-size: .8em;
       align-items: center;
       position: relative;
       height: 100%;
@@ -115,6 +116,7 @@ const Wrapper = styled.section`
       }
       svg{
         top: 40%;
+        width: 1em;
       }
       .arrow-line{
         position: absolute;
