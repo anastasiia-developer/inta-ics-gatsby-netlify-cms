@@ -1,23 +1,19 @@
 ---
 pageKey: components-common
-locale: ru
-title: RU Общие компонентны для всех сртраниц
-name: components
-description: >-
-    RU Общие компонентны для всех сртраниц
+title: Общие компонентны для всех сртраниц
 storage:
-    - country: США (Washington)
-      flag: /img/002-united-states (3).png
-    - country: Польща (Chelm)
-      flag: /img/poland.png
-    - country: Польща (Warsaw)
-      flag: /img/poland.png
-    - country: Україна (Київ)
-      flag: /img/ukraine.png
-    - country: Китай (Shanghai)
-      flag: /img/001-china 3.png
-    - country: Гонконг
-      flag: /img/002-united-states (1).png
+  - country: США (Washington)
+    flag: /img/002-united-states (3).png
+  - country: Польща (Chelm)
+    flag: /img/poland.png
+  - country: Польща (Warsaw)
+    flag: /img/poland.png
+  - country: Україна (Київ)
+    flag: /img/ukraine.png
+  - country: Китай (Shanghai)
+    flag: /img/001-china 3.png
+  - country: Гонконг
+    flag: /img/002-united-states (1).png
 calculator:
   constituents:
     - category:
@@ -61,10 +57,22 @@ calculator:
       name: moreServices
   title: Рассчитайте стоимость доставки
   resultBlock:
-      title: Укажите вес посылки
-      btnText: Рассчет стоимости
-      resultText: Итого стоимость доставки
-      note: Данный расчет является ориентировочным по тарифу Авиадоставки. Точная стоимость доставки будет зависеть от веса посылки и полного перечня заказанных услуг. Для более детальной информации обратитесь к менеджеру компании.
+    title: Укажите вес посылки
+    btnText: Рассчет стоимости
+    resultText: Итого стоимость доставки
+    note: >-
+      Данный расчет является ориентировочным по тарифу Авиадоставки. Точная
+      стоимость доставки будет зависеть от веса посылки и полного перечня
+      заказанных услуг. Для более детальной информации обратитесь к менеджеру
+      компании.
+clients:
+  - image: /img/image 18.png
+  - image: /img/image 19.png
+  - image: /img/image 20.png
+  - image: /img/image 20 (copy).png
+  - image: /img/image 19.png
+  - image: /img/image 20.png
+  - image: /img/image 20 (copy).png
 destinations:
   countries:
     - country: Китай
@@ -87,20 +95,14 @@ destinations:
       flag: /img/002-united-states (5).png
     - country: Франция
       flag: /img/002-united-states (6).png
-      link: /france  
+      link: /france
     - country: Италия
       flag: /img/002-united-states (2).png
     - country: Израиль
       flag: /img/002-united-states (7).png
-  image: /img/map.png  
-clients:
-  - image: /img/image 18.png
-  - image: /img/image 19.png
-  - image: /img/image 20.png
-  - image: /img/image 20 (copy).png
-  - image: /img/image 19.png
-  - image: /img/image 20.png
-  - image: /img/image 20 (copy).png
+  image: /img/map.png
+name: components
+locale: ru
 reviews:
   - name: Иван Заец
     source:
@@ -122,4 +124,5 @@ reviews:
       praesentium quia repudiandae totam velit veniam veritatis voluptates. Amet
       cupiditate deleniti dolor error, facilis laborum possimus provident quasi
       quo repellendus sequi, tempora, unde?
+description: RU Общие компонентны для всех сртраниц
 ---
