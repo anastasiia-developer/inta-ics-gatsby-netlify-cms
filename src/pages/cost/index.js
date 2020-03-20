@@ -9,6 +9,7 @@ import Clients from "../../components/Clients";
 import Reviews from "../../components/Reviews";
 import Article from "../../components/mainPage/Article";
 import Calculator from "../../components/Calculator";
+import CalculatorRu from "../../components/Calculator/index.ru";
 import FormFooter from '../../components/Footer/FormFooter'
 import BarBckgImgSectionText from '../../components/BarBckgImgSectionText'
 import TitleDesHelmet from "../../components/TitleDesHelmet";
@@ -19,6 +20,7 @@ export const CostPageTemplate = ({
                                   description,
                                   location,
                                   header,
+                                  locale,
                                   sections,
                                   seoSections,
                                   barBckgImg,
@@ -38,6 +40,12 @@ export const CostPageTemplate = ({
             />
             {location &&
                 <Fragment>
+                    {
+                        locale === 'ua' ?
+                            <Calculator/>
+                        :
+                            <CalculatorRu/>
+                    }
                     <Calculator/>
                     <BarBckgImgSectionText
                         image={barBckgImg}
@@ -68,6 +76,7 @@ const Index = ({ data, location, pageContext }) => {
                         description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
                     />
                 }
+                locale={pageContext.locale}
                 title={frontmatter.title}
                 description={frontmatter.description}
                 location={location}

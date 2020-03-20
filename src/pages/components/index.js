@@ -63,6 +63,12 @@ export const pageQuery = graphql`
               }
             }
           }
+          resultBlock{
+            title
+            btnText
+            resultText
+            note
+          }
         }
         storage{
             country

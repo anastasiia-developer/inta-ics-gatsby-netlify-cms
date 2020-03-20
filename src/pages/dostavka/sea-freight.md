@@ -7,7 +7,7 @@ name: sea-freight
 description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:
   buttons:
-    - link: /international-destinations/sea-china
+    - link: /countries/sea-china
       text: Морская перевозка грузов из Китая №8
   images:
     - alt: app mobile

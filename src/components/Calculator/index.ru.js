@@ -6,8 +6,8 @@ import CalculatorTemplate from "./CalculatorTemplate";
 export default () => (
     <StaticQuery
         query={graphql`
-            query CalculatorUa{
-                markdownRemark(frontmatter: { pageKey: { eq: "components-common" },  locale: { eq: "ua" } }) {
+            query CalculatorRu{
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: "ru" }}) {
                     frontmatter {
                         calculator {
                           title

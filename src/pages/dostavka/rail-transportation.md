@@ -10,7 +10,7 @@ description: >-
   начнем сотрудничество прямо сейчас!
 header:
   buttons:
-    - link: /international-cargo/container-transporting
+    - link: /cargo/container-transporting
       text: Перевозка сборных грузов
   images:
     - alt: app mobile

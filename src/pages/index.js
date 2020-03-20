@@ -8,6 +8,7 @@ import TemplateHeader from "../components/TemplateHeader";
 import Section from "../components/mainPage/section"
 import About from "../components/mainPage/about"
 import Calculator from "../components/Calculator"
+import CalculatorRu from "../components/Calculator/index.ru"
 import News from "../components/mainPage/news"
 import Destinations from "../components/Destinations"
 import Cargo from "../components/mainPage/cargo"
@@ -34,6 +35,7 @@ export const IndexPageTemplate = ({
   seoSections,
   description,
   helmet,
+  locale,
   location,
   title,
   header,
@@ -62,7 +64,11 @@ export const IndexPageTemplate = ({
       image={about.image}
       text={about.text}
     />
-    <Calculator/>
+      {locale === 'ua' ?
+          <Calculator/>
+      :
+          <CalculatorRu/>
+      }
     <News />
     <Destinations/>
     <Cargo/>
@@ -96,6 +102,7 @@ const Index = ({ data, location, pageContext }) => {
               description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
           />
         }
+        locale={pageContext.locale}
         title={frontmatter.title}
         description={frontmatter.description}
         metaData={frontmatter.metaData}

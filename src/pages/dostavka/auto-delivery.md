@@ -7,7 +7,7 @@ name: auto-delivery
 description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:
   buttons:
-    - link: /international-destinations/europe
+    - link: /countries/europe
       text: Перевозка грузов из Европы
   images:
     - alt: auto

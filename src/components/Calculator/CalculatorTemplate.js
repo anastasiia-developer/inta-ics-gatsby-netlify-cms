@@ -248,7 +248,7 @@ const CalculatorTemplate = ({ data }) => {
     };
 
     if(data){
-        const { title, constituents } = data;
+        const { title, constituents, resultBlock } = data;
         return(
             <Section>
                 <h2 className="wrapper">{ title }</h2>
@@ -268,7 +268,7 @@ const CalculatorTemplate = ({ data }) => {
                     </div>
                     <Form>
                         <div className="container column">
-                            <h3>Укажите вес посылки</h3>
+                            <h3>{resultBlock.title}</h3>
                             <label>
                                 kg
                                 <input
@@ -278,10 +278,10 @@ const CalculatorTemplate = ({ data }) => {
                             </label>
                             <button
                                 onClick={() => setIsActive(true)}
-                                disabled={weight === 0 || weight === '' && true}>Рассчет стоимости</button>
-                            <p>Итого стоимость доставки</p>
+                                disabled={weight === 0 || weight === '' && true}>{resultBlock.btnText}</button>
+                            <p>{resultBlock.resultText}</p>
                             <div className="amount">${weight !== 0 && isActive ? formula()  : 0 }</div>
-                            <div className="note">*Данный расчет является ориентировочным по тарифу Авиадоставки. Точная стоимость доставки будет зависеть от веса посылки и полного перечня заказанных услуг. Для более детальной информации обратитесь к менеджеру компании.</div>
+                            <div className="note">{resultBlock.note}</div>
                         </div>
                     </Form>
                 </div>

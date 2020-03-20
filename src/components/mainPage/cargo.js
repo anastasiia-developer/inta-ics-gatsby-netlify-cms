@@ -56,52 +56,52 @@ const Cargo = () => {
                 <HoverGradientInsideSvg
                     title="Контейнерные перевозки"
                     svg={<Storage/>}
-                    link='international-cargo/container-transporting'
+                    link='cargo/container-transporting'
                 />
                 <HoverGradientInsideSvg
                     title="Карго доставка"
                     svg={<Package/>}
-                    link='international-cargo/cargo-delivery'
+                    link='cargo/cargo-delivery'
                 />
                 <HoverGradientInsideSvg
                     title="Доставка товаров"
                     svg={<Trolley/>}
-                    link='international-cargo/container-transporting'
+                    link='cargo/container-transporting'
                 />
                 <HoverGradientInsideSvg
                     title="Перевозка сборных грузов"
                     svg={<Ship/>}
-                    link='international-cargo/container-transporting'
+                    link='cargo/container-transporting'
                 />
                 <HoverGradientInsideSvg
                     title="Международная доставка посылок"
                     svg={<Air/>}
-                    link='international-cargo/container-transporting'
+                    link='cargo/container-transporting'
                 />
                 <HoverGradientInsideSvg
                     title="Мультимодальные перевозки"
                     svg={<Packages/>}
-                    link='international-cargo/container-transporting'
+                    link='cargo/container-transporting'
                 />
                 <HoverGradientInsideSvg
                     title="Перевозка негабаритных грузов"
                     svg={<Product/>}
-                    link='international-cargo/container-transporting'
+                    link='cargo/container-transporting'
                 />
                 <HoverGradientInsideSvg
                     title="Перевозка техники"
                     svg={<Protected/>}
-                    link='international-cargo/container-transporting'
+                    link='cargo/container-transporting'
                 />
                 <HoverGradientInsideSvg
                     title="Доставка станков и оборудования"
                     svg={<TrolleyBig/>}
-                    link='international-cargo/container-transporting'
+                    link='cargo/container-transporting'
                 />
                 <HoverGradientInsideSvg
                     title="Доставка из Китая в Одессу"
                     svg={<Warehouse/>}
-                    link='international-cargo/container-transporting'
+                    link='cargo/container-transporting'
                 />
             </div>
         </Section>
