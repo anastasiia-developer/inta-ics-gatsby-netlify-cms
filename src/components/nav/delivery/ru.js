@@ -21,7 +21,7 @@ export default ({setActiveMob, isActiveMob}) => (
             <SubMenu
                 parentName="Доставка"
                 list={data.allMarkdownRemark.nodes}
-                startPath="/delivery/ru/"
+                startPath="/dostavka/ru/"
                 setActiveMob={() => setActiveMob}
                 isActiveMob={isActiveMob}
             />

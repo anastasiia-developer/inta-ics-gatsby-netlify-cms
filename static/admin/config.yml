@@ -52,7 +52,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "delivery"
     label: "Доставка"
-    folder: "src/pages/delivery"
+    folder: "src/pages/dostavka"
     create: false
     slug: "{{name}}"
     fields:
@@ -105,7 +105,7 @@ collections:
       ]}
   - name: "delivery-ru"
     label: "Доставка - RU"
-    folder: "src/pages/delivery/ru"
+    folder: "src/pages/dostavka/ru"
     create: false
     slug: "{{name}}"
     fields:
