@@ -71,8 +71,8 @@ const InternationalDestinations = ({ data, location, pageContext }) => {
             <InternationalDestinationsTemplate
                 helmet={
                     <TitleDesHelmet
-                        title={frontmatter.title}
-                        description={frontmatter.description}
+                        title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
+                        description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
                     />
                 }
                 header={frontmatter.header}
@@ -99,6 +99,10 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        metaData{
+            title
+            description
+        }
         crumbLabel
         crumbLabelParent
         header{

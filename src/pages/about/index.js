@@ -289,8 +289,8 @@ const AboutPage = ({ data, location, pageContext }) => {
       <AboutPageTemplate
         helmet={
           <TitleDesHelmet
-              title={frontmatter.title}
-              description={frontmatter.description}
+              title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
+              description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
           />
         }
         title={frontmatter.title}
@@ -314,6 +314,10 @@ export const aboutPageQuery = graphql`
       frontmatter {
         title
         description
+        metaData{
+            title
+            description
+        }
         header{
           images{
             image{

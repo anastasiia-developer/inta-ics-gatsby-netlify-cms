@@ -93,8 +93,8 @@ const BlogPost = ({ data, pageContext, location }) => {
         description={post.frontmatter.description}
         helmet={
             <TitleDesHelmet
-                title={post.frontmatter.title}
-                description={post.frontmatter.description}
+                title={post.metaData && post.metaData.title || post.title}
+                description={post.metaData && post.metaData.description || post.description}
             />
         }
         location={location}

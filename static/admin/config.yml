@@ -20,11 +20,11 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
-      - {label: "Title", name: "title", widget: "string"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"}
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Title", name: "title", widget: "string"},
+            {label: "Description", name: "description", widget: "text"}
       ]}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
@@ -39,6 +39,10 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+            {label: "Description", name: "description", widget: "text"}
+      ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
@@ -53,9 +57,12 @@ collections:
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: name, name: name, widget: "hidden"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string" },
+          {label: "Description", name: "description", widget: "text"}
+      ]}
       - {label: "description", name: "description", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
             {label: Alt, name: alt, widget: string},
@@ -103,8 +110,11 @@ collections:
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+      ]}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: name, name: name, widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
@@ -154,6 +164,10 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-destinations"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+        ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
@@ -198,6 +212,10 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-destinations"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+        ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
@@ -242,6 +260,10 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-cargo"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+        ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
@@ -286,10 +308,14 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-cargo"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+        ]}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
@@ -362,12 +388,12 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Description, name: description, widget: string}
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"}
+              {label: "Title", name: "title", widget: "string"},
               {label: "Description", name: "description", widget: "text"}
             ]}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
           - {label: Header, name: header, widget: object, fields: [
               {label: Slide, name: slide, widget: list, fields: [
                 {label: Images, name: images, widget: list, fields: [
@@ -410,8 +436,12 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "pageKey", widget: "hidden", default: "about"}
-          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"}
+          ]}
           - {label: "crumbLabel", name: "crumbLabel", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
           - {label: "description", name: "description", widget: "string"}
           - {label: Header, name: header, widget: object, fields: [
               {label: Images, name: images, widget: list, fields: [
@@ -442,6 +472,10 @@ collections:
         name: "cost"
         fields:
           - {label: "Page Key", name: "pageKey", widget: "hidden", default: "cost"}
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"}
+          ]}
           - {label: Title, name: title, widget: string}
           - {label: Description, name: description, widget: string}
           - {label: Header, name: header, widget: object, fields: [
@@ -471,6 +505,10 @@ collections:
         label: "Отзывы"
         name: "reviews"
         fields:
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"}
+          ]}
           - {label: Title, name: title, widget: string}
           - {label: Description, name: description, widget: string}
           - {label: CrumbLabel, name: crumbLabel, widget: string}
@@ -502,8 +540,12 @@ collections:
         name: "index-ru"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: MetaTitle, name: title, widget: string}
-          - {label: MetaDescription, name: description, widget: string}
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"}
+          ]}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
           - {label: Header, name: header, widget: object, fields: [
           {label: Slide, name: slide, widget: list, fields: [
           {label: Images, name: images, widget: list, fields: [
@@ -546,6 +588,10 @@ collections:
         name: "about-ru"
         fields:
           - {label: "Template Key", name: "pageKey", widget: "hidden", default: "about-page"}
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"}
+          ]}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "crumbLabel", name: "crumbLabel", widget: "string"}
           - {label: "description", name: "description", widget: "string"}
@@ -577,6 +623,10 @@ collections:
         label: "Стоимость"
         name: "cost-ru"
         fields:
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"}
+          ]}
           - {label: Title, name: title, widget: string}
           - {label: Description, name: description, widget: string}
           - {label: Header, name: header, widget: object, fields: [
