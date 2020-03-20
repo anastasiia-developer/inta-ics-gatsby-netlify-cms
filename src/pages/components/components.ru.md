@@ -1,6 +1,6 @@
 ---
 pageKey: components-common
-title: Общие компонентны для всех сртраниц
+title: RU testОбщие компонентны для всех сртраниц
 storage:
   - country: США (Washington)
     flag: /img/002-united-states (3).png
