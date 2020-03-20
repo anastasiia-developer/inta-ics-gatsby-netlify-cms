@@ -21,7 +21,10 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Meta data", name: "meta-data", widget: "object", }
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"}
+          {label: "Description", name: "description", widget: "text"}
+      ]}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
@@ -361,6 +364,10 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
           - {label: Description, name: description, widget: string}
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"}
+              {label: "Description", name: "description", widget: "text"}
+            ]}
           - {label: Header, name: header, widget: object, fields: [
               {label: Slide, name: slide, widget: list, fields: [
                 {label: Images, name: images, widget: list, fields: [

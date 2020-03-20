@@ -126,6 +126,10 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        metaData{
+            title
+            description
+        }
         featuredimage{
             childImageSharp {
                 fluid(maxWidth: 2000, quality: 100) {

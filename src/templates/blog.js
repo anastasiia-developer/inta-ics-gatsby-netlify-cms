@@ -221,6 +221,10 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            metaData{
+                title
+                description
+            }
             date(formatString: "DD.MM.YYYY")
             featuredpost
             tags

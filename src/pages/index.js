@@ -17,6 +17,7 @@ import Article from "../components/mainPage/Article"
 
 import FormFooter from '../components/Footer/FormFooter'
 import Slider from "react-slick";
+import TitleDesHelmet from "../components/TitleDesHelmet";
 
 const settings = {
     dots: true,
@@ -32,6 +33,7 @@ const settings = {
 export const IndexPageTemplate = ({
   seoSections,
   description,
+  helmet,
   location,
   title,
   header,
@@ -39,7 +41,8 @@ export const IndexPageTemplate = ({
   about
 }) => (
   <Fragment>
-    <Header>
+      {helmet || ''}
+      <Header>
         <Slider {...settings}>
             {header.slide.map((item, index) =>
                 <TemplateHeader
@@ -87,8 +90,15 @@ const Index = ({ data, location, pageContext }) => {
   return (
     <Layout local={pageContext.locale} location={location}>
       <IndexPageTemplate
+        helmet={
+          <TitleDesHelmet
+              title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
+              description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
+          />
+        }
         title={frontmatter.title}
         description={frontmatter.description}
+        metaData={frontmatter.metaData}
         location={location}
         header={frontmatter.header}
         section={frontmatter.section}
@@ -117,6 +127,10 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        metaData{
+            title
+            description
+        }
         header{
           slide{
             images{

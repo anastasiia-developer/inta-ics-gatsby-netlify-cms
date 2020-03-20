@@ -2,6 +2,9 @@
 pageKey: index-page
 title: Inta International Courier Service
 locale: ua
+metaData:
+    title: metaData Inta International Courier
+    description: metaData за вашими грузами, заказывайте
 description: >-
   Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками
   и трендами! Наш менеджер всегда на связи и готов вам помочь.

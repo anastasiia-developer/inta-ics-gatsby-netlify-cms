@@ -118,6 +118,10 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        metaData{
+            title
+            description
+        }
         header{
             images{
               image{
