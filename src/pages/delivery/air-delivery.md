@@ -4,7 +4,7 @@ title: Авіадоставка вантажів
 name: air-delivery
 header:
   buttons:
-    - link: international-destinations/avia-dostavka-z-kytaju/
+    - link: avia-dostavka-z-kytaju/
       text: Авіадоставка з Китаю
     - text: Авіадоставка з США
       link: avia-dostavka-z-ssha/
