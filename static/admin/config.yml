@@ -21,6 +21,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Meta data", name: "meta-data", widget: "object", }
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
@@ -74,6 +75,10 @@ collections:
             {label: "title", name: title, widget: string},
             {label: "Картинка", name: image, widget: image}
           ]},
+          {label: Button, name: button, widget: object, fields: [
+            {label: text, name: text, widget: string},
+            {label: Link, name: link, widget: string}
+          ]}
       ]}
       - {label: "sectionText", name: "sectionText", widget: object, fields: [
         {label: "Title", name: "title", widget: "string"},
@@ -87,6 +92,52 @@ collections:
             {label: "altImg", name: "altImg", widget: "string"},
             {label: "Картинка", name: image, widget: image}
           ]}
+      ]}
+  - name: "delivery-ru"
+    label: "Доставка - RU"
+    folder: "src/pages/delivery/ru"
+    create: false
+    slug: "{{name}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: name, name: name, widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: Header, name: header, widget: object, fields: [
+      {label: Images, name: images, widget: list, fields: [
+      {label: Alt, name: alt, widget: string},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: "Scope information", name: scopeInformation, widget: list, fields: [
+      {label: text, name: text, widget: string},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: Buttons, name: buttons, widget: list, fields: [
+      {label: text, name: text, widget: string},
+      {label: Link, name: link, widget: string}
+      ]}
+      ]}
+      - {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Картинка", name: image, widget: image},
+      {label: "Текст", name: text, widget: "markdown"},
+      {label: "list", name: list, widget: list, fields: [
+      {label: "title", name: title, widget: string},
+      {label: "Картинка", name: image, widget: image}
+      ]},
+      ]}
+      - {label: "sectionText", name: "sectionText", widget: object, fields: [
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Картинка", name: image, widget: image},
+      {label: "Текст", name: text, widget: "markdown"},
+      ]}
+      - {label: seoSections, name: seoSections, widget: object, fields: [
+      {label: title, name: title, widget: "string"},
+      {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Текст", name: text, widget: "markdown"},
+      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "Картинка", name: image, widget: image}
+      ]}
       ]}
   - name: "international-destinations"
     label: "Международные грузоперевозки"
@@ -263,52 +314,6 @@ collections:
       {label: "altImg", name: "altImg", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
-      ]}
-  - name: "delivery-ru"
-    label: "Доставка - RU"
-    folder: "src/pages/delivery/ru"
-    create: false
-    slug: "{{name}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: name, name: name, widget: "string"}
-      - {label: "description", name: "description", widget: "string"}
-      - {label: Header, name: header, widget: object, fields: [
-          {label: Images, name: images, widget: list, fields: [
-          {label: Alt, name: alt, widget: string},
-          {label: Image, name: image, widget: image}
-      ]},
-      {label: "Scope information", name: scopeInformation, widget: list, fields: [
-      {label: text, name: text, widget: string},
-      {label: Image, name: image, widget: image}
-      ]},
-      {label: Buttons, name: buttons, widget: list, fields: [
-      {label: text, name: text, widget: string},
-      {label: Link, name: link, widget: string}
-      ]}
-      ]}
-      - {label: "sections", name: "sections", widget: list, fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Картинка", name: image, widget: image},
-          {label: "Текст", name: text, widget: "markdown"},
-          {label: "list", name: list, widget: list, fields: [
-            {label: "title", name: title, widget: string},
-            {label: "Картинка", name: image, widget: image}
-          ]},
-      ]}
-      - {label: "sectionText", name: "sectionText", widget: object, fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Картинка", name: image, widget: image},
-          {label: "Текст", name: text, widget: "markdown"},
-      ]}
-      - {label: seoSections, name: seoSections, widget: object, fields: [
-          {label: title, name: title, widget: "string"},
-          {label: "sections", name: "sections", widget: list, fields: [
-            {label: "Текст", name: text, widget: "markdown"},
-            {label: "altImg", name: "altImg", widget: "string"},
-            {label: "Картинка", name: image, widget: image}
-          ]}
       ]}
   - name: "components-common"
     label: "Общие компонентны"

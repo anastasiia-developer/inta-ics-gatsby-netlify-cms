@@ -143,6 +143,10 @@ export const pageQuery = graphql`
         sections{
             text
             title
+            button{
+                link
+                text
+            }
             image{
                 childImageSharp {
                   fluid(maxWidth: 900, quality: 100) {

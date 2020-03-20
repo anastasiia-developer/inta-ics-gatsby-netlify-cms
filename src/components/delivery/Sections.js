@@ -86,7 +86,7 @@ const Section = styled(About)`
 
 const Sections = ({ sections, className }) => (
     <Fragment>
-        {sections && sections.length > 0 && sections.map((section, index) => (
+        {sections && sections.length > 0 && sections.map((section, index) => { console.log(section); return (
             <Section
                 key={index}
                 className={className}
@@ -104,13 +104,13 @@ const Sections = ({ sections, className }) => (
                                 </li>
                             ))}
                         </ul>
-                        <Link className="btn" to="/">
-                            Узнать больше
+                        <Link className="btn" to={section.button && section.button.link || '/'}>
+                            {section.button && section.button.text || 'Узнать больше'}
                         </Link>
                     </Fragment>)
                 }
             />
-        ))}
+        )})}
     </Fragment>
 );
 

@@ -21,6 +21,9 @@ header:
       text: Местоположение посылки
 sections:
   - image: /img/deliv.jpg
+    button:
+      link: international-destinations/air-china-usa
+      text: Узнать больше
     list:
       - image: /img/ (1).png
         title: Свой склад в США
