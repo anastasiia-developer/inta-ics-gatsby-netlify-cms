@@ -104,6 +104,7 @@ const Header = styled.div`
         margin: 0;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             width: 100%;
+            max-width: 500px;
         }
         .gatsby-image-wrapper{
             width: 45%;

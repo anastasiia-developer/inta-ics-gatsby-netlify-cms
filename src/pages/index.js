@@ -25,7 +25,7 @@ const settings = {
     slidesToScroll: 1,
     draggable: true,
     swipe: true,
-    speed: 3000,
+    speed: 1000,
     autoplaySpeed:  5000,
     lazyLoad: true
 };

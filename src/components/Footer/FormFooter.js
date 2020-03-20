@@ -37,7 +37,8 @@ const FormCommon = styled.div`
     align-items: center;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       width: 95%;
-      padding: 2em .5em; 
+      padding: 2em 1.5em;
+      max-width: 30em;
     }
     .wrapper{
       justify-content: space-between;
