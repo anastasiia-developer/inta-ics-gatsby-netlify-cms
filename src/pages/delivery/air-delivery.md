@@ -5,7 +5,9 @@ name: air-delivery
 header:
   buttons:
     - link: international-destinations/air-china-usa
-      text: 'Авиадоставка грузов из Китая, США'
+      text: Авіадоставка з Китаю
+    - text: Авіадоставка з США
+      link: LINK
   images:
     - alt: app mobile
       image: /img/bkgr-air.png
