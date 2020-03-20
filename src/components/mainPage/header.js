@@ -17,6 +17,9 @@ const Header = styled.div`
         height: 1.5em;
         border-width: 0 .15em .15em 0;
         cursor: pointer;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            display: none !important;
+        }
         &:hover{
             border-color: #005BE4;
         }
