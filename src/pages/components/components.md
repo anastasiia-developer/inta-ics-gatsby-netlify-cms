@@ -1,23 +1,4 @@
 ---
-pageKey: components-common
-locale: ua
-title: Общие компонентны для всех сртраниц
-name: components
-description: >-
-    Общие компонентны для всех сртраниц
-storage:
-    - country: США (Washington)
-      flag: /img/002-united-states (3).png
-    - country: Польща (Chelm)
-      flag: /img/poland.png
-    - country: Польща (Warsaw)
-      flag: /img/poland.png
-    - country: Україна (Київ)
-      flag: /img/ukraine.png
-    - country: Китай (Shanghai)
-      flag: /img/001-china 3.png
-    - country: Гонконг
-      flag: /img/002-united-states (1).png
 calculator:
   constituents:
     - category:
@@ -59,35 +40,7 @@ calculator:
       title: Дополнительные услуги
       canChoose: true
       name: moreServices
-  title: Рассчитайте стоимость доставки
-destinations:
-  countries:
-    - country: Китай
-      flag: /img/001-china 3.png
-    - country: Англия
-      flag: /img/002-united-states.png
-    - country: Италия
-      flag: /img/002-united-states (2).png
-    - country: Гонконг
-      flag: /img/002-united-states (1).png
-    - country: Италия
-      flag: /img/002-united-states (2).png
-    - country: США
-      flag: /img/002-united-states (3).png
-    - country: Германия
-      flag: /img/002-united-states (4).png
-    - country: Италия
-      flag: /img/002-united-states (2).png
-    - country: Индия
-      flag: /img/002-united-states (5).png
-    - country: Франция
-      flag: /img/002-united-states (6).png
-      link: /france  
-    - country: Италия
-      flag: /img/002-united-states (2).png
-    - country: Израиль
-      flag: /img/002-united-states (7).png
-  image: /img/map.png  
+  title: Розрахувати вартість доставки
 clients:
   - image: /img/image 18.png
   - image: /img/image 19.png
@@ -96,4 +49,61 @@ clients:
   - image: /img/image 19.png
   - image: /img/image 20.png
   - image: /img/image 20 (copy).png
+destinations:
+  countries:
+    - country: Китай
+      flag: /img/001-china 3.png
+      link: Link
+    - country: Англия
+      flag: /img/002-united-states.png
+      link: Link
+    - country: Италия
+      flag: /img/002-united-states (2).png
+      link: Link
+    - country: Гонконг
+      flag: /img/002-united-states (1).png
+      link: Link
+    - country: Италия
+      flag: /img/002-united-states (2).png
+      link: Link
+    - country: США
+      flag: /img/002-united-states (3).png
+      link: Link
+    - country: Германия
+      flag: /img/002-united-states (4).png
+      link: Link
+    - country: Италия
+      flag: /img/002-united-states (2).png
+      link: Link
+    - country: Индия
+      flag: /img/002-united-states (5).png
+      link: Link
+    - country: Франция
+      flag: /img/002-united-states (6).png
+      link: /france
+    - country: Италия
+      flag: /img/002-united-states (2).png
+      link: Link
+    - country: Израиль
+      flag: /img/002-united-states (7).png
+      link: Link
+  image: /img/map.png
+name: components
+pageKey: components-common
+title: Общие компонентны для всех сртраниц
+locale: ua
+storage:
+  - country: США (Washington)
+    flag: /img/002-united-states (3).png
+  - country: Польща (Chelm)
+    flag: /img/poland.png
+  - country: Польща (Warsaw)
+    flag: /img/poland.png
+  - country: Україна (Київ)
+    flag: /img/ukraine.png
+  - country: Китай (Shanghai)
+    flag: /img/001-china 3.png
+  - country: Гонконг
+    flag: /img/002-united-states (1).png
+description: Общие компонентны для всех сртраниц
 ---
