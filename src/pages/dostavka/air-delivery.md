@@ -2,7 +2,7 @@
 templateKey: delivery
 crumbLabelParent: Доставка
 seoSections:
-  title: Организация авиадоставки из США. Логистические услуги от специалистов
+  title: ' Вантажні авіаперевезення від INTA-ICS'
   sections:
     - image: /img/seoImg.jpg
       text: >-
