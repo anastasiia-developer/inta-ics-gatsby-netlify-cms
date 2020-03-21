@@ -1,6 +1,33 @@
 ---
 templateKey: delivery
+metaData:
+  description: >
+    &#128077; Авіаперевезення вантажів &#128073; Доставка товарів літаком
+    &#9992; точно в строк &#9989; Гарантія збереження вантажів &#9989;
+    Замовляйте прямо зараз!
+  title: Авіадоставка вантажів в Україну | INTA-ICS
 crumbLabelParent: Доставка
+crumbLabel: Авіадоставка
+description: >-
+  INTA-ICS тривало і успішно співпрацює зі світовими авіакомпаніями, що дозволяє
+  перевозити вантажі в місця, недоступні для іншого виду транспорту.
+title: Авіадоставка вантажів
+header:
+  buttons:
+    - link: avia-dostavka-z-kytaju/
+      text: Авіадоставка з Китаю
+    - text: Авіадоставка з США
+      link: avia-dostavka-z-ssha/
+  images:
+    - alt: inta-ics-авіа-доставка
+      image: /img/авиадоставка-общая.png
+  scopeInformation:
+    - image: /img/time.png
+      text: Терміни доставки
+    - image: /img/card.png
+      text: від 5 $ за кг
+    - image: /img/lov.png
+      text: Місцезнаходження вантажу
 seoSections:
   title: ' Вантажні авіаперевезення від INTA-ICS'
   sections:
@@ -75,30 +102,6 @@ seoSections:
         экспресс-доставку из США по самым выгодным условиям.</p>
       altImg: Alt
 name: air-delivery
-metaData:
-  description: >
-    &#128077; Авіаперевезення вантажів &#128073; Доставка товарів літаком
-    &#9992; точно в строк &#9989; Гарантія збереження вантажів &#9989;
-    Замовляйте прямо зараз!
-  title: Авіадоставка вантажів в Україну | INTA-ICS
-crumbLabel: Авіадоставка
-title: Авіадоставка вантажів
-header:
-  buttons:
-    - link: avia-dostavka-z-kytaju/
-      text: Авіадоставка з Китаю
-    - text: Авіадоставка з США
-      link: avia-dostavka-z-ssha/
-  images:
-    - alt: inta-ics-авіа-доставка
-      image: /img/авиадоставка-общая.png
-  scopeInformation:
-    - image: /img/time.png
-      text: Терміни доставки
-    - image: /img/card.png
-      text: від 5 $ за кг
-    - image: /img/lov.png
-      text: Місцезнаходження вантажу
 sections:
   - image: /img/47.jpg
     button:
@@ -151,7 +154,7 @@ sectionText:
     <p>* митне оформлення вантажу;</p>
 
 
-    <p>* викуп і доставка необхідної продукції;</p>
+    <p>• викуп і доставка необхідної продукції;</p>
 
 
     <p>* підтримка і консультації персонального менеджера, який надасть
@@ -168,7 +171,4 @@ sectionText:
     деталей замовлення.</p>
   title: Вантажні авіаперевезення від INTA-ICS
 locale: ua
-description: >-
-  INTA-ICS тривало і успішно співпрацює зі світовими авіакомпаніями, що дозволяє
-  перевозити вантажі в місця, недоступні для іншого виду транспорту.
 ---
