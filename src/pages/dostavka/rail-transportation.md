@@ -39,15 +39,15 @@ header:
     - link: /cargo/container-transporting
       text: Перевозка сборных грузов
   images:
-    - alt: app mobile
-      image: /img/Group.png
+    - alt: inta-ics-залізничні-перевезення-вантажів
+      image: /img/жд-доставка.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Від 28 днів
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Доступна ціна
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Митне оформлення
 sections:
   - image: /img/deliv.jpg
     list:
