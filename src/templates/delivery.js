@@ -4,7 +4,8 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Header from "../components/delivery/Header"
-import CalculateHeader from "../components/delivery/CalculateHeader"
+import CalculateHeader from "../components/CalculateHeader"
+import CalculateHeaderRu from "../components/CalculateHeader/index.ru"
 import Sections from "../components/delivery/Sections"
 import SectionText from "../components/delivery/SectionText"
 import OurServices from '../components/delivery/OurServices'
@@ -20,6 +21,8 @@ import TitleDesHelmet from "../components/TitleDesHelmet";
 
 export const DeliveryTemplate = ({
                                      helmet,
+                                     crumbLabel,
+                                     crumbLabelParent,
                                      header,
                                      title,
                                      description,
@@ -36,13 +39,18 @@ export const DeliveryTemplate = ({
                 title={title}
                 header={header}
                 location={location}
-                crumbLabel={title}
-                crumbLabelParent="Доставка"
+                crumbLabel={crumbLabel}
+                crumbLabelParent={crumbLabelParent}
                 crumbPathParent={false}
-                children={location && !header.buttons &&  <CalculateHeader locale={locale}/>}
+                children={location && !header.buttons &&
+                    locale === 'ua' &&
+                    <CalculateHeader />
+                    &&
+                    <CalculateHeaderRu />
+                }
             />
             {location && header.buttons &&
-                <CalculateContainerHeader/>
+                <CalculateContainerHeader locale={locale}/>
             }
             <Sections
                 className={!header.buttons && 'only'}
@@ -88,6 +96,8 @@ const Delivery = ({ data, location, pageContext }) => {
                         description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
                     />
                 }
+                crumbLabel={frontmatter.crumbLabel}
+                crumbLabelParent={frontmatter.crumbLabelParent}
                 header={frontmatter.header}
                 title={frontmatter.title}
                 description={frontmatter.description}
@@ -118,6 +128,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        crumbLabel
+        crumbLabelParent
         metaData{
             title
             description

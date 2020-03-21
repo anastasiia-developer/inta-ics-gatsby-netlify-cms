@@ -238,7 +238,7 @@ const CalculateBlock = ({
         </div>
 )}
 
-const CalculateHeader = ({data}) => {
+const CalculateHeaderTemplate = ({data}) => {
     const [optionsFrom, setOptionsFrom] = useState({open: false, value: 'Китай', flag: '001-china 3'});
     const [optionsTo, setOptionsTo] = useState({open: false});
     const [optionsWeight, setOptionsWeight] = useState({open: false, value: ''});
@@ -397,4 +397,4 @@ const CalculateHeader = ({data}) => {
     )
 };
 
-export default CalculateHeader
+export default CalculateHeaderTemplate

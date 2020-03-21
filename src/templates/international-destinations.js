@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Header from "../components/delivery/Header"
-import CalculateHeader from "../components/delivery/CalculateHeader"
 import {Section} from "./services"
 import OurServices from '../components/delivery/OurServices'
 import Destinations from "../components/Destinations"
@@ -14,6 +13,8 @@ import Article from "../components/mainPage/Article"
 import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader"
 import TitleDesHelmet from "../components/TitleDesHelmet"
+import CalculateHeaderRu from "../components/CalculateHeader/index.ru";
+import CalculateHeader from "../components/CalculateHeader";
 
 export const InternationalDestinationsTemplate = ({
                                      helmet,
@@ -37,7 +38,12 @@ export const InternationalDestinationsTemplate = ({
                 crumbLabel={crumbLabel}
                 crumbLabelParent={crumbLabelParent}
                 crumbPathParent={false}
-                children={location && !header.buttons &&  <CalculateHeader/>}
+                children={location && !header.buttons &&
+                locale === 'ua' &&
+                    <CalculateHeader />
+                    &&
+                    <CalculateHeaderRu />
+                }
             />
             {location && header.buttons &&
                 <CalculateContainerHeader/>

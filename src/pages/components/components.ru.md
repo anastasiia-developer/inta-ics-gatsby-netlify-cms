@@ -80,24 +80,24 @@ destinations:
     - country: Англия
       flag: /img/002-united-states.png
     - country: Италия
-      flag: /img/002-united-states (2).png
+      flag: /img/italy.png
     - country: Гонконг
       flag: /img/002-united-states (1).png
     - country: Италия
-      flag: /img/002-united-states (2).png
+      flag: /img/italy.png
     - country: США
       flag: /img/002-united-states (3).png
     - country: Германия
       flag: /img/002-united-states (4).png
     - country: Италия
-      flag: /img/002-united-states (2).png
+      flag: /img/italy.png
     - country: Индия
       flag: /img/002-united-states (5).png
     - country: Франция
       flag: /img/002-united-states (6).png
       link: /france
     - country: Италия
-      flag: /img/002-united-states (2).png
+      flag: /img/italy.png
     - country: Израиль
       flag: /img/002-united-states (7).png
   image: /img/map.png
@@ -125,4 +125,15 @@ reviews:
       cupiditate deleniti dolor error, facilis laborum possimus provident quasi
       quo repellendus sequi, tempora, unde?
 description: RU Общие компонентны для всех сртраниц
+calculateHeader:
+    title: Рассчитать стоимость доставки
+    description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
+    btn: Рассчет стоимости
+    from: Откуда груз?
+    to: Призначение груза?
+    toCountry: Украина
+    weight: Вес груза
+    phone: Телефон
+    email: Email
+    comment: Комментарий
 ---

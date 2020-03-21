@@ -5,15 +5,18 @@ import CalculatorTemplate from '../../components/Calculator/CalculatorTemplate'
 import StorageTemplate from '../../components/Storage/StorageTemplate'
 import DestinationsTemplate from '../../components/Destinations/DestinationsTemplate'
 import ClientsTemplate from '../../components/Clients/ClientsTemplate'
-import ReviewsTemplate from "../../components/Reviews/ReviewsTemplate";
+import ReviewsTemplate from "../../components/Reviews/ReviewsTemplate"
+import CalculateHeaderTemplate from "../../components/CalculateHeader/CalculateHeaderTemplate"
 
 export const ComponentsCommonTemplate = ({
+                                      calculateHeader,
                                       calculator,
                                       storage,
                                       destinations,
                                       clients,
                                       reviews}) => (
     <Fragment>
+        <CalculateHeaderTemplate data={calculateHeader}/>
         <CalculatorTemplate data={calculator}/>
         <StorageTemplate storage={storage}/>
         <DestinationsTemplate destinations={destinations}/>
@@ -28,6 +31,7 @@ const Index = ({ data, location, pageContext }) => {
     return (
         <Layout location={location} local={pageContext.locale}>
             <ComponentsCommonTemplate
+                calculateHeader={frontmatter.calculateHeader}
                 calculator={frontmatter.calculator}
                 storage={frontmatter.storage}
                 destinations={frontmatter.destinations}
@@ -47,6 +51,18 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        calculateHeader {
+            title
+            description
+            from
+            to
+            toCountry
+            weight
+            phone
+            email
+            comment
+            btn
+        }
         calculator {
           title
           constituents {

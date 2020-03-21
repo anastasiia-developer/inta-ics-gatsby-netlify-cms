@@ -61,6 +61,8 @@ collections:
           {label: "Title", name: "title", widget: "string" },
           {label: "Description", name: "description", widget: "text"}
       ]}
+      - {label: "имя в навигации категории", name: "crumbLabelParent", widget: "string"}
+      - {label: "имя в навигации", name: "crumbLabel", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
@@ -114,6 +116,8 @@ collections:
           {label: "Title", name: "title", widget: "string"},
           {label: "Description", name: "description", widget: "text"}
       ]}
+      - {label: "имя в навигации категории", name: "crumbLabelParent", widget: "string"}
+      - {label: "имя в навигации", name: "crumbLabel", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [

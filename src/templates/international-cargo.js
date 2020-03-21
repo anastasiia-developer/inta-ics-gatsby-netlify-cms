@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Header from "../components/delivery/Header"
-import CalculateHeader from "../components/delivery/CalculateHeader"
+import CalculateHeader from "../components/CalculateHeader"
+import CalculateHeaderRu from "../components/CalculateHeader/index.ru"
 import {Section} from "./services"
 import OurServices from '../components/delivery/OurServices'
 import Destinations from "../components/Destinations"
@@ -39,7 +40,12 @@ export const InternationalCargoTemplate = ({
                     crumbLabel={crumbLabel}
                     crumbLabelParent={crumbLabelParent}
                     crumbPathParent={false}
-                    children={location && !header.buttons &&  <CalculateHeader/>}
+                    children={location && !header.buttons &&
+                      locale === 'ua' &&
+                        <CalculateHeader />
+                        &&
+                        <CalculateHeaderRu />
+                    }
                 />
             }
             {location && header.buttons &&

@@ -151,6 +151,7 @@ seoSections:
         экспресс-доставку из США по самым выгодным условиям.</p>
       altImg: Alt
 crumbLabel: Авиадоставка
+crumbLabelParent: Доставка
 locale: ua
 description: >-
   INTA-ICS тривало і успішно співпрацює зі світовими авіакомпаніями, що дозволяє

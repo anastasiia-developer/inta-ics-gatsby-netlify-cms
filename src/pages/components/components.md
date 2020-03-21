@@ -63,13 +63,13 @@ destinations:
       flag: /img/002-united-states.png
       link: Link
     - country: Италия
-      flag: /img/002-united-states (2).png
+      flag: /img/italy.png
       link: Link
     - country: Гонконг
       flag: /img/002-united-states (1).png
       link: Link
     - country: Италия
-      flag: /img/002-united-states (2).png
+      flag: /img/italy.png
       link: Link
     - country: США
       flag: /img/002-united-states (3).png
@@ -78,7 +78,7 @@ destinations:
       flag: /img/002-united-states (4).png
       link: Link
     - country: Италия
-      flag: /img/002-united-states (2).png
+      flag: /img/italy.png
       link: Link
     - country: Индия
       flag: /img/002-united-states (5).png
@@ -87,7 +87,7 @@ destinations:
       flag: /img/002-united-states (6).png
       link: /france
     - country: Италия
-      flag: /img/002-united-states (2).png
+      flag: /img/italy.png
       link: Link
     - country: Израиль
       flag: /img/002-united-states (7).png
@@ -111,4 +111,14 @@ storage:
   - country: Гонконг
     flag: /img/002-united-states (1).png
 description: Общие компонентны для всех сртраниц
+calculateHeader:
+    title: Рассчитать стоимость доставки
+    description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
+    btn: Рассчет стоимости
+    from: Откуда груз?
+    to: Призначение груза?
+    weight: Вес груза
+    phone: Телефон
+    email: Email
+    comment: Комментари
 ---

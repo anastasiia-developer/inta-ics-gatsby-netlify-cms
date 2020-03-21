@@ -1,14 +1,15 @@
 import React from "react";
 import {graphql, StaticQuery} from "gatsby";
-import CalculateHeader from "../delivery/CalculateHeader";
+import CalculateHeaderTemplate from "./CalculateHeaderTemplate";
 
 
 export default () => (
     <StaticQuery
         query={graphql`
-            query CalculatorHeader{
-                markdownRemark(frontmatter: { pageKey: { eq: "components-common" },  locale: { eq: "ua" } }) {
+            query CalculatorHeaderRu{
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" },  locale: { eq: "ru" } }) {
                     frontmatter {
+                        locale
                         calculateHeader {
                             title
                             description
@@ -19,11 +20,12 @@ export default () => (
                             phone
                             email
                             comment
-                      }
+                            btn
+                        }
                     }
                 }
             }
     `}
-        render={(data) => <CalculateHeader data={data.markdownRemark.frontmatter.calculateHeader} />}
+        render={(data) => <CalculateHeaderTemplate data={data.markdownRemark.frontmatter.calculateHeader} />}
     />
 )
