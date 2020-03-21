@@ -238,7 +238,7 @@ const CalculateBlock = ({
         </div>
 )}
 
-const CalculateHeader = ({locale}) => {
+const CalculateHeader = ({data}) => {
     const [optionsFrom, setOptionsFrom] = useState({open: false, value: 'Китай', flag: '001-china 3'});
     const [optionsTo, setOptionsTo] = useState({open: false});
     const [optionsWeight, setOptionsWeight] = useState({open: false, value: ''});
@@ -273,14 +273,15 @@ const CalculateHeader = ({locale}) => {
             setInputsValue({...inputsValue, [e.target.name]: e.target.value});
         }
     };
+
     return (
         <Fragment>
             {popupOpen &&
-                <PopupThanks locale={locale} close={setPopupOpen}/>
+                <PopupThanks locale={data.locale} close={setPopupOpen}/>
             }
         <Wrapper className='wrapper'>
-            <h3>Рассчитать стоимость доставки</h3>
-            <h4>Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
+            <h3>{data.title}</h3>
+            <h4>{data.description}</h4>
             <form
                 name="footerContact"
                 method="post"
@@ -289,7 +290,7 @@ const CalculateHeader = ({locale}) => {
                 onSubmit={(e) => handleSubmit(e)}
                 className="row-to-column">
                 <CalculateBlock
-                    title="Откуда груз?"
+                    title={data.from}
                     options={<Flags
                         stateOptions={optionsFrom}
                         setOptions={setOptionsFrom}
@@ -301,8 +302,8 @@ const CalculateHeader = ({locale}) => {
                     arrowLine
                 />
                 <CalculateBlock
-                    title="Призначение груза?"
-                    option="Украина"
+                    title={data.to}
+                    option={data.toCountry}
                     flag="ukraine"
                     options={false}
                     name={'to'}
@@ -311,7 +312,7 @@ const CalculateHeader = ({locale}) => {
                     arrowLine
                 />
                 <CalculateBlock
-                    title="Вес груза"
+                    title={data.weight}
                     option="kg"
                     flag={false}
                     className="cargo-weight"
@@ -335,7 +336,7 @@ const CalculateHeader = ({locale}) => {
                     arrowLine
                 />
                 <CalculateBlock
-                    title="Телефон"
+                    title={data.phone}
                     option={false}
                     flag={false}
                     className="tel"
@@ -353,7 +354,7 @@ const CalculateHeader = ({locale}) => {
                     setOptions={false}
                 />
                 <CalculateBlock
-                    title="Email"
+                    title={data.email}
                     option={false}
                     flag={false}
                     className="tel"
@@ -372,7 +373,7 @@ const CalculateHeader = ({locale}) => {
                     setOptions={false}
                 />
                 <CalculateBlock
-                    title="Комментарий"
+                    title={data.comment}
                     option={false}
                     flag={false}
                     className="comment"
@@ -389,7 +390,7 @@ const CalculateHeader = ({locale}) => {
                     stateOptions={false}
                     setOptions={false}
                 />
-                <button className="btn btn-order" type="submit">Рассчет стоимости</button>
+                <button className="btn btn-order" type="submit">{data.btn}</button>
             </form>
         </Wrapper>
         </Fragment>
