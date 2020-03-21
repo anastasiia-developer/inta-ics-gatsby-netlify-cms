@@ -36,8 +36,12 @@ crumbLabel: ЗД перевезення
 title: Залізничні перевезення вантажів
 header:
   buttons:
-    - link: /cargo/container-transporting
-      text: Перевозка сборных грузов
+    - link: perevezennya-zbirnyih-vantazhiv/
+      text: Доставка збірних вантажів
+    - text: Доставка товару з Китаю
+      link: dostavka-tovariv-z-kytaju/
+    - text: Доставка негабаритних вантажів
+      link: perevezennya-negabaryitnyih-vantazhiv/
   images:
     - alt: inta-ics-залізничні-перевезення-вантажів
       image: /img/жд-доставка.png
