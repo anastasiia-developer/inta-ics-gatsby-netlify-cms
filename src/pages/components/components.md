@@ -106,10 +106,10 @@ destinations:
       flag: /img/155-israel.png
       link: dostavka-z-izrailyu-v-ukrainu/
     - country: Тайвань
-      flag: /img/italy.png
+      flag: /img/202-taiwan.png
       link: dostavka-z-tayvanyu/
     - country: ОАЕ
-      flag: /img/002-united-states (7).png
+      flag: /img/151-united-arab-emirates.png
       link: dostavka-z-oae/
   image: /img/map.png
 name: components
