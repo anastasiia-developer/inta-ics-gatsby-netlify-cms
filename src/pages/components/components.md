@@ -1,4 +1,19 @@
 ---
+pageKey: components-common
+title: Общие компонентны для всех сртраниц
+storage:
+  - country: США (Washington)
+    flag: /img/002-united-states (3).png
+  - country: Польща (Chelm)
+    flag: /img/poland.png
+  - country: Польща (Warsaw)
+    flag: /img/poland.png
+  - country: Україна (Київ)
+    flag: /img/ukraine.png
+  - country: Китай (Shanghai)
+    flag: /img/001-china 3.png
+  - country: Гонконг
+    flag: /img/002-united-states (1).png
 calculator:
   constituents:
     - category:
@@ -43,9 +58,13 @@ calculator:
   title: Розрахувати вартість доставки
   resultBlock:
     title: Укажите вес посылки
-    btnText: Рассчет стоимости
+    btnText: Розрахунок вартості
     resultText: Итого стоимость доставки
-    note: Данный расчет является ориентировочным по тарифу Авиадоставки. Точная стоимость доставки будет зависеть от веса посылки и полного перечня заказанных услуг. Для более детальной информации обратитесь к менеджеру компании.
+    note: >-
+      Данный расчет является ориентировочным по тарифу Авиадоставки. Точная
+      стоимость доставки будет зависеть от веса посылки и полного перечня
+      заказанных услуг. Для более детальной информации обратитесь к менеджеру
+      компании.
 clients:
   - image: /img/image 18.png
   - image: /img/image 19.png
@@ -94,31 +113,16 @@ destinations:
       link: Link
   image: /img/map.png
 name: components
-pageKey: components-common
-title: Общие компонентны для всех сртраниц
-locale: ua
-storage:
-  - country: США (Washington)
-    flag: /img/002-united-states (3).png
-  - country: Польща (Chelm)
-    flag: /img/poland.png
-  - country: Польща (Warsaw)
-    flag: /img/poland.png
-  - country: Україна (Київ)
-    flag: /img/ukraine.png
-  - country: Китай (Shanghai)
-    flag: /img/001-china 3.png
-  - country: Гонконг
-    flag: /img/002-united-states (1).png
-description: Общие компонентны для всех сртраниц
 calculateHeader:
-    title: Рассчитать стоимость доставки
-    description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
-    btn: Рассчет стоимости
-    from: Откуда груз?
-    to: Призначение груза?
-    weight: Вес груза
-    phone: Телефон
-    email: Email
-    comment: Комментари
+  from: Откуда груз?
+  phone: Телефон
+  title: Рассчитать стоимость доставки
+  weight: Вес груза
+  to: Призначение груза?
+  btn: Рассчет стоимости
+  email: Email
+  description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
+  comment: Комментари
+locale: ua
+description: Общие компонентны для всех сртраниц
 ---
