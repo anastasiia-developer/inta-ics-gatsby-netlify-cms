@@ -78,39 +78,39 @@ destinations:
     - country: Туреччина
       flag: /img/218-turkey.png
       link: dostavka-vantazhiv-z-turtsii/
-    - country: Англия
-      flag: /img/002-united-states.png
-      link: Link
-    - country: Италия
-      flag: /img/italy.png
-      link: Link
-    - country: Гонконг
+    - country: Німеччина
+      flag: /img/162-germany.png
+      link: dostavka-z-nimechchyinyi/
+    - country: 'Франція '
+      flag: /img/195-france.png
+      link: dostavka-z-franzii/
+    - country: 'Англія '
       flag: /img/002-united-states (1).png
-      link: Link
-    - country: Италия
+      link: 'dostavka-z-anglii/  '
+    - country: 'Італія  '
       flag: /img/italy.png
-      link: Link
-    - country: США
+      link: dostavka-z-italii/
+    - country: Португалія
       flag: /img/002-united-states (3).png
-      link: Link
-    - country: Германия
+      link: dostavka-z-portugalii/
+    - country: Іспанія
       flag: /img/002-united-states (4).png
-      link: Link
-    - country: Италия
+      link: 'dostavka-z-ispanii/ '
+    - country: 'Чехія  '
       flag: /img/italy.png
-      link: Link
-    - country: Индия
+      link: dostavka-z-chehii/
+    - country: Індія
       flag: /img/002-united-states (5).png
-      link: Link
-    - country: Франция
+      link: dostavka-z-indii-v-ukrainu/
+    - country: Ізраїль
       flag: /img/002-united-states (6).png
-      link: /france
-    - country: Италия
+      link: dostavka-z-izrailyu-v-ukrainu/
+    - country: Тайвань
       flag: /img/italy.png
-      link: Link
-    - country: Израиль
+      link: dostavka-z-tayvanyu/
+    - country: ОАЕ
       flag: /img/002-united-states (7).png
-      link: Link
+      link: dostavka-z-oae/
   image: /img/map.png
 name: components
 calculateHeader:
