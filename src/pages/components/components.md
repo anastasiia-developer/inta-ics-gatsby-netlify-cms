@@ -57,7 +57,7 @@ calculator:
       name: moreServices
   title: Розрахувати вартість доставки
   resultBlock:
-    title: Укажите вес посылки
+    title: Вага вантажу
     btnText: Розрахунок вартості
     resultText: Итого стоимость доставки
     note: >-
