@@ -22,11 +22,11 @@ header:
       image: /img/контейнерные-перевозки.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Від 35 днів
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Зручна система оплати
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Прямий сервіс з Китаю
 sections:
   - image: /img/franceSection.jpg
     text: >-
