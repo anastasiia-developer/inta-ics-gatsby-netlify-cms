@@ -20,9 +20,9 @@ header:
     - image: /img/time.png
       text: Сроки доставки
     - image: /img/card.png
-      text: от 2$ за кг
+      text: От 5 $ за кг
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Местонахождение груза
 seoSections:
   title: Организация авиадоставки из США. Логистические услуги от специалистов
   sections:
