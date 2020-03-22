@@ -85,13 +85,13 @@ destinations:
       flag: /img/195-france.png
       link: dostavka-z-franzii/
     - country: 'Англія '
-      flag: /img/002-united-states (1).png
+      flag: /img/260-united-kingdom.png
       link: 'dostavka-z-anglii/  '
     - country: 'Італія  '
-      flag: /img/italy.png
+      flag: /img/013-italy.png
       link: dostavka-z-italii/
     - country: Португалія
-      flag: /img/002-united-states (3).png
+      flag: /img/224-portugal.png
       link: dostavka-z-portugalii/
     - country: Іспанія
       flag: /img/002-united-states (4).png
