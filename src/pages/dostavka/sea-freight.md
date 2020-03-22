@@ -39,8 +39,8 @@ header:
     - link: /countries/sea-china
       text: Морская перевозка грузов из Китая №8
   images:
-    - alt: app mobile
-      image: /img/fatree.png
+    - alt: ' inta-ics-морські-перевезення'
+      image: /img/морская-доставка.png
   scopeInformation:
     - image: /img/time.png
       text: Сроки доставки
