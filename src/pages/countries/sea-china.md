@@ -6,8 +6,8 @@ metaData:
   description: |2+
      &#128674; Міжнародні морські перевезення вантажів з Китаю &#128073; Вигідні тарифи &#9989; LCL, FCL. Повний комплекс супровідних послуг, митне оформлення &#9989; Контроль та звітність 24/7 - Телефонуйте &#9742; 068 5555 999
 
-title: Морская перевозка грузов из Китая
-name: sea-china
+title: 'Морське перевезення вантажів з Китаю '
+name: dostavka-morem-z-kytaju/
 crumbLabel: Морская перевозка грузов из Китая
 crumbLabelParent: l
 description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
