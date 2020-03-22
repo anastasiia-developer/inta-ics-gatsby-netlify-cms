@@ -106,7 +106,7 @@ sections:
   - image: /img/deliv.jpg
     list:
       - image: /img/ (1).png
-        title: Від 1м<sup>3</sup>
+        title: Від 1м³
       - image: /img/ (1).png
         title: Доступна ціна
       - image: /img/ (1).png
