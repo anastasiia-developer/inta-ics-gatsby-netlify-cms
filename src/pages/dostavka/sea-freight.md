@@ -85,6 +85,22 @@ sections:
     button:
       text: Дізнатись більше
       link: dostavka-morem-z-ssha/
+  - title: Морські контейнерні перевезення
+    image: /img/контейнерные-перевозки.jpg
+    text: >-
+      <p>Пропонуємо послуги по міжнародній доставці товарів морем. Індивідуально
+      підібрані маршрути і прозорі тарифи в INTA-ICS допоможуть вам отримати
+      продукцію, заощадивши на вантажоперевезеннях.</p>
+    list:
+      - title: Від 35 днів
+        image: /img/ (1).png
+      - title: Зручна система оплати
+        image: /img/ (1).png
+      - title: Прямий сервіс з Китаю
+        image: /img/ (1).png
+    button:
+      text: Дізнатись більше
+      link: konteynerni-vantazhoperevezennya/
 sectionText:
   title: l
   image: /img/Group.png
