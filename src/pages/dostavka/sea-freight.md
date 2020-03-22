@@ -36,8 +36,12 @@ crumbLabel: Доставка морем
 title: Морські перевезення
 header:
   buttons:
-    - link: /countries/sea-china
-      text: Морская перевозка грузов из Китая №8
+    - link: dostavka-morem-z-kytaju/
+      text: Морські перевезення з Китаю
+    - text: Морська доставка з США
+      link: dostavka-morem-z-ssha/
+    - text: Контейнерні перевезення
+      link: konteynerni-vantazhoperevezennya/
   images:
     - alt: ' inta-ics-морські-перевезення'
       image: /img/морская-доставка.png
