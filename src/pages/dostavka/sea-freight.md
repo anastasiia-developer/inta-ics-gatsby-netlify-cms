@@ -43,11 +43,11 @@ header:
       image: /img/морская-доставка.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Від 35 днів
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Доступна ціна
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Вантаж від 1м3
 sections:
   - image: /img/deliv.jpg
     list:
