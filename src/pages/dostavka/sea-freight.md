@@ -31,7 +31,7 @@ header:
     - image: /img/card.png
       text: Доступна ціна
     - image: /img/lov.png
-      text: Вантаж від 1м<sup>3</sup>
+      text: Вантаж від 1м³
 seoSections:
   title: Міжнародні морські перевезення вантажів
   sections:
