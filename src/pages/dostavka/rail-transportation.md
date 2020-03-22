@@ -1,6 +1,37 @@
 ---
 templateKey: delivery
+metaData:
+  description: >
+    &#128646;Залізничні контейнерні перевезення &#128073; Доставка вантажів
+    потягом в Україну &#9989; Повний комплекс супровідних послуг, митне
+    оформлення, з/д перевезення" під ключ" &#9989; Підтримка 24/7 - Телефонуйте
+    &#9742; 068 5555 999
+  title: Міжнародні залізничні перевезення | INTA-ICS
 crumbLabelParent: Доставка
+crumbLabel: ЗД перевезення
+description: >-
+  Вантаж залізницею - це оптимальний за вартістю і термінами спосіб
+  транспортування товарів. Наша компанія пропонує комплексні та вигідні для
+  клієнтів послуги ЗД доставки.
+title: Залізничні перевезення вантажів
+header:
+  buttons:
+    - link: perevezennya-zbirnyih-vantazhiv/
+      text: Доставка збірних вантажів
+    - text: Доставка товару з Китаю
+      link: dostavka-tovariv-z-kytaju/
+    - text: Доставка негабаритних вантажів
+      link: perevezennya-negabaryitnyih-vantazhiv/
+  images:
+    - alt: inta-ics-залізничні-перевезення-вантажів
+      image: /img/жд-доставка.png
+  scopeInformation:
+    - image: /img/time.png
+      text: Від 28 днів
+    - image: /img/card.png
+      text: Доступна ціна
+    - image: /img/lov.png
+      text: Митне оформлення
 seoSections:
   title: Коли краще вибрати доставку вантажу поїздом
   sections:
@@ -74,38 +105,11 @@ seoSections:
       altImg: inta-ics-залізничні-перевезення-вантажів-4
       image: /img/сео-текст-3-1-.jpg
 name: rail-transportation
-metaData:
-  description: >
-    &#128646;Залізничні контейнерні перевезення &#128073; Доставка вантажів
-    потягом в Україну &#9989; Повний комплекс супровідних послуг, митне
-    оформлення, з/д перевезення" під ключ" &#9989; Підтримка 24/7 - Телефонуйте
-    &#9742; 068 5555 999
-  title: Міжнародні залізничні перевезення | INTA-ICS
-crumbLabel: ЗД перевезення
-title: Залізничні перевезення вантажів
-header:
-  buttons:
-    - link: perevezennya-zbirnyih-vantazhiv/
-      text: Доставка збірних вантажів
-    - text: Доставка товару з Китаю
-      link: dostavka-tovariv-z-kytaju/
-    - text: Доставка негабаритних вантажів
-      link: perevezennya-negabaryitnyih-vantazhiv/
-  images:
-    - alt: inta-ics-залізничні-перевезення-вантажів
-      image: /img/жд-доставка.png
-  scopeInformation:
-    - image: /img/time.png
-      text: Від 28 днів
-    - image: /img/card.png
-      text: Доступна ціна
-    - image: /img/lov.png
-      text: Митне оформлення
 sections:
   - image: /img/deliv.jpg
     list:
       - image: /img/ (1).png
-        title: Від 1м3
+        title: Від 1м<sup>3</sup>
       - image: /img/ (1).png
         title: Доступна ціна
       - image: /img/ (1).png
@@ -186,8 +190,4 @@ sectionText:
     часом.</p>
   title: Вантажні залізничні перевезення від INTA-ICS
 locale: ua
-description: >-
-  Вантаж залізницею - це оптимальний за вартістю і термінами спосіб
-  транспортування товарів. Наша компанія пропонує комплексні та вигідні для
-  клієнтів послуги ЗД доставки.
 ---
