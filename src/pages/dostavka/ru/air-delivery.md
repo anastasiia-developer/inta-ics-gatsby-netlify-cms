@@ -14,8 +14,8 @@ description: >-
   перевозить грузы в места, недоступные для другого вида транспорта.
 header:
   images:
-    - alt: app mobile
-      image: /img/bkgr-air.png
+    - alt: inta-ics-авиа-доставка
+      image: /img/авиадоставка-общая.png
   scopeInformation:
     - image: /img/time.png
       text: Сроки доставки
