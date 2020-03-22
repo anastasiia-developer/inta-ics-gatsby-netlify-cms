@@ -33,7 +33,7 @@ header:
     - image: /img/lov.png
       text: Вантаж від 1м<sup>3</sup>
 seoSections:
-  title: Организация авиадоставки из США. Логистические услуги от специалистов
+  title: Міжнародні морські перевезення вантажів
   sections:
     - image: /img/seoImg.jpg
       text: >-
