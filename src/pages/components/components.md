@@ -75,9 +75,9 @@ clients:
   - image: /img/image 20 (copy).png
 destinations:
   countries:
-    - country: Китай
-      flag: /img/001-china 3.png
-      link: Link
+    - country: Туреччина
+      flag: /img/218-turkey.png
+      link: dostavka-vantazhiv-z-turtsii/
     - country: Англия
       flag: /img/002-united-states.png
       link: Link
