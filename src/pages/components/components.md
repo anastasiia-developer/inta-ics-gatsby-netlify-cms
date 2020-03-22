@@ -94,16 +94,16 @@ destinations:
       flag: /img/224-portugal.png
       link: dostavka-z-portugalii/
     - country: Іспанія
-      flag: /img/002-united-states (4).png
+      flag: /img/128-spain.png
       link: 'dostavka-z-ispanii/ '
     - country: 'Чехія  '
-      flag: /img/italy.png
+      flag: /img/149-czech-republic.png
       link: dostavka-z-chehii/
     - country: Індія
-      flag: /img/002-united-states (5).png
+      flag: /img/246-india.png
       link: dostavka-z-indii-v-ukrainu/
     - country: Ізраїль
-      flag: /img/002-united-states (6).png
+      flag: /img/155-israel.png
       link: dostavka-z-izrailyu-v-ukrainu/
     - country: Тайвань
       flag: /img/italy.png
