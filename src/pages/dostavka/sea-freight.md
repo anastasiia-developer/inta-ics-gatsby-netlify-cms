@@ -69,6 +69,22 @@ sections:
     button:
       text: Дізнатись більше
       link: dostavka-morem-z-kytaju/
+  - title: Доставка морем з США
+    image: /img/морская-дост-из-сша.jpg
+    text: >-
+      <p>Компанія INTA-ICS здійснює вантажоперевезення з США. Америка - один з
+      центрів світової торгівлі, тому співпраця з місцевими виробниками може
+      позитивно вплинути на ваш бізнес.</p>
+    list:
+      - title: Від 35 днів
+        image: /img/ (1).png
+      - title: Доставка від 50кг
+        image: /img/ (1).png
+      - title: Зручна система оплати
+        image: /img/ (1).png
+    button:
+      text: Дізнатись більше
+      link: dostavka-morem-z-ssha/
 sectionText:
   title: l
   image: /img/Group.png
