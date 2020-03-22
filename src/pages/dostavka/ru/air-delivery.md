@@ -23,6 +23,11 @@ header:
       text: От 5 $ за кг
     - image: /img/lov.png
       text: Местонахождение груза
+  buttons:
+    - text: 'Авиадоставка из Китая '
+      link: ru/avia-dostavka-iz-kitaya/
+    - text: ' Авиадоставка из США'
+      link: ru/avia-dostavka-iz-ssha/
 seoSections:
   title: Организация авиадоставки из США. Логистические услуги от специалистов
   sections:
