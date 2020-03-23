@@ -1,6 +1,8 @@
 import React, {Fragment, useEffect, useState} from "react";
 import styled from "styled-components";
-import PopupThanks, {Close} from "../PopupThanks";
+import {Close} from "../PopupThanks/PopupThanksTemplate";
+import PopupThanksRu from "../PopupThanks/index.ru";
+import PopupThanks from "../PopupThanks";
 import Phone from "../../FormComponents/Phone";
 import {encode} from "../../../pages/contact/form";
 
@@ -104,10 +106,11 @@ const Popup = styled.div`
     }
 `;
 
-const MainPopupTemplate = ({data}) => {
+const MainPopupTemplate = ({data, className}) => {
     const [phone, setPhone] = useState();
     const [popupOpen, setPopupOpen] = useState(false);
     const [headerPopupOpen, setHeaderPopupOpen] = useState(false);
+
     const handleSubmit = e => {
         e.preventDefault();
         setHeaderPopupOpen(false);
@@ -135,9 +138,15 @@ const MainPopupTemplate = ({data}) => {
     return(
         <Fragment>
             {popupOpen &&
-                <PopupThanks locale={data.locale} close={setPopupOpen}/>
+                <Fragment> {
+                    data.locale === 'ua' ?
+                        <PopupThanks close={setPopupOpen}/>
+                        :
+                        <PopupThanksRu close={setPopupOpen}/>
+                    }
+                </Fragment>
             }
-            <Popup isDisplay={headerPopupOpen}>
+            <Popup className={`popup ${className || ''}`} isDisplay={headerPopupOpen}>
                 <header className="row">
                     <img className='logo' src="/img/logo.png" alt=""/>
                     <Close onClick={ () => setHeaderPopupOpen(false) }/>

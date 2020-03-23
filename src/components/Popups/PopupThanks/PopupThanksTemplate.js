@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 import { Link } from 'gatsby'
-import SocialMedia from '../SocialMedia'
-import {graphql, StaticQuery} from "gatsby";
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import SocialMedia from '../../SocialMedia'
+import PreviewCompatibleImage from "../../PreviewCompatibleImage";
+import {ContentInFrontmatter} from '../../Content'
 
 const Overlay = styled.div`
     position: fixed;
@@ -213,18 +213,6 @@ const Footer = styled.footer`
             margin: 1em 0;
         }
     }
-    h3.title{
-        font-size: 1.8em;
-        font-weight: 500;
-        color: #fff;
-        line-height: 1.5em;
-        .bold{
-            font-weight: 900;
-        }
-        @media(max-aspect-ratio: 3/3), (max-height: 500px){
-            text-align: center;
-        }
-    }
     .btn{
         background: #fff;
         color: #FF4B55;
@@ -239,28 +227,40 @@ const Footer = styled.footer`
         flex-direction: column;
     }
 `;
+const Title = styled(ContentInFrontmatter)`
+    font-size: 1.8em;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.5em;
+    .bold{
+        font-weight: 900;
+    }
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        text-align: center;
+    }
+`;
 
-const PopupThanks = ({data, locale, close}) =>
-    <Overlay>
+const PopupThanksTemplate = ({data, close, className}) =>
+    <Overlay className={`overlay ${className || ''}`}>
        <Wrapper>
            <Close onClick={() => close(false)}/>
            <div className='row-to-column'>
                <div className='container'>
                    <h2>
-                       Спасибо, за Вашу заявку!
+                       {data.title}
                    </h2>
-                   <h3>В контакт-центре уже идет борьба за такого замечательного клиента как Вы!</h3>
-                   <p>В ближайшее время с Вами свяжется менеджер.</p>
+                   <h3>{data.subTitle}</h3>
+                   <p>{data.description}</p>
                </div>
                <div className="image">
                    <div className="trapezoid">
                        <p>
-                           И ЕЩЕ ОДИН ПРИЯТНЫЙ БОНУС!
+                           {data.bonus}
                        </p>
                    </div>
                    <PreviewCompatibleImage
                        imageInfo={{
-                           image: data
+                           image: data.image
                        }}
                    />
                </div>
@@ -269,31 +269,13 @@ const PopupThanks = ({data, locale, close}) =>
                 <div className="row-to-column">
                     <img src="/img/popupFooter.png" alt="image"/>
                     <div className="popup-column">
-                        <h3 className='title'>
-                            Как быстро продать импортируемый товар
-                            и <span className="bold">повысить количество клиентов на 76%</span>
-                        </h3>
-                        <Link to={`blog/${locale === 'ua' ? '' : locale}/2020-02-06-украина-привлекательный-рынок-для-китая`} className='btn'>Читать</Link>
+                        <Title content={data.bonusTitle}/>
+                        <Link to={`blog/${data.locale === 'ua' ? '' : data.locale}/${data.btnLink}`} className='btn'>{data.btn}</Link>
                         <SocialMedia/>
                     </div>
                 </div>
             </Footer>
        </Wrapper>
-    </Overlay>
+    </Overlay>;
 
-export default ({locale, close}) => (
-    <StaticQuery
-        query={graphql`
-            query PopupThanks {
-                fileName: file(relativePath: { eq: "popupImage.jpg" }) {
-                  childImageSharp {
-                    fluid(maxWidth: 600) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
-            }
-        `}
-        render={(data) => <PopupThanks data={data.fileName} locale={locale} close={close}/>}
-    />
-)
+export default PopupThanksTemplate

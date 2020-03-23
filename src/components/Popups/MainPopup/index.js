@@ -8,6 +8,7 @@ export default () => (
             query MainPopup{
                 markdownRemark(frontmatter: { pageKey: { eq: "components-common" },  locale:{eq: "ua"} }) {
                     frontmatter {
+                        locale
                         mainPopup{
                           title
                           description

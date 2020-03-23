@@ -1,5 +1,6 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
+import styled from "styled-components";
 import Layout from '../../components/Layout'
 import CalculatorTemplate from '../../components/Calculator/CalculatorTemplate'
 import StorageTemplate from '../../components/Storage/StorageTemplate'
@@ -8,6 +9,16 @@ import ClientsTemplate from '../../components/Clients/ClientsTemplate'
 import ReviewsTemplate from "../../components/Reviews/ReviewsTemplate"
 import CalculateHeaderTemplate from "../../components/CalculateHeader/CalculateHeaderTemplate"
 import MainPopupTemplate from "../../components/Popups/MainPopup/MainPopupTemplate";
+import PopupThanksTemplate from "../../components/Popups/PopupThanks/PopupThanksTemplate";
+
+const Style = styled.div`
+    .overlay{
+        position: relative;
+        .popup{
+            position: relative;
+        }
+    }
+`;
 
 export const ComponentsCommonTemplate = ({
                                       calculateHeader,
@@ -16,8 +27,9 @@ export const ComponentsCommonTemplate = ({
                                       storage,
                                       destinations,
                                       clients,
+                                      popupThanks,
                                       reviews}) => (
-    <Fragment>
+    <Style>
         <MainPopupTemplate data={mainPopup}/>
         <CalculateHeaderTemplate data={calculateHeader}/>
         <CalculatorTemplate data={calculator}/>
@@ -25,7 +37,8 @@ export const ComponentsCommonTemplate = ({
         <DestinationsTemplate destinations={destinations}/>
         <ClientsTemplate clients={clients}/>
         <ReviewsTemplate reviews={reviews}/>
-    </Fragment>
+        <PopupThanksTemplate data={popupThanks}/>
+    </Style>
 )
 
 const Index = ({ data, location, pageContext }) => {
@@ -41,6 +54,7 @@ const Index = ({ data, location, pageContext }) => {
                 clients={frontmatter.clients}
                 reviews={frontmatter.reviews}
                 mainPopup={frontmatter.mainPopup}
+                popupThanks={frontmatter.popupThanks}
             />
         </Layout>
     )
@@ -76,7 +90,7 @@ export const pageQuery = graphql`
               price
               image{
                 childImageSharp {
-                  fluid(maxWidth: 65, quality: 100) {
+                  fluid(maxWidth: 65) {
                     ...GatsbyImageSharpFluid
                   }
                 }
@@ -99,7 +113,7 @@ export const pageQuery = graphql`
         destinations {
             image{
                 childImageSharp {
-                    fluid(maxWidth: 1000, quality: 100) {
+                    fluid(maxWidth: 1000) {
                         ...GatsbyImageSharpFluid
                     }
                 }
@@ -115,7 +129,7 @@ export const pageQuery = graphql`
         clients{
           image{
               childImageSharp {
-                fluid(maxWidth: 200, quality: 100) {
+                fluid(maxWidth: 200) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -134,6 +148,22 @@ export const pageQuery = graphql`
           description
           subTitle
           btn
+        }
+        popupThanks{
+            title
+            subTitle
+            description
+            bonus
+            bonusTitle
+            btn
+            btnLink
+            image{
+                childImageSharp {
+                    fluid(maxWidth: 600) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }    
         }
       }
     }

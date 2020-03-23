@@ -15,6 +15,7 @@ const ComponentsCommonPreview = ({ entry }) => {
                 destinations={data.destinations}
                 reviews={data.reviews}
                 clients={data.clients}
+                popupThanks={data.popupThanks}
             />
         )
     } else {

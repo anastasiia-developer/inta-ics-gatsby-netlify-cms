@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React, {Fragment, useState} from "react";
 import styled from "styled-components";
 import {navigate} from "gatsby-link";
 import { encode} from "../../pages/contact/form";
 import Phone from "../FormComponents/Phone";
 import PopupThanks from "../Popups/PopupThanks";
+import PopupThanksRu from "../Popups/PopupThanks/index.ru";
 
 const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
@@ -110,7 +111,7 @@ const FormCommon = styled.div`
 
 const FormFooter = ({locale}) => {
     const [inputsValue, setInputsValue] = useState({});
-    const [isOpenPopup, setOpenPopup] = useState(false);
+    const [isOpenPopup, setPopupOpen] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -123,7 +124,7 @@ const FormFooter = ({locale}) => {
                 ...inputsValue,
             }),
         })
-            .then(() => setOpenPopup(true))
+            .then(() => setPopupOpen(true))
             .catch(error => alert(error))
     };
     const handleChange = (e) => {
@@ -132,10 +133,13 @@ const FormFooter = ({locale}) => {
     return (
         <FormCommon>
             {isOpenPopup &&
-                <PopupThanks
-                    close={setOpenPopup}
-                    locale={locale}
-                />
+            <Fragment> {
+                locale === 'ua' ?
+                    <PopupThanks close={setPopupOpen}/>
+                    :
+                    <PopupThanksRu close={setPopupOpen}/>
+            }
+            </Fragment>
             }
             <h2>Остались вопросы?</h2>
             <h4>Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>

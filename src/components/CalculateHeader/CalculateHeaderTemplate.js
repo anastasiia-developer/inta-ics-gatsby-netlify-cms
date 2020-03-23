@@ -5,9 +5,9 @@ import Arrow from "../../img/arrow.svg"
 import Tel from "../../img/tel.svg"
 import Email from "../../img/email.svg"
 import {encode} from "../../pages/contact/form"
-import {navigate} from "gatsby-link"
 import Phone from '../FormComponents/Phone'
 import PopupThanks from "../Popups/PopupThanks";
+import PopupThanksRu from "../Popups/PopupThanks/index.ru";
 
 const Wrapper = styled.section`
   background: #fff;
@@ -277,7 +277,13 @@ const CalculateHeaderTemplate = ({data}) => {
     return (
         <Fragment>
             {popupOpen &&
-                <PopupThanks locale={data.locale} close={setPopupOpen}/>
+                <Fragment>
+                    {data.locale === 'ua' ?
+                        <PopupThanks close={setPopupOpen}/>
+                        :
+                        <PopupThanksRu close={setPopupOpen}/>
+                    }
+                </Fragment>
             }
         <Wrapper className='wrapper'>
             <h3>{data.title}</h3>

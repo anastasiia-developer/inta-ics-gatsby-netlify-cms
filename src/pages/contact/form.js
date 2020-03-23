@@ -2,6 +2,7 @@ import React, {Fragment, useState} from 'react'
 import styled from 'styled-components'
 import Phone from "../../components/FormComponents/Phone";
 import PopupThanks from "../../components/Popups/PopupThanks";
+import PopupThanksRu from "../../components/Popups/PopupThanks/index.ru";
 
 export function encode(data) {
   return Object.keys(data)
@@ -70,7 +71,13 @@ const Form = ({locale}) => {
   return (
       <Fragment>
         {popupOpen &&
-          <PopupThanks locale={locale} close={setPopupOpen}/>
+            <Fragment>
+              {locale === 'ua' ?
+                  <PopupThanks close={setPopupOpen}/>
+                  :
+                  <PopupThanksRu close={setPopupOpen}/>
+              }
+            </Fragment>
         }
         <From
           name="contact"
