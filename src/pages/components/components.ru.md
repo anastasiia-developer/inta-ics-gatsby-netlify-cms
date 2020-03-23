@@ -125,19 +125,19 @@ reviews:
       cupiditate deleniti dolor error, facilis laborum possimus provident quasi
       quo repellendus sequi, tempora, unde?
 calculateHeader:
-    title: Рассчитать стоимость доставки
-    description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
-    btn: Рассчет стоимости
-    from: Откуда груз?
-    to: Призначение груза?
-    toCountry: Украина
-    weight: Вес груза
-    phone: Телефон
-    email: Email
-    comment: Комментарий
+  title: Рассчитать стоимость доставки
+  description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
+  btn: Рассчет стоимости
+  from: Откуда груз?
+  to: Призначение груза?
+  toCountry: Украина
+  weight: Вес груза
+  phone: Телефон
+  email: Email
+  comment: Комментарий
 mainPopup: 
-    title: Организуем прозрачную и понятную доставку.
-    description: Закажите консультацию прямо сейчас!
-    subTitle: Или оставьте номер и мы вам перезвоним
-    btn: Отправить    
+  title: Организуем прозрачную и понятную доставку.
+  description: Закажите консультацию прямо сейчас!
+  subTitle: Или оставьте номер и мы вам перезвоним
+  btn: Отправить    
 ---

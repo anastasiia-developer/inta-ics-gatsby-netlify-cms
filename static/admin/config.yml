@@ -397,6 +397,7 @@ collections:
           {label: "btn", name: btn, widget: string},
           {label: "from", name: from, widget: string},
           {label: "to", name: to, widget: string},
+          {label: "toCountry", name: to, widget: string},
           {label: "weight", name: weight, widget: string},
           {label: "phone", name: phone, widget: string},
           {label: "email", name: email, widget: string},
