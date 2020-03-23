@@ -161,7 +161,7 @@ collections:
       ]}
       ]}
   - name: "international-destinations"
-    label: "Международные грузоперевозки"
+    label: "Страны"
     folder: "src/pages/countries"
     create: true
     slug: "{{name}}"
@@ -209,7 +209,7 @@ collections:
       ]}
       ]}
   - name: "international-destinations-ru"
-    label: "RU Международные грузоперевозки"
+    label: "RUСтраны"
     folder: "src/pages/countries/ru"
     create: true
     slug: "{{name}}"
@@ -257,7 +257,7 @@ collections:
       ]}
       ]}
   - name: "international-cargo"
-    label: "Возможности доставки грузов"
+    label: "Тип доставки"
     folder: "src/pages/cargo"
     create: true
     slug: "{{name}}"
@@ -305,7 +305,7 @@ collections:
       ]}
       ]}
   - name: "international-cargo-ru"
-    label: "RU Возможности доставки грузов"
+    label: "RU Тип доставки"
     folder: "src/pages/cargo/ru"
     create: true
     slug: "{{name}}"
