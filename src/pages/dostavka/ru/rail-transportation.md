@@ -28,11 +28,11 @@ header:
       image: /img/жд-доставка.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: От 28 дней
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Доступная цена
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Таможенное оформление
 seoSections:
   title: Организация авиадоставки из США. Логистические услуги от специалистов
   sections:
