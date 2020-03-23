@@ -13,6 +13,13 @@ header:
   images:
     - alt: inta-ics-доставка-морем-з-сша
       image: /img/морская-доставка-из-сша.png
+  scopeInformation:
+    - text: l
+      image: /img/time.png
+    - text: L
+      image: /img/card.png
+    - text: L
+      image: /img/lov.png
 seoSections:
   title: l
 ---
