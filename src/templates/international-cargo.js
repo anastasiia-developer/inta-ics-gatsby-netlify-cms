@@ -80,8 +80,8 @@ const InternationalCargo = ({ data, location, pageContext }) => {
             <InternationalCargoTemplate
                 helmet={
                     <TitleDesHelmet
-                        title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
-                        description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
+                        title={frontmatter.metaData && frontmatter.metaData.title && frontmatter.title}
+                        description={frontmatter.metaData && frontmatter.metaData.description && frontmatter.description}
                     />
                 }
                 locale={pageContext.locale}

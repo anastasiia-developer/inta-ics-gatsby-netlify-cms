@@ -7,7 +7,8 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
 import Svg from '../img/arrowTop.svg'
-import MainPopup from "./mainPopup";
+import MainPopup from "./Popups/MainPopup";
+import MainPopupRu from "./Popups/MainPopup/index.ru";
 
 const ArrowTop = styled.div`
     position: fixed;
@@ -52,9 +53,12 @@ const TemplateWrapper = ({ children, local, location }) => {
         {location &&
             <Navbar local={local} location={location}/>
         }
-      <MainPopup
-          locale={local}
-      />
+        {local === 'ua' ?
+            <MainPopup />
+            :
+            <MainPopupRu />
+        }
+
       <ArrowTop
           onClick={()=>{
               window.scrollTo({

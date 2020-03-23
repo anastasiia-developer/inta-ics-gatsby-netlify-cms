@@ -7,7 +7,7 @@ import Email from "../../img/email.svg"
 import {encode} from "../../pages/contact/form"
 import {navigate} from "gatsby-link"
 import Phone from '../FormComponents/Phone'
-import PopupThanks from "../FormComponents/PopupThanks";
+import PopupThanks from "../Popups/PopupThanks";
 
 const Wrapper = styled.section`
   background: #fff;

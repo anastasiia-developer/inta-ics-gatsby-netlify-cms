@@ -7,15 +7,18 @@ import DestinationsTemplate from '../../components/Destinations/DestinationsTemp
 import ClientsTemplate from '../../components/Clients/ClientsTemplate'
 import ReviewsTemplate from "../../components/Reviews/ReviewsTemplate"
 import CalculateHeaderTemplate from "../../components/CalculateHeader/CalculateHeaderTemplate"
+import MainPopupTemplate from "../../components/Popups/MainPopup/MainPopupTemplate";
 
 export const ComponentsCommonTemplate = ({
                                       calculateHeader,
+                                      mainPopup,
                                       calculator,
                                       storage,
                                       destinations,
                                       clients,
                                       reviews}) => (
     <Fragment>
+        <MainPopupTemplate data={mainPopup}/>
         <CalculateHeaderTemplate data={calculateHeader}/>
         <CalculatorTemplate data={calculator}/>
         <StorageTemplate storage={storage}/>
@@ -37,6 +40,7 @@ const Index = ({ data, location, pageContext }) => {
                 destinations={frontmatter.destinations}
                 clients={frontmatter.clients}
                 reviews={frontmatter.reviews}
+                mainPopup={frontmatter.mainPopup}
             />
         </Layout>
     )
@@ -124,6 +128,12 @@ export const pageQuery = graphql`
             name
             url    
           }                            
+        }
+        mainPopup{
+          title
+          description
+          subTitle
+          btn
         }
       }
     }

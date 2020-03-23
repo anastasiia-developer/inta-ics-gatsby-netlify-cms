@@ -103,8 +103,8 @@ const ServicesPage = ({ data, location, pageContext }) => {
             <ServicesPageTemplate
                 helmet={
                     <TitleDesHelmet
-                        title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
-                        description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
+                        title={frontmatter.metaData && frontmatter.metaData.title && frontmatter.title}
+                        description={frontmatter.metaData && frontmatter.metaData.description && frontmatter.description}
                     />
                 }
                 title={frontmatter.title}

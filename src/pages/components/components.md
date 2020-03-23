@@ -121,4 +121,9 @@ calculateHeader:
     phone: Телефон
     email: Email
     comment: Комментари
+mainPopup: 
+    title: Организуем прозрачную и понятную доставку.
+    description: Закажите консультацию прямо сейчас!
+    subTitle: Или оставьте номер и мы вам перезвоним
+    btn: Отправить
 ---

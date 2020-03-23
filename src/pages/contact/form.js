@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react'
 import styled from 'styled-components'
 import Phone from "../../components/FormComponents/Phone";
-import PopupThanks from "../../components/FormComponents/PopupThanks";
+import PopupThanks from "../../components/Popups/PopupThanks";
 
 export function encode(data) {
   return Object.keys(data)

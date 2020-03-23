@@ -1,8 +1,8 @@
 import React, {Fragment, useEffect, useState} from "react";
 import styled from "styled-components";
-import PopupThanks, {Close} from "../FormComponents/PopupThanks";
-import Phone from "../FormComponents/Phone";
-import {encode} from "../../pages/contact/form";
+import PopupThanks, {Close} from "../PopupThanks";
+import Phone from "../../FormComponents/Phone";
+import {encode} from "../../../pages/contact/form";
 
 const Popup = styled.div`
     position: fixed;
@@ -104,12 +104,10 @@ const Popup = styled.div`
     }
 `;
 
-const MainPopup = ({locale}) => {
+const MainPopupTemplate = ({data}) => {
     const [phone, setPhone] = useState();
     const [popupOpen, setPopupOpen] = useState(false);
     const [headerPopupOpen, setHeaderPopupOpen] = useState(false);
-
-
     const handleSubmit = e => {
         e.preventDefault();
         setHeaderPopupOpen(false);
@@ -137,15 +135,15 @@ const MainPopup = ({locale}) => {
     return(
         <Fragment>
             {popupOpen &&
-                <PopupThanks locale={locale} close={setPopupOpen}/>
+                <PopupThanks locale={data.locale} close={setPopupOpen}/>
             }
             <Popup isDisplay={headerPopupOpen}>
                 <header className="row">
                     <img className='logo' src="/img/logo.png" alt=""/>
                     <Close onClick={ () => setHeaderPopupOpen(false) }/>
                 </header>
-                <h2>Организуем прозрачную и понятную доставку.</h2>
-                <h3>Закажите консультацию прямо сейчас!</h3>
+                <h2>{data.title}</h2>
+                <h3>{data.description}</h3>
                 <div className="white column">
                     <a className="row social-btn telegram" href='https://web.telegram.org'>
                         <img src="/img/telegramPng.png" alt="telegram"/>Telegram
@@ -155,7 +153,7 @@ const MainPopup = ({locale}) => {
                     </a>
                 </div>
                 <h4>
-                    Или оставьте номер и мы вам перезвоним
+                    {data.subTitle}
                 </h4>
                 <form
                     name="header popup"
@@ -172,11 +170,11 @@ const MainPopup = ({locale}) => {
                     />
                     <button
                         className='submit'
-                        type="submit">Отправить</button>
+                        type="submit">{data.btn}</button>
                 </form>
             </Popup>
         </Fragment>
     )
 }
 
-export default MainPopup
+export default MainPopupTemplate

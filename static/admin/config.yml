@@ -390,6 +390,23 @@ collections:
           ]},
           {label: image, name: image, widget: image}
       ]}
+      - {label: "калькулятор в шапке", name: calculateHeader, widget: object, fields: [
+          {label: "Заголовок", name: title, widget: string},
+          {label: "description", name: description, widget: string},
+          {label: "btn", name: btn, widget: string},
+          {label: "from", name: from, widget: string},
+          {label: "to", name: to, widget: string},
+          {label: "weight", name: weight, widget: string},
+          {label: "phone", name: phone, widget: string},
+          {label: "email", name: email, widget: string},
+          {label: "comment", name: comment, widget: string},
+      ]}
+      - {label: "постоянный popup", name: mainPopup, widget: object, fields: [
+          {label: "Заголовок", name: title, widget: string},
+          {label: "h2", name: description, widget: string},
+          {label: "h3", name: subTitle, widget: string},
+          {label: "btn", name: btn, widget: string},
+      ]}
   - name: "pages"
     label: "Страницы"
     files:

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {navigate} from "gatsby-link";
 import { encode} from "../../pages/contact/form";
 import Phone from "../FormComponents/Phone";
-import PopupThanks from "../FormComponents/PopupThanks";
+import PopupThanks from "../Popups/PopupThanks";
 
 const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);

@@ -8,6 +8,8 @@ const ComponentsCommonPreview = ({ entry }) => {
     if (data) {
         return (
             <ComponentsCommonTemplate
+                mainPopup={data.mainPopup}
+                calculateHeader={data.calculateHeader}
                 calculator={data.calculator}
                 storage={data.storage}
                 destinations={data.destinations}
