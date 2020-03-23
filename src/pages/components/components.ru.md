@@ -1,5 +1,7 @@
 ---
 pageKey: components-common
+locale: ru
+name: components
 title: RU testОбщие компонентны для всех сртраниц
 storage:
   - country: США (Washington)
@@ -101,8 +103,6 @@ destinations:
     - country: Израиль
       flag: /img/002-united-states (7).png
   image: /img/map.png
-name: components
-locale: ru
 reviews:
   - name: Иван Заец
     source:
@@ -124,7 +124,6 @@ reviews:
       praesentium quia repudiandae totam velit veniam veritatis voluptates. Amet
       cupiditate deleniti dolor error, facilis laborum possimus provident quasi
       quo repellendus sequi, tempora, unde?
-description: RU Общие компонентны для всех сртраниц
 calculateHeader:
     title: Рассчитать стоимость доставки
     description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!

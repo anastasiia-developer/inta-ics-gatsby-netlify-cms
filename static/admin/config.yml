@@ -357,6 +357,7 @@ collections:
     folder: "src/pages/components"
     fields:
       - {label: "Template Key", name: "pageKey", widget: "hidden", default: "components-common"}
+      - {label: "locale", name: "locale", widget: "hidden"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: Storage, name: storage, widget: list, fields: [
           {label: country, name: country, widget: string},
