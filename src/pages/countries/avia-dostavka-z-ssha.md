@@ -17,6 +17,13 @@ header:
   images:
     - alt: inta-ics-авіа-доставка-з-сша
       image: /img/авиадоставка-из-сша.png
+  scopeInformation:
+    - text: Термін від 5 днів
+      image: /img/time.png
+    - text: Власні склади
+      image: /img/card.png
+    - text: Швидка консультація
+      image: /img/lov.png
 seoSections:
   title: l
 ---
