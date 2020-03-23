@@ -103,7 +103,7 @@ seoSections:
       image: /img/сео-текст-3-1-.jpg
 name: rail-transportation
 sections:
-  - image: /img/deliv.jpg
+  - image: /img/перевозка-сборных-грузов.jpg
     list:
       - image: /img/ (1).png
         title: Від 1м³
