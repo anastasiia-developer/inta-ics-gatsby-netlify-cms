@@ -24,8 +24,8 @@ header:
     - link: /
       text: Авиадоставка из США
   images:
-    - alt: app mobile
-      image: /img/Group.png
+    - alt: ' inta-ics-железнодорожные-грузоперевозки'
+      image: /img/жд-доставка.png
   scopeInformation:
     - image: /img/time.png
       text: Сроки доставки
