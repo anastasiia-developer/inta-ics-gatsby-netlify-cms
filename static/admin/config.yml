@@ -409,6 +409,16 @@ collections:
           {label: "h3", name: subTitle, widget: string},
           {label: "btn", name: btn, widget: string},
       ]}
+      - {label: "popup Thanks", name: popupThanks, widget: object, fields: [
+          {label: "Заголовок", name: title, widget: string},
+          {label: "subTitle", name: subTitle, widget: string},
+          {label: "description", name: description, widget: string},
+          {label: "bonus", name: bonus, widget: string},
+          {label: "bonusTitle", name: bonusTitle, widget: string},
+          {label: "btn", name: btn, widget: string},
+          {label: "btnLink", name: btnLink, widget: string},
+          {label: image, name: image, widget: image}
+      ]}
   - name: "pages"
     label: "Страницы"
     files:
