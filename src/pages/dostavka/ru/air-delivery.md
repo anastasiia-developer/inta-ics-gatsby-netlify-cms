@@ -119,6 +119,22 @@ sections:
         image: /img/ (1).png
       - title: Быстрая консультация
         image: /img/ (1).png
+  - title: Авиадоставка из США
+    image: /img/копія-_сео-текст-1.jpg
+    text: >-
+      <p>Компания INTA-ICS предлагает услуги авиаперевозки товаров из США в
+      Украину. Возможна транспортировка как одного заказа, так и оптовой партии.
+      Текущее местоположение груза можно отслеживать через приложение.</p>
+    list:
+      - title: Срок от 5 дней
+        image: /img/ (1).png
+      - title: Собственные склады
+        image: /img/ (1).png
+      - title: Быстрая консультация
+        image: /img/ (1).png
+    button:
+      text: Узнать больше
+      link: ru/avia-dostavka-iz-ssha/
 sectionText:
   image: /img/planeBckgSectionText.png
   text: >-
