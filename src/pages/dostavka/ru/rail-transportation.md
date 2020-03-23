@@ -17,12 +17,12 @@ description: >-
   клиентов услуги ЖД доставки.
 header:
   buttons:
-    - link: /contacts
-      text: Авиадоставка из США
-    - link: /contacts
-      text: Авиадоставка из США
-    - link: /
-      text: Авиадоставка из США
+    - link: 'ru/perevozki-sbornyih-gruzov/ '
+      text: 'Доставка сборных грузов '
+    - link: ru/dostavka-tovarov-iz-kitaya/
+      text: Доставка товара из Китая
+    - link: ru/perevozki-negabaritnyih-gruzov/
+      text: 'Доставка негабаритных грузов '
   images:
     - alt: ' inta-ics-железнодорожные-грузоперевозки'
       image: /img/жд-доставка.png
