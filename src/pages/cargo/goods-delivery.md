@@ -16,6 +16,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-товарів-з-китаю'
       image: /img/доставка-и-выкуп-товара-из-китая.png
+  scopeInformation:
+    - text: Викуп і доставка
+      image: /img/time.png
+    - text: Склади в Китаї
+      image: /img/card.png
+    - text: Вигідні тарифи
+      image: /img/lov.png
 sections:
   - title: 'Fat new smallness few supposing '
     image: /img/deliv.jpg
