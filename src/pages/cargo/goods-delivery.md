@@ -14,8 +14,8 @@ description: >-
   оптимальні терміни транспортування.
 header:
   images:
-    - alt: djjdjd
-      image: /img/buyback-and-delivery-from-china-header-img.png
+    - alt: ' inta-ics-доставка-товарів-з-китаю'
+      image: /img/доставка-и-выкуп-товара-из-китая.png
 sections:
   - title: 'Fat new smallness few supposing '
     image: /img/deliv.jpg
