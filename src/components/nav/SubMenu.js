@@ -104,7 +104,6 @@ const SubNav = styled.nav`
 
 const SubMenu = ({list, setActiveMob, isActiveMob, startPath}) => {
     const [isActiveSub, setActiveSub] = useState(false);
-    console.log(list[0].frontmatter)
     return(
         <SubNav
             isActiveSub={isActiveSub}>
