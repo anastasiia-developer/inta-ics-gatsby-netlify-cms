@@ -19,7 +19,7 @@ export const ComponentsCommonTemplate = ({
                                       reviews}) => (
     <Fragment>
         <MainPopupTemplate data={mainPopup}/>
-        <CalculateHeaderTemplate data={calculateHeader}/>
+        <CalculateHeaderTemplate data={calculateHeader} admin/>
         <CalculatorTemplate data={calculator}/>
         <StorageTemplate storage={storage}/>
         <DestinationsTemplate destinations={destinations}/>

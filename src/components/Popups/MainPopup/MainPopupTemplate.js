@@ -108,9 +108,11 @@ const MainPopupTemplate = ({data}) => {
     const [phone, setPhone] = useState();
     const [popupOpen, setPopupOpen] = useState(false);
     const [headerPopupOpen, setHeaderPopupOpen] = useState(false);
+
     const handleSubmit = e => {
         e.preventDefault();
         setHeaderPopupOpen(false);
+
         const form = e.target
         fetch('/', {
             method: 'POST',
