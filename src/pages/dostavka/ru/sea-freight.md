@@ -89,6 +89,22 @@ sections:
     button:
       text: Узнать больше
       link: ru/dostavka-morem-iz-ssha/
+  - title: Морские контейнерные перевозки
+    image: /img/контейнерные-перевозки.jpg
+    text: >-
+      Услуги по международной доставке товаров морем. Индивидуально подобранные
+      маршруты и прозрачные тарифы в INTA-ICS помогут вам получить продукцию,
+      сэкономив на грузоперевозках.
+    list:
+      - title: '  От 35 дней'
+        image: /img/ (1).png
+      - title: Удобная система оплаты
+        image: /img/ (1).png
+      - title: 'Прямой сервис из Китая '
+        image: /img/ (1).png
+    button:
+      text: Узнать больше
+      link: /ru/konteynernyie-perevozki/
 sectionText:
   image: /img/.png
   text: >-
