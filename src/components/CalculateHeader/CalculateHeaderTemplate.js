@@ -238,7 +238,7 @@ const CalculateBlock = ({
         </div>
 )}
 
-const CalculateHeaderTemplate = ({data}) => {
+const CalculateHeaderTemplate = ({data, admin}) => {
     const [optionsFrom, setOptionsFrom] = useState({open: false, value: 'Китай', flag: '001-china 3'});
     const [optionsTo, setOptionsTo] = useState({open: false});
     const [optionsWeight, setOptionsWeight] = useState({open: false, value: ''});
@@ -297,7 +297,8 @@ const CalculateHeaderTemplate = ({data}) => {
                 className="row-to-column">
                 <CalculateBlock
                     title={data.from}
-                    options={<Flags
+                    options={
+                        <Flags
                         stateOptions={optionsFrom}
                         setOptions={setOptionsFrom}
                     />}

@@ -114,6 +114,7 @@ const MainPopupTemplate = ({data, className}) => {
     const handleSubmit = e => {
         e.preventDefault();
         setHeaderPopupOpen(false);
+
         const form = e.target
         fetch('/', {
             method: 'POST',

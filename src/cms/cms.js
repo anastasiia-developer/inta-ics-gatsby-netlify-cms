@@ -35,14 +35,6 @@ CMS.registerPreviewTemplate(
     withStyledComponentsRendered(DeliveryPagePreview)
 );
 CMS.registerPreviewTemplate(
-    'components-common',
-    withStyledComponentsRendered(ComponentsCommonPreview)
-);
-CMS.registerPreviewTemplate(
-    'components-common-ru',
-    withStyledComponentsRendered(ComponentsCommonPreview)
-);
-CMS.registerPreviewTemplate(
     'about',
     withStyledComponentsRendered(AboutPagePreview)
 )

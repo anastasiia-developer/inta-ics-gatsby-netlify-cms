@@ -32,7 +32,6 @@ const Section = styled.article`
     h2{
         color: #005BE4;
         font-weight: 500;
-        margin-bottom: 1em;
         font-size: 1.55em;
         text-align: center;
     }
@@ -47,11 +46,6 @@ const Section = styled.article`
             width: 100%;
         }
     }
-    // p, ul{
-    //     color: #3D3D3D;
-    //     font-size: 1em;
-    //     line-height: 1.8em;
-    // }
     ul{
       padding-left: 1.5em;
       list-style: initial;
