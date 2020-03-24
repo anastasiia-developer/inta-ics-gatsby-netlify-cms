@@ -59,7 +59,8 @@ storage:
       image: /img/Rectangle 121.png  
       images: 
         - image: /img/Rectangle 121.png  
-    - country: США (Washington)
+    - country: США
+      city: (Washington)
       flag: /img/002-united-states (3).png
       postIndex: '999077'
       address: 

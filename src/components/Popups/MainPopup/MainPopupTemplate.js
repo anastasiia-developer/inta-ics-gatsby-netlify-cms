@@ -110,6 +110,7 @@ const MainPopupTemplate = ({data, className}) => {
     const [phone, setPhone] = useState();
     const [popupOpen, setPopupOpen] = useState(false);
     const [headerPopupOpen, setHeaderPopupOpen] = useState(false);
+    const mainPopup = data.mainPopup;
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -152,8 +153,8 @@ const MainPopupTemplate = ({data, className}) => {
                     <img className='logo' src="/img/logo.png" alt=""/>
                     <Close onClick={ () => setHeaderPopupOpen(false) }/>
                 </header>
-                <h2>{data.title}</h2>
-                <h3>{data.description}</h3>
+                <h2>{mainPopup.title}</h2>
+                <h3>{mainPopup.description}</h3>
                 <div className="white column">
                     <a className="row social-btn telegram" href='https://web.telegram.org'>
                         <img src="/img/telegramPng.png" alt="telegram"/>Telegram
@@ -163,7 +164,7 @@ const MainPopupTemplate = ({data, className}) => {
                     </a>
                 </div>
                 <h4>
-                    {data.subTitle}
+                    {mainPopup.subTitle}
                 </h4>
                 <form
                     name="header popup"
@@ -180,7 +181,7 @@ const MainPopupTemplate = ({data, className}) => {
                     />
                     <button
                         className='submit'
-                        type="submit">{data.btn}</button>
+                        type="submit">{mainPopup.btn}</button>
                 </form>
             </Popup>
         </Fragment>

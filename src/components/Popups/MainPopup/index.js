@@ -7,7 +7,7 @@ export default () => (
         query={graphql`
             query MainPopup{
                 markdownRemark(frontmatter: { pageKey: { eq: "components-common" },  locale:{eq: "ua"} }) {
-                    frontmatter {
+                    frontmatter{
                         locale
                         mainPopup{
                           title
@@ -19,6 +19,6 @@ export default () => (
                 }
             }
     `}
-        render={(data) => <MainPopupTemplate data={data.markdownRemark.frontmatter.mainPopup} />}
+        render={(data) => <MainPopupTemplate data={data.markdownRemark.frontmatter} />}
     />
 )

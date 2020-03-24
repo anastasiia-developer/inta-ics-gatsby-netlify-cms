@@ -19,6 +19,6 @@ export default () => (
                 }
             }
     `}
-        render={(data) => <MainPopupTemplate data={data.markdownRemark.frontmatter.mainPopup} />}
+        render={(data) => <MainPopupTemplate data={data.markdownRemark.frontmatter} />}
     />
 )

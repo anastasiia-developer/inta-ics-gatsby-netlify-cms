@@ -6,8 +6,8 @@ import FooterTemplate from "./FooterTemplate";
 export default () => (
     <StaticQuery
         query={graphql`
-            query footerUa{
-                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: "ua" } }) {
+            query footerRu{
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: "ru" } }) {
                     frontmatter {
                         locale
                         footer{

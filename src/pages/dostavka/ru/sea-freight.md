@@ -3,6 +3,7 @@ templateKey: delivery
 locale: ru
 title: Морская перевозка грузов из Китая
 crumbLabel: Морская перевозка
+crumbLabelParent: Доставка
 name: sea-freight
 description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:

@@ -418,6 +418,16 @@ collections:
           {label: "btnLink", name: btnLink, widget: string},
           {label: image, name: image, widget: image}
       ]}
+      - {label: "footer", name: footer, widget: object, fields: [
+          {label: "description", name: description, widget: string},
+          {label: "storeName", name: storeName, widget: string},
+          {label: "навигация колекция", name: navCollection, widget: list, fields: [
+            {label: "навигация", name: nav, widget: list, fields: [
+              {label: "name", name: name, widget: string},
+              {label: "url", name: link, widget: string}
+            ]}
+          ]}
+        ]}
   - name: "pages"
     label: "Страницы"
     files:
@@ -584,10 +594,10 @@ collections:
           - {label: name, name: name, widget: string}
           - {label: Header, name: header, widget: object, fields: [
               {label: Image, name: image, widget: image},
-              {label: Alt, name: alt, widget: string}
+              {label: Alt, name: alt, widget: string},
               {label: tel, name: tel, widget: string},
               {label: name, name: name, widget: string},
-          ]},
+          ]}
   - name: "pages-ru"
     label: "Страницы RU"
     files:
@@ -722,7 +732,7 @@ collections:
           - {label: name, name: name, widget: string}
           - {label: Header, name: header, widget: object, fields: [
           {label: Image, name: image, widget: image},
-          {label: Alt, name: alt, widget: string}
+          {label: Alt, name: alt, widget: string},
           {label: tel, name: tel, widget: string},
           {label: name, name: name, widget: string},
-          ]},
+          ]}

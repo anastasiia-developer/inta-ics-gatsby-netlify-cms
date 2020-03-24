@@ -5,8 +5,8 @@ import StorageTemplate from "./StorageTemplate";
 export default ({morePhotoIcon}) => (
     <StaticQuery
         query={graphql`
-            query StorageQuery{
-                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale:{ eq: "ua" } }) {
+            query StorageQueryRu{
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale:{ eq: "ru" } }) {
                     frontmatter {
                         storageTitle
                         storage{

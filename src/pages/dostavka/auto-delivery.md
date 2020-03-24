@@ -3,6 +3,7 @@ templateKey: delivery
 locale: ua
 title: Автодоставка
 crumbLabel: Автодоставка
+crumbLabelParent: Доставка
 name: auto-delivery
 description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 header:

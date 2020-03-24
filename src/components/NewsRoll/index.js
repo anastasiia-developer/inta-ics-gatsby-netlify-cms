@@ -1,31 +1,25 @@
 import {graphql, StaticQuery} from "gatsby";
 import React from "react";
-import FooterTemplate from "./FooterTemplate";
+import NewsRollTemplate from "./NewsRollTemplate";
 
 
 export default () => (
     <StaticQuery
         query={graphql`
-            query footerUa{
+            query newsUa{
                 markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: "ua" } }) {
                     frontmatter {
                         locale
-                        footer{
-                            description
-                            storeName
-                            navCollection{
-                                nav{
-                                    name
-                                    link
-                                }
-                            }
+                        news{
+                            btn
+                            title
                         }
                     }   
                 }
             }
         `}
         render={(data) =>
-            <FooterTemplate
+            <NewsRollTemplate
                 data={data.markdownRemark.frontmatter}
             />
         }

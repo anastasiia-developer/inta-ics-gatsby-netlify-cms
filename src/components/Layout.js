@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
+import FooterRu from '../components/Footer/index.ru'
 import Navbar from './nav/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
@@ -71,7 +72,11 @@ const TemplateWrapper = ({ children, local, location }) => {
           <Svg/>
       </ArrowTop>
       <div>{children}</div>
-      <Footer />
+        {local === 'ua' ?
+            <Footer/>
+            :
+            <FooterRu/>
+        }
     </div>
   )
 }
