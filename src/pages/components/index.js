@@ -39,23 +39,23 @@ export const ComponentsCommonTemplate = ({
         <ReviewsTemplate reviews={reviews}/>
         <PopupThanksTemplate data={popupThanks}/>
     </Style>
-)
+);
 
 const Index = ({ data, location, pageContext }) => {
-    const { frontmatter } = data.markdownRemark;
+    // const { frontmatter } = data.markdownRemark;
 
     return (
         <Layout location={location} local={pageContext.locale}>
-            <ComponentsCommonTemplate
-                calculateHeader={frontmatter.calculateHeader}
-                calculator={frontmatter.calculator}
-                storage={frontmatter.storage}
-                destinations={frontmatter.destinations}
-                clients={frontmatter.clients}
-                reviews={frontmatter.reviews}
-                mainPopup={frontmatter.mainPopup}
-                popupThanks={frontmatter.popupThanks}
-            />
+            {/*<ComponentsCommonTemplate*/}
+            {/*    calculateHeader={frontmatter.calculateHeader}*/}
+            {/*    calculator={frontmatter.calculator}*/}
+            {/*    storage={frontmatter.storage}*/}
+            {/*    destinations={frontmatter.destinations}*/}
+            {/*    clients={frontmatter.clients}*/}
+            {/*    reviews={frontmatter.reviews}*/}
+            {/*    mainPopup={frontmatter.mainPopup}*/}
+            {/*    popupThanks={frontmatter.popupThanks}*/}
+            {/*/>*/}
         </Layout>
     )
 }
