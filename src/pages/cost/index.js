@@ -46,7 +46,6 @@ export const CostPageTemplate = ({
                         :
                             <CalculatorRu/>
                     }
-                    <Calculator/>
                     <BarBckgImgSectionText
                         image={barBckgImg}
                     />
