@@ -25,6 +25,13 @@ header:
       text: Доступная цена
     - image: /img/lov.png
       text: Груз от 1м3
+  buttons:
+    - text: Морская перевозка из Китая
+      link: ru/dostavka-morem-iz-kitaja/
+    - text: Морская доставка из США
+      link: ru/dostavka-morem-iz-ssha/
+    - text: Контейнерные перевозки
+      link: ru/konteynernyie-perevozki/
 seoSections:
   title: Организация авиадоставки из США. Логистические услуги от специалистов
   sections:
