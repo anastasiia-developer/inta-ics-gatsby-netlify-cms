@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 import styled from "styled-components";
 import Layout from '../../components/Layout'
 import TemplateHeader from "../../components/TemplateHeader";
-import News from "../../components/mainPage/news";
+import News from "../../components/NewsRoll";
+import NewsRu from "../../components/NewsRoll/index.ru";
 import FormFooter from "../../components/Footer/FormFooter";
 import Arrow from "../../img/arrow2.svg"
 import TitleDesHelmet from "../../components/TitleDesHelmet";
@@ -35,33 +36,34 @@ const Container = styled.div`
             }
         }
     }
-    h3{
-        font-weight: 500;
-        color: ${props => props.isOpen ? '#005BE4' : '#40444B'};
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 1em;
-        &:before{
-            content: "";  
-            min-width: .4em;
-            min-height: .4em;
-            border-radius: 50%;
-            position: absolute;
-            background: #005BE4; 
-            font-weight: bold; 
-            display: block;  
-            left: 1em; 
-        }
-        svg{
-            margin-left: 1em;
-                min-width: 1em;
-            path{
-                stroke: #000;
-            }
+    
+    
+`;
+const Title = styled.h3`
+    font-weight: 500;
+    color: ${props => props.isOpen ? '#005BE4' : '#40444B'};
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    &:before{
+        content: "";  
+        min-width: .4em;
+        min-height: .4em;
+        border-radius: 50%;
+        position: absolute;
+        background: #005BE4; 
+        font-weight: bold; 
+        display: block;  
+        left: 1em; 
+    }
+    svg{
+        margin-left: 1em;
+            min-width: 1em;
+        path{
+            stroke: #000;
         }
     }
-    
 `;
 const Wrapper = styled.div`
     max-width: 49%;
@@ -103,11 +105,10 @@ const Question = ({title, text}) =>{
         <Container
             onClick={() => setIsOpen(!isOpen)}
         >
-            <h3
-                isOpen={isOpen}>
+            <Title isOpen={isOpen}>
                 {title}
                 <Arrow/>
-            </h3>
+            </Title>
             <Text isOpen={isOpen}>{text}</Text>
         </Container>)
 }
@@ -148,6 +149,7 @@ export const FaqPageTemplate = ({
                 )}
             </Wrapper>
         </Section>
+
         <News/>
     </Fragment>
 ;

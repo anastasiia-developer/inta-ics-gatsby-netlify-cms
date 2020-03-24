@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Anastasiia-derymarko/inta-ics-gatsby-netlify-cms
   branch: dev
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'

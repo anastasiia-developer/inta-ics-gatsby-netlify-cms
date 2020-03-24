@@ -9,7 +9,8 @@ import Section from "../components/mainPage/section"
 import About from "../components/mainPage/about"
 import Calculator from "../components/Calculator"
 import CalculatorRu from "../components/Calculator/index.ru"
-import News from "../components/mainPage/news"
+import News from "../components/NewsRoll"
+import NewsRu from "../components/NewsRoll/index.ru"
 import Destinations from "../components/Destinations"
 import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
@@ -65,11 +66,16 @@ export const IndexPageTemplate = ({
       text={about.text}
     />
       {locale === 'ua' ?
-          <Calculator/>
-      :
-          <CalculatorRu/>
+          <Fragment>
+            <Calculator/>
+            <News />
+          </Fragment>
+          :
+          <Fragment>
+            <CalculatorRu/>
+            <NewsRu />
+          </Fragment>
       }
-    <News />
     <Destinations/>
     <Cargo/>
     <Clients/>

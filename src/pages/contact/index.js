@@ -2,7 +2,8 @@ import Layout from "../../components/Layout";
 import {graphql} from "gatsby";
 import React, {Fragment} from "react";
 import TemplateHeader from "../../components/TemplateHeader";
-import News from "../../components/mainPage/news";
+import News from "../../components/NewsRoll";
+import NewsRu from "../../components/NewsRoll/index.ru";
 import Form from "./form";
 import BarContacts from "../../components/nav/BarContacts";
 import styled from "styled-components";
@@ -56,15 +57,20 @@ export const ContactPageTemplate = ({
                 </Fragment>}
         />
         {locale === 'ua' ?
-            <Storage
-                morePhotoIcon={morePhotoIcon}
-            />
-        :
-            <StorageRu
-                morePhotoIcon={morePhotoIcon}
-            />
+            <Fragment>
+                <Storage
+                    morePhotoIcon={morePhotoIcon}
+                />
+                <News/>
+            </Fragment>
+            :
+            <Fragment>
+                <StorageRu
+                    morePhotoIcon={morePhotoIcon}
+                />
+                <NewsRu/>
+            </Fragment>
         }
-        <News/>
     </Wrapper>
 
 const ContactPage = ({ data, location, pageContext }) => {

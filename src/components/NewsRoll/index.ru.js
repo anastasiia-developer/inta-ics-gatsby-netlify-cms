@@ -5,8 +5,8 @@ import NewsRollTemplate from "./NewsRollTemplate";
 export default () => (
     <StaticQuery
         query={graphql`
-            query newsUa{
-                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: "ua" } }) {
+            query newsRu{
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: "ru" } }) {
                     frontmatter {
                         locale
                         news{
