@@ -73,6 +73,22 @@ sections:
         image: /img/ (1).png
       - title: Прямой сервис из Китая
         image: /img/ (1).png
+  - title: 'Доставка морем из США '
+    image: /img/морская-дост-из-сша.jpg
+    text: >-
+      Компания INTA-ICS осуществляет грузоперевозки из США. Америка — один из
+      центров мировой торговли, поэтому сотрудничество с местными
+      производителями может положительно повлиять на ваш бизнес.
+    list:
+      - title: От 35 дней
+        image: /img/ (1).png
+      - title: Доставка от 50кг
+        image: /img/ (1).png
+      - title: Удобная система оплаты
+        image: /img/ (1).png
+    button:
+      text: Узнать больше
+      link: ru/dostavka-morem-iz-ssha/
 sectionText:
   image: /img/.png
   text: >-
