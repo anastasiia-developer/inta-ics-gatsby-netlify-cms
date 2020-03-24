@@ -29,25 +29,37 @@ header:
     - text: Выгодные тарифы
       image: /img/lov.png
 sections:
-  - title: 'Fat new smallness few supposing '
-    image: /img/deliv.jpg
+  - title: Выкуп и доставка товаров из Китая
+    image: /img/inta-ics-доставка-и-выкуп-товара-1.jpg
     text: >-
-      contrasted entreaties be. Effect if in up no depend seemed. Hard do me
-      sigh with west same lady. Their saved linen downs tears son add music.
-      Strictly numerous outlived kindness whatever on we no on addition. Now
-      summer who day looked our behind momen
+      Если вас интересует оптовая или розничная закупка товаров, обращайтесь в
+      компанию INTA-ICS. Мы предлагаем услуги по выкупу и транспортировке
+      китайской продукции в Украину. Благодаря нашим партнерам и собственному
+      складку в городе Фошань, мы поможем вам получить товары из Китая с
+      доставкой.
 
 
-      Fat new smallness few supposing suspicion two. Fortune day out married
-      parties. If as increasing contrasted entreaties be. Effect if in up no
-      depend seemed. Hard do me sigh with west same lady. Their saved linen
-      downs tears son add music. Strictly numerous outlived kindness whatever on
-      we no on addition. Now summer who day looked our behind moment
+      Китайские интернет-магазины популярны среди украинцев, так как открывают
+      возможность легко приобрести недорогую продукцию достойного качества.
+      Стоимость доставки товара из Китая во многом зависит от объема товара и
+      авансового платежа — 10% от стоимости заказа.
 
 
-      * sfdsfdfds
+      Доставка с Алибаба в Украину выполняется на следующих условиях:
 
-      * sfdsfdfds
+
+      * выкуп в течение 2-3 рабочих дней;
+
+      * любое количество ссылок на товары;
+
+      * отсутствие перерасчета за дополнительные ссылки по выкупу;
+
+      * прозрачные и гибкие тарифы, цена фиксируется и не меняется.
+
+
+      Груз будет проверен перед отправкой, поэтому смело выбирайте нужную
+      продукцию на любых онлайн-площадках КНР — Taobao, Tmall, Alibaba и так
+      далее. Маршруты разрабатываются индивидуально для каждого заказа.
 seoSections:
   title: dffxfvx
 ---
