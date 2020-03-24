@@ -64,8 +64,8 @@ sections:
       груз в Украину в срок от 35 дней.
     title: 'Доставка морем из Китая '
     button:
-      text: l
-      link: l
+      text: Узнать больше
+      link: ru/dostavka-morem-iz-kitaja/
     list:
       - title: '  От 35 дней'
         image: /img/ (1).png
