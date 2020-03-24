@@ -1,15 +1,17 @@
 ---
 templateKey: international-cargo
 locale: ua
-title: 'Доставка товаров '
-name: goods-delivery
-crumbLabelParent: ' Возможности доставки грузов'
-crumbLabel: 'Доставка товаров '
+metaData:
+  title: Доставка товару з Китаю | INTA-ICS
+  description: ' &#128717; Доставка товарів з Китаю, з інтернет магазинів Alibaba, TaoBao, Tmall, 1688 та інших &#128073; Привеземо в термін від 10 днів ✔ Викуп з магазину та перевірка товару перед відправкою &#9989; Безкоштовне зберігання товару на складі &#9989; Повний комплекс супровідних послуг, митне оформлення &#9989; Підтримка 24/7 & #9742; 068 5555 999'
+title: Доставка товарів з Китаю
+name: dostavka-tovariv-z-kytaju/
+crumbLabelParent: ЗД перевезення
+crumbLabel: Доставка товарів з Китаю
 description: >-
-  Words to up style of since world. At none neat am do over will. Girl quit if
-  case mr sing as no have. Draw from upon here gone add one. Ecstatic elegance
-  gay but disposed. Uncommonly no it announcing melancholy an in. At none neat
-  am do over will. Happiness remainder joy but earnestly for off. Draw fond rank
+  Компанія INTA-ICS займається викупом і доставкою китайських товарів в Україну
+  морським, авіа та залізничним транспортом. Пропонуємо гнучкі тарифи та
+  оптимальні терміни транспортування.
 header:
   images:
     - alt: djjdjd
