@@ -20,6 +20,13 @@ header:
   images:
     - alt: inta-ics-доставка-морем-из-сша
       image: /img/морская-доставка-из-сша.png
+  scopeInformation:
+    - text: От 35 дней
+      image: /img/time.png
+    - text: Доставка от 50кг
+      image: /img/card.png
+    - text: Удобная система оплаты
+      image: /img/lov.png
 seoSections:
   title: а
 ---
