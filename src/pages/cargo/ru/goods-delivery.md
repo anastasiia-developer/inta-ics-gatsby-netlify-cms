@@ -10,14 +10,13 @@ metaData:
     хранение на складах &#9989; Полный комплекс сопроводительных услуг,
     таможенное оформление &#9989; Поддержка 24/7  &#9742; 068 5555 999
 name: ru/dostavka-tovarov-iz-kitaya/
-crumbLabelParent: ' Возможности доставки грузов'
-crumbLabel: 'Доставка товаров '
-title: 'Доставка товаров '
+crumbLabelParent: ЖД перевозки
+crumbLabel: Доставка товара из Китая
+title: Доставка товара из Китая
 description: >-
-  Words to up style of since world. At none neat am do over will. Girl quit if
-  case mr sing as no have. Draw from upon here gone add one. Ecstatic elegance
-  gay but disposed. Uncommonly no it announcing melancholy an in. At none neat
-  am do over will. Happiness remainder joy but earnestly for off. Draw fond rank
+  Компания INTA-ICS занимается выкупом и доставкой китайских товаров в Украину
+  морскими, авиа и железнодорожными путями. Предлагаем гибкие тарифы и
+  оптимальные сроки транспортировки.
 header:
   images:
     - alt: djjdjd
