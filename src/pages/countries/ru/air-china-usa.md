@@ -21,11 +21,11 @@ header:
       image: /img/авиадоставка-из-китая.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Срок от 5 дней
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Собственные склады
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Быстрая консультация
 sections:
   - image: /img/deliv.jpg
     text: >-
