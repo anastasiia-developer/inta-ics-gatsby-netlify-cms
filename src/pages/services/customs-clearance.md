@@ -2,6 +2,7 @@
 templateKey: services
 locale: ua
 name: customs-clearance
+crumbLabelParent: Послуги
 crumbLabel: Таможенное оформление
 title: Таможенное оформление
 description: >-

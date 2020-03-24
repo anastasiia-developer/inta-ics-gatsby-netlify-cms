@@ -2,6 +2,7 @@
 templateKey: services
 locale: ru
 name: buyback-and-delivery-from-china
+crumbLabelParent: Послуги 
 crumbLabel: Выкуп и доставка из Китая
 title: Выкуп и доставка из Китая
 description: >-

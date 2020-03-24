@@ -92,8 +92,8 @@ const Delivery = ({ data, location, pageContext }) => {
             <DeliveryTemplate
                 helmet={
                     <TitleDesHelmet
-                        title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
-                        description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
+                        title={frontmatter.metaData && frontmatter.metaData.title && frontmatter.title}
+                        description={frontmatter.metaData && frontmatter.metaData.description && frontmatter.description}
                     />
                 }
                 crumbLabel={frontmatter.crumbLabel}

@@ -2,6 +2,7 @@
 templateKey: services
 locale: ru
 name: price-monitoring
+crumbLabelParent: Послуги 
 crumbLabel: Мониторинг цен
 title: RuМониторинг цен
 description: >-

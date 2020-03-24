@@ -2,6 +2,7 @@
 templateKey: services
 locale: ru
 name: warehousing-services
+crumbLabelParent: Послуги 
 crumbLabel: Складские услуги
 title: Складские услуги
 description: >-

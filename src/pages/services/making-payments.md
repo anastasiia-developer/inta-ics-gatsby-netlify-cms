@@ -2,6 +2,7 @@
 templateKey: services
 locale: ua
 name: making-payments
+crumbLabelParent: Послуги 
 crumbLabel: Проведение платежей
 title: Проведение платежей
 description: >-

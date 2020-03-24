@@ -2,6 +2,7 @@
 templateKey: services
 locale: ru
 name: search-and-verification
+crumbLabelParent: Послуги 
 crumbLabel: Поиск и проверка поставщика
 title: Поиск и проверка поставщика
 description: >-

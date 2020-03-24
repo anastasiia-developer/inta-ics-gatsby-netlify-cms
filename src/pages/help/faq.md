@@ -3,6 +3,7 @@ pageKey: faq
 locale: ua
 title: Часто задаваемые вопросы
 crumbLabel: FAQ
+crumbLabelParent: Помощь
 name: faq
 description: >-
     Все, что может вас заитересовать

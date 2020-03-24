@@ -9,6 +9,7 @@ export default ({setActiveMob, isActiveMob}) => (
                  allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "services"}, locale: {eq: "ru"} }}) {
                     nodes {
                       frontmatter {
+                        crumbLabelParent
                         crumbLabel
                         name
                       }

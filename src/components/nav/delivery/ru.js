@@ -20,7 +20,6 @@ export default ({setActiveMob, isActiveMob}) => (
     `}
         render={(data) =>
             <SubMenu
-                parentName={data.allMarkdownRemark.nodes.frontmatter.crumbLabelParent}
                 list={data.allMarkdownRemark.nodes}
                 startPath="/dostavka/ru/"
                 setActiveMob={() => setActiveMob}

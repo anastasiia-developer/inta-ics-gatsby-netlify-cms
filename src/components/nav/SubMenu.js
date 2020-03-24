@@ -102,7 +102,7 @@ const SubNav = styled.nav`
         }
 `;
 
-const SubMenu = ({parentName, list, setActiveMob, isActiveMob, startPath}) => {
+const SubMenu = ({list, setActiveMob, isActiveMob, startPath}) => {
     const [isActiveSub, setActiveSub] = useState(false);
 
     return(
@@ -113,7 +113,7 @@ const SubMenu = ({parentName, list, setActiveMob, isActiveMob, startPath}) => {
                 tabIndex={0}
                 onKeyDown={() => {setActiveSub(!isActiveSub)}}
                 onClick={() => {setActiveSub(!isActiveSub)}}>
-              {parentName}
+              {list[0].frontmatter.crumbLabelParent}
               <Arrow/>
             </span>
             <nav className="drop-down column">

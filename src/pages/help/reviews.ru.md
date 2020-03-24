@@ -3,6 +3,7 @@ pageKey: reviews
 locale: ru
 title: Отзывы
 crumbLabel: Отзывы
+crumbLabelParent: Помощь
 description: >-
     Мы откриты для вас и готовы делиться реальными отзывами.
 name: reviews

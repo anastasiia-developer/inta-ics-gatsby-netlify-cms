@@ -570,6 +570,24 @@ collections:
                 {label: url, name: url, widget: string}
               ]}
           ]}
+      - file: "src/pages/contact.md"
+        label: "Контакты"
+        name: "contact"
+        fields:
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "description", widget: "text"}
+          ]}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: CrumbLabel, name: crumbLabel, widget: string}
+          - {label: name, name: name, widget: string}
+          - {label: Header, name: header, widget: object, fields: [
+              {label: Image, name: image, widget: image},
+              {label: Alt, name: alt, widget: string}
+              {label: tel, name: tel, widget: string},
+              {label: name, name: name, widget: string},
+          ]},
   - name: "pages-ru"
     label: "Страницы RU"
     files:
@@ -657,7 +675,7 @@ collections:
           {label: "description", name: "description", widget: "string"}
           ]}
           - {label: aboutImg, name: "aboutImg", widget: image}
-      - file: "src/pages/cost/cost.md"
+      - file: "src/pages/cost/cost.ru.md"
         label: "Стоимость"
         name: "cost-ru"
         fields:
@@ -690,3 +708,21 @@ collections:
           {label: "Картинка", name: image, widget: image}
           ]}
           ]}
+      - file: "src/pages/contact.ru.md"
+        label: "Контакты"
+        name: "contact-ru"
+        fields:
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+          ]}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: CrumbLabel, name: crumbLabel, widget: string}
+          - {label: name, name: name, widget: string}
+          - {label: Header, name: header, widget: object, fields: [
+          {label: Image, name: image, widget: image},
+          {label: Alt, name: alt, widget: string}
+          {label: tel, name: tel, widget: string},
+          {label: name, name: name, widget: string},
+          ]},

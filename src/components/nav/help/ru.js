@@ -16,6 +16,7 @@ export default ({setActiveMob, isActiveMob}) => (
                  }) {
                     nodes {
                         frontmatter {
+                            crumbLabelParent
                             crumbLabel
                             name
                         }
@@ -25,7 +26,6 @@ export default ({setActiveMob, isActiveMob}) => (
     `}
         render={(data) =>
             <SubMenu
-                parentName="Помощь"
                 list={data.allMarkdownRemark.nodes}
                 startPath="/ru/help/"
                 setActiveMob={() => setActiveMob}

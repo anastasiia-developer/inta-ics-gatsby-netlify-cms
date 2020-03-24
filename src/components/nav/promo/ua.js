@@ -10,6 +10,7 @@ export default ({setActiveMob, isActiveMob}) => (
                  allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "promo-page"}, locale: {eq: "ua"} }}) {
                     nodes {
                       frontmatter {
+                        crumbLabelParent
                         crumbLabel
                         name
                       }
@@ -19,7 +20,6 @@ export default ({setActiveMob, isActiveMob}) => (
     `}
         render={(data) =>
             <SubMenu
-                parentName="Акции"
                 list={data.allMarkdownRemark.nodes}
                 startPath="/promos/"
                 setActiveMob={() => setActiveMob}

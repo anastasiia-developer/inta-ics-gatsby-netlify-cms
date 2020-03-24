@@ -6,6 +6,12 @@ import Login from './Login'
 import Language from './Language'
 import RuDelivery from './delivery/ru'
 import UaDelivery from './delivery/ua'
+import RuAbout from './about/index.ru'
+import UaAbout from './about/'
+import RuCost from './cost/index.ru'
+import UaCost from './cost/'
+import RuContact from './contact/index.ru'
+import UaContact from './contact/'
 import Telegram from '../../img/social/telegram.svg'
 import Call from '../../img/call.svg'
 import BarContacts from "./BarContacts"
@@ -70,6 +76,10 @@ const Navbar = ({local, location}) => {
                           setActiveMob={SetActiveMob}
                           isActiveMob={isActiveMob}
                       />
+                      <UaAbout
+                          setActiveMob={SetActiveMob}
+                      />
+
                   </Fragment>
                   :
                   <Fragment>
@@ -81,13 +91,11 @@ const Navbar = ({local, location}) => {
                           setActiveMob={SetActiveMob}
                           isActiveMob={isActiveMob}
                       />
+                      <RuAbout
+                          setActiveMob={SetActiveMob}
+                      />
                   </Fragment>
               }
-              <Link
-                  onClick={() => setActiveMob(!isActiveMob)}
-                  to={`${lang}/about`}>
-                  О компании
-              </Link>
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
                   to={`/blog/${lang}`}>
@@ -103,6 +111,12 @@ const Navbar = ({local, location}) => {
                           setActiveMob={SetActiveMob}
                           isActiveMob={isActiveMob}
                       />
+                      <UaCost
+                          setActiveMob={SetActiveMob}
+                      />
+                      <UaContact
+                          setActiveMob={SetActiveMob}
+                      />
                   </Fragment>
                   :
                   <Fragment>
@@ -114,18 +128,14 @@ const Navbar = ({local, location}) => {
                           setActiveMob={SetActiveMob}
                           isActiveMob={isActiveMob}
                       />
+                      <RuCost
+                          setActiveMob={SetActiveMob}
+                      />
+                      <RuContact
+                          setActiveMob={SetActiveMob}
+                      />
                   </Fragment>
               }
-              <Link
-                  onClick={() => setActiveMob(!isActiveMob)}
-                  to={`${lang}/cost`}>
-                  Стоимость
-              </Link>
-              <Link
-                  onClick={() => setActiveMob(!isActiveMob)}
-                  to={`${lang}/contact`}>
-                  Контакты
-              </Link>
         </div>
         <Search isActive={isActiveMob}/>
         <div className="row container" >

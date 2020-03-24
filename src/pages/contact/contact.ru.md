@@ -2,6 +2,7 @@
 pageKey: contact
 locale: ru
 title: RUКонтакты
+crumbLabel: Контакты
 description: >-
     Оставьте свой номер и мы вам перезвоним
 header:

@@ -1,6 +1,7 @@
 ---
 templateKey: promo-page
 title: RuАкции
+crumbLabelParent: Акции
 crumbLabel: Новые клиенты
 locale: ru
 name: new-clients
