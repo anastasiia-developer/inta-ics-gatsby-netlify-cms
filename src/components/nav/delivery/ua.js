@@ -10,6 +10,7 @@ export default ({setActiveMob, isActiveMob}) => (
                  allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "delivery"}, locale: {eq: "ua"} }}) {
                     nodes {
                       frontmatter {
+                        crumbLabelParent
                         crumbLabel
                         name
                       }
@@ -19,7 +20,7 @@ export default ({setActiveMob, isActiveMob}) => (
     `}
         render={(data) =>
             <SubMenu
-                parentName="Доставка"
+                parentName={data.allMarkdownRemark.nodes.frontmatter.crumbLabelParent}
                 list={data.allMarkdownRemark.nodes}
                 startPath="/dostavka/"
                 setActiveMob={() => setActiveMob}
