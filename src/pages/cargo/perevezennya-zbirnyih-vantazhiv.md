@@ -19,6 +19,13 @@ header:
   images:
     - alt: ' inta-ics-перевезення-збірних-вантажів'
       image: /img/перевозки-сборных-грузов.png
+  scopeInformation:
+    - text: Від 1м3
+      image: /img/time.png
+    - text: Доступна ціна
+      image: /img/card.png
+    - text: Швидка оплата
+      image: /img/lov.png
 seoSections:
   title: р
 ---
