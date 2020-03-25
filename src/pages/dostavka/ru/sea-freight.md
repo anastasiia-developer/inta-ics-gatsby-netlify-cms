@@ -27,11 +27,11 @@ header:
       text: Груз от 1м3
   buttons:
     - text: Морская перевозка из Китая
-      link: ru/dostavka-morem-iz-kitaja/
+      link: dostavka-morem-iz-kitaja/
     - text: Морская доставка из США
-      link: ru/dostavka-morem-iz-ssha/
+      link: dostavka-morem-iz-ssha/
     - text: Контейнерные перевозки
-      link: ru/konteynernyie-perevozki/
+      link: konteynernyie-perevozki/
 seoSections:
   title: Международные морские перевозки грузов
   sections:
@@ -151,7 +151,7 @@ sections:
     title: 'Доставка морем из Китая '
     button:
       text: Узнать больше
-      link: ru/dostavka-morem-iz-kitaja/
+      link: dostavka-morem-iz-kitaja/
     list:
       - title: '  От 35 дней'
         image: /img/ (1).png
@@ -174,7 +174,7 @@ sections:
         image: /img/ (1).png
     button:
       text: Узнать больше
-      link: ru/dostavka-morem-iz-ssha/
+      link: dostavka-morem-iz-ssha/
   - title: Морские контейнерные перевозки
     image: /img/контейнерные-перевозки.jpg
     text: >-
@@ -190,7 +190,7 @@ sections:
         image: /img/ (1).png
     button:
       text: Узнать больше
-      link: /ru/konteynernyie-perevozki/
+      link: konteynernyie-perevozki/
 sectionText:
   image: /img/AutoBckg.png
   text: >-
