@@ -17,11 +17,11 @@ description: >-
   клиентов услуги ЖД доставки.
 header:
   buttons:
-    - link: 'ru/perevozki-sbornyih-gruzov/ '
+    - link: 'perevozki-sbornyih-gruzov/ '
       text: 'Доставка сборных грузов '
-    - link: ru/dostavka-tovarov-iz-kitaya/
+    - link: dostavka-tovarov-iz-kitaya/
       text: Доставка товара из Китая
-    - link: ru/perevozki-negabaritnyih-gruzov/
+    - link: perevozki-negabaritnyih-gruzov/
       text: 'Доставка негабаритных грузов '
   images:
     - alt: ' inta-ics-железнодорожные-грузоперевозки'
@@ -126,8 +126,8 @@ sections:
       ваш груз
     title: 'Перевозка сборных грузов '
     button:
-      text: l
-      link: l
+      text: Узнать больше
+      link: perevozki-sbornyih-gruzov/
   - image: /img/181-1-.jpg
     list:
       - image: /img/ (1).png
@@ -142,8 +142,8 @@ sections:
       и оптимальные сроки транспортировки.
     title: 'Доставка товара из Китая '
     button:
-      text: l
-      link: l
+      text: Узнать больше
+      link: dostavka-tovarov-iz-kitaya/
   - image: /img/inta-ics-негабаритные-перевозки.jpg
     list:
       - image: /img/ (1).png
@@ -158,8 +158,8 @@ sections:
       из Китая.
     title: ' Международные перевозки негабаритных грузов '
     button:
-      text: l
-      link: l
+      text: Узнать больше
+      link: perevozki-negabaritnyih-gruzov/
 sectionText:
   image: /img/TrainBckg.png
   text: >-
