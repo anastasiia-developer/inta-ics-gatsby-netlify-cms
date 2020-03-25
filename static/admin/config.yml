@@ -107,7 +107,7 @@ collections:
       ]}
   - name: "delivery-ru"
     label: "Доставка - RU"
-    folder: "src/ru"
+    folder: "src/pages/ru"
     filter: {field: "templateKey", value: "delivery"}
     create: false
     slug: "{{name}}"
