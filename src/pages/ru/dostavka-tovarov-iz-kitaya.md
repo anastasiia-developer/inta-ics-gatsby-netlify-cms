@@ -1,5 +1,5 @@
 ---
-templateKey: international-cargo
+templateKey: international-destinations
 locale: ru
 metaData:
   title: Доставка товара из Китая| INTA-ICS
@@ -9,7 +9,7 @@ metaData:
     магазина и проверка товара перед отправкой &#9989; Честные цены. Бесплатное
     хранение на складах &#9989; Полный комплекс сопроводительных услуг,
     таможенное оформление &#9989; Поддержка 24/7  &#9742; 068 5555 999
-name: dostavka-tovarov-iz-kitaya/
+name: dostavka-tovarov-iz-kitaya
 crumbLabelParent: ЖД перевозки
 crumbLabel: Доставка товара из Китая
 title: Доставка товара из Китая

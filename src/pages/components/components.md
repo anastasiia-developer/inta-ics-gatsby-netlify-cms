@@ -271,5 +271,25 @@ cargo:
         -   title: Доставка из Китая в Одессу
             svg: warehouse    
             link: cargo-delivery          
-        
+ourServices: 
+    title: Наши услуги
+    list: 
+        -   title: Проведение платежей 
+            svg: shopping
+            link: making-payments           
+        -   title: Поиск поставщика 
+            svg: search
+            link: search-and-verification 
+        -   title: Заказ товара из Китая 
+            svg: truck
+            link: making-payments
+        -   title: Проведение платежей 
+            svg: shopping
+            link: making-payments                    
+        -   title: Проведение платежей 
+            svg: shopping
+            link: making-payments
+        -   title: Проведение платежей 
+            svg: shopping
+            link: making-payments
 ---

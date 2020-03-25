@@ -15,7 +15,7 @@ collections:
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
@@ -34,7 +34,7 @@ collections:
     label: "Blog - RU"
     folder: "src/pages/blog/ru"
     create: true
-    slug: "{{slug}}"
+    slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}

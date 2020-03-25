@@ -1,5 +1,5 @@
 ---
-templateKey: international-cargo
+templateKey: international-destinations
 locale: ua
 metaData:
   title: Доставка товару з Китаю | INTA-ICS
