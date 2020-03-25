@@ -52,6 +52,7 @@ collections:
   - name: "delivery"
     label: "Доставка"
     folder: "src/pages"
+    filter: {field: "templateKey", value: "delivery"}
     create: false
     slug: "{{name}}"
     fields:
@@ -107,6 +108,7 @@ collections:
   - name: "delivery-ru"
     label: "Доставка - RU"
     folder: "src/ru"
+    filter: {field: "templateKey", value: "delivery"}
     create: false
     slug: "{{name}}"
     fields:
@@ -163,6 +165,7 @@ collections:
     label: "Страны"
     folder: "src/pages"
     create: true
+    filter: {field: "templateKey", value: "international-destinations"}
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-destinations"}
@@ -211,6 +214,7 @@ collections:
     label: "RUСтраны"
     folder: "src/pages/ru"
     create: true
+    filter: {field: "templateKey", value: "international-destinations"}
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-destinations"}
@@ -259,6 +263,7 @@ collections:
     label: "Тип доставки"
     folder: "src/pages"
     create: true
+    filter: {field: "templateKey", value: "international-cargo"}
     slug: "{{name}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-cargo"}
@@ -308,6 +313,7 @@ collections:
     folder: "src/pages/ru"
     create: true
     slug: "{{name}}"
+    filter: {field: "templateKey", value: "international-cargo"}
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-cargo"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
@@ -629,7 +635,7 @@ collections:
   - name: "pages-ru"
     label: "Страницы RU"
     files:
-      - file: "src/pages/index.ru.md"
+      - file: "src/pages/ru/index.ru.md"
         label: "Главная"
         name: "index-ru"
         fields:
