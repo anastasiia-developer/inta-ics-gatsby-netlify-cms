@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HoverGradientInsideSvg from "../HoverGradientInsideSvg";
-import HTMLContent from '../Content'
+import CargoSprite from '../../components/../img/CargoSprite.svg';
 
 const Section = styled.section`
     background: #F0F5FD;
@@ -45,12 +45,17 @@ const CargoTemplate = ({data}) => {
         <Section>
             <h2>{cargo.title}</h2>
             <div className="row">
+                <CargoSprite/>
                 {cargo.list.map((item, index) =>
                     <HoverGradientInsideSvg
                         key={index}
                         title={item.title}
-                        svg={<HTMLContent content={item.svg}/>}
-                        link='cargo/container-transporting'
+                        svg={
+                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                                <use xlinkHref={`#${item.svg}`} />
+                            </svg>
+                            }
+                        link={`cargo/${item.link}`}
                     />
                 )}
             </div>

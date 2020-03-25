@@ -387,13 +387,13 @@ collections:
           {label: "category", name: category, widget: list, fields: [
             {label: "Название услуги", name: "nameCategory", widget: string},
             {label: "цена", name: "price", widget: number},
-            {label: "Картинка", name: image, widget: image}
+            {label: "Картинка", name: image, widget: image},
             {label: "alt img", name: alt, widget: string}
           ]}
           ]}
         ]}
       - {label: Clients, name: clients, widget: list, fields: [
-          {label: image, name: image, widget: image}
+          {label: image, name: image, widget: image},
           {label: alt, name: alt, widget: string}
         ]}
       - {label: Destinations, name: destinations, widget: object, fields: [
@@ -447,6 +447,14 @@ collections:
       - {label: "news", name: news, widget: object, fields: [
           {label: "Заголовок", name: title, widget: string},
           {label: "btn", name: btn, widget: string}
+      ]}
+      - {label: "cargo", name: cargo, widget: object, fields: [
+          {label: "Заголовок", name: title, widget: string},
+          {label: "list", name: list, widget: list, fields: [
+            {label: "Заголовок", name: title, widget: string},
+            {label: "svg", name: svg, widget: string},
+            {label: "link", name: link, widget: string},
+          ]}
       ]}
   - name: "pages"
     label: "Страницы"
