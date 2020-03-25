@@ -19,6 +19,13 @@ header:
   images:
     - alt: ' inta-ics-перевезення-негабаритних вантажів'
       image: /img/inta-ics-доставка-негабаритных-и-крупных-грузов.png
+  scopeInformation:
+    - text: Пошук постачальника
+      image: /img/time.png
+    - text: Послуги брокера
+      image: /img/card.png
+    - text: Від 5 днів
+      image: /img/lov.png
 seoSections:
   title: g
 ---
