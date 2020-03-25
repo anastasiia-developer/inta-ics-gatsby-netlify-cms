@@ -7,10 +7,8 @@ export default ({setActiveMob, isActiveMob}) => (
         query={graphql`
             query navHelpUa{
                  allMarkdownRemark(filter: {
-                    fields: {
-                        slug: {regex: "/help/"}
-                    }, 
                     frontmatter: {
+                        collection: {eq: "help"},
                         locale: {eq: "ua"}
                     }
                  }) {

@@ -55,7 +55,7 @@ const CargoTemplate = ({data}) => {
                                 <use xlinkHref={`#${item.svg}`} />
                             </svg>
                             }
-                        link={`cargo/${item.link}`}
+                        link={item.link}
                     />
                 )}
             </div>

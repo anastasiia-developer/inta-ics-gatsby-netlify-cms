@@ -1,6 +1,7 @@
 ---
 pageKey: faq
-locale: ua
+locale: ru
+collection: help
 title: Часто задаваемые вопросы
 crumbLabel: FAQ
 crumbLabelParent: Помощь

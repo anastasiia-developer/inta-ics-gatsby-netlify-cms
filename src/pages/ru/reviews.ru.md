@@ -1,6 +1,7 @@
 ---
 pageKey: reviews
 locale: ru
+collection: help
 title: Отзывы
 crumbLabel: Отзывы
 crumbLabelParent: Помощь

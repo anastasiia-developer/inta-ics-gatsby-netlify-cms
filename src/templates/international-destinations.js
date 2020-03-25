@@ -14,8 +14,8 @@ import Article from "../components/mainPage/Article"
 import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader"
 import TitleDesHelmet from "../components/TitleDesHelmet"
-import CalculateHeaderRu from "../components/CalculateHeader/index.ru";
 import CalculateHeader from "../components/CalculateHeader";
+import CalculateHeaderRu from "../components/CalculateHeader/index.ru";
 
 export const InternationalDestinationsTemplate = ({
                                      helmet,
@@ -40,9 +40,9 @@ export const InternationalDestinationsTemplate = ({
                 crumbLabelParent={crumbLabelParent}
                 crumbPathParent={false}
                 children={location && !header.buttons &&
-                locale === 'ua' &&
+                locale === 'ua' ?
                     <CalculateHeader />
-                    &&
+                    :
                     <CalculateHeaderRu />
                 }
             />

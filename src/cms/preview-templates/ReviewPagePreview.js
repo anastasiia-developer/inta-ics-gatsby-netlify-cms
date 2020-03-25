@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ReviewsPageTemplate } from "../../pages/help/reviews";
+import { ReviewsPageTemplate } from "../../pages/reviews";
 
 const ReviewPagePreview = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();

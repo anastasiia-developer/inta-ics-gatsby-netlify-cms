@@ -51,7 +51,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "delivery"
     label: "Доставка"
-    folder: "src/pages/dostavka"
+    folder: "src/pages"
     create: false
     slug: "{{name}}"
     fields:
@@ -106,7 +106,7 @@ collections:
       ]}
   - name: "delivery-ru"
     label: "Доставка - RU"
-    folder: "src/pages/dostavka/ru"
+    folder: "src/ru"
     create: false
     slug: "{{name}}"
     fields:
@@ -161,7 +161,7 @@ collections:
       ]}
   - name: "international-destinations"
     label: "Страны"
-    folder: "src/pages/countries"
+    folder: "src/pages"
     create: true
     slug: "{{name}}"
     fields:
@@ -209,7 +209,7 @@ collections:
       ]}
   - name: "international-destinations-ru"
     label: "RUСтраны"
-    folder: "src/pages/countries/ru"
+    folder: "src/pages/ru"
     create: true
     slug: "{{name}}"
     fields:
@@ -257,7 +257,7 @@ collections:
       ]}
   - name: "international-cargo"
     label: "Тип доставки"
-    folder: "src/pages/cargo"
+    folder: "src/pages"
     create: true
     slug: "{{name}}"
     fields:
@@ -305,7 +305,7 @@ collections:
       ]}
   - name: "international-cargo-ru"
     label: "RU Тип доставки"
-    folder: "src/pages/cargo/ru"
+    folder: "src/pages/ru"
     create: true
     slug: "{{name}}"
     fields:
@@ -577,7 +577,7 @@ collections:
                 {label: "Картинка", name: image, widget: image}
             ]}
           ]}
-      - file: "src/pages/help/reviews.md"
+      - file: "src/pages/reviews.md"
         label: "Отзывы"
         name: "reviews"
         fields:
@@ -608,7 +608,7 @@ collections:
                 {label: url, name: url, widget: string}
               ]}
           ]}
-      - file: "src/pages/contact.md"
+      - file: "src/pages/contact/contact.md"
         label: "Контакты"
         name: "contact"
         fields:

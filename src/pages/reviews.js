@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from "styled-components";
-import Layout from '../../components/Layout'
-import TemplateHeader from "../../components/TemplateHeader";
-import News from "../../components/NewsRoll";
-import NewsRu from "../../components/NewsRoll/index.ru";
-import FormFooter from "../../components/Footer/FormFooter";
-import TitleDesHelmet from "../../components/TitleDesHelmet";
-import {ContentInFrontmatter} from '../../components/Content'
+import Layout from '../components/Layout'
+import TemplateHeader from "../components/TemplateHeader";
+import News from "../components/NewsRoll";
+import NewsRu from "../components/NewsRoll/index.ru";
+import FormFooter from "../components/Footer/FormFooter";
+import TitleDesHelmet from "../components/TitleDesHelmet";
+import {ContentInFrontmatter} from '../components/Content'
 
 const Wrapper = styled.div`
     header .btn{
