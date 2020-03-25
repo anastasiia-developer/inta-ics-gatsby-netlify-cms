@@ -9,7 +9,7 @@ metaData:
     фотозвітність &#9989; Вигідна ціна на транспортування вантажу в Україну
     &#9989;
 title: 'Авіадоставка з Китаю '
-name: avia-dostavka-z-kytaju/
+name: avia-dostavka-z-kytaju
 crumbLabel: 'Авіадоставка з Китаю '
 crumbLabelParent: Авіадоставка
 description: >-

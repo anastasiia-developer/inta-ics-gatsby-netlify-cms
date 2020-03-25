@@ -11,7 +11,8 @@ import SectionText from "../components/delivery/SectionText"
 import OurServices from '../components/delivery/OurServices'
 import Destinations from "../components/Destinations"
 import DestinationsRu from "../components/Destinations/index.ru"
-import Cargo from "../components/mainPage/cargo"
+import Cargo from "../components/Cargo/index.ru"
+import CargoRu from "../components/Cargo/index.ru"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
@@ -69,11 +70,16 @@ export const DeliveryTemplate = ({
             }
             <OurServices locale={locale}/>
             {locale === 'ua' ?
+                <Fragment>
                 <Destinations />
+                <Cargo/>
+                </Fragment>
                 :
+                <Fragment>
                 <DestinationsRu />
+                <CargoRu/>
+                </Fragment>
             }
-            <Cargo/>
             <Clients/>
             <Reviews/>
             <Article seoSections={seoSections}/>

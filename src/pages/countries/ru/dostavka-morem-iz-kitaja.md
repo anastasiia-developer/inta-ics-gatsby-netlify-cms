@@ -8,7 +8,7 @@ metaData:
     тарифы &#9989; LCL, FCL. Полный комплекс сопроводительных услуг, таможенное
     оформление &#9989; Контроль и отчётность 24/7 - Звони &#9742; 068 5555 999
 title: Доставка морем из Китая
-name: ru/dostavka-morem-iz-kitaja/
+name: dostavka-morem-iz-kitaja
 crumbLabelParent: Морская перевозка
 crumbLabel: Морская перевозка грузов из Китая
 description: >-

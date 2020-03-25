@@ -12,6 +12,7 @@ export default () => (
                         cargo{
                             title
                             list{
+                                link
                                 title
                                 svg
                             }

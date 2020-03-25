@@ -9,7 +9,7 @@ metaData:
     услуг, таможенное оформление &#9989; Поддержка 24/7 - Звони &#9742; 068 5555
     999
 title: Доставка морем из США
-name: ru/dostavka-morem-iz-ssha/
+name: dostavka-morem-iz-ssha
 crumbLabelParent: Морская перевозка
 crumbLabel: Доставка морем из США
 description: >-
