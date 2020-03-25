@@ -358,9 +358,21 @@ collections:
       - {label: "Template Key", name: "pageKey", widget: "hidden", default: "components-common"}
       - {label: "locale", name: "locale", widget: "hidden"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: Storage, name: storage, widget: list, fields: [
-          {label: country, name: country, widget: string},
-          {label: flag, name: flag, widget: image}
+      - {label: "склады", name: warehouses, widget: object, fields: [
+          {label: title, name: title, widget: string},
+          {label: list, name: list, widget: list, fields: [
+             {label: country, name: country, widget: string},
+             {label: city, name: city, widget: string},
+             {label: flag, name: flag, widget: image},
+             {label: postIndex, name: postIndex, widget: string},
+             {label: address, name: address, widget: "markdown"},
+             {label: phone, name: phone, widget: string},
+             {label: image, name: image, widget: image},
+             {label: images, name: images, widget: list, fields: [
+               {label: image, name: image, widget: image},
+               {label: alt, name: alt, widget: string},
+            ]},
+          ]},
       ]}
       - {label: "Calculator", name: calculator, widget: object, fields: [
         {label: "Заголовок", name: title, widget: string},

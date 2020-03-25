@@ -1,6 +1,8 @@
 ---
 pageKey: components-common
+name: components
 locale: ua
+title:  UaОбщие компонентны для всех страниц
 warehouses: 
     title: Наши склади
     list: 
@@ -160,7 +162,6 @@ destinations:
       flag: /img/151-united-arab-emirates.png
       link: dostavka-z-oae/
   image: /img/map.png
-name: components
 calculateHeader:
   from: Откуда груз?
   phone: Телефон
@@ -177,7 +178,6 @@ mainPopup:
   description: Закажите консультацию прямо сейчас!
   subTitle: Или оставьте номер и мы вам перезвоним
   btn: Отправить
-title:  UaОбщие компонентны для всех страниц
 popupThanks:
   title: 'Спасибо, за Вашу заявку!'
   subTitle: В контакт-центре уже идет борьба за такого замечательного клиента как Вы!
