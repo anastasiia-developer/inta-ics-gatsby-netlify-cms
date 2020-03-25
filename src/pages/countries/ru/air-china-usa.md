@@ -8,7 +8,7 @@ metaData:
     склады и офисы в Китае &#9992; Гарантия сохранности грузов - страхование и
     фотоотчетность &#9989; Выгодная цена на транспортировку груза в Украину
 title: Авиадоставка из Китая
-name: ru/avia-dostavka-iz-kitaya/
+name: avia-dostavka-iz-kitaya/
 crumbLabelParent: Авиадоставка
 crumbLabel: Авиадоставка из Китая
 description: >-
