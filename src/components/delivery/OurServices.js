@@ -32,26 +32,26 @@ const OurServices = ({locale}) =>{
                 <HoverGradientInsideSvg
                     title="Проведение платежей"
                     svg={<Shopping/>}
-                    link={`services/${local}making-payments`}
+                    link={`${local}making-payments`}
                 />
                 <HoverGradientInsideSvg
                     title="Поиск поставщика"
                     svg={<Search/>}
-                    link={`services/${local}search-and-verification`}
+                    link={`${local}search-and-verification`}
                 />
                 <HoverGradientInsideSvg
                     title="Заказ товара из Китая"
-                    link={`services/${local}buyback-and-delivery-from-china`}
+                    link={`${local}buyback-and-delivery-from-china`}
                     svg={<Truck/>}
                 />
                 <HoverGradientInsideSvg
                     title="Таможенное оформление груза"
-                    link={`services/${local}customs-clearance`}
+                    link={`${local}customs-clearance`}
                     svg={<Clipboard/>}
                 />
                 <HoverGradientInsideSvg
                     title="Складские услуги"
-                    link={`services/${local}warehousing-services`}
+                    link={`${local}warehousing-services`}
                     svg={<Warehouse/>}
                 />
             </div>

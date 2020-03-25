@@ -21,7 +21,6 @@ export default ({setActiveMob, isActiveMob}) => (
             <SubMenu
                 parentName="Услуги"
                 list={data.allMarkdownRemark.nodes}
-                startPath="/services/"
                 setActiveMob={() => setActiveMob}
                 isActiveMob={isActiveMob}
             />
