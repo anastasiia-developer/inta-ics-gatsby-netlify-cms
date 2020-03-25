@@ -8,17 +8,20 @@ title: 'Морська доставка вантажів з США '
 name: dostavka-morem-z-ssha
 crumbLabel: 'Морська доставка вантажів з США '
 crumbLabelParent: Доставка морем
-description: LLLL
+description: >-
+  Компанія INTA-ICS здійснює вантажоперевезення з США. Америка - один з центрів
+  світової торгівлі, тому співпраця з місцевими виробниками може сприятливо
+  вплинути на ваш бізнес.
 header:
   images:
     - alt: inta-ics-доставка-морем-з-сша
       image: /img/морская-доставка-из-сша.png
   scopeInformation:
-    - text: l
+    - text: Від 35 днів
       image: /img/time.png
-    - text: L
+    - text: Доставка від 50кг
       image: /img/card.png
-    - text: L
+    - text: Зручна система оплати
       image: /img/lov.png
 sections:
   - title: Морські перевезення з США від А до Я
