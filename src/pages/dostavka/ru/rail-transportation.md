@@ -158,8 +158,8 @@ sections:
       из Китая.
     title: ' Международные перевозки негабаритных грузов '
     button:
-      text: l
-      link: l
+      text: Узнать больше
+      link: perevozki-negabaritnyih-gruzov/
 sectionText:
   image: /img/TrainBckg.png
   text: >-
