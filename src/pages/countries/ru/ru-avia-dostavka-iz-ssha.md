@@ -8,7 +8,7 @@ metaData:
     и офисы в США &#9992; Авиадоставка грузов "под ключ" &#9989; Выгодная цена
     на транспортировку груза в Украину
 title: Авиадоставка из США
-name: ru/avia-dostavka-iz-ssha/
+name: avia-dostavka-iz-ssha/
 crumbLabelParent: Авиадоставка
 crumbLabel: Авиадоставка из США
 description: >-
