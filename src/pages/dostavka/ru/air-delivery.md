@@ -25,9 +25,9 @@ header:
       text: Местонахождение груза
   buttons:
     - text: 'Авиадоставка из Китая '
-      link: ru/avia-dostavka-iz-kitaya/
+      link: avia-dostavka-iz-kitaya/
     - text: ' Авиадоставка из США'
-      link: ru/avia-dostavka-iz-ssha/
+      link: avia-dostavka-iz-ssha/
 seoSections:
   title: Грузовые авиаперевозки от INTA-ICS
   sections:
@@ -164,7 +164,7 @@ sections:
     title: Авиадоставка из Китая
     button:
       text: Узнать больше
-      link: ru/avia-dostavka-iz-kitaya/
+      link: avia-dostavka-iz-kitaya/
     list:
       - title: Срок от 5 дней
         image: /img/ (1).png
@@ -187,7 +187,7 @@ sections:
         image: /img/ (1).png
     button:
       text: Узнать больше
-      link: ru/avia-dostavka-iz-ssha/
+      link: avia-dostavka-iz-ssha/
 sectionText:
   image: /img/planeBckgSectionText.png
   text: >-
