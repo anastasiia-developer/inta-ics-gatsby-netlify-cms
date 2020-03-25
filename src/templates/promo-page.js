@@ -4,11 +4,13 @@ import Layout from "../components/Layout";
 import Sections from "../components/delivery/Sections";
 import Cargo from "../components/mainPage/cargo";
 import Destinations from "../components/Destinations";
+import DestinationsRu from "../components/Destinations/index.ru";
 import Clients from "../components/Clients";
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
-import News from "../components/mainPage/news";
+import News from "../components/NewsRoll";
+import NewsRu from "../components/NewsRoll/index.ru";
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
@@ -43,7 +45,8 @@ export const SalesPageTemplate = ({
                                      location,
                                      header,
                                      sections,
-                                      seoSections
+                                     seoSections,
+                                     locale
                                  }) => {
     return(
         <Fragment>
@@ -62,11 +65,16 @@ export const SalesPageTemplate = ({
             <Section
                 sections={sections}
             />
-            {location &&
-            <Fragment>
-                <News/>
-                <Destinations/>
-            </Fragment>
+            {location && locale === 'ua' ?
+                <Fragment>
+                    <News/>
+                    <Destinations/>
+                </Fragment>
+                :
+                <Fragment>
+                    <NewsRu/>
+                    <DestinationsRu/>
+                </Fragment>
             }
             <Cargo/>
             {location &&
@@ -87,8 +95,8 @@ const Promo = ({ data, location, pageContext }) => {
         <SalesPageTemplate
             helmet={
                 <TitleDesHelmet
-                    title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
-                    description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
+                    title={frontmatter.metaData && frontmatter.metaData.title && frontmatter.title}
+                    description={frontmatter.metaData && frontmatter.metaData.description && frontmatter.description}
                 />
             }
             title={frontmatter.title}
@@ -97,6 +105,7 @@ const Promo = ({ data, location, pageContext }) => {
             header={frontmatter.header}
             sections={frontmatter.sections}
             seoSections={frontmatter.seoSections}
+            locale={pageContext.locale}
         />
         <FormFooter locale={pageContext.locale}/>
         </Layout>

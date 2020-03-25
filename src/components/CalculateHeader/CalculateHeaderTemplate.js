@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from "react"
 import styled from "styled-components"
-import Flags from "../Flags"
+import Flags from "../Flags/"
+import FlagsRu from "../Flags/index.ru"
 import Arrow from "../../img/arrow.svg"
 import Tel from "../../img/tel.svg"
 import Email from "../../img/email.svg"
@@ -238,7 +239,7 @@ const CalculateBlock = ({
         </div>
 )}
 
-const CalculateHeaderTemplate = ({data, admin}) => {
+const CalculateHeaderTemplate = ({data}) => {
     const [optionsFrom, setOptionsFrom] = useState({open: false, value: 'Китай', flag: '001-china 3'});
     const [optionsTo, setOptionsTo] = useState({open: false});
     const [optionsWeight, setOptionsWeight] = useState({open: false, value: ''});
@@ -246,6 +247,7 @@ const CalculateHeaderTemplate = ({data, admin}) => {
         weight: ''
     });
     const [popupOpen, setPopupOpen] = useState(false);
+    const text = data.calculateHeader;
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -286,8 +288,8 @@ const CalculateHeaderTemplate = ({data, admin}) => {
                 </Fragment>
             }
         <Wrapper className='wrapper'>
-            <h3>{data.title}</h3>
-            <h4>{data.description}</h4>
+            <h3>{text.title}</h3>
+            <h4>{text.description}</h4>
             <form
                 name="footerContact"
                 method="post"
@@ -296,12 +298,20 @@ const CalculateHeaderTemplate = ({data, admin}) => {
                 onSubmit={(e) => handleSubmit(e)}
                 className="row-to-column">
                 <CalculateBlock
-                    title={data.from}
+                    title={text.from}
                     options={
-                        <Flags
-                        stateOptions={optionsFrom}
-                        setOptions={setOptionsFrom}
-                    />}
+                        data.locale === 'ua' ?
+                            <Flags
+                                stateOptions={optionsFrom}
+                                setOptions={setOptionsFrom}
+                            />
+                                :
+                            <FlagsRu
+                                stateOptions={optionsFrom}
+                                setOptions={setOptionsFrom}
+                            />
+
+                        }
                     stateOptions={optionsFrom}
                     setOptions={setOptionsFrom}
                     name={'from'}
@@ -309,8 +319,8 @@ const CalculateHeaderTemplate = ({data, admin}) => {
                     arrowLine
                 />
                 <CalculateBlock
-                    title={data.to}
-                    option={data.toCountry}
+                    title={text.to}
+                    option={text.toCountry}
                     flag="ukraine"
                     options={false}
                     name={'to'}
@@ -319,7 +329,7 @@ const CalculateHeaderTemplate = ({data, admin}) => {
                     arrowLine
                 />
                 <CalculateBlock
-                    title={data.weight}
+                    title={text.weight}
                     option="kg"
                     flag={false}
                     className="cargo-weight"
@@ -343,7 +353,7 @@ const CalculateHeaderTemplate = ({data, admin}) => {
                     arrowLine
                 />
                 <CalculateBlock
-                    title={data.phone}
+                    title={text.phone}
                     option={false}
                     flag={false}
                     className="tel"
@@ -361,7 +371,7 @@ const CalculateHeaderTemplate = ({data, admin}) => {
                     setOptions={false}
                 />
                 <CalculateBlock
-                    title={data.email}
+                    title={text.email}
                     option={false}
                     flag={false}
                     className="tel"
@@ -380,7 +390,7 @@ const CalculateHeaderTemplate = ({data, admin}) => {
                     setOptions={false}
                 />
                 <CalculateBlock
-                    title={data.comment}
+                    title={text.comment}
                     option={false}
                     flag={false}
                     className="comment"

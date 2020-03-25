@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Sections from "../components/delivery/Sections";
 import Cargo from "../components/mainPage/cargo";
 import Destinations from "../components/Destinations";
+import DestinationsRu from "../components/Destinations/index.ru";
 import Clients from "../components/Clients";
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
@@ -79,8 +80,10 @@ export const ServicesPageTemplate = ({
                 sections={sections}
             />
             <OurServices locale={locale}/>
-            {location &&
+            {locale === 'ua' ?
                 <Destinations/>
+                :
+                <DestinationsRu/>
             }
             <Cargo/>
             {location &&

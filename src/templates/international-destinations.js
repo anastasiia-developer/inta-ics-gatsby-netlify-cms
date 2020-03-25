@@ -6,6 +6,7 @@ import Header from "../components/delivery/Header"
 import {Section} from "./services"
 import OurServices from '../components/delivery/OurServices'
 import Destinations from "../components/Destinations"
+import DestinationsRu from "../components/Destinations/index.ru"
 import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews"
@@ -52,8 +53,10 @@ export const InternationalDestinationsTemplate = ({
                 sections={sections}
             />
             <OurServices locale={locale}/>
-            {locale &&
+            {locale === 'ua' ?
                 <Destinations/>
+            :
+                <DestinationsRu/>
             }
             <Cargo/>
             {locale &&

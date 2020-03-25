@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'gatsby'
 
 const FlagTemplate = ({ countries, setOptions, stateOptions, link }) => {
+
     if(countries){
         return(
             <div className="row flags">

@@ -9,6 +9,7 @@ export default () => (
             query CalculatorHeader{
                 markdownRemark(frontmatter: { pageKey: { eq: "components-common" },  locale: { eq: "ua" } }) {
                     frontmatter {
+                        locale
                         calculateHeader {
                             title
                             description
@@ -25,6 +26,6 @@ export default () => (
                 }
             }
     `}
-        render={(data) => <CalculateHeaderTemplate data={data.markdownRemark.frontmatter.calculateHeader} />}
+        render={(data) => <CalculateHeaderTemplate data={data.markdownRemark.frontmatter} />}
     />
 )

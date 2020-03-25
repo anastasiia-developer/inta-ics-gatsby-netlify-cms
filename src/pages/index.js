@@ -12,6 +12,7 @@ import CalculatorRu from "../components/Calculator/index.ru"
 import News from "../components/NewsRoll"
 import NewsRu from "../components/NewsRoll/index.ru"
 import Destinations from "../components/Destinations"
+import DestinationsRu from "../components/Destinations/index.ru"
 import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews"
@@ -69,14 +70,15 @@ export const IndexPageTemplate = ({
           <Fragment>
             <Calculator/>
             <News />
+            <Destinations/>
           </Fragment>
           :
           <Fragment>
             <CalculatorRu/>
             <NewsRu />
+            <DestinationsRu/>
           </Fragment>
       }
-    <Destinations/>
     <Cargo/>
     <Clients/>
     <Reviews/>
@@ -104,8 +106,8 @@ const Index = ({ data, location, pageContext }) => {
       <IndexPageTemplate
         helmet={
           <TitleDesHelmet
-              title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
-              description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
+              title={frontmatter.metaData && frontmatter.metaData.title && frontmatter.title}
+              description={frontmatter.metaData && frontmatter.metaData.description && frontmatter.description}
           />
         }
         locale={pageContext.locale}

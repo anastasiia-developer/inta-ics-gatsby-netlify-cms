@@ -1,6 +1,5 @@
 import React, {Fragment, useState} from "react";
 import styled from "styled-components";
-import {navigate} from "gatsby-link";
 import { encode} from "../../pages/contact/form";
 import Phone from "../FormComponents/Phone";
 import PopupThanks from "../Popups/PopupThanks";

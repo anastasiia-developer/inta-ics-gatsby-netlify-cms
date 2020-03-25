@@ -26,6 +26,6 @@ export default () => (
                 }
             }
     `}
-        render={(data) => <CalculateHeaderTemplate data={data.markdownRemark.frontmatter.calculateHeader} />}
+        render={(data) => <CalculateHeaderTemplate data={data.markdownRemark.frontmatter} />}
     />
 )

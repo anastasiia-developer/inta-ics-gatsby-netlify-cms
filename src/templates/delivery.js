@@ -10,6 +10,7 @@ import Sections from "../components/delivery/Sections"
 import SectionText from "../components/delivery/SectionText"
 import OurServices from '../components/delivery/OurServices'
 import Destinations from "../components/Destinations"
+import DestinationsRu from "../components/Destinations/index.ru"
 import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews";
@@ -67,7 +68,11 @@ export const DeliveryTemplate = ({
                 />
             }
             <OurServices locale={locale}/>
-            <Destinations />
+            {locale === 'ua' ?
+                <Destinations />
+                :
+                <DestinationsRu />
+            }
             <Cargo/>
             <Clients/>
             <Reviews/>

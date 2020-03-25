@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 import styled from "styled-components";
 import Layout from '../../components/Layout'
 import TemplateHeader from "../../components/TemplateHeader";
-import News from "../../components/mainPage/news";
+import News from "../../components/NewsRoll";
+import NewsRu from "../../components/NewsRoll/index.ru";
 import FormFooter from "../../components/Footer/FormFooter";
 import TitleDesHelmet from "../../components/TitleDesHelmet";
 import {ContentInFrontmatter} from '../../components/Content'
@@ -87,7 +88,8 @@ export const ReviewsPageTemplate = ({
                                         description,
                                         header,
                                         location,
-                                        reviews
+                                        reviews,
+                                        locale
 }) =>
     <Wrapper>
         { helmet || ''}
@@ -110,7 +112,11 @@ export const ReviewsPageTemplate = ({
                 </Review>
             )}
         </Section>
-        <News/>
+        {locale === 'ua' ?
+            <News/>
+            :
+            <NewsRu/>
+        }
     </Wrapper>
 ;
 
@@ -131,6 +137,7 @@ const Reviews = ({ data, location, pageContext }) => {
                 header={frontmatter.header}
                 location={location}
                 reviews={frontmatter.reviews}
+                locale={pageContext.locale}
             />
             <FormFooter locale={pageContext.locale}/>
         </Layout>

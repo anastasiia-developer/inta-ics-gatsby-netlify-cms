@@ -8,29 +8,31 @@ export default ({morePhotoIcon}) => (
             query StorageQueryRu{
                 markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale:{ eq: "ru" } }) {
                     frontmatter {
-                        storageTitle
-                        storage{
-                            country
-                            city
-                            flag {
-                                publicURL
-                            }
-                            postIndex
-                            address
-                            phone
-                            image{
-                                childImageSharp {
-                                  fluid(maxWidth: 200, quality: 70) {
-                                    ...GatsbyImageSharpFluid
-                                  }
+                        warehouses{
+                            title
+                            list{
+                                country
+                                city
+                                flag {
+                                    publicURL
                                 }
-                            }
-                            images{
+                                postIndex
+                                address
+                                phone
                                 image{
                                     childImageSharp {
-                                      fluid(maxWidth: 800, quality: 70) {
+                                      fluid(maxWidth: 200, quality: 70) {
                                         ...GatsbyImageSharpFluid
                                       }
+                                    }
+                                }
+                                images{
+                                    image{
+                                        childImageSharp {
+                                          fluid(maxWidth: 800, quality: 70) {
+                                            ...GatsbyImageSharpFluid
+                                          }
+                                        }
                                     }
                                 }
                             }
@@ -39,6 +41,6 @@ export default ({morePhotoIcon}) => (
                 }
             }
     `}
-        render={(data) => <StorageTemplate morePhotoIcon={morePhotoIcon} storageTitle={data.markdownRemark.frontmatter.storageTitle} storage={data.markdownRemark.frontmatter.storage} />}
+        render={(data) => <StorageTemplate morePhotoIcon={morePhotoIcon} data={data} />}
     />
 )

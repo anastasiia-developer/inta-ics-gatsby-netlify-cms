@@ -119,7 +119,8 @@ export const FaqPageTemplate = ({
                                     description,
                                     header,
                                     location,
-                                    questions
+                                    questions,
+                                    locale
                                     }) =>
     <Fragment>
         {helmet || ''}
@@ -149,8 +150,11 @@ export const FaqPageTemplate = ({
                 )}
             </Wrapper>
         </Section>
-
-        <News/>
+        {locale === 'ua' ?
+            <News/>
+        :
+            <NewsRu/>
+        }
     </Fragment>
 ;
 
@@ -171,6 +175,7 @@ const Faq = ({ data, location, pageContext }) => {
                 header={frontmatter.header}
                 location={location}
                 questions={frontmatter.questions}
+                locale={pageContext.locale}
             />
             <FormFooter locale={pageContext.locale}/>
         </Layout>

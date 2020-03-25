@@ -5,6 +5,7 @@ import Header from "../../components/delivery/Header";
 import Sections from "../../components/delivery/Sections";
 import Cargo from "../../components/mainPage/cargo";
 import Destinations from "../../components/Destinations";
+import DestinationsRu from "../../components/Destinations/index.ru";
 import Clients from "../../components/Clients";
 import Reviews from "../../components/Reviews";
 import Article from "../../components/mainPage/Article";
@@ -49,7 +50,12 @@ export const CostPageTemplate = ({
                     <BarBckgImgSectionText
                         image={barBckgImg}
                     />
-                    <Destinations/>
+                    {
+                        locale === 'ua' ?
+                            <Destinations/>
+                            :
+                            <DestinationsRu/>
+                    }
                 </Fragment>
             }
             <Cargo/>

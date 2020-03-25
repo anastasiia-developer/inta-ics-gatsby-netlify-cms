@@ -5,8 +5,8 @@ import DestinationsTemplate from "./DestinationsTemplate";
 export default () => (
     <StaticQuery
         query={graphql`
-            query DestinationsCommon{
-                markdownRemark(frontmatter: { pageKey: { eq: "components-common" },locale: { eq: "ua" } }) {
+            query DestinationsCommonRu{
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: "ru" }}) {
                     frontmatter {
                         destinations {
                             title

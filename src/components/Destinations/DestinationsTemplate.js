@@ -1,7 +1,6 @@
 import React from "react";
-import Link from 'gatsby'
 import styled from "styled-components";
-import FlagsTemplate from "./FlagTemplate";
+import FlagsTemplate from "../Flags/FlagTemplate";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 
 const Section = styled.section`
@@ -59,13 +58,15 @@ const Section = styled.section`
 `;
 
 
-const DestinationsTemplate = ({ destinations }) => {
+const DestinationsTemplate = ({ data }) => {
+    const destinations = data.markdownRemark.frontmatter.destinations;
+
     if(destinations){
         return(
             <Section>
                 <div className="row-to-column">
                     <div className="column countries">
-                        <h2>Международные грузоперевозки</h2>
+                        <h2>{destinations.title}</h2>
                         <FlagsTemplate
                             link='/countries/'
                             countries={destinations.countries}/>

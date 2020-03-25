@@ -8,6 +8,7 @@ import CalculateHeaderRu from "../components/CalculateHeader/index.ru"
 import {Section} from "./services"
 import OurServices from '../components/delivery/OurServices'
 import Destinations from "../components/Destinations"
+import DestinationsRu from "../components/Destinations/index.ru"
 import Cargo from "../components/mainPage/cargo"
 import Clients from "../components/Clients"
 import Reviews from "../components/Reviews"
@@ -55,8 +56,10 @@ export const InternationalCargoTemplate = ({
                 sections={sections}
             />
             <OurServices locale={locale}/>
-            {locale &&
+            {locale === 'ua' ?
                 <Destinations />
+                 :
+                <DestinationsRu/>
             }
             <Cargo/>
             {locale &&
