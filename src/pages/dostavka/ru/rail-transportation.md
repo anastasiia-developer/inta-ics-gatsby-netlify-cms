@@ -142,8 +142,8 @@ sections:
       и оптимальные сроки транспортировки.
     title: 'Доставка товара из Китая '
     button:
-      text: l
-      link: l
+      text: Узнать больше
+      link: dostavka-tovarov-iz-kitaya/
   - image: /img/inta-ics-негабаритные-перевозки.jpg
     list:
       - image: /img/ (1).png
