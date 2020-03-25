@@ -258,18 +258,18 @@ cargo:
             link: container-transporting
         -   title: Мультимодальные перевозки
             svg: packages    
-            link: cargo/cargo-delivery
+            link: cargo-delivery
         -   title: Перевозка негабаритных грузов
             svg: product    
-            link: cargo/cargo-delivery
+            link: cargo-delivery
         -   title: Перевозка техники
             svg: protected    
-            link: cargo/cargo-delivery
+            link: cargo-delivery
         -   title: Доставка станков и оборудования
             svg: trolleybig    
-            link: cargo/cargo-delivery                                                               
+            link: cargo-delivery                                                               
         -   title: Доставка из Китая в Одессу
             svg: warehouse    
-            link: cargo/cargo-delivery          
+            link: cargo-delivery          
         
 ---

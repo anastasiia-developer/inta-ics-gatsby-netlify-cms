@@ -1,13 +1,13 @@
 import React, {Fragment, useState} from 'react'
 import { graphql } from 'gatsby'
 import styled from "styled-components";
-import Layout from '../../components/Layout'
-import TemplateHeader from "../../components/TemplateHeader";
-import News from "../../components/NewsRoll";
-import NewsRu from "../../components/NewsRoll/index.ru";
-import FormFooter from "../../components/Footer/FormFooter";
-import Arrow from "../../img/arrow2.svg"
-import TitleDesHelmet from "../../components/TitleDesHelmet";
+import Layout from '../components/Layout'
+import TemplateHeader from "../components/TemplateHeader";
+import News from "../components/NewsRoll";
+import NewsRu from "../components/NewsRoll/index.ru";
+import FormFooter from "../components/Footer/FormFooter";
+import Arrow from "../img/arrow2.svg"
+import TitleDesHelmet from "../components/TitleDesHelmet";
 
 const Container = styled.div`
     margin: 0 0 3% 0;

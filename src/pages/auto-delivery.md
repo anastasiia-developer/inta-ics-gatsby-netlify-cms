@@ -9,7 +9,7 @@ description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
 title: Автодоставка
 header:
   buttons:
-    - link: /countries/europe
+    - link: europe
       text: Перевозка грузов из Европы
   images:
     - alt: auto

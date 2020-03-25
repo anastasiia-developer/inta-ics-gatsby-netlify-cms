@@ -42,9 +42,9 @@ export const InternationalCargoTemplate = ({
                     crumbLabelParent={crumbLabelParent}
                     crumbPathParent={false}
                     children={location && !header.buttons &&
-                      locale === 'ua' &&
+                      locale === 'ua' ?
                         <CalculateHeader />
-                        &&
+                        :
                         <CalculateHeaderRu />
                     }
                 />

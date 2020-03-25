@@ -102,8 +102,9 @@ const SubNav = styled.nav`
         }
 `;
 
-const SubMenu = ({list, setActiveMob, isActiveMob, startPath}) => {
+const SubMenu = ({list, setActiveMob, isActiveMob}) => {
     const [isActiveSub, setActiveSub] = useState(false);
+
     return(
         <SubNav
             isActiveSub={isActiveSub}>
@@ -121,7 +122,7 @@ const SubMenu = ({list, setActiveMob, isActiveMob, startPath}) => {
                         key={index}
                         onClick={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
                         onKeyDown={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
-                        to={startPath+link.frontmatter.name}>
+                        to={link.frontmatter.name}>
                         {link.frontmatter.crumbLabel}
                         <ArrowLine/>
                     </Link>

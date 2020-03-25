@@ -68,7 +68,7 @@ const DestinationsTemplate = ({ data }) => {
                     <div className="column countries">
                         <h2>{destinations.title}</h2>
                         <FlagsTemplate
-                            link='/countries/'
+                            link
                             countries={destinations.countries}/>
                     </div>
                     <PreviewCompatibleImage
