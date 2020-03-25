@@ -388,13 +388,16 @@ collections:
             {label: "Название услуги", name: "nameCategory", widget: string},
             {label: "цена", name: "price", widget: number},
             {label: "Картинка", name: image, widget: image}
-            ]}
+            {label: "alt img", name: alt, widget: string}
+          ]}
           ]}
         ]}
       - {label: Clients, name: clients, widget: list, fields: [
           {label: image, name: image, widget: image}
+          {label: alt, name: alt, widget: string}
         ]}
       - {label: Destinations, name: destinations, widget: object, fields: [
+          {label: title, name: title, widget: string},
           {label: countries, name: countries, widget: list, fields: [
             {label: country, name: country, widget: string},
             {label: flag, name: flag, widget: image},
@@ -408,7 +411,7 @@ collections:
           {label: "btn", name: btn, widget: string},
           {label: "from", name: from, widget: string},
           {label: "to", name: to, widget: string},
-          {label: "toCountry", name: to, widget: string},
+          {label: "toCountry", name: toCountry, widget: string},
           {label: "weight", name: weight, widget: string},
           {label: "phone", name: phone, widget: string},
           {label: "email", name: email, widget: string},
@@ -428,7 +431,8 @@ collections:
           {label: "bonusTitle", name: bonusTitle, widget: string},
           {label: "btn", name: btn, widget: string},
           {label: "btnLink", name: btnLink, widget: string},
-          {label: image, name: image, widget: image}
+          {label: image, name: image, widget: image},
+          {label: alt, name: alt, widget: string}
       ]}
       - {label: "footer", name: footer, widget: object, fields: [
           {label: "description", name: description, widget: string},
@@ -440,6 +444,10 @@ collections:
             ]}
           ]}
         ]}
+      - {label: "news", name: news, widget: object, fields: [
+          {label: "Заголовок", name: title, widget: string},
+          {label: "btn", name: btn, widget: string}
+      ]}
   - name: "pages"
     label: "Страницы"
     files:
