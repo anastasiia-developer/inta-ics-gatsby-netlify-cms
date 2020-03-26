@@ -170,7 +170,7 @@ calculateHeader:
   weight: Вес груза
   toCountry: Украина
   to: Куда?
-  btn: Рассчет стоимости
+  btn: Расчет стоимости
   email: Email
   description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
   comment: Комментарий
