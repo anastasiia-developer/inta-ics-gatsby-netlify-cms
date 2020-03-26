@@ -3,7 +3,7 @@ pageKey: components-common
 locale: ua
 title: UaОбщие компонентны для всех страницппhgghjghggh
 warehouses:
-  title: Наші склади
+  title: 'Наші офіси та склади '
   list:
     - country: США
       city: (New Jersey)
