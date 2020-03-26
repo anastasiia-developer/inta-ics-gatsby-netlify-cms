@@ -285,10 +285,7 @@ cargo:
     - title: Доставка обладнання
       svg: protected
       link: dostavka-obladnannya/
-    - title: Доставка станков и оборудования
-      svg: trolleybig
-      link: cargo-delivery
-    - title: Доставка из Китая в Одессу
+    - title: Доставка з Китаю в Одесу
       svg: warehouse
-      link: cargo-delivery
+      link: dostavka-z-kyitayu-v-odesu/
 ---
