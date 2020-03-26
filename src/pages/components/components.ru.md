@@ -244,19 +244,19 @@ ourServices:
   list:
     - title: Проведение платежей
       svg: shopping
-      link: making-payments
+      link: oplata-postavschiku-v-kitae
     - title: Поиск поставщика
       svg: search
-      link: search-and-verification
+      link: poisk-postavschika-v-kitae
     - title: Заказ товара из Китая
       svg: delivery
-      link: making-payments
+      link: dostavka-tovarov-iz-kitaya
     - title: Таможенное оформление груза
       svg: clipboard
-      link: customs-clearance
+      link: raztamozhka
     - title: Складские услуги
       svg: warehouse
-      link: warehousing-services
+      link: skladskie-uslugi
 name: components
 reviews:
   - name: Иван Заец
