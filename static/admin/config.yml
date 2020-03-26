@@ -9,7 +9,6 @@ backend:
     deleteMedia: '[skip ci] Delete “{{path}}”'
 media_folder: static/img
 public_folder: /img
-required: false
 
 collections:
   - name: "blog"
@@ -21,8 +20,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"},
-            {label: "Description", name: "description", widget: "text"}
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Description", name: "description", widget: "text"}
       ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -40,8 +39,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"},
-            {label: "Description", name: "description", widget: "text"}
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Description", name: "description", widget: "text"}
       ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -59,72 +58,16 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string" },
-          {label: "Description", name: "description", widget: "text"}
+      {label: "Title", name: "title", widget: "string" },
+      {label: "Description", name: "description", widget: "text"}
       ]}
       - {label: "имя в навигации категории", name: "crumbLabelParent", widget: "string"}
       - {label: "имя в навигации", name: "crumbLabel", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: Header, name: header, widget: object, fields: [
-          {label: Images, name: images, widget: list, fields: [
-            {label: Alt, name: alt, widget: string, required: false},
-            {label: Image, name: image, widget: image}
-          ]},
-          {label: "Scope information", name: scopeInformation, widget: list, fields: [
-            {label: text, name: text, widget: string},
-            {label: Image, name: image, widget: image}
-          ]},
-          {label: Buttons, name: buttons, widget: list, fields: [
-            {label: text, name: text, widget: string},
-            {label: Link, name: link, widget: string}
-          ]}
-      ]}
-      - {label: "sections", name: "sections", widget: list, fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Картинка", name: image, widget: image},
-          {label: "Текст", name: text, widget: "markdown"},
-          {label: "list", name: list, widget: list, fields: [
-            {label: "title", name: title, widget: string},
-            {label: "Картинка", name: image, widget: image}
-          ]},
-          {label: Button, name: button, widget: object, fields: [
-            {label: text, name: text, widget: string},
-            {label: Link, name: link, widget: string}
-          ]}
-      ]}
-      - {label: "sectionText", name: "sectionText", widget: object, fields: [
-        {label: "Title", name: "title", widget: "string"},
-        {label: "Картинка", name: image, widget: image},
-        {label: "Текст", name: text, widget: "markdown"},
-      ]}
-      - {label: seoSections, name: seoSections, widget: object, fields: [
-          {label: title, name: title, widget: "string"},
-          {label: "sections", name: "sections", widget: list, fields: [
-            {label: "Текст", name: text, widget: "markdown"},
-            {label: "altImg", name: "altImg", widget: "string", required: false},
-            {label: "Картинка", name: image, widget: image}
-          ]}
-      ]}
-  - name: "delivery-ru"
-    label: "Доставка - RU"
-    folder: "src/pages/ru"
-    filter: {field: "templateKey", value: "delivery"}
-    create: false
-    slug: "{{name}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
-      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Description", name: "description", widget: "text"}
-      ]}
-      - {label: "имя в навигации категории", name: "crumbLabelParent", widget: "string"}
-      - {label: "имя в навигации", name: "crumbLabel", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
-      {label: Alt, name: alt, widget: string, required: false},
+      {label: Alt, name: alt, widget: string},
       {label: Image, name: image, widget: image}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
@@ -137,17 +80,17 @@ collections:
       ]}
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Картинка", name: image, widget: image},
-          {label: "Текст", name: text, widget: "markdown"},
-          {label: "list", name: list, widget: list, fields: [
-            {label: "title", name: title, widget: string},
-            {label: "Картинка", name: image, widget: image}
-          ]},
-          {label: Button, name: button, widget: object, fields: [
-            {label: text, name: text, widget: string},
-            {label: Link, name: link, widget: string}
-          ]}
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Картинка", name: image, widget: image},
+      {label: "Текст", name: text, widget: "markdown"},
+      {label: "list", name: list, widget: list, fields: [
+      {label: "title", name: title, widget: string},
+      {label: "Картинка", name: image, widget: image}
+      ]},
+      {label: Button, name: button, widget: object, fields: [
+      {label: text, name: text, widget: string},
+      {label: Link, name: link, widget: string}
+      ]}
       ]}
       - {label: "sectionText", name: "sectionText", widget: object, fields: [
       {label: "Title", name: "title", widget: "string"},
@@ -158,7 +101,63 @@ collections:
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string", required: false},
+      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "Картинка", name: image, widget: image}
+      ]}
+      ]}
+  - name: "delivery-ru"
+    label: "Доставка - RU"
+    folder: "src/pages/ru"
+    filter: {field: "templateKey", value: "delivery"}
+    create: false
+    slug: "{{name}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Description", name: "description", widget: "text"}
+      ]}
+      - {label: "имя в навигации категории", name: "crumbLabelParent", widget: "string"}
+      - {label: "имя в навигации", name: "crumbLabel", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: Header, name: header, widget: object, fields: [
+      {label: Images, name: images, widget: list, fields: [
+      {label: Alt, name: alt, widget: string},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: "Scope information", name: scopeInformation, widget: list, fields: [
+      {label: text, name: text, widget: string},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: Buttons, name: buttons, widget: list, fields: [
+      {label: text, name: text, widget: string},
+      {label: Link, name: link, widget: string}
+      ]}
+      ]}
+      - {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Картинка", name: image, widget: image},
+      {label: "Текст", name: text, widget: "markdown"},
+      {label: "list", name: list, widget: list, fields: [
+      {label: "title", name: title, widget: string},
+      {label: "Картинка", name: image, widget: image}
+      ]},
+      {label: Button, name: button, widget: object, fields: [
+      {label: text, name: text, widget: string},
+      {label: Link, name: link, widget: string}
+      ]}
+      ]}
+      - {label: "sectionText", name: "sectionText", widget: object, fields: [
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Картинка", name: image, widget: image},
+      {label: "Текст", name: text, widget: "markdown"},
+      ]}
+      - {label: seoSections, name: seoSections, widget: object, fields: [
+      {label: title, name: title, widget: "string"},
+      {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Текст", name: text, widget: "markdown"},
+      {label: "altImg", name: "altImg", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -172,18 +171,18 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-destinations"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Description", name: "description", widget: "text"}
-        ]}
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Description", name: "description", widget: "text"}
+      ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
-        {label: Images, name: images, widget: list, fields: [
-        {label: Alt, name: alt, widget: string, required: false},
-        {label: Image, name: image, widget: image}
+      {label: Images, name: images, widget: list, fields: [
+      {label: Alt, name: alt, widget: string},
+      {label: Image, name: image, widget: image}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string},
@@ -195,19 +194,19 @@ collections:
       ]}
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Картинка", name: image, widget: image},
-          {label: "text", name: text, widget: "markdown"},
-          {label: "list", name: list, widget: list, fields: [
-            {label: "title", name: title, widget: string},
-            {label: "Картинка", name: image, widget: image}
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Картинка", name: image, widget: image},
+      {label: "text", name: text, widget: "markdown"},
+      {label: "list", name: list, widget: list, fields: [
+      {label: "title", name: title, widget: string},
+      {label: "Картинка", name: image, widget: image}
       ]},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string", required: false},
+      {label: "altImg", name: "altImg", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -221,9 +220,9 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-destinations"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Description", name: "description", widget: "text"}
-        ]}
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Description", name: "description", widget: "text"}
+      ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
@@ -231,7 +230,7 @@ collections:
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
-      {label: Alt, name: alt, widget: string, required: false},
+      {label: Alt, name: alt, widget: string},
       {label: Image, name: image, widget: image}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
@@ -256,7 +255,7 @@ collections:
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string", required: false},
+      {label: "altImg", name: "altImg", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -270,9 +269,9 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-cargo"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Description", name: "description", widget: "text"}
-        ]}
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Description", name: "description", widget: "text"}
+      ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
@@ -280,7 +279,7 @@ collections:
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
-      {label: Alt, name: alt, widget: string, required: false},
+      {label: Alt, name: alt, widget: string},
       {label: Image, name: image, widget: image}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
@@ -305,7 +304,7 @@ collections:
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string", required: false},
+      {label: "altImg", name: "altImg", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -319,9 +318,9 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-cargo"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Description", name: "description", widget: "text"}
-        ]}
+      {label: "Title", name: "title", widget: "string"},
+      {label: "Description", name: "description", widget: "text"}
+      ]}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
@@ -329,7 +328,7 @@ collections:
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
-      {label: Alt, name: alt, widget: string, required: false},
+      {label: Alt, name: alt, widget: string},
       {label: Image, name: image, widget: image}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
@@ -354,7 +353,7 @@ collections:
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string", required: false},
+      {label: "altImg", name: "altImg", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -364,112 +363,112 @@ collections:
     fields:
       - {label: "Template Key", name: "pageKey", widget: "hidden", default: "components-common"}
       - {label: "locale", name: "locale", widget: "hidden"}
-      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "склады", name: warehouses, widget: object, fields: [
-          {label: title, name: title, widget: string, required: false},
-          {label: list, name: list, widget: list, required: false, fields: [
-             {label: country, name: country, widget: string, required: false},
-             {label: city, name: city, widget: string, required: false},
-             {label: flag, name: flag, widget: image, required: false},
-             {label: postIndex, name: postIndex, widget: string, required: false},
-             {label: address, name: address, widget: "markdown", required: false},
-             {label: phone, name: phone, widget: string, required: false},
-             {label: image, name: image, widget: image, required: false},
-             {label: images, name: images, widget: list, fields: [
-               {label: image, name: image, widget: image, required: false},
-               {label: alt, name: alt, widget: string, required: false},
-            ]},
-          ]},
+      {label: title, name: title, widget: string},
+      {label: list, name: list, widget: list, fields: [
+      {label: country, name: country, widget: string},
+      {label: city, name: city, widget: string},
+      {label: flag, name: flag, widget: image},
+      {label: postIndex, name: postIndex, widget: string},
+      {label: address, name: address, widget: "markdown"},
+      {label: phone, name: phone, widget: string},
+      {label: image, name: image, widget: image},
+      {label: images, name: images, widget: list, fields: [
+      {label: image, name: image, widget: image},
+      {label: alt, name: alt, widget: string},
+      ]},
+      ]},
       ]}
-      - {label: "Calculator", name: calculator, widget: object, required: false, fields: [
-        {label: "Заголовок", name: title, widget: string},
-        {label: "result Block", name: resultBlock, widget: object, fields: [
-          {label: "Заголовок", name: title, widget: string},
-          {label: "Кнопка", name: btnText, widget: string},
-          {label: "result Text", name: resultText, widget: string},
-          {label: "сноска", name: note, widget: text}
-        ]},
-        {label: "Составляющие цены", name: constituents, widget: list, fields: [
-          {label: "Заголовок категории", name: title, widget: string},
-          {label: "category", name: category, widget: list, fields: [
-            {label: "Название услуги", name: "nameCategory", widget: string},
-            {label: "цена", name: "price", widget: number},
-            {label: "Картинка", name: image, widget: image},
-            {label: "alt img", name: alt, widget: string, required: false}
-          ]}
-          ]}
-        ]}
-      - {label: Clients, name: clients, widget: list, required: false, fields: [
-          {label: image, name: image, widget: image},
-          {label: alt, name: alt, widget: string, required: false}
-        ]}
-      - {label: Destinations, name: destinations, widget: object, required: false, fields: [
-          {label: title, name: title, widget: string},
-          {label: countries, name: countries, widget: list, fields: [
-            {label: country, name: country, widget: string},
-            {label: flag, name: flag, widget: image},
-            {label: 'path name стр доставки, например "france"', name: link, widget: string, required: false}
-          ]},
-          {label: image, name: image, widget: image}
+      - {label: "Calculator", name: calculator, widget: object, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "result Block", name: resultBlock, widget: object, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "Кнопка", name: btnText, widget: string},
+      {label: "result Text", name: resultText, widget: string},
+      {label: "сноска", name: note, widget: text}
+      ]},
+      {label: "Составляющие цены", name: constituents, widget: list, fields: [
+      {label: "Заголовок категории", name: title, widget: string},
+      {label: "category", name: category, widget: list, fields: [
+      {label: "Название услуги", name: "nameCategory", widget: string},
+      {label: "цена", name: "price", widget: number},
+      {label: "Картинка", name: image, widget: image},
+      {label: "alt img", name: alt, widget: string}
       ]}
-      - {label: "калькулятор в шапке", name: calculateHeader, required: false, widget: object, fields: [
-          {label: "Заголовок", name: title, widget: string},
-          {label: "description", name: description, widget: string},
-          {label: "btn", name: btn, widget: string},
-          {label: "from", name: from, widget: string},
-          {label: "to", name: to, widget: string},
-          {label: "toCountry", name: toCountry, widget: string},
-          {label: "weight", name: weight, widget: string},
-          {label: "phone", name: phone, widget: string},
-          {label: "email", name: email, widget: string},
-          {label: "comment", name: comment, widget: string},
       ]}
-      - {label: "постоянный popup", name: mainPopup, widget: object, required: false, fields: [
-          {label: "Заголовок", name: title, widget: string},
-          {label: "h2", name: description, widget: string},
-          {label: "h3", name: subTitle, widget: string},
-          {label: "btn", name: btn, widget: string},
       ]}
-      - {label: "popup Thanks", name: popupThanks, widget: object, required: false, fields: [
-          {label: "Заголовок", name: title, widget: string},
-          {label: "subTitle", name: subTitle, widget: string},
-          {label: "description", name: description, widget: string},
-          {label: "bonus", name: bonus, widget: string},
-          {label: "bonusTitle", name: bonusTitle, widget: string},
-          {label: "btn", name: btn, widget: string},
-          {label: "btnLink", name: btnLink, widget: string},
-          {label: image, name: image, widget: image},
-          {label: alt, name: alt, widget: string, required: false,}
+      - {label: Clients, name: clients, widget: list, fields: [
+      {label: image, name: image, widget: image},
+      {label: alt, name: alt, widget: string}
       ]}
-      - {label: "footer", name: footer, widget: object,required: false, fields: [
-          {label: "description", name: description, widget: string},
-          {label: "storeName", name: storeName, widget: string},
-          {label: "навигация колекция", name: navCollection, widget: list, fields: [
-            {label: "навигация", name: nav, widget: list, fields: [
-              {label: "name", name: name, widget: string},
-              {label: "url", name: link, widget: string}
-            ]}
-          ]}
-        ]}
-      - {label: "news", name: news, widget: object, required: false, fields: [
-          {label: "Заголовок", name: title, widget: string},
-          {label: "btn", name: btn, widget: string}
+      - {label: Destinations, name: destinations, widget: object, fields: [
+      {label: title, name: title, widget: string},
+      {label: countries, name: countries, widget: list, fields: [
+      {label: country, name: country, widget: string},
+      {label: flag, name: flag, widget: image},
+      {label: 'path name стр доставки, например "france"', name: link, widget: string, required: false}
+      ]},
+      {label: image, name: image, widget: image}
       ]}
-      - {label: "cargo", name: cargo, widget: object, required: false, fields: [
-          {label: "Заголовок", name: title, widget: string},
-          {label: "list", name: list, widget: list, fields: [
-            {label: "Заголовок", name: title, widget: string},
-            {label: "svg", name: svg, widget: string},
-            {label: "link", name: link, widget: string},
-          ]}
+      - {label: "калькулятор в шапке", name: calculateHeader, widget: object, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "description", name: description, widget: string},
+      {label: "btn", name: btn, widget: string},
+      {label: "from", name: from, widget: string},
+      {label: "to", name: to, widget: string},
+      {label: "toCountry", name: toCountry, widget: string},
+      {label: "weight", name: weight, widget: string},
+      {label: "phone", name: phone, widget: string},
+      {label: "email", name: email, widget: string},
+      {label: "comment", name: comment, widget: string},
       ]}
-      - {label: "Наши услуги", name: ourServices, widget: object, required: false, fields: [
-          {label: "Заголовок", name: title, widget: string},
-          {label: "list", name: list, widget: list, fields: [
-            {label: "Заголовок", name: title, widget: string},
-            {label: "svg", name: svg, widget: string},
-            {label: "link", name: link, widget: string},
-          ]}
+      - {label: "постоянный popup", name: mainPopup, widget: object, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "h2", name: description, widget: string},
+      {label: "h3", name: subTitle, widget: string},
+      {label: "btn", name: btn, widget: string},
+      ]}
+      - {label: "popup Thanks", name: popupThanks, widget: object, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "subTitle", name: subTitle, widget: string},
+      {label: "description", name: description, widget: string},
+      {label: "bonus", name: bonus, widget: string},
+      {label: "bonusTitle", name: bonusTitle, widget: string},
+      {label: "btn", name: btn, widget: string},
+      {label: "btnLink", name: btnLink, widget: string},
+      {label: image, name: image, widget: image},
+      {label: alt, name: alt, widget: string}
+      ]}
+      - {label: "footer", name: footer, widget: object, fields: [
+      {label: "description", name: description, widget: string},
+      {label: "storeName", name: storeName, widget: string},
+      {label: "навигация колекция", name: navCollection, widget: list, fields: [
+      {label: "навигация", name: nav, widget: list, fields: [
+      {label: "name", name: name, widget: string},
+      {label: "url", name: link, widget: string}
+      ]}
+      ]}
+      ]}
+      - {label: "news", name: news, widget: object, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "btn", name: btn, widget: string}
+      ]}
+      - {label: "cargo", name: cargo, widget: object, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "list", name: list, widget: list, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "svg", name: svg, widget: string},
+      {label: "link", name: link, widget: string},
+      ]}
+      ]}
+      - {label: "Наши услуги", name: ourServices, widget: object, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "list", name: list, widget: list, fields: [
+      {label: "Заголовок", name: title, widget: string},
+      {label: "svg", name: svg, widget: string},
+      {label: "link", name: link, widget: string},
+      ]}
       ]}
   - name: "pages"
     label: "Страницы"
@@ -480,178 +479,8 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"}
-            ]}
-          - {label: Title, name: title, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Header, name: header, widget: object, fields: [
-              {label: Slide, name: slide, widget: list, fields: [
-                {label: Images, name: images, widget: list, fields: [
-                  {label: Image, name: image, widget: image},
-                  {label: Alt, name: alt, widget: string, required: false}
-                ]},
-                {label: "Scope information", name: scopeInformation, widget: list, fields: [
-                  {label: Image, name: image, widget: image},
-                  {label: text, name: text, widget: string}
-                ]},
-                {label: Buttons, name: buttons, widget: list, fields: [
-                  {label: Link, name: link, widget: string},
-                  {label: text, name: text, widget: string}
-                ]}
-              ]}
-            ]}
-          - {label: "Международные перевозки", name: section, widget: object, fields: [
-              {label: "Заголовок", name: title, widget: string},
-              {label: "Под заголовок", name: subTitle, widget: string},
-              {label: "Блоки", name: blocks, widget: list, fields: [
-                {label: "Картинка", name: image, widget: image},
-                {label: "Текст", name: title, widget: string}
-              ]}
-          ]}
-          - {label: "Про нас", name: about, widget: object, fields: [
-              {label: "Заголовок", name: title, widget: string},
-              {label: "Текст", name: text, widget: "markdown"},
-              {label: "Картинка", name: image, widget: image},
-          ]}
-          - {label: seoSections, name: seoSections, widget: object, fields: [
-              {label: title, name: title, widget: "string"},
-              {label: "sections", name: "sections", widget: list, fields: [
-                {label: "Текст", name: text, widget: "markdown"},
-                {label: "altImg", name: "altImg", widget: "string", required: false,},
-                {label: "Картинка", name: image, widget: image}
-              ]}
-          ]}
-      - file: "src/pages/about/index.md"
-        label: "О нас"
-        name: "about"
-        fields:
-          - {label: "Template Key", name: "pageKey", widget: "hidden", default: "about"}
-          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"}
-          ]}
-          - {label: "crumbLabel", name: "crumbLabel", widget: "string"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "description", name: "description", widget: "string"}
-          - {label: Header, name: header, widget: object, fields: [
-              {label: Images, name: images, widget: list, fields: [
-                {label: Alt, name: alt, widget: string, required: false},
-                {label: Image, name: image, widget: image}
-              ]},
-              {label: Buttons, name: buttons, widget: list, fields: [
-                {label: text, name: text, widget: string},
-                {label: Link, name: link, widget: string}
-              ]}
-            ]}
-          - {label: "weSpecialize", name: "weSpecialize", widget: list, fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: imageAlt, name: imageAlt, widget: object, fields: [
-                {label: Alt, name: alt, widget: string, required: false,},
-                {label: image, name: image, widget: image}
-              ]},
-              {label: "description", name: "description", widget: "string"},
-              {label: "link", name: "link", widget: "string"}
-            ]}
-          - {label: "ourValues", name: "ourValues", widget: list, fields: [
-              {label: "Title", name: "title", widget: string},
-              {label: "description", name: "description", widget: string}
-            ]}
-          - {label: "aboutImg", name: "aboutImg", widget: image}
-      - file: "src/pages/cost/cost.md"
-        label: "Стоимость"
-        name: "cost"
-        fields:
-          - {label: "Page Key", name: "pageKey", widget: "hidden", default: "cost"}
-          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"}
-          ]}
-          - {label: Title, name: title, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Header, name: header, widget: object, fields: [
-              {label: Images, name: images, widget: list, fields: [
-                {label: Image, name: image, widget: image},
-                {label: Alt, name: alt, widget: string, required: false,}
-              ]},
-              {label: "Scope information", name: scopeInformation, widget: list, fields: [
-                {label: Image, name: image, widget: image},
-                {label: text, name: text, widget: string}
-              ]},
-          ]}
-          - {label: "sections", name: "sections", widget: list, fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Картинка", name: image, widget: image},
-              {label: "Текст", name: text, widget: "markdown"},
-          ]}
-          - {label: seoSections, name: seoSections, widget: object, fields: [
-            {label: title, name: title, widget: "string"},
-              {label: "sections", name: "sections", widget: list, fields: [
-                {label: "Текст", name: text, widget: "markdown"},
-                {label: "altImg", name: "altImg", widget: "string", required: false,},
-                {label: "Картинка", name: image, widget: image}
-            ]}
-          ]}
-      - file: "src/pages/reviews.md"
-        label: "Отзывы"
-        name: "reviews"
-        fields:
-          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"}
-          ]}
-          - {label: Title, name: title, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: CrumbLabel, name: crumbLabel, widget: string}
-          - {label: name, name: name, widget: string}
-          - {label: Header, name: header, widget: object, fields: [
-              {label: Images, name: images, widget: list, fields: [
-                {label: Image, name: image, widget: image},
-                {label: Alt, name: alt, widget: string, required: false,}
-              ]},
-              {label: Buttons, name: buttons, widget: list, fields: [
-                {label: text, name: text, widget: string},
-                {label: Link, name: link, widget: string}
-              ]}
-          ]}
-          - {label: Reviews, name: reviews, widget: list, fields: [
-              {label: name, name: name, widget: string},
-              {label: text, name: text, widget: markdown},
-              {label: date, name: date, widget: string},
-              {label: source, name: source, widget: object, fields: [
-                {label: name, name: name, widget: string},
-                {label: url, name: url, widget: string}
-              ]}
-          ]}
-      - file: "src/pages/contact/contact.md"
-        label: "Контакты"
-        name: "contact"
-        fields:
-          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"}
-          ]}
-          - {label: Title, name: title, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: CrumbLabel, name: crumbLabel, widget: string}
-          - {label: name, name: name, widget: string}
-          - {label: Header, name: header, widget: object, fields: [
-              {label: Image, name: image, widget: image},
-              {label: Alt, name: alt, widget: string, required: false},
-              {label: tel, name: tel, widget: string},
-              {label: name, name: name, widget: string},
-          ]}
-  - name: "pages-ru"
-    label: "Страницы RU"
-    files:
-      - file: "src/pages/ru/index.ru.md"
-        label: "Главная"
-        name: "index-ru"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"}
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
           ]}
           - {label: Title, name: title, widget: string}
           - {label: Description, name: description, widget: string}
@@ -659,7 +488,7 @@ collections:
           {label: Slide, name: slide, widget: list, fields: [
           {label: Images, name: images, widget: list, fields: [
           {label: Image, name: image, widget: image},
-          {label: Alt, name: alt, widget: string, required: false,}
+          {label: Alt, name: alt, widget: string}
           ]},
           {label: "Scope information", name: scopeInformation, widget: list, fields: [
           {label: Image, name: image, widget: image},
@@ -687,7 +516,177 @@ collections:
           - {label: seoSections, name: seoSections, widget: object, fields: [
           {label: title, name: title, widget: "string"},
           {label: "sections", name: "sections", widget: list, fields: [
-          {label: "altImg", name: "altImg", widget: "string", required: false},
+          {label: "Текст", name: text, widget: "markdown"},
+          {label: "altImg", name: "altImg", widget: "string"},
+          {label: "Картинка", name: image, widget: image}
+          ]}
+          ]}
+      - file: "src/pages/about/index.md"
+        label: "О нас"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "pageKey", widget: "hidden", default: "about"}
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+          ]}
+          - {label: "crumbLabel", name: "crumbLabel", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "description", name: "description", widget: "string"}
+          - {label: Header, name: header, widget: object, fields: [
+          {label: Images, name: images, widget: list, fields: [
+          {label: Alt, name: alt, widget: string},
+          {label: Image, name: image, widget: image}
+          ]},
+          {label: Buttons, name: buttons, widget: list, fields: [
+          {label: text, name: text, widget: string},
+          {label: Link, name: link, widget: string}
+          ]}
+          ]}
+          - {label: "weSpecialize", name: "weSpecialize", widget: list, fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: imageAlt, name: imageAlt, widget: object, fields: [
+          {label: Alt, name: alt, widget: string},
+          {label: image, name: image, widget: image}
+          ]},
+          {label: "description", name: "description", widget: "string"},
+          {label: "link", name: "link", widget: "string"}
+          ]}
+          - {label: "ourValues", name: "ourValues", widget: list, fields: [
+          {label: "Title", name: "title", widget: string},
+          {label: "description", name: "description", widget: string}
+          ]}
+          - {label: "aboutImg", name: "aboutImg", widget: image}
+      - file: "src/pages/cost/cost.md"
+        label: "Стоимость"
+        name: "cost"
+        fields:
+          - {label: "Page Key", name: "pageKey", widget: "hidden", default: "cost"}
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+          ]}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Header, name: header, widget: object, fields: [
+          {label: Images, name: images, widget: list, fields: [
+          {label: Image, name: image, widget: image},
+          {label: Alt, name: alt, widget: string}
+          ]},
+          {label: "Scope information", name: scopeInformation, widget: list, fields: [
+          {label: Image, name: image, widget: image},
+          {label: text, name: text, widget: string}
+          ]},
+          ]}
+          - {label: "sections", name: "sections", widget: list, fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Картинка", name: image, widget: image},
+          {label: "Текст", name: text, widget: "markdown"},
+          ]}
+          - {label: seoSections, name: seoSections, widget: object, fields: [
+          {label: title, name: title, widget: "string"},
+          {label: "sections", name: "sections", widget: list, fields: [
+          {label: "Текст", name: text, widget: "markdown"},
+          {label: "altImg", name: "altImg", widget: "string"},
+          {label: "Картинка", name: image, widget: image}
+          ]}
+          ]}
+      - file: "src/pages/reviews.md"
+        label: "Отзывы"
+        name: "reviews"
+        fields:
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+          ]}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: CrumbLabel, name: crumbLabel, widget: string}
+          - {label: name, name: name, widget: string}
+          - {label: Header, name: header, widget: object, fields: [
+          {label: Images, name: images, widget: list, fields: [
+          {label: Image, name: image, widget: image},
+          {label: Alt, name: alt, widget: string}
+          ]},
+          {label: Buttons, name: buttons, widget: list, fields: [
+          {label: text, name: text, widget: string},
+          {label: Link, name: link, widget: string}
+          ]}
+          ]}
+          - {label: Reviews, name: reviews, widget: list, fields: [
+          {label: name, name: name, widget: string},
+          {label: text, name: text, widget: markdown},
+          {label: date, name: date, widget: string},
+          {label: source, name: source, widget: object, fields: [
+          {label: name, name: name, widget: string},
+          {label: url, name: url, widget: string}
+          ]}
+          ]}
+      - file: "src/pages/contact/contact.md"
+        label: "Контакты"
+        name: "contact"
+        fields:
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+          ]}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: CrumbLabel, name: crumbLabel, widget: string}
+          - {label: name, name: name, widget: string}
+          - {label: Header, name: header, widget: object, fields: [
+          {label: Image, name: image, widget: image},
+          {label: Alt, name: alt, widget: string},
+          {label: tel, name: tel, widget: string},
+          {label: name, name: name, widget: string},
+          ]}
+  - name: "pages-ru"
+    label: "Страницы RU"
+    files:
+      - file: "src/pages/ru/index.ru.md"
+        label: "Главная"
+        name: "index-ru"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
+          ]}
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Header, name: header, widget: object, fields: [
+          {label: Slide, name: slide, widget: list, fields: [
+          {label: Images, name: images, widget: list, fields: [
+          {label: Image, name: image, widget: image},
+          {label: Alt, name: alt, widget: string}
+          ]},
+          {label: "Scope information", name: scopeInformation, widget: list, fields: [
+          {label: Image, name: image, widget: image},
+          {label: text, name: text, widget: string}
+          ]},
+          {label: Buttons, name: buttons, widget: list, fields: [
+          {label: Link, name: link, widget: string},
+          {label: text, name: text, widget: string}
+          ]}
+          ]}
+          ]}
+          - {label: "Международные перевозки", name: section, widget: object, fields: [
+          {label: "Заголовок", name: title, widget: string},
+          {label: "Под заголовок", name: subTitle, widget: string},
+          {label: "Блоки", name: blocks, widget: list, fields: [
+          {label: "Картинка", name: image, widget: image},
+          {label: "Текст", name: title, widget: string}
+          ]}
+          ]}
+          - {label: "Про нас", name: about, widget: object, fields: [
+          {label: "Заголовок", name: title, widget: string},
+          {label: "Текст", name: text, widget: "markdown"},
+          {label: "Картинка", name: image, widget: image},
+          ]}
+          - {label: seoSections, name: seoSections, widget: object, fields: [
+          {label: title, name: title, widget: "string"},
+          {label: "sections", name: "sections", widget: list, fields: [
+          {label: "altImg", name: "altImg", widget: "string"},
           {label: "Текст", name: text, widget: "markdown"},
           {label: "Картинка", name: image, widget: image}
           ]}
@@ -698,15 +697,15 @@ collections:
         fields:
           - {label: "Template Key", name: "pageKey", widget: "hidden", default: "about-page"}
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"}
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
           ]}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "crumbLabel", name: "crumbLabel", widget: "string"}
           - {label: "description", name: "description", widget: "string"}
           - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
-          {label: Alt, name: alt, widget: string, required: false},
+          {label: Alt, name: alt, widget: string},
           {label: Image, name: image, widget: image}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
@@ -716,7 +715,7 @@ collections:
           ]}
           - {label: "WeSpecialize", name: "weSpecialize", widget: list, fields: [
           {label: imageAlt, name: imageAlt, widget: object, fields: [
-          {label: Alt, name: alt, widget: string, required: false},
+          {label: Alt, name: alt, widget: string},
           {label: Image, name: image, widget: image}
           ]},
           {label: "Title", name: "title", widget: "string"},
@@ -733,15 +732,15 @@ collections:
         name: "cost-ru"
         fields:
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-              {label: "Title", name: "title", widget: "string"},
-              {label: "Description", name: "description", widget: "text"}
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
           ]}
           - {label: Title, name: title, widget: string}
           - {label: Description, name: description, widget: string}
           - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
           {label: Image, name: image, widget: image},
-          {label: Alt, name: alt, widget: string, required: false}
+          {label: Alt, name: alt, widget: string}
           ]},
           {label: "Scope information", name: scopeInformation, widget: list, fields: [
           {label: Image, name: image, widget: image},
@@ -757,7 +756,7 @@ collections:
           {label: title, name: title, widget: "string"},
           {label: "sections", name: "sections", widget: list, fields: [
           {label: "Текст", name: text, widget: "markdown"},
-          {label: "altImg", name: "altImg", widget: "string", required: false},
+          {label: "altImg", name: "altImg", widget: "string"},
           {label: "Картинка", name: image, widget: image}
           ]}
           ]}
@@ -775,7 +774,7 @@ collections:
           - {label: name, name: name, widget: string}
           - {label: Header, name: header, widget: object, fields: [
           {label: Image, name: image, widget: image},
-          {label: Alt, name: alt, widget: string, required: false},
+          {label: Alt, name: alt, widget: string},
           {label: tel, name: tel, widget: string},
           {label: name, name: name, widget: string},
           ]}
