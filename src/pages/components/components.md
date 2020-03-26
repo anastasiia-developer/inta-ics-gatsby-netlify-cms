@@ -164,16 +164,16 @@ destinations:
       link: dostavka-z-oae/
   image: /img/map.png
 calculateHeader:
-  from: Откуда груз?
+  from: Звідки вантаж?
   phone: Телефон
-  title: Рассчитать стоимость доставки
-  weight: Вес груза
-  toCountry: Украина
-  to: Призначение груза?
-  btn: Рассчет стоимости
+  title: Розрахувати вартість доставки
+  weight: Вага вантажу
+  toCountry: Україна
+  to: Куди?
+  btn: Розрахунок вартості
   email: Email
-  description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
-  comment: Комментарий
+  description: Надішліть запит та отримаєте 5% знижку на доставку для нових клієнтів!
+  comment: Коментар
 mainPopup:
   title: Организуем прозрачную и понятную доставку.
   description: Закажите консультацию прямо сейчас!
@@ -259,36 +259,33 @@ ourServices:
       link: warehousing-services
 name: components
 cargo:
-  title: можности доставки грузов
+  title: Можливості доставки вантажів
   list:
-    - title: Контейнерные перевозки
+    - title: Контейнерні перевезення
       svg: storage
-      link: container-transporting
+      link: konteynerni-vantazhoperevezennya/
     - title: Карго доставка
       svg: package
-      link: cargo-delivery
-    - title: Доставка товаров
+      link: cargo/
+    - title: Доставка товарів
       svg: trolley
-      link: container-transporting
-    - title: Перевозка сборных грузов
+      link: dostavka-tovariv-z-kytaju/
+    - title: Перевезення збірних вантажів
       svg: ship
-      link: container-transporting
-    - title: Международная доставка посылок
+      link: 'perevezennya-zbirnyih-vantazhiv/ '
+    - title: Міжнародна доставка посилок
       svg: airplane
-      link: container-transporting
-    - title: Мультимодальные перевозки
+      link: dostavka-tovariv-z-evropyi/
+    - title: Мультимодальні перевезення
       svg: packages
-      link: cargo-delivery
-    - title: Перевозка негабаритных грузов
+      link: multimodalni-vantazhoperevezennya/
+    - title: Перевезення негабаритних вантажів
       svg: product
-      link: cargo-delivery
-    - title: Перевозка техники
+      link: perevezennya-negabaryitnyih-vantazhiv/
+    - title: Доставка обладнання
       svg: protected
-      link: cargo-delivery
-    - title: Доставка станков и оборудования
-      svg: trolleybig
-      link: cargo-delivery
-    - title: Доставка из Китая в Одессу
+      link: dostavka-obladnannya/
+    - title: Доставка з Китаю в Одесу
       svg: warehouse
-      link: cargo-delivery
+      link: dostavka-z-kyitayu-v-odesu/
 ---
