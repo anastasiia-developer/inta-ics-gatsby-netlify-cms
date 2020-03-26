@@ -12,7 +12,8 @@ import FormFooter from '../components/Footer/FormFooter'
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
-import OurServices from "../components/delivery/OurServices";
+import OurServices from "../components/OurServices";
+import OurServicesRu from "../components/OurServices/index.ru";
 import Table from '../pages/services/Table';
 import TitleDesHelmet from "../components/TitleDesHelmet";
 
@@ -79,12 +80,17 @@ export const ServicesPageTemplate = ({
             <Section
                 sections={sections}
             />
-            <OurServices locale={locale}/>
-            {locale === 'ua' ?
-                <Destinations/>
-                :
-                <DestinationsRu/>
-            }
+           {locale === 'ua' ?
+               <Fragment>
+                   <OurServices/>
+                   <Destinations />
+               </Fragment>
+               :
+               <Fragment>
+                   <OurServicesRu/>
+                   <DestinationsRu/>
+               </Fragment>
+           }
             <Cargo/>
             {location &&
                 <Clients/>

@@ -4,7 +4,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Header from "../components/delivery/Header"
 import {Section} from "./services"
-import OurServices from '../components/delivery/OurServices'
+import OurServices from '../components/OurServices'
+import OurServicesRu from '../components/OurServices/index.ru'
 import Destinations from "../components/Destinations"
 import DestinationsRu from "../components/Destinations/index.ru"
 import Cargo from "../components/mainPage/cargo"
@@ -52,11 +53,16 @@ export const InternationalDestinationsTemplate = ({
             <Section
                 sections={sections}
             />
-            <OurServices locale={locale}/>
             {locale === 'ua' ?
-                <Destinations/>
-            :
-                <DestinationsRu/>
+                <Fragment>
+                    <OurServices/>
+                    <Destinations />
+                </Fragment>
+                :
+                <Fragment>
+                    <OurServicesRu/>
+                    <DestinationsRu/>
+                </Fragment>
             }
             <Cargo/>
             {locale &&

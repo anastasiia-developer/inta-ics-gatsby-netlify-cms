@@ -9,6 +9,7 @@ import CalculateHeaderRu from "../components/CalculateHeader/index.ru"
 import Sections from "../components/delivery/Sections"
 import SectionText from "../components/delivery/SectionText"
 import OurServices from '../components/OurServices'
+import OurServicesRu from '../components/OurServices/index.ru'
 import Destinations from "../components/Destinations"
 import DestinationsRu from "../components/Destinations/index.ru"
 import Cargo from "../components/Cargo/index.ru"
@@ -68,16 +69,17 @@ export const DeliveryTemplate = ({
                     image={sectionText.image}
                 />
             }
-            <OurServices/>
             {locale === 'ua' ?
                 <Fragment>
-                <Destinations />
-                <Cargo/>
+                    <OurServices/>
+                    <Destinations />
+                    <Cargo/>
                 </Fragment>
                 :
                 <Fragment>
-                <DestinationsRu />
-                <CargoRu/>
+                    <OurServicesRu/>
+                    <DestinationsRu />
+                    <CargoRu/>
                 </Fragment>
             }
             <Clients/>
