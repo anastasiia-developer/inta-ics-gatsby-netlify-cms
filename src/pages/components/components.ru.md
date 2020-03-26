@@ -147,8 +147,9 @@ destinations:
     - country: 'Чехия  '
       flag: /img/149-czech-republic.png
       link: dostavka-iz-chehii
-    - country: Италия
-      flag: /img/italy.png
+    - country: 'Испания  '
+      flag: /img/128-spain.png
+      link: dostavka-iz-ispanii
     - country: Индия
       flag: /img/002-united-states (5).png
     - country: Франция
