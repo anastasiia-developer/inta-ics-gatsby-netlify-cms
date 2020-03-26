@@ -6,7 +6,7 @@ warehouses:
   title: Наші склади
   list:
     - country: США
-      city: (Washington)
+      city: (New Jersey)
       flag: /img/002-united-states (3).png
       postIndex: '999077'
       address: >-
@@ -17,7 +17,7 @@ warehouses:
       images:
         - image: /img/Rectangle 121.png
     - country: Польща
-      city: (Chelm)
+      city: (Piaseczno)
       flag: /img/poland.png
     - country: Польща
       city: (Warsaw)
@@ -42,7 +42,7 @@ warehouses:
         - image: /img/Rectangle 121.png
     - country: Китай
       flag: /img/001-china 3.png
-      city: (Shanghai)
+      city: (Fоshаn)
       postIndex: '528248'
       address: >-
         <p>Warehouse No. 67-70, C4 Building,</p>  <p>Dumhao Logistics Storage
