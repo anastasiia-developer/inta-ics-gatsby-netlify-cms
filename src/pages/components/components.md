@@ -114,7 +114,7 @@ calculator:
       заказанных услуг. Для более детальной информации обратитесь к менеджеру
       компании.
 clients:
-  title: Наши клиенти
+  title: Наші клієнти
   list:
     - image: /img/image 18.png
     - image: /img/image 19.png
