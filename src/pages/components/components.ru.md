@@ -129,10 +129,12 @@ destinations:
     - country: 'Турция '
       flag: /img/218-turkey.png
       link: dostavka-gruzov-iz-turtsii
-    - country: Англия
-      flag: /img/002-united-states.png
-    - country: Италия
-      flag: /img/italy.png
+    - country: Германия
+      flag: /img/162-germany.png
+      link: dostavka-iz-germanii
+    - country: 'Франция '
+      flag: /img/195-france.png
+      link: dostavka-iz-franzii
     - country: Гонконг
       flag: /img/002-united-states (1).png
     - country: Италия
