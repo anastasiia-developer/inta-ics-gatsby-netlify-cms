@@ -22,8 +22,8 @@ const Section = styled.section`
 export default () => (
     <StaticQuery
         query={graphql`
-            query OurServicesTemplate{
-                markdownRemark(frontmatter: { pageKey: { eq: "components-common" },locale: { eq: "ua" } }) {
+            query OurServicesTemplateRu{
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" },locale: { eq: "ru" } }) {
                     frontmatter {
                         ourServices {
                             title

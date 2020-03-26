@@ -462,6 +462,14 @@ collections:
             {label: "link", name: link, widget: string},
           ]}
       ]}
+      - {label: "Наши услуги", name: ourServices, widget: object, fields: [
+          {label: "Заголовок", name: title, widget: string},
+          {label: "list", name: list, widget: list, fields: [
+            {label: "Заголовок", name: title, widget: string},
+            {label: "svg", name: svg, widget: string},
+            {label: "link", name: link, widget: string},
+          ]}
+      ]}
   - name: "pages"
     label: "Страницы"
     files:

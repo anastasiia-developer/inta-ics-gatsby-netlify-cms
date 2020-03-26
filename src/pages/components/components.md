@@ -281,15 +281,12 @@ ourServices:
             svg: search
             link: search-and-verification 
         -   title: Заказ товара из Китая 
-            svg: truck
+            svg: delivery
             link: making-payments
-        -   title: Проведение платежей 
-            svg: shopping
-            link: making-payments                    
-        -   title: Проведение платежей 
-            svg: shopping
-            link: making-payments
-        -   title: Проведение платежей 
-            svg: shopping
-            link: making-payments
+        -   title: Таможенное оформление груза 
+            svg: clipboard
+            link: customs-clearance                    
+        -   title: Складские услуги 
+            svg: warehouse
+            link: warehousing-services
 ---
