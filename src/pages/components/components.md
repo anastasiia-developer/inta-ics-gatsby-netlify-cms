@@ -259,9 +259,9 @@ ourServices:
       link: warehousing-services
 name: components
 cargo:
-  title: можности доставки грузов
+  title: Можливості доставки вантажів
   list:
-    - title: Контейнерные перевозки
+    - title: Контейнерні перевезення
       svg: storage
       link: container-transporting
     - title: Карго доставка
