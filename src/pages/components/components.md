@@ -263,7 +263,7 @@ cargo:
   list:
     - title: Контейнерні перевезення
       svg: storage
-      link: container-transporting
+      link: konteynerni-vantazhoperevezennya/
     - title: Карго доставка
       svg: package
       link: cargo-delivery
