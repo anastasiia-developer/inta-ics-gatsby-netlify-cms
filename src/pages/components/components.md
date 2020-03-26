@@ -273,9 +273,9 @@ cargo:
     - title: Перевезення збірних вантажів
       svg: ship
       link: 'perevezennya-zbirnyih-vantazhiv/ '
-    - title: Международная доставка посылок
+    - title: Міжнародна доставка посилок
       svg: airplane
-      link: container-transporting
+      link: dostavka-tovariv-z-evropyi/
     - title: Мультимодальные перевозки
       svg: packages
       link: cargo-delivery
