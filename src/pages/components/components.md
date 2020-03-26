@@ -279,12 +279,12 @@ cargo:
     - title: Мультимодальні перевезення
       svg: packages
       link: multimodalni-vantazhoperevezennya/
-    - title: Перевозка негабаритных грузов
+    - title: Перевезення негабаритних вантажів
       svg: product
-      link: cargo-delivery
-    - title: Перевозка техники
+      link: perevezennya-negabaryitnyih-vantazhiv/
+    - title: Доставка обладнання
       svg: protected
-      link: cargo-delivery
+      link: dostavka-obladnannya/
     - title: Доставка станков и оборудования
       svg: trolleybig
       link: cargo-delivery
