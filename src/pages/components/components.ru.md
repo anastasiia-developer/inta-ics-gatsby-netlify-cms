@@ -140,9 +140,10 @@ destinations:
       link: dostavka-iz-anglii
     - country: Италия
       flag: /img/013-italy.png
-      link: ostavka-iz-italii
-    - country: США
-      flag: /img/002-united-states (3).png
+      link: dostavka-iz-italii
+    - country: 'Португалия  '
+      flag: /img/224-portugal.png
+      link: dostavka-iz-portugalii
     - country: Германия
       flag: /img/002-united-states (4).png
     - country: Италия
