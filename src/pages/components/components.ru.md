@@ -290,26 +290,23 @@ cargo:
       link: cargo
     - title: Доставка товаров
       svg: trolley
-      link: container-transporting
-    - title: Перевозка сборных грузов
+      link: dostavka-tovarov-iz-kitaya
+    - title: 'Перевозка сборных грузов '
       svg: ship
-      link: container-transporting
-    - title: Международная доставка посылок
+      link: perevozki-sbornyih-gruzov
+    - title: 'Международная доставка посылок '
       svg: airplane
-      link: container-transporting
+      link: dostavka-tovarov-i-posyilok-iz-evropyi
     - title: Мультимодальные перевозки
       svg: packages
-      link: cargo-delivery
+      link: multimodalnye-gruzoperevozki
     - title: Перевозка негабаритных грузов
       svg: product
-      link: cargo-delivery
-    - title: Перевозка техники
-      svg: protected
-      link: cargo-delivery
+      link: perevozki-negabaritnyih-gruzov
     - title: Доставка станков и оборудования
       svg: trolleybig
-      link: cargo-delivery
+      link: dostavka-oborudovaniya
     - title: Доставка из Китая в Одессу
       svg: warehouse
-      link: cargo-delivery
+      link: dostavka-iz-kitaya-v-odessu
 ---
