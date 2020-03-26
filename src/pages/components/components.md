@@ -3,7 +3,7 @@ pageKey: components-common
 locale: ua
 title: UaОбщие компонентны для всех страницппhgghjghggh
 warehouses:
-  title: Наши склади
+  title: Наші склади
   list:
     - country: США
       city: (Washington)
