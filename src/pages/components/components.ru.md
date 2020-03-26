@@ -27,9 +27,9 @@ warehouses:
       image: /img/store1.png
       images:
         - image: /img/store1.png
-    - country: Україна
+    - country: Украина
       flag: /img/ukraine.png
-      city: (Київ)
+      city: (Киев)
       postIndex: '03141'
       address: <p>ул. Линейная 17 </p> <p>БЦ “FIM”</p>
       phone: +38 (068) 5555 999
