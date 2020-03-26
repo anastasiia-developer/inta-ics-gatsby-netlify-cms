@@ -135,10 +135,12 @@ destinations:
     - country: 'Франция '
       flag: /img/195-france.png
       link: dostavka-iz-franzii
-    - country: Гонконг
-      flag: /img/002-united-states (1).png
+    - country: 'Англия '
+      flag: /img/260-united-kingdom.png
+      link: dostavka-iz-anglii
     - country: Италия
-      flag: /img/italy.png
+      flag: /img/013-italy.png
+      link: ostavka-iz-italii
     - country: США
       flag: /img/002-united-states (3).png
     - country: Германия
