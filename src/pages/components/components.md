@@ -240,23 +240,23 @@ news:
   title: Новини
   btn: Читать все новости
 ourServices:
-  title: Наши услуги
+  title: Наші послуги
   list:
-    - title: Проведение платежей
+    - title: 'Проведення платежів '
       svg: shopping
-      link: making-payments
-    - title: Поиск поставщика
+      link: oplata-postachalnyiku-v-kyitai/
+    - title: Пошук постачальника
       svg: search
-      link: search-and-verification
-    - title: Заказ товара из Китая
+      link: poshuk-postachalnyikiv-v-kyitai/
+    - title: 'Замовлення товару з Китаю '
       svg: delivery
-      link: making-payments
-    - title: Таможенное оформление груза
+      link: dostavka-tovariv-z-kytaju/
+    - title: Митне оформлення вантажу
       svg: clipboard
-      link: customs-clearance
-    - title: Складские услуги
+      link: rozmyitnennya/
+    - title: Складські послуги
       svg: warehouse
-      link: warehousing-services
+      link: 'skladski-poslugyi/ '
 name: components
 cargo:
   title: Можливості доставки вантажів
