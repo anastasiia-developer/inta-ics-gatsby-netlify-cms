@@ -144,8 +144,9 @@ destinations:
     - country: 'Португалия  '
       flag: /img/224-portugal.png
       link: dostavka-iz-portugalii
-    - country: Германия
-      flag: /img/002-united-states (4).png
+    - country: 'Чехия  '
+      flag: /img/149-czech-republic.png
+      link: dostavka-iz-chehii
     - country: Италия
       flag: /img/italy.png
     - country: Индия
