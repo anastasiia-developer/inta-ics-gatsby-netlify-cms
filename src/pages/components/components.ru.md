@@ -151,14 +151,17 @@ destinations:
       flag: /img/128-spain.png
       link: dostavka-iz-ispanii
     - country: Индия
-      flag: /img/002-united-states (5).png
-    - country: Франция
-      flag: /img/002-united-states (6).png
-      link: france
-    - country: Италия
-      flag: /img/italy.png
-    - country: Израиль
-      flag: /img/002-united-states (7).png
+      flag: /img/246-india.png
+      link: dostavka-iz-indii-v-ukrainu
+    - country: 'Израиль  '
+      flag: /img/155-israel.png
+      link: dostavka-iz-izrailya-v-ukrainu
+    - country: 'Тайвань '
+      flag: /img/202-taiwan.png
+      link: dostavka-iz-tayvanya
+    - country: 'ОАЭ '
+      flag: /img/151-united-arab-emirates.png
+      link: dostavka-iz-oae
   image: /img/map.png
 calculateHeader:
   from: Откуда груз?
