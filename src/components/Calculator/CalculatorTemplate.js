@@ -14,6 +14,7 @@ const Section = styled.section`
         padding: 3em 0;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             padding: 1em 0;
+            text-align: center;
         }
     }
     .wrapper{
@@ -22,17 +23,25 @@ const Section = styled.section`
     .categories{
         flex: 1;
         flex-wrap: wrap;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            justify-content: space-around;
+        }
+        @media(max-width: 500px){
+            justify-content: flex-start;
+        }
         h3{
             color: #5E98EE;
             font-weight: 500;
             padding-bottom: 1em;
             font-size: .9em;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                margin-right: 1em;
+            }
         }
         .categories__wrapper{
             margin: 0 6em 0 0;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-                margin: 0;
-                margin-bottom: 2em;
+                margin: 0 1em 2em 0 ;
             }   
         }
         div:first-child .categories__wrapper{
@@ -63,23 +72,18 @@ const Form = styled.div`
             display: none;
         }
     }
-    h3{
-        color: #fff;
-        font-weight: 700;
-        text-align: center;
-        padding: 3em 0 3em;
-    }
-    .container{
-        background: #005BE4;
-        border-radius: 7px;
-        width: 70%;
-        justify-content: center;
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         align-items: center;
-        position: relative;
-        z-index: 2;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-            width: 100%;
-        }    
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto 2em;
+        }
         label{
             color: #fff;
             background: #6098EE;
@@ -91,6 +95,12 @@ const Form = styled.div`
             border: 1px solid #6098EE; 
             text-align: right;
             padding: .5em 1em;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                margin: 0 1em 0 0;
+            }
+            @media(max-width: 500px){
+                margin: 0 auto 1em;
+            }
             input{
                 position: absolute;
                 left: 0;
@@ -117,6 +127,10 @@ const Form = styled.div`
             cursor: pointer;
             pointer-events: auto;
             opacity: 1;
+            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+                margin-bottom: 0; 
+            }
+            
             &:disabled{
                 opacity: .7;
                 pointer-events: none;
@@ -125,7 +139,26 @@ const Form = styled.div`
             &:hover{
                 background: #cb242d;
             } 
-        }
+        }        
+    }
+    h3{
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        padding: 3em 0 3em;
+    }
+    .container{
+        background: #005BE4;
+        border-radius: 7px;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            width: 100%;
+        }    
+        
         p{
             font-size: .8em;
             color: #fff;
@@ -152,6 +185,7 @@ const Wrapper = styled.div`
     margin-right: 1em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
         width: 26vw;
+        max-width: 100px;
         &:last-child{
             margin-right: 0;
         }
@@ -174,9 +208,13 @@ const Wrapper = styled.div`
         text-align: center;
     }
 `;
+const ConstituentsWrapper = styled.div`
+    @media(max-width: 500px){
+        order: ${props => props.order || 0};
+    }
+`;
 
-
-const Constituents = ({title, category, setAmount, amount, canChoose, name}) => {
+const Constituents = ({title, category, setAmount, amount, canChoose, name, order}) => {
     const [isActive, setActive] = useState(null);
 
     useEffect(() => {
@@ -206,7 +244,7 @@ const Constituents = ({title, category, setAmount, amount, canChoose, name}) => 
     };
 
     return (
-        <div>
+        <ConstituentsWrapper order={order}>
             <h3>{title}</h3>
             <div className="row categories__wrapper">
                 {category.map((block,key) => (
@@ -228,7 +266,7 @@ const Constituents = ({title, category, setAmount, amount, canChoose, name}) => 
                     </Wrapper>
                 ))}
             </div>
-        </div>
+        </ConstituentsWrapper>
     )
 }
 
@@ -263,22 +301,25 @@ const CalculatorTemplate = ({ data }) => {
                                 category={item.category}
                                 setAmount={setAmount}
                                 amount={amount}
+                                order={item.category.length > 1 ? 0 : 1 }
                             />
                         ))}
                     </div>
                     <Form>
                         <div className="container column">
                             <h3>{resultBlock.title}</h3>
-                            <label>
-                                kg
-                                <input
-                                    value={weight === 0 ? '' : weight}
-                                    onChange={(e)=>{setWeight(+e.target.value.replace(/[^\d]/g,''))}}
-                                    type="text"/>
-                            </label>
-                            <button
-                                onClick={() => setIsActive(true)}
-                                disabled={weight === 0 || weight === '' && true}>{resultBlock.btnText}</button>
+                            <div className="form-container">
+                                <label>
+                                    kg
+                                    <input
+                                        value={weight === 0 ? '' : weight}
+                                        onChange={(e)=>{setWeight(+e.target.value.replace(/[^\d]/g,''))}}
+                                        type="text"/>
+                                </label>
+                                <button
+                                    onClick={() => setIsActive(true)}
+                                    disabled={weight === 0 || weight === '' && true}>{resultBlock.btnText}</button>
+                            </div>
                             <p>{resultBlock.resultText}</p>
                             <div className="amount">${weight !== 0 && isActive ? formula()  : 0 }</div>
                             <div className="note">{resultBlock.note}</div>

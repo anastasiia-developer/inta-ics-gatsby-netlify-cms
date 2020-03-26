@@ -149,7 +149,7 @@ const Navigation = styled.nav`
             transition: all .4s;
             border-top: 1px solid #323232;
             border-bottom: 1px solid #323232;
-            transform: translateX(${props => props.isActive ? '0' : '-105%'});
+            transform: translateX(${props => props.isActive ? '0' : '-106%'});
         }
     }
     .circle{

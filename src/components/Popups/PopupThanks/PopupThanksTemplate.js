@@ -26,6 +26,7 @@ export const Close = styled.button`
     opacity: 0.3;
     z-index: 2;
     cursor: pointer;
+    font-size: 1em;
     &:hover {
       opacity: 1;
     }

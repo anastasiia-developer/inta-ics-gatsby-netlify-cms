@@ -22,9 +22,6 @@ const Section = styled.section`
             color: ${props => props.hasChildren ? '#474747' : '#005BE4'};
             padding-bottom: 1em;
             font-weight: 500;
-            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-                padding: 0;
-            }
         }
         .text{
             padding: 0 4em 0 6em;
@@ -34,7 +31,7 @@ const Section = styled.section`
         }
         p{
             line-height: 1.7em;
-            padding: 1em 0;
+            padding-bottom: .5em;
             color: #3D3D3D;
             font-size: 1em;
         }

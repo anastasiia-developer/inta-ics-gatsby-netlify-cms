@@ -34,6 +34,7 @@ const Section = styled.article`
         font-weight: 500;
         font-size: 1.55em;
         text-align: center;
+        margin-bottom: 1em;
     }
     h3{
         font-weight: 500;

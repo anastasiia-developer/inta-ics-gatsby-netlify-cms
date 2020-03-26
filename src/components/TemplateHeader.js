@@ -20,7 +20,7 @@ export const Button = styled(Link)`
         margin-right: 0;
     }
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
-        margin: 0 0 2em 0;
+        margin: 0 .5em 2em;
     }
     &:hover{
         background: linear-gradient(100.69deg, #005BE4 0%, #4900E4 100%);

@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const Section = styled(About)`
-    padding: 2em 0;
+    padding: 0;
     margin: 0;
     align-items: center;
     flex-direction: row-reverse;
@@ -50,11 +50,11 @@ const Section = styled(About)`
         }
     }
     .list{
-        padding: 2em 6.5em 4em;
-        justify-content: space-between;
+        padding: 2em 1em 4em 6.5em;
+        justify-content: flex-start;
+        flex-wrap: wrap;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             padding: 0;
-            flex-wrap: wrap;
             margin: 0em 0 2em;
         }
         li{
@@ -62,10 +62,10 @@ const Section = styled(About)`
             color: #7C8696;
             font-weight: 400;
             font-size: .95em;
+            margin-right: 1em;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 margin-bottom: .5em;
             }
-            
             img{
                 height: 1em;
                 margin-right: 1em;

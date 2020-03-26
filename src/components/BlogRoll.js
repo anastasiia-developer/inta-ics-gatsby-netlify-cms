@@ -16,11 +16,17 @@ const Wrapper = styled.div`
       &::before{
         color: #005BE4;
       }
+      @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        display: none;
+      }
   }
   .wrapper{
     background: #fff;
     width: 90%;
     border: 1px solid #ECECEC;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        width: 100%;
+    }
   }
   li{
     border-right: 1px solid #ECECEC;

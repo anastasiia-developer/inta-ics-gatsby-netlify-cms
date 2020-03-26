@@ -52,18 +52,10 @@ export const CostPageTemplate = ({
                         cargo
                         clients
                         reviews
-                        services
                     />
 
                 </Fragment>
             }
-            <TemplateCommonComponent
-                locale={locale}
-                destinations
-                cargo
-                clients
-                reviews
-            />
             <Article seoSections={seoSections}/>
         </Fragment>
     )

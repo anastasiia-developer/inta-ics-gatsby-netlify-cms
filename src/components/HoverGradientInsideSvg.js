@@ -10,8 +10,9 @@ const Block = `
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
     border-radius: 7px;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-        min-width: 17em;
-        margin: 0 0 1em;        
+        width: 48%;
+        flex: initial;
+        margin: 1%;   
     }
     &:hover{
         background: linear-gradient(119.44deg, #005BE4 -4.2%, #4900E4 108.11%);
@@ -29,6 +30,7 @@ const Block = `
         font-weight: 500;
         font-size: .9em;
         margin-top: 1em;
+        text-align: center;
     }
     svg{
         width: 4.5em;

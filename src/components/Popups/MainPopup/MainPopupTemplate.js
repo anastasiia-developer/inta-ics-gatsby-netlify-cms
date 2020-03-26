@@ -20,7 +20,6 @@ const Popup = styled.div`
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         font-size: .8em;
         max-width: 100%;
-        width: 100%;
     }
     header{
         padding: 2em 0;

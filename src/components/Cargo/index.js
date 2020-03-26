@@ -3,7 +3,7 @@ import React from "react";
 import CargoTemplate from "./CargoTemplate";
 import styled from "styled-components";
 
-const Section = styled.section`
+export const Section = styled.section`
     background: #F0F5FD;
     padding: 4em 2.5em;
     margin-top: 2em;
@@ -30,9 +30,9 @@ const Section = styled.section`
             svg{
                 width: 3.5em;
             }
-             
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 margin-bottom: 1em;
+                flex-basis: unset;
             }
         }
     }

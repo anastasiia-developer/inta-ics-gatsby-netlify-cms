@@ -4,12 +4,16 @@ import CargoTemplate from "../Cargo/CargoTemplate";
 import styled from "styled-components"
 
 
-const Section = styled.section`
+export const Section = styled.section`
     padding: 0 2em 5em;
     text-align: center;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
         padding: 0 1em 5em;
         align-items: stretch;
+        .row{
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
     h2{
         padding: 3em 0;

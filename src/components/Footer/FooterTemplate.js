@@ -14,18 +14,26 @@ const FooterS = styled.footer`
   }
   .footer-row{
       justify-content: space-between;
+      @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
   }
   .contacts{
     flex: 3;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       order: 1;
-      text-align: center;
+      text-align: flex-start;
+      width: 30%;
+      flex: none;
+      margin-right: 1em;
     }
     &-img{
       width: 40%;
       @media(max-aspect-ratio: 3/3), (max-height: 500px){
         margin: 1em auto;
         display: block;
+        width: 80%;
       }
     }
     .des{
@@ -57,7 +65,10 @@ const FooterS = styled.footer`
     font-size: .9em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       order: 2;
-      align-items: center;
+      text-align: flex-start;
+      width: 30%;
+      flex: none;
+      margin-right: 1em;
     }
     a{
       margin-left: 4em;
@@ -93,6 +104,10 @@ const FooterS = styled.footer`
       } 
       @media(max-aspect-ratio: 3/3), (max-height: 500px){
         margin-top: 0;
+        img{
+            width: 100%;
+            height: auto;
+        }
       }
     }
   }
@@ -120,7 +135,7 @@ const FooterTemplate = ({data}) =>
                 :
                 <StorageRu />
             }
-            <div className="row-to-column footer-row">
+            <div className="row footer-row">
                 <ul className="column contacts">
                     <li>
                         <img src="/img/logo.png" alt="logo" className='contacts-img'/>
