@@ -282,12 +282,12 @@ reviews:
 cargo:
   title: Возможности доставки грузов
   list:
-    - title: Контейнерные перевозки
+    - title: 'Контейнерные перевозки '
       svg: storage
-      link: container-transporting
+      link: konteynernyie-perevozki
     - title: Карго доставка
       svg: package
-      link: cargo-delivery
+      link: cargo
     - title: Доставка товаров
       svg: trolley
       link: container-transporting
