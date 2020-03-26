@@ -1,7 +1,7 @@
 ---
 pageKey: components-common
 locale: ua
-title: UaОбщие компонентны для всех страницпп
+title: UaОбщие компонентны для всех страницппhgghjghggh
 warehouses:
   title: Наши склади
   list:
