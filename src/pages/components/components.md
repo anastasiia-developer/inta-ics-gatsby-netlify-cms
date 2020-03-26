@@ -1,68 +1,67 @@
 ---
 pageKey: components-common
-name: components
 locale: ua
-title:  UaОбщие компонентны для всех страниц
-warehouses: 
-    title: Наши склади
-    list: 
-      - country: США
-        city: (Washington)
-        flag: /img/002-united-states (3).png
-        postIndex: '999077'
-        address: >-
-            <p>RM Q, Floor 10, Houston Industrial Building,</p> <p>32-40 Wang Lung
-            street, </p> <p>Tsuen Wan NT</p>
-        phone: +852 94670135
-        image: /img/Rectangle 121.png
-        images:
-          - image: /img/Rectangle 121.png
-      - country: Польща
-        city: (Chelm)
-        flag: /img/poland.png    
-      - country: Польща
-        city: (Warsaw)
-        flag: /img/poland.png
-        postIndex: 00-613
-        address: <p>ul. Chałubińskiego 8</p> <p>Oxford Tower, 29 pietro</p>
-        image: /img/store1.png
-        images:
-            - image: /img/store1.png
-      - country: Україна
-        flag: /img/ukraine.png
-        city: (Київ)
-        postIndex: '03141'
-        address: <p>ул. Линейная 17 </p> <p>БЦ “FIM”</p>
-        phone: +38 (068) 5555 999
-        image: /img/storeContact.png
-        images:
-            - image: /img/storeContact.png
-            - image: /img/Rectangle 121.png
-            - image: /img/Rectangle 121.png
-            - image: /img/Rectangle 121.png
-            - image: /img/Rectangle 121.png
-      - country: Китай
-        flag: /img/001-china 3.png
-        city: (Shanghai)
-        postIndex: '528248'
-        address: >-
-            <p>Warehouse No. 67-70, C4 Building,</p>  <p>Dumhao Logistics Storage
-            Base, </p> <p>Huangpu Construction Road, Dali Town, </p> <p>Nanhai
-            District, Foshan City. </p>
-        phone: +86 188 2991 5259
-        image: /img/storeqqqq.png
-        images:
-            - image: /img/storeqqqq.png
-      - country: Гонконг
-        flag: /img/002-united-states (1).png
-        postIndex: '999077'
-        address: >-
-            <p>RM Q, Floor 10, Houston Industrial Building,</p> <p>32-40 Wang Lung
-            street, </p> <p>Tsuen Wan NT</p>
-        phone: +852 94670135
-        image: /img/Rectangle 121.png
-        images:
-            - image: /img/Rectangle 121.png  
+title: UaОбщие компонентны для всех страницпп
+warehouses:
+  title: Наши склади
+  list:
+    - country: США
+      city: (Washington)
+      flag: /img/002-united-states (3).png
+      postIndex: '999077'
+      address: >-
+        <p>RM Q, Floor 10, Houston Industrial Building,</p> <p>32-40 Wang Lung
+        street, </p> <p>Tsuen Wan NT</p>
+      phone: +852 94670135
+      image: /img/Rectangle 121.png
+      images:
+        - image: /img/Rectangle 121.png
+    - country: Польща
+      city: (Chelm)
+      flag: /img/poland.png
+    - country: Польща
+      city: (Warsaw)
+      flag: /img/poland.png
+      postIndex: 00-613
+      address: '<p>ul. Chałubińskiego 8</p> <p>Oxford Tower, 29 pietro</p>'
+      image: /img/store1.png
+      images:
+        - image: /img/store1.png
+    - country: Україна
+      flag: /img/ukraine.png
+      city: (Київ)
+      postIndex: '03141'
+      address: <p>ул. Линейная 17 </p> <p>БЦ “FIM”</p>
+      phone: +38 (068) 5555 999
+      image: /img/storeContact.png
+      images:
+        - image: /img/storeContact.png
+        - image: /img/Rectangle 121.png
+        - image: /img/Rectangle 121.png
+        - image: /img/Rectangle 121.png
+        - image: /img/Rectangle 121.png
+    - country: Китай
+      flag: /img/001-china 3.png
+      city: (Shanghai)
+      postIndex: '528248'
+      address: >-
+        <p>Warehouse No. 67-70, C4 Building,</p>  <p>Dumhao Logistics Storage
+        Base, </p> <p>Huangpu Construction Road, Dali Town, </p> <p>Nanhai
+        District, Foshan City. </p>
+      phone: +86 188 2991 5259
+      image: /img/storeqqqq.png
+      images:
+        - image: /img/storeqqqq.png
+    - country: Гонконг
+      flag: /img/002-united-states (1).png
+      postIndex: '999077'
+      address: >-
+        <p>RM Q, Floor 10, Houston Industrial Building,</p> <p>32-40 Wang Lung
+        street, </p> <p>Tsuen Wan NT</p>
+      phone: +852 94670135
+      image: /img/Rectangle 121.png
+      images:
+        - image: /img/Rectangle 121.png
 calculator:
   title: Розрахувати вартість доставки
   constituents:
@@ -115,15 +114,15 @@ calculator:
       заказанных услуг. Для более детальной информации обратитесь к менеджеру
       компании.
 clients:
-    title: Наши клиенти
-    list:
-        -   image: /img/image 18.png
-        -   image: /img/image 19.png
-        -   image: /img/image 20.png
-        -   image: /img/image 20 (copy).png
-        -   image: /img/image 19.png
-        -   image: /img/image 20.png
-        -   image: /img/image 20 (copy).png
+  title: Наши клиенти
+  list:
+    - image: /img/image 18.png
+    - image: /img/image 19.png
+    - image: /img/image 20.png
+    - image: /img/image 20 (copy).png
+    - image: /img/image 19.png
+    - image: /img/image 20.png
+    - image: /img/image 20 (copy).png
 destinations:
   title: Міжнародні вантажоперевезення
   countries:
@@ -192,103 +191,104 @@ popupThanks:
   btnLink: 2020-02-06-украина-привлекательный-рынок-для-китая
   image: /img/popupImage.jpg
 footer:
-    description: 'UAДоставка сборных грузов и контейнеров из Китая, Сша в Украину.'
-    storeName: Мобильное приложение
-    navCollection:
-        - nav:
-            - name: Доставка
-              link: /
-            - name: Услуги
-              link: /      
-            - name: О компании
-              link: /   
-            - name: Блог
-              link: /   
-            - name: Помощь
-              link: /   
-            - name: Контакты
-              link: / 
-        - nav:        
-            - name: Авиадоставка из Китая
-              link: /  
-            - name: Дополнительная переупаковка товара
-              link: /  
-            - name: Доставка из США
-              link: /  
-            - name: Проверка производителя
-              link: /  
-            - name: Доставка из Европы
-              link: /  
-        - nav:
-            - name: Выкуп товаров
-              link: /  
-            - name: Доставка из Польши
-              link: /  
-            - name: Доставка морем из Китая
-              link: /  
-            - name: Доставка морем из Китая
-              link: /  
-            - name: Доставка Китай-Одесса
-              link: /  
-        - nav:      
-            - name: Поиск поставщиков в Китае
-              link: /  
-            - name: Таможенное оформление грузов
-              link: /  
-            - name: Доставка из Польши
-              link: /                            
+  description: 'UAДоставка сборных грузов и контейнеров из Китая, Сша в Украину.'
+  storeName: Мобильное приложение
+  navCollection:
+    - nav:
+        - name: Доставка
+          link: /
+        - name: Услуги
+          link: /
+        - name: О компании
+          link: /
+        - name: Блог
+          link: /
+        - name: Помощь
+          link: /
+        - name: Контакты
+          link: /
+    - nav:
+        - name: Авиадоставка из Китая
+          link: /
+        - name: Дополнительная переупаковка товара
+          link: /
+        - name: Доставка из США
+          link: /
+        - name: Проверка производителя
+          link: /
+        - name: Доставка из Европы
+          link: /
+    - nav:
+        - name: Выкуп товаров
+          link: /
+        - name: Доставка из Польши
+          link: /
+        - name: Доставка морем из Китая
+          link: /
+        - name: Доставка морем из Китая
+          link: /
+        - name: Доставка Китай-Одесса
+          link: /
+    - nav:
+        - name: Поиск поставщиков в Китае
+          link: /
+        - name: Таможенное оформление грузов
+          link: /
+        - name: Доставка из Польши
+          link: /
 news:
-    title: Новини
-    btn: Читать все новости
+  title: Новини
+  btn: Читать все новости
+ourServices:
+  title: Наши услуги
+  list:
+    - title: Проведение платежей
+      svg: shopping
+      link: making-payments
+    - title: Поиск поставщика
+      svg: search
+      link: search-and-verification
+    - title: Заказ товара из Китая
+      svg: delivery
+      link: making-payments
+    - title: Таможенное оформление груза
+      svg: clipboard
+      link: customs-clearance
+    - title: Складские услуги
+      svg: warehouse
+      link: warehousing-services
+name: components
 cargo:
-    title: можности доставки грузов
-    list:
-        -   title: Контейнерные перевозки
-            svg: storage    
-            link: container-transporting          
-        -   title: Карго доставка
-            svg: package    
-            link: cargo-delivery
-        -   title: Доставка товаров
-            svg: trolley    
-            link: container-transporting 
-        -   title: Перевозка сборных грузов
-            svg: ship    
-            link: container-transporting
-        -   title: Международная доставка посылок
-            svg: airplane    
-            link: container-transporting
-        -   title: Мультимодальные перевозки
-            svg: packages    
-            link: cargo-delivery
-        -   title: Перевозка негабаритных грузов
-            svg: product    
-            link: cargo-delivery
-        -   title: Перевозка техники
-            svg: protected    
-            link: cargo-delivery
-        -   title: Доставка станков и оборудования
-            svg: trolleybig    
-            link: cargo-delivery                                                               
-        -   title: Доставка из Китая в Одессу
-            svg: warehouse    
-            link: cargo-delivery          
-ourServices: 
-    title: Наши услуги
-    list: 
-        -   title: Проведение платежей 
-            svg: shopping
-            link: making-payments           
-        -   title: Поиск поставщика 
-            svg: search
-            link: search-and-verification 
-        -   title: Заказ товара из Китая 
-            svg: delivery
-            link: making-payments
-        -   title: Таможенное оформление груза 
-            svg: clipboard
-            link: customs-clearance                    
-        -   title: Складские услуги 
-            svg: warehouse
-            link: warehousing-services
+  title: можности доставки грузов
+  list:
+    - title: Контейнерные перевозки
+      svg: storage
+      link: container-transporting
+    - title: Карго доставка
+      svg: package
+      link: cargo-delivery
+    - title: Доставка товаров
+      svg: trolley
+      link: container-transporting
+    - title: Перевозка сборных грузов
+      svg: ship
+      link: container-transporting
+    - title: Международная доставка посылок
+      svg: airplane
+      link: container-transporting
+    - title: Мультимодальные перевозки
+      svg: packages
+      link: cargo-delivery
+    - title: Перевозка негабаритных грузов
+      svg: product
+      link: cargo-delivery
+    - title: Перевозка техники
+      svg: protected
+      link: cargo-delivery
+    - title: Доставка станков и оборудования
+      svg: trolleybig
+      link: cargo-delivery
+    - title: Доставка из Китая в Одессу
+      svg: warehouse
+      link: cargo-delivery
 ---
