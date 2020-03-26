@@ -2,20 +2,15 @@ import React, {Fragment} from "react";
 import {graphql} from "gatsby";
 import Layout from "../components/Layout";
 import Sections from "../components/delivery/Sections";
-import Cargo from "../components/mainPage/cargo";
-import Destinations from "../components/Destinations";
-import DestinationsRu from "../components/Destinations/index.ru";
-import Clients from "../components/Clients";
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
-import OurServices from "../components/OurServices";
-import OurServicesRu from "../components/OurServices/index.ru";
 import Table from '../pages/services/Table';
 import TitleDesHelmet from "../components/TitleDesHelmet";
+import TemplateCommonComponent from "../components/TemplateCommonComponent";
 
 export const Section = styled(Sections)`
     background: #F6F6F6;
@@ -51,14 +46,17 @@ export const Section = styled(Sections)`
 `;
 
 export const ServicesPageTemplate = ({
-                                      helmet,
-                                      title,
-                                      description,
-                                      location,
-                                      header,
-                                      sections,
-                                      seoSections,
-                                      locale
+                                    helmet,
+                                    title,
+                                    description,
+                                    location,
+                                    header,
+                                    sections,
+                                    seoSections,
+                                    locale,
+                                    crumbLabelParent,
+                                    crumbLabel,
+                                    table
                                   }) => {
     return(
        <Fragment>
@@ -68,33 +66,19 @@ export const ServicesPageTemplate = ({
                 description={description}
                 location={location}
                 header={{logo: true, arrow: true, ...header}}
-                crumbLabel={title}
-                crumbLabelParent="Услуги"
+                crumbLabel={crumbLabel}
+                crumbLabelParent={crumbLabelParent}
             />
             {location &&
                 <CalculateContainerHeader locale={locale}/>
             }
-            {title === 'Поиск и проверка поставщика' &&
+            {table &&
                 <Table/>
             }
             <Section
                 sections={sections}
             />
-           {locale === 'ua' ?
-               <Fragment>
-                   <OurServices/>
-                   <Destinations />
-               </Fragment>
-               :
-               <Fragment>
-                   <OurServicesRu/>
-                   <DestinationsRu/>
-               </Fragment>
-           }
-            <Cargo/>
-            {location &&
-                <Clients/>
-            }
+            <TemplateCommonComponent locale={locale}/>
             <Reviews/>
            {seoSections &&
                 <Article seoSections={seoSections}/>
@@ -123,6 +107,9 @@ const ServicesPage = ({ data, location, pageContext }) => {
                 header={frontmatter.header}
                 sections={frontmatter.sections}
                 seoSections={frontmatter.seoSections}
+                crumbLabel={frontmatter.crumbLabel}
+                crumbLabelParent={frontmatter.crumbLabelParent}
+                table={frontmatter.table}
             />
             <FormFooter locale={pageContext.locale}/>
         </Layout>
@@ -137,6 +124,9 @@ export const pageQuery = graphql`
       frontmatter{
         title
         description
+        crumbLabelParent
+        crumbLabel
+        table
         metaData{
             title
             description

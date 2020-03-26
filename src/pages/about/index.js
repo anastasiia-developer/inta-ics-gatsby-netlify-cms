@@ -7,6 +7,7 @@ import styled from "styled-components";
 import HoverGradientInsideSvg from '../../components/HoverGradientInsideSvg'
 import PreviewCompatibleImage from "../../components/PreviewCompatibleImage";
 import Clients from "../../components/Clients";
+import ClientsRu from "../../components/Clients/index.ru";
 import Reviews from "../../components/Reviews";
 import TitleDesHelmet from "../../components/TitleDesHelmet";
 
@@ -202,6 +203,7 @@ export const AboutPageTemplate = ({
                                       title,
                                       description,
                                       header,
+                                      locale,
                                       location,
                                       weSpecialize,
                                       ourValues,
@@ -220,9 +222,9 @@ export const AboutPageTemplate = ({
               crumbLabel={title}
           />
           <Section>
-              <h2 className='wrapper'>Мы специализируемся</h2>
+              <h2 className='wrapper'>{weSpecialize.title}</h2>
               <div className="row wrapper we-specialize">
-                  {weSpecialize.map((specialize, index) =>
+                  {weSpecialize.list.map((specialize, index) =>
                       <HoverGradientInsideSvg
                           key={index}
                           svg={
@@ -242,9 +244,9 @@ export const AboutPageTemplate = ({
               </div>
           </Section>
           <OurValues className='wrapper'>
-              <h2>Наши ценности</h2>
+              <h2>{ourValues.title}</h2>
               <div className="row-to-column">
-                  {ourValues.map((value, index) =>
+                  {ourValues.list.map((value, index) =>
                       <div key={index} className='our-wrapper'>
                           <div
                               role="button"
@@ -273,8 +275,10 @@ export const AboutPageTemplate = ({
                   }}
               />
           </SectionImg>
-          {location &&
-            <Clients/>
+          {locale === 'ua' ?
+                <Clients/>
+            :
+                <ClientsRu/>
           }
           <Reviews/>
       </Fragment>
@@ -289,10 +293,11 @@ const AboutPage = ({ data, location, pageContext }) => {
       <AboutPageTemplate
         helmet={
           <TitleDesHelmet
-              title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
-              description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
+              title={frontmatter.metaData ? frontmatter.metaData.title : frontmatter.title}
+              description={frontmatter.metaData ? frontmatter.metaData.description : frontmatter.description}
           />
         }
+        local={pageContext.locale}
         title={frontmatter.title}
         description={frontmatter.description}
         header={frontmatter.header}
@@ -335,23 +340,29 @@ export const aboutPageQuery = graphql`
           }  
         }
         weSpecialize{
-            imageAlt{
-                alt
-                image{
-                    childImageSharp {
-                        fluid(maxWidth: 100, quality: 50) {
-                          ...GatsbyImageSharpFluid
+            title
+            list{
+                imageAlt{
+                    alt
+                    image{
+                        childImageSharp {
+                            fluid(maxWidth: 100, quality: 50) {
+                              ...GatsbyImageSharpFluid
+                            }
                         }
                     }
-                }
+                }    
+                title
+                description
+                link
             }    
-            title
-            description
-            link
         }
         ourValues{
             title
-            description
+            list{
+                title
+                description
+            }    
         }
         aboutImg{
             childImageSharp {

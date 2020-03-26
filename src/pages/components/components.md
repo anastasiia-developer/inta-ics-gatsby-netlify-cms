@@ -115,13 +115,15 @@ calculator:
       заказанных услуг. Для более детальной информации обратитесь к менеджеру
       компании.
 clients:
-  - image: /img/image 18.png
-  - image: /img/image 19.png
-  - image: /img/image 20.png
-  - image: /img/image 20 (copy).png
-  - image: /img/image 19.png
-  - image: /img/image 20.png
-  - image: /img/image 20 (copy).png
+    title: Наши клиенти
+    list:
+        -   image: /img/image 18.png
+        -   image: /img/image 19.png
+        -   image: /img/image 20.png
+        -   image: /img/image 20 (copy).png
+        -   image: /img/image 19.png
+        -   image: /img/image 20.png
+        -   image: /img/image 20 (copy).png
 destinations:
   title: Міжнародні вантажоперевезення
   countries:

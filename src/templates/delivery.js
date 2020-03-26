@@ -15,6 +15,7 @@ import DestinationsRu from "../components/Destinations/index.ru"
 import Cargo from "../components/Cargo/index.ru"
 import CargoRu from "../components/Cargo/index.ru"
 import Clients from "../components/Clients"
+import ClientsRu from "../components/Clients/index.ru"
 import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
@@ -74,15 +75,16 @@ export const DeliveryTemplate = ({
                     <OurServices/>
                     <Destinations />
                     <Cargo/>
+                    <Clients/>
                 </Fragment>
                 :
                 <Fragment>
                     <OurServicesRu/>
                     <DestinationsRu />
                     <CargoRu/>
+                    <ClientsRu/>
                 </Fragment>
             }
-            <Clients/>
             <Reviews/>
             <Article seoSections={seoSections}/>
         </Fragment>

@@ -5,8 +5,8 @@ import ClientsTemplate from "./ClientsTemplate";
 export default () => (
     <StaticQuery
         query={graphql`
-            query ClientsTemplate{
-                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale:{ eq: "ua" }  }) {
+            query ClientsTemplateRu{
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale:{ eq: "ru" }  }) {
                     frontmatter {
                         clients{
                             title

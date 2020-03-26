@@ -104,8 +104,8 @@ const Sections = ({ sections, className }) => (
                                 </li>
                             ))}
                         </ul>
-                        <Link className="btn" to={section.button && section.button.link || '/'}>
-                            {section.button && section.button.text || 'Узнать больше'}
+                        <Link className="btn" to={section.button ? section.button.link : '/'}>
+                            {section.button ? section.button.text : 'Узнать больше'}
                         </Link>
                     </Fragment>)
                 }

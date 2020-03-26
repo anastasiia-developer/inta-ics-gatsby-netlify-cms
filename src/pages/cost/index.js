@@ -3,10 +3,12 @@ import {graphql} from "gatsby";
 import Layout from "../../components/Layout";
 import Header from "../../components/delivery/Header";
 import Sections from "../../components/delivery/Sections";
-import Cargo from "../../components/mainPage/cargo";
+import Cargo from "../../components/Cargo";
+import CargoRu from "../../components/Cargo/index.ru";
 import Destinations from "../../components/Destinations";
 import DestinationsRu from "../../components/Destinations/index.ru";
 import Clients from "../../components/Clients";
+import ClientsRu from "../../components/Clients/index.ru";
 import Reviews from "../../components/Reviews";
 import Article from "../../components/mainPage/Article";
 import Calculator from "../../components/Calculator";
@@ -50,17 +52,23 @@ export const CostPageTemplate = ({
                     <BarBckgImgSectionText
                         image={barBckgImg}
                     />
+                    Tem
                     {
                         locale === 'ua' ?
-                            <Destinations/>
+                            <Fragment>
+                                <Destinations/>
+                                <Cargo/>
+                                <Clients/>
+                            </Fragment>
                             :
-                            <DestinationsRu/>
+                            <Fragment>
+                                <DestinationsRu/>
+                                <CargoRu/>
+                                <ClientsRu/>
+                            </Fragment>
+
                     }
                 </Fragment>
-            }
-            <Cargo/>
-            {location &&
-                <Clients/>
             }
             <Reviews/>
             <Article seoSections={seoSections}/>
@@ -77,8 +85,8 @@ const Index = ({ data, location, pageContext }) => {
             <CostPageTemplate
                 helmet={
                     <TitleDesHelmet
-                        title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
-                        description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
+                        title={frontmatter.metaData ? frontmatter.metaData.title : frontmatter.title}
+                        description={frontmatter.metaData ? frontmatter.metaData.description : frontmatter.description}
                     />
                 }
                 locale={pageContext.locale}

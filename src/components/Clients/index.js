@@ -6,16 +6,19 @@ export default () => (
     <StaticQuery
         query={graphql`
             query ClientsTemplate{
-                markdownRemark(frontmatter: { pageKey: { eq: "components-common" } }) {
+                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale:{ eq: "ua" }  }) {
                     frontmatter {
                         clients{
-                          image{
-                              childImageSharp {
-                                fluid(maxWidth: 200, quality: 100) {
-                                  ...GatsbyImageSharpFluid
+                            title
+                            list{
+                                image{
+                                  childImageSharp {
+                                    fluid(maxWidth: 200, quality: 100) {
+                                      ...GatsbyImageSharpFluid
+                                    }
+                                  }
                                 }
-                              }
-                          }
+                            }
                         }
                     }
                 }

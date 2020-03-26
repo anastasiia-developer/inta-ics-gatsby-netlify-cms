@@ -6,12 +6,7 @@ import Header from "../components/delivery/Header"
 import CalculateHeader from "../components/CalculateHeader"
 import CalculateHeaderRu from "../components/CalculateHeader/index.ru"
 import {Section} from "./services"
-import OurServices from '../components/OurServices'
-import OurServicesRu from '../components/OurServices/index.ru'
-import Destinations from "../components/Destinations"
-import DestinationsRu from "../components/Destinations/index.ru"
-import Cargo from "../components/mainPage/cargo"
-import Clients from "../components/Clients"
+
 import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
 import FormFooter from '../components/Footer/FormFooter'
@@ -56,21 +51,13 @@ export const InternationalCargoTemplate = ({
             <Section
                 sections={sections}
             />
-            {locale === 'ua' ?
-                <Fragment>
-                    <OurServices/>
-                    <Destinations />
-                </Fragment>
-                :
-                <Fragment>
-                    <OurServicesRu/>
-                    <DestinationsRu/>
-                </Fragment>
-            }
-            <Cargo/>
+
+
+
+
+
             {locale &&
                 <Fragment>
-                    <Clients/>
                     <Reviews/>
                 </Fragment>
             }

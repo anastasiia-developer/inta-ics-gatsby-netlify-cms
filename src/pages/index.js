@@ -16,6 +16,7 @@ import DestinationsRu from "../components/Destinations/index.ru"
 import Cargo from "../components/Cargo"
 import CargoRu from "../components/Cargo/index.ru"
 import Clients from "../components/Clients"
+import ClientsRu from "../components/Clients/index.ru"
 import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
 
@@ -73,7 +74,7 @@ export const IndexPageTemplate = ({
             <News />
             <Destinations/>
             <Cargo/>
-
+            <Clients/>
           </Fragment>
           :
           <Fragment>
@@ -81,9 +82,9 @@ export const IndexPageTemplate = ({
             <NewsRu />
             <DestinationsRu/>
             <CargoRu/>
+            <ClientsRu/>
           </Fragment>
       }
-    <Clients/>
     <Reviews/>
     <Article seoSections={seoSections}/>
   </Fragment>

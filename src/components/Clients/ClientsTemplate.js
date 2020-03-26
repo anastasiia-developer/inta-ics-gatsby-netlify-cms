@@ -64,7 +64,7 @@ const ClientsTemplate = ({ clients }) => {
     if(clients){
         return(
             <Section>
-                <h2>Наши клиенты</h2>
+                <h2>{clients.title}</h2>
                 <div style={{position: 'relative'}} className="wrapper">
                     <Carousel
                         containerClass="carousel_wrapper"
@@ -78,7 +78,7 @@ const ClientsTemplate = ({ clients }) => {
                         responsive={ResponsiveCarousel()}
                         dotListClass="custom-dot-list-style"
                     >
-                        {clients.map((img, index) => (
+                        {clients.list.map((img, index) => (
                             <div key={index} className="img">
                                 <div className="shadow row">
                                     <PreviewCompatibleImage

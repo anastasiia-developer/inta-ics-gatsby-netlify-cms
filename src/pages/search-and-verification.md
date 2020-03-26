@@ -3,6 +3,7 @@ templateKey: services
 locale: ua
 name: search-and-verification
 crumbLabelParent: Послуги 
+table: true
 crumbLabel: Поиск и проверка поставщика
 title: Поиск и проверка поставщика
 description: >-
