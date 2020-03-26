@@ -276,9 +276,9 @@ cargo:
     - title: Міжнародна доставка посилок
       svg: airplane
       link: dostavka-tovariv-z-evropyi/
-    - title: Мультимодальные перевозки
+    - title: Мультимодальні перевезення
       svg: packages
-      link: cargo-delivery
+      link: multimodalni-vantazhoperevezennya/
     - title: Перевозка негабаритных грузов
       svg: product
       link: cargo-delivery
