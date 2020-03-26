@@ -11,7 +11,7 @@ import TitleDesHelmet from "../components/TitleDesHelmet";
 
 const Container = styled.div`
     margin: 0 0 3% 0;
-    font-size: .55em;
+    font-size: 1em;
     background: #F0F5FD;
     border-radius: .5em;
     padding: 1em 2.5em 0;
@@ -77,7 +77,7 @@ const Wrapper = styled.div`
 const Section = styled.div`
     justify-content: space-between; 
     margin-top: -7em;
-    font-size: 1.5em;
+    font-size: 1em;
     flex-wrap: wrap;
     background: #fff;
     align-items: flex-start;

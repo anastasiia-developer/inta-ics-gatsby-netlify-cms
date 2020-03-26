@@ -44,7 +44,7 @@ const Section = styled(About)`
         }
     }
     .text{
-        font-size: .9em;
+        font-size: 1em;
         li{
             color: #3F3F3F;
         }

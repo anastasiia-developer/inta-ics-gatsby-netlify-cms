@@ -22,8 +22,11 @@ const Wrapper = styled.section`
       margin-top: 0;
       width: 100%;
       padding: 2em 1em;
-    .row-to-column{
+      border-radius: 0;
+    form{
         align-items: stretch;
+        max-width: 500px;
+        margin: 0 auto;
     }
   }
   h3{
@@ -34,6 +37,7 @@ const Wrapper = styled.section`
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         line-height: 1em;
         font-size: 1.4em;
+        text-align: center;
     }
   }
   h4{
@@ -407,7 +411,7 @@ const CalculateHeaderTemplate = ({data}) => {
                     stateOptions={false}
                     setOptions={false}
                 />
-                <button className="btn btn-order" type="submit">{data.btn}</button>
+                <button className="btn btn-order" type="submit">{text.btn}</button>
             </form>
         </Wrapper>
         </Fragment>

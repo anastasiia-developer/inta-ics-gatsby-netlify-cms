@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 const Review = styled.div`
     width: 49%;
     margin: 0 0 2% 0;
-    font-size: .8em;
+    font-size: 1em;
     padding: 2em 2.5em 1.5em;
     background: #fff;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.18);
@@ -55,14 +55,14 @@ const Review = styled.div`
     }
     p{
         color: #717883;
-        font-size: .9em;
+        font-size: 1em;
         margin-bottom: 1.5em;
         line-height: 1.7em;
     }
     footer{
         justify-content: space-between; 
         align-items: center;
-        font-size: .7em;
+        font-size: .9em;
         margin-top: auto;
     }
     a{

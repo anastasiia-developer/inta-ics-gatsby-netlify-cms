@@ -82,7 +82,8 @@ const Container = styled.header`
         margin-top: -1.6em;
          @media(max-aspect-ratio: 3/3), (max-height: 500px){
             width: 100%;
-            margin: 0;
+            max-width: 500px;
+            margin: 0 auto;
          }
     }
     .list-info{

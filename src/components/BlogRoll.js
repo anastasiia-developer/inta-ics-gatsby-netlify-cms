@@ -40,7 +40,7 @@ const BlogRoll = ({data, className}) => {
               renderButtonGroupOutside={true}
               customButtonGroup={<ButtonGroup />}
               slidesToSlide={1}
-              responsive={ResponsiveCarousel()}
+              responsive={ResponsiveCarousel(4,2)}
           >
               {posts &&
                   posts.map(({ node: post }) => (

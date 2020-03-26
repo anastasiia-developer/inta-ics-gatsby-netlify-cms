@@ -63,12 +63,12 @@ const Navigation = styled.nav`
           position: absolute;
           height: 61vh;
           overflow-y: scroll;
-          width: 100%;
+          width: 90%;
           top: 18vh;
           left: 0;
           font-size: 1.1em;
           align-items: flex-start;
-          padding: 1em .7em;
+          padding: 1em 5%;
           transform: translateX(${props => props.isActive ? '0' : '-100%'});
           transition: all .4s;
         }
@@ -83,6 +83,9 @@ const Navigation = styled.nav`
             margin: 0 0 2em 0;
             &:last-child{
                 margin-bottom: 0;
+            }
+            &:first-child{
+                margin-top: 2em;
             }
           }
           &:hover{
@@ -122,12 +125,13 @@ const Navigation = styled.nav`
         right: 5%;
         font-size: .8em;        
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            font-size: 1em;
             top: 79vh;
             left: 0;
             flex-direction: column;
             width: 100%;
             z-index: 0;
-            padding: 1.5em .7em;
+            padding: 1.5em 5%;
             align-items: baseline;
             border-top: 1px solid #323232;
             transform: translateX(${props => props.isActive ? '0' : '-100%'});

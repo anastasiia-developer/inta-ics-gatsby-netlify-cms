@@ -36,11 +36,11 @@ const Section = styled.section`
             line-height: 1.7em;
             padding: 1em 0;
             color: #3D3D3D;
-            font-size: .9em;
+            font-size: 1em;
         }
     }
     ul{
-        font-size: .9em;
+        font-size: 1em;
         color: #005BE4;
         padding-left: 2em;
         line-height: 1.7em;

@@ -13,14 +13,11 @@ body
   padding: 0
   position: relative
   font-size: 1vw
-  @media(max-aspect-ratio: 3/3), (max-height: 500px)
-    font-size: 2.5vh
+  @media(max-width: 1024px)
+    font-size: 2.5vw
+  @media(max-width: 500px)
+    font-size: 4.5vw
 
-
-section, article, nav, main, header, footer
-  font-size: 1vw
-  @media(max-aspect-ratio: 3/3), (max-height: 500px)
-    font-size: 2.5vh
 
 a, a:hover, a:focus, .btn
   color: #fff
