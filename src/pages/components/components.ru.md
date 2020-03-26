@@ -6,7 +6,7 @@ warehouses:
   title: Наши склади
   list:
     - country: США
-      city: (Washington)
+      city: (New Jersey)
       flag: /img/002-united-states (3).png
       postIndex: '999077'
       address: >-
@@ -16,10 +16,10 @@ warehouses:
       image: /img/Rectangle 121.png
       images:
         - image: /img/Rectangle 121.png
-    - country: Польща
-      city: (Chelm)
+    - country: Польша
+      city: (Piaseczno)
       flag: /img/poland.png
-    - country: Польща
+    - country: Польша
       city: (Warsaw)
       flag: /img/poland.png
       postIndex: 00-613
