@@ -87,16 +87,16 @@ const StoreBlock = ({store, morePhotoIcon}) => {
 }
 
 const StorageTemplate = ({ data, morePhotoIcon }) => {
-    const storage = data.markdownRemark.frontmatter.storage;
+    const warehouses = data.markdownRemark.frontmatter.warehouses;
 
-    if(storage){
+    if(warehouses){
         return(
             <Fragment>
             {morePhotoIcon ?
                 <SectionMorePhotoIcon className="wrapper">
-                    <h3>{storage.title}</h3>
+                    <h3>{warehouses.title}</h3>
                     <div className="row-to-column container">
-                        {storage.warehouses.filter(store => store.address !== null)
+                        {warehouses.list.filter(store => store.address !== null)
                             .map((store, index) =>
                                 <StoreBlock
                                     key={index}
@@ -107,9 +107,9 @@ const StorageTemplate = ({ data, morePhotoIcon }) => {
                 </SectionMorePhotoIcon>
                 :
                 <Section>
-                    <h4 className="storage-title">{storage.title}</h4>
+                    <h4 className="storage-title">{warehouses.title}</h4>
                     <div className="row flags">
-                        {storage.warehouses.map((item, index) => (
+                        {warehouses.list.map((item, index) => (
                             <Link
                                 to='/contact'
                                 className="row"

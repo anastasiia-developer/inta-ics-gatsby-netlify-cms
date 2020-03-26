@@ -6,10 +6,9 @@ import TemplateHeader from "../../components/TemplateHeader";
 import styled from "styled-components";
 import HoverGradientInsideSvg from '../../components/HoverGradientInsideSvg'
 import PreviewCompatibleImage from "../../components/PreviewCompatibleImage";
-import Clients from "../../components/Clients";
-import ClientsRu from "../../components/Clients/index.ru";
-import Reviews from "../../components/Reviews";
 import TitleDesHelmet from "../../components/TitleDesHelmet";
+import TemplateCommonComponent from "../../components/TemplateCommonComponent"
+
 
 const Section = styled.section`
     margin-top: -10em;
@@ -275,12 +274,11 @@ export const AboutPageTemplate = ({
                   }}
               />
           </SectionImg>
-          {locale === 'ua' ?
-                <Clients/>
-            :
-                <ClientsRu/>
-          }
-          <Reviews/>
+          <TemplateCommonComponent
+            locale={locale}
+            clients
+            reviews
+          />
       </Fragment>
       )
 }
@@ -297,7 +295,7 @@ const AboutPage = ({ data, location, pageContext }) => {
               description={frontmatter.metaData ? frontmatter.metaData.description : frontmatter.description}
           />
         }
-        local={pageContext.locale}
+        locale={pageContext.locale}
         title={frontmatter.title}
         description={frontmatter.description}
         header={frontmatter.header}

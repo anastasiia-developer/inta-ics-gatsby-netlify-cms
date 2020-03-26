@@ -5,8 +5,8 @@ import ReviewsTemplate from "./ReviewsTemplate";
 export default () => (
     <StaticQuery
         query={graphql`
-            query ReviewsQuery{
-                markdownRemark(frontmatter: { pageKey: { eq: "reviews" }, locale: {eq: "ua"} }) {
+            query ReviewsQueryRu{
+                markdownRemark(frontmatter: { pageKey: { eq: "reviews" }, locale: {eq: "ru"} }) {
                     frontmatter {
                         title
                         reviews{

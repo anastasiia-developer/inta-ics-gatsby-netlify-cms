@@ -83,11 +83,13 @@ const Section = styled.section`
     }      
 `;
 
-const ReviewsTemplate = ({reviews}) => {
-    if(reviews){
+const ReviewsTemplate = ({data}) => {
+    const reviews = data.markdownRemark.frontmatter.reviews;
+
+    if(data){
         return(
         <Section>
-            <h2>Отзывы</h2>
+            <h2>{data.markdownRemark.frontmatter.title}</h2>
             <div className="wrapper">
                 <div style={{position: 'relative'}}>
                     <Carousel

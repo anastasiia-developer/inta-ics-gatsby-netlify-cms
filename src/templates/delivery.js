@@ -8,20 +8,12 @@ import CalculateHeader from "../components/CalculateHeader"
 import CalculateHeaderRu from "../components/CalculateHeader/index.ru"
 import Sections from "../components/delivery/Sections"
 import SectionText from "../components/delivery/SectionText"
-import OurServices from '../components/OurServices'
-import OurServicesRu from '../components/OurServices/index.ru'
-import Destinations from "../components/Destinations"
-import DestinationsRu from "../components/Destinations/index.ru"
-import Cargo from "../components/Cargo/index.ru"
-import CargoRu from "../components/Cargo/index.ru"
-import Clients from "../components/Clients"
-import ClientsRu from "../components/Clients/index.ru"
-import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
 import BarBckgImgSectionText from "../components/BarBckgImgSectionText"
 import TitleDesHelmet from "../components/TitleDesHelmet";
+import TemplateCommonComponent from "../components/TemplateCommonComponent"
 
 export const DeliveryTemplate = ({
                                      helmet,
@@ -70,22 +62,7 @@ export const DeliveryTemplate = ({
                     image={sectionText.image}
                 />
             }
-            {locale === 'ua' ?
-                <Fragment>
-                    <OurServices/>
-                    <Destinations />
-                    <Cargo/>
-                    <Clients/>
-                </Fragment>
-                :
-                <Fragment>
-                    <OurServicesRu/>
-                    <DestinationsRu />
-                    <CargoRu/>
-                    <ClientsRu/>
-                </Fragment>
-            }
-            <Reviews/>
+            <TemplateCommonComponent locale={locale} destinations cargo clients reviews services/>
             <Article seoSections={seoSections}/>
         </Fragment>
     )

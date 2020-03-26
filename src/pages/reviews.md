@@ -2,7 +2,7 @@
 pageKey: reviews
 locale: ua
 collection: help
-title: Отзывы
+title: Отзиви
 crumbLabel: Отзывы
 crumbLabelParent: Помощь
 description: >-

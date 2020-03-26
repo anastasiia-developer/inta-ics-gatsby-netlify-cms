@@ -78,8 +78,7 @@ export const ServicesPageTemplate = ({
             <Section
                 sections={sections}
             />
-            <TemplateCommonComponent locale={locale}/>
-            <Reviews/>
+            <TemplateCommonComponent locale={locale} destinations cargo clients reviews services/>
            {seoSections &&
                 <Article seoSections={seoSections}/>
            }

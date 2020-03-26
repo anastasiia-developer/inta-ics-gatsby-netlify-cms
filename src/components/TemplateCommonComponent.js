@@ -7,22 +7,54 @@ import Cargo from "./Cargo"
 import CargoRu from "./Cargo/index.ru"
 import Clients from "./Clients"
 import ClientsRu from "./Clients/index.ru"
+import Reviews from "./Reviews";
+import ReviewsRu from "./Reviews/index.ru";
+import News from "./NewsRoll";
+import NewsRu from "./NewsRoll/index.ru";
 
-const TemplateCommonComponent = ({locale}) =>
+const TemplateCommonComponent = ({locale, services, news, destinations, cargo, clients, reviews}) =>
     <Fragment>
         {locale === 'ua' ?
             <Fragment>
-                <OurServices/>
-                <Destinations />
-                <Cargo/>
-                <Clients/>
+                {news &&
+                    <News/>
+                }
+                {services &&
+                    <OurServices/>
+                }
+                {destinations &&
+                    <Destinations/>
+                }
+                {cargo &&
+                    <Cargo/>
+                }
+                {clients &&
+                    <Clients/>
+                }
+                {reviews &&
+                    <Reviews/>
+                }
             </Fragment>
             :
             <Fragment>
-                <OurServicesRu/>
-                <DestinationsRu/>
-                <CargoRu/>
-                <ClientsRu/>
+                {news &&
+                    <NewsRu/>
+                }
+                {services &&
+                    <OurServicesRu/>
+                }
+                {destinations &&
+                    <DestinationsRu/>
+                }
+                {cargo &&
+                    <CargoRu/>
+                }
+                {clients &&
+                    <ClientsRu/>
+                }
+                {reviews &&
+                    <ReviewsRu/>
+                }
             </Fragment>
         }
     </Fragment>;

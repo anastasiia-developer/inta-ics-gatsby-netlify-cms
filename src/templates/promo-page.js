@@ -2,19 +2,15 @@ import React, {Fragment} from "react";
 import {graphql} from "gatsby";
 import Layout from "../components/Layout";
 import Sections from "../components/delivery/Sections";
-import Cargo from "../components/mainPage/cargo";
-import Destinations from "../components/Destinations";
-import DestinationsRu from "../components/Destinations/index.ru";
-import Clients from "../components/Clients";
-import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
-import News from "../components/NewsRoll";
-import NewsRu from "../components/NewsRoll/index.ru";
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
 import TitleDesHelmet from "../components/TitleDesHelmet";
+import TemplateCommonComponent from "../components/TemplateCommonComponent"
+
+
 
 const Header = styled(TemplateHeader)`
     position: relative;
@@ -65,22 +61,7 @@ export const SalesPageTemplate = ({
             <Section
                 sections={sections}
             />
-            {location && locale === 'ua' ?
-                <Fragment>
-                    <News/>
-                    <Destinations/>
-                </Fragment>
-                :
-                <Fragment>
-                    <NewsRu/>
-                    <DestinationsRu/>
-                </Fragment>
-            }
-            <Cargo/>
-            {location &&
-                <Clients/>
-            }
-            <Reviews/>
+            <TemplateCommonComponent locale={locale} destinations cargo clients reviews news/>
             <Article seoSections={seoSections}/>
         </Fragment>
     )

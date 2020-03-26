@@ -6,12 +6,12 @@ import Header from "../components/delivery/Header"
 import CalculateHeader from "../components/CalculateHeader"
 import CalculateHeaderRu from "../components/CalculateHeader/index.ru"
 import {Section} from "./services"
-
-import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
 import FormFooter from '../components/Footer/FormFooter'
 import CalculateContainerHeader from "../components/CalculateContainerHeader"
 import TitleDesHelmet from "../components/TitleDesHelmet"
+import TemplateCommonComponent from "../components/TemplateCommonComponent"
+
 
 export const InternationalCargoTemplate = ({
                                             helmet,
@@ -51,16 +51,13 @@ export const InternationalCargoTemplate = ({
             <Section
                 sections={sections}
             />
-
-
-
-
-
-            {locale &&
-                <Fragment>
-                    <Reviews/>
-                </Fragment>
-            }
+            <TemplateCommonComponent
+                locale={locale}
+                destinations
+                cargo
+                clients
+                reviews
+                services/>
             {seoSections &&
                 <Article seoSections={seoSections}/>
             }

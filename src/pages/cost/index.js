@@ -3,19 +3,13 @@ import {graphql} from "gatsby";
 import Layout from "../../components/Layout";
 import Header from "../../components/delivery/Header";
 import Sections from "../../components/delivery/Sections";
-import Cargo from "../../components/Cargo";
-import CargoRu from "../../components/Cargo/index.ru";
-import Destinations from "../../components/Destinations";
-import DestinationsRu from "../../components/Destinations/index.ru";
-import Clients from "../../components/Clients";
-import ClientsRu from "../../components/Clients/index.ru";
-import Reviews from "../../components/Reviews";
 import Article from "../../components/mainPage/Article";
 import Calculator from "../../components/Calculator";
 import CalculatorRu from "../../components/Calculator/index.ru";
 import FormFooter from '../../components/Footer/FormFooter'
 import BarBckgImgSectionText from '../../components/BarBckgImgSectionText'
 import TitleDesHelmet from "../../components/TitleDesHelmet";
+import TemplateCommonComponent from "../../components/TemplateCommonComponent";
 
 export const CostPageTemplate = ({
                                   helmet,
@@ -52,25 +46,24 @@ export const CostPageTemplate = ({
                     <BarBckgImgSectionText
                         image={barBckgImg}
                     />
-                    Tem
-                    {
-                        locale === 'ua' ?
-                            <Fragment>
-                                <Destinations/>
-                                <Cargo/>
-                                <Clients/>
-                            </Fragment>
-                            :
-                            <Fragment>
-                                <DestinationsRu/>
-                                <CargoRu/>
-                                <ClientsRu/>
-                            </Fragment>
+                    <TemplateCommonComponent
+                        locale={locale}
+                        destinations
+                        cargo
+                        clients
+                        reviews
+                        services
+                    />
 
-                    }
                 </Fragment>
             }
-            <Reviews/>
+            <TemplateCommonComponent
+                locale={locale}
+                destinations
+                cargo
+                clients
+                reviews
+            />
             <Article seoSections={seoSections}/>
         </Fragment>
     )
