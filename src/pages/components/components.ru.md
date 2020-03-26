@@ -126,8 +126,9 @@ clients:
 destinations:
   title: Международные грузоперевозки
   countries:
-    - country: Китай
-      flag: /img/001-china 3.png
+    - country: 'Турция '
+      flag: /img/218-turkey.png
+      link: dostavka-gruzov-iz-turtsii
     - country: Англия
       flag: /img/002-united-states.png
     - country: Италия
