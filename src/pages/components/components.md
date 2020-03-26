@@ -266,13 +266,13 @@ cargo:
       link: konteynerni-vantazhoperevezennya/
     - title: Карго доставка
       svg: package
-      link: cargo-delivery
-    - title: Доставка товаров
+      link: cargo/
+    - title: Доставка товарів
       svg: trolley
-      link: container-transporting
-    - title: Перевозка сборных грузов
+      link: dostavka-tovariv-z-kytaju/
+    - title: Перевезення збірних вантажів
       svg: ship
-      link: container-transporting
+      link: 'perevezennya-zbirnyih-vantazhiv/ '
     - title: Международная доставка посылок
       svg: airplane
       link: container-transporting
