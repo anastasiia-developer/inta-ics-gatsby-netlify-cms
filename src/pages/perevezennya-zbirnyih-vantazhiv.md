@@ -9,7 +9,7 @@ metaData:
     по всему миру &#9989; Полный комплекс сопроводительных услуг, таможенное
     оформление &#9989; Поддержка 24/7  &#9742; 068 5555 999
 title: ' Перевезення збірних вантажів '
-name: /perevezennya-zbirnyih-vantazhiv/
+name: perevezennya-zbirnyih-vantazhiv
 crumbLabelParent: ЗД перевезення
 crumbLabel: 'Перевезення збірних вантажів '
 description: >-
