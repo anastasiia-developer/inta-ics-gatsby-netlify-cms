@@ -11,7 +11,7 @@ const FlagTemplate = ({ countries, setOptions, stateOptions, link }) => {
                             <Link
                                 key={index}
                                 className="row"
-                                to={item.link || '/'}
+                                to={`/${item.link}` || '/'}
                             >
                                 <img src={item.flag.publicURL} alt="flag"/>
                                 <p>{item.country}</p>

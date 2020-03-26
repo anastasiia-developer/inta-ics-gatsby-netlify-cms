@@ -122,7 +122,7 @@ const SubMenu = ({list, setActiveMob, isActiveMob}) => {
                         key={index}
                         onClick={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
                         onKeyDown={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
-                        to={link.frontmatter.name}>
+                        to={`/${link.frontmatter.name}`}>
                         {link.frontmatter.crumbLabel}
                         <ArrowLine/>
                     </Link>

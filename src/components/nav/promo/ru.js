@@ -21,7 +21,6 @@ export default ({setActiveMob, isActiveMob}) => (
         render={(data) =>
             <SubMenu
                 list={data.allMarkdownRemark.nodes}
-                startPath="/promos/ru/"
                 setActiveMob={() => setActiveMob}
                 isActiveMob={isActiveMob}
             />

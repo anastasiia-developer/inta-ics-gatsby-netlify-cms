@@ -57,7 +57,7 @@ const Navbar = ({local, location}) => {
             isActive={isActiveMob}
         />
         <Link
-            to={`/${lang}`}
+            to={lang === 'ua' ? '/' : '/ru/'}
             className="logo"
             title="Logo">
           <img

@@ -46,7 +46,7 @@ const DivBlock = styled.div`
 const HoverGradientInsideSvg = ({title, svg, link, btnLink, description}) => (
     <Fragment>
         {link ?
-            <LinkBlock to={link}>
+            <LinkBlock to={`/${link}`}>
                 {svg}
                 <h4>{title}</h4>
             </LinkBlock>

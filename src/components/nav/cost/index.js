@@ -17,7 +17,7 @@ export default ({setActiveMob}) => (
         render={(data) =>
             <LinkMenu
                 label={data}
-                link="/cost"
+                link="/cost/"
                 setActiveMob={() => setActiveMob}
             />
         }

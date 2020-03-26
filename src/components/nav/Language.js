@@ -42,15 +42,6 @@ const Options = styled.div`
 
 const Language = ({local, location}) => {
     const [isActive, setActive] = useState(false);
-    const pathNameUa = location.pathname.replace("ru/", "");
-    const pathNameRu = (leng) => {
-        const path = location.pathname.split("/");
-
-        return path.length > 2 ?
-            path.includes('help') ?
-                `${leng}/${path[1]}/${path[2]}` :
-                `${path[1]}/${leng}/${path[2]}` : leng+location.pathname
-    };
 
     return(
     <Container className="row">
@@ -59,7 +50,7 @@ const Language = ({local, location}) => {
         </button>
         <Options isActive={isActive}>
             {Object.keys(locales).map((leng, index) =>
-                <Link to={`${leng === local ? location.pathname : leng === 'ua' ? pathNameUa : pathNameRu(leng)}`}
+                <Link to={`${leng === "ua" ? '/' : '/ru/'}`}
                       key={index}
                       onClick={() => setActive(false)}>
                     {leng}

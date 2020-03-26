@@ -12,7 +12,7 @@ const Breadcrumbs = ({ location, crumbLabel, crumbLabelParent, crumbPathParent }
             {crumbLabelParent &&
                 <Fragment>
                 {crumbPathParent ?
-                    <Link to={crumbPathParent}>
+                    <Link to={`/${crumbPathParent}`}>
                         {crumbLabelParent}
                     </Link>
                         :

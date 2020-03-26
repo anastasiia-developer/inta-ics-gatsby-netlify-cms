@@ -19,7 +19,6 @@ export default ({setActiveMob, isActiveMob}) => (
     `}
         render={(data) =>
             <SubMenu
-                parentName="Услуги"
                 list={data.allMarkdownRemark.nodes}
                 setActiveMob={() => setActiveMob}
                 isActiveMob={isActiveMob}
