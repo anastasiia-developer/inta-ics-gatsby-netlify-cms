@@ -452,18 +452,18 @@ collections:
               {label: "url", name: link, widget: string, required: false}
             ]}
           ]},
-          {label: "Остались вопросы?", name: formFooter, widget: list, fields: [
-          {label: "title", name: title, widget: string, required: false},
-          {label: "subTitle", name: subTitle, widget: string, required: false},
+          {label: "Остались вопросы?", name: formFooter, widget: object, fields: [
+            {label: "title", name: title, widget: string, required: false},
+            {label: "subTitle", name: subTitle, widget: string, required: false},
             {label: "description", name: description, widget: "markdown", required: false},
             {label: "descriptionTwo", name: descriptionTwo, widget: string, required: false},
-            {label: "form", name: form, widget: list, fields: [
+            {label: "form", name: form, widget: object, fields: [
               {label: "name", name: name, widget: string, required: false},
               {label: "phone", name: phone, widget: string, required: false},
               {label: "comment", name: comment, widget: string, required: false},
               {label: "btn", name: btn, widget: string, required: false}
-              ]}
             ]}
+          ]}
       ]}
       - {label: "news", name: news, widget: object, fields: [
       {label: "Заголовок", name: title, widget: string, required: false},

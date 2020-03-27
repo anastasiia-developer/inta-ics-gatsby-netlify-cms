@@ -23,9 +23,6 @@ const FormCommon = styled.div`
   h4{
     font-size: 1em;
     text-align: center;
-    @media(max-aspect-ratio: 3/3), (max-height: 500px){
-      font-size: .5em;
-    }
   }
   .calculate-common{
     background: #fff;

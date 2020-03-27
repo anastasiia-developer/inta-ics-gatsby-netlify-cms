@@ -112,6 +112,9 @@ const Container = styled.header`
             margin-right: .5em;
         }
     }
+    .row-btns{
+        flex-wrap: wrap;
+    }
     .common-header-column h3 {
         font-weight: 300;
         font-size: 1.1em;
@@ -229,7 +232,7 @@ const TemplateHeader = ({
                     {scopeInformation &&
                         <ScopeDeliver information={scopeInformation}/>
                     }
-                    <div className="row-to-column">
+                    <div className="row row-btns">
                         { buttons &&
                             <Buttons buttons={buttons}/>
                         }

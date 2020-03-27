@@ -7,19 +7,8 @@ import Header from "../components/mainPage/header"
 import TemplateHeader from "../components/TemplateHeader";
 import Section from "../components/mainPage/section"
 import About from "../components/mainPage/about"
-import Calculator from "../components/Calculator"
-import CalculatorRu from "../components/Calculator/index.ru"
-import News from "../components/NewsRoll"
-import NewsRu from "../components/NewsRoll/index.ru"
-import Destinations from "../components/Destinations"
-import DestinationsRu from "../components/Destinations/index.ru"
-import Cargo from "../components/Cargo"
-import CargoRu from "../components/Cargo/index.ru"
-import Clients from "../components/Clients"
-import ClientsRu from "../components/Clients/index.ru"
-import Reviews from "../components/Reviews"
 import Article from "../components/mainPage/Article"
-
+import TemplateCommonComponent from "../components/TemplateCommonComponent"
 import FormFooter from '../components/Footer/FormFooter'
 import FormFooterRu from '../components/Footer/FormFooter/index.ru'
 import Slider from "react-slick";
@@ -40,7 +29,6 @@ export const IndexPageTemplate = ({
   seoSections,
   description,
   helmet,
-  locale,
   location,
   title,
   header,
@@ -69,24 +57,14 @@ export const IndexPageTemplate = ({
       image={about.image}
       text={about.text}
     />
-      {locale === 'ua' ?
-          <Fragment>
-            <Calculator/>
-            <News />
-            <Destinations/>
-            <Cargo/>
-            <Clients/>
-          </Fragment>
-          :
-          <Fragment>
-            <CalculatorRu/>
-            <NewsRu />
-            <DestinationsRu/>
-            <CargoRu/>
-            <ClientsRu/>
-          </Fragment>
-      }
-    <Reviews/>
+      <TemplateCommonComponent
+        calculate
+        news
+        destinations
+        cargo
+        clients
+        reviews
+      />
     <Article seoSections={seoSections}/>
   </Fragment>
 )

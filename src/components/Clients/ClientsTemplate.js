@@ -16,7 +16,7 @@ const Section = styled.section`
         margin: 0 auto;
         padding-bottom: 2em;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-                width: 80%;
+            width: 80%;
         }
     }
     .row{
@@ -55,9 +55,17 @@ const Section = styled.section`
             background: #005BE4;
         } 
     }
-    .react-multiple-carousel__arrow::before{
-        color: #005BE4;
-    }
+    .react-multiple-carousel__arrow{
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            top: -30%;
+            &:hover {
+                background: none;
+            }
+        }
+        &::before{
+            color: #005BE4;
+        }
+    }    
 `;
 
 const ClientsTemplate = ({ clients }) => {

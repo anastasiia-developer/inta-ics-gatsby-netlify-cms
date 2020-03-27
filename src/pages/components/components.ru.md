@@ -254,19 +254,19 @@ ourServices:
   list:
     - title: Проведение платежей
       svg: shopping
-      link: oplata-postavschiku-v-kitae
+      link: oplata-postavschiku-v-kitae/
     - title: Поиск поставщика
       svg: search
-      link: poisk-postavschika-v-kitae
+      link: poisk-postavschika-v-kitae/
     - title: Заказ товара из Китая
       svg: delivery
-      link: dostavka-tovarov-iz-kitaya
+      link: dostavka-tovarov-iz-kitaya/
     - title: Таможенное оформление груза
       svg: clipboard
-      link: raztamozhka
+      link: raztamozhka/
     - title: Складские услуги
       svg: warehouse
-      link: skladskie-uslugi
+      link: skladskie-uslugi/
 name: components
 reviews:
   - name: Иван Заец
@@ -294,16 +294,16 @@ cargo:
   list:
     - title: 'Контейнерные перевозки '
       svg: storage
-      link: konteynernyie-perevozki
+      link: konteynernyie-perevozki/
     - title: Карго доставка
       svg: package
-      link: cargo
+      link: cargo/
     - title: Доставка товаров
       svg: trolley
-      link: dostavka-tovarov-iz-kitaya
+      link: dostavka-tovarov-iz-kitaya/
     - title: 'Перевозка сборных грузов '
       svg: ship
-      link: perevozki-sbornyih-gruzov
+      link: perevozki-sbornyih-gruzov/
     - title: 'Международная доставка посылок '
       svg: airplane
       link: dostavka-tovarov-i-posyilok-iz-evropyi

@@ -29,6 +29,7 @@ export default () => (
             query OurServicesTemplate{
                 markdownRemark(frontmatter: { pageKey: { eq: "components-common" },locale: { eq: "ua" } }) {
                     frontmatter {
+                        locale
                         ourServices {
                             title
                             list{
@@ -43,7 +44,7 @@ export default () => (
     `}
         render={(data) =>
             <Section>
-                <CargoTemplate data={data.markdownRemark.frontmatter.ourServices} />
+                <CargoTemplate locale={data.markdownRemark.frontmatter.locale} data={data.markdownRemark.frontmatter.ourServices} />
             </Section>
         }
     />
