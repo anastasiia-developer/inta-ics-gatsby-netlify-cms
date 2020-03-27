@@ -444,14 +444,25 @@ collections:
       {label: alt, name: alt, widget: string, required: false}
       ]}
       - {label: "footer", name: footer, widget: object, fields: [
-      {label: "description", name: description, widget: string, required: false},
-      {label: "storeName", name: storeName, widget: string, required: false},
-      {label: "навигация колекция", name: navCollection, widget: list, fields: [
-      {label: "навигация", name: nav, widget: list, fields: [
-      {label: "name", name: name, widget: string, required: false},
-      {label: "url", name: link, widget: string, required: false}
-      ]}
-      ]}
+          {label: "description", name: description, widget: string, required: false},
+          {label: "storeName", name: storeName, widget: string, required: false},
+          {label: "навигация колекция", name: navCollection, widget: list, fields: [
+            {label: "навигация", name: nav, widget: list, fields: [
+              {label: "name", name: name, widget: string, required: false},
+              {label: "url", name: link, widget: string, required: false}
+            ]}
+          ]},
+          {label: "Остались вопросы?", name: formFooter, widget: list, fields: [
+            {label: "subTitle", name: subTitle, widget: string, required: false},
+            {label: "description", name: description, widget: "markdown", required: false},
+            {label: "descriptionTwo", name: descriptionTwo, widget: string, required: false},
+            {label: "form", name: form, widget: list, fields: [
+              {label: "name", name: name, widget: string, required: false},
+              {label: "phone", name: phone, widget: string, required: false},
+              {label: "comment", name: comment, widget: string, required: false},
+              {label: "btn", name: btn, widget: string, required: false}
+              ]}
+            ]}
       ]}
       - {label: "news", name: news, widget: object, fields: [
       {label: "Заголовок", name: title, widget: string, required: false},

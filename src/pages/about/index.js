@@ -2,6 +2,7 @@ import React, {Fragment, useState} from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import FormFooter from '../../components/Footer/FormFooter'
+import FormFooterRu from '../../components/Footer/FormFooter/index.ru'
 import TemplateHeader from "../../components/TemplateHeader";
 import styled from "styled-components";
 import HoverGradientInsideSvg from '../../components/HoverGradientInsideSvg'
@@ -304,7 +305,11 @@ const AboutPage = ({ data, location, pageContext }) => {
         ourValues={frontmatter.ourValues}
         aboutImg={frontmatter.aboutImg}
       />
-      <FormFooter locale={pageContext.locale}/>
+        {pageContext.locale === 'ua' ?
+            <FormFooter />
+            :
+            <FormFooterRu />
+        }
     </Layout>
   )
 }

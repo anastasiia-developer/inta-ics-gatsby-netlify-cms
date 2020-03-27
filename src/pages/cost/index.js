@@ -7,6 +7,7 @@ import Article from "../../components/mainPage/Article";
 import Calculator from "../../components/Calculator";
 import CalculatorRu from "../../components/Calculator/index.ru";
 import FormFooter from '../../components/Footer/FormFooter'
+import FormFooterRu from '../../components/Footer/FormFooter/index.ru'
 import BarBckgImgSectionText from '../../components/BarBckgImgSectionText'
 import TitleDesHelmet from "../../components/TitleDesHelmet";
 import TemplateCommonComponent from "../../components/TemplateCommonComponent";
@@ -83,7 +84,11 @@ const Index = ({ data, location, pageContext }) => {
                 seoSections={frontmatter.seoSections}
                 barBckgImg={data.fileName}
             />
-            <FormFooter locale={pageContext.locale}/>
+            {pageContext.locale === 'ua' ?
+                <FormFooter />
+                :
+                <FormFooterRu />
+            }
         </Layout>
     )
 }

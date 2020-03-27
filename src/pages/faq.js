@@ -6,6 +6,7 @@ import TemplateHeader from "../components/TemplateHeader";
 import News from "../components/NewsRoll";
 import NewsRu from "../components/NewsRoll/index.ru";
 import FormFooter from "../components/Footer/FormFooter";
+import FormFooterRu from "../components/Footer/FormFooter/index.ru";
 import Arrow from "../img/arrow2.svg"
 import TitleDesHelmet from "../components/TitleDesHelmet";
 
@@ -177,7 +178,11 @@ const Faq = ({ data, location, pageContext }) => {
                 questions={frontmatter.questions}
                 locale={pageContext.locale}
             />
-            <FormFooter locale={pageContext.locale}/>
+            {pageContext.locale === 'ua' ?
+                <FormFooter />
+                :
+                <FormFooterRu />
+            }
         </Layout>
     )
 }

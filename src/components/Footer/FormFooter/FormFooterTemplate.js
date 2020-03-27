@@ -1,9 +1,9 @@
 import React, {Fragment, useState} from "react";
 import styled from "styled-components";
-import { encode} from "../../pages/contact/form";
-import Phone from "../FormComponents/Phone";
-import PopupThanks from "../Popups/PopupThanks";
-import PopupThanksRu from "../Popups/PopupThanks/index.ru";
+import { encode} from "../../../pages/contact/form";
+import Phone from "../../FormComponents/Phone";
+import PopupThanks from "../../Popups/PopupThanks";
+import PopupThanksRu from "../../Popups/PopupThanks/index.ru";
 
 const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
@@ -108,9 +108,10 @@ const FormCommon = styled.div`
   }
 `;
 
-const FormFooter = ({locale}) => {
+const FormFooterTemplate = ({data}) => {
     const [inputsValue, setInputsValue] = useState({});
     const [isOpenPopup, setPopupOpen] = useState(false);
+    const footerData = data.footer.formFooter;
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -133,22 +134,20 @@ const FormFooter = ({locale}) => {
         <FormCommon>
             {isOpenPopup &&
             <Fragment> {
-                locale === 'ua' ?
+                data.locale === 'ua' ?
                     <PopupThanks close={setPopupOpen}/>
                     :
                     <PopupThanksRu close={setPopupOpen}/>
             }
             </Fragment>
             }
-            <h2>Остались вопросы?</h2>
-            <h4>Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
+            <h2>{footerData.title}</h2>
+            <h4>{footerData.subTitle}</h4>
             <div className="calculate-common">
                 <h3>
-                    <span className="blue">Есть вопрос? </span>
-                    Наш менеджер ответит вам за
-                    <span className="blue"> 15 минут</span>
+                    {footerData.description}
                 </h3>
-                <h4> Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!</h4>
+                <h4>{footerData.descriptionTwo}</h4>
                 <form
                     name="footerContact"
                     method="post"
@@ -161,7 +160,7 @@ const FormFooter = ({locale}) => {
                     <input type="hidden" name="form-name" value="contact" />
 
                     <div className="column">
-                        <h5>Имя</h5>
+                        <h5>{footerData.form.name}</h5>
                         <div className="calculate-block row">
                             <input
                                 type="text"
@@ -175,7 +174,7 @@ const FormFooter = ({locale}) => {
                         </div>
                     </div>
                     <div className="column">
-                        <h5>Телефон</h5>
+                        <h5>{footerData.form.phone}</h5>
                         <div className="calculate-block row">
                             <Phone
                                 className='input-common'
@@ -187,7 +186,7 @@ const FormFooter = ({locale}) => {
                         </div>
                     </div>
                     <div className="column">
-                        <h5>Комментарий</h5>
+                        <h5>{footerData.form.comment}</h5>
                         <div className="calculate-block row">
                             <input
                                 type="text"
@@ -200,10 +199,10 @@ const FormFooter = ({locale}) => {
                             <img src="/img/commentForm.png" alt="comment icon"/>
                         </div>
                     </div>
-                    <button className="btn-order" type="submit">Отправить</button>
+                    <button className="btn-order" type="submit">{footerData.form.btn}</button>
                 </form>
             </div>
         </FormCommon>
     )
 }
-export default FormFooter;
+export default FormFooterTemplate;

@@ -10,6 +10,7 @@ import Sections from "../components/delivery/Sections"
 import SectionText from "../components/delivery/SectionText"
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
+import FormFooterRu from '../components/Footer/FormFooter/index.ru'
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
 import BarBckgImgSectionText from "../components/BarBckgImgSectionText"
 import TitleDesHelmet from "../components/TitleDesHelmet";
@@ -99,7 +100,11 @@ const Delivery = ({ data, location, pageContext }) => {
                 sectionText={frontmatter.sectionText}
                 seoSections={frontmatter.seoSections}
             />
-            <FormFooter locale={pageContext.locale}/>
+            {pageContext.locale === 'ua' ?
+                <FormFooter />
+            :
+                <FormFooterRu />
+            }
         </Layout>
     )
 }

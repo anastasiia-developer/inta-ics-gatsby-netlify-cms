@@ -2,9 +2,9 @@ import React, {Fragment} from "react";
 import {graphql} from "gatsby";
 import Layout from "../components/Layout";
 import Sections from "../components/delivery/Sections";
-import Reviews from "../components/Reviews";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
+import FormFooterRu from '../components/Footer/FormFooter/index.ru'
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
@@ -110,7 +110,11 @@ const ServicesPage = ({ data, location, pageContext }) => {
                 crumbLabelParent={frontmatter.crumbLabelParent}
                 table={frontmatter.table}
             />
-            <FormFooter locale={pageContext.locale}/>
+            {pageContext.locale === 'ua' ?
+                <FormFooter />
+                :
+                <FormFooterRu />
+            }
         </Layout>
     )
 }

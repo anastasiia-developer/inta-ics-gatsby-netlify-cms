@@ -9,6 +9,7 @@ import BarContacts from "../../components/nav/BarContacts";
 import styled from "styled-components";
 import Store from "../../components/store";
 import FormFooter from '../../components/Footer/FormFooter'
+import FormFooterRu from '../../components/Footer/FormFooter/index.ru'
 
 import TitleDesHelmet from "../../components/TitleDesHelmet";
 import Storage from '../../components/Storage'
@@ -92,7 +93,11 @@ const ContactPage = ({ data, location, pageContext }) => {
                 locale={pageContext.locale}
                 morePhotoIcon={data.fileName}
             />
-            <FormFooter locale={pageContext.locale}/>
+            {pageContext.locale === 'ua' ?
+                <FormFooter />
+                :
+                <FormFooterRu />
+            }
         </Layout>
     )
 }

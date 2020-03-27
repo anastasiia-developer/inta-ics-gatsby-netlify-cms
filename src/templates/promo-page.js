@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Sections from "../components/delivery/Sections";
 import Article from "../components/mainPage/Article";
 import FormFooter from '../components/Footer/FormFooter'
+import FormFooterRu from '../components/Footer/FormFooter/index.ru'
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
@@ -88,7 +89,11 @@ const Promo = ({ data, location, pageContext }) => {
             seoSections={frontmatter.seoSections}
             locale={pageContext.locale}
         />
-        <FormFooter locale={pageContext.locale}/>
+        {pageContext.locale === 'ua' ?
+            <FormFooter />
+            :
+            <FormFooterRu />
+        }
         </Layout>
     )
 }

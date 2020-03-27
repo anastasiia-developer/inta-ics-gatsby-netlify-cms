@@ -7,6 +7,7 @@ import TemplateHeader from "../components/TemplateHeader";
 import TagsRoll from "../components/TagsRoll";
 import Post from "../components/Post";
 import FormFooter from '../components/Footer/FormFooter'
+import FormFooterRu from '../components/Footer/FormFooter/index.ru'
 import TitleDesHelmet from "../components/TitleDesHelmet";
 
 const Header = styled(TemplateHeader)`
@@ -185,7 +186,11 @@ const BlogIndexPage = ({ data, location, pageContext }) => {
                 pageContext={pageContext}
                 posts={posts}
             />
-            <FormFooter locale={pageContext.locale}/>
+            {pageContext.locale === 'ua' ?
+                <FormFooter />
+                :
+                <FormFooterRu />
+            }
         </Layout>
     )
 }

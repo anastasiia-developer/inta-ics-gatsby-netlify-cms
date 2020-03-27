@@ -7,6 +7,7 @@ import {Section} from "./services"
 import TemplateCommonComponent from "../components/TemplateCommonComponent";
 import Article from "../components/mainPage/Article"
 import FormFooter from '../components/Footer/FormFooter'
+import FormFooterRu from '../components/Footer/FormFooter/index.ru'
 import CalculateContainerHeader from "../components/CalculateContainerHeader"
 import TitleDesHelmet from "../components/TitleDesHelmet"
 import CalculateHeader from "../components/CalculateHeader";
@@ -77,7 +78,11 @@ const InternationalDestinations = ({ data, location, pageContext }) => {
                 sections={frontmatter.sections}
                 seoSections={frontmatter.seoSections}
             />
-            <FormFooter locale={pageContext.locale}/>
+            {pageContext.locale === 'ua' ?
+                <FormFooter />
+                :
+                <FormFooterRu />
+            }
         </Layout>
     )
 }

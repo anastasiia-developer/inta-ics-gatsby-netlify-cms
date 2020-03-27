@@ -6,6 +6,7 @@ import TemplateHeader from "../components/TemplateHeader";
 import News from "../components/NewsRoll";
 import NewsRu from "../components/NewsRoll/index.ru";
 import FormFooter from "../components/Footer/FormFooter";
+import FormFooterRu from "../components/Footer/FormFooter/index.ru";
 import TitleDesHelmet from "../components/TitleDesHelmet";
 import {ContentInFrontmatter} from '../components/Content'
 
@@ -139,7 +140,11 @@ const Reviews = ({ data, location, pageContext }) => {
                 reviews={frontmatter.reviews}
                 locale={pageContext.locale}
             />
-            <FormFooter locale={pageContext.locale}/>
+            {pageContext.locale === 'ua' ?
+                <FormFooter />
+                :
+                <FormFooterRu />
+            }
         </Layout>
     )
 }
