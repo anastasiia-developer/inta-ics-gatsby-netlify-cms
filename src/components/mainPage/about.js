@@ -55,7 +55,9 @@ const Section = styled.section`
 const About = ({ title, image, text, className, children }) => (
     <Section className={`row-to-column ${className}`} hasChildren={!!children}>
         <div className="description">
-            <h2>{title}</h2>
+            {title &&
+                <h2>{title}</h2>
+            }
             <ContentInFrontmatter className="text" content={text}/>
             {children}
         </div>

@@ -59,7 +59,9 @@ const Section = styled.article`
 const Article = ({seoSections}) =>{
     return(
         <Section>
-            <h2>{seoSections.title}</h2>
+            {seoSections.title &&
+                <h2>{seoSections.title}</h2>
+            }
             <Sections
                 className='wrapper'
                 sections={seoSections.sections}
