@@ -4,6 +4,7 @@ import { encode} from "../../../pages/contact/form";
 import Phone from "../../FormComponents/Phone";
 import PopupThanks from "../../Popups/PopupThanks";
 import PopupThanksRu from "../../Popups/PopupThanks/index.ru";
+import { HTMLContent } from '../../Content';
 
 const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
@@ -49,9 +50,6 @@ const FormCommon = styled.div`
       font-size: 1.6em;
       font-weight: 700;
       color: #000;
-    }
-    .blue{
-      color: #005BE4;
     }
     h4{
       margin-bottom: 4em;
@@ -145,7 +143,7 @@ const FormFooterTemplate = ({data}) => {
             <h4>{footerData.subTitle}</h4>
             <div className="calculate-common">
                 <h3>
-                    {footerData.description}
+                    <HTMLContent content={footerData.description}/>
                 </h3>
                 <h4>{footerData.descriptionTwo}</h4>
                 <form
