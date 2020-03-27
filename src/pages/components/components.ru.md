@@ -6,7 +6,7 @@ warehouses:
   title: Наши склади
   list:
     - country: США
-      city: (Washington)
+      city: (New Jersey)
       flag: /img/002-united-states (3).png
       postIndex: '999077'
       address: >-
@@ -16,10 +16,10 @@ warehouses:
       image: /img/Rectangle 121.png
       images:
         - image: /img/Rectangle 121.png
-    - country: Польща
-      city: (Chelm)
+    - country: Польша
+      city: (Piaseczno)
       flag: /img/poland.png
-    - country: Польща
+    - country: Польша
       city: (Warsaw)
       flag: /img/poland.png
       postIndex: 00-613
@@ -27,9 +27,9 @@ warehouses:
       image: /img/store1.png
       images:
         - image: /img/store1.png
-    - country: Україна
+    - country: Украина
       flag: /img/ukraine.png
-      city: (Київ)
+      city: (Киев)
       postIndex: '03141'
       address: <p>ул. Линейная 17 </p> <p>БЦ “FIM”</p>
       phone: +38 (068) 5555 999
@@ -126,31 +126,42 @@ clients:
 destinations:
   title: Международные грузоперевозки
   countries:
-    - country: Китай
-      flag: /img/001-china 3.png
-    - country: Англия
-      flag: /img/002-united-states.png
-    - country: Италия
-      flag: /img/italy.png
-    - country: Гонконг
-      flag: /img/002-united-states (1).png
-    - country: Италия
-      flag: /img/italy.png
-    - country: США
-      flag: /img/002-united-states (3).png
+    - country: 'Турция '
+      flag: /img/218-turkey.png
+      link: dostavka-gruzov-iz-turtsii
     - country: Германия
-      flag: /img/002-united-states (4).png
+      flag: /img/162-germany.png
+      link: dostavka-iz-germanii
+    - country: 'Франция '
+      flag: /img/195-france.png
+      link: dostavka-iz-franzii
+    - country: 'Англия '
+      flag: /img/260-united-kingdom.png
+      link: dostavka-iz-anglii
     - country: Италия
-      flag: /img/italy.png
+      flag: /img/013-italy.png
+      link: dostavka-iz-italii
+    - country: 'Португалия  '
+      flag: /img/224-portugal.png
+      link: dostavka-iz-portugalii
+    - country: 'Чехия  '
+      flag: /img/149-czech-republic.png
+      link: dostavka-iz-chehii
+    - country: 'Испания  '
+      flag: /img/128-spain.png
+      link: dostavka-iz-ispanii
     - country: Индия
-      flag: /img/002-united-states (5).png
-    - country: Франция
-      flag: /img/002-united-states (6).png
-      link: france
-    - country: Италия
-      flag: /img/italy.png
-    - country: Израиль
-      flag: /img/002-united-states (7).png
+      flag: /img/246-india.png
+      link: dostavka-iz-indii-v-ukrainu
+    - country: 'Израиль  '
+      flag: /img/155-israel.png
+      link: dostavka-iz-izrailya-v-ukrainu
+    - country: 'Тайвань '
+      flag: /img/202-taiwan.png
+      link: dostavka-iz-tayvanya
+    - country: 'ОАЭ '
+      flag: /img/151-united-arab-emirates.png
+      link: dostavka-iz-oae
   image: /img/map.png
 calculateHeader:
   from: Откуда груз?
@@ -159,7 +170,7 @@ calculateHeader:
   weight: Вес груза
   toCountry: Украина
   to: Куда?
-  btn: Рассчет стоимости
+  btn: Расчет стоимости
   email: Email
   description: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
   comment: Комментарий
@@ -233,19 +244,19 @@ ourServices:
   list:
     - title: Проведение платежей
       svg: shopping
-      link: making-payments
+      link: oplata-postavschiku-v-kitae
     - title: Поиск поставщика
       svg: search
-      link: search-and-verification
+      link: poisk-postavschika-v-kitae
     - title: Заказ товара из Китая
       svg: delivery
-      link: making-payments
+      link: dostavka-tovarov-iz-kitaya
     - title: Таможенное оформление груза
       svg: clipboard
-      link: customs-clearance
+      link: raztamozhka
     - title: Складские услуги
       svg: warehouse
-      link: warehousing-services
+      link: skladskie-uslugi
 name: components
 reviews:
   - name: Иван Заец
@@ -271,34 +282,31 @@ reviews:
 cargo:
   title: Возможности доставки грузов
   list:
-    - title: Контейнерные перевозки
+    - title: 'Контейнерные перевозки '
       svg: storage
-      link: container-transporting
+      link: konteynernyie-perevozki
     - title: Карго доставка
       svg: package
-      link: cargo-delivery
+      link: cargo
     - title: Доставка товаров
       svg: trolley
-      link: container-transporting
-    - title: Перевозка сборных грузов
+      link: dostavka-tovarov-iz-kitaya
+    - title: 'Перевозка сборных грузов '
       svg: ship
-      link: container-transporting
-    - title: Международная доставка посылок
+      link: perevozki-sbornyih-gruzov
+    - title: 'Международная доставка посылок '
       svg: airplane
-      link: container-transporting
+      link: dostavka-tovarov-i-posyilok-iz-evropyi
     - title: Мультимодальные перевозки
       svg: packages
-      link: cargo-delivery
+      link: multimodalnye-gruzoperevozki
     - title: Перевозка негабаритных грузов
       svg: product
-      link: cargo-delivery
-    - title: Перевозка техники
-      svg: protected
-      link: cargo-delivery
+      link: perevozki-negabaritnyih-gruzov
     - title: Доставка станков и оборудования
       svg: trolleybig
-      link: cargo-delivery
+      link: dostavka-oborudovaniya
     - title: Доставка из Китая в Одессу
       svg: warehouse
-      link: cargo-delivery
+      link: dostavka-iz-kitaya-v-odessu
 ---
