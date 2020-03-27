@@ -236,7 +236,7 @@ footer:
           link: /
         - name: Доставка из Польши
           link: /
-formFooter:
+  formFooter:
     title: Остались вопросы?
     subTitle: Отправьте заявку и получите до 5% скидку на доставку для новых клиентов!
     description: <span className="blue">Есть вопрос? </span>Наш менеджер ответит вам за<span className="blue"> 15 минут</span>         
