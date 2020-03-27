@@ -10,18 +10,19 @@ const Section = styled.article`
         margin-top: 3em;    
         padding: 2em 1em;
     }
-    section{
-        justifay-content: center;
+    section.wrapper{
+        justify-content: space-between;
         background: #F0F5FD;
     }
     .gatsby-image-wrapper{
-        width: 38%;
+        width: 40%;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             width: 100%;
         }
     }
     .description{
-        width: 59%;
+        width: 55%;
+        padding: 0;
         .text {
             padding: 0 2em 0 0;
         }

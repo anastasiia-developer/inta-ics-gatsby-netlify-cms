@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const Section = styled(About)`
-    padding: 0;
     margin: 0;
     align-items: center;
     flex-direction: row-reverse;
@@ -50,7 +49,7 @@ const Section = styled(About)`
         }
     }
     .list{
-        padding: 2em 1em 4em 6.5em;
+        padding: 2em 1em 4em 0;
         justify-content: flex-start;
         flex-wrap: wrap;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
@@ -76,7 +75,6 @@ const Section = styled(About)`
         padding: .8em 2em;
         border-radius: 7em;
         font-weight: 700;
-        margin-left: 6em;
         background: linear-gradient(101.61deg, #005BE4 0.64%, #4900E4 100%);
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             margin: 0 auto 1em;

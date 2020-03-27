@@ -2,7 +2,7 @@
 templateKey: international-cargo
 locale: ua
 title: Карго доставка
-name: cargo-delivery
+name: cargo
 crumbLabelParent: ' Возможности доставки грузов'
 crumbLabel: Карго доставка
 description: >-

@@ -15,6 +15,10 @@ import TemplateCommonComponent from "../components/TemplateCommonComponent";
 export const Section = styled(Sections)`
     background: #F6F6F6;
     flex-direction: row-reverse;
+    padding: 2em 0;
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+        flex-direction: column-reverse;
+    }
     &:nth-child(even){
         flex-direction: row-reverse;
         background: #F6F6F6;

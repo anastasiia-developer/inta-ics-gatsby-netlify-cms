@@ -1,6 +1,6 @@
 ---
 templateKey: services
-locale: ua
+locale: ru
 name: rozmyitnennya
 crumbLabelParent: Послуги
 crumbLabel: Таможенное оформление

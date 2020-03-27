@@ -11,11 +11,16 @@ import Reviews from "./Reviews";
 import ReviewsRu from "./Reviews/index.ru";
 import News from "./NewsRoll";
 import NewsRu from "./NewsRoll/index.ru";
+import Calculator from "./Calculator"
+import CalculatorRu from "./Calculator/index.ru"
 
-const TemplateCommonComponent = ({locale, services, news, destinations, cargo, clients, reviews}) =>
+const TemplateCommonComponent = ({locale, services, news, destinations, cargo, clients, reviews, calculate}) =>
     <Fragment>
         {locale === 'ua' ?
             <Fragment>
+                {calculate &&
+                    <Calculator/>
+                }
                 {news &&
                     <News/>
                 }
@@ -37,6 +42,9 @@ const TemplateCommonComponent = ({locale, services, news, destinations, cargo, c
             </Fragment>
             :
             <Fragment>
+                {calculate &&
+                    <CalculatorRu/>
+                }
                 {news &&
                     <NewsRu/>
                 }

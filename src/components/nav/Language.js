@@ -40,17 +40,20 @@ const Options = styled.div`
     }
 `;
 
-const Language = ({local, location}) => {
+const Language = ({locale, location}) => {
     const [isActive, setActive] = useState(false);
+    const ua = location.pathname.replace("ru/", "");
+    const ru = location.pathname.includes("ru") ? location.pathname : `/ru${location.pathname}`;
+    console.log(ru);
 
     return(
     <Container className="row">
         <button className='btn' onClick={() => setActive(!isActive)}>
-            {local} <Arrow/>
+            {locale} <Arrow/>
         </button>
         <Options isActive={isActive}>
             {Object.keys(locales).map((leng, index) =>
-                <Link to={`${leng === "ua" ? '/' : '/ru/'}`}
+                <Link to={leng === "ua" ? ua : ru}
                       key={index}
                       onClick={() => setActive(false)}>
                     {leng}

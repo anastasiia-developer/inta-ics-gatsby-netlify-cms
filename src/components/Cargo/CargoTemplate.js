@@ -3,7 +3,7 @@ import HoverGradientInsideSvg from "../HoverGradientInsideSvg";
 import CargoSprite from '../../components/../img/CargoSprite.svg';
 
 
-const CargoTemplate = ({data}) => {
+const CargoTemplate = ({data, locale}) => {
 
     return(
         <Fragment>
@@ -19,7 +19,7 @@ const CargoTemplate = ({data}) => {
                                 <use xlinkHref={`#${item.svg}`} />
                             </svg>
                             }
-                        link={item.link}
+                        link={locale === 'ua' ? item.link : `/ru/${item.link}`}
                     />
                 )}
             </div>

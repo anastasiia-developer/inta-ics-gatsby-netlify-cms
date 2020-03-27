@@ -24,7 +24,7 @@ export default () => (
     `}
         render={(data) =>
             <Section>
-                <CargoTemplate data={data.markdownRemark.frontmatter.cargo} />
+                <CargoTemplate locale={data.markdownRemark.frontmatter.locale} data={data.markdownRemark.frontmatter.cargo} />
             </Section>
         }
     />

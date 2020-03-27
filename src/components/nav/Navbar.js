@@ -98,7 +98,7 @@ const Navbar = ({local, location}) => {
               }
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to={`/blog/${lang}`}>
+                  to={`${lang === 'ua' ? '' : '/ru'}/blog/`}>
                   Блог
               </Link>
               {local === 'ua' ?
@@ -146,7 +146,7 @@ const Navbar = ({local, location}) => {
                 <Call />
             </a>
             <Login onClick={() => setActiveMob(!isActiveMob)}/>
-            <Language local={local} location={location}/>
+            <Language locale={local} location={location}/>
         </div>
       </Navigation>
     )
