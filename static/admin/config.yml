@@ -453,7 +453,8 @@ collections:
             ]}
           ]},
           {label: "Остались вопросы?", name: formFooter, widget: list, fields: [
-            {label: "subTitle", name: subTitle, widget: string, required: false},
+          {label: "title", name: title, widget: string, required: false},
+          {label: "subTitle", name: subTitle, widget: string, required: false},
             {label: "description", name: description, widget: "markdown", required: false},
             {label: "descriptionTwo", name: descriptionTwo, widget: string, required: false},
             {label: "form", name: form, widget: list, fields: [
