@@ -1,12 +1,20 @@
 ---
 templateKey: delivery
 metaData:
-  description: ЛАВЛАОВ
-  title: алал
+  description: >+
+    Автодоставка товарів та вантажів в Україну &#9989; Контейнерні
+    автоперевезення. Налагоджені логістичні схеми &#9989; Повний комплекс
+    супровідних послуг, митне оформлення &#9989; Відстеження знаходження вантажу
+    в мобільному додатку & #9742; 068 5555 999
+
+  title: Міжнародні автоперевезення вантажів | INTA-ICS
 crumbLabelParent: Доставка
-crumbLabel: Автодоставка укр
-description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
-title: Автодоставка
+crumbLabel: Міжнародні автомобільні перевезення
+description: >-
+  Компанія INTA-ICS пропонує доставку товарів наземним транспортом -
+  автомобілями. Цей спосіб оптимальний для клієнтів, яким потрібно перевезти
+  невеликі партії вантажу.
+title: Міжнародні автомобільні перевезення
 header:
   buttons:
     - link: europe
@@ -16,11 +24,11 @@ header:
       image: /img/Group1.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Від 3 днів
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Доступна ціна
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Вантаж від 1м³
 seoSections:
   title: Организация авиадоставки из США. Логистические услуги от специалистов
   sections:
