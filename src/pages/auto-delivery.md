@@ -17,8 +17,12 @@ description: >-
 title: Міжнародні автомобільні перевезення
 header:
   buttons:
-    - link: europe
-      text: Перевозка грузов из Европы
+    - link: dostavka-vantazhiv-z-evropyi/
+      text: Перевезення вантажів з Європи
+    - text: 'Доставка з Туреччини '
+      link: dostavka-vantazhiv-z-turtsii/
+    - text: 'Доставка товарів з Європи '
+      link: dostavka-tovariv-z-evropyi/
   images:
     - alt: auto
       image: /img/Group1.png
