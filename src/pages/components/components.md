@@ -252,13 +252,13 @@ news:
 ourServices:
   title: Наші послуги
   list:
-    - title: 'Проведення платежів '
+    - title: Проведення платежів
       svg: shopping
       link: oplata-postachalnyiku-v-kyitai/
     - title: Пошук постачальника
       svg: search
       link: poshuk-postachalnyikiv-v-kyitai/
-    - title: 'Замовлення товару з Китаю '
+    - title: Замовлення товару з Китаю
       svg: delivery
       link: dostavka-tovariv-z-kytaju/
     - title: Митне оформлення вантажу
@@ -266,7 +266,7 @@ ourServices:
       link: rozmyitnennya/
     - title: Складські послуги
       svg: warehouse
-      link: 'skladski-poslugyi/ '
+      link: skladski-poslugyi/
 name: components
 cargo:
   title: Можливості доставки вантажів

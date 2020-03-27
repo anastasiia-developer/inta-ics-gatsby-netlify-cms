@@ -102,14 +102,14 @@ const SubNav = styled.nav`
         }
 `;
 
-const SubMenu = ({list, setActiveMob, isActiveMob}) => {
+const SubMenu = ({list, setActiveMob, isActiveMob, locale}) => {
     const [isActiveSub, setActiveSub] = useState(false);
 
     return(
         <SubNav
             isActiveSub={isActiveSub}>
             <span
-                role = "button"
+                role="button"
                 tabIndex={0}
                 onKeyDown={() => {setActiveSub(!isActiveSub)}}
                 onClick={() => {setActiveSub(!isActiveSub)}}>
@@ -122,7 +122,7 @@ const SubMenu = ({list, setActiveMob, isActiveMob}) => {
                         key={index}
                         onClick={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
                         onKeyDown={() => {setActiveMob(!isActiveMob); setActiveSub(false)}}
-                        to={`/${link.frontmatter.name}`}>
+                        to={`${locale || '/'}${link.frontmatter.name}`}>
                         {link.frontmatter.crumbLabel}
                         <ArrowLine/>
                     </Link>

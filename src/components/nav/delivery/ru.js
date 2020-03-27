@@ -23,6 +23,7 @@ export default ({setActiveMob, isActiveMob}) => (
                 list={data.allMarkdownRemark.nodes}
                 setActiveMob={() => setActiveMob}
                 isActiveMob={isActiveMob}
+                locale="/ru/"
             />
         }
     />

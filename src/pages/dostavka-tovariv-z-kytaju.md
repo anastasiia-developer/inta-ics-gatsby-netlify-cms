@@ -1,7 +1,7 @@
 ---
 templateKey: services
 locale: ua
-name: buyback-and-delivery-from-china
+name: dostavka-tovariv-z-kytaju
 crumbLabelParent: Послуги
 crumbLabel: Выкуп и доставка из Китая
 title: Выкуп и доставка из Китая
