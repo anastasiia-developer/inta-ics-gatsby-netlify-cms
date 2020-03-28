@@ -321,4 +321,6 @@ cargo:
     - title: Доставка из Китая в Одессу
       svg: warehouse
       link: dostavka-iz-kitaya-v-odessu
+    - title: Доставка техники и авто
+      link: dostavka-iz-germanii
 ---

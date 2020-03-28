@@ -1,26 +1,38 @@
 ---
 templateKey: delivery
 metaData:
-  description: ЛАВЛАОВ
-  title: алал
+  description: >+
+    Автодоставка товарів та вантажів в Україну &#9989; Контейнерні
+    автоперевезення. Налагоджені логістичні схеми &#9989; Повний комплекс
+    супровідних послуг, митне оформлення &#9989; Відстеження знаходження вантажу
+    в мобільному додатку & #9742; 068 5555 999
+
+  title: Міжнародні автоперевезення вантажів | INTA-ICS
 crumbLabelParent: Доставка
-crumbLabel: Автодоставка укр
-description: sjhdfsjkhfksjhfksjdhfkjsdhfskjdhfkjsdhfskjfhskjf
-title: Автодоставка
+crumbLabel: Міжнародні автомобільні перевезення
+description: >-
+  Компанія INTA-ICS пропонує доставку товарів наземним транспортом -
+  автомобілями. Цей спосіб оптимальний для клієнтів, яким потрібно перевезти
+  невеликі партії вантажу.
+title: Міжнародні автомобільні перевезення
 header:
   buttons:
-    - link: europe
-      text: Перевозка грузов из Европы
+    - link: dostavka-vantazhiv-z-evropyi/
+      text: Перевезення вантажів з Європи
+    - text: 'Доставка з Туреччини '
+      link: dostavka-vantazhiv-z-turtsii/
+    - text: 'Доставка товарів з Європи '
+      link: dostavka-tovariv-z-evropyi/
   images:
     - alt: auto
       image: /img/Group1.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Від 3 днів
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Доступна ціна
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Вантаж від 1м³
 seoSections:
   title: Организация авиадоставки из США. Логистические услуги от специалистов
   sections:
@@ -49,19 +61,19 @@ sections:
   - image: /img/deliv.jpg
     list:
       - image: /img/ (1).png
-        title: Свой склад в США
+        title: Від 3 днів
       - image: /img/ (1).png
-        title: Персональный менеджер
+        title: Доступна ціна
       - image: /img/ (1).png
-        title: Мобильное приложение
+        title: Вантаж від 1м³
     text: >-
-      <p>Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с
-      любым клиентом, независимо от объёмов его грузопотока. Закажите
-      консультацию и начнем сотрудничество прямо сейчас!</p>
-    title: Перевозка грузов из Европы
+      <p>Міжнародні вантажоперевезення з Європи затребувані у підприємців
+      України. Звертайтеся в INTA-ICS, якщо вас цікавить швидка, недорога і
+      надійне транспортування товарів.</p>
+    title: 'Доставка вантажів з Європи '
     button:
-      text: А
-      link: А
+      text: Дізнатись більше
+      link: dostavka-vantazhiv-z-evropyi/
   - image: /img/deliv.jpg
     list:
       - image: /img/ (1).png
