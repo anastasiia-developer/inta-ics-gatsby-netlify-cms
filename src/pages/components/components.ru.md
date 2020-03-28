@@ -322,6 +322,7 @@ cargo:
       svg: warehouse
       link: dostavka-iz-kitaya-v-odessu
     - title: Доставка техники и авто
+      svg: trolleybig  
       link: dostavka-iz-germanii
 pageNotFound:
     title: RuСторінка не знайдена

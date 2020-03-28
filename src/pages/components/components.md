@@ -301,6 +301,7 @@ cargo:
       svg: warehouse
       link: dostavka-z-kyitayu-v-odesu/
     - title: Доставка техніки та авто
+      svg: trolleybig  
       link: dostavka-z-nimechchyinyi/
 pageNotFound:
     title: Сторінка не знайдена
