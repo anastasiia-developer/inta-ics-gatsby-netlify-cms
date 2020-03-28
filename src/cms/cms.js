@@ -6,11 +6,10 @@ import AboutPagePreview from './preview-templates/AboutPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import DeliveryPagePreview from "./preview-templates/DeliveryPagePreview"
-import ComponentsCommonPreview from './preview-templates/ComponentsCommonPagePreview'
 import ReviewPagePreview from './preview-templates/ReviewPagePreview'
 import CostPagePreview from './preview-templates/CostPagePreview'
 import InternationalCargoPreview from './preview-templates/internationaCargoPreview'
-
+import ServicesPagePreview from './preview-templates/ServicesPagePreview'
 
 import withStyledComponentsRendered from './StyleManager'
 import InternationalDestinationsPreview from "./preview-templates/InternationalDestinationsPreview";
@@ -78,3 +77,12 @@ CMS.registerPreviewTemplate(
     'international-cargo-ru',
     withStyledComponentsRendered(InternationalCargoPreview)
 );
+CMS.registerPreviewTemplate(
+    'services',
+    withStyledComponentsRendered(ServicesPagePreview)
+);
+CMS.registerPreviewTemplate(
+    'services-ru',
+    withStyledComponentsRendered(ServicesPagePreview)
+);
+

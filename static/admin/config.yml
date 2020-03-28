@@ -318,8 +318,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "international-cargo"}
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-      {label: "Title", name: "title", widget: "string"},
-      {label: "Description", name: "description", widget: "text"}
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "text"}
       ]}
       - {label: "path name", name: name, widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
@@ -355,6 +355,104 @@ collections:
       {label: "Текст", name: text, widget: "markdown"},
       {label: "altImg", name: "altImg", widget: "string"},
       {label: "Картинка", name: image, widget: image}
+      ]}
+      ]}
+  - name: "services"
+    label: "Сервисы"
+    folder: "src/pages"
+    create: true
+    slug: "{{name}}"
+    filter: {field: "templateKey", value: "services"}
+    fields:
+      - {label: "Template Key", name: "pageKey", widget: "hidden", default: "services"}
+      - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
+      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "crumb Label", name: "crumbLabel", widget: "string", required: false}
+      - {label: "path name", name: name, widget: "string"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+            {label: "Description", name: "description", widget: "text"}
+      ]}
+      - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string", required: false}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: Header, name: header, widget: object, fields: [
+          {label: Images, name: images, widget: list, fields: [
+            {label: Alt, name: alt, widget: string, required: false},
+            {label: Image, name: image, widget: image}
+          ]},
+          {label: "Scope information", name: scopeInformation, widget: list, fields: [
+            {label: text, name: text, widget: string, required: false},
+            {label: Image, name: image, widget: image}
+          ]},
+          {label: Buttons, name: buttons, widget: list, fields: [
+            {label: text, name: text, widget: string, required: false},
+            {label: Link, name: link, widget: string, required: false}
+          ]}
+      ]}
+      - {label: "sections", name: "sections", widget: list, fields: [
+          {label: "Title", name: "title", widget: "string", required: false},
+          {label: "Картинка", name: image, widget: image, required: false},
+          {label: "Текст", name: text, widget: "markdown", required: false},
+          {label: "list", name: list, widget: list, fields: [
+          {label: "title", name: title, widget: string, required: false},
+          {label: "Картинка", name: image, widget: image, required: false}
+          ]},
+      ]}
+      - {label: seoSections, name: seoSections, widget: object, fields: [
+        {label: title, name: title, widget: "string", required: false},
+        {label: "sections", name: "sections", widget: list, fields: [
+          {label: "Текст", name: text, widget: "markdown", required: false},
+          {label: "altImg", name: "altImg", widget: "string", required: false},
+          {label: "Картинка", name: image, widget: image, required: false}
+        ]}
+      ]}
+  - name: "services-ru"
+    label: "RU Сервисы"
+    folder: "src/pages/ru"
+    create: true
+    slug: "{{name}}"
+    filter: {field: "templateKey", value: "services"}
+    fields:
+      - {label: "Template Key", name: "pageKey", widget: "hidden", default: "services"}
+      - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
+      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "path name", name: name, widget: "string"}
+      - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
+          {label: "Title", name: "title", widget: "string"},
+            {label: "Description", name: "description", widget: "text"}
+      ]}
+      - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string", required: false}
+      - {label: "crumb Label", name: "crumbLabel", widget: "string", required: false}
+      - {label: "description", name: "description", widget: "string"}
+      - {label: Header, name: header, widget: object, fields: [
+      {label: Images, name: images, widget: list, fields: [
+      {label: Alt, name: alt, widget: string, required: false},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: "Scope information", name: scopeInformation, widget: list, fields: [
+      {label: text, name: text, widget: string, required: false},
+      {label: Image, name: image, widget: image}
+      ]},
+      {label: Buttons, name: buttons, widget: list, fields: [
+      {label: text, name: text, widget: string, required: false},
+      {label: Link, name: link, widget: string, required: false}
+      ]}
+      ]}
+      - {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Title", name: "title", widget: "string", required: false},
+      {label: "Картинка", name: image, widget: image, required: false},
+      {label: "Текст", name: text, widget: "markdown", required: false},
+      {label: "list", name: list, widget: list, fields: [
+      {label: "title", name: title, widget: string, required: false},
+      {label: "Картинка", name: image, widget: image, required: false}
+      ]},
+      ]}
+      - {label: seoSections, name: seoSections, widget: object, fields: [
+      {label: title, name: title, widget: "string", required: false},
+      {label: "sections", name: "sections", widget: list, fields: [
+      {label: "Текст", name: text, widget: "markdown", required: false},
+      {label: "altImg", name: "altImg", widget: "string", required: false},
+      {label: "Картинка", name: image, widget: image, required: false}
       ]}
       ]}
   - name: "components-common"
