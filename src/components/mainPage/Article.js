@@ -28,6 +28,7 @@ const Section = styled.article`
         }
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             width: 100%;
+            padding: 1em;
         }
     }
     h2{

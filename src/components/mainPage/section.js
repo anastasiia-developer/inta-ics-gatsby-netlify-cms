@@ -21,7 +21,7 @@ const Container = styled.section`
     }
     .wrapper{
         justify-content: space-around;
-        margin-top: 3em;
+        margin: 3em auto;
         flex-wrap: wrap;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
             margin-top: 0em;

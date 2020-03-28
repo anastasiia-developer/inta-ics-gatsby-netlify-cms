@@ -16,9 +16,7 @@ export const Button = styled(Link)`
     border-radius: 5em;
     font-size: .8em;
     margin-right: 2em;
-    &:last-child{
-        margin-right: 0;
-    }
+    
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         margin: 0 .5em 2em;
     }
@@ -114,6 +112,7 @@ const Container = styled.header`
     }
     .row-btns{
         flex-wrap: wrap;
+        justify-content: center;
     }
     .common-header-column h3 {
         font-weight: 300;

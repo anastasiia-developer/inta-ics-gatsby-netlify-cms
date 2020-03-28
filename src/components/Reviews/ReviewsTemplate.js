@@ -36,13 +36,13 @@ const Section = styled.section`
         &--left{
             left: 8%;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-                left: -5%;
+                left: 0%;
             }        
         }
         &--right{
             right: 8%;
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
-                right: -5%;
+                right: 0%;
             }
         }
         

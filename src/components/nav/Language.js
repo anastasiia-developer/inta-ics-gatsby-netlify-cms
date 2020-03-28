@@ -44,7 +44,6 @@ const Language = ({locale, location}) => {
     const [isActive, setActive] = useState(false);
     const ua = location.pathname.replace("ru/", "");
     const ru = location.pathname.includes("ru") ? location.pathname : `/ru${location.pathname}`;
-    console.log(ru);
 
     return(
     <Container className="row">

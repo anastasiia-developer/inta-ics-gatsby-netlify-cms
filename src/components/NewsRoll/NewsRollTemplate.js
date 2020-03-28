@@ -40,7 +40,7 @@ const NewsRollTemplate = ({data}) => {
         <Section className="column">
             <h2>{data.news.title}</h2>
             <BlogRoll />
-            <Link className="btn" to={`${data.locale === 'ua' ? '' : 'ru/'}blog/`}>
+            <Link className="btn" to={`${data.locale === 'ua' ? '' : '/ru/'}blog/`}>
                 {data.news.btn}
             </Link>
         </Section>

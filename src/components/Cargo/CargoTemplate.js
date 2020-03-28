@@ -19,7 +19,7 @@ const CargoTemplate = ({data, locale}) => {
                                 <use xlinkHref={`#${item.svg}`} />
                             </svg>
                             }
-                        link={locale === 'ua' ? item.link : `/ru/${item.link}`}
+                        link={locale === 'ua' ? item.link : `ru/${item.link}`}
                     />
                 )}
             </div>
