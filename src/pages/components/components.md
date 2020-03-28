@@ -302,4 +302,11 @@ cargo:
       link: dostavka-z-kyitayu-v-odesu/
     - title: Доставка техніки та авто
       link: dostavka-z-nimechchyinyi/
+pageNotFound:
+    title: Сторінка не знайдена
+    seoTitle: 404 Сторінка не знайдена
+    btnText: На головну
+    btnLink: /
+    background: /img/background404.png
+    image: /img/404.png
 ---

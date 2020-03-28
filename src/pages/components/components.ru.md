@@ -323,4 +323,11 @@ cargo:
       link: dostavka-iz-kitaya-v-odessu
     - title: Доставка техники и авто
       link: dostavka-iz-germanii
+pageNotFound:
+    title: RuСторінка не знайдена
+    seoTitle: 404 Сторінка не знайдена
+    btnText: На головну
+    btnLink: /
+    background: /img/background404.png
+    image: /img/404.png
 ---
