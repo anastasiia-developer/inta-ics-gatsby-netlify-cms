@@ -7,7 +7,7 @@ metaData:
 title: Доставка товарів з Китаю
 name: dostavka-tovariv-z-kytaju
 crumbLabel: Доставка товарів з Китаю
-crumbLabelParent: ЗД перевезення
+crumbLabelParent: Послуги
 description: >-
   Компанія INTA-ICS займається викупом і доставкою китайських товарів в Україну
   морським, авіа та залізничним транспортом. Пропонуємо гнучкі тарифи та
