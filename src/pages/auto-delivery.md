@@ -24,8 +24,8 @@ header:
     - text: 'Доставка товарів з Європи '
       link: dostavka-tovariv-z-evropyi/
   images:
-    - alt: auto
-      image: /img/Group1.png
+    - alt: inta-ics-залізничні-перевезення-вантажів
+      image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv.png
   scopeInformation:
     - image: /img/time.png
       text: Від 3 днів
@@ -107,7 +107,7 @@ seoSections:
       image: /img/background404.png
 name: auto-delivery
 sections:
-  - image: /img/deliv.jpg
+  - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2.jpg
     list:
       - image: /img/ (1).png
         title: Від 3 днів
@@ -123,7 +123,7 @@ sections:
     button:
       text: Дізнатись більше
       link: dostavka-vantazhiv-z-evropyi/
-  - image: /img/deliv.jpg
+  - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2-1-.jpg
     list:
       - image: /img/ (1).png
         title: Від 3 днів
@@ -139,7 +139,7 @@ sections:
     button:
       text: Дізнатись більше
       link: dostavka-vantazhiv-z-turtsii/
-  - image: /img/deliv.jpg
+  - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-1.jpg
     list:
       - image: /img/ (1).png
         title: Від 3 днів
