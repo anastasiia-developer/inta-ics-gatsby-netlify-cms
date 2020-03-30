@@ -36,7 +36,7 @@ header:
 seoSections:
   title: Особливості та переваги автодоставки
   sections:
-    - image: /img/seoImg.jpg
+    - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-1-1-.jpg
       text: >-
         Компанія INTA-ICS пропонує послуги автодоставки товарів з країн Європи в
         Україну. Особлива увага приділяється сусіднім країнам, так як подібні
@@ -66,7 +66,7 @@ seoSections:
         місткості. Клієнти можуть також вибрати *автоперевезення збірного типу*:
         під час цієї доставки замовник оплачує тільки місце, яке займає його
         товар.
-      altImg: В
+      altImg: ' inta-ics-залізничні-перевезення-вантажів-1'
     - text: >-
         ## Види транспорту для автомобільних перевезень
 
@@ -89,8 +89,8 @@ seoSections:
         * Платформа - для негабаритних вантажів використовуються варіанти з
         вантажопідйомністю 15-20 тонн. Транспорт, розрахований на доставку
         великого устаткування, витримує 20-40 тонн.
-      altImg: А
-      image: /img/AutoBckg.png
+      altImg: inta-ics-залізничні-перевезення-вантажів-2
+      image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2-2-.jpg
     - text: >-
         ## Від чого залежить вартість на вантажні автоперевезення
 
@@ -103,8 +103,8 @@ seoSections:
 
         Кожен маршрут наші логісти розробляють в індивідуальному порядку.
         Виконуємо доставку вантажів від 1 палети.
-      altImg: а
-      image: /img/background404.png
+      altImg: ' inta-ics-залізничні-перевезення-вантажів-3'
+      image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-3.jpg
 name: auto-delivery
 sections:
   - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2.jpg
