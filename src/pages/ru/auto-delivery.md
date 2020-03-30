@@ -23,8 +23,8 @@ header:
     - link: dostavka-tovarov-i-posyilok-iz-evropyi/
       text: Перевозка товаров из Европы
   images:
-    - alt: auto
-      image: /img/Group1.png
+    - alt: ' inta-ics-автоперевозки-грузов'
+      image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv.png
   scopeInformation:
     - image: /img/time.png
       text: От 3 дней
@@ -35,7 +35,7 @@ header:
 seoSections:
   title: Особенности и преимущества автодоставки
   sections:
-    - image: /img/seoImg.jpg
+    - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-1-1-.jpg
       text: >-
         Компания INTA-ICS предлагает услуги автодоставки товаров из стран Европы
         в Украину. Особое внимание уделяется соседним странам, так как подобные
@@ -67,7 +67,7 @@ seoSections:
         вместительности. Клиенты могут также выбрать *автоперевозки сборного
         типа*: во время этой доставки заказчик оплачивает только место, которое
         занимает его товар.
-      altImg: о
+      altImg: inta-ics-автоперевозки-грузов-1
     - text: >-
         ## Виды транспорта для автоперевозок
 
@@ -90,8 +90,8 @@ seoSections:
         * Платформа — для негабаритных грузов используются варианты с
         грузоподъемностью 15-20 тонн. Транспорт, рассчитанный на доставку
         крупного оборудования, выдерживает 20-40 тонн.
-      altImg: щ
-      image: /img/AutoBckg.png
+      altImg: inta-ics-автоперевозки-грузов-2
+      image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2-2-.jpg
     - text: >-
         ## От чего зависит стоимость на грузовые автоперевозки
 
@@ -104,11 +104,11 @@ seoSections:
 
         Каждый маршрут наши логисты разрабатывают в индивидуальном порядке.
         Выполняем доставку грузов от 1 паллеты.
-      altImg: о
-      image: /img/calculateBkg.png
+      altImg: ' inta-ics-автоперевозки-грузов-3'
+      image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-3.jpg
 name: auto-delivery
 sections:
-  - image: /img/deliv.jpg
+  - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2.jpg
     list:
       - image: /img/ (1).png
         title: От 3 дней
@@ -124,7 +124,7 @@ sections:
     button:
       link: dostavka-gruzov-iz-evropyi/
       text: Узнать больше
-  - image: /img/deliv.jpg
+  - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2-1-.jpg
     list:
       - image: /img/ (1).png
         title: От 3 дней
@@ -140,7 +140,7 @@ sections:
     button:
       text: Узнать больше
       link: dostavka-gruzov-iz-turtsii/
-  - image: /img/deliv.jpg
+  - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-1.jpg
     list:
       - image: /img/ (1).png
         title: От 3 дней
