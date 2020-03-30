@@ -8,7 +8,7 @@ import FormFooterRu from '../components/Footer/FormFooter/index.ru'
 import TemplateHeader from "../components/TemplateHeader";
 import styled from "styled-components";
 import CalculateContainerHeader from "../components/CalculateContainerHeader";
-import Table from '../pages/services/Table';
+import Table from '../components/Table';
 import TitleDesHelmet from "../components/TitleDesHelmet";
 import TemplateCommonComponent from "../components/TemplateCommonComponent";
 
@@ -77,7 +77,7 @@ export const ServicesPageTemplate = ({
                 <CalculateContainerHeader locale={locale}/>
             }
             {table &&
-                <Table/>
+                <Table table={table}/>
             }
             <Section
                 sections={sections}
@@ -133,10 +133,26 @@ export const pageQuery = graphql`
         description
         crumbLabelParent
         crumbLabel
-        table
         metaData{
             title
             description
+        }
+        table{
+            head{
+                name
+                image{
+                    childImageSharp {
+                      fluid(maxWidth: 50) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                }
+            }
+            body{
+                column{
+                    value
+                }
+            }
         }
         header{
             images{

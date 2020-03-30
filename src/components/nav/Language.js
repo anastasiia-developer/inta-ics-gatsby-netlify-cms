@@ -52,7 +52,7 @@ const Language = ({locale, location}) => {
         </button>
         <Options isActive={isActive}>
             {Object.keys(locales).map((leng, index) =>
-                <Link to={leng === "ua" ? ua : ru}
+                <Link to={leng === "ua" ? "/" : "/ru/"}
                       key={index}
                       onClick={() => setActive(false)}>
                     {leng}

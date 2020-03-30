@@ -1,7 +1,7 @@
 ---
 templateKey: services
 locale: ua
-name: oplata-postachalnyiku-v-kyita
+name: oplata-postachalnyiku-v-kyitai
 crumbLabelParent: Послуги 
 crumbLabel: Проведение платежей
 title: Проведение платежей

@@ -389,6 +389,17 @@ collections:
             {label: Link, name: link, widget: string, required: false}
           ]}
       ]}
+      - {label: "table", name: "table", widget: object, fields: [
+          {label: "head", name: "head", widget: list, fields: [
+              {label: "title", name: name, widget: string, required: false},
+              {label: Image, name: image, widget: image}
+          ]},
+          {label: "body", name: "body", widget: list, fields: [
+            {label: "column", name: "column", widget: list, fields: [
+              {label: "value", name: name, widget: "markdown", required: false}
+            ]}
+          ]}
+        ]}
       - {label: "sections", name: "sections", widget: list, fields: [
           {label: "Title", name: "title", widget: "string", required: false},
           {label: "Картинка", name: image, widget: image, required: false},
@@ -419,24 +430,35 @@ collections:
       - {label: "path name", name: name, widget: "string"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: "string"},
-            {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text"}
       ]}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string", required: false}
       - {label: "crumb Label", name: "crumbLabel", widget: "string", required: false}
       - {label: "description", name: "description", widget: "string"}
       - {label: Header, name: header, widget: object, fields: [
-      {label: Images, name: images, widget: list, fields: [
-      {label: Alt, name: alt, widget: string, required: false},
-      {label: Image, name: image, widget: image}
-      ]},
-      {label: "Scope information", name: scopeInformation, widget: list, fields: [
-      {label: text, name: text, widget: string, required: false},
-      {label: Image, name: image, widget: image}
-      ]},
-      {label: Buttons, name: buttons, widget: list, fields: [
-      {label: text, name: text, widget: string, required: false},
-      {label: Link, name: link, widget: string, required: false}
+          {label: Images, name: images, widget: list, fields: [
+          {label: Alt, name: alt, widget: string, required: false},
+          {label: Image, name: image, widget: image}
+          ]},
+          {label: "Scope information", name: scopeInformation, widget: list, fields: [
+          {label: text, name: text, widget: string, required: false},
+          {label: Image, name: image, widget: image}
+          ]},
+          {label: Buttons, name: buttons, widget: list, fields: [
+          {label: text, name: text, widget: string, required: false},
+          {label: Link, name: link, widget: string, required: false}
+          ]}
       ]}
+      - {label: "table", name: "table", widget: object, fields: [
+          {label: "head", name: "head", widget: list, fields: [
+            {label: "name", name: name, widget: string, required: false},
+            {label: Image, name: image, widget: image}
+          ]},
+          {label: "body", name: "body", widget: list, fields: [
+            {label: "column", name: "column", widget: list, fields: [
+              {label: "value", name: name, widget: "markdown", required: false},
+            ]}
+          ]}
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: "string", required: false},

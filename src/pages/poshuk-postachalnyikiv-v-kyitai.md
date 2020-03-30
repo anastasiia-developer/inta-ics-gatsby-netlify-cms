@@ -3,7 +3,6 @@ templateKey: services
 locale: ua
 name: poshuk-postachalnyikiv-v-kyitai
 crumbLabelParent: Послуги 
-table: true
 crumbLabel: Поиск и проверка поставщика
 title: Поиск и проверка поставщика
 description: >-
@@ -19,6 +18,32 @@ header:
       text: от 2$ за кг
     - image: /img/lov.png
       text: Местоположение посылки
+table: 
+    head:
+        - name: Метод поиска
+          image: /img/search.png  
+        - name: Время поиска
+          image: /img/time3.png  
+        - name: Себестоимость
+          image: /img/card.png  
+        - name: Вероятность заключить выгодную сделку
+          image: /img/start.png
+    body:
+        - column:
+            - value: Самостоятельно в интернете          
+            - value: 1 день - <span class='bold infinity'>&#8734;</span>          
+            - value: 0$         
+            - value: = <span class='medium'>50%</span>        
+        - column: 
+            - value: Вместе с <span class='blue bold'>INTA-ICS</span>         
+            - value: От <span class='blue medium'>7</span> до <span class='blue medium'>14 дней</span>         
+            - value: От <span class='green'>100$</span>
+            - value: <div class='green'>90% &#8593;</div>
+        - column:     
+            - value: Поездка в Китай
+            - value: Около <span class='blue medium'>30 дней </span>(с учетом времени на подготовку)
+            - value: От <span class='medium'>1500$</span>
+            - value: <span class='green'>90% &#8593;</span>      
 sections:
   - image: /img/making-payments-section.jpg
     title: Н2 ЗАГОЛОВОК

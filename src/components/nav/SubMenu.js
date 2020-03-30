@@ -104,7 +104,7 @@ const SubNav = styled.nav`
 
 const SubMenu = ({list, setActiveMob, isActiveMob, locale}) => {
     const [isActiveSub, setActiveSub] = useState(false);
-    console.log(list[0].frontmatter.crumbLabelParent)
+
     return(
         <SubNav
             isActiveSub={isActiveSub}>
