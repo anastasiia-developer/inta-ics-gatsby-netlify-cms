@@ -456,7 +456,7 @@ collections:
           ]},
           {label: "body", name: "body", widget: list, fields: [
             {label: "column", name: "column", widget: list, fields: [
-              {label: "value", name: name, widget: "markdown", required: false},
+              {label: "value", name: value, widget: "markdown", required: false},
             ]}
           ]}
       ]}

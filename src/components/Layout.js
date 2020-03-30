@@ -52,7 +52,9 @@ const TemplateWrapper = ({ children, local, location }) => {
         />
       </Helmet>
         {location &&
-            <Navbar local={local} location={location}/>
+            <Navbar
+                local={local}
+                location={location}/>
         }
         {local === 'ua' ?
             <MainPopup />

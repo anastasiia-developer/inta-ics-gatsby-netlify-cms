@@ -15,6 +15,7 @@ const ServicesPagePreview = ({ entry }) => {
                 description={data.description || ''}
                 sections={data.sections || {}}
                 seoSections={data.seoSections || {}}
+                table={data.table || false}
             />
         )
     } else {

@@ -33,7 +33,6 @@ const Navbar = ({local, location}) => {
         document.documentElement.style.overflowY = isActiveMob ? 'hidden' : 'unset';
 
     }, [isActiveMob ]);
-    const lang = local === 'ua' ? '' : local;
 
     return (
       <Navigation
@@ -57,7 +56,7 @@ const Navbar = ({local, location}) => {
             isActive={isActiveMob}
         />
         <Link
-            to={lang === 'ua' ? '/' : '/ru/'}
+            to={local === 'ua' ? '/' : '/ru/'}
             className="logo"
             title="Logo">
           <img
@@ -98,7 +97,7 @@ const Navbar = ({local, location}) => {
               }
               <Link
                   onClick={() => setActiveMob(!isActiveMob)}
-                  to={`${lang === 'ua' ? '' : '/ru'}/blog/`}>
+                  to={`${local === 'ua' ? '' : '/ru'}/blog/`}>
                   Блог
               </Link>
               {local === 'ua' ?
@@ -146,7 +145,9 @@ const Navbar = ({local, location}) => {
                 <Call />
             </a>
             <Login onClick={() => setActiveMob(!isActiveMob)}/>
-            <Language locale={local} location={location}/>
+            <Language
+                locale={local}
+                location={location}/>
         </div>
       </Navigation>
     )

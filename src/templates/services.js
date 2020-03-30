@@ -95,7 +95,9 @@ const ServicesPage = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return(
-        <Layout local={pageContext.locale} location={location}>
+        <Layout
+            local={pageContext.locale}
+            location={location}>
             <ServicesPageTemplate
                 helmet={
                     <TitleDesHelmet

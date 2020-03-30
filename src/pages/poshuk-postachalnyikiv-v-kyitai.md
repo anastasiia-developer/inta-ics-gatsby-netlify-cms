@@ -36,7 +36,6 @@ table:
   body:
     - column:
         - value: Самостоятельно в интернете
-          name: Самостоятельно в интернете
         - value: '1 день - <span class=''bold infinity''>&#8734;</span>'
         - value: 0$
         - value: = <span class='medium'>50%</span>
