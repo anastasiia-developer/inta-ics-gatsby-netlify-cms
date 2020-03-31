@@ -1,11 +1,13 @@
 ---
 crumbLabelParent: Послуги
 templateKey: services
-locale: ru
 languageKey: dostavka-tovariv-z-kytaju
+locale: ru
 localePath: poshuk-postachalnyikiv-v-kyitai
 title: Поиск и проверка поставщика
 name: poisk-postavschika-v-kitae
+metaData:
+  title: dd
 crumbLabel: Поиск и проверка поставщика
 description: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
