@@ -9,6 +9,7 @@ metaData:
     на транспортировку груза в Украину
 title: Авиадоставка из США
 name: avia-dostavka-iz-ssha
+localeKey: avia-dostavka-z-ssha
 crumbLabelParent: Авиадоставка
 crumbLabel: Авиадоставка из США
 description: >-
