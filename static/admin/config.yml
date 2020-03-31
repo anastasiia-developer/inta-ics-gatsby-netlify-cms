@@ -365,13 +365,13 @@ collections:
     filter: {field: "templateKey", value: "services"}
     fields:
       - {label: "Template Key", name: "pageKey", widget: "hidden", default: "services"}
-      - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
-      - {label: "Title", name: "title", widget: "string", required: false}
       - {label: "crumb Label", name: "crumbLabel", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "path name", name: name, widget: "string"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"},
-            {label: "Description", name: "description", widget: "text"}
+          {label: "Title", name: "title", widget: "string", required: false},
+            {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string", required: false}
       - {label: "description", name: "description", widget: "string"}
@@ -429,8 +429,8 @@ collections:
       - {label: "Title", name: "title", widget: "string", required: false}
       - {label: "path name", name: name, widget: "string"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
-          {label: "Title", name: "title", widget: "string"},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Title", name: "title", widget: "string", required: false},
+          {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string", required: false}
       - {label: "crumb Label", name: "crumbLabel", widget: "string", required: false}

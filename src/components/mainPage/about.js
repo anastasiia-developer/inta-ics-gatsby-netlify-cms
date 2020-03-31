@@ -23,7 +23,6 @@ const Section = styled.section`
         }    
         h2{
             color: ${props => props.hasChildren ? '#474747' : '#005BE4'};
-            padding-bottom: 1em;
             font-weight: 500;
         }
         p{

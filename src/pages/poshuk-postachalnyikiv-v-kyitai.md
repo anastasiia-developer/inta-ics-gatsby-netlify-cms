@@ -3,7 +3,8 @@ crumbLabelParent: Послуги
 templateKey: services
 locale: ua
 title: Поиск и проверка поставщика
-crumbLabel: Поиск и проверка поставщика
+crumbLabel: Пошук і перевірка постачальника
+localeKey: poshuk-postachalnyikiv-v-kyitai
 name: poshuk-postachalnyikiv-v-kyitai
 metaData:
   title: ss

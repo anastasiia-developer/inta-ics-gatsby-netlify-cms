@@ -4,6 +4,7 @@ locale: ru
 name: poisk-postavschika-v-kitae
 crumbLabelParent: Послуги 
 crumbLabel: Поиск и проверка поставщика
+localeKey: poshuk-postachalnyikiv-v-kyitai
 title: Поиск и проверка поставщика
 description: >-
     Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым клиентом, независимо от объёмов его грузопотока. Закажите консультацию и начнем сотрудничество прямо сейчас!

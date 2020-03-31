@@ -147,7 +147,10 @@ const Table = ({table}) => {
                     {table.head.map((title, index) =>
                         <th key={index}>
                             <div className="row">
-                                <PreviewCompatibleImage imageInfo={title.image}/>
+                                <PreviewCompatibleImage
+                                    imageInfo={{
+                                        image: title.image}}
+                                />
                                 {title.name}
                             </div>
                         </th>
@@ -164,7 +167,10 @@ const Table = ({table}) => {
                             <td className="name" key={indx}>
                                 <div className="th">
                                     <div className="row">
-                                        <PreviewCompatibleImage imageInfo={table.head[indx].image}/>
+                                        <PreviewCompatibleImage
+                                            imageInfo={{
+                                                image: table.head[indx].image}}
+                                        />
                                         {table.head[indx].name}
                                     </div>
                                 </div>

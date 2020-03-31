@@ -20,6 +20,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               templateKey
               locale
+              localeKey
               tags
             }
           }
@@ -36,8 +37,18 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach((edge, index) => {
       const locale = edge.node.frontmatter.locale;
+      const localeKey = edge.node.frontmatter.localeKey;
       if (edge.node.frontmatter.templateKey != null) {
         const id = edge.node.id;
+
+        const localePath = () => {
+          if(localeKey != null ){
+            const slug  = _.filter(posts, key => key.node.frontmatter.localeKey === localeKey && key.node.frontmatter.locale !== locale);
+            return slug[0].node.fields.slug
+          }else{
+            return "/"
+          }
+        };
 
         const contextPost = edge.node.frontmatter.templateKey === 'blog-post' && {
           next: index === 0 ? null : posts[index - 1].node.fields.slug,
@@ -54,6 +65,7 @@ exports.createPages = ({ actions, graphql }) => {
           context: {
             id,
             locale,
+            localePath: localePath(),
             ...contextPost
           },
         })

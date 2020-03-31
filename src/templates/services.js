@@ -93,7 +93,7 @@ export const ServicesPageTemplate = ({
 
 const ServicesPage = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
-
+    console.log(pageContext);
     return(
         <Layout
             local={pageContext.locale}
