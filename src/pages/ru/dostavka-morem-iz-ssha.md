@@ -10,6 +10,7 @@ metaData:
     999
 title: Доставка морем из США
 name: dostavka-morem-iz-ssha
+localeKey: dostavka-morem-z-ssha
 crumbLabelParent: Морская перевозка
 crumbLabel: Доставка морем из США
 description: >-
