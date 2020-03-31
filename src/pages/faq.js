@@ -163,7 +163,7 @@ const Faq = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout location={location} local={pageContext.locale}>
+        <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <FaqPageTemplate
                 helmet={
                     <TitleDesHelmet

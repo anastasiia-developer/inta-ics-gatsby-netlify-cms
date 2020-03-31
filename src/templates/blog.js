@@ -171,7 +171,7 @@ const BlogIndexPage = ({ data, location, pageContext }) => {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-        <Layout location={location} local={pageContext.locale}>
+        <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <BlogIndexPageTemplate
                 helmet={
                     <TitleDesHelmet

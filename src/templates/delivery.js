@@ -40,11 +40,15 @@ export const DeliveryTemplate = ({
                 crumbLabelParent={crumbLabelParent}
                 crumbPathParent={false}
                 children={location && !header.buttons &&
-                    locale === 'ua' &&
-                    <CalculateHeader />
-                    &&
-                    <CalculateHeaderRu />
+                <Fragment>
+                    {locale === 'ua' ?
+                        <CalculateHeader/>
+                        :
+                        <CalculateHeaderRu/>
+                    }
+                </Fragment>
                 }
+
             />
             {location && header.buttons &&
                 <CalculateContainerHeader locale={locale}/>
@@ -81,7 +85,7 @@ const Delivery = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout local={pageContext.locale} location={location}>
+        <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <DeliveryTemplate
                 helmet={
                     <TitleDesHelmet

@@ -86,7 +86,7 @@ const BlogPost = ({ data, pageContext, location }) => {
   const { markdownRemark: post } = data;
 
     return (
-    <Layout location={location} local={pageContext.locale}>
+    <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}

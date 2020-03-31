@@ -38,17 +38,14 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach((edge, index) => {
       const locale = edge.node.frontmatter.locale;
       const localeKey = edge.node.frontmatter.localeKey;
+
+      const localePath = () => {
+          const slug  = _.filter(posts, key => key.node.frontmatter.localeKey === localeKey && key.node.frontmatter.locale !== locale);
+          return slug.length > 0 ? slug[0].node.fields.slug : "/"
+      };
+
       if (edge.node.frontmatter.templateKey != null) {
         const id = edge.node.id;
-
-        const localePath = () => {
-          if(localeKey != null ){
-            const slug  = _.filter(posts, key => key.node.frontmatter.localeKey === localeKey && key.node.frontmatter.locale !== locale);
-            return slug[0].node.fields.slug
-          }else{
-            return "/"
-          }
-        };
 
         const contextPost = edge.node.frontmatter.templateKey === 'blog-post' && {
           next: index === 0 ? null : posts[index - 1].node.fields.slug,
@@ -65,7 +62,7 @@ exports.createPages = ({ actions, graphql }) => {
           context: {
             id,
             locale,
-            localePath: localePath(),
+            localePath: localeKey != null ? localePath() : "/",
             ...contextPost
           },
         })
@@ -138,19 +135,21 @@ exports.createPages = ({ actions, graphql }) => {
 
 
 exports.onCreatePage = ({ page, actions }) => {
-  const { createPage, deletePage } = actions
+  const { createPage, deletePage } = actions;
 
   return new Promise(resolve => {
     deletePage(page)
 
     Object.keys(locales).map(lang => {
       const localizedPath = locales[lang].default ? page.path : locales[lang].path + page.path
+      const otherLeng = locales[lang].default ? "/ru" + page.path : page.path
 
       return createPage({
         ...page,
         path: localizedPath,
         context: {
           locale: lang,
+          localePath: otherLeng
         },
       })
     })

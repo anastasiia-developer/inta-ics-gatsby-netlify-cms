@@ -36,10 +36,13 @@ export const InternationalDestinationsTemplate = ({
                 crumbLabelParent={crumbLabelParent}
                 crumbPathParent={false}
                 children={location && !header.buttons &&
-                locale === 'ua' ?
-                    <CalculateHeader />
-                    :
-                    <CalculateHeaderRu />
+                    <Fragment>
+                        {locale === 'ua' ?
+                            <CalculateHeader/>
+                            :
+                            <CalculateHeaderRu/>
+                        }
+                    </Fragment>
                 }
             />
             {location && header.buttons &&
@@ -60,7 +63,7 @@ const InternationalDestinations = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout local={pageContext.locale} location={location}>
+        <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <InternationalDestinationsTemplate
                 helmet={
                     <TitleDesHelmet

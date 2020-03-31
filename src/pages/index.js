@@ -84,8 +84,9 @@ IndexPageTemplate.propTypes = {
 
 const Index = ({ data, location, pageContext }) => {
   const { frontmatter } = data.markdownRemark;
+
   return (
-    <Layout local={pageContext.locale} location={location}>
+    <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
       <IndexPageTemplate
         helmet={
           <TitleDesHelmet

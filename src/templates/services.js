@@ -93,11 +93,11 @@ export const ServicesPageTemplate = ({
 
 const ServicesPage = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
-    console.log(pageContext);
+
     return(
         <Layout
             local={pageContext.locale}
-            location={location}>
+            location={{location, localePath:pageContext.localePath}}>
             <ServicesPageTemplate
                 helmet={
                     <TitleDesHelmet

@@ -125,7 +125,7 @@ const Reviews = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout local={pageContext.locale} location={location}>
+        <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <ReviewsPageTemplate
                 helmet={
                     <TitleDesHelmet

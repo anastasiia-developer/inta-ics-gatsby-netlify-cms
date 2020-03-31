@@ -39,10 +39,13 @@ export const InternationalCargoTemplate = ({
                     crumbLabelParent={crumbLabelParent}
                     crumbPathParent={false}
                     children={location && !header.buttons &&
-                      locale === 'ua' ?
-                        <CalculateHeader />
-                        :
-                        <CalculateHeaderRu />
+                    <Fragment>
+                        {locale === 'ua' ?
+                            <CalculateHeader/>
+                            :
+                            <CalculateHeaderRu/>
+                        }
+                    </Fragment>
                     }
                 />
             }
@@ -70,7 +73,7 @@ const InternationalCargo = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout local={pageContext.locale} location={location}>
+        <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <InternationalCargoTemplate
                 helmet={
                     <TitleDesHelmet

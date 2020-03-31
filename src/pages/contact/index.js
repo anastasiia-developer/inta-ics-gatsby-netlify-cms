@@ -78,7 +78,7 @@ const ContactPage = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
 
     return (
-        <Layout local={pageContext.locale} location={location}>
+        <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <ContactPageTemplate
                 helmet={
                     <TitleDesHelmet
