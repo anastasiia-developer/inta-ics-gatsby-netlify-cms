@@ -10,6 +10,7 @@ metaData:
     &#9989; Заказать перевозку грузов 
 title: Доставка грузов из Европы
 name: dostavka-gruzov-iz-evropyi
+localeKey: dostavka-vantazhiv-z-evropyi
 crumbLabelParent: Международные автомобильные грузовые перевозки
 crumbLabel: Доставка грузов из Европы
 description: >-
