@@ -61,7 +61,7 @@ export const InternationalDestinationsTemplate = ({
 
 const InternationalDestinations = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
-
+    console.log(frontmatter.locale)
     return (
         <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <InternationalDestinationsTemplate
@@ -98,6 +98,7 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
+        locale
         description
         metaData{
             title

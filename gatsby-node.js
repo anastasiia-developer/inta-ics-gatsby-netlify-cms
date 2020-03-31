@@ -21,6 +21,7 @@ exports.createPages = ({ actions, graphql }) => {
               templateKey
               locale
               localeKey
+              name
               tags
             }
           }
@@ -40,8 +41,12 @@ exports.createPages = ({ actions, graphql }) => {
       const localeKey = edge.node.frontmatter.localeKey;
 
       const localePath = () => {
-          const slug  = _.filter(posts, key => key.node.frontmatter.localeKey === localeKey && key.node.frontmatter.locale !== locale);
-          return slug.length > 0 ? slug[0].node.fields.slug : "/"
+        const filter = _.filter(posts, key => key.node.frontmatter.localeKey === edge.node.frontmatter.name);
+
+        return localeKey != null ?
+              localeKey :
+              edge.node.frontmatter.name != null && filter.length > 0
+                   ? filter[0].node.fields.slug : "/";
       };
 
       if (edge.node.frontmatter.templateKey != null) {
@@ -62,7 +67,7 @@ exports.createPages = ({ actions, graphql }) => {
           context: {
             id,
             locale,
-            localePath: localeKey != null ? localePath() : "/",
+            localePath: localePath(),
             ...contextPost
           },
         })

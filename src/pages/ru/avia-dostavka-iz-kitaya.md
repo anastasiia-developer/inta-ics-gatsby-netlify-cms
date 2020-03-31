@@ -1,6 +1,6 @@
 ---
 templateKey: international-destinations
-locale: ua
+locale: ru
 metaData:
   title: Авиадоставка из Китая | INTA-ICS
   description: >-

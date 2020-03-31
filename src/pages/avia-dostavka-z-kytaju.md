@@ -10,7 +10,6 @@ metaData:
     &#9989;
 title: 'Авіадоставка з Китаю '
 name: avia-dostavka-z-kytaju
-localeKey: avia-dostavka-z-kytaju
 crumbLabel: 'Авіадоставка з Китаю '
 crumbLabelParent: Авіадоставка
 description: >-

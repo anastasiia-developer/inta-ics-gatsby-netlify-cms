@@ -63,7 +63,7 @@ collections:
         {label: "Description", name: "description", widget: "text"}
       ]}
       - {label: "name", name: "name", widget: "string"}
-      - {label: "locale", name: "localeKey", widget: "hidden", default: "{{name}}", required: false}
+      - {label: "url в укр версии", name: "localeKey", default: "{{name}}"}
       - {label: "имя в навигации категории", name: "crumbLabelParent", widget: "string"}
       - {label: "имя в навигации", name: "crumbLabel", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
@@ -119,6 +119,8 @@ collections:
       {label: "Title", name: "title", widget: "string"},
       {label: "Description", name: "description", widget: "text"}
       ]}
+      - {label: "path name", name: "name", widget: "string"}
+      - {label: "url в укр версии", name: "localeKey", widget: "string"}
       - {label: "имя в навигации категории", name: "crumbLabelParent", widget: "string"}
       - {label: "имя в навигации", name: "crumbLabel", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
@@ -227,6 +229,7 @@ collections:
       ]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "path name", name: name, widget: "string"}
+      - {label: "url в укр версии", name: "localeKey", widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
       - {label: "description", name: "description", widget: "string"}
@@ -324,6 +327,7 @@ collections:
           {label: "Description", name: "description", widget: "text"}
       ]}
       - {label: "path name", name: name, widget: "string"}
+      - {label: "url в укр версии", name: "localeKey", widget: "string"}
       - {label: "crumb Label Parent", name: "crumbLabelParent", widget: "string"}
       - {label: "crumb Label", name: "crumbLabel", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
@@ -430,6 +434,7 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Title", name: "title", widget: "string", required: false}
       - {label: "path name", name: name, widget: "string"}
+      - {label: "url в укр версии", name: "localeKey", widget: "string"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: "string", required: false},
           {label: "Description", name: "description", widget: "text", required: false}

@@ -50,7 +50,7 @@ const Language = ({locale, location}) => {
         </button>
         <Options isActive={isActive}>
             {Object.keys(locales).map((leng, index) =>
-                <Link to={leng !== locale ? location.localePath : location.location.pathname}
+                <Link to={locale === leng ? location.location.pathname : location.localePath}
                       key={index}
                       onClick={() => setActive(false)}>
                     {leng}
