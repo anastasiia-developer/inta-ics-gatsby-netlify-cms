@@ -7,8 +7,8 @@ metaData:
     точно в срок &#9989; Гарантия сохранности грузов &#9989; Заказывайте прямо
     сейчас!
 crumbLabelParent: Доставка
-name: avia-dostavka
 localeKey: avia-dostavka
+name: avia-dostavka
 crumbLabel: Авиадоставка
 title: Авиадоставка грузов
 description: >-
@@ -158,7 +158,6 @@ seoSections:
         Оставьте заявку на расчет стоимости или для заказа, после чего наш
         менеджер свяжется с вами и проконсультирует по всем вопросам.
       altImg: inta-ics-авиа-доставка-4
-name: air-delivery
 sections:
   - image: /img/47.jpg
     text: >-

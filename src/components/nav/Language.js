@@ -42,7 +42,7 @@ const Options = styled.div`
 
 const Language = ({locale, location}) => {
     const [isActive, setActive] = useState(false);
-
+    console.log(location.location.pathname)
     return(
     <Container className="row">
         <button className='btn' onClick={() => setActive(!isActive)}>
@@ -50,7 +50,7 @@ const Language = ({locale, location}) => {
         </button>
         <Options isActive={isActive}>
             {Object.keys(locales).map((leng, index) =>
-                <Link to={locale === leng ? location.location.pathname : location.localePath}
+                <Link to={locale === leng ? location.location.pathname || "/" : location.localePath}
                       key={index}
                       onClick={() => setActive(false)}>
                     {leng}

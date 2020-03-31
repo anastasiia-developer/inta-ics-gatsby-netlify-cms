@@ -20,7 +20,7 @@ export const ComponentsCommonTemplate = () => (
 
 const Index = ({ data, location, pageContext }) => {
     return (
-        <Layout location={location} local={pageContext.locale}>
+        <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
 
         </Layout>
     )
