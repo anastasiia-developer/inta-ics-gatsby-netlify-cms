@@ -9,6 +9,7 @@ metaData:
     оформление &#9989; Контроль и отчётность 24/7 - Звони &#9742; 068 5555 999
 title: Доставка морем из Китая
 name: dostavka-morem-iz-kitaja
+localeKey: dostavka-morem-z-kytaju
 crumbLabelParent: Морская перевозка
 crumbLabel: Морская перевозка грузов из Китая
 description: >-
