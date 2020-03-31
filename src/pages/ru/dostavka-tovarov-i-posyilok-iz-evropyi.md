@@ -10,6 +10,7 @@ metaData:
     #9742; 068 5555 999
 title: Доставка товаров из Европы
 name: dostavka-tovarov-i-posyilok-iz-evropyi
+localeKey: dostavka-tovariv-z-evropyi
 crumbLabelParent: Международные автомобильные грузовые перевозки
 crumbLabel: Доставка товаров из Европы
 description: >-
