@@ -62,8 +62,7 @@ collections:
           {label: "Title", name: "title", widget: "string" },
         {label: "Description", name: "description", widget: "text"}
       ]}
-      - {label: "name", name: "name", widget: "string"}
-      - {label: "url в укр версии", name: "localeKey", default: "{{name}}"}
+      - {label: "path name", name: "name", widget: "string"}
       - {label: "имя в навигации категории", name: "crumbLabelParent", widget: "string"}
       - {label: "имя в навигации", name: "crumbLabel", widget: "string"}
       - {label: "description", name: "description", widget: "string"}

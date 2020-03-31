@@ -7,6 +7,8 @@ metaData:
     точно в срок &#9989; Гарантия сохранности грузов &#9989; Заказывайте прямо
     сейчас!
 crumbLabelParent: Доставка
+name: avia-dostavka
+localeKey: avia-dostavka
 crumbLabel: Авиадоставка
 title: Авиадоставка грузов
 description: >-
