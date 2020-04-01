@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from "react";
 import styled from "styled-components";
-import { encode} from "../../../pages/contact/form";
+import { encode} from "../../../pages/contacts/form";
 import Phone from "../../FormComponents/Phone";
 import PopupThanks from "../../Popups/PopupThanks";
 import PopupThanksRu from "../../Popups/PopupThanks/index.ru";

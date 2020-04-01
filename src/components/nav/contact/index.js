@@ -10,6 +10,7 @@ export default ({setActiveMob}) => (
                 markdownRemark(frontmatter: { pageKey: { eq: "contact" }, locale: { eq: "ua" } }) {
                     frontmatter {
                         crumbLabel
+                        name
                     }   
                 }
             }
@@ -17,7 +18,7 @@ export default ({setActiveMob}) => (
         render={(data) =>
             <LinkMenu
                 label={data}
-                link="/contact/"
+                link={`/${data.markdownRemark.frontmatter.name}/`}
                 setActiveMob={() => setActiveMob}
             />
         }

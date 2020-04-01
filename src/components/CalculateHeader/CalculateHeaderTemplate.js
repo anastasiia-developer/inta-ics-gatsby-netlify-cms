@@ -5,7 +5,7 @@ import FlagsRu from "../Flags/index.ru"
 import Arrow from "../../img/arrow.svg"
 import Tel from "../../img/tel.svg"
 import Email from "../../img/email.svg"
-import {encode} from "../../pages/contact/form"
+import {encode} from "../../pages/contacts/form"
 import Phone from '../FormComponents/Phone'
 import PopupThanks from "../Popups/PopupThanks";
 import PopupThanksRu from "../Popups/PopupThanks/index.ru";

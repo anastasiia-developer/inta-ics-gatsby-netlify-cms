@@ -1,8 +1,9 @@
 ---
 pageKey: contact
-locale: ru
-title: RUКонтакты
-crumbLabel: Контакты
+title: Контакты
+locale: ua
+name: contacts
+crumbLabel: Контакти
 description: >-
     Оставьте свой номер и мы вам перезвоним
 header:
@@ -59,7 +60,8 @@ storage:
       image: /img/Rectangle 121.png  
       images: 
         - image: /img/Rectangle 121.png  
-    - country: США (Washington)
+    - country: США
+      city: (Washington)
       flag: /img/002-united-states (3).png
       postIndex: '999077'
       address: 

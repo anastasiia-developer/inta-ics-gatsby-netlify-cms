@@ -4,7 +4,7 @@ import {Close} from "../PopupThanks/PopupThanksTemplate";
 import PopupThanksRu from "../PopupThanks/index.ru";
 import PopupThanks from "../PopupThanks";
 import Phone from "../../FormComponents/Phone";
-import {encode} from "../../../pages/contact/form";
+import {encode} from "../../../pages/contacts/form";
 
 const Popup = styled.div`
     position: fixed;
