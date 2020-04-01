@@ -73,7 +73,8 @@ collections:
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: alt, name: alt, widget: string, required: false},
+      {label: Image, name: image, widget: image},
       ]},
       {label: Buttons, name: buttons, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -81,12 +82,14 @@ collections:
       ]}
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
-      {label: "Title", name: "title", widget: "string"},
+      {label: "Title", name: "title", widget: string, required: false},
       {label: "Картинка", name: image, widget: image},
+      {label: "alt", name: alt, widget: string, required: false},
       {label: "Текст", name: text, widget: "markdown"},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image},
+      {label: "alt", name: alt, widget: string, required: false},
       ]},
       {label: Button, name: button, widget: object, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -94,15 +97,16 @@ collections:
       ]}
       ]}
       - {label: "sectionText", name: "sectionText", widget: object, fields: [
-      {label: "Title", name: "title", widget: "string"},
+      {label: "Title", name: "title", widget: string, required: false},
       {label: "Картинка", name: image, widget: image},
+      {label: "alt", name: alt, widget: string, required: false},
       {label: "Текст", name: text, widget: "markdown"},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
-      {label: title, name: title, widget: "string"},
+      {label: title, name: title, widget: string, required: false},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "alt", name: "alt", widget: string, required: false},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -131,7 +135,8 @@ collections:
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image},
+      {label: "alt", name: "alt", widget: string, required: false},
       ]},
       {label: Buttons, name: buttons, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -141,6 +146,7 @@ collections:
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: "string"},
       {label: "Картинка", name: image, widget: image},
+      {label: "alt", name: "alt", widget: string, required: false},
       {label: "Текст", name: text, widget: "markdown"},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
@@ -154,13 +160,14 @@ collections:
       - {label: "sectionText", name: "sectionText", widget: object, fields: [
       {label: "Title", name: "title", widget: "string"},
       {label: "Картинка", name: image, widget: image},
+      {label: "alt", name: "alt", widget: string, required: false},
       {label: "Текст", name: text, widget: "markdown"},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "alt", name: "alt", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -218,7 +225,7 @@ collections:
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "alt", name: "alt", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -277,7 +284,7 @@ collections:
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "alt", name: "alt", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -326,7 +333,7 @@ collections:
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "alt", name: "alt", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -376,7 +383,7 @@ collections:
       {label: title, name: title, widget: "string"},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown"},
-      {label: "altImg", name: "altImg", widget: "string"},
+      {label: "alt", name: "alt", widget: "string"},
       {label: "Картинка", name: image, widget: image}
       ]}
       ]}
@@ -436,7 +443,7 @@ collections:
         {label: title, name: title, widget: "string", required: false},
         {label: "sections", name: "sections", widget: list, fields: [
           {label: "Текст", name: text, widget: "markdown", required: false},
-          {label: "altImg", name: "altImg", widget: "string", required: false},
+          {label: "alt", name: "alt", widget: "string", required: false},
           {label: "Картинка", name: image, widget: image, required: false}
         ]}
       ]}
@@ -497,7 +504,7 @@ collections:
       {label: title, name: title, widget: "string", required: false},
       {label: "sections", name: "sections", widget: list, fields: [
       {label: "Текст", name: text, widget: "markdown", required: false},
-      {label: "altImg", name: "altImg", widget: "string", required: false},
+      {label: "alt", name: "alt", widget: "string", required: false},
       {label: "Картинка", name: image, widget: image, required: false}
       ]}
       ]}
@@ -676,7 +683,7 @@ collections:
           {label: title, name: title, widget: "string"},
           {label: "sections", name: "sections", widget: list, fields: [
           {label: "Текст", name: text, widget: "markdown"},
-          {label: "altImg", name: "altImg", widget: "string"},
+          {label: "alt", name: "alt", widget: "string"},
           {label: "Картинка", name: image, widget: image}
           ]}
           ]}
@@ -746,7 +753,7 @@ collections:
           {label: title, name: title, widget: "string"},
           {label: "sections", name: "sections", widget: list, fields: [
           {label: "Текст", name: text, widget: "markdown"},
-          {label: "altImg", name: "altImg", widget: "string"},
+          {label: "alt", name: "alt", widget: "string"},
           {label: "Картинка", name: image, widget: image}
           ]}
           ]}
@@ -845,7 +852,7 @@ collections:
           - {label: seoSections, name: seoSections, widget: object, fields: [
           {label: title, name: title, widget: "string"},
           {label: "sections", name: "sections", widget: list, fields: [
-          {label: "altImg", name: "altImg", widget: "string"},
+          {label: "alt", name: "alt", widget: "string"},
           {label: "Текст", name: text, widget: "markdown"},
           {label: "Картинка", name: image, widget: image}
           ]}
@@ -915,7 +922,7 @@ collections:
           {label: title, name: title, widget: "string"},
           {label: "sections", name: "sections", widget: list, fields: [
           {label: "Текст", name: text, widget: "markdown"},
-          {label: "altImg", name: "altImg", widget: "string"},
+          {label: "alt", name: "alt", widget: "string"},
           {label: "Картинка", name: image, widget: image}
           ]}
           ]}

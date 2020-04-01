@@ -151,6 +151,7 @@ export const pageQuery = graphql`
               image{
                  publicURL
               }
+              alt
               text
             }
             buttons{
@@ -172,11 +173,13 @@ export const pageQuery = graphql`
                   }
                 }
             }
+            alt
             list{
                 title
                 image{
                     publicURL
                 }
+                alt
             }
         }
         sectionText{
@@ -189,6 +192,7 @@ export const pageQuery = graphql`
                 }
             }  
           }
+          alt
         }
         seoSections{
           title
@@ -201,6 +205,7 @@ export const pageQuery = graphql`
                   }
                 }
             }
+            alt
           }
         }
       }

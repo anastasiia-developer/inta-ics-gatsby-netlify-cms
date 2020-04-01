@@ -253,6 +253,7 @@ const TemplateHeader = ({
                                     key={index}
                                     imageInfo={{
                                         image: img.image,
+                                        alt: img.alt
                                     }}
                                 />
                             ))}

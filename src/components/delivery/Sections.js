@@ -86,14 +86,15 @@ const Sections = ({ sections, locale, className }) => (
                 className={className}
                 title={section.title}
                 image={section.image}
+                alt={section.alt}
                 text={section.text}
                 children={
                     section.list && section.list.length > 0 &&
-                    (<Fragment>
+                    <Fragment>
                         <ul className="row list">
                             {section.list.map((li,index) => (
                                 <li className="row" key={index}>
-                                    <img src={li.image.publicURL} alt={li.title}/>
+                                    <img src={li.image.publicURL} alt={li.alt}/>
                                     {li.title}
                                 </li>
                             ))}
@@ -101,7 +102,7 @@ const Sections = ({ sections, locale, className }) => (
                         <Link className="btn" to={section.button ? localizedPath({path: section.button.link, lang: locale}) : '/'}>
                             {section.button ? section.button.text : 'Узнать больше'}
                         </Link>
-                    </Fragment>)
+                    </Fragment>
                 }
             />
         )}

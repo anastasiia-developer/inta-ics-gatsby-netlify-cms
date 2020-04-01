@@ -49,7 +49,7 @@ const Section = styled.section`
    
 `;
 
-const About = ({ title, image, text, className, children }) => (
+const About = ({ title, image, alt, text, className, children }) => (
     <Section className={`row-to-column ${className}`} hasChildren={!!children}>
         <div className="description">
             {title &&
@@ -61,6 +61,7 @@ const About = ({ title, image, text, className, children }) => (
         <PreviewCompatibleImage
             imageInfo={{
                 image: image,
+                alt: alt
             }}
         />
     </Section>

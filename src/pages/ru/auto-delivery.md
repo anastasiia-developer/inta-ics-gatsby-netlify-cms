@@ -30,6 +30,7 @@ header:
   scopeInformation:
     - image: /img/time.png
       text: От 3 дней
+      alt: time
     - image: /img/card.png
       text: Доступная цена
     - image: /img/lov.png
@@ -69,7 +70,7 @@ seoSections:
         вместительности. Клиенты могут также выбрать *автоперевозки сборного
         типа*: во время этой доставки заказчик оплачивает только место, которое
         занимает его товар.
-      altImg: inta-ics-автоперевозки-грузов-1
+      alt: inta-ics-автоперевозки-грузов-1
     - text: >-
         ## Виды транспорта для автоперевозок
 
@@ -92,7 +93,7 @@ seoSections:
         * Платформа — для негабаритных грузов используются варианты с
         грузоподъемностью 15-20 тонн. Транспорт, рассчитанный на доставку
         крупного оборудования, выдерживает 20-40 тонн.
-      altImg: inta-ics-автоперевозки-грузов-2
+      alt: inta-ics-автоперевозки-грузов-2
       image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2-2-.jpg
     - text: >-
         ## От чего зависит стоимость на грузовые автоперевозки
@@ -106,10 +107,11 @@ seoSections:
 
         Каждый маршрут наши логисты разрабатывают в индивидуальном порядке.
         Выполняем доставку грузов от 1 паллеты.
-      altImg: ' inta-ics-автоперевозки-грузов-3'
+      alt: ' inta-ics-автоперевозки-грузов-3'
       image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-3.jpg
 sections:
   - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2.jpg
+    alt: inta-ics-zaliznyichni-perevezennya-vantazhiv
     list:
       - image: /img/ (1).png
         title: От 3 дней
@@ -159,6 +161,7 @@ sections:
       link: dostavka-tovarov-i-posyilok-iz-evropyi/
 sectionText:
   image: /img/AutoBckg.png
+  alt: AutoBckg
   text: >-
     Доставка грузов при помощи автомобилей — способ транспортировки с выгодным
     соотношением сроков и стоимости. Благодаря разветвленной сети дорог, для

@@ -30,6 +30,6 @@ seoSections:
   title: Организация авиадоставки из США
   sections:
     - text: можно заказать огромное количество
-      altImg: dd
+      alt: dd
       image: /img/buyback-and-delivery-from-china-section-img.jpg
 ---
