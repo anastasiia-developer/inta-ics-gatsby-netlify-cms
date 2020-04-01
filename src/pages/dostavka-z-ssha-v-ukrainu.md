@@ -33,6 +33,8 @@ header:
       link: dostavka-morem-z-ssha/
     - text: 'Доставка товарів з США '
       link: dostavka-z-ssha-v-ukrainu/
+    - text: Доставка контейнерів з США
+      link: dostavka-konteyneriv-z-ssha/
 sectionText:
   image: /img/inta_ics_z_ssha.png
   text: ssdsdsdsdsdsds
