@@ -53,6 +53,22 @@ sections:
     button:
       text: Дізнатись більше
       link: avia-dostavka-z-ssha/
+  - title: 'Морська доставка з США '
+    text: >-
+      <p>Компанія INTA-ICS здійснює вантажоперевезення з США. Америка - один з
+      центрів світової торгівлі, тому співпраця з місцевими виробниками може
+      сприятливо вплинути на ваш бізнес.</p>
+    image: /img/inta_ics_morska_dostavka_z_ssha.jpg
+    list:
+      - title: Від 35 днів
+        image: /img/time.png
+      - title: Доставка від 50кг
+        image: /img/card.png
+      - title: Зручна система оплати
+        image: /img/lov.png
+    button:
+      text: Дізнатись більше
+      link: dostavka-morem-z-ssha/
 sectionText:
   image: /img/inta_ics_z_ssha.png
   text: ssdsdsdsdsdsds
