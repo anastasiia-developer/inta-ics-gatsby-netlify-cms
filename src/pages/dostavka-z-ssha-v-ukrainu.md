@@ -19,6 +19,16 @@ header:
   images:
     - alt: inta-ics-доставка-з-сша-в-україну
       image: /img/inta_ics_z_ssha.png
+  scopeInformation:
+    - text: Від 5 днів
+      image: /img/time.png
+    - text: Склад-офіс
+      image: /img/card.png
+    - text: Швидкий розрахунок вартості
+      image: /img/lov.png
+  buttons:
+    - text: Авіадоставка з США
+      link: 'avia-dostavka-z-ssha/ '
 sectionText:
   image: /img/inta_ics_z_ssha.png
   text: ssdsdsdsdsdsds
