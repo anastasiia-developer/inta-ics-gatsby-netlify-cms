@@ -85,6 +85,22 @@ sections:
     button:
       text: Дізнатись більше
       link: dostavka-z-ssha-v-ukrainu/
+  - title: 'Доставка контейнерів з США '
+    image: /img/inta_ics_morska_konteineriv_z_ssha.jpg
+    text: >-
+      <p>Компанія INTA-ICS пропонує гнучкі тарифи на транспортування контейнерів
+      з США. Ми співпрацюємо з провідними судноплавними компаніями і
+      індивідуально підходимо до кожного замовлення.</p>
+    list:
+      - title: Від 28 днів
+        image: /img/time.png
+      - title: Послуги брокера
+        image: /img/card.png
+      - title: Збереження вантажу
+        image: /img/lov.png
+    button:
+      text: Дізнатись більше
+      link: dostavka-konteyneriv-z-ssha/
 sectionText:
   image: /img/inta_ics_z_ssha.png
   text: ssdsdsdsdsdsds
