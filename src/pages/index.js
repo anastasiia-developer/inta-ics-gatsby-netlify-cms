@@ -60,6 +60,7 @@ export const IndexPageTemplate = ({
       title={about.title}
       image={about.image}
       text={about.text}
+      alt={about.alt}
     />
       <TemplateCommonComponent
         calculate
@@ -69,6 +70,7 @@ export const IndexPageTemplate = ({
         clients
         reviews
       />
+      {console.log(seoSections)}
     <Article seoSections={seoSections}/>
   </Fragment>
 )
@@ -173,6 +175,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            alt
             title
           }
         }
@@ -186,6 +189,7 @@ export const pageQuery = graphql`
               }
             }
           }
+          alt
         }
         seoSections{
           title
@@ -198,6 +202,7 @@ export const pageQuery = graphql`
                   }
                 }
             }
+            alt
           }
         }
       }

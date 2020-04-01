@@ -57,6 +57,7 @@ const About = ({ title, image, alt, text, className, children }) => (
             }
             <ContentInFrontmatter className="text" content={text}/>
             {children}
+            {console.log(alt)}
         </div>
         <PreviewCompatibleImage
             imageInfo={{
