@@ -16,6 +16,10 @@ description: >-
   Шопинг в США востребован в Украине, так как можно приобрести качественные
   товары по доступной цене. Компания INTA-ICS предлагает услуги грузоперевозок
   из Америки по морю или воздуху.
+header:
+  images:
+    - alt: ' inta-ics-доставка-из-сша-в-украину'
+      image: /img/inta_ics_dostavka_tovariv_z_ssha.png
 sectionText:
   title: тиии
   image: /img/002-united-states (3).png
