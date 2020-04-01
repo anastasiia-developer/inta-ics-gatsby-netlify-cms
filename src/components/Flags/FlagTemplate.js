@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from 'gatsby'
+import {localizedPath} from "../../data/localizedPath";
 
-const FlagTemplate = ({ countries, setOptions, stateOptions, link }) => {
+const FlagTemplate = ({ countries, locale, setOptions, stateOptions, link }) => {
 
     if(countries){
         return(
@@ -11,7 +12,7 @@ const FlagTemplate = ({ countries, setOptions, stateOptions, link }) => {
                             <Link
                                 key={index}
                                 className="row"
-                                to={`/${item.link}` || '/'}
+                                to={item.link ? localizedPath({path: item.link, lang: locale}) : '/'}
                             >
                                 <img src={item.flag.publicURL} alt="flag"/>
                                 <p>{item.country}</p>

@@ -22,6 +22,9 @@ export const Section = styled(Sections)`
     &:nth-child(even){
         flex-direction: row-reverse;
         background: #F6F6F6;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            flex-direction: column-reverse;
+        }
     }
     .description h2{
         color: #393939;

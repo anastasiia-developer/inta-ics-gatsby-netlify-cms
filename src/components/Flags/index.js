@@ -8,6 +8,7 @@ export default ({stateOptions, setOptions}) => (
             query FlagsCommon {
                markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: "ua" } }) {
                   frontmatter {
+                    locale
                     destinations{
                       countries{
                         country
@@ -21,6 +22,6 @@ export default ({stateOptions, setOptions}) => (
                }
             }
         `}
-        render={(data) => <FlagsTemplate countries={data.markdownRemark.frontmatter.destinations.countries} stateOptions={stateOptions} setOptions={setOptions}/>}
+        render={(data) => <FlagsTemplate locale={data.markdownRemark.frontmatter.locale} countries={data.markdownRemark.frontmatter.destinations.countries} stateOptions={stateOptions} setOptions={setOptions}/>}
     />
 )

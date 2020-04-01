@@ -4,7 +4,8 @@ locale: ru
 title: 'Доставка из Франции'
 crumbLabelParent: Международные грузоперевозки
 crumbLabel: Франция
-name: dostavka-z-franzii
+name: dostavka-iz-franzii
+localeKey: dostavka-z-franzii
 description: >-
   Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
   клиентом, независимо от объёмов его грузопотока. Закажите консультацию и

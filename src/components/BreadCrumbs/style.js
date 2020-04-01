@@ -13,8 +13,10 @@ const Container = styled.nav`
         font-size: 1em;
         color: #5B5B5B;
         cursor: pointer;
+        white-space: nowrap;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
           margin-bottom: .5em;
+          white-space: normal;
         }
         &:after{
             content: ' > ';

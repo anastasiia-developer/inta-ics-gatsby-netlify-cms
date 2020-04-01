@@ -12,6 +12,7 @@ import CalculateContainerHeader from "../components/CalculateContainerHeader"
 import TitleDesHelmet from "../components/TitleDesHelmet"
 import CalculateHeader from "../components/CalculateHeader";
 import CalculateHeaderRu from "../components/CalculateHeader/index.ru";
+import { DeliveryTemplate } from "./delivery"
 
 export const InternationalDestinationsTemplate = ({
                                      helmet,
@@ -63,26 +64,36 @@ export const InternationalDestinationsTemplate = ({
 
 const InternationalDestinations = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
-    console.log(frontmatter.locale)
+    const setting = {
+        helmet:
+            <TitleDesHelmet
+                title={frontmatter.metaData && frontmatter.metaData.title && frontmatter.title}
+                description={frontmatter.metaData && frontmatter.metaData.description && frontmatter.description}
+            />
+        ,
+        crumbLabel: frontmatter.crumbLabel,
+        crumbLabelParent: frontmatter.crumbLabelParent,
+        header: frontmatter.header,
+        title: frontmatter.title,
+        description: frontmatter.description,
+        location: location,
+        locale: pageContext.locale,
+        sections: frontmatter.sections,
+        seoSections: frontmatter.seoSections
+    };
+    // const btnInSections = frontmatter.sections.some(section => section.button != null);
     return (
         <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
-            <InternationalDestinationsTemplate
-                helmet={
-                    <TitleDesHelmet
-                        title={frontmatter.metaData && frontmatter.metaData.title && frontmatter.title}
-                        description={frontmatter.metaData && frontmatter.metaData.description && frontmatter.description}
-                    />
-                }
-                header={frontmatter.header}
-                crumbLabel={frontmatter.crumbLabel}
-                crumbLabelParent={frontmatter.crumbLabelParent}
-                title={frontmatter.title}
-                description={frontmatter.description}
-                location={location}
-                locale={pageContext.locale}
-                sections={frontmatter.sections}
-                seoSections={frontmatter.seoSections}
-            />
+            {frontmatter.header.buttons ?
+                <DeliveryTemplate
+                    sectionText={frontmatter.sectionText}
+                    {...setting}
+                />
+                :
+                <InternationalDestinationsTemplate
+                    {...setting}
+                />
+            }
             {pageContext.locale === 'ua' ?
                 <FormFooter />
                 :
@@ -133,6 +144,10 @@ export const pageQuery = graphql`
         sections{
             text
             title
+            button{
+                link
+                text
+            }
             image{
                 childImageSharp {
                   fluid(maxWidth: 900, quality: 100) {
@@ -146,6 +161,17 @@ export const pageQuery = graphql`
                     publicURL
                 }
             }
+        }
+        sectionText{
+          text
+          title
+          image{
+            childImageSharp {
+                fluid(maxWidth: 1200, maxHeight: 30) {
+                  ...GatsbyImageSharpFluid
+                }
+            }  
+          }
         }
         seoSections{
           title

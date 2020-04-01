@@ -24,6 +24,7 @@ const Section = styled.section`
         h2{
             color: ${props => props.hasChildren ? '#474747' : '#005BE4'};
             font-weight: 500;
+            margin-bottom: 1em;
         }
         p{
             line-height: 1.7em;

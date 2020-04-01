@@ -69,6 +69,7 @@ const DestinationsTemplate = ({ data }) => {
                         <h2>{destinations.title}</h2>
                         <FlagsTemplate
                             link
+                            locale={data.markdownRemark.frontmatter.locale}
                             countries={destinations.countries}/>
                     </div>
                     <PreviewCompatibleImage

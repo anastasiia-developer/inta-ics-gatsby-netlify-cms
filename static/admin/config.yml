@@ -204,6 +204,15 @@ collections:
       {label: "title", name: title, widget: string, required: false},
       {label: "Картинка", name: image, widget: image}
       ]},
+      {label: Button, name: button, widget: object, fields: [
+      {label: text, name: text, widget: string, required: false},
+      {label: Link, name: link, widget: string, required: false}
+      ]}
+      ]}
+      - {label: "sectionText", name: "sectionText", widget: object, fields: [
+      {label: "Title", name: "title", widget: "string", required: false},
+      {label: "Картинка", name: image, widget: image},
+      {label: "Текст", name: text, widget: "markdown"},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: "string"},
@@ -249,11 +258,20 @@ collections:
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: "string"},
       {label: "Картинка", name: image, widget: image},
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "text", name: text, widget: "markdown"},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
       {label: "Картинка", name: image, widget: image}
       ]},
+      {label: Button, name: button, widget: object, fields: [
+      {label: text, name: text, widget: string, required: false},
+      {label: Link, name: link, widget: string, required: false}
+      ]}
+      ]}
+      - {label: "sectionText", name: "sectionText", widget: object, fields: [
+      {label: "Title", name: "title", widget: "string", required: false},
+      {label: "Картинка", name: image, widget: image},
+      {label: "Текст", name: text, widget: "markdown"},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: "string"},

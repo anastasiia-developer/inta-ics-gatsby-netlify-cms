@@ -8,6 +8,7 @@ export default () => (
             query DestinationsCommonRu{
                 markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale: { eq: "ru" }}) {
                     frontmatter {
+                        locale
                         destinations {
                             title
                             image{
