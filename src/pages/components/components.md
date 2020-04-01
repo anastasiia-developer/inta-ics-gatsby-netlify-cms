@@ -172,7 +172,7 @@ destinations:
       country: Китай
       flag: /img/background404.png
     - country: Гонконг
-      flag: /img/background404.png
+      flag: /img/002-united-states (3).png
       link: dostavka-z-gonkongu-v-ukrainu/
   image: /img/map.png
 calculateHeader:
