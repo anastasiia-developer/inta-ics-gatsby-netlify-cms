@@ -35,6 +35,24 @@ header:
       link: dostavka-z-ssha-v-ukrainu/
     - text: Доставка контейнерів з США
       link: dostavka-konteyneriv-z-ssha/
+sections:
+  - title: 'Авіадоставка з США '
+    image: /img/inta_ics_avia_dostavka_z_ssha.jpg
+    text: >-
+      <p>Компанія INTA-ICS пропонує послуги авіаперевезення товарів з США в
+      Україну. Можливо транспортування як одного замовлення, так і оптової
+      партії. Поточне місце розташування вантажу можна відстежувати через
+      додаток.</p>
+    list:
+      - title: Термін від 5 днів
+        image: /img/time.png
+      - title: Власні склади
+        image: /img/card.png
+      - title: Швидка консультація
+        image: /img/lov.png
+    button:
+      text: Дізнатись більше
+      link: avia-dostavka-z-ssha/
 sectionText:
   image: /img/inta_ics_z_ssha.png
   text: ssdsdsdsdsdsds
