@@ -163,14 +163,14 @@ destinations:
       flag: /img/151-united-arab-emirates.png
       link: dostavka-z-oae/
     - country: США
-      flag: /img/background404.png
+      flag: /img/002-united-states (3).png
       link: dostavka-z-ssha-v-ukrainu/
     - country: Польща
-      flag: /img/background404.png
+      flag: /img/002-united-states (3).png
       link: dostavka-z-polschi/
     - link: /dostavka-z-kitayu/
       country: Китай
-      flag: /img/background404.png
+      flag: /img/002-united-states (3).png
     - country: Гонконг
       flag: /img/002-united-states (3).png
       link: dostavka-z-gonkongu-v-ukrainu/
