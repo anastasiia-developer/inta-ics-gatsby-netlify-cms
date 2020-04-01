@@ -16,6 +16,10 @@ description: >-
   Шопінг в США популярний в Україні, адже можна придбати якісні товари за
   доступною ціною. Компанія INTA-ICS пропонує послуги вантажоперевезень з
   Америки по морю або повітрю.
+header:
+  images:
+    - alt: inta-ics-доставка-з-сша-в-україну
+      image: /img/inta_ics_dostavka_tovariv_z_ssha.png
 sectionText:
   image: /img/002-united-states (3).png
   text: dfdfdf
