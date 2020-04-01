@@ -30,6 +30,7 @@ export const CostPageTemplate = ({
             title={title}
             description={description}
             location={location}
+            locale={locale}
             header={header}
             crumbLabel={title}
            />
