@@ -85,6 +85,22 @@ sections:
         image: /img/card.png
       - title: Шоппинг в США
         image: /img/lov.png
+  - title: Доставка контейнеров из США
+    button:
+      link: dostavka-konteynerov-iz-ssha/
+      text: ' Узнать больше'
+    image: /img/inta_ics_morska_konteineriv_z_ssha.jpg
+    text: >-
+      <p>Компания INTA-ICS предлагает гибкие тарифы на транспортировку
+      контейнеров из США. Мы сотрудничаем с ведущими судоходными компаниями и
+      индивидуально подходим к каждому заказу.</p>
+    list:
+      - title: От 28 дней
+        image: /img/time.png
+      - title: Услуги брокера
+        image: /img/card.png
+      - title: Хранение груза
+        image: /img/lov.png
 sectionText:
   image: /img/002-united-states (3).png
   text: xcxcxc
