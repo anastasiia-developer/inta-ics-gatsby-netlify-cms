@@ -20,6 +20,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-из-сша-в-украину'
       image: /img/inta_ics_dostavka_tovariv_z_ssha.png
+  scopeInformation:
+    - text: От 5 дней
+      image: /img/time.png
+    - text: Хранение на складе
+      image: /img/card.png
+    - text: Шоппинг в США
+      image: /img/lov.png
 sectionText:
   title: тиии
   image: /img/002-united-states (3).png
