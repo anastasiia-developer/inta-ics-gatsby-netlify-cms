@@ -69,6 +69,22 @@ sections:
     button:
       text: ' Узнать больше'
       link: dostavka-morem-iz-ssha/
+  - title: Доставка товаров из США
+    button:
+      link: dostavka-iz-ssha-v-ukrainu/
+      text: Узнать больше
+    image: /img/inta_ics_dostavka_tovariv_z_ssha.jpg
+    text: >-
+      <p>Шопинг в США востребован в Украине, так как можно приобрести
+      качественные товары по доступной цене. Компания INTA-ICS предлагает услуги
+      грузоперевозок из Америки по морю или воздуху.</p>
+    list:
+      - title: от 5 дней
+        image: /img/time.png
+      - title: Хранение на складе
+        image: /img/card.png
+      - title: Шоппинг в США
+        image: /img/lov.png
 sectionText:
   image: /img/002-united-states (3).png
   text: xcxcxc
