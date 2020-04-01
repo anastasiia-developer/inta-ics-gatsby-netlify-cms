@@ -9,9 +9,9 @@ header:
     - alt: about
       image: /img/contactBkg.png
   buttons:
-    - link: /contacts
+    - link: contacts
       text: Заказать доставку
-    - link: /contacts
+    - link: contacts
       text: Узнать стоимость   
 weSpecialize: 
     title: Мы специализируемся

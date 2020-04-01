@@ -8,6 +8,7 @@ export default ({morePhotoIcon}) => (
             query StorageQueryRu{
                 markdownRemark(frontmatter: { pageKey: { eq: "components-common" }, locale:{ eq: "ru" } }) {
                     frontmatter {
+                        locale
                         warehouses{
                             title
                             list{

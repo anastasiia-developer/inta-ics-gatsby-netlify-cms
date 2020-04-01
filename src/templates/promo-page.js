@@ -60,6 +60,7 @@ export const SalesPageTemplate = ({
             }
             <Section
                 sections={sections}
+                locale={locale}
             />
             <TemplateCommonComponent locale={locale} destinations cargo clients reviews news/>
             <Article seoSections={seoSections}/>

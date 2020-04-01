@@ -57,6 +57,7 @@ export const DeliveryTemplate = ({
             <Sections
                 className={!header.buttons && 'only'}
                 sections={sections}
+                locale={locale}
             />
             {sectionText &&
                 <SectionText
@@ -140,7 +141,7 @@ export const pageQuery = graphql`
             images{
               image{
                 childImageSharp {
-                  fluid(maxWidth: 300, quality: 100) {
+                  fluid(maxWidth: 700, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }

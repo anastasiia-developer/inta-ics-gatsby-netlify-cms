@@ -20,6 +20,7 @@ export const BlogPostTemplate = ({
                                     content,
                                     contentComponent,
                                     tags,
+                                    locale,
                                     prevPost,
                                     nextPost
 }) => {
@@ -33,6 +34,7 @@ export const BlogPostTemplate = ({
                 {location &&
                     <Breadcrumbs
                         location={location}
+                        locale={locale}
                         crumbLabel={title}
                         crumbLabelParent="Блог"
                         crumbPathParent="/blog/"
@@ -97,6 +99,7 @@ const BlogPost = ({ data, pageContext, location }) => {
                 description={post.metaData ? post.metaData.description : post.description}
             />
         }
+        locale={pageContext.locale}
         location={location}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}

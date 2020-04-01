@@ -2,6 +2,7 @@ import About from "../mainPage/about"
 import React, { Fragment } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import {localizedPath} from "../../data/localizedPath";
 
 const Section = styled(About)`
     margin: 0;
@@ -82,7 +83,7 @@ const Section = styled(About)`
     }
 `;
 
-const Sections = ({ sections, className }) => (
+const Sections = ({ sections, locale, className }) => (
     <Fragment>
         {sections && sections.length > 0 && sections.map((section, index) =>
             <Section
@@ -102,7 +103,7 @@ const Sections = ({ sections, className }) => (
                                 </li>
                             ))}
                         </ul>
-                        <Link className="btn" to={section.button ? section.button.link : '/'}>
+                        <Link className="btn" to={section.button ? localizedPath({path: section.button.link, lang: locale}) : '/'}>
                             {section.button ? section.button.text : 'Узнать больше'}
                         </Link>
                     </Fragment>)

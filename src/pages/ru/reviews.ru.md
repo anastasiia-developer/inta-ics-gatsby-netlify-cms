@@ -13,7 +13,7 @@ header:
       - alt: cost-page
         image: /img/blogBkg.png
     buttons:
-        - link: /contacts
+        - link: contacts
           text: Оставить отзыв
 reviews:
   - name: Иван Зац

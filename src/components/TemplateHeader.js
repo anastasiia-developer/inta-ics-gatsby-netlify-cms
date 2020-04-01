@@ -224,6 +224,7 @@ const TemplateHeader = ({
                     {location &&
                         <Breadcrumbs
                             crumbLabel={crumbLabel || false}
+                            locale={locale}
                             location={location}
                             crumbLabelParent={crumbLabelParent || false}
                             crumbPathParent={crumbPathParent || false}/>

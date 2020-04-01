@@ -1,18 +1,18 @@
 import React, {Fragment} from 'react'
 import Container from './style'
 import { Link } from 'gatsby'
+import { localizedPath } from "../../data/localizedPath";
 
-
-const Breadcrumbs = ({ location, crumbLabel, crumbLabelParent, crumbPathParent }) => {
+const Breadcrumbs = ({ location, locale, crumbLabel, crumbLabelParent, crumbPathParent }) => {
     return (
         <Container>
-            <Link to='/'>
+            <Link to={localizedPath({path: "/", lang: locale})}>
                 Главная
             </Link>
             {crumbLabelParent &&
                 <Fragment>
                 {crumbPathParent ?
-                    <Link to={`/${crumbPathParent}`}>
+                    <Link to={localizedPath({path: crumbPathParent, lang: locale})}>
                         {crumbLabelParent}
                     </Link>
                         :

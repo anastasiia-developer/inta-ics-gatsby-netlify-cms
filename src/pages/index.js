@@ -53,7 +53,9 @@ export const IndexPageTemplate = ({
             )}
         </Slider>
     </Header>
-    <Section section={section}/>
+    <Section
+        section={section}
+    />
     <About
       title={about.title}
       image={about.image}

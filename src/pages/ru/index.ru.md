@@ -8,9 +8,9 @@ description: >-
 header:
   slide:
     - buttons:
-        - link: /contacts
+        - link: contacts
           text: Заказать доставку
-        - link: /contacts
+        - link: contacts
           text: Узнать стоимость
       images:
         - alt: app mobile
@@ -27,9 +27,9 @@ header:
         - image: /img/time.png
           text: Сроки доставки
     - buttons:
-        - link: /contacts
+        - link: contacts
           text: Заказать доставку
-        - link: /contacts
+        - link: contacts
           text: Узнать стоимость
       images:
         - alt: app mobile

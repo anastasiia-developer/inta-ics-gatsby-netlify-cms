@@ -171,7 +171,7 @@ export const BlogIndexPageTemplate = ({
 const BlogIndexPage = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
     const { edges: posts } = data.allMarkdownRemark;
-
+    console.log(pageContext)
     return (
         <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <BlogIndexPageTemplate

@@ -55,6 +55,7 @@ export const InternationalCargoTemplate = ({
             }
             <Section
                 sections={sections}
+                locale={locale}
             />
             <TemplateCommonComponent
                 locale={locale}
@@ -120,7 +121,7 @@ export const pageQuery = graphql`
             images{
               image{
                 childImageSharp {
-                  fluid(maxWidth: 300, quality: 100) {
+                  fluid(maxWidth: 500, quality: 100) {
                     ...GatsbyImageSharpFluid
                   }
                 }

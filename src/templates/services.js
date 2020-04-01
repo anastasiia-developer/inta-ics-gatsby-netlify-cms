@@ -82,6 +82,7 @@ export const ServicesPageTemplate = ({
             }
             <Section
                 sections={sections}
+                locale={locale}
             />
             <TemplateCommonComponent locale={locale} destinations cargo clients reviews services/>
            {seoSections &&

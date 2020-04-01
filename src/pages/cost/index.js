@@ -35,6 +35,7 @@ export const CostPageTemplate = ({
            />
             <Sections
                 sections={sections}
+                locale={locale}
             />
             {location &&
                 <Fragment>

@@ -5,7 +5,7 @@ import Carousel from "react-multi-carousel";
 import {ButtonGroup, ResponsiveCarousel} from "../CommonCarousel";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import {HTMLContent} from "../Content";
-
+import { localizedPath } from "../../data/localizedPath"
 
 const MorePhoto = ({photos, morePhotos, setMorePhotos}) =>
     <Popup isActive={morePhotos} onClick={() => setMorePhotos(false)}>
@@ -111,7 +111,7 @@ const StorageTemplate = ({ data, morePhotoIcon }) => {
                     <div className="row flags">
                         {warehouses.list.map((item, index) => (
                             <Link
-                                to='/contact'
+                                to={localizedPath({path: 'contact', lang: data.markdownRemark.frontmatter.locale})}
                                 className="row"
                                 key={index}
                             >
