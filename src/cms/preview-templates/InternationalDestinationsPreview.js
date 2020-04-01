@@ -16,7 +16,7 @@ const InternationalDestinationsPreview = ({ entry }) => {
     if (data) {
         return (
             <Fragment>
-                {data.header.buttons  ?
+                {data.header.buttons || data.sections.some(section => section.button != null) ?
                         <DeliveryTemplate
                             sectionText={data.sectionText}
                             {...setting}

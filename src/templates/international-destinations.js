@@ -81,10 +81,10 @@ const InternationalDestinations = ({ data, location, pageContext }) => {
         sections: frontmatter.sections,
         seoSections: frontmatter.seoSections
     };
-    // const btnInSections = frontmatter.sections.some(section => section.button != null);
+
     return (
         <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
-            {frontmatter.header.buttons ?
+            {frontmatter.header.buttons || frontmatter.sections.some(section => section.button != null) ?
                 <DeliveryTemplate
                     sectionText={frontmatter.sectionText}
                     {...setting}

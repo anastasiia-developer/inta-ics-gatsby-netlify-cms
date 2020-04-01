@@ -55,7 +55,6 @@ export const DeliveryTemplate = ({
                 <CalculateContainerHeader locale={locale}/>
             }
             <Sections
-                className={!header.buttons && 'only'}
                 sections={sections}
                 locale={locale}
             />

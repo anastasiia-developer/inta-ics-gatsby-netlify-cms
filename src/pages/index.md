@@ -13,7 +13,7 @@ header:
     - buttons:
         - link: contacts/
           text: Заказать доставку
-        - link: contacts
+        - link: contacts/
           text: Узнать стоимость
       images:
         - alt: app mobile

@@ -10,12 +10,7 @@ const Section = styled(About)`
     flex-direction: row-reverse;
     justify-content: space-between;
     background: #fff; 
-    &.only{
-        .text{
-            padding: 1em 1em 0 9em;
-        } 
-    }
-    &:nth-child(even){
+    &:nth-of-type(even){
         background: #F0F5FD; 
         flex-direction: row;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    
