@@ -27,6 +27,15 @@ header:
   images:
     - alt: ' inta-ics-доставка-из-сша-в-україну'
       image: /img/inta_ics_z_ssha.png
+  buttons:
+    - text: 'Авиадоставка из США '
+      link: 'avia-dostavka-iz-ssha  '
+    - text: 'Морская доставка грузов из США '
+      link: dostavka-morem-iz-ssha
+    - text: 'Доставка товаров из США '
+      link: dostavka-iz-ssha-v-ukrainu
+    - text: Доставка контейнеров из США
+      link: dostavka-konteynerov-iz-ssha
 sectionText:
   image: /img/002-united-states (3).png
   text: xcxcxc
