@@ -9,6 +9,8 @@ metaData:
     &#9989; Отслеживание груза в приложении &#9742; 068 5555 999
 crumbLabelParent: Доставка
 crumbLabel: Автодоставка
+name: auto-delivery
+localeKey: auto-delivery
 title: Международные автомобильные грузовые перевозки
 description: >-
   Компания INTA-ICS предлагает доставку товаров наземным транспортом —
@@ -106,7 +108,6 @@ seoSections:
         Выполняем доставку грузов от 1 паллеты.
       altImg: ' inta-ics-автоперевозки-грузов-3'
       image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-3.jpg
-name: auto-delivery
 sections:
   - image: /img/inta-ics-zaliznyichni-perevezennya-vantazhiv-2.jpg
     list:

@@ -49,6 +49,7 @@ export const ContactPageTemplate = ({
             description={description}
             header={header}
             location={location}
+            locale={locale}
             crumbLabel={title}
             childrenInColumn={
                 <Fragment>

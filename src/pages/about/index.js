@@ -217,6 +217,7 @@ export const AboutPageTemplate = ({
           <TemplateHeader
               description={description}
               title={title}
+              locale={locale}
               header={{logo: true, arrow: true, ...header}}
               location={location}
               crumbLabel={title}

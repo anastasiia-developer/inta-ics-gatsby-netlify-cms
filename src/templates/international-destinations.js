@@ -35,6 +35,7 @@ export const InternationalDestinationsTemplate = ({
                 crumbLabel={crumbLabel}
                 crumbLabelParent={crumbLabelParent}
                 crumbPathParent={false}
+                locale={locale}
                 children={location && !header.buttons &&
                     <Fragment>
                         {locale === 'ua' ?

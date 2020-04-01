@@ -69,6 +69,7 @@ export const ServicesPageTemplate = ({
                 title={title}
                 description={description}
                 location={location}
+                locale={locale}
                 header={{logo: true, arrow: true, ...header}}
                 crumbLabel={crumbLabel}
                 crumbLabelParent={crumbLabelParent}

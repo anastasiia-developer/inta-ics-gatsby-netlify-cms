@@ -129,6 +129,7 @@ export const FaqPageTemplate = ({
             title={title}
             description={description}
             header={header}
+            locale={locale}
             location={location}
             crumbLabel="FAQ"
         />

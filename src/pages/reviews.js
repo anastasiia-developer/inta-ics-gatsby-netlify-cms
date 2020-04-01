@@ -9,6 +9,7 @@ import FormFooter from "../components/Footer/FormFooter";
 import FormFooterRu from "../components/Footer/FormFooter/index.ru";
 import TitleDesHelmet from "../components/TitleDesHelmet";
 import {ContentInFrontmatter} from '../components/Content'
+import {IndexPageTemplate} from "./index";
 
 const Wrapper = styled.div`
     header .btn{
@@ -100,6 +101,7 @@ export const ReviewsPageTemplate = ({
             header={{logo: true, arrow: true, ...header}}
             location={location}
             crumbLabel={title}
+            locale={locale}
         />
         <Section className="row-to-column wrapper">
             {reviews.map((review, index) =>

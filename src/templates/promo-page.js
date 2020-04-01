@@ -11,8 +11,6 @@ import CalculateContainerHeader from "../components/CalculateContainerHeader";
 import TitleDesHelmet from "../components/TitleDesHelmet";
 import TemplateCommonComponent from "../components/TemplateCommonComponent"
 
-
-
 const Header = styled(TemplateHeader)`
     position: relative;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
@@ -54,6 +52,7 @@ export const SalesPageTemplate = ({
                 location={location}
                 header={header}
                 crumbLabel={title}
+                locale={locale}
                 crumbLabelParent='Акции'
             />
             {location &&

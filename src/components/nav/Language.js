@@ -42,7 +42,7 @@ const Options = styled.div`
 
 const Language = ({locale, location}) => {
     const [isActive, setActive] = useState(false);
-    console.log(location.location.pathname)
+
     return(
     <Container className="row">
         <button className='btn' onClick={() => setActive(!isActive)}>

@@ -124,6 +124,7 @@ export const BlogIndexPageTemplate = ({
                                           description,
                                           header,
                                           location,
+                                          locale,
                                           posts,
                                           pageContext}) => {
     const { tag } = pageContext;
@@ -136,6 +137,7 @@ export const BlogIndexPageTemplate = ({
                 description={description}
                 header={header}
                 location={location}
+                locale={locale}
                 crumbLabel="Блог"
                 childrenInColumn={<TagsRoll tag={tag}/>}
             />
@@ -183,6 +185,7 @@ const BlogIndexPage = ({ data, location, pageContext }) => {
                 description={frontmatter.description}
                 header={frontmatter.header}
                 location={location}
+                locale={pageContext.locale}
                 pageContext={pageContext}
                 posts={posts}
             />

@@ -30,6 +30,7 @@ export const IndexPageTemplate = ({
   description,
   helmet,
   location,
+  locale,
   title,
   header,
   section,
@@ -45,6 +46,7 @@ export const IndexPageTemplate = ({
                     description={description}
                     title={title}
                     header={item}
+                    locale={locale}
                     location={location}
                     storeBtn
                 />

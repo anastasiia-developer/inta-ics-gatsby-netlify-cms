@@ -6,6 +6,7 @@ import ArrowLine from '../img/arrowLine.svg'
 import Store from './store'
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import SocialMedia from "./SocialMedia";
+import { localizedPath } from "../data/localizedPath";
 
 export const Button = styled(Link)`
     align-items: center;
@@ -174,6 +175,7 @@ const TemplateHeader = ({
                         className,
                         header,
                         location,
+                        locale,
                         crumbLabel,
                         title,
                         description,
@@ -201,7 +203,7 @@ const TemplateHeader = ({
         <Button
             key={index}
             className="btn row"
-            to={btn.link}
+            to={localizedPath({path:btn.link, lang:locale})}
             bckg={header.logo ? 1 : 0}>
             {!header.logo &&
                 <img src="/img/logoMini.svg"
@@ -209,7 +211,6 @@ const TemplateHeader = ({
                      className="logo"/>
             }
             {btn.text}
-
             {location && !header.arrow &&
                 <ArrowLine className="icon"/>
             }

@@ -35,6 +35,7 @@ export const InternationalCargoTemplate = ({
                     title={title}
                     header={header}
                     location={location}
+                    locale={locale}
                     crumbLabel={crumbLabel}
                     crumbLabelParent={crumbLabelParent}
                     crumbPathParent={false}

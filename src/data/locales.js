@@ -5,7 +5,7 @@ module.exports = {
         default: true,
     },
     ru: {
-        path: '/ru',
+        path: '/ru/',
         locale: 'Russia',
     },
 }
