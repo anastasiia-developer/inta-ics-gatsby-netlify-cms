@@ -25,6 +25,11 @@ header:
       image: /img/card.png
     - text: Точний розрахунок
       image: /img/lov.png
+  buttons:
+    - text: 'Доставка вантажів з Польщі '
+      link: dostavka-vantazhiv-z-polschi/
+    - text: Доставка товарів з Польщі
+      link: dostavka-tovariv-z-polschi/
 sectionText:
   title: апапап
   text: еапаапа
