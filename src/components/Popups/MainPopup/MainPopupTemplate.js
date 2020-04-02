@@ -11,6 +11,7 @@ const Popup = styled.div`
     top: 0;
     right: 0;
     height: 100vh;
+    overflow: scroll;
     max-width: 24vw;
     z-index: 3;
     padding: 0 2em;
@@ -88,6 +89,7 @@ const Popup = styled.div`
     }
     form{
         align-items: center;
+        margin-bottom: 5em;
         .input{
             text-align: center;
             color: #000;
@@ -135,6 +137,10 @@ const MainPopupTemplate = ({data, className}) => {
             setTimeout(() => setHeaderPopupOpen(true), 7000)
         }
     }, []);
+    useEffect(() => {
+        document.documentElement.style.overflowY = popupOpen || headerPopupOpen ? 'hidden' : 'unset';
+
+    }, [popupOpen,headerPopupOpen]);
 
     return(
         <Fragment>

@@ -2,7 +2,7 @@ import React from "react";
 import {graphql, StaticQuery} from "gatsby";
 import PopupThanksTemplate from "./PopupThanksTemplate";
 
-export default () => (
+export default ({close}) => (
     <StaticQuery
         query={graphql`
             query PopupThanksRu{
@@ -29,6 +29,6 @@ export default () => (
                 }
             }
     `}
-        render={(data) => <PopupThanksTemplate data={data.markdownRemark.frontmatter.popupThanks} />}
+        render={(data) => <PopupThanksTemplate close={close} data={data.markdownRemark.frontmatter.popupThanks} />}
     />
 )

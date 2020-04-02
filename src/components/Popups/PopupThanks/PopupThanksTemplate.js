@@ -30,6 +30,9 @@ export const Close = styled.button`
     &:hover {
       opacity: 1;
     }
+    @media(max-aspect-ratio: 3/3), (max-height: 500px){
+        font-size: 4vw;
+    }
     &:before, &:after {
       position: absolute;
       left: 2em;
@@ -195,6 +198,9 @@ const Footer = styled.footer`
         padding: 2em;
         align-items: center;
         background: #161616;
+        @media(max-aspect-ratio: 3/3), (max-height: 500px){
+            padding: 2em 2em 5em;
+        }
     }
     .social{
         font-size: 1.3em;

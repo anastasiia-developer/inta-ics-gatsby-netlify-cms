@@ -79,6 +79,14 @@ export const ResponsiveCarousel = (desktop = 4,  tablet = 3, mobile = 1) => ({
         items: tablet,
         partialVisibilityGutter: 30
     },
+    tabletPortrait: {
+        breakpoint: {
+            max: 770,
+            min: 464
+        },
+        items: 2,
+        partialVisibilityGutter: 30
+    },
     mobile: {
         breakpoint: {
             max: 464,
