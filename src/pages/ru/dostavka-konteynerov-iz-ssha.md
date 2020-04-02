@@ -15,6 +15,10 @@ description: >-
   Компания INTA-ICS предлагает гибкие тарифы на транспортировку контейнеров из
   США. Мы сотрудничаем с ведущими судоходными компаниями и индивидуально
   подходим к каждому заказу.
+header:
+  images:
+    - alt: inta-ics-доставка-контейнеров-из-сша
+      image: /img/inta_ics_com_dostavka_konteineriv_z_ssha.png
 sectionText:
   title: gfgfg
   text: hghgh
