@@ -75,6 +75,7 @@ const Navigation = styled.nav`
         a, span{
           margin-left: 2em;
           color: #fff;
+          white-space: nowrap;
           &[aria-current]{
             font-weight: 700;
             text-decoration: underline;
@@ -101,8 +102,8 @@ const Navigation = styled.nav`
         }
     }
     .logo{
-        margin-right: 2em;
         width: 10%;
+        margin-right: 1em;
         img{
             width: 100%;
         }
@@ -165,12 +166,6 @@ const Navigation = styled.nav`
             height: 1em;
             path{
                 fill: #fff;
-            }
-        }
-        &.call{
-            margin-right: 15em;
-            @media(max-aspect-ratio: 3/3), (max-height: 500px){
-                margin-right: 1em;
             }
         }
     }

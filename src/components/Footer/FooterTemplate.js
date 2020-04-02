@@ -28,6 +28,9 @@ const FooterS = styled.footer`
       flex: none;
       margin-right: 1em;
     }
+    @media(max-width: 500px){
+      width: 44%;
+    }
     &-img{
       width: 40%;
       @media(max-aspect-ratio: 3/3), (max-height: 500px){
@@ -70,6 +73,9 @@ const FooterS = styled.footer`
       flex: none;
       margin-right: 1em;
     }
+    @media(max-width: 500px){
+      width: 44%;
+    }
     a{
       margin-left: 4em;
       margin-bottom: 1em;
@@ -88,6 +94,9 @@ const FooterS = styled.footer`
     margin-top: auto;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
       margin-top: 1em;
+    }
+    @media(max-width: 500px){
+        width: 120%;
     }
     h4{
       margin-left: 4.5em;

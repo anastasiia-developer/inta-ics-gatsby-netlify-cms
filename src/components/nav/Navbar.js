@@ -136,7 +136,7 @@ const Navbar = ({local, location}) => {
                   </Fragment>
               }
         </div>
-        <Search isActive={isActiveMob}/>
+        {/*<Search isActive={isActiveMob}/>*/}
         <div className="row container" >
             <a href="/" className="row circle" onClick={() => setActiveMob(!isActiveMob)}>
                 <Telegram />
