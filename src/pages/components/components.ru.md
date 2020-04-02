@@ -162,6 +162,18 @@ destinations:
     - country: 'ОАЭ '
       flag: /img/151-united-arab-emirates.png
       link: dostavka-iz-oae
+    - country: США
+      link: /dostavka-iz-ssha-v-ukrainu
+      flag: /img/002-united-states (3).png
+    - country: Польша
+      flag: /img/002-united-states (3).png
+      link: dostavka-iz-polshi
+    - country: Китай
+      flag: /img/002-united-states (3).png
+      link: dostavka-iz-kitaya
+    - country: Гонконг
+      flag: /img/002-united-states (3).png
+      link: dostavka-iz-gonkonga-v-ukrainu
   image: /img/map.png
 calculateHeader:
   from: Откуда груз?
@@ -322,13 +334,13 @@ cargo:
       svg: warehouse
       link: dostavka-iz-kitaya-v-odessu
     - title: Доставка техники и авто
-      svg: trolleybig  
+      svg: trolleybig
       link: dostavka-iz-germanii
 pageNotFound:
-    title: RuСторінка не знайдена
-    seoTitle: 404 Сторінка не знайдена
-    btnText: На головну
-    btnLink: /
-    background: /img/background404.png
-    image: /img/404.png
+  title: RuСторінка не знайдена
+  seoTitle: 404 Сторінка не знайдена
+  btnText: На головну
+  btnLink: /
+  background: /img/background404.png
+  image: /img/404.png
 ---

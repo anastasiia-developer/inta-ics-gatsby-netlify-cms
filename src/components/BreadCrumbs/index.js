@@ -8,6 +8,7 @@ const Breadcrumbs = ({ location, locale, crumbLabel, crumbLabelParent, crumbPath
         <Container>
             <Link to={localizedPath({path: "/", lang: locale})}>
                 Главная
+                {console.log(location.pathname)}
             </Link>
             {crumbLabelParent &&
                 <Fragment>

@@ -216,9 +216,9 @@ collections:
       {label: Link, name: link, widget: string, required: false}
       ]}
       ]}
-      - {label: "sectionText", name: "sectionText", widget: object, fields: [
+      - {label: "секция где текст и меленькая картинка внизу", name: "sectionText", widget: object, fields: [
       {label: "Title", name: "title", widget: "string", required: false},
-      {label: "Картинка", name: image, widget: image},
+      {label: "меленькая картинка типа самолетик или поезд", name: image, widget: image},
       {label: "Текст", name: text, widget: "markdown"},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
@@ -275,9 +275,9 @@ collections:
       {label: Link, name: link, widget: string, required: false}
       ]}
       ]}
-      - {label: "sectionText", name: "sectionText", widget: object, fields: [
+      - {label: "секция где текст и меленькая картинка внизу", name: "sectionText", widget: object, fields: [
       {label: "Title", name: "title", widget: "string", required: false},
-      {label: "Картинка", name: image, widget: image},
+      {label: "меленькая картинка типа самолетик или поезд", name: image, widget: image},
       {label: "Текст", name: text, widget: "markdown"},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
@@ -561,7 +561,7 @@ collections:
       {label: countries, name: countries, widget: list, fields: [
       {label: country, name: country, widget: string, required: false},
       {label: flag, name: flag, widget: image},
-      {label: 'path name стр доставки, например "france"', name: link, widget: string, required: false}
+      {label: 'path name, "слеш(/) только в конце" например "france/" ', name: link, widget: string, required: false}
       ]},
       {label: image, name: image, widget: image}
       ]}
