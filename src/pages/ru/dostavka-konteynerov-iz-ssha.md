@@ -19,6 +19,13 @@ header:
   images:
     - alt: inta-ics-доставка-контейнеров-из-сша
       image: /img/inta_ics_com_dostavka_konteineriv_z_ssha.png
+  scopeInformation:
+    - text: От 30 дней
+      image: /img/time.png
+    - text: Услуги брокера
+      image: /img/card.png
+    - text: Хранение груза
+      image: /img/lov.png
 sectionText:
   title: gfgfg
   text: hghgh
