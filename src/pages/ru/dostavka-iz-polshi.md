@@ -49,6 +49,22 @@ sections:
     button:
       text: ' Узнать больше'
       link: dostavka-gruzov-iz-polshi/
+  - title: Перевозка товаров из Польши
+    button:
+      link: dostavka-tovarov-iz-polshi/
+      text: Узнать больше
+    image: /img/krakow-4881010_1920.jpg
+    text: >-
+      <p>INTA-ICS предлагает комплексные логистические услуги по доставке
+      посылок из Польши. Мы выкупим нужные товары и разработаем оптимальный
+      маршрут для быстрой перевозки вашего груза в Украину.</p>
+    list:
+      - title: Выкуп товаров
+        image: /img/time.png
+      - title: Собственный склад-офис
+        image: /img/card.png
+      - title: Точный расчет
+        image: /img/lov.png
 sectionText:
   title: рпрпрп
   text: прпрпрпр
