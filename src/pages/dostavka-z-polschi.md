@@ -47,6 +47,22 @@ sections:
     button:
       text: Дізнатись більше
       link: dostavka-vantazhiv-z-polschi/
+  - title: Перевезення товарів з Польщі
+    image: /img/krakow-4881010_1920.jpg
+    text: >-
+      <p>INTA-ICS пропонує комплексні логістичні послуги з доставки посилок з
+      Польщі. Ми викупимо потрібні товари і розробимо оптимальний маршрут для
+      швидкого перевезення вашого вантажу в Україну.</p>
+    list:
+      - title: Викуп товарів
+        image: /img/time.png
+      - title: Власний склад-офіс
+        image: /img/card.png
+      - title: Точний розрахунок
+        image: /img/lov.png
+    button:
+      text: Дізнатись більше
+      link: dostavka-tovariv-z-polschi
 sectionText:
   title: Доставка з Польщі в Україну
   text: >-
