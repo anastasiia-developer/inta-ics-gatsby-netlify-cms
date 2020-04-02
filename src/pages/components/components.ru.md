@@ -166,10 +166,10 @@ destinations:
       link: /dostavka-iz-ssha-v-ukrainu
       flag: /img/002-united-states (3).png
     - country: Польша
-      flag: /img/002-united-states (3).png
+      flag: /img/poland.png
       link: dostavka-iz-polshi
     - country: Китай
-      flag: /img/002-united-states (3).png
+      flag: /img/001-china 3.png
       link: dostavka-iz-kitaya
     - country: Гонконг
       flag: /img/002-united-states (3).png
