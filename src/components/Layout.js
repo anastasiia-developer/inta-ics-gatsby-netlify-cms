@@ -17,7 +17,7 @@ const ArrowTop = styled.div`
     width: 4em;
     bottom: 1em;
     right: 1em;
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
     display: ${props => props.isActive ? 'block' : 'none'}
 `;

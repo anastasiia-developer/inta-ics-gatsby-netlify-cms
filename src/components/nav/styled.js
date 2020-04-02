@@ -10,6 +10,7 @@ const Navigation = styled.nav`
     padding: 2.5em 2.5% 1em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         height: 8vh;
+        min-height: 60px;
         align-items: flex-start;
         padding: 0 5%;
         background: #0D0D0D;
@@ -34,7 +35,7 @@ const Navigation = styled.nav`
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             display: block;
             position: absolute;
-            top: 2vh;
+            top: 1em;
             left: 5vw;
             hr{
                 transition: transform .4s;
@@ -109,10 +110,11 @@ const Navigation = styled.nav`
         }
         @media(max-aspect-ratio: 3/3), (max-height: 500px){
             height: 3vh;
+            min-height: 20px;
             width: auto;
             position: relative;
             z-index: 2;
-            margin: 2vh auto 0;
+            margin: 1em auto;
             img{
                 height: 100%;
                 width: auto;
