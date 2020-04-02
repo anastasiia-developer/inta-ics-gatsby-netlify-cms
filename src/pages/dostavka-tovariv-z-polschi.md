@@ -18,6 +18,13 @@ header:
   images:
     - alt: inta-ics-доставка-товарів-з-польщі
       image: /img/перевозка-товаров-из-польши.png
+  scopeInformation:
+    - text: Викуп товарів
+      image: /img/time.png
+    - text: Власний склад-офіс
+      image: /img/card.png
+    - text: Точний розрахунок
+      image: /img/lov.png
 sectionText:
   title: ghhgh
   text: hghgh
