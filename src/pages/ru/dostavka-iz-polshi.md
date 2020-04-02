@@ -32,6 +32,20 @@ header:
       link: dostavka-gruzov-iz-polshi/
     - text: Доставка товаров из Польши
       link: dostavka-tovarov-iz-polshi/
+sections:
+  - title: Перевозка грузов из Польши
+    image: /img/krakow-1625859_1920.jpg
+    text: >-
+      <p>Украину и Польшу объединяют похожие традиции и культура, а также
+      бизнес-отношения. INTA-ICS предлагает услуги доставки товаров из Польши,
+      выгодные тарифы, соблюдение сроков перевозки.</p>
+    list:
+      - title: Выкуп товаров
+        image: /img/time.png
+      - title: Собственный склад-офис
+        image: /img/card.png
+      - title: Точный расчет
+        image: /img/lov.png
 sectionText:
   title: рпрпрп
   text: прпрпрпр
