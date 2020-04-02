@@ -30,6 +30,23 @@ header:
       link: dostavka-vantazhiv-z-polschi/
     - text: Доставка товарів з Польщі
       link: dostavka-tovariv-z-polschi/
+sections:
+  - title: Перевезення вантажів з Польщі
+    image: /img/krakow-1625859_1920.jpg
+    text: >-
+      <p>Україну та Польщу об'єднують схожі традиції і культура, а також
+      бізнес-відносини. INTA-ICS пропонує послуги доставки товарів з Польщі,
+      вигідні тарифи, дотримання термінів перевезення.</p>
+    list:
+      - title: Викуп товарів
+        image: /img/time.png
+      - title: Власний склад-офіс
+        image: /img/card.png
+      - title: Точний розрахунок
+        image: /img/lov.png
+    button:
+      text: Дізнатись більше
+      link: dostavka-vantazhiv-z-polschi/
 sectionText:
   title: апапап
   text: еапаапа
