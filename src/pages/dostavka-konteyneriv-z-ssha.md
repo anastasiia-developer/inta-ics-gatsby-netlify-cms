@@ -18,6 +18,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-контейнерів-з-сша'
       image: /img/inta_ics_com_dostavka_konteineriv_z_ssha.png
+  scopeInformation:
+    - text: від 30 днів
+      image: /img/time.png
+    - text: Послуги брокера
+      image: /img/card.png
+    - text: Зберігання вантажу
+      image: /img/lov.png
 sectionText:
   text: мапапа
   title: сапаппп
