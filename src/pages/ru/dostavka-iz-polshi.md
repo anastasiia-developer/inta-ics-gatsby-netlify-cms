@@ -46,6 +46,9 @@ sections:
         image: /img/card.png
       - title: Точный расчет
         image: /img/lov.png
+    button:
+      text: ' Узнать больше'
+      link: dostavka-gruzov-iz-polshi/
 sectionText:
   title: рпрпрп
   text: прпрпрпр
