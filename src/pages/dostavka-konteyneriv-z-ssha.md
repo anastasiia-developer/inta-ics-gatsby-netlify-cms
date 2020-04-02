@@ -55,7 +55,7 @@ sectionText:
     Щоб замовити послуги перевезення морем, залиште замовлення на сайті і
     найближчим часом вам передзвонить менеджер нашої компанії.
   title: ' Доставка контейнерів з США в Україну'
-  image: /img/inta_ics_com_dostavka_konteineriv_z_ssha.png
+  image: /img/inta_ics_dostavka_konteineriv_z_ssha.jpg
 seoSections:
   title: смсмс
 ---
