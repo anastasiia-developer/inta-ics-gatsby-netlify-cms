@@ -10,6 +10,7 @@ import styled from 'styled-components'
 import Svg from '../img/arrowTop.svg'
 import MainPopup from "./Popups/MainPopup";
 import MainPopupRu from "./Popups/MainPopup/index.ru";
+import SvgLoader from "../img/svgLoaderWaves.svg"
 
 const ArrowTop = styled.div`
     position: fixed;
@@ -20,16 +21,33 @@ const ArrowTop = styled.div`
     cursor: pointer;
     display: ${props => props.isActive ? 'block' : 'none'}
 `;
+const Loader = styled.div`
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: #0C0C0C;
+    background-image: url(/img/loaderBack.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
 
 const TemplateWrapper = ({ children, local, location }) => {
     const { title, description } = useSiteMetadata();
     const [isVisible, setVisible] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
         document.addEventListener("scroll", function(e) {
             setVisible(window.pageYOffset > 300);
         });
     });
+
+    useEffect(() => {
+        setIsLoaded(true)
+    }, []);
 
 
   return (
@@ -51,6 +69,11 @@ const TemplateWrapper = ({ children, local, location }) => {
           content={`${withPrefix('/')}img/bkgr-air.jpg`}
         />
       </Helmet>
+        {!isLoaded &&
+            <Loader>
+                <SvgLoader/>
+            </Loader>
+        }
         {location &&
             <Navbar
                 local={local}

@@ -1,0 +1,37 @@
+<svg width="194" height="121.9" xmlns="http://www.w3.org/2000/svg">
+ <style>
+  @keyframes upA {
+   0% { transform: translateY(90%); }
+   100% {  transform: translateY(-10%);}
+  }
+  #a, #b {
+   transform: translateY(100%);
+   animation: upA 5s;
+  }
+ </style>
+ <defs>
+  <clipPath id="a">
+   <path id="svg_1" d="m36.940476,2.37519c-22.8,0.4 -82.333,20.143 -96,27.976l0,303.229l282.5,-4l0,-291.229c-8,-12.167 -38,-35.976 -58,-35.976c-25,0 -49,13 -73,10s-27,-10.5 -55.5,-10z"/>
+  </clipPath>
+  <clipPath id="b">
+   <path id="svg_2" fill="#045DD2" d="m36.940476,2.37519c-22.8,0.4 -82.333,20.143 -96,27.976l0,303.229l282.5,-4l0,-291.229c-8,-12.167 -38,-35.976 -58,-35.976c-25,0 -49,13 -73,10s-27,-10.5 -55.5,-10z"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_4">
+   <g id="svg_5">
+    <path id="svg_6" fill-rule="evenodd" clip-rule="evenodd" d="m-0.238095,120.487905l83.444,-118.851l43.591,0l-70.99,100.087s-5.098,7.886 -12.453,12.508c-16.27,10.223 -43.592,6.256 -43.592,6.256z" fill-opacity="0.3" fill="#262626"/>
+    <path id="svg_12" fill-rule="evenodd" clip-rule="evenodd" d="m66.190471,119.773618l83.444,-118.851l43.591,0l-70.99,100.087s-5.098,7.886 -12.453,12.508c-16.27,10.223 -43.592,6.256 -43.592,6.256z" fill-opacity="0.3" fill="#262626"/>
+   </g>
+   <g id="svg_7" clip-path="url(#a)">
+    <path id="svg_8" fill-rule="evenodd" clip-rule="evenodd" d="m0.119047,120.130762l83.444,-118.851l43.591,0l-70.99,100.087s-5.098,7.886 -12.453,12.508c-16.27,10.223 -43.592,6.256 -43.592,6.256z" fill="#045DD2"/>
+   </g>
+  </g>
+  <g stroke="null" id="svg_9">
+   <g stroke="null" id="svg_10" clip-path="url(#b)">
+    <path stroke="null" id="svg_11" fill-rule="evenodd" clip-rule="evenodd" d="m67.138654,119.346535l84.154886,-121.335171l43.962366,0l-71.593778,102.178975s-5.14244,8.05083 -12.5601,12.769437c-16.408609,10.436677 -43.963374,6.38676 -43.963374,6.38676z" fill="#045DD2"/>
+   </g>
+  </g>
+ </g>
+</svg>
