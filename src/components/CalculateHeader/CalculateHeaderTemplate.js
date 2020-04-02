@@ -7,6 +7,7 @@ import Tel from "../../img/tel.svg"
 import Email from "../../img/email.svg"
 import {encode} from "../../pages/contacts/form"
 import Phone from '../FormComponents/Phone'
+import HandleSubmit from "../FormComponents/HandleSubmit"
 import PopupThanks from "../Popups/PopupThanks";
 import PopupThanksRu from "../Popups/PopupThanks/index.ru";
 
@@ -272,6 +273,7 @@ const CalculateHeaderTemplate = ({data}) => {
             .then(() => setPopupOpen(true))
             .catch(error => alert(error))
     };
+
     const handleChange = (e) => {
         if(e.target.name === 'weight'){
             setInputsValue({...inputsValue, [e.target.name]: e.target.value.replace(/[^+\d.,]/g, '')});
@@ -299,7 +301,13 @@ const CalculateHeaderTemplate = ({data}) => {
                 method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                onSubmit={(e) => handleSubmit(e)}
+                onSubmit={(e) => HandleSubmit({
+                    event: e,
+                    body:{  inputsValue,
+                            optionsTo,
+                            optionsFrom: optionsFrom.value},
+                    setPopupOpen: setPopupOpen
+                })}
                 className="row-to-column">
                 <CalculateBlock
                     title={text.from}

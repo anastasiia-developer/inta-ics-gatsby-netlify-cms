@@ -66,7 +66,7 @@ const TemplateWrapper = ({ children, local, location }) => {
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/bkgr-air.jpg`}
+          content={`${withPrefix('/')}img/LogoBlack.png`}
         />
       </Helmet>
         {!isLoaded &&

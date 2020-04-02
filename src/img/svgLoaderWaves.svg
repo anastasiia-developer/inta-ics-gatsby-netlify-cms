@@ -7,6 +7,7 @@
   #a, #b {
    transform: translateY(100%);
    animation: upA 5s;
+  animation-fill-mode: forwards;
   }
  </style>
  <defs>

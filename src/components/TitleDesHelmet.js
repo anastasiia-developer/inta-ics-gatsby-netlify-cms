@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from "react-helmet"
-import {withPrefix} from "gatsby";
 
 const TitleDesHelmet = ({title, description, img, icon}) =>
     <Helmet titleTemplate="%s">
@@ -9,13 +8,10 @@ const TitleDesHelmet = ({title, description, img, icon}) =>
             name="description"
             content={description}
         />
-        <meta
-            property="og:image"
-            content={`${withPrefix('/')}img/logo.ico`}/>
         {icon &&
             <link
                 rel="icon"
-                href={`${withPrefix('/')}img/logo.ico`}
+                href={`/img/logo.ico`}
             />
         }
     </Helmet>
