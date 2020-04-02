@@ -18,6 +18,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-з-польщі'
       image: /img/польша.png
+  scopeInformation:
+    - text: Викуп товарів
+      image: /img/time.png
+    - text: Власний склад-офіс
+      image: /img/card.png
+    - text: Точний розрахунок
+      image: /img/lov.png
 sectionText:
   title: апапап
   text: еапаапа
