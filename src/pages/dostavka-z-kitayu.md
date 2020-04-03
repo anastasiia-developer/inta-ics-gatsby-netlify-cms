@@ -84,7 +84,23 @@ sections:
         image: /img/lov.png
     button:
       text: Дізнатись більше
-      link: zaliznyichni-perevezennya-vantazhiv
+      link: zaliznyichni-perevezennya-vantazhiv/
+  - title: Доставка товарів з Китаю
+    image: /img/inta_ics_dostavka_z_kitayu-1.jpg
+    text: >-
+      <p>Компанія INTA-ICS займається викупом і доставкою китайських товарів в
+      Україну морським, авіа та залізничним транспортом. Пропонуємо гнучкі
+      тарифи та оптимальні терміни транспортування.</p>
+    list:
+      - title: Викуп і доставка
+        image: /img/time.png
+      - title: Склади в Китаї
+        image: /img/card.png
+      - title: Вигідні тарифи
+        image: /img/lov.png
+    button:
+      text: ' Дізнатись більше'
+      link: dostavka-tovariv-z-kytaju/
 sectionText:
   title: vfvcvcv
   image: /img/inta_ics_dostavka_z_kitayu.png
