@@ -36,6 +36,20 @@ header:
       link: zaliznyichni-perevezennya-vantazhiv/
     - text: 'Доставка товарів '
       link: dostavka-tovariv-z-kytaju/
+sections:
+  - title: Авіадоставка з Китаю
+    image: /img/inta_ics_dostavka_z_kitayu-1.jpg
+    text: >-
+      <p>Транспортування за допомогою авіатранспорту - це найкраща можливість
+      швидко отримати необхідний вантаж. Компанія INTA-ICS в цілості і без
+      порушення термінів доставить замовлені вами товари з Китаю.</p>
+    list:
+      - title: ' Термін від 5 днів'
+        image: /img/time.png
+      - title: Власні склади
+        image: /img/card.png
+      - title: Швидка консультація
+        image: /img/lov.png
 sectionText:
   title: vfvcvcv
   image: /img/inta_ics_dostavka_z_kitayu.png
