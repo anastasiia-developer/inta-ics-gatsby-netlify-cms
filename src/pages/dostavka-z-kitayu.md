@@ -53,6 +53,21 @@ sections:
     button:
       text: Дізнатись більше
       link: avia-dostavka-z-kytaju/
+  - title: 'Доставка морем з Китаю '
+    button:
+      link: dostavka-morem-z-kytaju/
+    image: /img/inta_ics_dostavka_morem_z_kitayu.jpg
+    text: >-
+      <p>Компанія INTA-ICS пропонує послуги морських вантажоперевезень з Китаю.
+      Проводимо комплекс логістичних послуг, митне оформлення і доставляємо
+      вантаж в Україну в термін від 35 днів.</p>
+    list:
+      - title: Від 35 днів
+        image: /img/time.png
+      - title: Зручна система оплати
+        image: /img/card.png
+      - title: Прямий сервіс з Китаю
+        image: /img/lov.png
 sectionText:
   title: vfvcvcv
   image: /img/inta_ics_dostavka_z_kitayu.png
