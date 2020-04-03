@@ -69,6 +69,22 @@ sections:
         image: /img/card.png
       - title: Прямий сервіс з Китаю
         image: /img/lov.png
+  - title: Залізничні перевезення з Китаю
+    image: /img/inta_ics_dostavka_tovariv_z_kitayu.jpg
+    text: >-
+      <p>Компанія INTA-ICS пропонує послуги вантажоперевезень залізницями з
+      Китаю. Забезпечуємо 100% перевірку продукції на нашому складі в Китаї
+      площею 5000 м².</p>
+    list:
+      - title: Від 28 днів
+        image: /img/time.png
+      - title: Склади в Китаї
+        image: /img/card.png
+      - title: Оформлення імпорту
+        image: /img/lov.png
+    button:
+      text: Дізнатись більше
+      link: zaliznyichni-perevezennya-vantazhiv
 sectionText:
   title: vfvcvcv
   image: /img/inta_ics_dostavka_z_kitayu.png
