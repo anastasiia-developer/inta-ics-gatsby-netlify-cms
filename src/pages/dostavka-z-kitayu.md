@@ -34,6 +34,8 @@ header:
       link: dostavka-morem-z-kytaju/
     - text: ЗД доставка з Китаю
       link: zaliznyichni-perevezennya-vantazhiv/
+    - text: 'Доставка товарів '
+      link: dostavka-tovariv-z-kytaju/
 sectionText:
   title: vfvcvcv
   image: /img/inta_ics_dostavka_z_kitayu.png
