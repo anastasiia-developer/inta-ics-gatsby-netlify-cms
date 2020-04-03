@@ -16,6 +16,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-вантажів-з-польщі'
       image: /img/перевозка-грузов-из-польши.png
+  scopeInformation:
+    - text: Викуп товарів
+      image: /img/time.png
+    - text: Власний склад-офіс
+      image: /img/card.png
+    - text: Точний розрахунок
+      image: /img/lov.png
 sectionText:
   title: nbnbnb
   image: /img/перевозка-грузов-из-польши.png
