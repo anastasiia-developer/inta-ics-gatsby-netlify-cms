@@ -38,7 +38,7 @@ header:
       link: dostavka-tovariv-z-kytaju/
 sections:
   - title: Авіадоставка з Китаю
-    image: /img/inta_ics_dostavka_z_kitayu-1.jpg
+    image: /img/inta_ics_avia_dostavka_z_kitayu.jpg
     text: >-
       <p>Транспортування за допомогою авіатранспорту - це найкраща можливість
       швидко отримати необхідний вантаж. Компанія INTA-ICS в цілості і без
@@ -56,6 +56,7 @@ sections:
   - title: 'Доставка морем з Китаю '
     button:
       link: dostavka-morem-z-kytaju/
+      text: Дізнатись більше
     image: /img/inta_ics_dostavka_morem_z_kitayu.jpg
     text: >-
       <p>Компанія INTA-ICS пропонує послуги морських вантажоперевезень з Китаю.
