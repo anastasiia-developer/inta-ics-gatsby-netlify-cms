@@ -32,6 +32,8 @@ header:
       link: avia-dostavka-z-kytaju/
     - text: 'Доставка морем з Китаю '
       link: dostavka-morem-z-kytaju/
+    - text: ЗД доставка з Китаю
+      link: zaliznyichni-perevezennya-vantazhiv/
 sectionText:
   title: vfvcvcv
   image: /img/inta_ics_dostavka_z_kitayu.png
