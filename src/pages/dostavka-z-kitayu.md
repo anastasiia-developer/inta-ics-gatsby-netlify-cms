@@ -20,6 +20,13 @@ header:
   images:
     - alt: inta-ics-доставка-з-китаю
       image: /img/inta_ics_dostavka_z_kitayu.png
+  scopeInformation:
+    - text: Збереження вантажу
+      image: /img/time.png
+    - text: Власні склади
+      image: /img/card.png
+    - text: Пошук постачальника
+      image: /img/lov.png
 sectionText:
   title: vfvcvcv
   image: /img/inta_ics_dostavka_z_kitayu.png
