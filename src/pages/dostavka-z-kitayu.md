@@ -30,6 +30,8 @@ header:
   buttons:
     - text: Авіадоставка з Китаю
       link: avia-dostavka-z-kytaju/
+    - text: 'Доставка морем з Китаю '
+      link: dostavka-morem-z-kytaju/
 sectionText:
   title: vfvcvcv
   image: /img/inta_ics_dostavka_z_kitayu.png
