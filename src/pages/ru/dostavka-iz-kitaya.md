@@ -29,6 +29,15 @@ header:
       image: /img/card.png
     - text: Поиск поставщика
       image: /img/lov.png
+  buttons:
+    - text: 'Авиадоставка из Китая '
+      link: avia-dostavka-iz-kitaya/
+    - text: Морская доставка из Китая
+      link: dostavka-morem-iz-kitaja/
+    - text: ' ЖД перевозки из Китая '
+      link: zheleznodorozhnyie-perevozki-gruzov/
+    - text: ' Доставка товара из Китая'
+      link: dostavka-tovarov-iz-kitaya/
 sectionText:
   title: hghghg
   text: jhjhjh
