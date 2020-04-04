@@ -55,6 +55,22 @@ sections:
     button:
       text: Узнать больше
       link: avia-dostavka-iz-kitaya/
+  - title: ' Морская перевозка грузов из Китая '
+    button:
+      link: dostavka-morem-iz-kitaja/
+      text: Узнать больше
+    image: /img/inta_ics_dostavka_tovariv_z_kitayu.jpg
+    text: >-
+      <p>Компания INTA-ICS предлагает услуги морских грузоперевозок из Китая.
+      Проводим комплекс логистических услуг, таможенную очистку и доставляем
+      груз в Украину в срок от 35 дней.</p>
+    list:
+      - title: От 35 дней
+        image: /img/time.png
+      - title: Удобная система оплаты
+        image: /img/card.png
+      - title: Прямой сервис из Китая
+        image: /img/lov.png
 sectionText:
   title: hghghg
   text: jhjhjh
