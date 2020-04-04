@@ -18,6 +18,10 @@ description: >-
   INTA-ICS предлагает услуги грузоперевозок из Китая железной дорогой, а также
   морским и воздушным транспортом. Товары будут доставлены оперативно и за
   минимально возможные сроки.
+header:
+  images:
+    - alt: ' inta-ics-доставка-из-китая'
+      image: /img/inta_ics_dostavka_z_kitayu.png
 sectionText:
   title: hghghg
   text: jhjhjh
