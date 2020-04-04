@@ -38,6 +38,23 @@ header:
       link: zheleznodorozhnyie-perevozki-gruzov/
     - text: ' Доставка товара из Китая'
       link: dostavka-tovarov-iz-kitaya/
+sections:
+  - title: Авиадоставка из Китая
+    image: /img/inta_ics_avia_dostavka_z_kitayu.jpg
+    text: >-
+      <p>Транспортировка воздушными путями — это оптимальный способ быстро
+      получить нужный груз. Компания INTA-ICS в сохранности и без нарушения
+      сроков доставит заказанные вами товары из Китая.</p>
+    list:
+      - title: Срок от 5 дней
+        image: /img/time.png
+      - title: Собственные склады
+        image: /img/card.png
+      - title: Быстрая консультация
+        image: /img/lov.png
+    button:
+      text: Быстрая консультация
+      link: ''
 sectionText:
   title: hghghg
   text: jhjhjh
