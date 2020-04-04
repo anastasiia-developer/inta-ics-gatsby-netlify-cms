@@ -53,8 +53,8 @@ sections:
       - title: Быстрая консультация
         image: /img/lov.png
     button:
-      text: Быстрая консультация
-      link: ''
+      text: Узнать больше
+      link: avia-dostavka-iz-kitaya/
 sectionText:
   title: hghghg
   text: jhjhjh
