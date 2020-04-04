@@ -59,7 +59,7 @@ sections:
     button:
       link: dostavka-morem-iz-kitaja/
       text: Узнать больше
-    image: /img/inta_ics_dostavka_tovariv_z_kitayu.jpg
+    image: /img/inta_ics_dostavka_morem_z_kitayu.jpg
     text: >-
       <p>Компания INTA-ICS предлагает услуги морских грузоперевозок из Китая.
       Проводим комплекс логистических услуг, таможенную очистку и доставляем
@@ -71,6 +71,22 @@ sections:
         image: /img/card.png
       - title: Прямой сервис из Китая
         image: /img/lov.png
+  - title: 'ЖД перевозки из Китая '
+    image: /img/inta_ics_dostavka_tovariv_z_kitayu.jpg
+    text: >-
+      <p>Компания INTA-ICS предлагает услуги грузоперевозок железными дорогами
+      из Китая. Обеспечиваем 100% проверку продукции на нашем складе в Китае
+      площадью 5000 м².</p>
+    list:
+      - title: От 28 дней
+        image: /img/time.png
+      - title: Склады в Китае
+        image: /img/card.png
+      - title: Оформление импорта
+        image: /img/lov.png
+    button:
+      text: Узнать больше
+      link: zheleznodorozhnyie-perevozki-gruzov/
 sectionText:
   title: hghghg
   text: jhjhjh
