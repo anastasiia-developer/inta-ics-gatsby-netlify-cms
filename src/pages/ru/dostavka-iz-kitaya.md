@@ -22,6 +22,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-из-китая'
       image: /img/inta_ics_dostavka_z_kitayu.png
+  scopeInformation:
+    - text: Сохранность груза
+      image: /img/time.png
+    - text: Собственные склады
+      image: /img/card.png
+    - text: Поиск поставщика
+      image: /img/lov.png
 sectionText:
   title: hghghg
   text: jhjhjh
