@@ -17,6 +17,10 @@ description: >-
   Компания INTA-ICS предлагает услуги грузоперевозок железными дорогами из
   Китая. Обеспечиваем 100% проверку продукции на нашем складе в Китае площадью
   5000 м².
+header:
+  images:
+    - alt: ' inta-ics-железнодорожные-перевозки-грузов'
+      image: /img/inta_ics_zhd_iz_kitaya.png
 sectionText:
   title: папап
   image: /img/inta_ics_zhd_iz_kitaya-3.jpg
