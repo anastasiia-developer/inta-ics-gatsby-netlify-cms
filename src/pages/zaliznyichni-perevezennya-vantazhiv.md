@@ -23,6 +23,9 @@ header:
       image: /img/card.png
     - text: Оформлення імпорту
       image: /img/lov.png
+  images:
+    - image: /img/inta_ics_zhd_iz_kitaya.png
+      alt: ' inta-ics-залізничні-перевезення-вантажів'
 sectionText:
   title: рпрпр
   image: /img/002-united-states (3).png
