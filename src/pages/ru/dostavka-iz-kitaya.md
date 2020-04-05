@@ -87,6 +87,12 @@ sections:
     button:
       text: Узнать больше
       link: zheleznodorozhnyie-perevozki-gruzov/
+  - title: Доставка товара из Китая
+    image: /img/inta_ics_dostavka_z_kitayu-1.jpg
+    text: >-
+      <p>Компания INTA-ICS занимается выкупом и доставкой китайских товаров в
+      Украину морскими, авиа и железнодорожными путями. Предлагаем гибкие тарифы
+      и оптимальные сроки транспортировки.</p>
 sectionText:
   title: Грузоперевозки из Китая
   text: >-
