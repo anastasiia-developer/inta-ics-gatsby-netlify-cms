@@ -119,5 +119,5 @@ sectionText:
     заказа на сайте INTA-ICS. Наш менеджер свяжется с вами в ближайшее время.
   image: /img/background404.png
 seoSections:
-  title: jmjhjhj
+  title: 'Виды доставок из Китая в Украину '
 ---
