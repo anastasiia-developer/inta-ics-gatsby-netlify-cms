@@ -18,7 +18,7 @@ description: >-
   индивидуально разработанные маршруты.
 header:
   images:
-    - alt: app mobile
+    - alt: ' inta-ics-доставка-из-франции'
       image: /img/franceHeader.png
   scopeInformation:
     - image: /img/time.png
