@@ -20,21 +20,34 @@ const Section = styled.section`
     }
     h2{
         color: #247BFF;
-        margin-bottom: 1.5em;
+        margin: 1.5em 0;
         font-weight: 500; 
         margin-left: 8%;
     }
     .we-specialize {
         flex-wrap: wrap;
+        @media(max-width: 812px){
+            justify-content: space-evenly;
+        }
+        @media(max-width: 500px){    
+            justify-content: center;
+        }
         .hover-gradient{
             margin: 0 1em 2em;
             flex-basis: 24%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            
-            @media(max-aspect-ratio: 3/3), (max-height: 500px){    
+            min-width: 15em;
+            @media(max-aspect-ratio: 3/3){
+                flex-basis: auto;
                 margin: 1em 0 0 0;
+            }
+            @media(max-aspect-ratio: 3/3) and (max-width: 812px){
+                width: 45%;
+            }
+            @media(max-aspect-ratio: 3/3) and (max-width: 500px){    
+                width: 90%;
             }
             &:hover{
                 .gatsby-image-wrapper{
@@ -138,6 +151,7 @@ const OurValues = styled.section`
     @media(max-aspect-ratio: 3/3), (max-height: 500px){    
         .hover-gradient{
             min-width: auto;
+            width: 75%;
         }
         .our-wrapper{
             width: 100%;
