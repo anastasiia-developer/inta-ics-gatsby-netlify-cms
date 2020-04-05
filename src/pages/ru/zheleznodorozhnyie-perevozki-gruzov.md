@@ -30,7 +30,7 @@ header:
       image: /img/lov.png
 sectionText:
   title: ЖД перевозки из Китая от INTA-ICS
-  image: /img/inta_ics_zhd_iz_kitaya-3.jpg
+  image: /img/inta_ics_zhd_iz_kitaya-1.jpg
   text: >-
     ЖД перевозки — это быстрый и оптимальный вариант транспортировки крупных,
     жидких и сыпучих товаров из Китая по сухопутным линиям.
