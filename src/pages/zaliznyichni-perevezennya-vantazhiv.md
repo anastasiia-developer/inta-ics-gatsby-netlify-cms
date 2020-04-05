@@ -15,6 +15,14 @@ crumbLabelParent: Доставка з Китаю
 description: >-
   Компанія INTA-ICS пропонує послуги вантажоперевезень залізницею з Китаю.
   Забезпечуємо 100% перевірку продукції на нашому складі в Китаї площею 5000 м².
+header:
+  scopeInformation:
+    - text: Від 28 днів
+      image: /img/time.png
+    - text: Cклади в Китаї
+      image: /img/card.png
+    - text: Оформлення імпорту
+      image: /img/lov.png
 sectionText:
   title: рпрпр
   image: /img/002-united-states (3).png
