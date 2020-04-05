@@ -100,6 +100,9 @@ sections:
         image: /img/card.png
       - title: Выгодные тарифы
         image: /img/lov.png
+    button:
+      link: dostavka-tovarov-iz-kitaya/
+      text: Узнать больше
 sectionText:
   title: Грузоперевозки из Китая
   text: >-
