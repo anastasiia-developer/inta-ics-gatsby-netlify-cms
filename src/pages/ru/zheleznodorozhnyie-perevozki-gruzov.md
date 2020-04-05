@@ -21,6 +21,13 @@ header:
   images:
     - alt: ' inta-ics-железнодорожные-перевозки-грузов'
       image: /img/inta_ics_zhd_iz_kitaya.png
+  scopeInformation:
+    - text: От 28 дней
+      image: /img/time.png
+    - text: Склады в Китае
+      image: /img/card.png
+    - text: Оформление импорта
+      image: /img/lov.png
 sectionText:
   title: папап
   image: /img/inta_ics_zhd_iz_kitaya-3.jpg
