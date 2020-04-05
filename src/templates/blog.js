@@ -5,10 +5,15 @@ import styled from "styled-components";
 import Layout from '../components/Layout'
 import TemplateHeader from "../components/TemplateHeader";
 import TagsRoll from "../components/TagsRoll";
+import TagsRollRu from "../components/TagsRoll/index.ru";
 import Post from "../components/Post";
 import FormFooter from '../components/Footer/FormFooter'
 import FormFooterRu from '../components/Footer/FormFooter/index.ru'
 import TitleDesHelmet from "../components/TitleDesHelmet";
+import { Link } from "gatsby";
+import {localizedPath} from "../data/localizedPath";
+const _ = require('lodash');
+
 
 const Header = styled(TemplateHeader)`
     max-height: 100vh;
@@ -33,6 +38,7 @@ const Blog = styled.div`
     background: transparent;
     position: relative;
     display: flex;
+    justify-content: space-between;
     width: 86%;
     margin: -10% auto 5em;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
@@ -41,7 +47,7 @@ const Blog = styled.div`
     }
     article{
         display: flex;
-        flex-basis: 48%;
+        width: 48%;
         background: #fff;
         margin: 0 0 2% 2%;
         border-radius: .5em;
@@ -53,8 +59,11 @@ const Blog = styled.div`
             border-radius: 0;
             flex-direction: column;
         }
+        @media(max-width: 500px){
+            width: 100%;
+        }
         header{
-            height: 100%;
+            height: auto;
             flex: 2;
             border-radius: 0 0 .5em;
         }
@@ -124,10 +133,11 @@ export const BlogIndexPageTemplate = ({
                                           description,
                                           header,
                                           location,
-                                          locale,
                                           posts,
-                                          pageContext}) => {
-    const { tag } = pageContext;
+                                          pageContext,
+                                          }) => {
+    const { tag, numPages, locale } = pageContext;
+    const tagPath = "blog/"+_.kebabCase(tag) + "/";
 
     return(
         <Fragment>
@@ -139,29 +149,36 @@ export const BlogIndexPageTemplate = ({
                 location={location}
                 locale={locale}
                 crumbLabel="Блог"
-                childrenInColumn={<TagsRoll tag={tag}/>}
+                childrenInColumn={
+                    locale === "ua" ?
+                    <TagsRoll tag={tag}/> :
+                        <TagsRollRu tag={tag}/>
+                    }
             />
             {posts.length > 0 &&
                 <Fragment>
-                    <Blog className='row-to-column'>
+                    <Blog>
                         {posts.map(({node: post}, index) => (
                             <Post
+                                locale={locale}
                                 key={index}
                                 post={post}
                             />
                         ))}
                     </Blog>
-                    {/*<Pagination>*/}
-                    {/*        <ul>*/}
-                    {/*            {Array.from({length: numPages -1 }, (_, i) => (*/}
-                    {/*                <li key={`pagination-number${i + 1}`} >*/}
-                    {/*                    <Link to={`/blog/${i === 0 ? "" : i + 1}`}>*/}
-                    {/*                        {i + 1}*/}
-                    {/*                    </Link>*/}
-                    {/*                </li>*/}
-                    {/*            ))}*/}
-                    {/*        </ul>*/}
-                    {/*</Pagination>*/}
+                    {numPages > 1 &&
+                        <Pagination>
+                            <ul>
+                                {Array.from({length: numPages}, (a, i) => (
+                                    <li key={`pagination-number${i + 1}`}>
+                                        <Link to={localizedPath({path: `${i === 0 ? tagPath : tagPath+(i + 1)}`, lang: locale })}>
+                                            {i + 1}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </Pagination>
+                    }
                 </Fragment>
             }
         </Fragment>
@@ -171,7 +188,7 @@ export const BlogIndexPageTemplate = ({
 const BlogIndexPage = ({ data, location, pageContext }) => {
     const { frontmatter } = data.markdownRemark;
     const { edges: posts } = data.allMarkdownRemark;
-    console.log(pageContext)
+
     return (
         <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
             <BlogIndexPageTemplate
@@ -185,7 +202,6 @@ const BlogIndexPage = ({ data, location, pageContext }) => {
                 description={frontmatter.description}
                 header={frontmatter.header}
                 location={location}
-                locale={pageContext.locale}
                 pageContext={pageContext}
                 posts={posts}
             />
@@ -208,9 +224,11 @@ BlogIndexPage.propTypes = {
 export default BlogIndexPage
 
 export const pageQuery = graphql`
-  query BlogPage($locale: String, $tag: String) {
+  query BlogPage($locale: String, $tag: String, $skip: Int, $limit: Int) {
     allMarkdownRemark(
-      sort: {order: DESC, fields: [frontmatter___date]}, 
+      sort: {order: DESC, fields: [frontmatter___date]},
+      limit: $limit
+      skip: $skip 
       filter: {
           frontmatter: {
             templateKey: {eq: "blog-post"},

@@ -1,8 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import styled from "styled-components";
+import {Link} from "gatsby";
 import {kebabCase} from "lodash";
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import {localizedPath} from "../../data/localizedPath";
+
 
 const List = styled.ul`
   justify-content: flex-start;  
@@ -14,7 +16,6 @@ const List = styled.ul`
   }
   
 `;
-
 const Item = styled.li`
     background: #222222;
     border-radius: .5em;
@@ -34,12 +35,12 @@ const Item = styled.li`
   }
 `
 
-const TagsRoll = ({tags, tagActive}) => (
+const TagsRollTemplate = ({tags, locale, tagActive}) => (
     <List className="row">
         {
             tags.map(tag =>
                 <Item key={tag.fieldValue} color={tagActive === tag.fieldValue ? 1 : 0}>
-                    <Link  to={`/blog/${tagActive === tag.fieldValue ? '' : kebabCase(tag.fieldValue)}/`}>
+                    <Link to={localizedPath({path: `blog/${tagActive === tag.fieldValue ? '' : kebabCase(tag.fieldValue)}/`, lang: locale})}>
                         {tag.fieldValue}
                     </Link>
                 </Item>
@@ -48,25 +49,11 @@ const TagsRoll = ({tags, tagActive}) => (
     </List>
 )
 
-TagsRoll.propTypes = {
+TagsRollTemplate.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             group: PropTypes.array,
         }),
     }),
 }
-
-export default ({ tag }) => (
-    <StaticQuery
-        query={graphql`
-          query TagsRollQuery {
-            allMarkdownRemark(limit: 1000) {
-              group(field: frontmatter___tags) {
-                fieldValue
-              }
-            }
-          }
-        `}
-        render={(data) => <TagsRoll tagActive={tag} tags={data.allMarkdownRemark.group} />}
-    />
-)
+export default TagsRollTemplate
