@@ -17,15 +17,15 @@ description: >-
   індивідуально розроблені маршрути.
 header:
   images:
-    - alt: app mobile
+    - alt: ' inta-ics-доставка-з-франції'
       image: /img/franceHeader.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Автодоставка
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Доступна вартість
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Точний розрахунок
 sections:
   - image: /img/franceSection.jpg
     text: >-
