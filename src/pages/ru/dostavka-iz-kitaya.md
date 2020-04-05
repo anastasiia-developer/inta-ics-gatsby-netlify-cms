@@ -90,7 +90,7 @@ sections:
 sectionText:
   title: Грузоперевозки из Китая
   text: jhjhjh
-  image: /img/001-china 3.png
+  image: /img/background404.png
 seoSections:
   title: jmjhjhj
 ---
