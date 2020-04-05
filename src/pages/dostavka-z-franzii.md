@@ -8,7 +8,7 @@ metaData:
     Збірні вантажі з Франції &#9989; Чесні ціни, швидкий сервіс & #9742; 068
     5555 999
 title: Доставка вантажу з Франції
-name: /dostavka-z-franzii
+name: dostavka-z-franzii
 crumbLabel: Доставка вантажу з Франції
 crumbLabelParent: '????????????????????'
 description: >-
