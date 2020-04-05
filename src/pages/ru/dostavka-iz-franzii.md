@@ -22,11 +22,11 @@ header:
       image: /img/franceHeader.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Автодоставка
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Доступная стоимость
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Точный расчет
 sections:
   - image: /img/franceSection.jpg
     text: >-
