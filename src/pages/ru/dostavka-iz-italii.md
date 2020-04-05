@@ -19,6 +19,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-из-италии'
       image: /img/inta-ics-доставка-из-италии.jpeg
+  scopeInformation:
+    - text: Автодоставка
+      image: /img/time.png
+    - text: Доступная стоимость
+      image: /img/card.png
+    - text: Точный расчет
+      image: /img/lov.png
 sectionText:
   title: hghghg
   image: /img/013-italy.png
