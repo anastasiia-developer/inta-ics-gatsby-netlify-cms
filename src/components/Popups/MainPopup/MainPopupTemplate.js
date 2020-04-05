@@ -11,7 +11,7 @@ const Popup = styled.div`
     top: 0;
     right: 0;
     height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
     max-width: 24vw;
     z-index: 3;
     padding: 0 2em;
@@ -138,8 +138,9 @@ const MainPopupTemplate = ({data, className}) => {
         }
     }, []);
     useEffect(() => {
-        document.documentElement.style.overflowY = popupOpen || headerPopupOpen ? 'hidden' : 'unset';
-
+        if(window.matchMedia("(max-aspect-ratio: 3/3)").matches) {
+            document.documentElement.style.overflowY = popupOpen || headerPopupOpen ? 'hidden' : 'unset';
+        }
     }, [popupOpen,headerPopupOpen]);
 
     return(

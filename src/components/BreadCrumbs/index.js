@@ -6,9 +6,8 @@ import { localizedPath } from "../../data/localizedPath";
 const Breadcrumbs = ({ location, locale, crumbLabel, crumbLabelParent, crumbPathParent }) => {
     return (
         <Container>
-            <Link to={localizedPath({path: "/", lang: locale})}>
+            <Link to={localizedPath({lang: locale})}>
                 Главная
-                {console.log(location.pathname)}
             </Link>
             {crumbLabelParent &&
                 <Fragment>

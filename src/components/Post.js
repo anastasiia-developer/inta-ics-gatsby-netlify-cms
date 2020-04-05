@@ -6,12 +6,12 @@ import Time from "../img/time.svg";
 import ArrowLine from "../img/arrowLine.svg";
 import {kebabCase} from "lodash";
 import Tags from "../components/Blog/TagStyle"
+import {localizedPath} from "../data/localizedPath";
 
 
 const Article = styled.article`
   border-right: 1px solid #ECECEC;
   padding: 1em;
-  width: 48%;
   &:last-child{
     border-right: none;
   }
@@ -77,7 +77,7 @@ const Article = styled.article`
   }
 `;
 
-const Post = ({post, className}) => {
+const Post = ({post, className, locale}) => {
     const sliceText = (text) => {
         let sliced = text.slice(0,100);
         if (sliced.length < text.length) {
@@ -115,7 +115,7 @@ const Post = ({post, className}) => {
                     <Tags>
                         {
                             post.frontmatter.tags.slice(0,2).map((post, index) =>
-                            <Link key={index} to={`/blog/${kebabCase(post)}/`} >
+                            <Link key={index} to={localizedPath({path: `blog/${kebabCase(post)}/`, lang: locale})} >
                                 {post}
                             </Link>
                         )}

@@ -1,12 +1,12 @@
-const _ = require('lodash')
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
-const locales = require('./src/data/locales')
+const _ = require('lodash');
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const locales = require('./src/data/locales');
 
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   return graphql(`
     {
@@ -73,70 +73,85 @@ exports.createPages = ({ actions, graphql }) => {
         })
       }
     })
-    //
-    // const postsPerPage = 10;
-    // const numPages = Math.ceil(posts.length / postsPerPage);
-    //
-    // Array.from({ length: numPages }).forEach((_, i) => {
-    //
-    //   createPage({
-    //     path: i === 0 ? `/blog/` : `/blog/${i + 1}`,
-    //     component: path.resolve(`src/templates/blog.js`),
-    //     context: {
-    //       limit: postsPerPage,
-    //       skip: i * postsPerPage,
-    //       numPages,
-    //       currentPage: i + 1
-    //     }
-    //   });
-    // });
+
+
+    //blog
+    const pagePathBlog = "/blog/";
+
+    const localizedPath = ({lang, path}) => locales[lang].default ? path : locales[lang].path + path;
+    const localePath = ({lang}) => locales[lang].default ? "/ru" + pagePathBlog : pagePathBlog;
+
+    //Pagination
+    const postsPerPage = 2;
+
+    Object.keys(locales).map(lang => {
+
+      const BlogPosts = _.filter(posts, key =>
+          key.node.frontmatter.templateKey === 'blog-post' && key.node.frontmatter.locale === lang);
+      const numPages = Math.ceil(BlogPosts.length / postsPerPage);
+      const langPath = localizedPath({lang: lang, path: pagePathBlog});
+
+      Array.from({ length: numPages }).forEach((_, i) => {
+
+        createPage({
+          path: i === 0 ? langPath : langPath + (i + 1),
+          component: path.resolve(`src/templates/blog.js`),
+          context: {
+            limit: postsPerPage,
+            skip: i * postsPerPage,
+            numPages,
+            localePath: localePath({lang}),
+            locale: lang,
+            currentPage: i + 1
+          }
+        });
+      });
+
+    });
+
 
     // Tag pages:
-    let tagsRu = [];
-    let tagsUa = [];
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(edge => {
 
-      if (edge.node.frontmatter.tags != null) {
-        if (edge.node.frontmatter.locale === 'ru') {
-          tagsRu = tagsRu.concat(edge.node.frontmatter.tags)
-        } else {
-          tagsUa = tagsUa.concat(edge.node.frontmatter.tags)
-        }
-      }
+    Object.keys(locales).map(lang => {
+      let tags = [];
+      const PostTags = _.filter(posts, key =>
+          key.node.frontmatter.templateKey === 'blog-post' &&
+          key.node.frontmatter.tags != null &&
+          key.node.frontmatter.locale === lang);
+
+      // Iterate through each post, putting all found tags into `tags`
+      PostTags.forEach(edge => {
+        tags = tags.concat(edge.node.frontmatter.tags)
+      });
+
+      tags = _.uniq(tags);
+
+      const BlogPostsPagination = (tag) => Math.ceil(_.filter(PostTags, key =>
+          key.node.frontmatter.tags.includes(tag)).length / postsPerPage);
+
+      // Make tag pages
+      tags.forEach(tag => {
+        const pathTag = localizedPath({path: pagePathBlog+_.kebabCase(tag), lang: lang});
+
+        Array.from({ length: BlogPostsPagination(tag) }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? pathTag : `${pathTag}/${i + 1}`,
+            component: path.resolve(`src/templates/blog.js`),
+            context: {
+              tag,
+              limit: postsPerPage,
+              skip: i * postsPerPage,
+              numPages: BlogPostsPagination(tag),
+              locale: lang,
+              localePath: localePath({lang}),
+              currentPage: i + 1
+            }
+          });
+        });
+      });
     });
-    // Eliminate duplicate tags
-    tagsRu = _.uniq(tagsRu);
-    tagsUa = _.uniq(tagsUa);
-
-    // Make tag pages
-    tagsRu.forEach(tag => {
-      const tagPath = `ru/blog/${_.kebabCase(tag)}/`
-
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/blog.js`),
-        context: {
-          locale: 'ru',
-          tag,
-        },
-      })
-    });
-
-    tagsUa.forEach(tag => {
-      const tagPath = `/blog/${_.kebabCase(tag)}/`
-
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/blog.js`),
-        context: {
-          locale: 'ua',
-          tag,
-        },
-      })
-    })
   })
-}
+};
 
 
 exports.onCreatePage = ({ page, actions }) => {
@@ -147,7 +162,7 @@ exports.onCreatePage = ({ page, actions }) => {
 
     Object.keys(locales).map(lang => {
       const localizedPath = locales[lang].default ? page.path : locales[lang].path + page.path
-      const otherLeng = locales[lang].default ? "/ru" + page.path : page.path
+      const otherLeng = locales[lang].default ? "/ru" + page.path : page.path;
 
       return createPage({
         ...page,
@@ -157,7 +172,7 @@ exports.onCreatePage = ({ page, actions }) => {
           localePath: otherLeng
         },
       })
-    })
+    });
     resolve()
   })
 }
