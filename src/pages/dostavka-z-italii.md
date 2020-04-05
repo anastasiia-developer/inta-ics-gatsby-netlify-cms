@@ -19,6 +19,13 @@ header:
   images:
     - alt: inta-ics-доставка-з-італії
       image: /img/inta-ics-доставка-из-италии.jpeg
+  scopeInformation:
+    - text: Автодоставка
+      image: /img/time.png
+    - text: Доступна вартість
+      image: /img/card.png
+    - text: Точний розрахунок
+      image: /img/lov.png
 sectionText:
   title: bbbvb
   image: /img/013-italy.png
