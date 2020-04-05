@@ -88,7 +88,7 @@ sections:
       text: Узнать больше
       link: zheleznodorozhnyie-perevozki-gruzov/
 sectionText:
-  title: hghghg
+  title: Грузоперевозки из Китая
   text: jhjhjh
   image: /img/001-china 3.png
 seoSections:
