@@ -19,6 +19,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-з-англії'
       image: /img/inta-ics-доставка-из-англии.png
+  scopeInformation:
+    - text: Автодоставка
+      image: /img/time.png
+    - text: Доступна вартість
+      image: /img/card.png
+    - text: Точний розрахунок
+      image: /img/lov.png
 sectionText:
   title: аапап
   image: /img/002-united-states.png
