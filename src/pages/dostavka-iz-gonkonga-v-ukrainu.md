@@ -19,6 +19,13 @@ header:
   images:
     - alt: inta-ics-доставка-из-гонконга-в-украину
       image: /img/inta-ics_dostavka-z-gonkongu-v-ukrainu.png
+  scopeInformation:
+    - text: От 5 дней
+      image: /img/time.png
+    - text: Собственный склад-офис
+      image: /img/card.png
+    - text: Выкуп товара
+      image: /img/lov.png
 sectionText:
   image: /img/inta-ics_dostavka-z-gonkongu-v-ukrainu.png
   text: вавваа
