@@ -19,6 +19,13 @@ header:
   images:
     - alt: inta-ics-доставка-з-німеччини
       image: /img/img_20200406_151733_664.png
+  scopeInformation:
+    - text: Автодоставка;
+      image: /img/time.png
+    - text: Доступна вартість
+      image: /img/card.png
+    - text: Точний розрахунок
+      image: /img/lov.png
 sectionText:
   text: ghgh
   image: /img/001-china 3.png
