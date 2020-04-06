@@ -20,6 +20,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-из-англии'
       image: /img/inta-ics-доставка-из-англии.png
+  scopeInformation:
+    - text: Автодоставка
+      image: /img/time.png
+    - text: Доступная стоимость
+      image: /img/card.png
+    - text: Точный расчет
+      image: /img/lov.png
 sectionText:
   title: рпрп
   image: /img/inta-ics-доставка-из-англии.png
