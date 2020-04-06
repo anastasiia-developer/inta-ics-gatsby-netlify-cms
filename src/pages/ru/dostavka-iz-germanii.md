@@ -18,7 +18,7 @@ description: >-
   индивидуальный подход к каждому клиенту.
 header:
   images:
-    - alt: Аапп
+    - alt: ' inta-ics-доставка-из-германии'
       image: /img/img_20200406_151733_664.png
 sectionText:
   title: мсмсм
