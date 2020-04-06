@@ -17,7 +17,7 @@ description: >-
   індивідуальний підхід до кожного клієнта.
 header:
   images:
-    - alt: Ffff
+    - alt: inta-ics-доставка-з-німеччини
       image: /img/img_20200406_151733_664.png
 sectionText:
   text: ghgh
