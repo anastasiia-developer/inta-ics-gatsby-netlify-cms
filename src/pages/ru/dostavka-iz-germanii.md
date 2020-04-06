@@ -20,6 +20,13 @@ header:
   images:
     - alt: ' inta-ics-доставка-из-германии'
       image: /img/img_20200406_151733_664.png
+  scopeInformation:
+    - text: Автодоставка
+      image: /img/time.png
+    - text: Доступная стоимость
+      image: /img/card.png
+    - text: Точный расчет
+      image: /img/lov.png
 sectionText:
   title: мсмсм
   image: /img/002-united-states (4).png
