@@ -18,7 +18,7 @@ description: >-
 header:
   images:
     - alt: ' inta-ics-доставка-из-италии'
-      image: /img/inta-ics-доставка-из-италии.jpeg
+      image: /img/inta-ics-доставка-из-италии.png
   scopeInformation:
     - text: Автодоставка
       image: /img/time.png
