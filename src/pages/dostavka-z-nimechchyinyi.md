@@ -16,7 +16,9 @@ description: >-
   Україну. Пропонуємо доступну вартість, оперативне виконання замовлення та
   індивідуальний підхід до кожного клієнта.
 header:
-  images: []
+  images:
+    - alt: Ffff
+      image: /img/img_20200406_151733_664.png
 sectionText:
   text: ghgh
   image: /img/001-china 3.png
