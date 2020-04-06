@@ -17,7 +17,9 @@ description: >-
   Украину. Предлагаем доступную стоимость, оперативное выполнение заказа и
   индивидуальный подход к каждому клиенту.
 header:
-  images: []
+  images:
+    - alt: Аапп
+      image: /img/img_20200406_151733_664.png
 sectionText:
   title: мсмсм
   image: /img/002-united-states (4).png
