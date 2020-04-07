@@ -149,9 +149,12 @@ export const pageQuery = graphql`
             }
             scopeInformation{
               image{
-                 publicURL
+                 childImageSharp {
+                  fluid(maxWidth: 15, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
               }
-              alt
               text
             }
             buttons{
@@ -177,7 +180,11 @@ export const pageQuery = graphql`
             list{
                 title
                 image{
-                    publicURL
+                    childImageSharp {
+                      fluid(maxWidth: 35, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
                 }
                 alt
             }

@@ -3,6 +3,7 @@ import React, { Fragment } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import {localizedPath} from "../../data/localizedPath";
+import PreviewCompatibleImage from "../PreviewCompatibleImage";
 
 const Section = styled(About)`
     margin: 0;
@@ -61,8 +62,8 @@ const Section = styled(About)`
             @media(max-aspect-ratio: 3/3), (max-height: 500px){    
                 margin-bottom: .5em;
             }
-            img{
-                height: 1em;
+            .gatsby-image-wrapper{
+                width: 1em;
                 margin-right: 1em;
             }
         }
@@ -94,7 +95,12 @@ const Sections = ({ sections, locale, className }) => (
                         <ul className="row list">
                             {section.list.map((li,index) => (
                                 <li className="row" key={index}>
-                                    <img src={li.image.publicURL} alt={li.alt}/>
+                                    <PreviewCompatibleImage
+                                        imageInfo={{
+                                            image: li.image,
+                                            alt: li.alt
+                                        }}
+                                    />
                                     {li.title}
                                 </li>
                             ))}

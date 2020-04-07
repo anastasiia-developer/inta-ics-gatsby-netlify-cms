@@ -108,7 +108,7 @@ const Container = styled.header`
                 margin-bottom: 1em;
             }
         }
-        img {
+        .gatsby-image-wrapper {
             width: 1em;
             margin-right: .5em;
         }
@@ -191,9 +191,12 @@ const TemplateHeader = ({
         <ul className="row list-info">
             {information.map(item => (
                 <li key={item.text} className="row" >
-                    <img
-                        alt="icon"
-                        src={item.image.publicURL} />
+                    <PreviewCompatibleImage
+                        imageInfo={{
+                            image: item.image,
+                            alt: item.alt
+                        }}
+                    />
                     <p>{item.text}</p>
                 </li>
             ))}

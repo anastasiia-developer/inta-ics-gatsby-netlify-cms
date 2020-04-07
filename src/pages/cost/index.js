@@ -119,8 +119,12 @@ export const pageQuery = graphql`
               alt
             }
             scopeInformation{
-              image{
-                 publicURL
+                image{
+                  childImageSharp {
+                      fluid(maxWidth: 35, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
               }
               text
             }

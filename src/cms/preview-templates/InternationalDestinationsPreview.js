@@ -12,11 +12,11 @@ const InternationalDestinationsPreview = ({ entry }) => {
         sections: data.sections || {},
         seoSections: data.seoSections || {}
     };
-
+    console.log(data.sections)
     if (data) {
         return (
             <Fragment>
-                {data.header.buttons || data.sections.some(section => section.button != null) ?
+                {data.header.buttons || (data.sections && data.sections.some(section => section.button != null))?
                         <DeliveryTemplate
                             sectionText={data.sectionText}
                             {...setting}
