@@ -10,7 +10,7 @@ metaData:
 title: ' Доставка з США'
 name: dostavka-z-ssha-v-ukrainu
 crumbLabel: ' Доставка з США'
-crumbLabelParent: vccvcvcv
+crumbLabelParent: Міжнародні вантажоперевезення
 description: >-
   Компанія INTA-ICS надає послуги з доставки товарів з США морським і
   авіатранспортом. Пропонуємо якісний логістичний сервіс, доставляємо вантажі в
