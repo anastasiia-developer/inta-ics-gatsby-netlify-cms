@@ -38,7 +38,6 @@ const Section = styled.section`
         color: #005BE4;
         padding-left: 2em;
         line-height: 1.7em;
-        font-weight: 500;
     }
     .gatsby-image-wrapper{
         flex: 1;

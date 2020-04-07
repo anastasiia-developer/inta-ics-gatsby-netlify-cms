@@ -4,6 +4,7 @@ templateKey: services
 locale: ru
 title: Доставка товара из Китая
 name: dostavka-tovarov-iz-kitaya/
+localeKey: dostavka-tovariv-z-kytaju
 metaData:
   title: Доставка товара из Китая| INTA-ICS
   description: >-
