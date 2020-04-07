@@ -1,6 +1,6 @@
 ---
 templateKey: international-destinations
-locale: ua
+locale: ru
 metaData:
   title: 'Доставка из Гонконга | INTA-ICS '
   description: >-
