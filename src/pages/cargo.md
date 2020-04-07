@@ -3,7 +3,9 @@ templateKey: international-cargo
 locale: ua
 metaData:
   title: Карго доставка | INTA-ICS
-  description: Карго доставка | INTA-ICS
+  description: >
+    Міжнародна доставка вантажів &#9989; Карго перевезення в Україну &#9989;
+    Cargo від INTA-ICS - чесні ціни, швидкий сервіс & #9742; 068 5555 999
 title: Карго доставка
 name: cargo
 crumbLabelParent: ' Возможности доставки грузов'
