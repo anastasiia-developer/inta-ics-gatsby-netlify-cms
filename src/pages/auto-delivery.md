@@ -1,5 +1,6 @@
 ---
 templateKey: delivery
+order: 4
 metaData:
   description: >+
     Автодоставка товарів та вантажів в Україну &#9989; Контейнерні

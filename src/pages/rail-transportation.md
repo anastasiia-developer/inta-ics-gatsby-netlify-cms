@@ -1,5 +1,6 @@
 ---
 templateKey: delivery
+order: 2
 metaData:
   description: >
     &#128646;Залізничні контейнерні перевезення &#128073; Доставка вантажів

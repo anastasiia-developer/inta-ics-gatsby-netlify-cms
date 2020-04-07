@@ -1,5 +1,6 @@
 ---
 templateKey: delivery
+order: 3
 metaData:
   title: Морские перевозки | Международный грузоперевозчик INTA-ICS
   description: >-

@@ -1,5 +1,6 @@
 ---
 templateKey: delivery
+order: 1
 title: Авіадоставка вантажів
 metaData:
   title: Авіадоставка вантажів в Україну | INTA-ICS

@@ -1,5 +1,6 @@
 ---
 templateKey: delivery
+order: 4
 metaData:
   title: Международные автомобильные грузовые перевозки | INTA-ICS
   description: >-

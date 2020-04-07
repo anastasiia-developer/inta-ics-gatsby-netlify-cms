@@ -1,5 +1,6 @@
 ---
 templateKey: delivery
+order: 3
 metaData:
   description: >
     &#128674;  Морські контейнерні перевезення вантажів з Китаю, США, країн

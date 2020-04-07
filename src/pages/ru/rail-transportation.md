@@ -1,5 +1,6 @@
 ---
 templateKey: delivery
+order: 2
 metaData:
   title: Международные железнодорожные грузоперевозки | INTA-ICS
   description: >+

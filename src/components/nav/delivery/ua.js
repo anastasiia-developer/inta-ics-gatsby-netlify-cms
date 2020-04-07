@@ -7,7 +7,7 @@ export default ({setActiveMob, isActiveMob}) => (
     <StaticQuery
         query={graphql`
             query navDeliveryUa{
-                 allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "delivery"}, locale: {eq: "ua"} }}) {
+                 allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "delivery"}, locale: {eq: "ua"} }}, sort: {fields: frontmatter___order}) {
                     nodes {
                       frontmatter {
                         crumbLabelParent

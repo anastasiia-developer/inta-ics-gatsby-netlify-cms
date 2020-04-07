@@ -1,5 +1,6 @@
 ---
 templateKey: delivery
+order: 1
 metaData:
   title: Авиадоставка грузов в Украину | INTA-ICS
   description: >-
