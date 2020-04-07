@@ -27,8 +27,8 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "blog-ru"
     label: "Blog - RU"
@@ -46,8 +46,8 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "delivery"
     label: "Доставка"
@@ -69,12 +69,12 @@ collections:
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
       {label: Alt, name: alt, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
       {label: alt, name: alt, widget: string, required: false},
-      {label: Image, name: image, widget: image},
+      {label: Image, name: image, widget: image, required: false},
       ]},
       {label: Buttons, name: buttons, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -83,12 +83,12 @@ collections:
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image},
+      {label: "Картинка", name: image, widget: image, required: false},
       {label: "alt", name: alt, widget: string, required: false},
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
-      {label: "Картинка", name: image, widget: image},
+      {label: "Картинка", name: image, widget: image, required: false},
       {label: "alt", name: alt, widget: string, required: false},
       ]},
       {label: Button, name: button, widget: object, fields: [
@@ -105,9 +105,9 @@ collections:
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: string, required: false},
       {label: "sections", name: "sections", widget: list, fields: [
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "alt", name: "alt", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]}
       ]}
   - name: "delivery-ru"
@@ -131,11 +131,11 @@ collections:
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
       {label: Alt, name: alt, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
-      {label: Image, name: image, widget: image},
+      {label: Image, name: image, widget: image, required: false},
       {label: "alt", name: "alt", widget: string, required: false},
       ]},
       {label: Buttons, name: buttons, widget: list, fields: [
@@ -145,12 +145,12 @@ collections:
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image},
+      {label: "Картинка", name: image, widget: image, required: false},
       {label: "alt", name: "alt", widget: string, required: false},
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]},
       {label: Button, name: button, widget: object, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -166,9 +166,9 @@ collections:
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: string, required: false},
       {label: "sections", name: "sections", widget: list, fields: [
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "alt", name: "alt", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]}
       ]}
   - name: "international-destinations"
@@ -192,11 +192,11 @@ collections:
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
       {label: Alt, name: alt, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: Buttons, name: buttons, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -205,11 +205,12 @@ collections:
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image},
-      {label: "text", name: text, widget: "markdown"},
+      {label: "Картинка", name: image, widget: image, required: false},
+      {label: "alt", name: alt, widget: string, required: false},
+      {label: "text", name: text, widget: "markdown", required: false},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]},
       {label: Button, name: button, widget: object, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -224,9 +225,9 @@ collections:
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: string, required: false},
       {label: "sections", name: "sections", widget: list, fields: [
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "alt", name: "alt", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]}
       ]}
   - name: "international-destinations-ru"
@@ -251,11 +252,11 @@ collections:
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
       {label: Alt, name: alt, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: Buttons, name: buttons, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -264,11 +265,12 @@ collections:
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image},
-      {label: "text", name: text, widget: "markdown"},
+      {label: "Картинка", name: image, widget: image, required: false},
+      {label: "alt", name: alt, widget: string, required: false},
+      {label: "text", name: text, widget: "markdown", required: false},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]},
       {label: Button, name: button, widget: object, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -283,9 +285,9 @@ collections:
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: string, required: false},
       {label: "sections", name: "sections", widget: list, fields: [
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "alt", name: "alt", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]}
       ]}
   - name: "international-cargo"
@@ -309,11 +311,11 @@ collections:
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
       {label: Alt, name: alt, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: Buttons, name: buttons, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -322,19 +324,20 @@ collections:
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image},
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Картинка", name: image, widget: image,  required: false},
+      {label: "alt", name: alt, widget: string,  required: false},
+      {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: string, required: false},
       {label: "sections", name: "sections", widget: list, fields: [
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Текст", name: text, widget: "markdown",  required: false},
       {label: "alt", name: "alt", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image,  required: false}
       ]}
       ]}
   - name: "international-cargo-ru"
@@ -359,11 +362,11 @@ collections:
       - {label: Header, name: header, widget: object, fields: [
       {label: Images, name: images, widget: list, fields: [
       {label: Alt, name: alt, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: "Scope information", name: scopeInformation, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
-      {label: Image, name: image, widget: image}
+      {label: Image, name: image, widget: image, required: false}
       ]},
       {label: Buttons, name: buttons, widget: list, fields: [
       {label: text, name: text, widget: string, required: false},
@@ -372,19 +375,20 @@ collections:
       ]}
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image},
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Картинка", name: image, widget: image, required: false},
+      {label: "alt", name: alt, widget: string, required: false},
+      {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]},
       ]}
       - {label: seoSections, name: seoSections, widget: object, fields: [
       {label: title, name: title, widget: string, required: false},
       {label: "sections", name: "sections", widget: list, fields: [
-      {label: "Текст", name: text, widget: "markdown"},
+      {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "alt", name: "alt", widget: string, required: false},
-      {label: "Картинка", name: image, widget: image}
+      {label: "Картинка", name: image, widget: image, required: false}
       ]}
       ]}
   - name: "services"
@@ -408,11 +412,11 @@ collections:
       - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
             {label: Alt, name: alt, widget: string, required: false},
-            {label: Image, name: image, widget: image}
+            {label: Image, name: image, widget: image, required: false}
           ]},
           {label: "Scope information", name: scopeInformation, widget: list, fields: [
             {label: text, name: text, widget: string, required: false},
-            {label: Image, name: image, widget: image}
+            {label: Image, name: image, widget: image, required: false}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
             {label: text, name: text, widget: string, required: false},
@@ -422,7 +426,7 @@ collections:
       - {label: "table", name: "table", widget: object, fields: [
           {label: "head", name: "head", widget: list, fields: [
               {label: "title", name: name, widget: string, required: false},
-              {label: Image, name: image, widget: image}
+              {label: Image, name: image, widget: image, required: false}
           ]},
           {label: "body", name: "body", widget: list, fields: [
             {label: "column", name: "column", widget: list, fields: [
@@ -433,6 +437,7 @@ collections:
       - {label: "sections", name: "sections", widget: list, fields: [
           {label: "Title", name: "title", widget: string, required: false},
           {label: "Картинка", name: image, widget: image, required: false},
+          {label: "alt", name: alt, widget: string, required: false},
           {label: "Текст", name: text, widget: "markdown", required: false},
           {label: "list", name: list, widget: list, fields: [
           {label: "title", name: title, widget: string, required: false},
@@ -469,11 +474,11 @@ collections:
       - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
           {label: Alt, name: alt, widget: string, required: false},
-          {label: Image, name: image, widget: image}
+          {label: Image, name: image, widget: image, required: false}
           ]},
           {label: "Scope information", name: scopeInformation, widget: list, fields: [
           {label: text, name: text, widget: string, required: false},
-          {label: Image, name: image, widget: image}
+          {label: Image, name: image, widget: image, required: false}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
           {label: text, name: text, widget: string, required: false},
@@ -483,7 +488,7 @@ collections:
       - {label: "table", name: "table", widget: object, fields: [
           {label: "head", name: "head", widget: list, fields: [
             {label: "name", name: name, widget: string, required: false},
-            {label: Image, name: image, widget: image}
+            {label: Image, name: image, widget: image, required: false}
           ]},
           {label: "body", name: "body", widget: list, fields: [
             {label: "column", name: "column", widget: list, fields: [
@@ -494,6 +499,7 @@ collections:
       - {label: "sections", name: "sections", widget: list, fields: [
       {label: "Title", name: "title", widget: string, required: false},
       {label: "Картинка", name: image, widget: image, required: false},
+      {label: "alt", name: alt, widget: string, required: false},
       {label: "Текст", name: text, widget: "markdown", required: false},
       {label: "list", name: list, widget: list, fields: [
       {label: "title", name: title, widget: string, required: false},
@@ -544,7 +550,7 @@ collections:
       {label: "category", name: category, widget: list, fields: [
       {label: "Название услуги", name: "nameCategory", widget: string, required: false},
       {label: "цена", name: "price", widget: number},
-      {label: "Картинка", name: image, widget: image},
+      {label: "Картинка", name: image, widget: image, required: false},
       {label: "alt img", name: alt, widget: string, required: false}
       ]}
       ]}
@@ -552,7 +558,7 @@ collections:
       - {label: Clients, name: clients, widget: object, fields: [
           {label: title, name: title, widget: string, required: false},
           {label: list, name: list, widget: list, fields: [
-            {label: image, name: image, widget: image},
+            {label: image, name: image, widget: image, required: false},
             {label: alt, name: alt, widget: string, required: false}
           ]}
       ]}
@@ -560,10 +566,10 @@ collections:
       {label: title, name: title, widget: string, required: false},
       {label: countries, name: countries, widget: list, fields: [
       {label: country, name: country, widget: string, required: false},
-      {label: flag, name: flag, widget: image},
+      {label: flag, name: flag, widget: image, required: false},
       {label: 'path name, "слеш(/) только в конце" например "france/" ', name: link, widget: string, required: false}
       ]},
-      {label: image, name: image, widget: image}
+      {label: image, name: image, widget: image, required: false}
       ]}
       - {label: "калькулятор в шапке", name: calculateHeader, widget: object, fields: [
       {label: "Заголовок", name: title, widget: string, required: false},
@@ -591,7 +597,7 @@ collections:
       {label: "bonusTitle", name: bonusTitle, widget: string, required: false},
       {label: "btn", name: btn, widget: string, required: false},
       {label: "btnLink", name: btnLink, widget: string, required: false},
-      {label: image, name: image, widget: image},
+      {label: image, name: image, widget: image, required: false},
       {label: alt, name: alt, widget: string, required: false}
       ]}
       - {label: "footer", name: footer, widget: object, fields: [
@@ -653,11 +659,11 @@ collections:
           - {label: Header, name: header, widget: object, fields: [
           {label: Slide, name: slide, widget: list, fields: [
           {label: Images, name: images, widget: list, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: Alt, name: alt, widget: string, required: false}
           ]},
           {label: "Scope information", name: scopeInformation, widget: list, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: text, name: text, widget: string, required: false}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
@@ -670,23 +676,23 @@ collections:
           {label: "Заголовок", name: title, widget: string, required: false},
           {label: "Под заголовок", name: subTitle, widget: string, required: false},
           {label: "Блоки", name: blocks, widget: list, fields: [
-          {label: "Картинка", name: image, widget: image},
+          {label: "Картинка", name: image, widget: image, required: false},
           {label: alt, name: alt, widget: string, required: false},
           {label: "Текст", name: title, widget: string, required: false}
           ]}
           ]}
           - {label: "Про нас", name: about, widget: object, fields: [
           {label: "Заголовок", name: title, widget: string, required: false},
-          {label: "Текст", name: text, widget: "markdown"},
-          {label: "Картинка", name: image, widget: image},
+          {label: "Текст", name: text, widget: "markdown", required: false},
+          {label: "Картинка", name: image, widget: image, required: false},
           {label: alt, name: alt, widget: string, required: false}
           ]}
           - {label: seoSections, name: seoSections, widget: object, fields: [
           {label: title, name: title, widget: string, required: false},
           {label: "sections", name: "sections", widget: list, fields: [
-          {label: "Текст", name: text, widget: "markdown"},
+          {label: "Текст", name: text, widget: "markdown", required: false},
           {label: "alt", name: "alt", widget: string, required: false},
-          {label: "Картинка", name: image, widget: image}
+          {label: "Картинка", name: image, widget: image, required: false}
           ]}
           ]}
       - file: "src/pages/about/index.md"
@@ -704,27 +710,33 @@ collections:
           - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
           {label: Alt, name: alt, widget: string, required: false},
-          {label: Image, name: image, widget: image}
+          {label: Image, name: image, widget: image, required: false}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
           {label: text, name: text, widget: string, required: false},
           {label: Link, name: link, widget: string, required: false}
           ]}
           ]}
-          - {label: "weSpecialize", name: "weSpecialize", widget: list, fields: [
-          {label: "Title", name: "title", widget: string, required: false},
-          {label: imageAlt, name: imageAlt, widget: object, fields: [
-          {label: Alt, name: alt, widget: string, required: false},
-          {label: image, name: image, widget: image}
-          ]},
-          {label: "description", name: "description", widget: string, required: false},
-          {label: "link", name: "link", widget: string, required: false}
+          - {label: "weSpecialize", name: "weSpecialize", widget: object, fields: [
+              {label: title, name: title, widget: string, required: false},
+              {label: "list", name: "list", widget: list, fields: [
+                {label: "Title", name: "title", widget: string, required: false},
+                {label: "description", name: "description", widget: string, required: false},
+                {label: "link", name: "link", widget: string, required: false},
+                {label: imageAlt, name: imageAlt, widget: object, fields: [
+                {label: Alt, name: alt, widget: string, required: false},
+                {label: Image, name: image, widget: image, required: false}
+                ]}
+              ]}
           ]}
-          - {label: "ourValues", name: "ourValues", widget: list, fields: [
-          {label: "Title", name: "title", widget: string, required: false},
-          {label: "description", name: "description", widget: string, required: false}
+          - {label: "ourValues", name: "ourValues", widget: object, fields: [
+              {label: "Title", name: "title", widget: string, required: false},
+              {label: "list", name: "list", widget: list, fields: [
+                {label: "Title", name: "title", widget: string, required: false},
+                {label: "description", name: "description", widget: string, required: false}
+              ]}
           ]}
-          - {label: "aboutImg", name: "aboutImg", widget: image}
+          - {label: "aboutImg", name: "aboutImg", widget: image, required: false}
       - file: "src/pages/cost/cost.md"
         label: "Стоимость"
         name: "cost"
@@ -738,25 +750,26 @@ collections:
           - {label: Description, name: description, widget: string, required: false}
           - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: Alt, name: alt, widget: string, required: false}
           ]},
           {label: "Scope information", name: scopeInformation, widget: list, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: text, name: text, widget: string, required: false}
           ]},
           ]}
           - {label: "sections", name: "sections", widget: list, fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Картинка", name: image, widget: image},
-          {label: "Текст", name: text, widget: "markdown"},
+          {label: "Картинка", name: image, widget: image, required: false},
+          {label: "alt", name: alt, widget: string, required: false},
+          {label: "Текст", name: text, widget: "markdown", required: false},
           ]}
           - {label: seoSections, name: seoSections, widget: object, fields: [
           {label: title, name: title, widget: string, required: false},
           {label: "sections", name: "sections", widget: list, fields: [
-          {label: "Текст", name: text, widget: "markdown"},
+          {label: "Текст", name: text, widget: "markdown", required: false},
           {label: "alt", name: "alt", widget: string, required: false},
-          {label: "Картинка", name: image, widget: image}
+          {label: "Картинка", name: image, widget: image, required: false}
           ]}
           ]}
       - file: "src/pages/reviews.md"
@@ -773,7 +786,7 @@ collections:
           - {label: name, name: name, widget: string, required: false}
           - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: Alt, name: alt, widget: string, required: false}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
@@ -803,7 +816,7 @@ collections:
           - {label: CrumbLabel, name: crumbLabel, widget: string, required: false}
           - {label: name, name: name, widget: string, required: false}
           - {label: Header, name: header, widget: object, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: Alt, name: alt, widget: string, required: false},
           {label: tel, name: tel, widget: string, required: false},
           {label: name, name: name, widget: string, required: false},
@@ -825,11 +838,11 @@ collections:
           - {label: Header, name: header, widget: object, fields: [
           {label: Slide, name: slide, widget: list, fields: [
           {label: Images, name: images, widget: list, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: alt, name: alt, widget: string, required: false}
           ]},
           {label: "Scope information", name: scopeInformation, widget: list, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: text, name: text, widget: string, required: false}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
@@ -842,22 +855,22 @@ collections:
           {label: "Заголовок", name: title, widget: string, required: false},
           {label: "Под заголовок", name: subTitle, widget: string, required: false},
           {label: "Блоки", name: blocks, widget: list, fields: [
-          {label: "Картинка", name: image, widget: image},
+          {label: "Картинка", name: image, widget: image, required: false},
           {label: alt, name: alt, widget: string, required: false},
           {label: "Текст", name: title, widget: string, required: false}
           ]}
           ]}
           - {label: "Про нас", name: about, widget: object, fields: [
           {label: "Заголовок", name: title, widget: string, required: false},
-          {label: "Текст", name: text, widget: "markdown"},
-          {label: "Картинка", name: image, widget: image},
+          {label: "Текст", name: text, widget: "markdown", required: false},
+          {label: "Картинка", name: image, widget: image, required: false},
           ]}
           - {label: seoSections, name: seoSections, widget: object, fields: [
           {label: title, name: title, widget: string, required: false},
           {label: "sections", name: "sections", widget: list, fields: [
           {label: "alt", name: "alt", widget: string, required: false},
-          {label: "Текст", name: text, widget: "markdown"},
-          {label: "Картинка", name: image, widget: image}
+          {label: "Текст", name: text, widget: "markdown", required: false},
+          {label: "Картинка", name: image, widget: image, required: false}
           ]}
           ]}
       - file: "src/pages/about/index.ru.md"
@@ -875,27 +888,33 @@ collections:
           - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
           {label: Alt, name: alt, widget: string, required: false},
-          {label: Image, name: image, widget: image}
+          {label: Image, name: image, widget: image, required: false}
           ]},
           {label: Buttons, name: buttons, widget: list, fields: [
           {label: text, name: text, widget: string, required: false},
           {label: Link, name: link, widget: string, required: false}
           ]}
           ]}
-          - {label: "WeSpecialize", name: "weSpecialize", widget: list, fields: [
-          {label: imageAlt, name: imageAlt, widget: object, fields: [
-          {label: Alt, name: alt, widget: string, required: false},
-          {label: Image, name: image, widget: image}
-          ]},
+          - {label: "weSpecialize", name: "weSpecialize", widget: object, fields: [
+          {label: title, name: title, widget: string, required: false},
+          {label: "list", name: "list", widget: list, fields: [
           {label: "Title", name: "title", widget: string, required: false},
           {label: "description", name: "description", widget: string, required: false},
-          {label: "link", name: "link", widget: string, required: false}
+          {label: "link", name: "link", widget: string, required: false},
+          {label: imageAlt, name: imageAlt, widget: object, fields: [
+          {label: Alt, name: alt, widget: string, required: false},
+          {label: Image, name: image, widget: image, required: false}
           ]}
-          - {label: "ourValues", name: "ourValues", widget: list, fields: [
-          {label: "Title", name: "title", widget: string, required: false},
-          {label: "description", name: "description", widget: string, required: false}
           ]}
-          - {label: aboutImg, name: "aboutImg", widget: image}
+          ]}
+          - {label: "ourValues", name: "ourValues", widget: object, fields: [
+              {label: "Title", name: "title", widget: string, required: false},
+              {label: "list", name: "list", widget: list, fields: [
+                {label: "Title", name: "title", widget: string, required: false},
+                {label: "description", name: "description", widget: string, required: false}
+              ]}
+          ]}
+          - {label: aboutImg, name: "aboutImg", widget: image, required: false}
       - file: "src/pages/cost/cost.ru.md"
         label: "Стоимость"
         name: "cost-ru"
@@ -908,25 +927,26 @@ collections:
           - {label: Description, name: description, widget: string, required: false}
           - {label: Header, name: header, widget: object, fields: [
           {label: Images, name: images, widget: list, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: Alt, name: alt, widget: string, required: false}
           ]},
           {label: "Scope information", name: scopeInformation, widget: list, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: text, name: text, widget: string, required: false}
           ]},
           ]}
           - {label: "sections", name: "sections", widget: list, fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Картинка", name: image, widget: image},
-          {label: "Текст", name: text, widget: "markdown"},
+          {label: "Картинка", name: image, widget: image, required: false},
+          {label: "alt", name: alt, widget: string, required: false},
+          {label: "Текст", name: text, widget: "markdown", required: false},
           ]}
           - {label: seoSections, name: seoSections, widget: object, fields: [
           {label: title, name: title, widget: string, required: false},
           {label: "sections", name: "sections", widget: list, fields: [
-          {label: "Текст", name: text, widget: "markdown"},
+          {label: "Текст", name: text, widget: "markdown", required: false},
           {label: "alt", name: "alt", widget: string, required: false},
-          {label: "Картинка", name: image, widget: image}
+          {label: "Картинка", name: image, widget: image, required: false}
           ]}
           ]}
       - file: "src/pages/contact.ru.md"
@@ -942,7 +962,7 @@ collections:
           - {label: CrumbLabel, name: crumbLabel, widget: string, required: false}
           - {label: name, name: name, widget: string, required: false}
           - {label: Header, name: header, widget: object, fields: [
-          {label: Image, name: image, widget: image},
+          {label: Image, name: image, widget: image, required: false},
           {label: Alt, name: alt, widget: string, required: false},
           {label: tel, name: tel, widget: string, required: false},
           {label: name, name: name, widget: string, required: false},

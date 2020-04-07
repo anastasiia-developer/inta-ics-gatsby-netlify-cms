@@ -2,6 +2,7 @@ import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import {InternationalDestinationsTemplate} from '../../templates/international-destinations';
 import {DeliveryTemplate} from "../../templates/delivery";
+import Layout from "../../components/Layout";
 
 const InternationalDestinationsPreview = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
@@ -12,19 +13,18 @@ const InternationalDestinationsPreview = ({ entry }) => {
         sections: data.sections || {},
         seoSections: data.seoSections || {}
     };
-    console.log(data.sections)
     if (data) {
         return (
             <Fragment>
-                {data.header.buttons || (data.sections && data.sections.some(section => section.button != null))?
-                        <DeliveryTemplate
-                            sectionText={data.sectionText}
-                            {...setting}
-                        />
-                        :
-                        <InternationalDestinationsTemplate
-                            {...setting}
-                        />
+                {data.header && data.header.buttons && data.sectionText && (data.sections && data.sections.some(section => section.button != null))?
+                    <DeliveryTemplate
+                        sectionText={data.sectionText}
+                        {...setting}
+                    />
+                    :
+                    <InternationalDestinationsTemplate
+                        {...setting}
+                    />
                 }
             </Fragment>
         )

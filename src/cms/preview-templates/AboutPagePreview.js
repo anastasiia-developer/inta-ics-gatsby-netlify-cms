@@ -8,8 +8,8 @@ const AboutPagePreview = ({ entry }) => {
   if(data) {
     return (
         <AboutPageTemplate
-            title={data.title}
-            description={data.description}
+            title={data.title || ''}
+            description={data.description || ''}
             header={data.header || ''}
             weSpecialize={data.weSpecialize || ''}
             ourValues={data.ourValues || ''}

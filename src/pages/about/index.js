@@ -50,7 +50,7 @@ const Section = styled.section`
                 width: 90%;
             }
             &:hover{
-                .gatsby-image-wrapper{
+                .gatsby-image-wrapper, img{
                     display: none;
                 }
                 p{
