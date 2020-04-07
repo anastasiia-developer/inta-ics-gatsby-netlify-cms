@@ -153,6 +153,7 @@ export const pageQuery = graphql`
                   }
                 }
             }
+            alt
             list{
                 title
                 image{
@@ -175,6 +176,7 @@ export const pageQuery = graphql`
                   }
                 }
             }
+            alt
           }
         }
       }

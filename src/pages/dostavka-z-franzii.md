@@ -51,10 +51,6 @@ sections:
       Замовляйте доставку з Франції в Україну через сайт INTA-ICS, та отримайте
       БЕЗКОШТОВНУ консультацію від нашого менеджера.
     image: /img/inta-ics-доставка-з-франції-1.jpeg
-sectionText:
-  image: ''
-  text: '   test'
-  title: ''
 seoSections:
   title: Що везуть з Франції в Україну
   sections:
