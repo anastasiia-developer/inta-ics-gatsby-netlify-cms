@@ -1,25 +1,27 @@
 ---
 templateKey: international-cargo
 locale: ua
+metaData:
+  title: Карго доставка | INTA-ICS
+  description: Карго доставка | INTA-ICS
 title: Карго доставка
 name: cargo
 crumbLabelParent: ' Возможности доставки грузов'
 crumbLabel: Карго доставка
 description: >-
-  Просила ранее: добавить автоматическое перелистывание через 5 сек слайдера на
-  главной странице (сейчас можно перелистывать, только нажатием на стрелки
-  слайдера)
+  Компанія INTA-ICS пропонує клієнтам комплекс послуг з доставки вантажів в
+  Україну. Ми, також, приймемо товари від вашого постачальника, заповнимо
+  потрібні документи і займемося митним оформленням.
 header:
   images:
-    - alt: ss
-      image: /img/Group.png
-  scopeInformation: []
+    - alt: inta-ics-карго
+      image: /img/inta-ics-карго-доставка.png
+  scopeInformation:
+    - {}
 sections:
-  - text: >-
+  - text: |-
       #Hello & World
- 
       Hello & World      
-    
     title: можно заказать огромное количество
     image: /img/airdevsection.jpg
 seoSections:
