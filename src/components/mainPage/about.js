@@ -26,11 +26,16 @@ const Section = styled.section`
             font-weight: 500;
             margin-bottom: 1em;
         }
-        p{
+        p, h6{
             line-height: 1.7em;
             padding-bottom: .5em;
             color: #3D3D3D;
             font-size: 1em;
+        }
+        h6{
+            padding: 1em 0;
+            margin: 0;
+            font-weight: 500;
         }
     }
     ul{
