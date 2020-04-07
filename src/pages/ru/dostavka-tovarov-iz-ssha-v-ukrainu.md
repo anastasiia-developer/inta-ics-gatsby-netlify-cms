@@ -8,8 +8,8 @@ metaData:
     магазинов США &#9989; Выкуп товара, проверка, переупаковка, таможенное
     оформление. Консолидация и охрана груза до отправки #9742; 068 5555 999
 title: Доставка товаров из США
-name: dostavka-iz-ssha-v-ukrainu
-localeKey: dostavka-z-ssha-v-ukrainu
+name: dostavka-tovarov-iz-ssha-v-ukrainu
+localeKey: dostavka-tovariv-z-ssha-v-ukrainu
 crumbLabelParent: Доставка из США
 crumbLabel: Доставка товаров из США
 description: >-

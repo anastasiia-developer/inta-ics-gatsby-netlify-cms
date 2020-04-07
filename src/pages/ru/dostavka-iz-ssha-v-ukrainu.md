@@ -29,13 +29,13 @@ header:
       image: /img/inta_ics_z_ssha.png
   buttons:
     - text: 'Авиадоставка из США '
-      link: 'avia-dostavka-iz-ssha  '
+      link: avia-dostavka-iz-ssha/
     - text: 'Морская доставка грузов из США '
-      link: dostavka-morem-iz-ssha
+      link: dostavka-morem-iz-ssha/
     - text: 'Доставка товаров из США '
-      link: dostavka-iz-ssha-v-ukrainu
+      link: dostavka-iz-ssha-v-ukrainu/
     - text: Доставка контейнеров из США
-      link: dostavka-konteynerov-iz-ssha
+      link: dostavka-konteynerov-iz-ssha/
 sections:
   - title: Авиадоставка из США
     button:
@@ -71,7 +71,7 @@ sections:
       link: dostavka-morem-iz-ssha/
   - title: Доставка товаров из США
     button:
-      link: dostavka-iz-ssha-v-ukrainu/
+      link: dostavka-tovarov-iz-ssha-v-ukrainu/
       text: Узнать больше
     image: /img/inta_ics_dostavka_tovariv_z_ssha.jpg
     text: >-

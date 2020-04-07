@@ -163,7 +163,7 @@ destinations:
       flag: /img/151-united-arab-emirates.png
       link: dostavka-iz-oae
     - country: США
-      link: /dostavka-iz-ssha-v-ukrainu
+      link: dostavka-iz-ssha-v-ukrainu/
       flag: /img/002-united-states (3).png
     - country: Польша
       flag: /img/poland.png

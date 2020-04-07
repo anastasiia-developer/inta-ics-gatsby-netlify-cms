@@ -9,7 +9,7 @@ metaData:
     митне оформлення &#9989; Консолідація та охорона товару до відправлення &
     #9742; 068 5555 999
 title: Доставка товарів з США
-name: dostavka-z-ssha-v-ukrainu
+name: dostavka-tovariv-z-ssha-v-ukrainu
 crumbLabel: Доставка товарів з США
 crumbLabelParent: Доставка з США
 description: >-

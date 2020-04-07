@@ -32,7 +32,7 @@ header:
     - text: Морська доставка з США
       link: dostavka-morem-z-ssha/
     - text: 'Доставка товарів з США '
-      link: dostavka-z-ssha-v-ukrainu/
+      link: dostavka-tovariv-z-ssha-v-ukrainu/
     - text: Доставка контейнерів з США
       link: dostavka-konteyneriv-z-ssha/
 sections:
@@ -84,7 +84,7 @@ sections:
         image: /img/lov.png
     button:
       text: Дізнатись більше
-      link: dostavka-z-ssha-v-ukrainu/
+      link: dostavka-tovariv-z-ssha-v-ukrainu//
   - title: 'Доставка контейнерів з США '
     image: /img/inta_ics_morska_konteineriv_z_ssha.jpg
     text: >-
