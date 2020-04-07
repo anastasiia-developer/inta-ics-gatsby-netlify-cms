@@ -29,8 +29,9 @@ sections:
   - text: |-
       #Hello & World
       Hello & World      
-    title: можно заказать огромное количество
-    image: /img/airdevsection.jpg
+    title: Доставка карго від транспортної компанії INTA-ICS
+    image: /img/inta-ics-карго-доставка-1.jpg
+    alt: inta-ics-карго-1
 seoSections:
   title: Организация авиадоставки из США
   sections:
