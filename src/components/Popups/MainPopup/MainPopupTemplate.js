@@ -4,7 +4,6 @@ import {Close} from "../PopupThanks/PopupThanksTemplate";
 import PopupThanksRu from "../PopupThanks/index.ru";
 import PopupThanks from "../PopupThanks";
 import Phone from "../../FormComponents/Phone";
-import {encode} from "../../../pages/contacts/form";
 import HandleSubmit from "../../FormComponents/HandleSubmit";
 
 const Popup = styled.div`
@@ -140,7 +139,7 @@ const MainPopupTemplate = ({data, className}) => {
             }
             <Popup className={`popup ${className || ''}`} isDisplay={headerPopupOpen}>
                 <header className="row">
-                    <img className='logo' src="/img/logo.png" alt=""/>
+                    <img className='logo' src="/img/logo.png" alt="logo"/>
                     <Close onClick={ () => setHeaderPopupOpen(false) }/>
                 </header>
                 <h2>{mainPopup.title}</h2>
@@ -171,7 +170,7 @@ const MainPopupTemplate = ({data, className}) => {
                     <Phone
                         className="input social-btn"
                         name={'phone'}
-                        onChange={(e) => {console.log(e.target.value); setPhone(e.target.value)}}
+                        onChange={(e) => setPhone(e.target.value)}
                         required={true}
                     />
                     <button

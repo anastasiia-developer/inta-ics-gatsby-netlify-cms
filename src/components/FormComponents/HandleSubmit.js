@@ -1,11 +1,10 @@
-import React from "react"
 import {encode} from "../../pages/contacts/form";
 
 const HandleSubmit = ({
                           event: e,
-                          body: body,
-                          setPopupOpen: setPopupOpen,
-                          name: name}) => {
+                          body,
+                          setPopupOpen,
+                          name}) => {
     e.preventDefault();
 
     if(body.phone && body.phone.includes("_")){

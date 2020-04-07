@@ -1,7 +1,6 @@
 import React, {useState, useEffect, Fragment} from 'react'
 import { Link } from 'gatsby'
 import Navigation from './styled'
-import Search from './Search'
 import Login from './Login'
 import Language from './Language'
 import RuDelivery from './delivery/ru'
