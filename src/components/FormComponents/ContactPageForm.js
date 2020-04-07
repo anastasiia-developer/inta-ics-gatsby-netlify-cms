@@ -1,16 +1,9 @@
 import React, {Fragment, useState} from 'react'
 import styled from 'styled-components'
-import Phone from "../../components/FormComponents/Phone";
-import PopupThanks from "../../components/Popups/PopupThanks";
-import PopupThanksRu from "../../components/Popups/PopupThanks/index.ru";
-import HandleSubmit from "../../components/FormComponents/HandleSubmit";
-
-export function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
-
+import Phone from "./Phone";
+import PopupThanks from "../Popups/PopupThanks";
+import PopupThanksRu from "../Popups/PopupThanks/index.ru";
+import HandleSubmit from "./HandleSubmit";
 
 const Button = styled.button`
     align-items: center;
@@ -47,7 +40,7 @@ const From = styled.form`
   }
 `;
 
-const Form = ({locale, form}) => {
+const ContactPageForm = ({locale, form}) => {
   const [inputsValue, setInputsValue] = useState({});
   const [popupOpen, setPopupOpen] = useState(false);
 
@@ -109,4 +102,4 @@ const Form = ({locale, form}) => {
       </Fragment>
   )
 }
-export default Form
+export default ContactPageForm

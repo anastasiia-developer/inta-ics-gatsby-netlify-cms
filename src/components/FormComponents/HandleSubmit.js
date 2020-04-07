@@ -1,4 +1,9 @@
-import {encode} from "../../pages/contacts/form";
+function encode(data) {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+}
+
 
 const HandleSubmit = ({
                           event: e,

@@ -1,6 +1,5 @@
 import React, {Fragment, useState} from "react";
 import styled from "styled-components";
-import { encode} from "../../../pages/contacts/form";
 import Phone from "../../FormComponents/Phone";
 import PopupThanks from "../../Popups/PopupThanks";
 import PopupThanksRu from "../../Popups/PopupThanks/index.ru";
@@ -109,20 +108,6 @@ const FormFooterTemplate = ({data}) => {
     const [isOpenPopup, setPopupOpen] = useState(false);
     const footerData = data.footer.formFooter;
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const form = e.target
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({
-                'form-name': form.getAttribute('name'),
-                ...inputsValue,
-            }),
-        })
-            .then(() => setPopupOpen(true))
-            .catch(error => alert(error))
-    };
     const handleChange = (e) => {
         setInputsValue({...inputsValue, [e.target.name]: e.target.value});
     };

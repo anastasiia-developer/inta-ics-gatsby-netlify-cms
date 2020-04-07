@@ -29,6 +29,10 @@ export const Section = styled(Sections)`
     .description h2{
         color: #393939;
     }
+    .description ul{
+        list-style: initial;
+        padding-bottom: 0.5em;
+    }
     .gatsby-image-wrapper{
         width: 50%;
         @media(max-aspect-ratio: 3/3), (max-height: 500px){    

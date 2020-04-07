@@ -4,7 +4,7 @@ import React, {Fragment} from "react";
 import TemplateHeader from "../../components/TemplateHeader";
 import News from "../../components/NewsRoll";
 import NewsRu from "../../components/NewsRoll/index.ru";
-import Form from "./form";
+import ContactPageForm from "../../components/FormComponents/ContactPageForm";
 import BarContacts from "../../components/nav/BarContacts";
 import styled from "styled-components";
 import Store from "../../components/store";
@@ -54,7 +54,7 @@ export const ContactPageTemplate = ({
             crumbLabel={title}
             childrenInColumn={
                 <Fragment>
-                    <Form locale={locale} form={form}/>
+                    <ContactPageForm locale={locale} form={form}/>
                     <BarContacts/>
                     <Store/>
                 </Fragment>}
