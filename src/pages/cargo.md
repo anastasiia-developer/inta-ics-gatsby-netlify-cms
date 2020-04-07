@@ -19,7 +19,12 @@ header:
     - alt: inta-ics-карго
       image: /img/inta-ics-карго-доставка.png
   scopeInformation:
-    - {}
+    - text: Комплекс послуг
+      image: /img/time.png
+    - text: Зручна система оплати
+      image: /img/card.png
+    - text: Оперативність
+      image: /img/lov.png
 sections:
   - text: |-
       #Hello & World
