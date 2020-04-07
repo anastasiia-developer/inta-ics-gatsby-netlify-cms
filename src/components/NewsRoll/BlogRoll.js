@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from "styled-components";
-import Post from "./Post";
-import {ButtonGroup, ResponsiveCarousel} from "./CommonCarousel";
+import Post from "../Post";
+import {ButtonGroup, ResponsiveCarousel} from "../CommonCarousel";
 import Carousel from "react-multi-carousel";
 
 const Wrapper = styled.div`

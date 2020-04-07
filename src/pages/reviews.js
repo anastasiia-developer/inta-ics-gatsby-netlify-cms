@@ -9,7 +9,6 @@ import FormFooter from "../components/Footer/FormFooter";
 import FormFooterRu from "../components/Footer/FormFooter/index.ru";
 import TitleDesHelmet from "../components/TitleDesHelmet";
 import {ContentInFrontmatter} from '../components/Content'
-import {IndexPageTemplate} from "./index";
 
 const Wrapper = styled.div`
     header .btn{

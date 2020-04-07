@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "gatsby";
-import BlogRoll from "../BlogRoll";
+import BlogRoll from "./BlogRoll";
 import styled from "styled-components";
 
 const Section = styled.section`

@@ -5,6 +5,7 @@ import Phone from "../../FormComponents/Phone";
 import PopupThanks from "../../Popups/PopupThanks";
 import PopupThanksRu from "../../Popups/PopupThanks/index.ru";
 import { HTMLContent } from '../../Content';
+import HandleSubmit from "../../FormComponents/HandleSubmit";
 
 const FormCommon = styled.div`
   background: linear-gradient(107deg, #005BE4 -0.2%, #4900E4 100.11%);
@@ -148,7 +149,12 @@ const FormFooterTemplate = ({data}) => {
                     method="post"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
-                    onSubmit={(e) => handleSubmit(e)}
+                    onSubmit={(e) => HandleSubmit({
+                        event: e,
+                        name: "Есть вопрос, Наш менеджер ответит вам за 15 минут",
+                        body: inputsValue,
+                        setPopupOpen: setPopupOpen
+                    })}
                     className="row-to-column wrapper">
 
                     {/* The `form-name` hidden field is required to support form submissions without JavaScript */}

@@ -63,6 +63,7 @@ export const IndexPageTemplate = ({
       alt={about.alt}
     />
       <TemplateCommonComponent
+        locale={locale}
         calculate
         news
         destinations
@@ -70,7 +71,6 @@ export const IndexPageTemplate = ({
         clients
         reviews
       />
-      {console.log(seoSections)}
     <Article seoSections={seoSections}/>
   </Fragment>
 )

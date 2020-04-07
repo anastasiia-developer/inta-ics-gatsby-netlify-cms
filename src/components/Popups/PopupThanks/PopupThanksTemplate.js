@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import SocialMedia from '../../SocialMedia'
 import PreviewCompatibleImage from "../../PreviewCompatibleImage";
 import {ContentInFrontmatter} from '../../Content'
+import {localizedPath} from "../../../data/localizedPath";
 
 const Overlay = styled.div`
     position: fixed;
@@ -247,7 +248,7 @@ const Title = styled(ContentInFrontmatter)`
     }
 `;
 
-const PopupThanksTemplate = ({data, close, className}) =>
+const PopupThanksTemplate = ({data, close, className, locale}) =>
     <Overlay className={`overlay ${className || ''}`}>
        <Wrapper>
            <Close onClick={() => close(false)}/>
@@ -277,7 +278,7 @@ const PopupThanksTemplate = ({data, close, className}) =>
                     <img src="/img/popupFooter.png" alt="image"/>
                     <div className="popup-column">
                         <Title content={data.bonusTitle}/>
-                        <Link to={`blog/${data.locale === 'ua' ? '' : data.locale}/${data.btnLink}`} className='btn'>{data.btn}</Link>
+                        <Link to={localizedPath({path: `blog/${data.btnLink}`, lang:locale })} className='btn'>{data.btn}</Link>
                         <SocialMedia/>
                     </div>
                 </div>

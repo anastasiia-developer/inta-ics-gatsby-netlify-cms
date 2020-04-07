@@ -9,7 +9,7 @@ import Section from '../components/Blog/Blog-post-style'
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Tags from "../components/Blog/TagStyle";
 import ArrowLine from '../img/arrowLine.svg'
-import BlogRoll from '../components/BlogRoll'
+import BlogRoll from '../components/NewsRoll/BlogRoll'
 import TitleDesHelmet from "../components/TitleDesHelmet";
 
 export const BlogPostTemplate = ({
@@ -37,7 +37,7 @@ export const BlogPostTemplate = ({
                         locale={locale}
                         crumbLabel={title}
                         crumbLabelParent="Блог"
-                        crumbPathParent="/blog/"
+                        crumbPathParent="blog/"
                     />
                 }
             </div>

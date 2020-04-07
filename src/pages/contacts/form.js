@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Phone from "../../components/FormComponents/Phone";
 import PopupThanks from "../../components/Popups/PopupThanks";
 import PopupThanksRu from "../../components/Popups/PopupThanks/index.ru";
+import HandleSubmit from "../../components/FormComponents/HandleSubmit";
 
 export function encode(data) {
   return Object.keys(data)
@@ -22,6 +23,7 @@ const Button = styled.button`
     color: #fff;
     flex: 1;
     background: linear-gradient(100.69deg, #005BE4 0%, #4900E4 100%);
+    cursor: pointer;
     @media(max-aspect-ratio: 3/3), (max-height: 500px){
         margin: 0 0 2em 0;
     }
@@ -50,23 +52,8 @@ const Form = ({locale}) => {
   const [popupOpen, setPopupOpen] = useState(false);
 
   const handleChange = e => {
-    setInputsValue({ [e.target.name]: e.target.value })
+    setInputsValue({ ...inputsValue, [e.target.name]: e.target.value })
   };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...inputsValue,
-      }),
-    })
-      .then(() => setPopupOpen(true))
-      .catch(error => alert(error))
-  }
 
   return (
       <Fragment>
@@ -84,7 +71,11 @@ const Form = ({locale}) => {
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit={(e) => handleSubmit(e)}
+          onSubmit={(e) => HandleSubmit({
+            event: e,
+            body: inputsValue,
+            name: "страница контактов",
+            setPopupOpen: setPopupOpen})}
           className="row-to-column"
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}

@@ -5,7 +5,6 @@ import FlagsRu from "../Flags/index.ru"
 import Arrow from "../../img/arrow.svg"
 import Tel from "../../img/tel.svg"
 import Email from "../../img/email.svg"
-import {encode} from "../../pages/contacts/form"
 import Phone from '../FormComponents/Phone'
 import HandleSubmit from "../FormComponents/HandleSubmit"
 import PopupThanks from "../Popups/PopupThanks";
@@ -74,7 +73,7 @@ const Wrapper = styled.section`
     outline: none;
     flex: 4;
     & + .column{
-      margin-left: 4em;
+      margin-left: 3em;
       @media(max-aspect-ratio: 3/3), (max-height: 500px){
         margin-left: 0;
         margin-top: 2em;
@@ -164,7 +163,7 @@ const Wrapper = styled.section`
     }
   }
   .cargo-weight{
-    flex: 3;
+    flex: 2.3;
     input{
       width: 90%;
       border-right: 1px solid #ccc;
@@ -181,9 +180,10 @@ const Wrapper = styled.section`
             width: 20%;
           }
         }
-      .flags{
+      span{
         width: 30%;
-        margin-left: 70%;
+        padding: 0 .5em;
+        font-weight: 700;
         color: #005BE4;
       }
     }
@@ -231,6 +231,7 @@ const CalculateBlock = ({
                         <button
                             className="title row"
                             name={name}
+                            type="button"
                             onClick={() =>setOptions({...stateOptions, open: !stateOptions.open })}>
                             {(flag || stateOptions.flag) &&
                                 <img src={`/img/${stateOptions.flag || flag}.png`} alt={optionState} className="flag"/>
@@ -253,26 +254,6 @@ const CalculateHeaderTemplate = ({data}) => {
     });
     const [popupOpen, setPopupOpen] = useState(false);
     const text = data.calculateHeader;
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-        const from = optionsFrom.value;
-        const form = e.target;
-
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({
-                'form-name': form.getAttribute('name'),
-                ...inputsValue,
-                optionsTo,
-                from
-            }),
-        })
-            .then(() => setPopupOpen(true))
-            .catch(error => alert(error))
-    };
 
     const handleChange = (e) => {
         if(e.target.name === 'weight'){
@@ -297,14 +278,14 @@ const CalculateHeaderTemplate = ({data}) => {
             <h3>{text.title}</h3>
             <h4>{text.description}</h4>
             <form
-                name="footerContact"
+                name="calculatorHeader"
                 method="post"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={(e) => HandleSubmit({
                     event: e,
-                    body:{  inputsValue,
-                            optionsTo,
+                    name: "calculatorHeader",
+                    body:{  ...inputsValue,
                             optionsFrom: optionsFrom.value},
                     setPopupOpen: setPopupOpen
                 })}
@@ -342,11 +323,12 @@ const CalculateHeaderTemplate = ({data}) => {
                 />
                 <CalculateBlock
                     title={text.weight}
-                    option="kg"
+                    option={false}
                     flag={false}
                     className="cargo-weight"
                     options={
                         <Fragment>
+                            <span>kg</span>
                             <input
                                 type="text"
                                 name={'weight'}
@@ -354,11 +336,6 @@ const CalculateHeaderTemplate = ({data}) => {
                                 required={true}
                                 onChange={(e) => handleChange(e)}
                             />
-                        <ul className="flags">
-                            <li data-value='kg'>kg</li>
-                            <li data-value='g'>g</li>
-                            <li data-value='t'>t</li>
-                        </ul>
                         </Fragment>}
                     stateOptions={optionsWeight}
                     setOptions={setOptionsWeight}

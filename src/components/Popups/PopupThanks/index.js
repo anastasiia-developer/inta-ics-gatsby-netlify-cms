@@ -29,6 +29,6 @@ export default ({close}) => (
                 }
             }
     `}
-        render={(data) => <PopupThanksTemplate close={close} data={data.markdownRemark.frontmatter.popupThanks} />}
+        render={(data) => <PopupThanksTemplate close={close} data={data.markdownRemark.frontmatter.popupThanks} locale={data.markdownRemark.frontmatter.locale} />}
     />
 )

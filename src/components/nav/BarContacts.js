@@ -32,15 +32,15 @@ const Wrapper = styled.div`
 const BarContacts = () =>
     <Wrapper className='bar-contacts row-to-column'>
         <a href="tel:+380685555999">
-            <Tel className="icon" alt="contacts" />
+            <Tel className="icon"/>
             +38 (068) 5555 999
         </a>
         <a href="mailto:info@inta-ics.com">
-            <Email className="icon" alt="contacts" />
+            <Email className="icon" />
             info@inta-ics.com
         </a>
         <a href="https://goo.gl/maps/PUnnVxgtAhrCJxtX8" >
-            <Local className="icon" alt="contacts" />
+            <Local className="icon" />
             Украина, Киев, ул. Линейная 17
         </a>
     </Wrapper>

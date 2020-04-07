@@ -5,6 +5,7 @@ import PopupThanksRu from "../PopupThanks/index.ru";
 import PopupThanks from "../PopupThanks";
 import Phone from "../../FormComponents/Phone";
 import {encode} from "../../../pages/contacts/form";
+import HandleSubmit from "../../FormComponents/HandleSubmit";
 
 const Popup = styled.div`
     position: fixed;
@@ -113,23 +114,6 @@ const MainPopupTemplate = ({data, className}) => {
     const [headerPopupOpen, setHeaderPopupOpen] = useState(false);
     const mainPopup = data.mainPopup;
 
-    const handleSubmit = e => {
-        e.preventDefault();
-        setHeaderPopupOpen(false);
-
-        const form = e.target
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({
-                'form-name': form.getAttribute('name'),
-                ...phone,
-            }),
-        })
-            .then(() => setPopupOpen(true))
-            .catch(error => alert(error))
-    };
-
     useEffect( () => {
         if(window.matchMedia("(max-aspect-ratio: 3/3)").matches){
             setTimeout(() => setHeaderPopupOpen(true), 30000)
@@ -177,12 +161,17 @@ const MainPopupTemplate = ({data, className}) => {
                     method="post"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
-                    onSubmit={(e) => handleSubmit(e)}
+                    onSubmit={(e) => HandleSubmit({
+                        name: "консультация прямо сейчас!",
+                        body: {phone},
+                        event: e,
+                        setPopupOpen: setPopupOpen,
+                    })}
                     className="white column">
                     <Phone
                         className="input social-btn"
                         name={'phone'}
-                        onChange={(e) => setPhone(e.value)}
+                        onChange={(e) => {console.log(e.target.value); setPhone(e.target.value)}}
                         required={true}
                     />
                     <button

@@ -84,7 +84,6 @@ const InternationalDestinations = ({ data, location, pageContext }) => {
 
     return (
         <Layout local={pageContext.locale} location={{location, localePath:pageContext.localePath}}>
-            {console.log(frontmatter.sectionText)}
             {frontmatter.header.buttons || frontmatter.sectionText || (frontmatter.sections && frontmatter.sections.some(section => section.button != null)) ?
                 <DeliveryTemplate
                     sectionText={frontmatter.sectionText}

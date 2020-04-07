@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import {HTMLContent} from "../Content";
+const _ = require('lodash');
 
 const Section = styled.section`
     margin-bottom: 6em;
@@ -215,17 +216,9 @@ const ConstituentsWrapper = styled.div`
 `;
 
 const Constituents = ({title, category, setAmount, amount, canChoose, name, order}) => {
-    const [isActive, setActive] = useState(null);
+    const initialState = _.findIndex(category, 'default') === -1 ? null : _.findIndex(category, 'default');
 
-    useEffect(() => {
-        category.forEach((item, key) => {
-
-            if(!!item.default) {
-                setActive(key);
-            }
-        }
-        )
-    },[]);
+    const [isActive, setActive] = useState(initialState);
 
     const SetActive = (key, blockPrice) => {
         if(category.find(item => item.default === true)){
@@ -318,7 +311,7 @@ const CalculatorTemplate = ({ data }) => {
                                 </label>
                                 <button
                                     onClick={() => setIsActive(true)}
-                                    disabled={weight === 0 || weight === '' && true}>{resultBlock.btnText}</button>
+                                    disabled={weight === 0 || weight === ''}>{resultBlock.btnText}</button>
                             </div>
                             <p>{resultBlock.resultText}</p>
                             <div className="amount">${weight !== 0 && isActive ? formula()  : 0 }</div>

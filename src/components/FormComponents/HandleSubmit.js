@@ -1,16 +1,22 @@
 import React from "react"
 import {encode} from "../../pages/contacts/form";
 
-const HandleSubmit = ({event: e, body: body, setPopupOpen: setPopupOpen}) => {
+const HandleSubmit = ({
+                          event: e,
+                          body: body,
+                          setPopupOpen: setPopupOpen,
+                          name: name}) => {
     e.preventDefault();
 
-    const form = e.target;
-
+    if(body.phone && body.phone.includes("_")){
+        return;
+    }
+    //https://crm.inta.group/clients/newlead
     fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
-            'form-name': form.getAttribute('name'),
+            'form-name': name,
             ...body
         }),
     })
