@@ -96,7 +96,7 @@ collections:
       {label: Link, name: link, widget: string, required: false}
       ]}
       ]}
-      - {label: "sectionText", name: "sectionText", widget: object, fields: [
+      - {label: "секция где только текст и меленькая!!! картинка внизу", name: "sectionText", widget: object, fields: [
       {label: "Title", name: "title", widget: string, required: false},
       {label: "меленькая картинка типа самолетик или поезд", name: image, widget: image, required: false},
       {label: "alt", name: alt, widget: string, required: false},
@@ -157,7 +157,7 @@ collections:
       {label: Link, name: link, widget: string, required: false}
       ]}
       ]}
-      - {label: "sectionText", name: "sectionText", widget: object, fields: [
+      - {label: "секция где только текст и меленькая!!! картинка внизу", name: "sectionText", widget: object, fields: [
       {label: "Title", name: "title", widget: string, required: false},
       {label: "меленькая картинка типа самолетик или поезд", name: image, widget: image, required: false},
       {label: "alt", name: "alt", widget: string, required: false},
@@ -216,7 +216,7 @@ collections:
       {label: Link, name: link, widget: string, required: false}
       ]}
       ]}
-      - {label: "секция где текст и меленькая картинка внизу", name: "sectionText", widget: object, fields: [
+      - {label: "секция где только текст и меленькая!!! картинка внизу", name: "sectionText", widget: object, fields: [
       {label: "Title", name: "title", widget: string, required: false},
       {label: "меленькая картинка типа самолетик или поезд", name: image, widget: image, required: false},
       {label: "Текст", name: text, widget: "markdown"},
@@ -275,7 +275,7 @@ collections:
       {label: Link, name: link, widget: string, required: false}
       ]}
       ]}
-      - {label: "секция где текст и меленькая картинка внизу", name: "sectionText", widget: object, fields: [
+      - {label: "секция где только текст и меленькая!!! картинка внизу", name: "sectionText", widget: object, fields: [
       {label: "Title", name: "title", widget: string, required: false},
       {label: "меленькая картинка типа самолетик или поезд", name: image, widget: image, required: false},
       {label: "Текст", name: text, widget: "markdown"},
