@@ -816,10 +816,16 @@ collections:
           - {label: CrumbLabel, name: crumbLabel, widget: string, required: false}
           - {label: name, name: name, widget: string, required: false}
           - {label: Header, name: header, widget: object, fields: [
+          {label: Images, name: images, widget: list, fields: [
           {label: Image, name: image, widget: image, required: false},
-          {label: Alt, name: alt, widget: string, required: false},
-          {label: tel, name: tel, widget: string, required: false},
+          {label: Alt, name: alt, widget: string, required: false}
+          ]},
+
+          ]}
+          - {label: form, name: form, widget: object, fields: [
           {label: name, name: name, widget: string, required: false},
+          {label: phone, name: phone, widget: string, required: false},
+          {label: текст на кнопке, name: btn, widget: string, required: false},
           ]}
   - name: "pages-ru"
     label: "Страницы RU"
@@ -962,8 +968,14 @@ collections:
           - {label: CrumbLabel, name: crumbLabel, widget: string, required: false}
           - {label: name, name: name, widget: string, required: false}
           - {label: Header, name: header, widget: object, fields: [
-          {label: Image, name: image, widget: image, required: false},
-          {label: Alt, name: alt, widget: string, required: false},
-          {label: tel, name: tel, widget: string, required: false},
-          {label: name, name: name, widget: string, required: false},
+              {label: Images, name: images, widget: list, fields: [
+              {label: Image, name: image, widget: image, required: false},
+              {label: Alt, name: alt, widget: string, required: false}
+              ]},
+
+          ]}
+          - {label: form, name: form, widget: object, fields: [
+              {label: name, name: name, widget: string, required: false},
+              {label: phone, name: phone, widget: string, required: false},
+              {label: текст на кнопке, name: btn, widget: string, required: false},
           ]}

@@ -13,6 +13,7 @@ import ServicesPagePreview from './preview-templates/ServicesPagePreview'
 
 import withStyledComponentsRendered from './StyleManager'
 import InternationalDestinationsPreview from "./preview-templates/InternationalDestinationsPreview";
+import ContactPagePreview from "./preview-templates/ContactPagePreview";
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
@@ -85,4 +86,11 @@ CMS.registerPreviewTemplate(
     'services-ru',
     withStyledComponentsRendered(ServicesPagePreview)
 );
-
+CMS.registerPreviewTemplate(
+    'contact',
+    withStyledComponentsRendered(ContactPagePreview)
+);
+CMS.registerPreviewTemplate(
+    'contact-ru',
+    withStyledComponentsRendered(ContactPagePreview)
+);

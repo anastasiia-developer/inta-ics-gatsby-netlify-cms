@@ -47,7 +47,7 @@ const From = styled.form`
   }
 `;
 
-const Form = ({locale}) => {
+const Form = ({locale, form}) => {
   const [inputsValue, setInputsValue] = useState({});
   const [popupOpen, setPopupOpen] = useState(false);
 
@@ -93,17 +93,17 @@ const Form = ({locale}) => {
             onChange={(e) => handleChange(e)}
             id={'name'}
             required={true}
-            placeholder={'Имя'}
+            placeholder={form.name}
           />
           <Phone
             className="input"
             name={'phone'}
             onChange={(e) => handleChange(e)}
             required={true}
-            placeholder={'Номер телефона'}
+            placeholder={form.phone}
           />
           <Button type="submit">
-            Заказать звонок
+            {form.btn}
           </Button>
         </From>
       </Fragment>

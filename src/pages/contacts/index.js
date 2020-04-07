@@ -40,7 +40,8 @@ export const ContactPageTemplate = ({
                                         header,
                                         location,
                                         morePhotoIcon,
-                                        locale
+                                        locale,
+                                        form
                                     }) =>
     <Wrapper>
         { helmet || ''}
@@ -53,7 +54,7 @@ export const ContactPageTemplate = ({
             crumbLabel={title}
             childrenInColumn={
                 <Fragment>
-                    <Form locale={locale}/>
+                    <Form locale={locale} form={form}/>
                     <BarContacts/>
                     <Store/>
                 </Fragment>}
@@ -83,8 +84,8 @@ const ContactPage = ({ data, location, pageContext }) => {
             <ContactPageTemplate
                 helmet={
                     <TitleDesHelmet
-                        title={frontmatter.metaData && frontmatter.metaData.title || frontmatter.title}
-                        description={frontmatter.metaData && frontmatter.metaData.description || frontmatter.description}
+                        title={frontmatter.metaData ? frontmatter.metaData.title : frontmatter.title}
+                        description={frontmatter.metaData ? frontmatter.metaData.description : frontmatter.description}
                     />
                 }
                 title={frontmatter.title}
@@ -93,6 +94,7 @@ const ContactPage = ({ data, location, pageContext }) => {
                 location={location}
                 locale={pageContext.locale}
                 morePhotoIcon={data.fileName}
+                form={frontmatter.form}
             />
             {pageContext.locale === 'ua' ?
                 <FormFooter />
@@ -125,7 +127,12 @@ export const pageQuery = graphql`
                         }
                     }
                 }
-            }       
+            }  
+            form{
+                name
+                phone
+                btn
+            }     
         }
     }
     fileName: file(relativePath: { eq: "morePhoto.png" }) {
