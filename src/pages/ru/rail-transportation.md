@@ -85,7 +85,7 @@ sections:
       text: Узнать больше
       link: perevozki-negabaritnyih-gruzov/
 sectionText:
-  image: /img/TrainBckg.png
+  image: /img/trainBckgSectionText.png
   text: >-
     Транспортировка товаров из Китая железными дорогами является оптимальным
     вариантом для предпринимателей, заинтересованных в недорогой доставке
