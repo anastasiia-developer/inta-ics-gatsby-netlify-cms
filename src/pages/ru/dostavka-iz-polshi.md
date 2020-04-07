@@ -10,7 +10,7 @@ metaData:
 title: Доставка из Польши
 name: dostavka-iz-polshi
 localeKey: dostavka-z-polschi
-crumbLabelParent: '???????????'
+crumbLabelParent: Международные грузоперевозки
 crumbLabel: Доставка из Польши
 description: >-
   В компании INTA-ICS вы получите полный комплекс услуг по международной
