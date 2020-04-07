@@ -27,7 +27,6 @@ header:
     - text: Викуп товару
       image: /img/lov.png
 sectionText:
-  image: /img/inta-ics_dostavka-z-gonkongu-v-ukrainu-1.jpg
   text: >-
     Китай відкриває широкі можливості для бізнесу багато в чому завдяки
     Гонконгу. Це місто є одним з провідних фінансових центрів не тільки Азії,

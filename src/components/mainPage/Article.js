@@ -36,10 +36,11 @@ const Section = styled.article`
         font-weight: 500;
         font-size: 1.55em;
         text-align: center;
+        margin: 1em auto;
     }
     h3{
         font-weight: 500;
-        margin-bottom: 1em;
+        margin: 1em auto;
     }
     .wrapper{
         margin: 0 auto;
