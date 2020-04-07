@@ -1,6 +1,5 @@
 ---
 templateKey: delivery
-order: 1
 title: Авіадоставка вантажів
 metaData:
   title: Авіадоставка вантажів в Україну | INTA-ICS
@@ -36,11 +35,11 @@ sections:
       link: avia-dostavka-z-kytaju/
       text: Дізнатись більше
     list:
-      - image: /img/ (1).png
+      - image: /img/icon-inta-ics-5.png
         title: Термін від 5 днів
-      - image: /img/ (1).png
+      - image: /img/icon-inta-ics-11.png
         title: Власні склади
-      - image: /img/ (1).png
+      - image: /img/icon-inta-ics-2.png
         title: Швидка консультація
     text: >-
       <p>Транспортування повітряними шляхами - це оптимальний спосіб швидко
@@ -49,11 +48,11 @@ sections:
     title: 'Авіадоставка з Китаю '
   - image: /img/копія-_сео-текст-1.jpg
     list:
-      - image: /img/ (1).png
+      - image: /img/icon-inta-ics-5.png
         title: Термін від 5 днів
-      - image: /img/ (1).png
+      - image: /img/icon-inta-ics-11.png
         title: Власні склади
-      - image: /img/ (1).png
+      - image: /img/icon-inta-ics-2.png
         title: Швидка консультація
     text: >-
       <p>Компанія INTA-ICS пропонує послуги авіаперевезення товарів з США в
@@ -253,5 +252,6 @@ seoSections:
         після чого наш менеджер зв'яжеться з вами і проконсультує з усіх
         питань.</p>
       alt: ' inta-ics-авіа-доставка-4'
+order: 1
 locale: ua
 ---
