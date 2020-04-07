@@ -32,10 +32,8 @@ const Section = styled.section`
             color: #3D3D3D;
             font-size: 1em;
         }
-        h6{
-            padding: 1em 0;
-            margin: 0;
-            font-weight: 500;
+        ul{
+            padding-bottom: 1em;
         }
     }
     ul{
