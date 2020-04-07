@@ -12,7 +12,7 @@ metaData:
 title: Доставка из Китая
 name: dostavka-iz-kitaya
 localeKey: dostavka-z-kitayu
-crumbLabelParent: '&&&&&&&&&'
+crumbLabelParent: Международные грузоперевозки
 crumbLabel: Доставка из Китая
 description: >-
   INTA-ICS предлагает услуги грузоперевозок из Китая железной дорогой, а также
