@@ -63,8 +63,8 @@ const Section = styled(About)`
                 margin-bottom: .5em;
             }
             .gatsby-image-wrapper{
-                width: 1em;
-                margin-right: 1em;
+                width: 1.3em;
+                margin-right: .5em;
             }
         }
     }
