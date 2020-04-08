@@ -24,18 +24,20 @@ const Section = styled.section`
         h2{
             color: ${props => props.hasChildren ? '#474747' : '#005BE4'};
             font-weight: 500;
-            margin-bottom: 1em;
+            margin: 1em auto;
         }
-        p, h6{
+        p{
             line-height: 1.7em;
             padding-bottom: .5em;
             color: #3D3D3D;
             font-size: 1em;
         }
-        ul{
-            padding-bottom: 1em;
+        .text ul, h3{
+            padding-bottom: .5em;
+            margin: 0;
         }
     }
+    
     ul{
         font-size: 1em;
         color: #005BE4;
@@ -52,7 +54,8 @@ const Section = styled.section`
 `;
 
 const About = ({ title, image, alt, text, className, children }) => (
-    <Section className={`row-to-column ${className}`} hasChildren={!!children}>
+    <Section className={`row-to-column ${className}`}
+             hasChildren={!!children}>
         <div className="description">
             {title &&
                 <h2>{title}</h2>

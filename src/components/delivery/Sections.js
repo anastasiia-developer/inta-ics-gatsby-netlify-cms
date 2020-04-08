@@ -8,7 +8,7 @@ import PreviewCompatibleImage from "../PreviewCompatibleImage";
 const Section = styled(About)`
     margin: 0;
     align-items: center;
-    flex-direction: row-reverse;
+    flex-direction: ${ props => props.flexDirection ? props.flexDirection : "row"};
     justify-content: space-between;
     background: #fff; 
     &:nth-of-type(even){
@@ -79,7 +79,7 @@ const Section = styled(About)`
     }
 `;
 
-const Sections = ({ sections, locale, className }) => (
+const Sections = ({ sections, locale, className, flexDirection }) => (
     <Fragment>
         {sections && sections.length > 0 && sections.map((section, index) =>
             <Section
@@ -89,6 +89,7 @@ const Sections = ({ sections, locale, className }) => (
                 image={section.image}
                 alt={section.alt}
                 text={section.text}
+                flexDirection={flexDirection}
                 children={
                     section.list && section.list.length > 0 &&
                     <Fragment>

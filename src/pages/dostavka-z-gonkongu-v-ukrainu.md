@@ -27,7 +27,7 @@ header:
     - text: Викуп товару
       image: /img/lov.png
 sections:
-  - image: /img/inta-ics_dostavka-z-gonkongu-v-ukrainu-1.jpg
+  - image: /img/c636ce98-6fd3-43d5-bed0-0a6d13001c04.jpeg
     text: >-
       Китай відкриває широкі можливості для бізнесу багато в чому завдяки
       Гонконгу. Це місто є одним з провідних фінансових центрів не тільки Азії,
@@ -61,6 +61,7 @@ sections:
       щоб наш менеджер зв'язався з вами для попереднього розрахунку вартості
       послуг і обговорення деталей замовлення.
     title: Доставка з Гонконгу
+    alt: dostavka-z-gonkongu
 seoSections:
   title: Що везуть з Гонконгу
   sections:

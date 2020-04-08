@@ -57,6 +57,7 @@ export const DeliveryTemplate = ({
             <Sections
                 sections={sections}
                 locale={locale}
+                flexDirection="row-reverse"
             />
             {sectionText &&
                 <SectionText

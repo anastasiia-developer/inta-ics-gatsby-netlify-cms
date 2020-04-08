@@ -30,17 +30,16 @@ const Section = styled.article`
             width: 100%;
             padding: 1em;
         }
+        
     }
     h2{
         color: #005BE4;
         font-weight: 500;
         font-size: 1.55em;
         text-align: center;
-        margin: 1em auto;
     }
     h3{
         font-weight: 500;
-        margin: 1em auto;
     }
     .wrapper{
         margin: 0 auto;
@@ -66,6 +65,7 @@ const Article = ({seoSections}) =>{
             }
             <Sections
                 className='wrapper'
+                flexDirection="row-reverse"
                 sections={seoSections.sections}
             />
         </Section>
