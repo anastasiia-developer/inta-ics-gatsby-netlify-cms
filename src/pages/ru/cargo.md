@@ -19,7 +19,13 @@ header:
   images:
     - alt: ' inta-ics-карго'
       image: /img/inta-ics-карго-доставка.png
-  scopeInformation: []
+  scopeInformation:
+    - text: Комплекс услуг
+      image: /img/time.png
+    - text: Удобная система оплаты
+      image: /img/card.png
+    - text: Оперативность
+      image: /img/lov.png
 sections:
   - text: >-
       нных Штатах Америки можно заказать огромное количество уникальных товаров,
