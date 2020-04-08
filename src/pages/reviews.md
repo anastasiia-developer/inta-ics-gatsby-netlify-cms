@@ -1,20 +1,21 @@
 ---
-pageKey: reviews
-locale: ua
-collection: help
-title: Отзиви
-crumbLabel: Отзывы
 crumbLabelParent: Помощь
-description: >-
-    Мы откриты для вас и готовы делиться реальными отзывами.
+metaData:
+  title: ''
+  description: ''
+title: Отзывы
+description: Мы откриты для вас и готовы делиться реальными отзывами.
+crumbLabel: Отзывы
 name: reviews
 header:
-    images:
-      - alt: cost-page
-        image: /img/blogBkg.png
-    buttons:
-        - link: contacts
-          text: Оставить отзыв
+  images:
+    - alt: cost-page
+      image: /img/blogBkg.png
+  buttons:
+    - link: contacts
+      text: Оставить отзыв
+pageKey: reviews
+locale: ua
 reviews:
   - name: Иван Зац
     source:
@@ -25,7 +26,7 @@ reviews:
       куда его отправлять . Был приятно удивлен скоростью. На следующий день
       забрал в отделении, сделали дополнительную упаковку - бесплатно. Ребята ,
       так держать
-    date: 18.11.2020  
+    date: 18.11.2020
   - name: Anastasiia
     source:
       name: отзывы Google
@@ -37,7 +38,7 @@ reviews:
       praesentium quia repudiandae totam velit veniam veritatis voluptates. Amet
       cupiditate deleniti dolor error, facilis laborum possimus provident quasi
       quo repellendus sequi, tempora, unde?
-    date: 18.11.2020  
+    date: 18.11.2020
   - name: Иван Зац
     source:
       name: отзывы Google
@@ -47,7 +48,7 @@ reviews:
       куда его отправлять . Был приятно удивлен скоростью. На следующий день
       забрал в отделении, сделали дополнительную упаковку - бесплатно. Ребята ,
       так держать
-    date: 18.11.2020  
+    date: 18.11.2020
   - name: Anastasiia
     source:
       name: отзывы Google
@@ -59,5 +60,6 @@ reviews:
       praesentium quia repudiandae totam velit veniam veritatis voluptates. Amet
       cupiditate deleniti dolor error, facilis laborum possimus provident quasi
       quo repellendus sequi, tempora, unde?
-    date: 18.11.2020  
---- 
+    date: 18.11.2020
+collection: help
+---
