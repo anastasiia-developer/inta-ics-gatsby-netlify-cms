@@ -5,7 +5,8 @@ import TemplateHeader from "../../components/TemplateHeader";
 import News from "../../components/NewsRoll";
 import NewsRu from "../../components/NewsRoll/index.ru";
 import ContactPageForm from "../../components/FormComponents/ContactPageForm";
-import BarContacts from "../../components/nav/BarContacts";
+import BarContactsTemplate from "../../components/BarContacts";
+import BarContactsTemplateRu from "../../components/BarContacts/index.ru";
 import styled from "styled-components";
 import Store from "../../components/store";
 import FormFooter from '../../components/Footer/FormFooter'
@@ -55,7 +56,11 @@ export const ContactPageTemplate = ({
             childrenInColumn={
                 <Fragment>
                     <ContactPageForm locale={locale} form={form}/>
-                    <BarContacts/>
+                    {locale === "ua" ?
+                        <BarContactsTemplate/>
+                        :
+                        <BarContactsTemplateRu/>
+                    }
                     <Store/>
                 </Fragment>}
         />

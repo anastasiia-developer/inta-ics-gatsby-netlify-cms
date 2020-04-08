@@ -13,5 +13,9 @@ header:
 form: 
     name: Имя
     phone: Номер телефона
-    btn: Заказать звонок      
+    btn: Заказать звонок   
+contactsList:
+    phone: +38 (068) 5555 999
+    email: info@inta-ics.com
+    local: Украина, Киев, ул. Линейная 17       
 ---

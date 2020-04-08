@@ -26,3 +26,13 @@
 ]}
 ]}
 ]}
+//contacts page
+
+- {label: "контакты и соц сети", name: contactsList, widget: object, fields: [
+{label: instagram, name: instagram, widget: string, required: false},
+{label: facebook, name: facebook, widget: string, required: false},
+{label: twitter, name: twitter, widget: string, required: false},
+{label: phone, name: phone, widget: string, required: false},
+{label: email, name: email, widget: string, required: false},
+{label: local, name: local, widget: string, required: false},
+]}

@@ -147,7 +147,7 @@ const Container = styled.header`
         position: absolute;
         left: 1em;
         top: 0;
-        height: 100vh;
+        height: 100%;
         flex-direction: column;
         justify-content: center;
         width: 2em;

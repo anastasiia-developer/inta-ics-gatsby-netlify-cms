@@ -29,20 +29,20 @@ const Wrapper = styled.div`
     }
 `
 
-const BarContacts = () =>
+const BarContactsTemplate = ({data}) =>
     <Wrapper className='bar-contacts row-to-column'>
         <a href="tel:+380685555999">
             <Tel className="icon"/>
-            +38 (068) 5555 999
+            {data.phone}
         </a>
         <a href="mailto:info@inta-ics.com">
             <Email className="icon" />
-            info@inta-ics.com
+            {data.email}
         </a>
         <a href="https://goo.gl/maps/PUnnVxgtAhrCJxtX8" >
             <Local className="icon" />
-            Украина, Киев, ул. Линейная 17
+            {data.local}
         </a>
     </Wrapper>
 
-export default BarContacts
+export default BarContactsTemplate

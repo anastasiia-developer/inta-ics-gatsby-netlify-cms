@@ -13,7 +13,8 @@ import RuContact from './contact/index.ru'
 import UaContact from './contact/'
 import Telegram from '../../img/social/telegram.svg'
 import Call from '../../img/call.svg'
-import BarContacts from "./BarContacts"
+import BarContactsTemplate from "../BarContacts/"
+import BarContactsTemplateRu from "../BarContacts/index.ru"
 import UaHelp from "./help/ua"
 import RuHelp from "./help/ru"
 import UaServices from './services/ua.js'
@@ -51,9 +52,11 @@ const Navbar = ({local, location}) => {
           <hr/>
           <hr/>
         </div>
-        <BarContacts
-            isActive={isActiveMob}
-        />
+        {local === "ua" ?
+            <BarContactsTemplate isActive={isActiveMob}/>
+        :
+            <BarContactsTemplateRu isActive={isActiveMob}/>
+        }
         <Link
             to={local === 'ua' ? '/' : '/ru/'}
             className="logo"

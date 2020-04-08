@@ -14,4 +14,11 @@ form:
     name: Имя
     phone: Номер телефона
     btn: Заказать звонок     
+contactsList:
+    instagram: https://www.instagram.com/
+    facebook: https://www.facebook.com/
+    twitter: https://www.twitter.com/     
+    phone: +38 (068) 5555 999
+    email: info@inta-ics.com
+    local: Украина, Киев, ул. Линейная 17
 ---

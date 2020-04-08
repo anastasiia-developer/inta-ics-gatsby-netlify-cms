@@ -1,24 +1,24 @@
 import {graphql, StaticQuery} from "gatsby";
 import React from "react";
-import SocialMediaTemplate from "./SocialMediaTemplate";
+import BarContactsTemplate from "./BarContactsTemplate";
 
-export default ({className}) => (
+export default () => (
     <StaticQuery
         query={graphql`
-            query socialMediaUa{
+            query ContactsUa{
                 markdownRemark(frontmatter: { pageKey: { eq: "contact" }, locale: { eq: "ua" } }) {
                     frontmatter {
                         contactsList{
-                            instagram
-                            facebook
-                            twitter
+                            phone
+                            email
+                            local
                         }
                     }   
                 }
             }
         `}
         render={(data) =>
-            <SocialMediaTemplate className={className} data={data.markdownRemark.frontmatter.contactsList}/>
+            <BarContactsTemplate data={data.markdownRemark.frontmatter.contactsList}/>
         }
     />
 )
