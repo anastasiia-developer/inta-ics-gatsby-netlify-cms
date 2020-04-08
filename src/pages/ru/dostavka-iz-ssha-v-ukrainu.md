@@ -33,7 +33,7 @@ header:
     - text: 'Морская доставка грузов из США '
       link: dostavka-morem-iz-ssha/
     - text: 'Доставка товаров из США '
-      link: dostavka-iz-ssha-v-ukrainu/
+      link: dostavka-tovarov-iz-ssha-v-ukrainu/
     - text: Доставка контейнеров из США
       link: dostavka-konteynerov-iz-ssha/
 sections:
