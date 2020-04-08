@@ -1,7 +1,7 @@
 ---
 pageKey: components-common
 locale: ua
-title: UaОбщие компонентны для всех страницппhgghjghggh
+title: UaОбщие компонентны для всех страниц
 warehouses:
   title: 'Наші офіси та склади '
   list:
@@ -203,7 +203,7 @@ popupThanks:
   btnLink: 2020-02-06-украина-привлекательный-рынок-для-китая
   image: /img/popupImage.jpg
 footer:
-  description: 'UAДоставка сборных грузов и контейнеров из Китая, Сша в Украину.'
+  description: 'UДоставка сборных грузов и контейнеров из Китая, Сша в Украину.'
   storeName: Мобильное приложение
   navCollection:
     - nav:
