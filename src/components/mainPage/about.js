@@ -37,7 +37,9 @@ const Section = styled.section`
             margin: 0;
         }
     }
-    
+    &.notImg .description{
+        width: 100%;
+    }
     ul{
         font-size: 1em;
         color: #005BE4;
@@ -54,21 +56,27 @@ const Section = styled.section`
 `;
 
 const About = ({ title, image, alt, text, className, children }) => (
-    <Section className={`row-to-column ${className}`}
-             hasChildren={!!children}>
+    <Section className={`row-to-column ${className} ${!image && "notImg"}`}
+             hasChildren={!!children}
+             >
         <div className="description">
             {title &&
                 <h2>{title}</h2>
             }
-            <ContentInFrontmatter className="text" content={text}/>
+            <ContentInFrontmatter
+                className="text"
+                content={text}
+            />
             {children}
         </div>
-        <PreviewCompatibleImage
-            imageInfo={{
-                image: image,
-                alt: alt
-            }}
-        />
+        {image &&
+            <PreviewCompatibleImage
+                imageInfo={{
+                    image: image,
+                    alt: alt
+                }}
+            />
+        }
     </Section>
 )
 
