@@ -803,7 +803,7 @@ collections:
           {label: url, name: url, widget: string, required: false}
           ]}
           ]}
-      - file: "src/pages/contact/contact.md"
+      - file: "src/pages/contacts/contact.md"
         label: "Контакты"
         name: "contact"
         fields:
@@ -963,7 +963,7 @@ collections:
           {label: "Картинка", name: image, widget: image, required: false}
           ]}
           ]}
-      - file: "src/pages/contact.ru.md"
+      - file: "src/pages/contacts/contact.ru.md"
         label: "Контакты"
         name: "contact-ru"
         fields:
