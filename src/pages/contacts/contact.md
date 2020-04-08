@@ -1,8 +1,8 @@
 ---
 pageKey: contact
-locale: ru
+locale: ua
 name: contacts
-title: RUКонтакты
+title: Контакты
 crumbLabel: Контакты
 metaData:
   description: test
