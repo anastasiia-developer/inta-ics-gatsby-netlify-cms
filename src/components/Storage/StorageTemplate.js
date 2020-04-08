@@ -111,7 +111,7 @@ const StorageTemplate = ({ data, morePhotoIcon }) => {
                     <div className="row flags">
                         {warehouses.list.map((item, index) => (
                             <Link
-                                to={localizedPath({path: 'contact', lang: data.markdownRemark.frontmatter.locale})}
+                                to={localizedPath({path: 'contacts', lang: data.markdownRemark.frontmatter.locale})}
                                 className="row"
                                 key={index}
                             >

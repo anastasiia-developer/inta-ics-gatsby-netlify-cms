@@ -629,7 +629,6 @@ collections:
       {label: "Заголовок", name: title, widget: string, required: false},
       {label: "list", name: list, widget: list, fields: [
       {label: "Заголовок", name: title, widget: string, required: false},
-      {label: "svg", name: svg, widget: string, required: false},
       {label: "link", name: link, widget: string, required: false},
       ]}
       ]}
@@ -637,7 +636,6 @@ collections:
       {label: "Заголовок", name: title, widget: string, required: false},
       {label: "list", name: list, widget: list, fields: [
       {label: "Заголовок", name: title, widget: string, required: false},
-      {label: "svg", name: svg, widget: string, required: false},
       {label: "link", name: link, widget: string, required: false},
       ]}
       ]}
