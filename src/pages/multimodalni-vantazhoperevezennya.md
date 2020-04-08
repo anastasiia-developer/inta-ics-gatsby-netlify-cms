@@ -19,6 +19,13 @@ header:
   images:
     - alt: ' inta-ics-мультимодальні-вантажоперевезення'
       image: /img/inta-ics-мультимодальные-перевозки.png
+  scopeInformation:
+    - text: Пошук постачальника
+      image: /img/time.png
+    - text: Послуги брокера
+      image: /img/card.png
+    - text: Від 5 днів
+      image: /img/lov.png
 seoSections:
   title: vbvbb
 ---
