@@ -10,7 +10,7 @@ metaData:
 title: Доставка из США
 name: dostavka-iz-ssha-v-ukrainu
 localeKey: dostavka-z-ssha-v-ukrainu
-crumbLabelParent: vccvcvcv
+crumbLabelParent: Международные грузоперевозки
 crumbLabel: Доставка из США
 description: >-
   Компания INTA-ICS предоставляет услуги по доставке товаров из США морским и
