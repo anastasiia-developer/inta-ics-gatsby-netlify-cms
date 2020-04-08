@@ -252,7 +252,6 @@ export const pageQuery = graphql`
                 description
             }
             date(formatString: "DD.MM.YYYY")
-            featuredpost
             tags
             featuredimage {
               childImageSharp {

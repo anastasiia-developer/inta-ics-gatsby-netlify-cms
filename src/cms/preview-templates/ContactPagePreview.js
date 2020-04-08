@@ -7,12 +7,11 @@ const ContactPagePreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS();
 
   if(data) {
-    console.log(data)
     return (
         <ContactPageTemplate
-            title={data.title || ''}
-            description={data.description || ''}
-            header={data.header || ''}
+            title={data.title}
+            description={data.description}
+            header={data.header || {}}
             morePhotoIcon={data.fileName}
             form={data.form}
         />

@@ -55,7 +55,9 @@ export const ContactPageTemplate = ({
             crumbLabel={title}
             childrenInColumn={
                 <Fragment>
-                    <ContactPageForm locale={locale} form={form}/>
+                    {location &&
+                        <ContactPageForm locale={locale} form={form}/>
+                    }
                     {locale === "ua" ?
                         <BarContactsTemplate/>
                         :

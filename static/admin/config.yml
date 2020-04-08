@@ -21,13 +21,12 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Description", name: "description", widget: "text"}
+      {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "Title", name: "title", widget: string, required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "картинка в шапке", name: "featuredimage", widget: image, required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Tags", name: "tags", widget: "list"}
   - name: "blog-ru"
@@ -40,11 +39,11 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Description", name: "description", widget: "text"}
+      {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "Title", name: "title", widget: string, required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
@@ -60,7 +59,7 @@ collections:
       - {label: "Title", name: "title", widget: string, required: false}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string },
-        {label: "Description", name: "description", widget: "text"}
+        {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "path name", name: "name", widget: string, required: false}
       - {label: "имя в навигации категории", name: "crumbLabelParent", widget: string, required: false}
@@ -120,7 +119,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Description", name: "description", widget: "text"}
+      {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "path name", name: "name", widget: string, required: false}
       - {label: "url в укр версии", name: "localeKey", widget: string, required: false}
@@ -182,7 +181,7 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Description", name: "description", widget: "text"}
+      {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "Title", name: "title", widget: string, required: false}
       - {label: "path name", name: name, widget: string, required: false}
@@ -241,7 +240,7 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Description", name: "description", widget: "text"}
+      {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "Title", name: "title", widget: string, required: false}
       - {label: "path name", name: name, widget: string, required: false}
@@ -301,7 +300,7 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ua"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
       {label: "Title", name: "title", widget: string, required: false},
-      {label: "Description", name: "description", widget: "text"}
+      {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "Title", name: "title", widget: string, required: false}
       - {label: "path name", name: name, widget: string, required: false}
@@ -351,7 +350,7 @@ collections:
       - {label: "locale", name: "locale", widget: "hidden", default: "ru"}
       - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
       ]}
       - {label: "Title", name: "title", widget: string, required: false}
       - {label: "path name", name: name, widget: string, required: false}
@@ -652,7 +651,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
           ]}
           - {label: Title, name: title, widget: string, required: false}
           - {label: Description, name: description, widget: string, required: false}
@@ -702,7 +701,7 @@ collections:
           - {label: "Template Key", name: "pageKey", widget: "hidden", default: "about"}
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
           ]}
           - {label: "crumbLabel", name: "crumbLabel", widget: string, required: false}
           - {label: "Title", name: "title", widget: string, required: false}
@@ -744,7 +743,7 @@ collections:
           - {label: "Page Key", name: "pageKey", widget: "hidden", default: "cost"}
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
           ]}
           - {label: Title, name: title, widget: string, required: false}
           - {label: Description, name: description, widget: string, required: false}
@@ -778,7 +777,7 @@ collections:
         fields:
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
           ]}
           - {label: Title, name: title, widget: string, required: false}
           - {label: Description, name: description, widget: string, required: false}
@@ -809,7 +808,7 @@ collections:
         fields:
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
           ]}
           - {label: Title, name: title, widget: string, required: false}
           - {label: Description, name: description, widget: string, required: false}
@@ -822,9 +821,9 @@ collections:
           ]},
 
           ]}
-          - {label: form, name: form, widget: object, fields: [
-          {label: name, name: name, widget: string, required: false},
-          {label: phone, name: phone, widget: string, required: false},
+          - {label: "форма связи", name: form, widget: object, fields: [
+          {label: "текст в инпуте имя", name: name, widget: string, required: false},
+          {label: "текст в инпуте телефон", name: phone, widget: string, required: false},
           {label: текст на кнопке, name: btn, widget: string, required: false},
           ]}
           - {label: "контакты и соц сети", name: contactsList, widget: object, fields: [
@@ -845,7 +844,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
           ]}
           - {label: Title, name: title, widget: string, required: false}
           - {label: Description, name: description, widget: string, required: false}
@@ -894,7 +893,7 @@ collections:
           - {label: "Template Key", name: "pageKey", widget: "hidden", default: "about-page"}
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
           ]}
           - {label: "Title", name: "title", widget: string, required: false}
           - {label: "crumbLabel", name: "crumbLabel", widget: string, required: false}
@@ -935,7 +934,7 @@ collections:
         fields:
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
           ]}
           - {label: Title, name: title, widget: string, required: false}
           - {label: Description, name: description, widget: string, required: false}
@@ -969,7 +968,7 @@ collections:
         fields:
           - {label: "Meta data seo", name: "metaData", widget: "object", fields: [
           {label: "Title", name: "title", widget: string, required: false},
-          {label: "Description", name: "description", widget: "text"}
+          {label: "Description", name: "description", widget: "text", required: false}
           ]}
           - {label: Title, name: title, widget: string, required: false}
           - {label: Description, name: description, widget: string, required: false}
@@ -982,10 +981,10 @@ collections:
               ]},
 
           ]}
-          - {label: form, name: form, widget: object, fields: [
-              {label: name, name: name, widget: string, required: false},
-              {label: phone, name: phone, widget: string, required: false},
-              {label: текст на кнопке, name: btn, widget: string, required: false},
+          - {label: "форма связи", name: form, widget: object, fields: [
+          {label: "текст в инпуте имя", name: name, widget: string, required: false},
+          {label: "текст в инпуте телефон", name: phone, widget: string, required: false},
+          {label: текст на кнопке, name: btn, widget: string, required: false},
           ]}
           - {label: "контакты и соц сети", name: contactsList, widget: object, fields: [
             {label: instagram, name: instagram, widget: string, required: false},
