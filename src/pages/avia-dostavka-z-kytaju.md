@@ -63,10 +63,6 @@ sections:
       Залиште заявку на розрахунок вартості або для замовлення послуги, після
       чого наш менеджер зв'яжеться з вами і проконсультує з усіх питань.
     title: Авіаперевезення вантажів з Китаю
-sectionText:
-  image: /img/planeBckgSectionText.png
-  text: ''
-  title: ''
 seoSections:
   title: Авіаперевезення вантажів з Китаю від INTA-ICS
   sections:

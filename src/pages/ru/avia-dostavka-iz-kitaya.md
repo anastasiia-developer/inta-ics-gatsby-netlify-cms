@@ -62,10 +62,6 @@ sections:
       Оставьте заявку на расчёт стоимости или для заказа услуги, после чего наш
       менеджер свяжется с вами и проконсультирует по всем вопросам.
     title: Авиаперевозки грузов из Китая
-sectionText:
-  image: /img/planeBckgSectionText.png
-  text: ''
-  title: ''
 seoSections:
   title: Авиаперевозки грузов из Китая от INTA-ICS
   sections:
