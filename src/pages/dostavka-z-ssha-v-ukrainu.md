@@ -102,7 +102,7 @@ sections:
       text: Дізнатись більше
       link: dostavka-konteyneriv-z-ssha/
 sectionText:
-  image: /img/AutoBckg.png
+  image: /img/planeBckgSectionText.png
   text: >-
     Сполучені Штати Америки являються надійним постачальником якісних товарів -
     високотехнологічного обладнання, обчислювальної техніки, автомобілів.

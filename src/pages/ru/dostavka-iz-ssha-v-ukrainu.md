@@ -102,7 +102,7 @@ sections:
       - title: Хранение груза
         image: /img/lov.png
 sectionText:
-  image: /img/AutoBckg.png
+  image: /img/planeBckgSectionText.png
   text: >-
     Соединенные Штаты Америки представляют собой надежного поставщика
     качественных товаров — высокотехнологичного оборудования, вычислительной
