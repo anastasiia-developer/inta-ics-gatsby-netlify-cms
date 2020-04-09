@@ -12,14 +12,12 @@ header:
     - alt: ' inta-ics-тарифы-на-доставку-из-китая-сша-европы'
       image: /img/inta-ics-тарифы-на-доставку-из-китая-сша-европы.png
   scopeInformation:
-    - image: /img/bay.png
-      text: Покупка товаров со всего мира
     - image: /img/time3.png
       text: Поддержка 24/7
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Быстрый просчет
     - image: /img/time.png
-      text: Сроки доставки
+      text: Выгодные тарифы
 sections:
   - image: /img/deliv.jpg
     text: >-
