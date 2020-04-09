@@ -18,11 +18,11 @@ header:
       image: /img/search-and-verification-header.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Комплекс послуг
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Зручна система оплати
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Оперативність
 table:
   head:
     - name: Метод поиска
