@@ -18,7 +18,7 @@ description: >-
   внешнеторговой сделки.
 header:
   images:
-    - alt: cost-page
+    - alt: inta-ics-оплата-поставщику-в-китае
       image: /img/making-payments-header.png
   scopeInformation:
     - image: /img/time.png
