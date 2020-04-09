@@ -18,7 +18,7 @@ description: >-
   хранение грузов перед доставкой.
 header:
   images:
-    - alt: cost-page
+    - alt: ' inta-ics-складские-услуги'
       image: /img/warehousing-services-header.png
   scopeInformation:
     - image: /img/time.png
