@@ -17,15 +17,15 @@ description: >-
   контроля и задержек в поставках.
 header:
   images:
-    - alt: cost-page
+    - alt: ' inta-ics-растаможка'
       image: /img/customs-clearance-header.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Быстрая оплата
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Услуги брокера
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Выгодная цена
 sections:
   - image: /img/making-payments-section.jpg
     title: Н2 ЗАГОЛОВОК
