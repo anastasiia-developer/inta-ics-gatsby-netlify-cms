@@ -67,7 +67,7 @@ const Section = ({section}) => {
                             <PreviewCompatibleImage
                                 imageInfo={{
                                     image: block.image,
-                                    alt: block.alt
+                                    alt: block.alt,
                                 }}
                             />
                             <h4>{block.title}</h4>

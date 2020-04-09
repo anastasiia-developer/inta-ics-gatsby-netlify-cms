@@ -63,8 +63,9 @@ const Section = styled(About)`
                 margin-bottom: .5em;
             }
             .gatsby-image-wrapper{
-                width: 1.3em;
+                width: 2em;
                 margin-right: .5em;
+                height: 1.7em;
             }
         }
     }
@@ -101,6 +102,7 @@ const Sections = ({ sections, locale, className, flexDirection }) => (
                                             image: li.image,
                                             alt: li.alt
                                         }}
+                                        imgStyle={{ objectFit: 'contain' }}
                                     />
                                     {li.title}
                                 </li>
