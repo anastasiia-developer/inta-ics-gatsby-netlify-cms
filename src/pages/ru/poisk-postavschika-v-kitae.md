@@ -1,20 +1,21 @@
 ---
-crumbLabelParent: Послуги
+localeKey: poshuk-postachalnyikiv-v-kyitai
+crumbLabelParent: Услуги
 templateKey: services
 locale: ru
 title: Поиск и проверка поставщика
 name: poisk-postavschika-v-kitae
 metaData:
-  title: dd
+  title: Поиск поставщиков в Китае | INTA-ICS
+  description: ' Помощь в организации бизнеса с Китаем &#9989; Поиск и проверка производителя из Китая &#9989; Помощь в проведении переговоров, заключении контракта, денежных транзакций #9742; 068 5555 999'
 crumbLabel: Поиск и проверка поставщика
-localeKey: poshuk-postachalnyikiv-v-kyitai
 description: >-
-  Доставка из Китая, США, Европы в Украину. Мы открыты к сотрудничеству с любым
-  клиентом, независимо от объёмов его грузопотока. Закажите консультацию и
-  начнем сотрудничество прямо сейчас!
+  Чтобы обезопасить себя от мошенников и ненадежных бизнес-партнеров,
+  обращайтесь в INTA-ICS. Предлагаем комплекс услуг по поиску и проверке
+  поставщиков в Китае, Европе, США и других странах.
 header:
   images:
-    - alt: cost-page
+    - alt: ' inta-ics-поиск-поставщика-в-китае'
       image: /img/search-and-verification-header.png
   scopeInformation:
     - image: /img/time.png
