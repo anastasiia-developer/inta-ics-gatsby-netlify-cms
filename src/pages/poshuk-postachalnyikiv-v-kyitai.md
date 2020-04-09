@@ -25,13 +25,13 @@ header:
       text: Оперативність
 table:
   head:
-    - name: Метод поиска
+    - name: Метод пошуку
       image: /img/search.png
-    - name: Время поиска
+    - name: Час пошуку
       image: /img/time3.png
-    - name: Себестоимость
+    - name: Собівартість
       image: /img/card.png
-    - name: Вероятность заключить выгодную сделку
+    - name: Ймовірність скласти вигідну угоду
       image: /img/start.png
   body:
     - column:
