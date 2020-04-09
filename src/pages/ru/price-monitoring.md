@@ -28,7 +28,7 @@ header:
     - image: /img/lov.png
       text: Выгодная цена
 sections:
-  - image: /img/making-payments-section.jpg
+  - image: /img/_inta-ics-мониторинг-цен-поставщиков-1.jpg
     title: Оплата поставщику в Китае
     text: >-
       С помощью мониторинга цен можно определить среднерыночную стоимость
