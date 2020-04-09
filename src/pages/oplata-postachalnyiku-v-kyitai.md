@@ -21,11 +21,11 @@ header:
       image: /img/making-payments-header.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Швидка оплата
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Послуги брокера
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Вигідна ціна
 sections:
   - image: /img/making-payments-section.jpg
     title: Н2 ЗАГОЛОВОК
