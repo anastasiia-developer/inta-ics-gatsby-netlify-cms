@@ -63,9 +63,9 @@ const Section = styled(About)`
                 margin-bottom: .5em;
             }
             .gatsby-image-wrapper{
-                width: 2em;
+                width: 1.5em;
                 margin-right: .5em;
-                height: 1.7em;
+                height: 1.5em;
             }
         }
     }
