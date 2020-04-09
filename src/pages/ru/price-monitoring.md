@@ -18,15 +18,15 @@ description: >-
   наиболее выгодной цене.
 header:
   images:
-    - alt: cost-page
+    - alt: ' inta-ics-мониторинг-цен-поставщиков'
       image: /img/price-monitoring-header.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Скорость
     - image: /img/card.png
-      text: от 2$ за кг
+      text: От 3 дней
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: Выгодная цена
 sections:
   - image: /img/making-payments-section.jpg
     title: Н2 ЗАГОЛОВОК
