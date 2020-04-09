@@ -64,6 +64,6 @@ seoSections:
         dlgjdlkfguidufyviaHG;zUQ'
 
         \W'OUREW;[PRHJ.KGLRE;
-      alt: ''
+      alt: TESR
       image: /img/buyback-and-delivery-from-china-section-img.jpg
 ---
