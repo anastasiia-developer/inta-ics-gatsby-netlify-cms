@@ -18,4 +18,11 @@ header:
   images:
     - alt: inta-ics-доставка-обладнання
       image: /img/inta-ics-доставка-оборудоования.png
+  scopeInformation:
+    - text: Пошук постачальника
+      image: /img/time.png
+    - text: Послуги брокера
+      image: /img/card.png
+    - text: Вигідна цін
+      image: /img/lov.png
 ---
