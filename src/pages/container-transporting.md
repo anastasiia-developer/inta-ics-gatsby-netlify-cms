@@ -9,7 +9,7 @@ metaData:
     оформлення &#9989; Підтримка 24/7 - Телефонуйте &#9742; 068 5555 999
 
 title: Морські контейнерні перевезення
-name: container-transporting
+name: konteynerni-vantazhoperevezennya
 crumbLabelParent: Можливості доставки вантажів
 crumbLabel: Контейнерні перевезення
 description: >-
