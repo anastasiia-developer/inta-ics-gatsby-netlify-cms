@@ -7,7 +7,7 @@ metaData:
      &#128674; Морские контейнерные перевозки &#128073; Выгодные тарифы на сборные грузы &#9989; LCL, FCL. Полный комплекс сопроводительных услуг, таможенное оформление &#9989; Поддержка 24/7 - Звони &#9742; 068 5555 999
 title: Морские контейнерные перевозки
 name: konteynernyie-perevozki/
-localeKey: container-transporting
+localeKey: konteynerni-vantazhoperevezennya
 crumbLabelParent: Морская перевозка
 crumbLabel: Морские контейнерные перевозки
 description: >-
