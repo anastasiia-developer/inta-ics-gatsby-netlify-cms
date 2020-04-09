@@ -22,11 +22,11 @@ header:
       image: /img/warehousing-services-header.png
   scopeInformation:
     - image: /img/time.png
-      text: Сроки доставки
+      text: Выкуп и доставка
     - image: /img/card.png
-      text: от 2$ за кг
+      text: Склады в Китае
     - image: /img/lov.png
-      text: Местоположение посылки
+      text: От 28 дней
 sections:
   - image: /img/making-payments-section.jpg
     title: Н2 ЗАГОЛОВОК
