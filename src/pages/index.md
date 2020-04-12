@@ -1,10 +1,8 @@
 ---
-pageKey: index-page
-title: Inta International Courier Service
-locale: ua
 metaData:
-    title: metaData Inta International Courier
-    description: metaData за вашими грузами, заказывайте
+  title: metaData Inta International Courier
+  description: 'metaData за вашими грузами, заказывайте'
+title: Test
 description: >-
   Следите онлайн за вашими грузами, заказывайте новый товар, следите за скидками
   и трендами! Наш менеджер всегда на связи и готов вам помочь.
@@ -121,4 +119,6 @@ seoSections:
         Нью-Джерси, оно осуществляет контроль американских заказов.</p>
       alt: fgfgf
       image: /img/deliv.jpg
+pageKey: index-page
+locale: ua
 ---
