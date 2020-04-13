@@ -8,7 +8,7 @@ header:
   slide:
     - buttons:
         - link: contacts/
-          text: Заказать доставку
+          text: dddddd доставку
         - link: contacts/
           text: Узнать стоимость
       images:
